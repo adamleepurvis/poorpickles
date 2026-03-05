@@ -278,7 +278,7 @@ function calcDraftNowScore(player, available, livePicks, currentPick, catNeed) {
 }
 
 // ─── STYLE CONSTANTS ──────────────────────────────────────────────────────────
-const TIER_COLOR = {keep6:"#84cc16",keep12:"#22c55e",bridge:"#60a5fa",maybe:"#c084fc",specialist:"#f472b6"};
+const TIER_COLOR = {keep6:"#f59e0b",keep12:"#22c55e",bridge:"#60a5fa",maybe:"#c084fc",specialist:"#f472b6"};
 const TIER_LABEL = {keep6:"Keep-6 🔒",keep12:"Keep-12",bridge:"Bridge",maybe:"Maybe",specialist:"Specialist"};
 const CAT_NEED_COLOR = {0:"#1e293b",1:"#475569",2:"#60a5fa",3:"#f87171"};
 const MY_KEEPER_CATS = {
@@ -613,12 +613,15 @@ Question: ${msg}`;
               {/* Score legend */}
               <div style={{display:"flex",gap:12,marginBottom:10,flexWrap:"wrap",alignItems:"center"}}>
                 <span style={{fontSize:10,color:"#475569"}}>DNS = Draft Now Score · </span>
-                {[["≥8.0","#84cc16","Elite"],["≥6.5","#22c55e","Strong"],["≥5.0","#60a5fa","Solid"],["<5.0","#64748b","Stash"]].map(([r,c,l])=>(
+                {[["≥8.0","#f59e0b","Elite"],["≥6.5","#22c55e","Strong"],["≥5.0","#60a5fa","Solid"],["<5.0","#64748b","Stash"]].map(([r,c,l])=>(
                   <div key={r} style={{display:"flex",alignItems:"center",gap:4,fontSize:10}}>
                     <div style={{width:7,height:7,borderRadius:2,background:c}}/>
                     <span style={{color:"#64748b"}}>{l} {r}</span>
                   </div>
                 ))}
+                <span style={{fontSize:10,color:"#475569",marginLeft:4}}>·</span>
+                <span style={{fontSize:10,color:"#64748b"}}>⚾ hitter</span>
+                <span style={{fontSize:10,color:"#64748b"}}>⚡ pitcher</span>
               </div>
 
               {filtered.length===0&&<div style={{textAlign:"center",color:"#1e293b",padding:40}}>All targets gone!</div>}
@@ -651,7 +654,7 @@ Question: ${msg}`;
                           <span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 5px",borderRadius:3}}>{t.urgency}% gone</span>
                         )}
                         <span style={{fontSize:9,color:"#475569"}}>VOR {t.scarcity.vor > 0 ? "+":""}{t.scarcity.vor}</span>
-                        <span style={{fontSize:10,color:"#1e3a5f"}}>{t.type==="H"?"⚾":"⚡"}</span>
+                        <span style={{fontSize:10,color:"#475569"}}>{t.type==="H"?"⚾":"⚡"}</span>
                       </div>
                     </div>
 
