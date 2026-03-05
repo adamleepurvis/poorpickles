@@ -287,27 +287,6 @@ const MY_KEEPER_CATS = {
 };
 const CAT_STATUS_COLOR = {strong:"#22c55e",ok:"#60a5fa",thin:"#84cc16",missing:"#f87171"};
 
-// ─── SYSTEM PROMPT ────────────────────────────────────────────────────────────
-const SYSTEM_PROMPT = `You are a fantasy baseball dynasty draft advisor for "Poor Pickles" (12-team snake draft).
-
-SCORING 9x9: Hitting: R, H, HR, RBI, SB, TB, AVG, OBP, SLG | Pitching: IP, W, ER, K, ERA, WHIP, K/9, BB/9, NSVH
-ROSTER: C, 1B, 2B, 3B, SS, LF, CF, RF, UTIL, SP×4, RP×2, P×2, BN×11 | 29 rounds total
-SNAKE: Poor Pickles picks 5th odd rounds, 8th even rounds
-
-KEEPERS: Perdomo(SS), Pasquantino(1B), M.Garcia(3B), Soderstrom(C), Harris II(CF), Adell(RF), Baldwin(C), Eldridge(1B)🔒, Valdez(SP), Sasaki(SP)🔒
-
-SCORING MODEL (25% 2026 / 75% dynasty):
-- Base score = weighted category fit × time-blended raw score
-- IL players: 40% of 2026 score, full dynasty score
-- Positional scarcity bonus added (VOR vs next 3 at position)
-- Urgency bonus added (prob gone by next pick)
-- Final = Draft Now Score shown in UI
-
-CATEGORY GAPS: HR❗(3) RBI❗(3) SLG❗(3) NSVH❗(3) TB(2) — SB/AVG/OBP already strong
-KEEP-6 TARGETS P: Strider, Schwellenbach, Yesavage, Sheehan, Rodriguez, Jones
-KEEP-6 TARGETS H: Buxton, Luis Robert Jr., Dylan Crews, Jacob Wilson
-
-Be concise. Lead with the top 1-2 names + score-based reason. Reference Draft Now Score when relevant.`;
 
 // ─── MAIN COMPONENT ───────────────────────────────────────────────────────────
 export default function App() {
@@ -317,11 +296,8 @@ export default function App() {
   const [currentPick, setCurrentPick] = useState(DRAFT_START_PICK);
   const [pickInput, setPickInput] = useState("");
   const [suggestions, setSuggestions] = useState([]);
-  const [messages, setMessages] = useState([
-    {role:"assistant", content:"Scoring engine loaded. Rankings now use:\n• 25% 2026 production / 75% dynasty\n• Category fit multiplier (HR/RBI/SLG weighted 3×)\n• Positional scarcity (VOR vs next 3 at position)\n• Urgency bonus (prob gone by your next pick)\n• IL discount on 2026 only\n\nDraft starts at pick 121. Ask me anything or just start recording picks."}
-  ]);
-  const [chatInput, setChatInput] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [compareList, setCompareList] = useState([]);
+  const [posFilter, setPosFilter] = useState("all");
   const [tab, setTab] = useState("board");
   const [typeFilter, setTypeFilter] = useState("all");
   const [editingNote, setEditingNote] = useState(null);
@@ -329,10 +305,7 @@ export default function App() {
   const [catStatus, setCatStatus] = useState(MY_KEEPER_CATS);
   const [catNeed, setCatNeed] = useState(BASE_CAT_NEED);
   const [showScoreBreakdown, setShowScoreBreakdown] = useState(null);
-  const endRef = useRef(null);
   const pickInputRef = useRef(null);
-
-  useEffect(() => { endRef.current?.scrollIntoView({behavior:"smooth"}); }, [messages]);
 
   useEffect(() => {
     const handler = (e) => {
@@ -371,9 +344,15 @@ export default function App() {
     [available, livePicks, currentPick, catNeed]
   );
 
+  const OF_POSITIONS = ["LF","CF","RF"];
   const filtered = useMemo(() =>
-    scoredAvailable.filter(t => typeFilter === "all" || t.type === typeFilter),
-    [scoredAvailable, typeFilter]
+    scoredAvailable.filter(t => {
+      if (typeFilter !== "all" && t.type !== typeFilter) return false;
+      if (posFilter === "all") return true;
+      if (posFilter === "OF") return t.eligible.some(p => OF_POSITIONS.includes(p));
+      return t.eligible.includes(posFilter);
+    }),
+    [scoredAvailable, typeFilter, posFilter]
   );
 
   const currentRound = getRound(currentPick);
@@ -419,33 +398,13 @@ export default function App() {
     setMessages([{role:"assistant", content:"Reset to pick 121. Scoring engine ready."}]);
   };
 
-  const sendMsg = useCallback(async () => {
-    if (!chatInput.trim() || loading) return;
-    const msg = chatInput.trim();
-    setChatInput("");
-    setMessages(prev => [...prev, {role:"user", content:msg}]);
-    setLoading(true);
-    const top5 = filtered.slice(0, 5).map(t =>
-      `${t.name} (DNS:${t.draftNowScore}, VOR:${t.scarcity.vor}, urgency:${t.urgency}%)`
-    ).join(", ");
-    const ctx = `Pick: ${currentPick} | Round: ${currentRound} | My turn: ${isMyClock ? "YES — ON CLOCK" : `No, ${until} away (next: ${nextMine})`}
-My drafted: ${myDrafted.join(", ")||"none"}
-Top 5 by Draft Now Score: ${top5}
-Category gaps: ${Object.entries(catStatus).filter(([,v])=>v==="thin"||v==="missing").map(([c])=>c).join(", ")||"none"}
-Question: ${msg}`;
-    try {
-      const res = await fetch("https://api.anthropic.com/v1/messages", {
-        method:"POST", headers:{"Content-Type":"application/json"},
-        body: JSON.stringify({
-          model:"claude-sonnet-4-20250514", max_tokens:500, system:SYSTEM_PROMPT,
-          messages:[...messages.slice(-6).map(m=>({role:m.role,content:m.content})),{role:"user",content:ctx}]
-        })
-      });
-      const data = await res.json();
-      setMessages(prev => [...prev, {role:"assistant", content:data.content?.map(b=>b.text||"").join("")||"Error."}]);
-    } catch { setMessages(prev => [...prev, {role:"assistant", content:"Connection error."}]); }
-    setLoading(false);
-  }, [chatInput, loading, currentPick, currentRound, isMyClock, until, nextMine, myDrafted, messages, filtered, catStatus]);
+  const toggleCompare = useCallback((name) => {
+    setCompareList(prev => {
+      if (prev.includes(name)) return prev.filter(n => n !== name);
+      if (prev.length >= 2) return [prev[1], name];
+      return [...prev, name];
+    });
+  }, []);
 
   const myRoster = [
     ...KEEPER_PICKS.filter(p=>p.team===MY_TEAM).map(p=>({name:p.player,pos:p.pos,kept:true})),
@@ -595,11 +554,18 @@ Question: ${msg}`;
               </button>
             ))}
             {tab==="board"&&(
-              <div style={{marginLeft:"auto",display:"flex",gap:3,alignItems:"center"}}>
-                <span style={{fontSize:9,color:"#475569",marginRight:4}}>sorted by DNS</span>
-                {[["all","All"],["H","Hit"],["P","Pitch"]].map(([v,l])=>(
-                  <button key={v} className="btn" onClick={()=>setTypeFilter(v)}
-                    style={{background:typeFilter===v?"#84cc1622":"#1e293b",color:typeFilter===v?"#84cc16":"#64748b",border:typeFilter===v?"1px solid #84cc1644":"1px solid transparent"}}>
+              <div style={{marginLeft:"auto",display:"flex",gap:3,alignItems:"center",flexWrap:"wrap"}}>
+                <span style={{fontSize:9,color:"#475569",marginRight:2}}>sorted by DNS</span>
+                {[["all","All"],["H","⚾"],["P","⚡"]].map(([v,l])=>(
+                  <button key={v} className="btn" onClick={()=>{setTypeFilter(v);setPosFilter("all");}}
+                    style={{background:typeFilter===v&&posFilter==="all"?"#84cc1622":"#1e293b",color:typeFilter===v&&posFilter==="all"?"#84cc16":"#64748b",border:typeFilter===v&&posFilter==="all"?"1px solid #84cc1644":"1px solid transparent"}}>
+                    {l}
+                  </button>
+                ))}
+                <span style={{color:"#1e293b",margin:"0 2px"}}>|</span>
+                {[["C","C"],["1B","1B"],["2B","2B"],["3B","3B"],["SS","SS"],["OF","OF"],["SP","SP"],["RP","RP"]].map(([v,l])=>(
+                  <button key={v} className="btn" onClick={()=>{setPosFilter(v);setTypeFilter("all");}}
+                    style={{background:posFilter===v?"#84cc1622":"#1e293b",color:posFilter===v?"#84cc16":"#64748b",border:posFilter===v?"1px solid #84cc1644":"1px solid transparent"}}>
                     {l}
                   </button>
                 ))}
@@ -648,13 +614,17 @@ Question: ${msg}`;
                         </div>
                         <div style={{fontSize:10,color:"#475569",marginTop:1}}>{playerNotes[t.name]||t.note}</div>
                       </div>
-                      {/* Urgency + scarcity */}
+                      {/* Urgency + scarcity + compare */}
                       <div style={{display:"flex",gap:6,flexShrink:0,alignItems:"center"}}>
                         {t.urgency >= 50 && (
                           <span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 5px",borderRadius:3}}>{t.urgency}% gone</span>
                         )}
                         <span style={{fontSize:9,color:"#475569"}}>VOR {t.scarcity.vor > 0 ? "+":""}{t.scarcity.vor}</span>
                         <span style={{fontSize:10,color:"#475569"}}>{t.type==="H"?"⚾":"⚡"}</span>
+                        <button className="btn" onClick={e=>{e.stopPropagation();toggleCompare(t.name);}}
+                          style={{fontSize:9,padding:"1px 6px",background:compareList.includes(t.name)?"#84cc1622":"#1e293b",color:compareList.includes(t.name)?"#84cc16":"#475569",border:compareList.includes(t.name)?"1px solid #84cc1644":"1px solid transparent"}}>
+                          {compareList.includes(t.name)?"✓ vs":"vs"}
+                        </button>
                       </div>
                     </div>
 
@@ -817,35 +787,55 @@ Question: ${msg}`;
           )}
         </div>
 
-        {/* RIGHT: CHAT */}
-        <div style={{width:295,background:"#09090e",borderLeft:"1px solid #1e293b",display:"flex",flexDirection:"column",flexShrink:0}}>
-          <div style={{padding:"9px 12px",borderBottom:"1px solid #1e293b",fontSize:10,color:"#475569",letterSpacing:".1em",textTransform:"uppercase"}}>
-            AI Advisor · DNS-aware
+        {/* RIGHT: COMPARE PANEL */}
+        <div style={{width:280,background:"#09090e",borderLeft:"1px solid #1e293b",display:"flex",flexDirection:"column",flexShrink:0}}>
+          <div style={{padding:"9px 12px",borderBottom:"1px solid #1e293b",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+            <span style={{fontSize:10,color:"#475569",letterSpacing:".1em",textTransform:"uppercase"}}>Compare Players</span>
+            {compareList.length>0&&<button className="btn" style={{fontSize:9,color:"#f87171",background:"transparent"}} onClick={()=>setCompareList([])}>clear</button>}
           </div>
-          <div style={{flex:1,overflowY:"auto",padding:8,display:"flex",flexDirection:"column",gap:7}}>
-            {messages.map((m,i)=>(
-              <div key={i} style={{display:"flex",flexDirection:"column",alignItems:m.role==="user"?"flex-end":"flex-start"}}>
-                <div style={{maxWidth:"92%",padding:"6px 9px",borderRadius:5,fontSize:12,lineHeight:1.6,background:m.role==="user"?"#1e293b":"#0c1525",border:`1px solid ${m.role==="user"?"#475569":"#1e3a5f"}`,color:m.role==="user"?"#e2e8f0":"#93c5fd",whiteSpace:"pre-wrap"}}>
-                  {m.content}
+          {compareList.length===0&&(
+            <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:20,textAlign:"center"}}>
+              <span style={{fontSize:11,color:"#475569",lineHeight:1.6}}>Tap <span style={{color:"#84cc16"}}>vs</span> on any two players to compare them side by side.</span>
+            </div>
+          )}
+          {compareList.length>0&&(
+            <div style={{flex:1,overflowY:"auto",padding:10}}>
+              {compareList.map(name=>{
+                const t = scoredAvailable.find(p=>p.name===name);
+                if(!t) return null;
+                return (
+                  <div key={name} style={{background:"#0d0f16",border:`1px solid ${TIER_COLOR[t.tier]}44`,borderLeft:`3px solid ${TIER_COLOR[t.tier]}`,borderRadius:4,padding:"10px",marginBottom:8}}>
+                    <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:6}}>
+                      <div>
+                        <div style={{fontSize:13,fontWeight:600,color:"#f1f5f9"}}>{t.name}</div>
+                        <div style={{fontSize:10,color:"#475569",marginTop:1}}>{t.eligible.join("/")} · {t.org} · {t.type==="H"?"⚾":"⚡"}</div>
+                      </div>
+                      <button className="btn" style={{fontSize:9,color:"#f87171",background:"transparent"}} onClick={()=>toggleCompare(name)}>✕</button>
+                    </div>
+                    <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"4px 10px",fontSize:11}}>
+                      {[["DNS",t.draftNowScore],["2026",t.score2026],["Dynasty",t.scoreDyn],["VOR",(t.scarcity.vor>0?"+":"")+t.scarcity.vor],["Urgency",t.urgency+"%"],["Tier",TIER_LABEL[t.tier]]].map(([label,val])=>(
+                        <div key={label}>
+                          <span style={{color:"#475569"}}>{label}: </span>
+                          <span style={{color:"#e2e8f0",fontWeight:600}}>{val}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <div style={{marginTop:6,display:"flex",gap:4,flexWrap:"wrap"}}>
+                      {t.cats.map(c=>(
+                        <span key={c} style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${CAT_NEED_COLOR[catNeed[c]??0]}33`,color:CAT_NEED_COLOR[catNeed[c]??1]||"#475569"}}>{c}</span>
+                      ))}
+                    </div>
+                    {t.il&&<div style={{marginTop:5,fontSize:9,color:"#f87171"}}>⚠ IL — 2026 score discounted 40%</div>}
+                  </div>
+                );
+              })}
+              {compareList.length===1&&(
+                <div style={{textAlign:"center",fontSize:10,color:"#475569",padding:"20px 10px",border:"1px dashed #1e293b",borderRadius:4}}>
+                  Tap <span style={{color:"#84cc16"}}>vs</span> on a second player
                 </div>
-              </div>
-            ))}
-            {loading&&<div style={{padding:"6px 9px",borderRadius:5,background:"#0c1525",border:"1px solid #1e3a5f",color:"#475569",fontSize:12}}>thinking...</div>}
-            <div ref={endRef}/>
-          </div>
-          <div style={{padding:"8px",borderTop:"1px solid #1e293b"}}>
-            <div style={{display:"flex",gap:4,marginBottom:5}}>
-              <input value={chatInput} onChange={e=>setChatInput(e.target.value)}
-                onKeyDown={e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();sendMsg();}}}
-                placeholder="Ask anything..." style={{flex:1,fontSize:12}} disabled={loading}/>
-              <button className="btn" style={{background:"#84cc1622",color:"#84cc16",border:"1px solid #84cc1633"}} onClick={sendMsg} disabled={loading}>→</button>
+              )}
             </div>
-            <div style={{display:"flex",flexWrap:"wrap",gap:3}}>
-              {["Top pick now?","Best SP left?","Best hitter left?","Explain top score","Am I too SP heavy?"].map(q=>(
-                <button key={q} className="btn" style={{background:"#1e293b",color:"#64748b",fontSize:10,padding:"3px 7px"}} onClick={()=>setChatInput(q)}>{q}</button>
-              ))}
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
