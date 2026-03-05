@@ -206,6 +206,11 @@ function computeDynamicCatNeed(myDraftedNames) {
   return needs;
 }
 
+// Normalize accented characters for fuzzy name matching
+function normalizeName(name) {
+  return name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+}
+
 function calcCatScore(player, catNeed) {
   const need = catNeed || BASE_CAT_NEED;
   const totalNeed = player.cats.reduce((sum, c) => sum + (need[c] || 0), 0);
@@ -220,7 +225,9 @@ function calcBaseScore(player, catNeed) {
   return Math.round(base * 10) / 10;
 }
 
-// Positional scarcity: VOR = player score - avg score of next 3 at same pos group
+// Positional scarcity: slope-based VOR
+// Uses least-squares regression on rank vs. score to measure how steeply
+// values drop at this position, then computes VOR vs. replacement level.
 function calcPositionalScarcity(player, available, catNeed) {
   const posRanked = [...player.eligible].sort(
     (a, b) => POS_SCARCITY_ORDER.indexOf(a) - POS_SCARCITY_ORDER.indexOf(b)
@@ -230,11 +237,28 @@ function calcPositionalScarcity(player, available, catNeed) {
     .filter(p => p.name !== player.name && p.eligible.includes(scarcePos))
     .map(p => calcBaseScore(p, catNeed))
     .sort((a, b) => b - a);
-  const replacements = posPool.slice(0, 3);
-  const replacement = replacements.length > 0
-    ? replacements.reduce((s, v) => s + v, 0) / replacements.length
-    : 0;
-  const vor = calcBaseScore(player, catNeed) - replacement;
+
+  // Replacement level = value of the player just past the drafted pool for this pos
+  const slotsPerPos = { C:1, "1B":1, "2B":1, "3B":1, SS:1, LF:1, CF:1, RF:1, Util:1, SP:4, RP:2 };
+  const draftedAtPos = (slotsPerPos[scarcePos] || 1) * TOTAL_TEAMS;
+  const replacementIdx = Math.min(draftedAtPos, posPool.length - 1);
+  const replacementVal = posPool[replacementIdx] ?? (posPool[posPool.length - 1] ?? 0);
+
+  // Dropoff slope via least-squares regression (steeper = scarcer position)
+  const n = posPool.length;
+  let slope = 0;
+  if (n >= 3) {
+    const meanX = (n - 1) / 2;
+    const meanY = posPool.reduce((s, v) => s + v, 0) / n;
+    let num = 0, den = 0;
+    posPool.forEach((v, i) => { num += (i - meanX) * (v - meanY); den += (i - meanX) ** 2; });
+    slope = den > 0 ? num / den : 0;
+  }
+  // Normalize slope bonus: steeper drop = higher bonus (capped at 1.0)
+  const slopeBonus = Math.min(Math.abs(slope) * 0.5, 1.0);
+
+  const playerScore = calcBaseScore(player, catNeed);
+  const vor = (playerScore - replacementVal) + slopeBonus;
   return { scarcePos, vor: Math.round(vor * 10) / 10, depth: posPool.length };
 }
 
@@ -247,21 +271,31 @@ function calcLeagueScarcity(player, available, livePicks) {
 }
 
 // Urgency: probability player is gone by next pick
-// Based on: player's tier, picks between now and next my pick, historical draft rate
+// Uses live position depletion rate (how fast this pos is being taken)
+// calibrated to actual picks-away from your next turn.
 function calcUrgency(player, currentPick, available) {
   const nextMyPick = MY_PICKS.find(p => p > currentPick);
   if (!nextMyPick) return 0;
   const picksAway = nextMyPick - currentPick;
 
-  // Base gone% by tier (keep6 go faster)
-  const tierRate = { keep6: 0.15, keep12: 0.08, bridge: 0.10, maybe: 0.06, specialist: 0.05 };
-  const rate = tierRate[player.tier] || 0.08;
+  // Live depletion rate for this position: fraction of pool already gone
+  const scarcePos = [...player.eligible].sort(
+    (a, b) => POS_SCARCITY_ORDER.indexOf(a) - POS_SCARCITY_ORDER.indexOf(b)
+  )[0];
+  const totalAtPos = TARGETS.filter(p => p.eligible.includes(scarcePos)).length;
+  const availAtPos = available.filter(p => p.eligible.includes(scarcePos)).length;
+  const depletionRate = totalAtPos > 0 ? (totalAtPos - availAtPos) / totalAtPos : 0;
 
-  // How many teams still need this position?
-  const teamsNeedingPos = 8; // rough estimate — will refine with team tracking
-  const adjustedRate = rate * (teamsNeedingPos / TOTAL_TEAMS);
+  // Base pick rate per pick = depletion rate / picks elapsed, floored by tier
+  const picksElapsed = Math.max(currentPick - DRAFT_START_PICK, 1);
+  const tierFloor = { keep6: 0.12, keep12: 0.07, bridge: 0.08, maybe: 0.04, specialist: 0.03 };
+  const baseRate = Math.max(depletionRate / picksElapsed, tierFloor[player.tier] || 0.05);
 
-  // Probability gone = 1 - (1-rate)^picksAway (geometric)
+  // Adjust by how "hot" this position is (high depletion = teams targeting it)
+  const demandMultiplier = 1 + depletionRate;
+  const adjustedRate = Math.min(baseRate * demandMultiplier, 0.25);
+
+  // P(gone) = 1 - (1 - rate)^picksAway
   const probGone = 1 - Math.pow(1 - adjustedRate, picksAway);
   return Math.round(probGone * 100);
 }
@@ -322,12 +356,12 @@ export default function App() {
   }, [myDrafted]);
 
   const allTaken = useMemo(() =>
-    new Set([...KEEPER_PICKS.map(p=>p.player), ...Object.values(livePicks)]),
+    new Set([...KEEPER_PICKS.map(p=>normalizeName(p.player)), ...Object.values(livePicks).map(normalizeName)]),
     [livePicks]
   );
 
   const available = useMemo(() =>
-    TARGETS.filter(t => !allTaken.has(t.name)),
+    TARGETS.filter(t => !allTaken.has(normalizeName(t.name))),
     [allTaken]
   );
 
@@ -374,9 +408,9 @@ export default function App() {
   const handlePickInput = (val) => {
     setPickInput(val);
     if (val.length < 2) { setSuggestions([]); return; }
-    const lower = val.toLowerCase();
+    const lower = normalizeName(val);
     const allNames = [...new Set([...TARGETS.map(t=>t.name), ...KEEPER_PICKS.map(p=>p.player)])];
-    const matches = allNames.filter(n => n.toLowerCase().includes(lower) && !allTaken.has(n)).slice(0, 5);
+    const matches = allNames.filter(n => normalizeName(n).includes(lower) && !allTaken.has(normalizeName(n))).slice(0, 5);
     setSuggestions(matches);
   };
 
