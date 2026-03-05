@@ -278,14 +278,14 @@ function calcDraftNowScore(player, available, livePicks, currentPick, catNeed) {
 }
 
 // ─── STYLE CONSTANTS ──────────────────────────────────────────────────────────
-const TIER_COLOR = {keep6:"#f59e0b",keep12:"#22c55e",bridge:"#60a5fa",maybe:"#c084fc",specialist:"#f472b6"};
+const TIER_COLOR = {keep6:"#84cc16",keep12:"#22c55e",bridge:"#60a5fa",maybe:"#c084fc",specialist:"#f472b6"};
 const TIER_LABEL = {keep6:"Keep-6 🔒",keep12:"Keep-12",bridge:"Bridge",maybe:"Maybe",specialist:"Specialist"};
-const CAT_NEED_COLOR = {0:"#1e293b",1:"#334155",2:"#60a5fa",3:"#f87171"};
+const CAT_NEED_COLOR = {0:"#1e293b",1:"#475569",2:"#60a5fa",3:"#f87171"};
 const MY_KEEPER_CATS = {
   R:"ok",H:"ok",HR:"thin",RBI:"thin",SB:"strong",TB:"thin",AVG:"ok",OBP:"ok",SLG:"thin",
   K:"ok",IP:"ok",W:"ok",ER:"ok",ERA:"ok",WHIP:"ok","K/9":"ok","BB/9":"ok",NSVH:"thin"
 };
-const CAT_STATUS_COLOR = {strong:"#22c55e",ok:"#60a5fa",thin:"#f59e0b",missing:"#f87171"};
+const CAT_STATUS_COLOR = {strong:"#22c55e",ok:"#60a5fa",thin:"#84cc16",missing:"#f87171"};
 
 // ─── SYSTEM PROMPT ────────────────────────────────────────────────────────────
 const SYSTEM_PROMPT = `You are a fantasy baseball dynasty draft advisor for "Poor Pickles" (12-team snake draft).
@@ -456,19 +456,19 @@ Question: ${msg}`;
   const pitchCats = ["IP","W","ER","K","ERA","WHIP","K/9","BB/9","NSVH"];
 
   // Score bar color
-  const scoreColor = (s) => s >= 8 ? "#f59e0b" : s >= 6.5 ? "#22c55e" : s >= 5 ? "#60a5fa" : "#475569";
+  const scoreColor = (s) => s >= 8 ? "#84cc16" : s >= 6.5 ? "#22c55e" : s >= 5 ? "#60a5fa" : "#64748b";
 
   return (
-    <div style={{fontFamily:"'IBM Plex Mono','Courier New',monospace",background:"#08090d",height:"100vh",color:"#cbd5e1",display:"flex",flexDirection:"column",overflow:"hidden"}}>
+    <div style={{fontFamily:"'IBM Plex Mono','Courier New',monospace",background:"#08090d",height:"100vh",color:"#e2e8f0",display:"flex",flexDirection:"column",overflow:"hidden"}}>
       <style>{`
         *{box-sizing:border-box}
         ::-webkit-scrollbar{width:3px;height:3px}
         ::-webkit-scrollbar-track{background:#0f1117}
-        ::-webkit-scrollbar-thumb{background:#334155;border-radius:2px}
+        ::-webkit-scrollbar-thumb{background:#475569;border-radius:2px}
         .pulse{animation:glow 1.4s ease-in-out infinite}
-        @keyframes glow{0%,100%{box-shadow:0 0 0 0 #f59e0b55}50%{box-shadow:0 0 0 8px #f59e0b00}}
-        input,textarea{background:#0f1117;border:1px solid #1e293b;color:#cbd5e1;font-family:'IBM Plex Mono','Courier New',monospace;font-size:11px;padding:5px 8px;border-radius:3px;outline:none}
-        input:focus,textarea:focus{border-color:#f59e0b}
+        @keyframes glow{0%,100%{box-shadow:0 0 0 0 #84cc1655}50%{box-shadow:0 0 0 8px #84cc1600}}
+        input,textarea{background:#0f1117;border:1px solid #1e293b;color:#e2e8f0;font-family:'IBM Plex Mono','Courier New',monospace;font-size:12px;padding:5px 8px;border-radius:3px;outline:none}
+        input:focus,textarea:focus{border-color:#84cc16}
         .btn{cursor:pointer;border:none;font-family:'IBM Plex Mono','Courier New',monospace;font-size:10px;letter-spacing:.07em;text-transform:uppercase;padding:5px 9px;border-radius:3px;transition:all .15s}
         .tabn{background:none;border:none;cursor:pointer;padding:8px 12px;font-family:'IBM Plex Mono','Courier New',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;transition:all .15s}
         .sug-item:hover{background:#1e293b}
@@ -478,28 +478,28 @@ Question: ${msg}`;
       {/* HEADER */}
       <div style={{background:"#0b0d14",borderBottom:"1px solid #1e293b",padding:"9px 16px",display:"flex",alignItems:"center",justifyContent:"space-between",flexShrink:0}}>
         <div style={{display:"flex",alignItems:"center",gap:12}}>
-          <span style={{fontSize:20,letterSpacing:".15em",color:"#f59e0b",fontWeight:700}}>POOR PICKLES</span>
+          <span style={{fontSize:22,letterSpacing:".15em",color:"#84cc16",fontWeight:700}}>POOR PICKLES</span>
           <span style={{color:"#1e293b"}}>|</span>
-          <span style={{fontSize:9,color:"#334155",letterSpacing:".1em"}}>DYNASTY DRAFT · SCORING ENGINE v2</span>
+          <span style={{fontSize:10,color:"#475569",letterSpacing:".1em"}}>DYNASTY DRAFT · SCORING ENGINE v2</span>
         </div>
         <div style={{display:"flex",gap:14,alignItems:"center"}}>
           <div style={{display:"flex",gap:6,alignItems:"center"}}>
-            <span style={{fontSize:9,color:"#334155",marginRight:2}}>MY PICKS:</span>
+            <span style={{fontSize:10,color:"#475569",marginRight:2}}>MY PICKS:</span>
             {snakePicks.map((p,i)=>(
               <div key={p} style={{textAlign:"center",opacity:i===0?1:0.4+i*0.15}}>
-                <div style={{fontSize:8,color:"#334155"}}>R{getRound(p)}</div>
-                <div style={{fontSize:12,fontWeight:600,color:i===0&&isMyClock?"#f59e0b":"#64748b"}}>#{p}</div>
+                <div style={{fontSize:9,color:"#475569"}}>R{getRound(p)}</div>
+                <div style={{fontSize:13,fontWeight:600,color:i===0&&isMyClock?"#84cc16":"#94a3b8"}}>#{p}</div>
               </div>
             ))}
           </div>
           <div style={{width:1,height:24,background:"#1e293b"}}/>
           {[["PICK",currentPick],["RND",currentRound]].map(([l,v])=>(
             <div key={l} style={{textAlign:"center"}}>
-              <div style={{fontSize:8,color:"#334155"}}>{l}</div>
-              <div style={{fontSize:13,fontWeight:600,color:"#f1f5f9"}}>{v}</div>
+              <div style={{fontSize:9,color:"#475569"}}>{l}</div>
+              <div style={{fontSize:15,fontWeight:600,color:"#f1f5f9"}}>{v}</div>
             </div>
           ))}
-          <div className={isMyClock?"pulse":""} style={{padding:"3px 10px",borderRadius:3,background:isMyClock?"#f59e0b22":"#1e293b",border:`1px solid ${isMyClock?"#f59e0b":"#1e293b"}`,color:isMyClock?"#f59e0b":"#334155",fontSize:10,fontWeight:600,letterSpacing:".08em"}}>
+          <div className={isMyClock?"pulse":""} style={{padding:"3px 10px",borderRadius:3,background:isMyClock?"#84cc1622":"#1e293b",border:`1px solid ${isMyClock?"#84cc16":"#1e293b"}`,color:isMyClock?"#84cc16":"#475569",fontSize:11,fontWeight:600,letterSpacing:".08em"}}>
             {isMyClock?"⚡ ON CLOCK":`−${until} picks`}
           </div>
         </div>
@@ -508,9 +508,9 @@ Question: ${msg}`;
       {/* ALERT BAR */}
       {lateAlerts.length > 0 && (
         <div style={{background:"#7f1d1d22",borderBottom:"1px solid #dc262622",padding:"4px 16px",display:"flex",gap:10,alignItems:"center",flexShrink:0}}>
-          <span style={{fontSize:9,color:"#f87171",letterSpacing:".08em",fontWeight:600}}>⚠ URGENT — Keep-6 targets at risk:</span>
+          <span style={{fontSize:10,color:"#f87171",letterSpacing:".08em",fontWeight:600}}>⚠ URGENT — Keep-6 targets at risk:</span>
           {lateAlerts.map(t=>(
-            <span key={t.name} style={{fontSize:10,color:"#fca5a5",background:"#7f1d1d44",padding:"1px 7px",borderRadius:10}}>
+            <span key={t.name} style={{fontSize:11,color:"#fca5a5",background:"#7f1d1d44",padding:"1px 7px",borderRadius:10}}>
               {t.name} <span style={{opacity:0.6}}>{t.urgency}% gone</span>
             </span>
           ))}
@@ -523,8 +523,8 @@ Question: ${msg}`;
         <div style={{width:210,background:"#09090e",borderRight:"1px solid #1e293b",display:"flex",flexDirection:"column",flexShrink:0}}>
           <div style={{padding:10,borderBottom:"1px solid #1e293b"}}>
             <div style={{marginBottom:6}}>
-              <div style={{fontSize:9,color:"#334155",letterSpacing:".08em",textTransform:"uppercase"}}>Pick #{currentPick} · [/] to focus</div>
-              <div style={{fontSize:11,fontWeight:600,color:isMyClock?"#f59e0b":"#94a3b8",marginTop:2}}>
+              <div style={{fontSize:10,color:"#475569",letterSpacing:".08em",textTransform:"uppercase"}}>Pick #{currentPick} · [/] to focus</div>
+              <div style={{fontSize:12,fontWeight:600,color:isMyClock?"#84cc16":"#94a3b8",marginTop:2}}>
                 {isMyClock ? "⚡ YOUR PICK" : `🕐 ${getPickOwner(currentPick)}`}
               </div>
             </div>
@@ -536,19 +536,19 @@ Question: ${msg}`;
                   if(e.key==="ArrowDown"&&suggestions.length){e.preventDefault();setPickInput(suggestions[0]);setSuggestions([]);}
                 }}
                 placeholder={isMyClock?"Your pick...":"Type player name..."}
-                style={{width:"100%",borderColor:isMyClock?"#f59e0b44":"#1e293b"}}/>
+                style={{width:"100%",borderColor:isMyClock?"#84cc1644":"#1e293b"}}/>
               {suggestions.length>0&&(
-                <div style={{position:"absolute",top:"100%",left:0,right:0,background:"#111318",border:"1px solid #f59e0b66",borderTop:"none",borderRadius:"0 0 4px 4px",zIndex:200}}>
+                <div style={{position:"absolute",top:"100%",left:0,right:0,background:"#111318",border:"1px solid #84cc1666",borderTop:"none",borderRadius:"0 0 4px 4px",zIndex:200}}>
                   {suggestions.map(s=>{
                     const t = TARGETS.find(x=>x.name===s);
                     const scored = scoredAvailable.find(x=>x.name===s);
                     return (
                       <div key={s} className="sug-item" onClick={()=>{setPickInput(s);setSuggestions([]);pickInputRef.current?.focus();}}
-                        style={{padding:"5px 8px",fontSize:11,color:"#e2e8f0",cursor:"pointer",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                        style={{padding:"5px 8px",fontSize:12,color:"#e2e8f0",cursor:"pointer",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
                         <span>{s}</span>
                         <div style={{display:"flex",gap:5,alignItems:"center"}}>
-                          {scored&&<span style={{fontSize:8,color:scoreColor(scored.draftNowScore),fontWeight:600}}>{scored.draftNowScore}</span>}
-                          {t&&<span style={{fontSize:8,color:TIER_COLOR[t.tier]}}>{TIER_LABEL[t.tier]}</span>}
+                          {scored&&<span style={{fontSize:9,color:scoreColor(scored.draftNowScore),fontWeight:600}}>{scored.draftNowScore}</span>}
+                          {t&&<span style={{fontSize:9,color:TIER_COLOR[t.tier]}}>{TIER_LABEL[t.tier]}</span>}
                         </div>
                       </div>
                     );
@@ -556,11 +556,11 @@ Question: ${msg}`;
                 </div>
               )}
             </div>
-            <button className="btn" style={{width:"100%",marginTop:5,background:isMyClock?"#14532d44":"#1e293b",color:isMyClock?"#22c55e":"#64748b",border:isMyClock?"1px solid #14532d":"none",fontWeight:600}} onClick={record}>
+            <button className="btn" style={{width:"100%",marginTop:5,background:isMyClock?"#14532d44":"#1e293b",color:isMyClock?"#22c55e":"#94a3b8",border:isMyClock?"1px solid #14532d":"none",fontWeight:600}} onClick={record}>
               {isMyClock?"Record My Pick [Enter]":"Record + Advance [Enter]"}
             </button>
             <div style={{display:"flex",gap:3,marginTop:3}}>
-              <button className="btn" style={{flex:1,background:"#1e293b",color:"#475569"}} onClick={()=>{
+              <button className="btn" style={{flex:1,background:"#1e293b",color:"#64748b"}} onClick={()=>{
                 const lastPick = Math.max(...Object.keys(livePicks).map(Number), DRAFT_START_PICK-1);
                 if(lastPick>=DRAFT_START_PICK){
                   const name=livePicks[lastPick];
@@ -575,11 +575,11 @@ Question: ${msg}`;
 
           {/* My roster */}
           <div style={{flex:1,overflowY:"auto",padding:10}}>
-            <div style={{fontSize:9,color:"#334155",letterSpacing:".08em",textTransform:"uppercase",marginBottom:6}}>My Roster ({myRoster.length}/28)</div>
+            <div style={{fontSize:10,color:"#475569",letterSpacing:".08em",textTransform:"uppercase",marginBottom:6}}>My Roster ({myRoster.length}/28)</div>
             {myRoster.map((p,i)=>(
               <div key={i} style={{padding:"3px 7px",marginBottom:2,background:p.kept?"#0c1624":"#0c1a10",borderRadius:3,borderLeft:`2px solid ${p.kept?"#3b82f6":"#22c55e"}`}}>
-                <div style={{fontSize:11,color:"#e2e8f0"}}>{p.name}</div>
-                <div style={{fontSize:9,color:"#334155"}}>{p.pos}{p.kept?" · K":""}</div>
+                <div style={{fontSize:12,color:"#e2e8f0"}}>{p.name}</div>
+                <div style={{fontSize:10,color:"#475569"}}>{p.pos}{p.kept?" · K":""}</div>
               </div>
             ))}
           </div>
@@ -590,16 +590,16 @@ Question: ${msg}`;
           <div style={{background:"#0b0d14",borderBottom:"1px solid #1e293b",display:"flex",alignItems:"center",padding:"0 10px",flexShrink:0}}>
             {[["board","Targets"],["cats","Categories"],["teams","Other Teams"],["log","Pick Log"]].map(([v,l])=>(
               <button key={v} className="tabn" onClick={()=>setTab(v)}
-                style={{color:tab===v?"#f59e0b":"#334155",borderBottom:tab===v?"2px solid #f59e0b":"2px solid transparent"}}>
+                style={{color:tab===v?"#84cc16":"#475569",borderBottom:tab===v?"2px solid #84cc16":"2px solid transparent"}}>
                 {l}
               </button>
             ))}
             {tab==="board"&&(
               <div style={{marginLeft:"auto",display:"flex",gap:3,alignItems:"center"}}>
-                <span style={{fontSize:8,color:"#334155",marginRight:4}}>sorted by DNS</span>
+                <span style={{fontSize:9,color:"#475569",marginRight:4}}>sorted by DNS</span>
                 {[["all","All"],["H","Hit"],["P","Pitch"]].map(([v,l])=>(
                   <button key={v} className="btn" onClick={()=>setTypeFilter(v)}
-                    style={{background:typeFilter===v?"#f59e0b22":"#1e293b",color:typeFilter===v?"#f59e0b":"#475569",border:typeFilter===v?"1px solid #f59e0b44":"1px solid transparent"}}>
+                    style={{background:typeFilter===v?"#84cc1622":"#1e293b",color:typeFilter===v?"#84cc16":"#64748b",border:typeFilter===v?"1px solid #84cc1644":"1px solid transparent"}}>
                     {l}
                   </button>
                 ))}
@@ -612,11 +612,11 @@ Question: ${msg}`;
             <div style={{flex:1,overflowY:"auto",padding:12}}>
               {/* Score legend */}
               <div style={{display:"flex",gap:12,marginBottom:10,flexWrap:"wrap",alignItems:"center"}}>
-                <span style={{fontSize:9,color:"#334155"}}>DNS = Draft Now Score · </span>
-                {[["≥8.0","#f59e0b","Elite"],["≥6.5","#22c55e","Strong"],["≥5.0","#60a5fa","Solid"],["<5.0","#475569","Stash"]].map(([r,c,l])=>(
-                  <div key={r} style={{display:"flex",alignItems:"center",gap:4,fontSize:9}}>
+                <span style={{fontSize:10,color:"#475569"}}>DNS = Draft Now Score · </span>
+                {[["≥8.0","#84cc16","Elite"],["≥6.5","#22c55e","Strong"],["≥5.0","#60a5fa","Solid"],["<5.0","#64748b","Stash"]].map(([r,c,l])=>(
+                  <div key={r} style={{display:"flex",alignItems:"center",gap:4,fontSize:10}}>
                     <div style={{width:7,height:7,borderRadius:2,background:c}}/>
-                    <span style={{color:"#475569"}}>{l} {r}</span>
+                    <span style={{color:"#64748b"}}>{l} {r}</span>
                   </div>
                 ))}
               </div>
@@ -629,37 +629,37 @@ Question: ${msg}`;
                     onClick={()=>setShowScoreBreakdown(isExpanded ? null : t.name)}>
                     <div style={{display:"flex",alignItems:"center",gap:8}}>
                       {/* Rank */}
-                      <span style={{fontSize:10,color:"#334155",width:18,textAlign:"right",flexShrink:0}}>#{idx+1}</span>
+                      <span style={{fontSize:11,color:"#475569",width:18,textAlign:"right",flexShrink:0}}>#{idx+1}</span>
                       {/* DNS score badge */}
                       <div style={{background:`${scoreColor(t.draftNowScore)}22`,border:`1px solid ${scoreColor(t.draftNowScore)}44`,borderRadius:4,padding:"1px 6px",minWidth:32,textAlign:"center",flexShrink:0}}>
-                        <span style={{fontSize:12,fontWeight:700,color:scoreColor(t.draftNowScore)}}>{t.draftNowScore}</span>
+                        <span style={{fontSize:13,fontWeight:700,color:scoreColor(t.draftNowScore)}}>{t.draftNowScore}</span>
                       </div>
                       {/* Name + meta */}
                       <div style={{flex:1,minWidth:0}}>
                         <div style={{display:"flex",alignItems:"center",gap:6,flexWrap:"wrap"}}>
-                          <span style={{fontSize:13,color:"#f1f5f9",fontWeight:500}}>{t.name}</span>
-                          {t.il&&<span style={{fontSize:8,color:"#f87171",background:"#7f1d1d33",padding:"1px 4px",borderRadius:3}}>IL</span>}
-                          {t.est&&<span style={{fontSize:8,color:"#475569",background:"#1e293b",padding:"1px 4px",borderRadius:3}}>EST</span>}
-                          <span style={{fontSize:9,color:"#334155"}}>{t.eligible.join("/")} · {t.org}</span>
-                          <span style={{fontSize:8,padding:"1px 5px",borderRadius:8,background:`${TIER_COLOR[t.tier]}18`,color:TIER_COLOR[t.tier]}}>{TIER_LABEL[t.tier]}</span>
+                          <span style={{fontSize:15,color:"#f1f5f9",fontWeight:500}}>{t.name}</span>
+                          {t.il&&<span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 4px",borderRadius:3}}>IL</span>}
+                          {t.est&&<span style={{fontSize:9,color:"#64748b",background:"#1e293b",padding:"1px 4px",borderRadius:3}}>EST</span>}
+                          <span style={{fontSize:10,color:"#475569"}}>{t.eligible.join("/")} · {t.org}</span>
+                          <span style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${TIER_COLOR[t.tier]}18`,color:TIER_COLOR[t.tier]}}>{TIER_LABEL[t.tier]}</span>
                         </div>
-                        <div style={{fontSize:9,color:"#334155",marginTop:1}}>{playerNotes[t.name]||t.note}</div>
+                        <div style={{fontSize:10,color:"#475569",marginTop:1}}>{playerNotes[t.name]||t.note}</div>
                       </div>
                       {/* Urgency + scarcity */}
                       <div style={{display:"flex",gap:6,flexShrink:0,alignItems:"center"}}>
                         {t.urgency >= 50 && (
-                          <span style={{fontSize:8,color:"#f87171",background:"#7f1d1d33",padding:"1px 5px",borderRadius:3}}>{t.urgency}% gone</span>
+                          <span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 5px",borderRadius:3}}>{t.urgency}% gone</span>
                         )}
-                        <span style={{fontSize:8,color:"#334155"}}>VOR {t.scarcity.vor > 0 ? "+":""}{t.scarcity.vor}</span>
-                        <span style={{fontSize:9,color:"#1e3a5f"}}>{t.type==="H"?"⚾":"⚡"}</span>
+                        <span style={{fontSize:9,color:"#475569"}}>VOR {t.scarcity.vor > 0 ? "+":""}{t.scarcity.vor}</span>
+                        <span style={{fontSize:10,color:"#1e3a5f"}}>{t.type==="H"?"⚾":"⚡"}</span>
                       </div>
                     </div>
 
                     {/* Expanded score breakdown */}
                     {isExpanded&&(
                       <div style={{marginTop:8,paddingTop:8,borderTop:"1px solid #1e293b",display:"grid",gridTemplateColumns:"1fr 1fr",gap:6}}>
-                        <div style={{fontSize:10,color:"#475569"}}>
-                          <div style={{color:"#64748b",marginBottom:3,fontSize:9,textTransform:"uppercase",letterSpacing:".06em"}}>Score Breakdown</div>
+                        <div style={{fontSize:11,color:"#64748b"}}>
+                          <div style={{color:"#94a3b8",marginBottom:3,fontSize:10,textTransform:"uppercase",letterSpacing:".06em"}}>Score Breakdown</div>
                           <div>Base: <span style={{color:"#94a3b8"}}>{t.baseScore}</span></div>
                           <div>2026 ({t.il?"IL-discounted":"full"}): <span style={{color:"#94a3b8"}}>{t.il ? Math.round(t.score2026*IL_2026_DISCOUNT*10)/10 : t.score2026}</span></div>
                           <div>Dynasty: <span style={{color:"#94a3b8"}}>{t.scoreDyn}</span></div>
@@ -667,30 +667,30 @@ Question: ${msg}`;
                           <div>Urgency bonus: <span style={{color:"#94a3b8"}}>+{Math.round(t.urgency/100*1.5*10)/10}</span></div>
                           <div style={{marginTop:4,fontWeight:600,color:scoreColor(t.draftNowScore)}}>DNS: {t.draftNowScore}</div>
                         </div>
-                        <div style={{fontSize:10}}>
-                          <div style={{color:"#64748b",marginBottom:3,fontSize:9,textTransform:"uppercase",letterSpacing:".06em"}}>Category Fit</div>
+                        <div style={{fontSize:11}}>
+                          <div style={{color:"#94a3b8",marginBottom:3,fontSize:10,textTransform:"uppercase",letterSpacing:".06em"}}>Category Fit</div>
                           <div style={{display:"flex",gap:4,flexWrap:"wrap"}}>
                             {t.cats.map(c=>{
                               const orig = BASE_CAT_NEED[c]||0;
                               const curr = catNeed[c]??orig;
                               const decayed = curr < orig;
                               return (
-                                <span key={c} style={{fontSize:8,padding:"1px 5px",borderRadius:8,background:`${CAT_NEED_COLOR[curr]||"#1e293b"}18`,color:CAT_NEED_COLOR[curr]||"#334155",border:decayed?"1px solid #f59e0b44":"none"}}>
+                                <span key={c} style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${CAT_NEED_COLOR[curr]||"#1e293b"}18`,color:CAT_NEED_COLOR[curr]||"#475569",border:decayed?"1px solid #84cc1644":"none"}}>
                                   {c} {decayed?`(${orig}→${curr})`:`(${orig})`}
                                 </span>
                               );
                             })}
                           </div>
-                          <div style={{marginTop:6,fontSize:9,color:"#334155"}}>
+                          <div style={{marginTop:6,fontSize:10,color:"#475569"}}>
                             Pos depth @ {t.scarcity.scarcePos}: {t.scarcity.depth} left
                           </div>
                           <div style={{marginTop:2,display:"flex",gap:4}}>
                             {editingNote===t.name?(
                               <input value={noteInput} onChange={e=>setNoteInput(e.target.value)}
                                 onKeyDown={e=>{if(e.key==="Enter"){setPlayerNotes(p=>({...p,[t.name]:noteInput}));setEditingNote(null);}}}
-                                style={{flex:1,fontSize:9}} onClick={e=>e.stopPropagation()}/>
+                                style={{flex:1,fontSize:10}} onClick={e=>e.stopPropagation()}/>
                             ):(
-                              <button className="btn" style={{background:"#1e293b",color:"#475569",fontSize:8}} onClick={e=>{e.stopPropagation();setEditingNote(t.name);setNoteInput(playerNotes[t.name]||t.note);}}>
+                              <button className="btn" style={{background:"#1e293b",color:"#64748b",fontSize:9}} onClick={e=>{e.stopPropagation();setEditingNote(t.name);setNoteInput(playerNotes[t.name]||t.note);}}>
                                 edit note
                               </button>
                             )}
@@ -707,12 +707,12 @@ Question: ${msg}`;
           {/* CATEGORY TRACKER */}
           {tab==="cats"&&(
             <div style={{flex:1,overflowY:"auto",padding:14}}>
-              <div style={{marginBottom:10,fontSize:10,color:"#334155"}}>
-                Need weights update live as you draft. <span style={{color:"#f59e0b"}}>Amber = decayed by your picks.</span> Click to manually cycle status.
+              <div style={{marginBottom:10,fontSize:11,color:"#475569"}}>
+                Need weights update live as you draft. <span style={{color:"#84cc16"}}>Amber = decayed by your picks.</span> Click to manually cycle status.
               </div>
               {[["HITTING",hitCats],["PITCHING",pitchCats]].map(([label,cats])=>(
                 <div key={label} style={{marginBottom:18}}>
-                  <div style={{fontSize:9,color:"#334155",letterSpacing:".1em",textTransform:"uppercase",marginBottom:8}}>{label}</div>
+                  <div style={{fontSize:10,color:"#475569",letterSpacing:".1em",textTransform:"uppercase",marginBottom:8}}>{label}</div>
                   <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
                     {cats.map(c=>{
                       const statuses=["missing","thin","ok","strong"];
@@ -722,19 +722,19 @@ Question: ${msg}`;
                       const decayed = currNeed < origNeed;
                       return (
                         <div key={c} onClick={()=>setCatStatus(prev=>({...prev,[c]:statuses[(statuses.indexOf(cur)+1)%statuses.length]}))}
-                          style={{cursor:"pointer",padding:"8px 10px",borderRadius:4,background:`${CAT_STATUS_COLOR[cur]}15`,border:`1px solid ${decayed?"#f59e0b55":CAT_STATUS_COLOR[cur]+"44"}`,textAlign:"center",minWidth:64,position:"relative"}}>
-                          {decayed&&<div style={{position:"absolute",top:3,right:4,width:5,height:5,borderRadius:"50%",background:"#f59e0b"}}/>}
-                          <div style={{fontSize:12,fontWeight:600,color:CAT_STATUS_COLOR[cur]}}>{c}</div>
-                          <div style={{fontSize:7,color:CAT_STATUS_COLOR[cur],opacity:0.7,marginTop:1,textTransform:"uppercase"}}>{cur}</div>
+                          style={{cursor:"pointer",padding:"8px 10px",borderRadius:4,background:`${CAT_STATUS_COLOR[cur]}15`,border:`1px solid ${decayed?"#84cc1655":CAT_STATUS_COLOR[cur]+"44"}`,textAlign:"center",minWidth:64,position:"relative"}}>
+                          {decayed&&<div style={{position:"absolute",top:3,right:4,width:5,height:5,borderRadius:"50%",background:"#84cc16"}}/>}
+                          <div style={{fontSize:13,fontWeight:600,color:CAT_STATUS_COLOR[cur]}}>{c}</div>
+                          <div style={{fontSize:9,color:CAT_STATUS_COLOR[cur],opacity:0.7,marginTop:1,textTransform:"uppercase"}}>{cur}</div>
                           {/* Need weight: show original → current if decayed */}
                           <div style={{marginTop:3,display:"flex",justifyContent:"center",alignItems:"center",gap:3}}>
                             {decayed ? (
                               <>
-                                <span style={{fontSize:8,color:"#334155",textDecoration:"line-through"}}>{origNeed}</span>
-                                <span style={{fontSize:8,color:"#f59e0b"}}>→{currNeed}</span>
+                                <span style={{fontSize:9,color:"#475569",textDecoration:"line-through"}}>{origNeed}</span>
+                                <span style={{fontSize:9,color:"#84cc16"}}>→{currNeed}</span>
                               </>
                             ) : (
-                              <span style={{fontSize:8,color:CAT_NEED_COLOR[origNeed]||"#334155"}}>need:{origNeed}</span>
+                              <span style={{fontSize:9,color:CAT_NEED_COLOR[origNeed]||"#475569"}}>need:{origNeed}</span>
                             )}
                           </div>
                         </div>
@@ -744,18 +744,18 @@ Question: ${msg}`;
                 </div>
               ))}
               <div style={{marginTop:4,padding:"8px 10px",background:"#0d0f16",borderRadius:4,border:"1px solid #1e293b"}}>
-                <div style={{fontSize:9,color:"#334155",marginBottom:4,letterSpacing:".08em",textTransform:"uppercase"}}>Decay Log</div>
+                <div style={{fontSize:10,color:"#475569",marginBottom:4,letterSpacing:".08em",textTransform:"uppercase"}}>Decay Log</div>
                 {myDrafted.length === 0
-                  ? <div style={{fontSize:10,color:"#1e293b"}}>No picks recorded yet.</div>
+                  ? <div style={{fontSize:11,color:"#1e293b"}}>No picks recorded yet.</div>
                   : myDrafted.map((name, i) => {
                     const t = TARGETS.find(x => x.name === name);
                     if (!t) return null;
                     return (
-                      <div key={i} style={{fontSize:10,color:"#475569",marginBottom:2,display:"flex",gap:6}}>
+                      <div key={i} style={{fontSize:11,color:"#64748b",marginBottom:2,display:"flex",gap:6}}>
                         <span style={{color:"#22c55e"}}>{name}</span>
-                        <span style={{color:"#334155"}}>↓</span>
+                        <span style={{color:"#475569"}}>↓</span>
                         {t.cats.map(c => (
-                          <span key={c} style={{color:CAT_NEED_COLOR[catNeed[c]]||"#334155",background:"#1e293b",padding:"0 4px",borderRadius:3,fontSize:9}}>{c}</span>
+                          <span key={c} style={{color:CAT_NEED_COLOR[catNeed[c]]||"#475569",background:"#1e293b",padding:"0 4px",borderRadius:3,fontSize:10}}>{c}</span>
                         ))}
                       </div>
                     );
@@ -768,7 +768,7 @@ Question: ${msg}`;
           {/* OTHER TEAMS */}
           {tab==="teams"&&(
             <div style={{flex:1,overflowY:"auto",padding:12}}>
-              <div style={{fontSize:9,color:"#334155",marginBottom:10}}>Keeper rosters R1-10. Use to assess positional pressure and SP scarcity.</div>
+              <div style={{fontSize:10,color:"#475569",marginBottom:10}}>Keeper rosters R1-10. Use to assess positional pressure and SP scarcity.</div>
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>
                 {DRAFT_ORDER.filter(t=>t!==MY_TEAM).map(team=>{
                   const roster = KEEPER_PICKS.filter(p=>p.team===team);
@@ -776,13 +776,13 @@ Question: ${msg}`;
                   return (
                     <div key={team} style={{background:"#0d0f16",border:"1px solid #1e293b",borderRadius:4,padding:"8px 10px"}}>
                       <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:5}}>
-                        <span style={{fontSize:10,color:"#94a3b8",fontWeight:600}}>{team}</span>
-                        {spCount>0&&<span style={{fontSize:8,color:"#60a5fa",background:"#1e3a5f33",padding:"1px 5px",borderRadius:3}}>{spCount} SP</span>}
+                        <span style={{fontSize:11,color:"#94a3b8",fontWeight:600}}>{team}</span>
+                        {spCount>0&&<span style={{fontSize:9,color:"#60a5fa",background:"#1e3a5f33",padding:"1px 5px",borderRadius:3}}>{spCount} SP</span>}
                       </div>
                       {roster.map((p,i)=>(
-                        <div key={i} style={{display:"flex",gap:6,marginBottom:2,fontSize:10}}>
-                          <span style={{color:"#334155",width:26,flexShrink:0}}>{p.pos}</span>
-                          <span style={{color:"#64748b"}}>{p.player}</span>
+                        <div key={i} style={{display:"flex",gap:6,marginBottom:2,fontSize:11}}>
+                          <span style={{color:"#475569",width:26,flexShrink:0}}>{p.pos}</span>
+                          <span style={{color:"#94a3b8"}}>{p.player}</span>
                         </div>
                       ))}
                     </div>
@@ -795,18 +795,18 @@ Question: ${msg}`;
           {/* PICK LOG */}
           {tab==="log"&&(
             <div style={{flex:1,overflowY:"auto",padding:12}}>
-              <div style={{fontSize:9,color:"#334155",marginBottom:8}}>Live picks only (R1-10 keepers not shown).</div>
+              <div style={{fontSize:10,color:"#475569",marginBottom:8}}>Live picks only (R1-10 keepers not shown).</div>
               {Object.keys(livePicks).length===0&&<div style={{color:"#1e293b",textAlign:"center",padding:40}}>No picks recorded yet.</div>}
               {Object.entries(livePicks).sort((a,b)=>Number(b[0])-Number(a[0])).map(([pick,name])=>{
                 const mine = myDrafted.includes(name);
                 const t = TARGETS.find(x=>x.name===name);
                 const owner = getPickOwner(Number(pick));
                 return (
-                  <div key={pick} style={{padding:"5px 8px",marginBottom:3,background:"#0d0f16",borderRadius:3,display:"flex",gap:8,fontSize:11,borderLeft:`2px solid ${mine?"#f59e0b":"#1e293b"}`}}>
+                  <div key={pick} style={{padding:"5px 8px",marginBottom:3,background:"#0d0f16",borderRadius:3,display:"flex",gap:8,fontSize:12,borderLeft:`2px solid ${mine?"#84cc16":"#1e293b"}`}}>
                     <span style={{color:"#1e3a5f",width:52,flexShrink:0}}>R{getRound(Number(pick))} #{pick}</span>
-                    <span style={{color:mine?"#f59e0b":"#94a3b8",flex:1}}>{name}</span>
-                    {t&&<span style={{fontSize:8,color:TIER_COLOR[t.tier]}}>{TIER_LABEL[t.tier]}</span>}
-                    <span style={{fontSize:8,color:mine?"#f59e0b":"#334155"}}>{mine?"MINE":owner}</span>
+                    <span style={{color:mine?"#84cc16":"#94a3b8",flex:1}}>{name}</span>
+                    {t&&<span style={{fontSize:9,color:TIER_COLOR[t.tier]}}>{TIER_LABEL[t.tier]}</span>}
+                    <span style={{fontSize:9,color:mine?"#84cc16":"#475569"}}>{mine?"MINE":owner}</span>
                   </div>
                 );
               })}
@@ -816,30 +816,30 @@ Question: ${msg}`;
 
         {/* RIGHT: CHAT */}
         <div style={{width:295,background:"#09090e",borderLeft:"1px solid #1e293b",display:"flex",flexDirection:"column",flexShrink:0}}>
-          <div style={{padding:"9px 12px",borderBottom:"1px solid #1e293b",fontSize:9,color:"#334155",letterSpacing:".1em",textTransform:"uppercase"}}>
+          <div style={{padding:"9px 12px",borderBottom:"1px solid #1e293b",fontSize:10,color:"#475569",letterSpacing:".1em",textTransform:"uppercase"}}>
             AI Advisor · DNS-aware
           </div>
           <div style={{flex:1,overflowY:"auto",padding:8,display:"flex",flexDirection:"column",gap:7}}>
             {messages.map((m,i)=>(
               <div key={i} style={{display:"flex",flexDirection:"column",alignItems:m.role==="user"?"flex-end":"flex-start"}}>
-                <div style={{maxWidth:"92%",padding:"6px 9px",borderRadius:5,fontSize:11,lineHeight:1.6,background:m.role==="user"?"#1e293b":"#0c1525",border:`1px solid ${m.role==="user"?"#334155":"#1e3a5f"}`,color:m.role==="user"?"#cbd5e1":"#93c5fd",whiteSpace:"pre-wrap"}}>
+                <div style={{maxWidth:"92%",padding:"6px 9px",borderRadius:5,fontSize:12,lineHeight:1.6,background:m.role==="user"?"#1e293b":"#0c1525",border:`1px solid ${m.role==="user"?"#475569":"#1e3a5f"}`,color:m.role==="user"?"#e2e8f0":"#93c5fd",whiteSpace:"pre-wrap"}}>
                   {m.content}
                 </div>
               </div>
             ))}
-            {loading&&<div style={{padding:"6px 9px",borderRadius:5,background:"#0c1525",border:"1px solid #1e3a5f",color:"#334155",fontSize:11}}>thinking...</div>}
+            {loading&&<div style={{padding:"6px 9px",borderRadius:5,background:"#0c1525",border:"1px solid #1e3a5f",color:"#475569",fontSize:12}}>thinking...</div>}
             <div ref={endRef}/>
           </div>
           <div style={{padding:"8px",borderTop:"1px solid #1e293b"}}>
             <div style={{display:"flex",gap:4,marginBottom:5}}>
               <input value={chatInput} onChange={e=>setChatInput(e.target.value)}
                 onKeyDown={e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();sendMsg();}}}
-                placeholder="Ask anything..." style={{flex:1,fontSize:11}} disabled={loading}/>
-              <button className="btn" style={{background:"#f59e0b22",color:"#f59e0b",border:"1px solid #f59e0b33"}} onClick={sendMsg} disabled={loading}>→</button>
+                placeholder="Ask anything..." style={{flex:1,fontSize:12}} disabled={loading}/>
+              <button className="btn" style={{background:"#84cc1622",color:"#84cc16",border:"1px solid #84cc1633"}} onClick={sendMsg} disabled={loading}>→</button>
             </div>
             <div style={{display:"flex",flexWrap:"wrap",gap:3}}>
               {["Top pick now?","Best SP left?","Best hitter left?","Explain top score","Am I too SP heavy?"].map(q=>(
-                <button key={q} className="btn" style={{background:"#1e293b",color:"#475569",fontSize:9,padding:"3px 7px"}} onClick={()=>setChatInput(q)}>{q}</button>
+                <button key={q} className="btn" style={{background:"#1e293b",color:"#64748b",fontSize:10,padding:"3px 7px"}} onClick={()=>setChatInput(q)}>{q}</button>
               ))}
             </div>
           </div>
