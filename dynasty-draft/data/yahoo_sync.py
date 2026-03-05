@@ -154,7 +154,7 @@ def sync_league_settings(query):
 
         return {
             "league_key":   LEAGUE_KEY,
-            "league_name":  str(getattr(meta, "name", "Unknown League")),
+            "league_name":  (lambda n: n.decode() if isinstance(n, bytes) else str(n))(getattr(meta, "name", "Unknown League")),
             "season":       int(getattr(meta, "season", 2026)),
             "num_teams":    int(getattr(meta, "num_teams", 12)),
             "draft_status": str(getattr(meta, "draft_status", "unknown")),
@@ -175,7 +175,8 @@ def sync_rosters(query):
     try:
         teams = query.get_league_teams()
         for team in teams:
-            team_name = str(getattr(team, "name", f"Team {team}"))
+            raw_name  = getattr(team, "name", f"Team {team}")
+            team_name = raw_name.decode() if isinstance(raw_name, bytes) else str(raw_name)
             team_key  = str(getattr(team, "team_key", ""))
             print(f"    {team_name}...")
 

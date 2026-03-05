@@ -220,6 +220,12 @@ def write_league_config(yahoo_data: dict, dry_run: bool):
         print("Skipping league config update (no Yahoo data).")
         return
 
+    # Skip keeper picks update if draft hasn't happened yet
+    draft_status = yahoo_data.get("settings", {}).get("draft_status", "")
+    if str(draft_status) == "predraft":
+        print("Skipping keeperPicks update — draft hasn't happened yet.")
+        return
+
     keeper_picks = build_keeper_picks(yahoo_data)
     if not keeper_picks:
         print("No keeper picks generated from Yahoo data.")
@@ -235,11 +241,14 @@ def write_league_config(yahoo_data: dict, dry_run: bool):
     # Build the new keeperPicks JS array
     lines = ["  keeperPicks: ["]
     for p in keeper_picks:
+        player = p["player"].replace("\\", "\\\\").replace('"', '\\"')
+        pos    = p["pos"].replace('"', '\\"')
+        team   = p["team"].replace("\\", "\\\\").replace('"', '\\"')
         lines.append(
             f'    {{pick:{p["pick"]},r:{p["r"]},'
-            f'player:"{p["player"]}",'
-            f'pos:"{p["pos"]}",'
-            f'team:"{p["team"]}"}}, '
+            f'player:"{player}",'
+            f'pos:"{pos}",'
+            f'team:"{team}"}}, '
         )
     lines.append("  ],")
     new_keepers = "\n".join(lines)
