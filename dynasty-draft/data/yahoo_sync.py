@@ -52,8 +52,8 @@ except ImportError:
 
 # Your league key — format is GAME_ID.l.LEAGUE_ID
 # Find it: log into Yahoo Fantasy Baseball → URL will show your league ID
-# 2026 MLB game ID is 458 (confirmed). Full key example: "458.l.123456"
-LEAGUE_KEY = os.getenv("YAHOO_LEAGUE_KEY", "458.l.YOUR_LEAGUE_ID")
+# 2026 MLB game ID is 469 (confirmed). Full key example: "469.l.123456"
+LEAGUE_KEY = os.getenv("YAHOO_LEAGUE_KEY", "469.l.YOUR_LEAGUE_ID")
 
 # Yahoo app credentials — set in .env file (never commit these)
 CONSUMER_KEY    = os.getenv("YAHOO_CONSUMER_KEY", "")
@@ -128,7 +128,7 @@ def build_query():
     return YahooFantasySportsQuery(
         league_id=LEAGUE_KEY.split(".l.")[-1],
         game_code="mlb",
-        game_id=458,
+        game_id=469,
         yahoo_consumer_key=CONSUMER_KEY,
         yahoo_consumer_secret=CONSUMER_SECRET,
         env_file_location=TOKEN_DIR,
@@ -244,7 +244,7 @@ def sync_ownership(query, player_keys=None):
     ownership = {}
     try:
         # Get top owned players if no specific keys provided
-        players = query.get_league_players(player_count=200)
+        players = query.get_league_players(player_count_limit=200)
         for p in (players or []):
             name = str(getattr(getattr(p, "name", None), "full", ""))
             pct  = float(getattr(p, "percent_owned_value", 0) or 0)
@@ -263,7 +263,7 @@ def main():
     parser.add_argument("--auth-only",  action="store_true", help="Test auth only")
     parser.add_argument("--rosters",    action="store_true", help="Rosters only")
     parser.add_argument("--no-draft",   action="store_true", help="Skip draft results")
-    parser.add_argument("--no-ownership", action="store_true", help="Skip ownership %")
+    parser.add_argument("--no-ownership", action="store_true", help="Skip ownership pct")
     args = parser.parse_args()
 
     if "YOUR_LEAGUE_ID" in LEAGUE_KEY:
