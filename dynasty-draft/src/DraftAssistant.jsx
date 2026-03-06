@@ -73,6 +73,9 @@ const TARGETS = targetsData.players.map(p => ({
   ...p,
   tier: inferTier(p),
   cats: p.cats.map(c => c === "K9" ? "K/9" : c === "BB9" ? "BB/9" : c),
+  // Pitchers' 2-year projections carry higher uncertainty — discount at source
+  // so sorting, display, and DNS all use the same adjusted number.
+  score2028: p.score2028 != null ? (p.type === "P" ? Math.round(p.score2028 * 0.85 * 10) / 10 : p.score2028) : null,
 }));
 
 // ─── SCORING ENGINE ────────────────────────────────────────────────────────────
@@ -169,8 +172,7 @@ function calcCatScore(player, catNeed) {
 
 function calcBaseScore(player, catNeed) {
   const s26 = player.il ? player.score2026 * IL_2026_DISCOUNT : player.score2026;
-  // Pitchers' 2-year projections carry more uncertainty (TJ risk, role changes)
-  const s28 = (player.score2028 ?? player.score2026) * (player.type === "P" ? 0.85 : 1.0);
+  const s28 = player.score2028 ?? player.score2026;
   const dyn = player.scoreDyn;
   const ft  = player.scoreFTDyn;
   const es  = espnScore(player.espnRank);  // ESPN rank → 0-10
