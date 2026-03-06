@@ -730,10 +730,11 @@ export default function App() {
                 <span style={{fontSize:9,color:"#475569",letterSpacing:".08em",textTransform:"uppercase",marginRight:2}}>Depth:</span>
                 {posDepth.map(({pos, myCount, slots, need, quality}) => {
                   // Color based on quality available vs. how many more I still need
-                  const color = need === 0 ? "#475569"
-                    : quality >= need * 3 ? "#22c55e"
-                    : quality >= need     ? "#f59e0b"
-                    :                       "#f87171";
+                  const color = need === 0 && myCount > slots ? "#60a5fa"  // filled + backup
+                    : need === 0                               ? "#475569"  // filled, no backup
+                    : quality >= need * 3                     ? "#22c55e"  // plenty
+                    : quality >= need                         ? "#f59e0b"  // enough
+                    :                                           "#f87171"; // short
                   return (
                     <div key={pos} style={{display:"flex",flexDirection:"column",alignItems:"center",background:"#0d0f16",border:`1px solid ${color}44`,borderRadius:3,padding:"2px 6px",minWidth:28}}>
                       <span style={{fontSize:9,color:"#475569"}}>{pos}</span>
