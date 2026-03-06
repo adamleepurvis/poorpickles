@@ -44,9 +44,34 @@ const KEEPER_PICKS = [
 const POS_SCARCITY_ORDER = ["C","SS","2B","3B","CF","LF","RF","1B","SP","RP"];
 
 // ─── TARGET PLAYERS ───────────────────────────────────────────────────────────
+// Tier is recomputed from FT Dyn score (which already embeds age/dynasty value)
+// rather than raw ZAR scores, which inflate per-position and ignore aging.
+//   keep6:  FT Dyn ≥ 9.0  (≈ Fantrax top 50  — true dynasty cornerstones)
+//   keep12: FT Dyn ≥ 7.5  (≈ Fantrax top 125 — solid multi-year keepers)
+//   bridge: FT Dyn ≥ 6.0 + good 2026 (contribute now, limited dynasty upside)
+//   maybe:  everything else ranked by Fantrax
+//   specialist/maybe: unranked players, heavy ZAR discount applied
+function inferTier(p) {
+  const ft = p.scoreFTDyn;
+  const s26 = p.score2026;
+  const dyn = p.scoreDyn;
+  if (ft != null) {
+    if (ft >= 9.0) return "keep6";
+    if (ft >= 7.5) return "keep12";
+    if (ft >= 6.0 && s26 >= 6.5) return "bridge";
+    return "maybe";
+  }
+  // Not in Fantrax top 500 — can't be keep6/keep12; use discounted ZAR
+  const combined = s26 * 0.4 + dyn * 0.5 * 0.6;
+  if (combined >= 6.5 && s26 >= 7.5) return "bridge";
+  if (combined >= 4.0) return "maybe";
+  return "specialist";
+}
+
 // Normalize zar_model cat names to match BASE_CAT_NEED keys (K9→K/9, BB9→BB/9)
 const TARGETS = targetsData.players.map(p => ({
   ...p,
+  tier: inferTier(p),
   cats: p.cats.map(c => c === "K9" ? "K/9" : c === "BB9" ? "BB/9" : c),
 }));
 
