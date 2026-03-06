@@ -254,6 +254,7 @@ export default function App() {
   const [compareList, setCompareList] = useState([]);
   const [posFilter, setPosFilter] = useState("all");
   const [sortBy, setSortBy] = useState("dns");
+  const [search, setSearch] = useState("");
   const [tab, setTab] = useState("board");
   const [typeFilter, setTypeFilter] = useState("all");
   const [editingNote, setEditingNote] = useState(null);
@@ -302,7 +303,9 @@ export default function App() {
 
   const OF_POSITIONS = ["LF","CF","RF"];
   const filtered = useMemo(() => {
+    const q = normalizeName(search);
     const f = scoredAvailable.filter(t => {
+      if (q && !normalizeName(t.name).includes(q)) return false;
       if (typeFilter !== "all" && t.type !== typeFilter) return false;
       if (posFilter === "all") return true;
       if (posFilter === "OF") return t.eligible.some(p => OF_POSITIONS.includes(p));
@@ -312,7 +315,7 @@ export default function App() {
     if (sortBy === "dyn") return [...f].sort((a, b) => b.scoreDyn - a.scoreDyn);
     if (sortBy === "ftdyn") return [...f].sort((a, b) => (b.scoreFTDyn ?? -1) - (a.scoreFTDyn ?? -1));
     return f; // "dns" — already sorted
-  }, [scoredAvailable, typeFilter, posFilter, sortBy]);
+  }, [scoredAvailable, typeFilter, posFilter, sortBy, search]);
 
   const currentRound = getRound(currentPick);
   const isMyClock = MY_PICKS.includes(currentPick);
@@ -514,6 +517,11 @@ export default function App() {
             ))}
             {tab==="board"&&(
               <div style={{marginLeft:"auto",display:"flex",gap:3,alignItems:"center",flexWrap:"wrap"}}>
+                <input value={search} onChange={e=>setSearch(e.target.value)}
+                  placeholder="search..."
+                  style={{background:"#1e293b",border:"1px solid #334155",borderRadius:3,color:"#e2e8f0",fontSize:11,padding:"3px 8px",width:110,fontFamily:"inherit",outline:"none"}}
+                  onKeyDown={e=>e.key==="Escape"&&setSearch("")}/>
+                <span style={{color:"#1e293b",margin:"0 2px"}}>|</span>
                 {[["dns","DNS"],["2026","2026"],["dyn","Dynasty"],["ftdyn","FT Dyn"]].map(([v,l])=>(
                   <button key={v} className="btn" onClick={()=>setSortBy(v)}
                     style={{background:sortBy===v?"#60a5fa22":"#1e293b",color:sortBy===v?"#60a5fa":"#64748b",border:sortBy===v?"1px solid #60a5fa44":"1px solid transparent"}}>
