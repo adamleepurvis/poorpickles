@@ -309,7 +309,6 @@ export default function App() {
       if (q && !normalizeName(t.name).includes(q)) return false;
       if (typeFilter !== "all" && t.type !== typeFilter) return false;
       if (posFilter === "all") return true;
-      if (posFilter === "OF") return t.eligible.some(p => OF_POSITIONS.includes(p));
       return t.eligible.includes(posFilter);
     });
     if (sortBy === "2026") return [...f].sort((a, b) => b.score2026 - a.score2026);
@@ -338,9 +337,8 @@ export default function App() {
   }, [scoredAvailable]);
 
   // Positional depth: quality options remaining + how many I have vs. need
-  const OF_POS = ["LF","CF","RF"];
-  // Starting roster slots per position (OF = LF+CF+RF combined)
-  const POS_SLOTS = { C:1, "1B":1, "2B":1, "3B":1, SS:1, OF:3, SP:4, RP:2 };
+  // Starting roster slots per position
+  const POS_SLOTS = { C:1, "1B":1, "2B":1, "3B":1, SS:1, LF:1, CF:1, RF:1, SP:4, RP:2 };
   const posDepth = useMemo(() => {
     // All players I own: keepers + live drafted picks
     const myPlayers = [
@@ -348,14 +346,9 @@ export default function App() {
         .map(k => TARGETS.find(t => t.name === k.player)).filter(Boolean),
       ...myDrafted.map(name => TARGETS.find(t => t.name === name)).filter(Boolean),
     ];
-    return ["C","1B","2B","3B","SS","OF","SP","RP"].map(pos => {
-      const isOF = pos === "OF";
-      const pool = scoredAvailable.filter(p =>
-        isOF ? p.eligible.some(e => OF_POS.includes(e)) : p.eligible.includes(pos)
-      );
-      const myCount = myPlayers.filter(p =>
-        isOF ? p.eligible.some(e => OF_POS.includes(e)) : p.eligible.includes(pos)
-      ).length;
+    return ["C","1B","2B","3B","SS","LF","CF","RF","SP","RP"].map(pos => {
+      const pool = scoredAvailable.filter(p => p.eligible.includes(pos));
+      const myCount = myPlayers.filter(p => p.eligible.includes(pos)).length;
       const slots = POS_SLOTS[pos] ?? 1;
       const need = Math.max(0, slots - myCount);
       const quality = pool.filter(p => p.draftNowScore >= 4.5).length;
@@ -715,7 +708,7 @@ export default function App() {
                   </button>
                 ))}
                 <span style={{color:"#1e293b",margin:"0 2px"}}>|</span>
-                {[["C","C"],["1B","1B"],["2B","2B"],["3B","3B"],["SS","SS"],["OF","OF"],["SP","SP"],["RP","RP"]].map(([v,l])=>(
+                {[["C","C"],["1B","1B"],["2B","2B"],["3B","3B"],["SS","SS"],["LF","LF"],["CF","CF"],["RF","RF"],["SP","SP"],["RP","RP"]].map(([v,l])=>(
                   <button key={v} className="btn" onClick={()=>{setPosFilter(v);setTypeFilter("all");}}
                     style={{background:posFilter===v?"#84cc1622":"#1e293b",color:posFilter===v?"#84cc16":"#64748b",border:posFilter===v?"1px solid #84cc1644":"1px solid transparent"}}>
                     {l}
