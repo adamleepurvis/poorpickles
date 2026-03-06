@@ -84,6 +84,7 @@ const W_NOFT = { s26: 0.15, s28: 0.30, dyn: 0.55 };
 const NOFT_DYN_DISCOUNT = 0.5;
 const NOFT_S28_DISCOUNT = 0.7;
 const IL_2026_DISCOUNT = 0.4;
+const NEEDS_DISCOUNT = 0.72; // multiplier when all eligible positions already filled on my roster
 
 // BASE category needs — never mutated, used as reference for "original"
 const BASE_CAT_NEED = {
@@ -119,6 +120,30 @@ function computeDynamicCatNeed(myDraftedNames) {
     needs[cat] = Math.max(0, needs[cat]);
   });
   return needs;
+}
+
+// Compute which starting positions are already filled on my roster.
+// Used by "Needs" mode to discount players at filled positions.
+function getFilledPositions(myDraftedNames) {
+  const myPlayers = [
+    ...KEEPER_PICKS.filter(k => k.team === MY_TEAM)
+      .map(k => TARGETS.find(t => t.name === k.player)).filter(Boolean),
+    ...myDraftedNames.map(name => TARGETS.find(t => t.name === name)).filter(Boolean),
+  ];
+  const counts = { C:0, "1B":0, "2B":0, "3B":0, SS:0, LF:0, CF:0, RF:0, SP:0, RP:0 };
+  myPlayers.forEach(p => {
+    p.eligible.forEach(pos => { if (counts[pos] !== undefined) counts[pos]++; });
+  });
+  const filled = new Set();
+  if (counts.C  >= 1) filled.add("C");
+  if (counts["1B"] >= 1) filled.add("1B");
+  if (counts["2B"] >= 1) filled.add("2B");
+  if (counts["3B"] >= 1) filled.add("3B");
+  if (counts.SS >= 1) filled.add("SS");
+  if (counts.LF + counts.CF + counts.RF >= 3) { filled.add("LF"); filled.add("CF"); filled.add("RF"); }
+  if (counts.SP >= 4) filled.add("SP");
+  if (counts.RP >= 2) filled.add("RP");
+  return filled;
 }
 
 // Normalize accented characters for fuzzy name matching
@@ -227,13 +252,18 @@ function calcUrgency(player, currentPick, available) {
 }
 
 // Final adjusted score shown in UI
-function calcDraftNowScore(player, available, livePicks, currentPick, catNeed) {
+function calcDraftNowScore(player, available, livePicks, currentPick, catNeed, filledPositions) {
   const base = calcBaseScore(player, catNeed);
   const { vor } = calcPositionalScarcity(player, available, catNeed);
   const urgency = calcUrgency(player, currentPick, available) / 100;
   const urgencyBonus = urgency * 1.5;
   const vorBonus = Math.min(Math.max(vor * 0.3, 0), 1.0);
-  const final = base + urgencyBonus + vorBonus;
+  let final = base + urgencyBonus + vorBonus;
+  // Needs mode: discount players whose eligible positions are all already filled
+  if (filledPositions && player.eligible.length > 0 &&
+      player.eligible.every(p => filledPositions.has(p))) {
+    final *= NEEDS_DISCOUNT;
+  }
   return Math.round(final * 10) / 10;
 }
 
@@ -267,6 +297,7 @@ export default function App() {
   const [tab, setTab] = useState("board");
   const [typeFilter, setTypeFilter] = useState("all");
   const [editingNote, setEditingNote] = useState(null);
+  const [needsMode, setNeedsMode] = useState(false);
   const [noteInput, setNoteInput] = useState("");
   const [catStatus, setCatStatus] = useState(MY_KEEPER_CATS);
   const [catNeed, setCatNeed] = useState(BASE_CAT_NEED);
@@ -297,17 +328,19 @@ export default function App() {
     [allTaken]
   );
 
+  const filledPositions = useMemo(() => getFilledPositions(myDrafted), [myDrafted]);
+
   // Scored and sorted available targets — recalculates live as catNeed evolves
   const scoredAvailable = useMemo(() =>
     available.map(t => ({
       ...t,
       baseScore: calcBaseScore(t, catNeed),
-      draftNowScore: calcDraftNowScore(t, available, livePicks, currentPick, catNeed),
+      draftNowScore: calcDraftNowScore(t, available, livePicks, currentPick, catNeed, needsMode ? filledPositions : null),
       scarcity: calcPositionalScarcity(t, available, catNeed),
       urgency: calcUrgency(t, currentPick, available),
       leagueDepletion: calcLeagueScarcity(t, available, livePicks),
     })).sort((a, b) => b.draftNowScore - a.draftNowScore),
-    [available, livePicks, currentPick, catNeed]
+    [available, livePicks, currentPick, catNeed, needsMode, filledPositions]
   );
 
   const OF_POSITIONS = ["LF","CF","RF"];
@@ -765,6 +798,12 @@ export default function App() {
                     {l}
                   </button>
                 ))}
+                <span style={{color:"#1e293b",margin:"0 2px"}}>|</span>
+                <button className="btn" onClick={()=>setNeedsMode(n=>!n)}
+                  title="Discount players at positions already filled on your roster"
+                  style={{background:needsMode?"#f59e0b22":"#1e293b",color:needsMode?"#f59e0b":"#64748b",border:needsMode?"1px solid #f59e0b44":"1px solid transparent",fontWeight:needsMode?700:400}}>
+                  Needs
+                </button>
               </div>
             )}
           </div>
