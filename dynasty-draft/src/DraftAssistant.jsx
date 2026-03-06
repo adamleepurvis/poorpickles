@@ -77,9 +77,12 @@ const TARGETS = targetsData.players.map(p => ({
 
 // ─── SCORING ENGINE ────────────────────────────────────────────────────────────
 // DNS weights: 2026 / 2028 / Dynasty / FanTrax
-// When FT is missing, redistribute its 30% toward 2028 and Dyn.
+// When FT is missing, apply uncertainty discounts to ZAR-derived scores (dyn×0.5, s28×0.7)
+// to correct for ZAR's separate H/P normalization inflating unranked pitcher scores.
 const W_FT   = { s26: 0.20, s28: 0.20, dyn: 0.30, ft: 0.30 };
 const W_NOFT = { s26: 0.15, s28: 0.30, dyn: 0.55 };
+const NOFT_DYN_DISCOUNT = 0.5;
+const NOFT_S28_DISCOUNT = 0.7;
 const IL_2026_DISCOUNT = 0.4;
 
 // BASE category needs — never mutated, used as reference for "original"
@@ -140,7 +143,7 @@ function calcBaseScore(player, catNeed) {
 
   const base = ft != null
     ? s26 * W_FT.s26 + s28 * W_FT.s28 + dyn * W_FT.dyn + ft * W_FT.ft
-    : s26 * W_NOFT.s26 + s28 * W_NOFT.s28 + dyn * W_NOFT.dyn;
+    : s26 * W_NOFT.s26 + (s28 * NOFT_S28_DISCOUNT) * W_NOFT.s28 + (dyn * NOFT_DYN_DISCOUNT) * W_NOFT.dyn;
 
   // Ceiling bonus: when dynasty ceiling >> current floor, reward the upside gap.
   const dynastyScore = ft ?? dyn;
