@@ -326,8 +326,6 @@ def main():
     if not args.no_ownership:
         data["ownership"] = sync_ownership(query)
 
-    data["player_eligibility"] = sync_player_eligibility(query)
-
     OUTPUT_FILE.write_text(json.dumps(data, indent=2))
     print(f"\nWrote {OUTPUT_FILE}")
 
