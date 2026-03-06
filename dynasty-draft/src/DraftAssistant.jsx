@@ -75,7 +75,14 @@ const TARGETS = targetsData.players.map(p => ({
   cats: p.cats.map(c => c === "K9" ? "K/9" : c === "BB9" ? "BB/9" : c),
   // Pitchers' 2-year projections carry higher uncertainty — discount at source
   // so sorting, display, and DNS all use the same adjusted number.
-  score2028: p.score2028 != null ? (p.type === "P" ? Math.round(p.score2028 * 0.85 * 10) / 10 : p.score2028) : null,
+  // For IL players, Steamer depresses 2026 IP/stats, so blend projected 2028 with
+  // dynasty score to better reflect their healthy ceiling.
+  score2028: (() => {
+    if (p.score2028 == null) return null;
+    const raw = p.type === "P" ? Math.round(p.score2028 * 0.85 * 10) / 10 : p.score2028;
+    if (p.il && p.scoreDyn != null) return Math.round(((raw + p.scoreDyn) / 2) * 10) / 10;
+    return raw;
+  })(),
 }));
 
 // ─── SCORING ENGINE ────────────────────────────────────────────────────────────
