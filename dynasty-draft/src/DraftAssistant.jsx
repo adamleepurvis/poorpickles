@@ -695,7 +695,7 @@ export default function App() {
                   {isSelected && t && (
                     <div style={{background:"#0d1829",border:"1px solid #1e3a5f",borderRadius:3,padding:"6px 8px",marginBottom:4,fontSize:11}}>
                       <div style={{display:"flex",gap:6,marginBottom:4,flexWrap:"wrap"}}>
-                        {[["DNS", calcBaseScore(t,catNeed)],["26",t.score2026],["28",t.score2028??"-"],["FT",t.scoreFTDyn??"-"]].map(([l,v])=>(
+                        {[["DNS", calcBaseScore(t,catNeed)],["26",t.score2026],["28",t.score2028??"-"],["FT",t.scoreFTDyn??"-"],["Age",t.age||"-"]].map(([l,v])=>(
                           <div key={l} style={{textAlign:"center"}}>
                             <div style={{fontSize:9,color:"#475569"}}>{l}</div>
                             <div style={{fontSize:12,fontWeight:700,color:"#60a5fa"}}>{v}</div>

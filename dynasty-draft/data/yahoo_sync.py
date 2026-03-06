@@ -260,32 +260,80 @@ def sync_ownership(query, player_keys=None):
     return ownership
 
 
-def sync_player_eligibility(query, limit=500):
+def sync_player_eligibility(query):
     """
-    Fetch eligible positions for the top N players from Yahoo.
+    Fetch eligible positions for all draftable players via direct Yahoo REST API.
+    Queries each position separately (which Yahoo supports) and merges results.
+    This gives accurate LF/CF/RF eligibility that yfpy's get_league_players() can't.
     Returns dict of player_name -> [eligible positions].
-    Uses Yahoo's actual game-based eligibility, which correctly distinguishes
-    LF/CF/RF in leagues with per-OF-spot slots.
     """
-    print(f"  Fetching player eligibility (top {limit} players)...")
+    # Positions Yahoo accepts as query filter
+    QUERY_POSITIONS = ["C", "1B", "2B", "3B", "SS", "LF", "CF", "RF", "SP", "RP"]
+    # Eligible position codes to keep (skip utility/flex slots like CI, IF, MIF, OF)
+    KEEP_POSITIONS = {"C", "1B", "2B", "3B", "SS", "LF", "CF", "RF", "SP", "RP", "Util", "P"}
+
+    game_key = "469"
+    session  = query.oauth.session
     eligibility = {}
-    try:
-        players = query.get_league_players(player_count_limit=limit)
-        for p in (players or []):
-            name = str(getattr(getattr(p, "name", None), "full", ""))
-            if not name:
-                continue
+
+    for pos in QUERY_POSITIONS:
+        print(f"    Fetching {pos}...", end=" ", flush=True)
+        count = 0
+        start = 0
+        page_size = 25
+        while True:
+            url = (
+                f"https://fantasysports.yahooapis.com/fantasy/v2/"
+                f"games;game_keys={game_key}/players"
+                f";position={pos};status=A;count={page_size};start={start}?format=json"
+            )
             try:
-                eligible = normalize_positions(
-                    p.eligible_positions if hasattr(p, "eligible_positions") else []
-                )
-            except Exception:
-                eligible = []
-            if eligible:
-                eligibility[name] = eligible
-        print(f"    Got eligibility for {len(eligibility)} players")
-    except Exception as e:
-        print(f"  WARNING: Could not fetch player eligibility: {e}")
+                resp = session.get(url)
+                if resp.status_code != 200:
+                    break
+                data = resp.json()
+                players_raw = (data.get("fantasy_content", {})
+                                   .get("games", {}).get("0", {})
+                                   .get("game", [{}, {}])[1]
+                                   .get("players", {}))
+                returned = int(players_raw.get("count", 0))
+                for k, v in players_raw.items():
+                    if k == "count":
+                        continue
+                    try:
+                        player_list = v["player"][0]
+                        name = next(
+                            (x["name"]["full"] for x in player_list if "name" in x), None
+                        )
+                        if not name:
+                            continue
+                        elig_raw = next(
+                            (x["eligible_positions"] for x in v["player"][0]
+                             if "eligible_positions" in x), []
+                        )
+                        positions = [
+                            e["position"] for e in elig_raw
+                            if e.get("position") in KEEP_POSITIONS
+                        ]
+                        if positions:
+                            if name not in eligibility:
+                                eligibility[name] = []
+                            for p2 in positions:
+                                if p2 not in eligibility[name]:
+                                    eligibility[name].append(p2)
+                            count += 1
+                    except Exception:
+                        continue
+                start += page_size
+                # Stop when Yahoo returns fewer than a full page, or hit cap
+                if returned < page_size or start >= 400:
+                    break
+            except Exception as e:
+                print(f"(error: {e})")
+                break
+        print(f"{count} players")
+
+    print(f"    Total: {len(eligibility)} players with eligibility data")
     return eligibility
 
 
@@ -325,6 +373,9 @@ def main():
 
     if not args.no_ownership:
         data["ownership"] = sync_ownership(query)
+
+    print("  Fetching player eligibility by position...")
+    data["player_eligibility"] = sync_player_eligibility(query)
 
     OUTPUT_FILE.write_text(json.dumps(data, indent=2))
     print(f"\nWrote {OUTPUT_FILE}")
