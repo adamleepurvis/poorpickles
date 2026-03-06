@@ -337,16 +337,31 @@ export default function App() {
     const m = {}; scoredAvailable.forEach((p, i) => { m[p.name] = i + 1; }); return m;
   }, [scoredAvailable]);
 
-  // Positional depth: quality options (DNS >= 4.5) remaining per position
+  // Positional depth: quality options remaining + how many I have vs. need
   const OF_POS = ["LF","CF","RF"];
+  // Starting roster slots per position (OF = LF+CF+RF combined)
+  const POS_SLOTS = { C:1, "1B":1, "2B":1, "3B":1, SS:1, OF:3, SP:4, RP:2 };
   const posDepth = useMemo(() => {
+    // All players I own: keepers + live drafted picks
+    const myPlayers = [
+      ...KEEPER_PICKS.filter(k => k.team === MY_TEAM)
+        .map(k => TARGETS.find(t => t.name === k.player)).filter(Boolean),
+      ...myDrafted.map(name => TARGETS.find(t => t.name === name)).filter(Boolean),
+    ];
     return ["C","1B","2B","3B","SS","OF","SP","RP"].map(pos => {
+      const isOF = pos === "OF";
       const pool = scoredAvailable.filter(p =>
-        pos === "OF" ? p.eligible.some(e => OF_POS.includes(e)) : p.eligible.includes(pos)
+        isOF ? p.eligible.some(e => OF_POS.includes(e)) : p.eligible.includes(pos)
       );
-      return { pos, quality: pool.filter(p => p.draftNowScore >= 4.5).length };
+      const myCount = myPlayers.filter(p =>
+        isOF ? p.eligible.some(e => OF_POS.includes(e)) : p.eligible.includes(pos)
+      ).length;
+      const slots = POS_SLOTS[pos] ?? 1;
+      const need = Math.max(0, slots - myCount);
+      const quality = pool.filter(p => p.draftNowScore >= 4.5).length;
+      return { pos, myCount, slots, need, quality };
     });
-  }, [scoredAvailable]);
+  }, [scoredAvailable, myDrafted]);
 
   // Category projection: my projected rank in each category vs all 12 teams (based on keepers + drafted)
   const catProjection = useMemo(() => {
@@ -713,11 +728,16 @@ export default function App() {
               {/* Positional depth gauge */}
               <div style={{display:"flex",gap:4,marginBottom:8,flexWrap:"wrap",alignItems:"center"}}>
                 <span style={{fontSize:9,color:"#475569",letterSpacing:".08em",textTransform:"uppercase",marginRight:2}}>Depth:</span>
-                {posDepth.map(({pos, quality}) => {
-                  const color = quality >= 8 ? "#22c55e" : quality >= 4 ? "#f59e0b" : quality >= 1 ? "#f87171" : "#475569";
+                {posDepth.map(({pos, myCount, slots, need, quality}) => {
+                  // Color based on quality available vs. how many more I still need
+                  const color = need === 0 ? "#475569"
+                    : quality >= need * 3 ? "#22c55e"
+                    : quality >= need     ? "#f59e0b"
+                    :                       "#f87171";
                   return (
-                    <div key={pos} style={{display:"flex",alignItems:"center",gap:3,background:"#0d0f16",border:`1px solid ${color}44`,borderRadius:3,padding:"2px 6px"}}>
+                    <div key={pos} style={{display:"flex",flexDirection:"column",alignItems:"center",background:"#0d0f16",border:`1px solid ${color}44`,borderRadius:3,padding:"2px 6px",minWidth:28}}>
                       <span style={{fontSize:9,color:"#475569"}}>{pos}</span>
+                      <span style={{fontSize:10,color:"#64748b"}}>{myCount}/{slots}</span>
                       <span style={{fontSize:11,fontWeight:700,color}}>{quality}</span>
                     </div>
                   );
