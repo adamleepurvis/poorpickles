@@ -313,8 +313,10 @@ export default function App() {
       return t.eligible.includes(posFilter);
     });
     if (sortBy === "2026") return [...f].sort((a, b) => b.score2026 - a.score2026);
+    if (sortBy === "2028") return [...f].sort((a, b) => (b.score2028 ?? 0) - (a.score2028 ?? 0));
     if (sortBy === "dyn") return [...f].sort((a, b) => b.scoreDyn - a.scoreDyn);
     if (sortBy === "ftdyn") return [...f].sort((a, b) => (b.scoreFTDyn ?? -1) - (a.scoreFTDyn ?? -1));
+    if (sortBy === "zips") return [...f].sort((a, b) => (b.scoreZiPS ?? -1) - (a.scoreZiPS ?? -1));
     return f; // "dns" — already sorted
   }, [scoredAvailable, typeFilter, posFilter, sortBy, search]);
 
@@ -448,6 +450,12 @@ export default function App() {
               <span style={{fontSize:9,color:"#475569"}}>26 </span>
               <span style={{fontSize:11,fontWeight:600,color:"#60a5fa"}}>{t.score2026}</span>
             </div>
+            {t.score2028 != null && (
+              <div style={{background:"#1e293b",borderRadius:4,padding:"1px 6px",minWidth:32,textAlign:"center"}}>
+                <span style={{fontSize:9,color:"#475569"}}>28 </span>
+                <span style={{fontSize:11,fontWeight:600,color:"#34d399"}}>{t.score2028}</span>
+              </div>
+            )}
             {t.scoreFTDyn != null && (
               <div style={{background:"#1e293b",borderRadius:4,padding:"1px 6px",minWidth:32,textAlign:"center"}}>
                 <span style={{fontSize:9,color:"#475569"}}>FT </span>
@@ -675,7 +683,7 @@ export default function App() {
                   style={{background:"#1e293b",border:"1px solid #334155",borderRadius:3,color:"#e2e8f0",fontSize:11,padding:"3px 8px",width:110,fontFamily:"inherit",outline:"none"}}
                   onKeyDown={e=>e.key==="Escape"&&setSearch("")}/>
                 <span style={{color:"#1e293b",margin:"0 2px"}}>|</span>
-                {[["dns","DNS"],["2026","2026"],["dyn","Dynasty"],["ftdyn","FT Dyn"]].map(([v,l])=>(
+                {[["dns","DNS"],["2026","2026"],["2028","2028"],["dyn","Dynasty"],["ftdyn","FT Dyn"],["zips","ZiPS"]].map(([v,l])=>(
                   <button key={v} className="btn" onClick={()=>setSortBy(v)}
                     style={{background:sortBy===v?"#60a5fa22":"#1e293b",color:sortBy===v?"#60a5fa":"#64748b",border:sortBy===v?"1px solid #60a5fa44":"1px solid transparent"}}>
                     {l}

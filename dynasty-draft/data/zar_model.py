@@ -114,6 +114,9 @@ IL_PLAYERS = {
 
 IL_DISCOUNT = 0.4
 
+# Default age when FanGraphs doesn't return one (peak age assumption)
+DEFAULT_AGE = 27
+
 OUTPUT_FILE = Path(__file__).parent / "zar_scores.json"
 FANTRAX_FILE = Path(__file__).parent / "fantrax_dynasty.csv"
 
@@ -208,11 +211,14 @@ def normalize_df(df: pd.DataFrame, col_map: dict) -> pd.DataFrame:
     # Ensure name column exists
     if "name" not in df.columns:
         df["name"] = "Unknown"
-    # Coerce numeric
-    numeric_cols = [v for v in col_map.values() if v not in ("name", "team", "pos")]
+    # Coerce numeric — Age is excluded from fillna so we can use DEFAULT_AGE downstream
+    numeric_cols = [v for v in col_map.values() if v not in ("name", "team", "pos", "Age")]
     for col in numeric_cols:
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0)
+    # Age: coerce but preserve NaN when missing
+    if "Age" in df.columns:
+        df["Age"] = pd.to_numeric(df["Age"], errors="coerce")
     return df
 
 
@@ -283,6 +289,15 @@ def age_curve_factor(age) -> float:
                                                          key=lambda k: abs(k - age_int)), 1.0))
     except (TypeError, ValueError):
         return 1.0
+
+
+def project_future_score(score_base: float, age: int, years_forward: int) -> float:
+    """Project a ZAR score N years forward using the age curve ratio."""
+    current_factor = age_curve_factor(age)
+    future_factor  = age_curve_factor(age + years_forward)
+    if current_factor < 1e-9:
+        return round(min(score_base, 10.0), 1)
+    return round(min(score_base * (future_factor / current_factor), 10.0), 1)
 
 
 def normalize_to_scale(series: pd.Series,
@@ -381,9 +396,11 @@ def get_cats(row, stat_list: list[str], is_pitcher: bool) -> list[str]:
 
 def main():
     parser = argparse.ArgumentParser(description="Compute ZAR player valuations")
-    parser.add_argument("--system",   default=PROJECTION_SYSTEM,
+    parser.add_argument("--system",    default=PROJECTION_SYSTEM,
                         choices=["steamer","zips","atc","thebat","fangraphsdc"])
-    parser.add_argument("--show-top", type=int, default=0)
+    parser.add_argument("--with-zips", action="store_true",
+                        help="Also fetch ZiPS projections and add scoreZiPS field")
+    parser.add_argument("--show-top",  type=int, default=0)
     args = parser.parse_args()
 
     system = args.system
@@ -396,13 +413,43 @@ def main():
 
     fantrax = load_fantrax_dynasty()
 
-    # ── Fetch ──────────────────────────────────────────────────────────────────
+    # ── Fetch primary system ───────────────────────────────────────────────────
     raw_hitters  = fetch_fangraphs("bat", system)
     raw_pitchers = fetch_fangraphs("pit", system)
 
     if raw_hitters.empty and raw_pitchers.empty:
         print("ERROR: No data retrieved. Check FanGraphs API or network.")
         raise SystemExit(1)
+
+    # Stat lists (defined early so ZiPS block can reference them)
+    hitting_stats  = ["HR","RBI","R","H","SB","TB","AVG","OBP","SLG"]
+    pitching_stats = ["K","W","ERA","WHIP","IP","K9","BB9","SV","HLD","ER"]
+
+    # ── Optionally fetch ZiPS for scoreZiPS ────────────────────────────────────
+    zips_scores: dict[str, float] = {}
+    if args.with_zips and system != "zips":
+        print("\nFetching ZiPS projections for scoreZiPS...")
+        raw_zips_h = fetch_fangraphs("bat", "zips")
+        raw_zips_p = fetch_fangraphs("pit", "zips")
+        if not raw_zips_h.empty or not raw_zips_p.empty:
+            zh = normalize_df(raw_zips_h, HITTER_COL_MAP)
+            zp = normalize_df(raw_zips_p, PITCHER_COL_MAP)
+            if "PA" in zh.columns:
+                zh = zh[zh["PA"] >= MIN_PA].copy()
+            if "IP" in zp.columns:
+                zp = zp[zp["IP"] >= MIN_IP].copy()
+            zh["zar_raw"] = compute_zar(zh, hitting_stats,  DRAFTED_HITTERS)
+            zp["zar_raw"] = compute_zar(zp, pitching_stats, DRAFTED_PITCHERS)
+            all_zips_zar = pd.concat([zh["zar_raw"], zp["zar_raw"]])
+            lo = float(np.percentile(all_zips_zar.dropna(), 5))
+            hi = float(np.percentile(all_zips_zar.dropna(), 95))
+            def _norm_zips(v):
+                return round(max(0, min(10, (v - lo) / (hi - lo) * 10)), 1) if hi > lo else 5.0
+            for df_z, label in [(zh, "H"), (zp, "P")]:
+                for _, row in df_z.iterrows():
+                    name = str(row["name"])
+                    zips_scores[_norm(name)] = _norm_zips(float(row["zar_raw"]))
+            print(f"  ZiPS scores computed for {len(zips_scores)} players.")
 
     # ── Normalize columns ──────────────────────────────────────────────────────
     hitters  = normalize_df(raw_hitters,  HITTER_COL_MAP)
@@ -417,9 +464,6 @@ def main():
     print(f"\nDraftable pool: {len(hitters)} hitters, {len(pitchers)} pitchers")
 
     # ── Compute ZAR ───────────────────────────────────────────────────────────
-    hitting_stats  = ["HR","RBI","R","H","SB","TB","AVG","OBP","SLG"]
-    pitching_stats = ["K","W","ERA","WHIP","IP","K9","BB9","SV","HLD","ER"]
-
     hitters["zar_raw"]  = compute_zar(hitters,  hitting_stats,  DRAFTED_HITTERS)
     pitchers["zar_raw"] = compute_zar(pitchers, pitching_stats, DRAFTED_PITCHERS)
 
@@ -428,16 +472,34 @@ def main():
     pitchers["score2026"] = normalize_to_scale(pitchers["zar_raw"])
 
     # ── Dynasty score = score2026 × age curve ─────────────────────────────────
+    def get_age(row) -> int:
+        """Extract age, falling back to DEFAULT_AGE when missing or zero."""
+        raw = row.get("Age", None)
+        try:
+            v = float(raw)
+            return int(v) if (v > 0 and not np.isnan(v)) else DEFAULT_AGE
+        except (TypeError, ValueError):
+            return DEFAULT_AGE
+
     def compute_dyn(row):
         name = str(row["name"])
         if name in DYNASTY_OVERRIDES:
             return DYNASTY_OVERRIDES[name]
-        age    = row.get("Age", 28)
-        factor = age_curve_factor(age)
+        factor = age_curve_factor(get_age(row))
         return round(min(float(row["score2026"]) * factor, 10.0), 1)
 
     hitters["scoreDyn"]  = hitters.apply(compute_dyn, axis=1)
     pitchers["scoreDyn"] = pitchers.apply(compute_dyn, axis=1)
+
+    # ── Projected 2027 / 2028 scores (computed before IL discount) ────────────
+    def compute_future(row, years_forward):
+        age = get_age(row)
+        return project_future_score(float(row["score2026"]), age, years_forward)
+
+    hitters["score2027"]  = hitters.apply(lambda r: compute_future(r, 1), axis=1)
+    hitters["score2028"]  = hitters.apply(lambda r: compute_future(r, 2), axis=1)
+    pitchers["score2027"] = pitchers.apply(lambda r: compute_future(r, 1), axis=1)
+    pitchers["score2028"] = pitchers.apply(lambda r: compute_future(r, 2), axis=1)
 
     # ── IL discount ───────────────────────────────────────────────────────────
     def apply_il(row):
@@ -455,6 +517,7 @@ def main():
 
     for _, row in hitters.iterrows():
         name = str(row["name"])
+        age  = get_age(row)
         players.append({
             "name":       name,
             "eligible":   assign_eligible(row.get("pos", ""), False),
@@ -462,10 +525,13 @@ def main():
             "tier":       assign_tier(float(row["score2026"]), float(row["scoreDyn"])),
             "type":       "H",
             "score2026":  float(row["score2026"]),
+            "score2027":  float(row["score2027"]),
+            "score2028":  float(row["score2028"]),
             "scoreDyn":   float(row["scoreDyn"]),
             "scoreFTDyn": fantrax.get(_norm(name), None),
+            "scoreZiPS":  zips_scores.get(_norm(name), None),
             "zar_raw":    round(float(row["zar_raw"]), 3),
-            "age":        int(row.get("Age", 0) or 0),
+            "age":        age,
             "note":       (f"{system}: {int(row.get('HR',0))}HR "
                           f"{int(row.get('SB',0))}SB "
                           f".{str(row.get('AVG',0)).replace('0.','').replace('.','')[:3]}AVG"),
@@ -476,6 +542,7 @@ def main():
 
     for _, row in pitchers.iterrows():
         name  = str(row["name"])
+        age   = get_age(row)
         is_rp = ("GS" in row.index and "G" in row.index and
                  float(row.get("GS", 0) or 0) < float(row.get("G", 1) or 1) * 0.4)
         players.append({
@@ -485,10 +552,13 @@ def main():
             "tier":       assign_tier(float(row["score2026"]), float(row["scoreDyn"])),
             "type":       "P",
             "score2026":  float(row["score2026"]),
+            "score2027":  float(row["score2027"]),
+            "score2028":  float(row["score2028"]),
             "scoreDyn":   float(row["scoreDyn"]),
             "scoreFTDyn": fantrax.get(_norm(name), None),
+            "scoreZiPS":  zips_scores.get(_norm(name), None),
             "zar_raw":    round(float(row["zar_raw"]), 3),
-            "age":        int(row.get("Age", 0) or 0),
+            "age":        age,
             "note":       (f"{system}: {int(row.get('K',0))}K "
                           f"{row.get('ERA','?')}ERA "
                           f"{row.get('WHIP','?')}WHIP"),
