@@ -332,6 +332,7 @@ export default function App() {
   const [suggestions, setSuggestions] = useState([]);
   const [compareList, setCompareList] = useState([]);
   const [posFilter, setPosFilter] = useState("all");
+  const [sortBy, setSortBy] = useState("dns");
   const [tab, setTab] = useState("board");
   const [typeFilter, setTypeFilter] = useState("all");
   const [editingNote, setEditingNote] = useState(null);
@@ -379,15 +380,17 @@ export default function App() {
   );
 
   const OF_POSITIONS = ["LF","CF","RF"];
-  const filtered = useMemo(() =>
-    scoredAvailable.filter(t => {
+  const filtered = useMemo(() => {
+    const f = scoredAvailable.filter(t => {
       if (typeFilter !== "all" && t.type !== typeFilter) return false;
       if (posFilter === "all") return true;
       if (posFilter === "OF") return t.eligible.some(p => OF_POSITIONS.includes(p));
       return t.eligible.includes(posFilter);
-    }),
-    [scoredAvailable, typeFilter, posFilter]
-  );
+    });
+    if (sortBy === "2026") return [...f].sort((a, b) => b.score2026 - a.score2026);
+    if (sortBy === "dyn") return [...f].sort((a, b) => b.scoreDyn - a.scoreDyn);
+    return f; // "dns" — already sorted
+  }, [scoredAvailable, typeFilter, posFilter, sortBy]);
 
   const currentRound = getRound(currentPick);
   const isMyClock = MY_PICKS.includes(currentPick);
@@ -589,7 +592,13 @@ export default function App() {
             ))}
             {tab==="board"&&(
               <div style={{marginLeft:"auto",display:"flex",gap:3,alignItems:"center",flexWrap:"wrap"}}>
-                <span style={{fontSize:9,color:"#475569",marginRight:2}}>sorted by DNS</span>
+                {[["dns","DNS"],["2026","2026"],["dyn","Dynasty"]].map(([v,l])=>(
+                  <button key={v} className="btn" onClick={()=>setSortBy(v)}
+                    style={{background:sortBy===v?"#60a5fa22":"#1e293b",color:sortBy===v?"#60a5fa":"#64748b",border:sortBy===v?"1px solid #60a5fa44":"1px solid transparent"}}>
+                    {l}
+                  </button>
+                ))}
+                <span style={{color:"#1e293b",margin:"0 2px"}}>|</span>
                 {[["all","All"],["H","⚾"],["P","⚡"]].map(([v,l])=>(
                   <button key={v} className="btn" onClick={()=>{setTypeFilter(v);setPosFilter("all");}}
                     style={{background:typeFilter===v&&posFilter==="all"?"#84cc1622":"#1e293b",color:typeFilter===v&&posFilter==="all"?"#84cc16":"#64748b",border:typeFilter===v&&posFilter==="all"?"1px solid #84cc1644":"1px solid transparent"}}>
@@ -633,9 +642,16 @@ export default function App() {
                     <div style={{display:"flex",alignItems:"center",gap:8}}>
                       {/* Rank */}
                       <span style={{fontSize:11,color:"#475569",width:18,textAlign:"right",flexShrink:0}}>#{idx+1}</span>
-                      {/* DNS score badge */}
-                      <div style={{background:`${scoreColor(t.draftNowScore)}22`,border:`1px solid ${scoreColor(t.draftNowScore)}44`,borderRadius:4,padding:"1px 6px",minWidth:32,textAlign:"center",flexShrink:0}}>
-                        <span style={{fontSize:13,fontWeight:700,color:scoreColor(t.draftNowScore)}}>{t.draftNowScore}</span>
+                      {/* Score badges */}
+                      <div style={{display:"flex",flexDirection:"column",gap:2,flexShrink:0,alignItems:"center"}}>
+                        <div style={{background:`${scoreColor(t.draftNowScore)}22`,border:`1px solid ${scoreColor(t.draftNowScore)}44`,borderRadius:4,padding:"1px 6px",minWidth:32,textAlign:"center"}}>
+                          <span style={{fontSize:9,color:"#475569"}}>DNS </span>
+                          <span style={{fontSize:13,fontWeight:700,color:scoreColor(t.draftNowScore)}}>{t.draftNowScore}</span>
+                        </div>
+                        <div style={{background:"#1e293b",borderRadius:4,padding:"1px 6px",minWidth:32,textAlign:"center"}}>
+                          <span style={{fontSize:9,color:"#475569"}}>26 </span>
+                          <span style={{fontSize:11,fontWeight:600,color:"#60a5fa"}}>{t.score2026}</span>
+                        </div>
                       </div>
                       {/* Name + meta */}
                       <div style={{flex:1,minWidth:0}}>
