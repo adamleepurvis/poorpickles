@@ -484,7 +484,10 @@ export default function App() {
               <span style={{fontSize:15,color:"#f1f5f9",fontWeight:500}}>{t.name}</span>
               {t.il&&<span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 4px",borderRadius:3}}>IL</span>}
               {t.est&&<span style={{fontSize:9,color:"#64748b",background:"#1e293b",padding:"1px 4px",borderRadius:3}}>EST</span>}
-              <span style={{fontSize:10,color:"#475569"}}>{t.eligible.join("/")} · {t.org}</span>
+              {t.eligible.map(p=>(
+                <span key={p} style={{fontSize:9,color:"#94a3b8",background:"#1e293b",padding:"1px 5px",borderRadius:3,border:"1px solid #334155"}}>{p}</span>
+              ))}
+              <span style={{fontSize:10,color:"#475569"}}>· {t.org}</span>
               <span style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${TIER_COLOR[t.tier]}18`,color:TIER_COLOR[t.tier]}}>{TIER_LABEL[t.tier]}</span>
             </div>
             <div style={{fontSize:10,color:"#475569",marginTop:1}}>{playerNotes[t.name]||t.note}</div>
