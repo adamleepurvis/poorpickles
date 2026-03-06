@@ -169,7 +169,8 @@ function calcCatScore(player, catNeed) {
 
 function calcBaseScore(player, catNeed) {
   const s26 = player.il ? player.score2026 * IL_2026_DISCOUNT : player.score2026;
-  const s28 = player.score2028 ?? player.score2026;
+  // Pitchers' 2-year projections carry more uncertainty (TJ risk, role changes)
+  const s28 = (player.score2028 ?? player.score2026) * (player.type === "P" ? 0.85 : 1.0);
   const dyn = player.scoreDyn;
   const ft  = player.scoreFTDyn;
   const es  = espnScore(player.espnRank);  // ESPN rank → 0-10
