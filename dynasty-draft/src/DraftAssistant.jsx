@@ -76,13 +76,19 @@ const TARGETS = targetsData.players.map(p => ({
 }));
 
 // ─── SCORING ENGINE ────────────────────────────────────────────────────────────
-// DNS weights: 2026 / 2028 / Dynasty / FanTrax
+// DNS weights: 2026 / 2028 / Dynasty / FanTrax / Prospect FV
 // When FT is missing, apply uncertainty discounts to ZAR-derived scores (dyn×0.5, s28×0.7)
 // to correct for ZAR's separate H/P normalization inflating unranked pitcher scores.
-const W_FT   = { s26: 0.20, s28: 0.20, dyn: 0.30, ft: 0.30 };
-const W_NOFT = { s26: 0.15, s28: 0.30, dyn: 0.55 };
+// Prospect FV (raw, no risk discount) acts as an expert ceiling signal same as FT.
+const W_FT         = { s26: 0.20, s28: 0.20, dyn: 0.30, ft: 0.30 };           // FT only
+const W_PROS       = { s26: 0.20, s28: 0.20, dyn: 0.30, fv: 0.30 };           // prospect only
+const W_FT_PROS    = { s26: 0.15, s28: 0.15, dyn: 0.20, ft: 0.25, fv: 0.25 }; // both
+const W_NOFT       = { s26: 0.15, s28: 0.30, dyn: 0.55 };                      // neither
 const NOFT_DYN_DISCOUNT = 0.5;
 const NOFT_S28_DISCOUNT = 0.7;
+
+// Raw FV grade → 0-10 (ceiling, no risk penalty — risk shown in badge)
+const FV_RAW = {"70":10,"65":8.5,"60":7.0,"55":6.0,"50":5.0,"45+":4.5,"45":4.0,"40+":3.5,"40":3.0,"35+":2.5,"35":2.0};
 const IL_2026_DISCOUNT = 0.4;
 const NEEDS_DISCOUNT = 0.72; // multiplier when all eligible positions already filled on my roster
 
@@ -166,9 +172,16 @@ function calcBaseScore(player, catNeed) {
   const catMult = 0.6 + 0.4 * calcCatScore(player, catNeed);
   const posDiscount = player.eligible.every(p => p === "RP") ? 0.75 : 1.0;
 
-  const base = ft != null
-    ? s26 * W_FT.s26 + s28 * W_FT.s28 + dyn * W_FT.dyn + ft * W_FT.ft
-    : s26 * W_NOFT.s26 + (s28 * NOFT_S28_DISCOUNT) * W_NOFT.s28 + (dyn * NOFT_DYN_DISCOUNT) * W_NOFT.dyn;
+  const fv = FV_RAW[player.prospectFV] ?? null;
+  let base;
+  if (ft != null && fv != null)
+    base = s26*W_FT_PROS.s26 + s28*W_FT_PROS.s28 + dyn*W_FT_PROS.dyn + ft*W_FT_PROS.ft + fv*W_FT_PROS.fv;
+  else if (ft != null)
+    base = s26*W_FT.s26 + s28*W_FT.s28 + dyn*W_FT.dyn + ft*W_FT.ft;
+  else if (fv != null)
+    base = s26*W_PROS.s26 + s28*W_PROS.s28 + dyn*W_PROS.dyn + fv*W_PROS.fv;
+  else
+    base = s26*W_NOFT.s26 + (s28*NOFT_S28_DISCOUNT)*W_NOFT.s28 + (dyn*NOFT_DYN_DISCOUNT)*W_NOFT.dyn;
 
   // Ceiling bonus: when dynasty ceiling >> current floor, reward the upside gap.
   const dynastyScore = ft ?? dyn;
@@ -298,6 +311,7 @@ export default function App() {
   const [typeFilter, setTypeFilter] = useState("all");
   const [editingNote, setEditingNote] = useState(null);
   const [needsMode, setNeedsMode] = useState(false);
+  const [fvFilter, setFvFilter] = useState(null); // null | 40 | 45 | 50 | 55 | 60
   const [noteInput, setNoteInput] = useState("");
   const [catStatus, setCatStatus] = useState(MY_KEEPER_CATS);
   const [catNeed, setCatNeed] = useState(BASE_CAT_NEED);
@@ -349,6 +363,10 @@ export default function App() {
     const f = scoredAvailable.filter(t => {
       if (q && !normalizeName(t.name).includes(q)) return false;
       if (typeFilter !== "all" && t.type !== typeFilter) return false;
+      if (fvFilter != null) {
+        const raw = FV_RAW[t.prospectFV] ?? null;
+        if (raw == null || raw < fvFilter) return false;
+      }
       if (posFilter === "all") return true;
       if (posFilter === "OF") return t.eligible.some(p => OF_POSITIONS.includes(p));
       return t.eligible.includes(posFilter);
@@ -359,7 +377,7 @@ export default function App() {
     if (sortBy === "ftdyn") return [...f].sort((a, b) => (b.scoreFTDyn ?? -1) - (a.scoreFTDyn ?? -1));
     if (sortBy === "zips") return [...f].sort((a, b) => (b.scoreZiPS ?? -1) - (a.scoreZiPS ?? -1));
     return f; // "dns" — already sorted
-  }, [scoredAvailable, typeFilter, posFilter, sortBy, search]);
+  }, [scoredAvailable, typeFilter, posFilter, sortBy, search, fvFilter]);
 
   const currentRound = getRound(currentPick);
   const isMyClock = MY_PICKS.includes(currentPick);
@@ -817,6 +835,13 @@ export default function App() {
                   style={{background:needsMode?"#f59e0b22":"#1e293b",color:needsMode?"#f59e0b":"#64748b",border:needsMode?"1px solid #f59e0b44":"1px solid transparent",fontWeight:needsMode?700:400}}>
                   Needs
                 </button>
+                <span style={{color:"#1e293b",margin:"0 2px"}}>|</span>
+                {[[null,"All"],[3.0,"FV40+"],[4.0,"FV45+"],[5.0,"FV50+"],[6.0,"FV55+"],[7.0,"FV60+"]].map(([v,l])=>(
+                  <button key={l} className="btn" onClick={()=>setFvFilter(fvFilter===v?null:v)}
+                    style={{background:fvFilter===v?"#34d39922":"#1e293b",color:fvFilter===v?"#34d399":"#64748b",border:fvFilter===v?"1px solid #34d39944":"1px solid transparent"}}>
+                    {l}
+                  </button>
+                ))}
               </div>
             )}
           </div>
@@ -845,7 +870,7 @@ export default function App() {
               </div>
               {/* Score legend */}
               <div style={{display:"flex",gap:12,marginBottom:10,flexWrap:"wrap",alignItems:"center"}}>
-                <span style={{fontSize:10,color:"#475569"}}>DNS = 20% 2026 · 20% 2028 · 30% Dyn · 30% FT (15/30/55 when no FT) · </span>
+                <span style={{fontSize:10,color:"#475569"}}>DNS = 20/20/30/30 (26/28/Dyn/FT) · +FV: 15/15/20/25/25 · no expert: 15/21/30 discounted · </span>
                 {[["≥8.0","#f59e0b","Elite"],["≥6.5","#22c55e","Strong"],["≥5.0","#60a5fa","Solid"],["<5.0","#64748b","Stash"]].map(([r,c,l])=>(
                   <div key={r} style={{display:"flex",alignItems:"center",gap:4,fontSize:10}}>
                     <div style={{width:7,height:7,borderRadius:2,background:c}}/>
