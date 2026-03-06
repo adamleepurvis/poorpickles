@@ -255,6 +255,7 @@ export default function App() {
   const [posFilter, setPosFilter] = useState("all");
   const [sortBy, setSortBy] = useState("dns");
   const [search, setSearch] = useState("");
+  const [watchList, setWatchList] = useState(new Set());
   const [tab, setTab] = useState("board");
   const [typeFilter, setTypeFilter] = useState("all");
   const [editingNote, setEditingNote] = useState(null);
@@ -324,6 +325,54 @@ export default function App() {
   const snakePicks = MY_PICKS.filter(p => p >= currentPick).slice(0, 4);
   const lateAlerts = scoredAvailable.filter(t => t.tier === "keep6" && t.urgency >= 60);
 
+  // Watch list toggle
+  const toggleWatch = useCallback((name) => {
+    setWatchList(prev => { const n = new Set(prev); n.has(name) ? n.delete(name) : n.add(name); return n; });
+  }, []);
+
+  // DNS rank → round value indicator (how many rounds early/late vs. market)
+  const dnsRankMap = useMemo(() => {
+    const m = {}; scoredAvailable.forEach((p, i) => { m[p.name] = i + 1; }); return m;
+  }, [scoredAvailable]);
+
+  // Positional depth: quality options (DNS >= 4.5) remaining per position
+  const OF_POS = ["LF","CF","RF"];
+  const posDepth = useMemo(() => {
+    return ["C","1B","2B","3B","SS","OF","SP","RP"].map(pos => {
+      const pool = scoredAvailable.filter(p =>
+        pos === "OF" ? p.eligible.some(e => OF_POS.includes(e)) : p.eligible.includes(pos)
+      );
+      return { pos, quality: pool.filter(p => p.draftNowScore >= 4.5).length };
+    });
+  }, [scoredAvailable]);
+
+  // Category projection: my projected rank in each category vs all 12 teams (based on keepers + drafted)
+  const catProjection = useMemo(() => {
+    const teamCoverage = {};
+    DRAFT_ORDER.forEach(team => {
+      const roster = [
+        ...KEEPER_PICKS.filter(p => p.team === team)
+          .map(kp => TARGETS.find(t => normalizeName(t.name) === normalizeName(kp.player)))
+          .filter(Boolean),
+        ...(team === MY_TEAM
+          ? myDrafted.map(n => TARGETS.find(t => t.name === n)).filter(Boolean)
+          : []),
+      ];
+      const scores = {};
+      [...hitCats, ...pitchCats].forEach(cat => {
+        scores[cat] = roster.filter(p => p.cats.includes(cat)).reduce((s, p) => s + p.score2026, 0);
+      });
+      teamCoverage[team] = scores;
+    });
+    return [...hitCats, ...pitchCats].map(cat => {
+      const myScore = teamCoverage[MY_TEAM]?.[cat] || 0;
+      const allScores = DRAFT_ORDER.map(t => teamCoverage[t]?.[cat] || 0).sort((a, b) => b - a);
+      const rank = allScores.findIndex(s => s <= myScore) + 1;
+      const max = allScores[0] || 1;
+      return { cat, myScore, rank, max };
+    });
+  }, [myDrafted]);
+
   // Team rosters from keepers
   const teamRosters = useMemo(() => {
     const rosters = {};
@@ -378,6 +427,113 @@ export default function App() {
 
   // Score bar color
   const scoreColor = (s) => s >= 8 ? "#84cc16" : s >= 6.5 ? "#22c55e" : s >= 5 ? "#60a5fa" : "#64748b";
+
+  // ── Player card renderer (used in board tab) ─────────────────────────────
+  const renderCard = (t, idx, isWatched) => {
+    const isExpanded = showScoreBreakdown === t.name;
+    const rank = dnsRankMap[t.name] ?? 0;
+    const roundDelta = Math.round((DRAFT_START_PICK + rank - 1 - currentPick) / TOTAL_TEAMS);
+    const rvColor = roundDelta >= 3 ? "#22c55e" : roundDelta > 0 ? "#84cc16" : roundDelta === 0 ? "#475569" : "#f59e0b";
+    const rvLabel = roundDelta > 0 ? `+R${roundDelta}` : roundDelta === 0 ? "~R0" : `-R${Math.abs(roundDelta)}`;
+    return (
+      <div key={t.name} className="score-row"
+        style={{background:"#0d0f16",border:`1px solid ${isWatched?"#f59e0b44":TIER_COLOR[t.tier]+"22"}`,borderLeft:`3px solid ${isWatched?"#f59e0b":TIER_COLOR[t.tier]}`,borderRadius:4,padding:"7px 10px",marginBottom:4,cursor:"pointer"}}
+        onClick={()=>setShowScoreBreakdown(isExpanded ? null : t.name)}>
+        <div style={{display:"flex",alignItems:"center",gap:8}}>
+          <span style={{fontSize:11,color:"#475569",width:18,textAlign:"right",flexShrink:0}}>#{idx+1}</span>
+          {/* Score badges */}
+          <div style={{display:"flex",flexDirection:"column",gap:2,flexShrink:0,alignItems:"center"}}>
+            <div style={{background:`${scoreColor(t.draftNowScore)}22`,border:`1px solid ${scoreColor(t.draftNowScore)}44`,borderRadius:4,padding:"1px 6px",minWidth:32,textAlign:"center"}}>
+              <span style={{fontSize:9,color:"#475569"}}>DNS </span>
+              <span style={{fontSize:13,fontWeight:700,color:scoreColor(t.draftNowScore)}}>{t.draftNowScore}</span>
+            </div>
+            <div style={{background:"#1e293b",borderRadius:4,padding:"1px 6px",minWidth:32,textAlign:"center"}}>
+              <span style={{fontSize:9,color:"#475569"}}>26 </span>
+              <span style={{fontSize:11,fontWeight:600,color:"#60a5fa"}}>{t.score2026}</span>
+            </div>
+            {t.scoreFTDyn != null && (
+              <div style={{background:"#1e293b",borderRadius:4,padding:"1px 6px",minWidth:32,textAlign:"center"}}>
+                <span style={{fontSize:9,color:"#475569"}}>FT </span>
+                <span style={{fontSize:11,fontWeight:600,color:"#a78bfa"}}>{t.scoreFTDyn}</span>
+              </div>
+            )}
+          </div>
+          {/* Name + meta */}
+          <div style={{flex:1,minWidth:0}}>
+            <div style={{display:"flex",alignItems:"center",gap:6,flexWrap:"wrap"}}>
+              <span style={{fontSize:15,color:"#f1f5f9",fontWeight:500}}>{t.name}</span>
+              {t.il&&<span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 4px",borderRadius:3}}>IL</span>}
+              {t.est&&<span style={{fontSize:9,color:"#64748b",background:"#1e293b",padding:"1px 4px",borderRadius:3}}>EST</span>}
+              <span style={{fontSize:10,color:"#475569"}}>{t.eligible.join("/")} · {t.org}</span>
+              <span style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${TIER_COLOR[t.tier]}18`,color:TIER_COLOR[t.tier]}}>{TIER_LABEL[t.tier]}</span>
+            </div>
+            <div style={{fontSize:10,color:"#475569",marginTop:1}}>{playerNotes[t.name]||t.note}</div>
+          </div>
+          {/* Right side: value indicator + urgency + buttons */}
+          <div style={{display:"flex",gap:6,flexShrink:0,alignItems:"center"}}>
+            <span style={{fontSize:9,color:rvColor,background:`${rvColor}18`,padding:"1px 5px",borderRadius:3,fontWeight:600}}>{rvLabel}</span>
+            {t.urgency >= 50 && (
+              <span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 5px",borderRadius:3}}>{t.urgency}% gone</span>
+            )}
+            <span style={{fontSize:9,color:"#475569"}}>VOR {t.scarcity.vor > 0 ? "+":""}{t.scarcity.vor}</span>
+            <span style={{fontSize:10,color:"#475569"}}>{t.type==="H"?"⚾":"⚡"}</span>
+            <button className="btn" onClick={e=>{e.stopPropagation();toggleWatch(t.name);}}
+              style={{fontSize:11,padding:"1px 5px",background:isWatched?"#f59e0b22":"#1e293b",color:isWatched?"#f59e0b":"#475569",border:isWatched?"1px solid #f59e0b44":"1px solid transparent"}}>
+              {isWatched?"★":"☆"}
+            </button>
+            <button className="btn" onClick={e=>{e.stopPropagation();toggleCompare(t.name);}}
+              style={{fontSize:9,padding:"1px 6px",background:compareList.includes(t.name)?"#84cc1622":"#1e293b",color:compareList.includes(t.name)?"#84cc16":"#475569",border:compareList.includes(t.name)?"1px solid #84cc1644":"1px solid transparent"}}>
+              {compareList.includes(t.name)?"✓ vs":"vs"}
+            </button>
+          </div>
+        </div>
+        {/* Expanded score breakdown */}
+        {isExpanded&&(
+          <div style={{marginTop:8,paddingTop:8,borderTop:"1px solid #1e293b",display:"grid",gridTemplateColumns:"1fr 1fr",gap:6}}>
+            <div style={{fontSize:11,color:"#64748b"}}>
+              <div style={{color:"#94a3b8",marginBottom:3,fontSize:10,textTransform:"uppercase",letterSpacing:".06em"}}>Score Breakdown</div>
+              <div>Base: <span style={{color:"#94a3b8"}}>{t.baseScore}</span></div>
+              <div>2026 ({t.il?"IL-discounted":"full"}): <span style={{color:"#94a3b8"}}>{t.il ? Math.round(t.score2026*IL_2026_DISCOUNT*10)/10 : t.score2026}</span></div>
+              <div>Dynasty: <span style={{color:"#94a3b8"}}>{t.scoreDyn}</span></div>
+              <div>VOR @ {t.scarcity.scarcePos}: <span style={{color:t.scarcity.vor>0?"#22c55e":"#f87171"}}>{t.scarcity.vor>0?"+":""}{t.scarcity.vor}</span></div>
+              <div>Urgency bonus: <span style={{color:"#94a3b8"}}>+{Math.round(t.urgency/100*1.5*10)/10}</span></div>
+              <div>Round value: <span style={{color:rvColor}}>{rvLabel}</span></div>
+              <div style={{marginTop:4,fontWeight:600,color:scoreColor(t.draftNowScore)}}>DNS: {t.draftNowScore}</div>
+            </div>
+            <div style={{fontSize:11}}>
+              <div style={{color:"#94a3b8",marginBottom:3,fontSize:10,textTransform:"uppercase",letterSpacing:".06em"}}>Category Fit</div>
+              <div style={{display:"flex",gap:4,flexWrap:"wrap"}}>
+                {t.cats.map(c=>{
+                  const orig = BASE_CAT_NEED[c]||0;
+                  const curr = catNeed[c]??orig;
+                  const decayed = curr < orig;
+                  return (
+                    <span key={c} style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${CAT_NEED_COLOR[curr]||"#1e293b"}18`,color:CAT_NEED_COLOR[curr]||"#475569",border:decayed?"1px solid #84cc1644":"none"}}>
+                      {c} {decayed?`(${orig}→${curr})`:`(${orig})`}
+                    </span>
+                  );
+                })}
+              </div>
+              <div style={{marginTop:6,fontSize:10,color:"#475569"}}>
+                Pos depth @ {t.scarcity.scarcePos}: {t.scarcity.depth} left
+              </div>
+              <div style={{marginTop:2,display:"flex",gap:4}}>
+                {editingNote===t.name?(
+                  <input value={noteInput} onChange={e=>setNoteInput(e.target.value)}
+                    onKeyDown={e=>{if(e.key==="Enter"){setPlayerNotes(p=>({...p,[t.name]:noteInput}));setEditingNote(null);}}}
+                    style={{flex:1,fontSize:10}} onClick={e=>e.stopPropagation()}/>
+                ):(
+                  <button className="btn" style={{background:"#1e293b",color:"#64748b",fontSize:9}} onClick={e=>{e.stopPropagation();setEditingNote(t.name);setNoteInput(playerNotes[t.name]||t.note);}}>
+                    edit note
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  };
 
   return (
     <div style={{fontFamily:"'IBM Plex Mono','Courier New',monospace",background:"#08090d",height:"100vh",color:"#e2e8f0",display:"flex",flexDirection:"column",overflow:"hidden"}}>
@@ -549,6 +705,19 @@ export default function App() {
           {/* TARGET BOARD */}
           {tab==="board"&&(
             <div style={{flex:1,overflowY:"auto",padding:12}}>
+              {/* Positional depth gauge */}
+              <div style={{display:"flex",gap:4,marginBottom:8,flexWrap:"wrap",alignItems:"center"}}>
+                <span style={{fontSize:9,color:"#475569",letterSpacing:".08em",textTransform:"uppercase",marginRight:2}}>Depth:</span>
+                {posDepth.map(({pos, quality}) => {
+                  const color = quality >= 8 ? "#22c55e" : quality >= 4 ? "#f59e0b" : quality >= 1 ? "#f87171" : "#475569";
+                  return (
+                    <div key={pos} style={{display:"flex",alignItems:"center",gap:3,background:"#0d0f16",border:`1px solid ${color}44`,borderRadius:3,padding:"2px 6px"}}>
+                      <span style={{fontSize:9,color:"#475569"}}>{pos}</span>
+                      <span style={{fontSize:11,fontWeight:700,color}}>{quality}</span>
+                    </div>
+                  );
+                })}
+              </div>
               {/* Score legend */}
               <div style={{display:"flex",gap:12,marginBottom:10,flexWrap:"wrap",alignItems:"center"}}>
                 <span style={{fontSize:10,color:"#475569"}}>DNS = Draft Now Score · </span>
@@ -564,102 +733,18 @@ export default function App() {
               </div>
 
               {filtered.length===0&&<div style={{textAlign:"center",color:"#1e293b",padding:40}}>All targets gone!</div>}
-              {filtered.map((t,idx)=>{
-                const isExpanded = showScoreBreakdown === t.name;
-                return (
-                  <div key={t.name} className="score-row" style={{background:"#0d0f16",border:`1px solid ${TIER_COLOR[t.tier]}22`,borderLeft:`3px solid ${TIER_COLOR[t.tier]}`,borderRadius:4,padding:"7px 10px",marginBottom:4,cursor:"pointer"}}
-                    onClick={()=>setShowScoreBreakdown(isExpanded ? null : t.name)}>
-                    <div style={{display:"flex",alignItems:"center",gap:8}}>
-                      {/* Rank */}
-                      <span style={{fontSize:11,color:"#475569",width:18,textAlign:"right",flexShrink:0}}>#{idx+1}</span>
-                      {/* Score badges */}
-                      <div style={{display:"flex",flexDirection:"column",gap:2,flexShrink:0,alignItems:"center"}}>
-                        <div style={{background:`${scoreColor(t.draftNowScore)}22`,border:`1px solid ${scoreColor(t.draftNowScore)}44`,borderRadius:4,padding:"1px 6px",minWidth:32,textAlign:"center"}}>
-                          <span style={{fontSize:9,color:"#475569"}}>DNS </span>
-                          <span style={{fontSize:13,fontWeight:700,color:scoreColor(t.draftNowScore)}}>{t.draftNowScore}</span>
-                        </div>
-                        <div style={{background:"#1e293b",borderRadius:4,padding:"1px 6px",minWidth:32,textAlign:"center"}}>
-                          <span style={{fontSize:9,color:"#475569"}}>26 </span>
-                          <span style={{fontSize:11,fontWeight:600,color:"#60a5fa"}}>{t.score2026}</span>
-                        </div>
-                        {t.scoreFTDyn != null && (
-                          <div style={{background:"#1e293b",borderRadius:4,padding:"1px 6px",minWidth:32,textAlign:"center"}}>
-                            <span style={{fontSize:9,color:"#475569"}}>FT </span>
-                            <span style={{fontSize:11,fontWeight:600,color:"#a78bfa"}}>{t.scoreFTDyn}</span>
-                          </div>
-                        )}
-                      </div>
-                      {/* Name + meta */}
-                      <div style={{flex:1,minWidth:0}}>
-                        <div style={{display:"flex",alignItems:"center",gap:6,flexWrap:"wrap"}}>
-                          <span style={{fontSize:15,color:"#f1f5f9",fontWeight:500}}>{t.name}</span>
-                          {t.il&&<span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 4px",borderRadius:3}}>IL</span>}
-                          {t.est&&<span style={{fontSize:9,color:"#64748b",background:"#1e293b",padding:"1px 4px",borderRadius:3}}>EST</span>}
-                          <span style={{fontSize:10,color:"#475569"}}>{t.eligible.join("/")} · {t.org}</span>
-                          <span style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${TIER_COLOR[t.tier]}18`,color:TIER_COLOR[t.tier]}}>{TIER_LABEL[t.tier]}</span>
-                        </div>
-                        <div style={{fontSize:10,color:"#475569",marginTop:1}}>{playerNotes[t.name]||t.note}</div>
-                      </div>
-                      {/* Urgency + scarcity + compare */}
-                      <div style={{display:"flex",gap:6,flexShrink:0,alignItems:"center"}}>
-                        {t.urgency >= 50 && (
-                          <span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 5px",borderRadius:3}}>{t.urgency}% gone</span>
-                        )}
-                        <span style={{fontSize:9,color:"#475569"}}>VOR {t.scarcity.vor > 0 ? "+":""}{t.scarcity.vor}</span>
-                        <span style={{fontSize:10,color:"#475569"}}>{t.type==="H"?"⚾":"⚡"}</span>
-                        <button className="btn" onClick={e=>{e.stopPropagation();toggleCompare(t.name);}}
-                          style={{fontSize:9,padding:"1px 6px",background:compareList.includes(t.name)?"#84cc1622":"#1e293b",color:compareList.includes(t.name)?"#84cc16":"#475569",border:compareList.includes(t.name)?"1px solid #84cc1644":"1px solid transparent"}}>
-                          {compareList.includes(t.name)?"✓ vs":"vs"}
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* Expanded score breakdown */}
-                    {isExpanded&&(
-                      <div style={{marginTop:8,paddingTop:8,borderTop:"1px solid #1e293b",display:"grid",gridTemplateColumns:"1fr 1fr",gap:6}}>
-                        <div style={{fontSize:11,color:"#64748b"}}>
-                          <div style={{color:"#94a3b8",marginBottom:3,fontSize:10,textTransform:"uppercase",letterSpacing:".06em"}}>Score Breakdown</div>
-                          <div>Base: <span style={{color:"#94a3b8"}}>{t.baseScore}</span></div>
-                          <div>2026 ({t.il?"IL-discounted":"full"}): <span style={{color:"#94a3b8"}}>{t.il ? Math.round(t.score2026*IL_2026_DISCOUNT*10)/10 : t.score2026}</span></div>
-                          <div>Dynasty: <span style={{color:"#94a3b8"}}>{t.scoreDyn}</span></div>
-                          <div>VOR @ {t.scarcity.scarcePos}: <span style={{color:t.scarcity.vor>0?"#22c55e":"#f87171"}}>{t.scarcity.vor>0?"+":""}{t.scarcity.vor}</span></div>
-                          <div>Urgency bonus: <span style={{color:"#94a3b8"}}>+{Math.round(t.urgency/100*1.5*10)/10}</span></div>
-                          <div style={{marginTop:4,fontWeight:600,color:scoreColor(t.draftNowScore)}}>DNS: {t.draftNowScore}</div>
-                        </div>
-                        <div style={{fontSize:11}}>
-                          <div style={{color:"#94a3b8",marginBottom:3,fontSize:10,textTransform:"uppercase",letterSpacing:".06em"}}>Category Fit</div>
-                          <div style={{display:"flex",gap:4,flexWrap:"wrap"}}>
-                            {t.cats.map(c=>{
-                              const orig = BASE_CAT_NEED[c]||0;
-                              const curr = catNeed[c]??orig;
-                              const decayed = curr < orig;
-                              return (
-                                <span key={c} style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${CAT_NEED_COLOR[curr]||"#1e293b"}18`,color:CAT_NEED_COLOR[curr]||"#475569",border:decayed?"1px solid #84cc1644":"none"}}>
-                                  {c} {decayed?`(${orig}→${curr})`:`(${orig})`}
-                                </span>
-                              );
-                            })}
-                          </div>
-                          <div style={{marginTop:6,fontSize:10,color:"#475569"}}>
-                            Pos depth @ {t.scarcity.scarcePos}: {t.scarcity.depth} left
-                          </div>
-                          <div style={{marginTop:2,display:"flex",gap:4}}>
-                            {editingNote===t.name?(
-                              <input value={noteInput} onChange={e=>setNoteInput(e.target.value)}
-                                onKeyDown={e=>{if(e.key==="Enter"){setPlayerNotes(p=>({...p,[t.name]:noteInput}));setEditingNote(null);}}}
-                                style={{flex:1,fontSize:10}} onClick={e=>e.stopPropagation()}/>
-                            ):(
-                              <button className="btn" style={{background:"#1e293b",color:"#64748b",fontSize:9}} onClick={e=>{e.stopPropagation();setEditingNote(t.name);setNoteInput(playerNotes[t.name]||t.note);}}>
-                                edit note
-                              </button>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
+              {(()=>{
+                const watched = filtered.filter(t => watchList.has(t.name));
+                const rest = filtered.filter(t => !watchList.has(t.name));
+                const sections = [];
+                if (watched.length > 0) {
+                  sections.push(<div key="wl-header" style={{fontSize:9,color:"#f59e0b",letterSpacing:".1em",textTransform:"uppercase",marginBottom:4,marginTop:2}}>★ Watch List</div>);
+                  sections.push(...watched.map((t,idx) => renderCard(t, idx, true)));
+                  sections.push(<div key="wl-div" style={{borderTop:"1px solid #1e293b",margin:"8px 0 6px"}}/>);
+                }
+                sections.push(...rest.map((t,idx) => renderCard(t, watched.length + idx, false)));
+                return sections;
+              })()}
             </div>
           )}
 
@@ -720,6 +805,38 @@ export default function App() {
                     );
                   })
                 }
+              </div>
+
+              {/* Category Projection */}
+              <div style={{marginTop:14}}>
+                <div style={{fontSize:10,color:"#475569",letterSpacing:".1em",textTransform:"uppercase",marginBottom:6}}>
+                  Projected Standing <span style={{color:"#334155",fontWeight:400}}>— based on keepers + drafted</span>
+                </div>
+                {[["HITTING",hitCats],["PITCHING",pitchCats]].map(([label,cats])=>(
+                  <div key={label} style={{marginBottom:12}}>
+                    <div style={{fontSize:9,color:"#334155",letterSpacing:".08em",textTransform:"uppercase",marginBottom:5}}>{label}</div>
+                    {cats.map(cat => {
+                      const proj = catProjection.find(p => p.cat === cat);
+                      if (!proj) return null;
+                      const rankColor = proj.rank <= 3 ? "#22c55e" : proj.rank <= 6 ? "#84cc16" : proj.rank <= 9 ? "#f59e0b" : "#f87171";
+                      const barW = proj.max > 0 ? Math.round((proj.myScore / proj.max) * 100) : 0;
+                      return (
+                        <div key={cat} style={{display:"flex",alignItems:"center",gap:8,marginBottom:4}}>
+                          <span style={{fontSize:10,color:"#64748b",width:36,flexShrink:0}}>{cat}</span>
+                          <div style={{flex:1,height:6,background:"#1e293b",borderRadius:3,overflow:"hidden"}}>
+                            <div style={{width:`${barW}%`,height:"100%",background:rankColor,borderRadius:3,transition:"width .3s"}}/>
+                          </div>
+                          <span style={{fontSize:10,fontWeight:600,color:rankColor,width:32,textAlign:"right",flexShrink:0}}>
+                            #{proj.rank}/12
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ))}
+                <div style={{fontSize:9,color:"#334155",marginTop:4}}>
+                  Rank is estimated from keeper rosters. Updates live as you record picks.
+                </div>
               </div>
             </div>
           )}
