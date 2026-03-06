@@ -389,6 +389,7 @@ export default function App() {
     });
     if (sortBy === "2026") return [...f].sort((a, b) => b.score2026 - a.score2026);
     if (sortBy === "dyn") return [...f].sort((a, b) => b.scoreDyn - a.scoreDyn);
+    if (sortBy === "ftdyn") return [...f].sort((a, b) => (b.scoreFTDyn ?? -1) - (a.scoreFTDyn ?? -1));
     return f; // "dns" — already sorted
   }, [scoredAvailable, typeFilter, posFilter, sortBy]);
 
@@ -592,7 +593,7 @@ export default function App() {
             ))}
             {tab==="board"&&(
               <div style={{marginLeft:"auto",display:"flex",gap:3,alignItems:"center",flexWrap:"wrap"}}>
-                {[["dns","DNS"],["2026","2026"],["dyn","Dynasty"]].map(([v,l])=>(
+                {[["dns","DNS"],["2026","2026"],["dyn","Dynasty"],["ftdyn","FT Dyn"]].map(([v,l])=>(
                   <button key={v} className="btn" onClick={()=>setSortBy(v)}
                     style={{background:sortBy===v?"#60a5fa22":"#1e293b",color:sortBy===v?"#60a5fa":"#64748b",border:sortBy===v?"1px solid #60a5fa44":"1px solid transparent"}}>
                     {l}
@@ -652,6 +653,12 @@ export default function App() {
                           <span style={{fontSize:9,color:"#475569"}}>26 </span>
                           <span style={{fontSize:11,fontWeight:600,color:"#60a5fa"}}>{t.score2026}</span>
                         </div>
+                        {t.scoreFTDyn != null && (
+                          <div style={{background:"#1e293b",borderRadius:4,padding:"1px 6px",minWidth:32,textAlign:"center"}}>
+                            <span style={{fontSize:9,color:"#475569"}}>FT </span>
+                            <span style={{fontSize:11,fontWeight:600,color:"#a78bfa"}}>{t.scoreFTDyn}</span>
+                          </div>
+                        )}
                       </div>
                       {/* Name + meta */}
                       <div style={{flex:1,minWidth:0}}>

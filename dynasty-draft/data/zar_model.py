@@ -115,6 +115,40 @@ IL_PLAYERS = {
 IL_DISCOUNT = 0.4
 
 OUTPUT_FILE = Path(__file__).parent / "zar_scores.json"
+FANTRAX_FILE = Path(__file__).parent / "fantrax_dynasty.csv"
+
+# ─── FANTRAX DYNASTY RANKINGS ────────────────────────────────────────────────
+
+def load_fantrax_dynasty() -> dict:
+    """
+    Load Fantrax Top-500 dynasty rankings CSV and return a dict of
+    normalized_name -> scoreFTDyn (0-10 scale, rank 1 = 10, rank 500 = 0).
+    Uses the Roto rank column (better fit for category leagues).
+    """
+    if not FANTRAX_FILE.exists():
+        print("  No fantrax_dynasty.csv found — skipping FT dynasty scores.")
+        return {}
+
+    def _norm(name: str) -> str:
+        import unicodedata
+        return unicodedata.normalize("NFD", name).encode("ascii", "ignore").decode().lower().strip()
+
+    df = pd.read_csv(FANTRAX_FILE)
+    # Column is "Roto" rank
+    df = df.rename(columns={"Roto": "roto_rank", "Player": "player_name"})
+    df["roto_rank"] = pd.to_numeric(df["roto_rank"], errors="coerce")
+    df = df.dropna(subset=["roto_rank"])
+
+    max_rank = df["roto_rank"].max()
+    result = {}
+    for _, row in df.iterrows():
+        name = str(row["player_name"])
+        rank = float(row["roto_rank"])
+        score = round(10 * (1 - (rank - 1) / max_rank), 1)
+        result[_norm(name)] = score
+
+    print(f"  Loaded {len(result)} Fantrax dynasty rankings.")
+    return result
 
 # ─── FANGRAPHS FETCH ─────────────────────────────────────────────────────────
 
@@ -355,6 +389,13 @@ def main():
     system = args.system
     print(f"ZAR Model — {system.upper()} projections\n")
 
+    # ── Load Fantrax dynasty rankings ──────────────────────────────────────────
+    import unicodedata
+    def _norm(name: str) -> str:
+        return unicodedata.normalize("NFD", name).encode("ascii", "ignore").decode().lower().strip()
+
+    fantrax = load_fantrax_dynasty()
+
     # ── Fetch ──────────────────────────────────────────────────────────────────
     raw_hitters  = fetch_fangraphs("bat", system)
     raw_pitchers = fetch_fangraphs("pit", system)
@@ -415,43 +456,45 @@ def main():
     for _, row in hitters.iterrows():
         name = str(row["name"])
         players.append({
-            "name":      name,
-            "eligible":  assign_eligible(row.get("pos", ""), False),
-            "org":       str(row.get("team", "?")),
-            "tier":      assign_tier(float(row["score2026"]), float(row["scoreDyn"])),
-            "type":      "H",
-            "score2026": float(row["score2026"]),
-            "scoreDyn":  float(row["scoreDyn"]),
-            "zar_raw":   round(float(row["zar_raw"]), 3),
-            "age":       int(row.get("Age", 0) or 0),
-            "note":      (f"{system}: {int(row.get('HR',0))}HR "
-                         f"{int(row.get('SB',0))}SB "
-                         f".{str(row.get('AVG',0)).replace('0.','').replace('.','')[:3]}AVG"),
-            "cats":      get_cats(row, hitting_stats, False),
-            "il":        bool(row["il"]),
-            "est":       False,
+            "name":       name,
+            "eligible":   assign_eligible(row.get("pos", ""), False),
+            "org":        str(row.get("team", "?")),
+            "tier":       assign_tier(float(row["score2026"]), float(row["scoreDyn"])),
+            "type":       "H",
+            "score2026":  float(row["score2026"]),
+            "scoreDyn":   float(row["scoreDyn"]),
+            "scoreFTDyn": fantrax.get(_norm(name), None),
+            "zar_raw":    round(float(row["zar_raw"]), 3),
+            "age":        int(row.get("Age", 0) or 0),
+            "note":       (f"{system}: {int(row.get('HR',0))}HR "
+                          f"{int(row.get('SB',0))}SB "
+                          f".{str(row.get('AVG',0)).replace('0.','').replace('.','')[:3]}AVG"),
+            "cats":       get_cats(row, hitting_stats, False),
+            "il":         bool(row["il"]),
+            "est":        False,
         })
 
     for _, row in pitchers.iterrows():
-        name     = str(row["name"])
-        is_rp    = ("GS" in row.index and "G" in row.index and
-                    float(row.get("GS", 0) or 0) < float(row.get("G", 1) or 1) * 0.4)
+        name  = str(row["name"])
+        is_rp = ("GS" in row.index and "G" in row.index and
+                 float(row.get("GS", 0) or 0) < float(row.get("G", 1) or 1) * 0.4)
         players.append({
-            "name":      name,
-            "eligible":  ["RP"] if is_rp else ["SP"],
-            "org":       str(row.get("team", "?")),
-            "tier":      assign_tier(float(row["score2026"]), float(row["scoreDyn"])),
-            "type":      "P",
-            "score2026": float(row["score2026"]),
-            "scoreDyn":  float(row["scoreDyn"]),
-            "zar_raw":   round(float(row["zar_raw"]), 3),
-            "age":       int(row.get("Age", 0) or 0),
-            "note":      (f"{system}: {int(row.get('K',0))}K "
-                         f"{row.get('ERA','?')}ERA "
-                         f"{row.get('WHIP','?')}WHIP"),
-            "cats":      get_cats(row, pitching_stats, True),
-            "il":        bool(row["il"]),
-            "est":       False,
+            "name":       name,
+            "eligible":   ["RP"] if is_rp else ["SP"],
+            "org":        str(row.get("team", "?")),
+            "tier":       assign_tier(float(row["score2026"]), float(row["scoreDyn"])),
+            "type":       "P",
+            "score2026":  float(row["score2026"]),
+            "scoreDyn":   float(row["scoreDyn"]),
+            "scoreFTDyn": fantrax.get(_norm(name), None),
+            "zar_raw":    round(float(row["zar_raw"]), 3),
+            "age":        int(row.get("Age", 0) or 0),
+            "note":       (f"{system}: {int(row.get('K',0))}K "
+                          f"{row.get('ERA','?')}ERA "
+                          f"{row.get('WHIP','?')}WHIP"),
+            "cats":       get_cats(row, pitching_stats, True),
+            "il":         bool(row["il"]),
+            "est":        False,
         })
 
     # Sort by combined score descending
