@@ -89,6 +89,9 @@ const NOFT_S28_DISCOUNT = 0.7;
 
 // Raw FV grade → 0-10 (ceiling, no risk penalty — risk shown in badge)
 const FV_RAW = {"70":10,"65":8.5,"60":7.0,"55":6.0,"50":5.0,"45+":4.5,"45":4.0,"40+":3.5,"40":3.0,"35+":2.5,"35":2.0};
+
+// ESPN dynasty rank → 0-10 score (rank 1 = 10.0, rank 300 = 0.0, linear)
+function espnScore(rank) { return rank != null ? Math.max(0, 10 - (rank - 1) * (10 / 299)) : null; }
 const IL_2026_DISCOUNT = 0.4;
 const NEEDS_DISCOUNT = 0.72; // multiplier when all eligible positions already filled on my roster
 
@@ -169,15 +172,23 @@ function calcBaseScore(player, catNeed) {
   const s28 = player.score2028 ?? player.score2026;
   const dyn = player.scoreDyn;
   const ft  = player.scoreFTDyn;
+  const es  = espnScore(player.espnRank);  // ESPN rank → 0-10
   const catMult = 0.6 + 0.4 * calcCatScore(player, catNeed);
   const posDiscount = player.eligible.every(p => p === "RP") ? 0.75 : 1.0;
 
+  // Combine expert dynasty signals: FT (dynasty-specific) weighted 60%, ESPN 40%
+  // Discount ESPN-only slightly since it's less dynasty-specific than Fantrax
+  const expert = ft != null && es != null ? ft * 0.6 + es * 0.4
+               : ft != null               ? ft
+               : es != null               ? es * 0.85
+               : null;
+
   const fv = FV_RAW[player.prospectFV] ?? null;
   let base;
-  if (ft != null && fv != null)
-    base = s26*W_FT_PROS.s26 + s28*W_FT_PROS.s28 + dyn*W_FT_PROS.dyn + ft*W_FT_PROS.ft + fv*W_FT_PROS.fv;
-  else if (ft != null)
-    base = s26*W_FT.s26 + s28*W_FT.s28 + dyn*W_FT.dyn + ft*W_FT.ft;
+  if (expert != null && fv != null)
+    base = s26*W_FT_PROS.s26 + s28*W_FT_PROS.s28 + dyn*W_FT_PROS.dyn + expert*W_FT_PROS.ft + fv*W_FT_PROS.fv;
+  else if (expert != null)
+    base = s26*W_FT.s26 + s28*W_FT.s28 + dyn*W_FT.dyn + expert*W_FT.ft;
   else if (fv != null)
     base = s26*W_PROS.s26 + s28*W_PROS.s28 + dyn*W_PROS.dyn + fv*W_PROS.fv;
   else
@@ -561,6 +572,12 @@ export default function App() {
                   </span>
                 );
               })()}
+              {t.espnRank != null && (
+                <span style={{fontSize:9,padding:"1px 5px",borderRadius:3,background:"#7c3aed18",color:"#a78bfa",border:"1px solid #7c3aed44",fontWeight:600}}>
+                  ESPN #{t.espnRank}
+                  {t.espnAscending && <span style={{color:"#34d399",marginLeft:3}} title="At career-best dynasty rank">↑</span>}
+                </span>
+              )}
               <span style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${TIER_COLOR[t.tier]}18`,color:TIER_COLOR[t.tier]}}>{TIER_LABEL[t.tier]}</span>
             </div>
             <div style={{fontSize:10,color:"#475569",marginTop:1}}>{playerNotes[t.name]||t.note}</div>
@@ -593,6 +610,7 @@ export default function App() {
               <div>2028: <span style={{color:"#94a3b8"}}>{t.score2028??"-"}</span></div>
               <div>Dynasty: <span style={{color:"#94a3b8"}}>{t.scoreDyn}</span></div>
               {t.scoreFTDyn!=null&&<div>FT Dyn: <span style={{color:"#94a3b8"}}>{t.scoreFTDyn}</span></div>}
+              {t.espnRank!=null&&<div>ESPN: <span style={{color:"#a78bfa"}}>#{t.espnRank}{t.espnAscending?" ↑ (career-best)":""}{t.espnPrevPeak&&t.espnPrevPeak!==t.espnRank?" (prev peak #"+t.espnPrevPeak+")":""}</span></div>}
               {t.prospectFV!=null&&<div>Prospect: <span style={{color:"#94a3b8"}}>FV{t.prospectFV} · {t.prospectRisk} risk · ETA {t.prospectETA}{t.prospectRank?" · #"+t.prospectRank:""}</span></div>}
               <div>VOR @ {t.scarcity.scarcePos}: <span style={{color:t.scarcity.vor>0?"#22c55e":"#f87171"}}>{t.scarcity.vor>0?"+":""}{t.scarcity.vor}</span></div>
               <div>Urgency bonus: <span style={{color:"#94a3b8"}}>+{Math.round(t.urgency/100*1.5*10)/10}</span></div>
