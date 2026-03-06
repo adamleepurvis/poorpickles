@@ -489,6 +489,7 @@ export default function App() {
                 <span key={p} style={{fontSize:9,color:"#94a3b8",background:"#1e293b",padding:"1px 5px",borderRadius:3,border:"1px solid #334155"}}>{p}</span>
               ))}
               <span style={{fontSize:10,color:"#475569"}}>· {t.org}</span>
+              {t.age > 0 && <span style={{fontSize:10,color:"#475569"}}>· {t.age}</span>}
               <span style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${TIER_COLOR[t.tier]}18`,color:TIER_COLOR[t.tier]}}>{TIER_LABEL[t.tier]}</span>
             </div>
             <div style={{fontSize:10,color:"#475569",marginTop:1}}>{playerNotes[t.name]||t.note}</div>
