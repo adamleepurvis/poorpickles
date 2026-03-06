@@ -232,6 +232,9 @@ function calcDraftNowScore(player, available, livePicks, currentPick, catNeed) {
   return Math.round(final * 10) / 10;
 }
 
+const HIT_CATS   = ["R","H","HR","RBI","SB","TB","AVG","OBP","SLG"];
+const PITCH_CATS = ["IP","W","ER","K","ERA","WHIP","K/9","BB/9","NSVH"];
+
 // ─── STYLE CONSTANTS ──────────────────────────────────────────────────────────
 const TIER_COLOR = {keep6:"#f59e0b",keep12:"#22c55e",bridge:"#60a5fa",maybe:"#c084fc",specialist:"#f472b6"};
 const TIER_LABEL = {keep6:"Keep-6 🔒",keep12:"Keep-12",bridge:"Bridge",maybe:"Maybe",specialist:"Specialist"};
@@ -359,12 +362,12 @@ export default function App() {
           : []),
       ];
       const scores = {};
-      [...hitCats, ...pitchCats].forEach(cat => {
+      [...HIT_CATS, ...PITCH_CATS].forEach(cat => {
         scores[cat] = roster.filter(p => p.cats.includes(cat)).reduce((s, p) => s + p.score2026, 0);
       });
       teamCoverage[team] = scores;
     });
-    return [...hitCats, ...pitchCats].map(cat => {
+    return [...HIT_CATS, ...PITCH_CATS].map(cat => {
       const myScore = teamCoverage[MY_TEAM]?.[cat] || 0;
       const allScores = DRAFT_ORDER.map(t => teamCoverage[t]?.[cat] || 0).sort((a, b) => b - a);
       const rank = allScores.findIndex(s => s <= myScore) + 1;
@@ -421,8 +424,6 @@ export default function App() {
     ...myDrafted.map(n=>({name:n, pos:TARGETS.find(t=>t.name===n)?.eligible[0]||"?", kept:false}))
   ];
 
-  const hitCats = ["R","H","HR","RBI","SB","TB","AVG","OBP","SLG"];
-  const pitchCats = ["IP","W","ER","K","ERA","WHIP","K/9","BB/9","NSVH"];
 
   // Score bar color
   const scoreColor = (s) => s >= 8 ? "#84cc16" : s >= 6.5 ? "#22c55e" : s >= 5 ? "#60a5fa" : "#64748b";
@@ -753,7 +754,7 @@ export default function App() {
               <div style={{marginBottom:10,fontSize:11,color:"#475569"}}>
                 Need weights update live as you draft. <span style={{color:"#84cc16"}}>Amber = decayed by your picks.</span> Click to manually cycle status.
               </div>
-              {[["HITTING",hitCats],["PITCHING",pitchCats]].map(([label,cats])=>(
+              {[["HITTING",HIT_CATS],["PITCHING",PITCH_CATS]].map(([label,cats])=>(
                 <div key={label} style={{marginBottom:18}}>
                   <div style={{fontSize:10,color:"#475569",letterSpacing:".1em",textTransform:"uppercase",marginBottom:8}}>{label}</div>
                   <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
@@ -811,7 +812,7 @@ export default function App() {
                 <div style={{fontSize:10,color:"#475569",letterSpacing:".1em",textTransform:"uppercase",marginBottom:6}}>
                   Projected Standing <span style={{color:"#334155",fontWeight:400}}>— based on keepers + drafted</span>
                 </div>
-                {[["HITTING",hitCats],["PITCHING",pitchCats]].map(([label,cats])=>(
+                {[["HITTING",HIT_CATS],["PITCHING",PITCH_CATS]].map(([label,cats])=>(
                   <div key={label} style={{marginBottom:12}}>
                     <div style={{fontSize:9,color:"#334155",letterSpacing:".08em",textTransform:"uppercase",marginBottom:5}}>{label}</div>
                     {cats.map(cat => {
