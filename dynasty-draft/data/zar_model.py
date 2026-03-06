@@ -164,6 +164,65 @@ def fetch_fangraphs_ages() -> dict:
     return ages
 
 
+# ─── ESPN DYNASTY RANKINGS ───────────────────────────────────────────────────
+
+def fetch_espn_dynasty() -> dict:
+    """
+    Scrape ESPN fantasy baseball dynasty top-300 rankings.
+    Returns dict of normalized_name -> {rank, age, prev_peak, when_peak, ascending}.
+    'ascending' = True when current rank is better than player's previous career peak.
+    """
+    import re as _re
+    import unicodedata
+    def _norm(n): return unicodedata.normalize("NFD", n).encode("ascii","ignore").decode().lower().strip()
+
+    url = ("https://www.espn.com/fantasy/baseball/story/_/id/29312971/"
+           "fantasy-baseball-dynasty-rankings-top-300-players-2026-beyond")
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+                      "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml",
+    }
+    print("  Fetching ESPN dynasty rankings...")
+    try:
+        resp = requests.get(url, headers=headers, timeout=20)
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"  WARNING: Could not fetch ESPN rankings: {e}")
+        return {}
+
+    rows = _re.findall(r"<tr[^>]*>(.*?)</tr>", resp.text, _re.DOTALL)
+    result = {}
+    seen = {}
+    for row in rows:
+        tds = _re.findall(r"<td[^>]*>(.*?)</td>", row, _re.DOTALL)
+        cells = [_re.sub(r"<[^>]+>", "", td).strip() for td in tds]
+        cells = [c for c in cells if c]
+        if len(cells) < 6:
+            continue
+        try:
+            rank      = int(cells[0])
+            name      = cells[1]
+            age       = int(cells[5]) if cells[5].isdigit() else None
+            prev_peak = int(cells[6]) if len(cells) > 6 and cells[6].isdigit() else None
+            when_peak = cells[7] if len(cells) > 7 else None
+            key = _norm(name)
+            entry = {
+                "espnRank":      rank,
+                "espnAge":       age,
+                "espnPrevPeak":  prev_peak,
+                "espnWhenPeak":  when_peak,
+                "espnAscending": prev_peak is None or rank < prev_peak,
+            }
+            if key not in seen or rank < seen[key]["espnRank"]:
+                seen[key] = entry
+        except (ValueError, IndexError):
+            continue
+
+    print(f"    Got {len(seen)} players (ranks 1-300)")
+    return seen
+
+
 # ─── FANGRAPHS PROSPECT GRADES ───────────────────────────────────────────────
 
 # FV grade → 0-10 scale (ceiling score)
@@ -549,6 +608,7 @@ def main():
     fantrax, fantrax_ages = load_fantrax_dynasty()
     fg_ages = fetch_fangraphs_ages()
     prospect_grades = fetch_prospect_grades()
+    espn_dynasty = fetch_espn_dynasty()
     # Merge: FanGraphs 2025 stats takes priority (actual age), Fantrax fills gaps
     all_ages = {**fantrax_ages, **fg_ages}  # fg_ages overwrites fantrax where both exist
 
@@ -699,6 +759,10 @@ def main():
                 "prospectFV": None, "prospectScore": None,
                 "prospectRisk": None, "prospectETA": None, "prospectRank": None,
             }),
+            **(espn_dynasty.get(_norm(name), {
+                "espnRank": None, "espnAge": None, "espnPrevPeak": None,
+                "espnWhenPeak": None, "espnAscending": None,
+            })),
         })
 
     for _, row in pitchers.iterrows():
@@ -736,6 +800,10 @@ def main():
                 "prospectFV": None, "prospectScore": None,
                 "prospectRisk": None, "prospectETA": None, "prospectRank": None,
             }),
+            **(espn_dynasty.get(_norm(name), {
+                "espnRank": None, "espnAge": None, "espnPrevPeak": None,
+                "espnWhenPeak": None, "espnAscending": None,
+            })),
         })
 
     # Sort by combined score descending
