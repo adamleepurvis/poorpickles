@@ -1,4 +1,5 @@
 import { useState, useCallback, useRef, useEffect, useMemo } from "react";
+import targetsData from "../data/targets.json";
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
 const MY_TEAM = "Poor Pickles";
@@ -43,127 +44,10 @@ const KEEPER_PICKS = [
 const POS_SCARCITY_ORDER = ["C","SS","2B","3B","CF","LF","RF","1B","SP","RP"];
 
 // ─── TARGET PLAYERS ───────────────────────────────────────────────────────────
-// score2026: raw 2026 contribution score (0-10)
-// scoreDyn:  raw dynasty/peak score (0-10)
-// eligible:  all position eligibilities
-// il: true = IL/injured, discount 2026 score
-const TARGETS = [
-  // ── HITTERS: KEEP-6 TIER
-  {name:"Byron Buxton",eligible:["CF"],org:"MIN",tier:"keep6",type:"H",score2026:7.5,scoreDyn:9.0,note:"Multi-cat elite, 2027 prime",cats:["HR","SB","SLG","TB"]},
-  {name:"Luis Robert Jr.",eligible:["CF"],org:"NYM",tier:"keep6",type:"H",score2026:6.5,scoreDyn:8.5,note:"27 SB + 20 HR if healthy",cats:["SB","HR","R","TB"]},
-  {name:"Dylan Crews",eligible:["CF","RF"],org:"WSH",tier:"keep6",type:"H",score2026:5.0,scoreDyn:8.8,note:"23yo, 2027 prime — mediocre 2026 floor",cats:["SB","R","TB","H"]},
-  {name:"Jacob Wilson",eligible:["SS"],org:"OAK",tier:"keep6",type:"H",score2026:6.0,scoreDyn:8.2,note:"Elite hit tool, power developing",cats:["AVG","OBP","H","R"]},
-  {name:"Gunnar Henderson",eligible:["SS","3B"],org:"BAL",tier:"keep6",type:"H",score2026:8.5,scoreDyn:9.0,note:"EST — elite SS, power+speed",cats:["HR","SB","RBI","SLG","TB"],est:true},
-  {name:"Bobby Witt Jr.",eligible:["SS"],org:"KC",tier:"keep6",type:"H",score2026:9.0,scoreDyn:9.5,note:"EST — best SS available",cats:["HR","SB","RBI","AVG","TB"],est:true},
-  {name:"Jose Ramirez",eligible:["3B"],org:"CLE",tier:"keep6",type:"H",score2026:8.5,scoreDyn:7.5,note:"EST — elite 3B, HR+SB",cats:["HR","SB","RBI","TB","SLG"],est:true},
-  // ── HITTERS: KEEP-12 TIER
-  {name:"Corbin Carroll",eligible:["CF","LF"],org:"ARI",tier:"keep12",type:"H",score2026:7.0,scoreDyn:8.0,note:"EST — SB/speed, 25yo CF",cats:["SB","R","AVG","H"],est:true},
-  {name:"James Wood",eligible:["LF"],org:"WSH",tier:"keep12",type:"H",score2026:6.5,scoreDyn:8.0,note:"EST — elite prospect, power+SB",cats:["HR","SB","TB","R"],est:true},
-  {name:"Wyatt Langford",eligible:["CF"],org:"TEX",tier:"keep12",type:"H",score2026:6.5,scoreDyn:7.8,note:"EST — SB/power, 24yo CF",cats:["SB","HR","R","TB"],est:true},
-  {name:"Jackson Chourio",eligible:["CF"],org:"MIL",tier:"keep12",type:"H",score2026:6.5,scoreDyn:7.5,note:"EST — SB/HR upside, 22yo",cats:["SB","HR","R"],est:true},
-  {name:"Eugenio Suarez",eligible:["3B"],org:"CIN",tier:"bridge",type:"H",score2026:8.0,scoreDyn:5.5,note:"34 HR bridge, fills power gap now",cats:["HR","RBI","SLG","TB"]},
-  {name:"Xavier Edwards",eligible:["2B","SS"],org:"MIA",tier:"keep12",type:"H",score2026:6.5,scoreDyn:7.0,note:"27 SB, 4-cat contributor",cats:["SB","AVG","H","OBP"]},
-  {name:"Willy Adames",eligible:["SS"],org:"SF",tier:"keep12",type:"H",score2026:7.5,scoreDyn:7.0,note:"30 HR + 11 SB, contributes now",cats:["HR","SB","RBI","TB"]},
-  {name:"Jeremy Pena",eligible:["SS"],org:"HOU",tier:"keep12",type:"H",score2026:7.0,scoreDyn:7.2,note:"18 SB, solid floor, 29 in 2027",cats:["SB","AVG","R"]},
-  {name:"Nico Hoerner",eligible:["2B"],org:"CHC",tier:"keep12",type:"H",score2026:7.0,scoreDyn:6.5,note:"26 SB, .277 AVG, consistent",cats:["SB","AVG","H"]},
-  {name:"Matt McLain",eligible:["2B"],org:"CIN",tier:"keep12",type:"H",score2026:5.5,scoreDyn:7.5,note:"Buy-low, 2-way upside",cats:["HR","SB","AVG"],il:true},
-  {name:"Spencer Torkelson",eligible:["1B"],org:"DET",tier:"keep12",type:"H",score2026:6.5,scoreDyn:6.8,note:"26 HR, 28 in 2027",cats:["HR","RBI","TB","SLG"]},
-  {name:"Taylor Ward",eligible:["LF"],org:"BAL",tier:"keep12",type:"H",score2026:7.0,scoreDyn:6.0,note:"27 HR, undervalued",cats:["HR","RBI","SLG"]},
-  {name:"Brenton Doyle",eligible:["CF"],org:"COL",tier:"keep12",type:"H",score2026:6.5,scoreDyn:6.5,note:"21 SB + 18 HR, two-way",cats:["SB","HR"]},
-  {name:"Chandler Simpson",eligible:["CF"],org:"TB",tier:"specialist",type:"H",score2026:6.0,scoreDyn:5.0,note:"37 SB specialist, no power",cats:["SB"]},
-  {name:"Luke Keaschall",eligible:["2B"],org:"MIN",tier:"keep12",type:"H",score2026:5.5,scoreDyn:6.8,note:"21 SB, young, OBP upside",cats:["SB","OBP"]},
-  {name:"Jakob Marsee",eligible:["LF","CF"],org:"MIA",tier:"keep12",type:"H",score2026:5.5,scoreDyn:6.5,note:"27 SB, speed profile",cats:["SB","R"]},
-  {name:"Steven Kwan",eligible:["LF"],org:"CLE",tier:"keep12",type:"H",score2026:7.0,scoreDyn:5.5,note:"17 SB, .268 AVG, consistent floor",cats:["AVG","OBP","H"]},
-  {name:"Masyn Winn",eligible:["SS"],org:"STL",tier:"keep12",type:"H",score2026:6.5,scoreDyn:7.0,note:"EST — SB/AVG, young SS",cats:["SB","AVG","H","R"],est:true},
-  {name:"Zach Neto",eligible:["SS"],org:"LAA",tier:"keep12",type:"H",score2026:6.5,scoreDyn:7.2,note:"EST — SB/HR, 25yo SS",cats:["SB","HR","AVG"],est:true},
-  {name:"Junior Caminero",eligible:["3B"],org:"TB",tier:"keep12",type:"H",score2026:6.0,scoreDyn:7.5,note:"EST — power upside, young 3B",cats:["HR","RBI","SLG"],est:true},
-  // ── HITTERS: BRIDGE
-  {name:"Anthony Santander",eligible:["LF","RF"],org:"TOR",tier:"bridge",type:"H",score2026:7.5,scoreDyn:5.0,note:"EST — 30 HR, bridge power bat",cats:["HR","RBI","SLG","TB"],est:true},
-  {name:"Teoscar Hernandez",eligible:["LF","RF"],org:"LAD",tier:"bridge",type:"H",score2026:7.0,scoreDyn:4.5,note:"EST — HR/RBI bridge bat",cats:["HR","RBI","TB"],est:true},
-  {name:"Seiya Suzuki",eligible:["RF"],org:"CHC",tier:"bridge",type:"H",score2026:7.0,scoreDyn:5.0,note:"EST — 26 HR, solid floor, ages out",cats:["HR","RBI","AVG"],est:true},
-  {name:"Ian Happ",eligible:["LF","CF"],org:"CHC",tier:"bridge",type:"H",score2026:6.5,scoreDyn:4.5,note:"EST — OBP, 20 HR, steady",cats:["HR","OBP","AVG"],est:true},
-  {name:"Nolan Arenado",eligible:["3B"],org:"STL",tier:"bridge",type:"H",score2026:6.5,scoreDyn:3.5,note:"EST — HR/RBI, declining",cats:["HR","RBI","SLG"],est:true},
-  {name:"Christian Yelich",eligible:["LF"],org:"MIL",tier:"bridge",type:"H",score2026:6.5,scoreDyn:4.0,note:"EST — AVG/OBP aging vet",cats:["AVG","OBP","SB"],est:true},
-  {name:"Manny Machado",eligible:["3B"],org:"SD",tier:"bridge",type:"H",score2026:7.0,scoreDyn:4.5,note:"EST — HR/AVG, age 34 in 2027",cats:["HR","RBI","AVG","SLG"],est:true},
-  {name:"Trea Turner",eligible:["SS"],org:"PHI",tier:"bridge",type:"H",score2026:7.5,scoreDyn:5.0,note:"EST — SB/AVG, aging 32",cats:["SB","AVG","R","H"],est:true},
-  {name:"Josh Lowe",eligible:["LF","CF"],org:"TB",tier:"maybe",type:"H",score2026:6.0,scoreDyn:6.0,note:"EST — SB upside, power emerging",cats:["SB","HR","R"],est:true},
-  // ── HITTERS: PROSPECTS
-  {name:"Colt Keith",eligible:["2B","3B"],org:"DET",tier:"maybe",type:"H",score2026:5.5,scoreDyn:6.5,note:"EST — young 3B, AVG/power mix",cats:["HR","AVG","RBI"],est:true},
-  {name:"Noelvi Marte",eligible:["3B"],org:"CIN",tier:"maybe",type:"H",score2026:5.5,scoreDyn:6.8,note:"EST — power upside 3B",cats:["HR","RBI","SLG"],est:true},
-  {name:"Rece Hinds",eligible:["3B"],org:"CIN",tier:"maybe",type:"H",score2026:4.5,scoreDyn:7.0,note:"EST — raw power, strikeout risk",cats:["HR","RBI","TB"],est:true},
-  {name:"Colton Cowser",eligible:["LF","CF"],org:"BAL",tier:"maybe",type:"H",score2026:6.0,scoreDyn:6.5,note:"EST — OBP/SB, developing",cats:["OBP","SB","AVG"],est:true},
-  {name:"Coby Mayo",eligible:["3B"],org:"BAL",tier:"maybe",type:"H",score2026:5.0,scoreDyn:6.8,note:"EST — power 3B, developing",cats:["HR","RBI","SLG"],est:true},
-  {name:"Cam Collier",eligible:["3B"],org:"CIN",tier:"maybe",type:"H",score2026:4.0,scoreDyn:7.0,note:"EST — top 3B prospect, patience",cats:["AVG","OBP","HR"],est:true},
-  {name:"Jordan Walker",eligible:["RF","3B"],org:"STL",tier:"maybe",type:"H",score2026:5.5,scoreDyn:7.0,note:"EST — raw tools, inconsistent",cats:["HR","SB","AVG"],est:true},
-  {name:"Edouard Julien",eligible:["2B"],org:"MIN",tier:"maybe",type:"H",score2026:6.0,scoreDyn:6.0,note:"EST — OBP machine, SB",cats:["OBP","SB","R"],est:true},
-  {name:"Ha-Seong Kim",eligible:["2B","SS","3B"],org:"SD",tier:"maybe",type:"H",score2026:6.0,scoreDyn:5.5,note:"EST — multi-pos, SB/AVG",cats:["SB","AVG","OBP"],est:true},
-  {name:"Adael Amador",eligible:["SS"],org:"COL",tier:"maybe",type:"H",score2026:4.5,scoreDyn:6.8,note:"EST — SS prospect, hit tool",cats:["AVG","OBP","H"],est:true},
-  {name:"Jonatan Clase",eligible:["CF"],org:"SEA",tier:"maybe",type:"H",score2026:5.5,scoreDyn:6.5,note:"EST — elite SB upside",cats:["SB","R"],est:true},
-  {name:"Kristian Campbell",eligible:["2B","SS"],org:"BOS",tier:"maybe",type:"H",score2026:5.0,scoreDyn:7.0,note:"EST — young middle IF, upside",cats:["AVG","OBP","SB"],est:true},
-  {name:"Zach DeLoach",eligible:["LF","CF"],org:"SEA",tier:"maybe",type:"H",score2026:5.0,scoreDyn:6.0,note:"EST — contact/speed upside",cats:["AVG","SB","H"],est:true},
-  {name:"Thairo Estrada",eligible:["2B","SS"],org:"SF",tier:"maybe",type:"H",score2026:5.5,scoreDyn:5.0,note:"EST — SB/AVG utility",cats:["SB","AVG","H"],est:true},
-  {name:"Cedric Mullins",eligible:["CF"],org:"BAL",tier:"maybe",type:"H",score2026:6.0,scoreDyn:5.0,note:"EST — SB/speed, limited power",cats:["SB","R","H"],est:true},
-  {name:"Brendan Donovan",eligible:["2B","3B","LF"],org:"STL",tier:"maybe",type:"H",score2026:6.0,scoreDyn:5.0,note:"EST — OBP, contact, utility",cats:["AVG","OBP","H"],est:true},
-  {name:"Lane Thomas",eligible:["CF","RF"],org:"WSH",tier:"maybe",type:"H",score2026:5.5,scoreDyn:5.5,note:"EST — SB/speed, low AVG",cats:["SB","R"],est:true},
-  {name:"Michael Siani",eligible:["CF","LF"],org:"STL",tier:"maybe",type:"H",score2026:5.0,scoreDyn:5.0,note:"EST — SB specialist depth",cats:["SB","R"],est:true},
-  {name:"Nick Castellanos",eligible:["RF"],org:"PHI",tier:"bridge",type:"H",score2026:6.0,scoreDyn:3.5,note:"EST — AVG/RBI, aging out",cats:["AVG","RBI","H"],est:true},
-  {name:"CJ Cron",eligible:["1B"],org:"COL",tier:"bridge",type:"H",score2026:6.0,scoreDyn:3.5,note:"EST — HR/RBI depth, Coors",cats:["HR","RBI","TB"],est:true},
-  // ── PITCHERS: KEEP-6 TIER
-  {name:"Spencer Strider",eligible:["SP"],org:"ATL",tier:"keep6",type:"P",score2026:5.0,scoreDyn:9.5,note:"10.30 K/9, buy on injury discount",cats:["K","K/9","ERA","WHIP"],il:true},
-  {name:"Spencer Schwellenbach",eligible:["SP"],org:"ATL",tier:"keep6",type:"P",score2026:3.0,scoreDyn:9.0,note:"1.08 WHIP when healthy, deep IL",cats:["ERA","WHIP","BB/9"],il:true},
-  {name:"Trey Yesavage",eligible:["SP"],org:"TOR",tier:"keep6",type:"P",score2026:7.5,scoreDyn:8.8,note:"10.00 K/9, 24yo, contributes now",cats:["K","K/9","ERA"]},
-  {name:"Emmet Sheehan",eligible:["SP"],org:"LAD",tier:"keep6",type:"P",score2026:7.5,scoreDyn:8.5,note:"10.53 K/9, 25yo, LAD",cats:["K","K/9","ERA"]},
-  {name:"Grayson Rodriguez",eligible:["SP"],org:"LAA",tier:"keep6",type:"P",score2026:6.0,scoreDyn:8.8,note:"12% rostered, buy-low ace",cats:["K","ERA","WHIP"],il:true},
-  {name:"Jared Jones",eligible:["SP"],org:"PIT",tier:"keep6",type:"P",score2026:2.5,scoreDyn:8.5,note:"IL stash, ace ceiling",cats:["K","K/9"],il:true},
-  {name:"Tarik Skubal",eligible:["SP"],org:"DET",tier:"keep6",type:"P",score2026:9.0,scoreDyn:9.0,note:"EST — best SP in AL",cats:["K","K/9","ERA","WHIP","BB/9"],est:true},
-  {name:"Roki Sasaki",eligible:["SP"],org:"LAD",tier:"keep6",type:"P",score2026:7.5,scoreDyn:9.0,note:"EST — elite stuff, 24yo",cats:["K","K/9","ERA","WHIP","BB/9"],est:true},
-  // ── PITCHERS: KEEP-12 / BRIDGE
-  {name:"Zack Wheeler",eligible:["SP"],org:"PHI",tier:"bridge",type:"P",score2026:9.0,scoreDyn:5.0,note:"Best 2026 ratios available",cats:["ERA","WHIP","K"]},
-  {name:"Sonny Gray",eligible:["SP"],org:"BOS",tier:"bridge",type:"P",score2026:8.5,scoreDyn:4.5,note:"182 K, 2.3 BB/9, bridge ace",cats:["K","BB/9","ERA"]},
-  {name:"Cade Horton",eligible:["SP"],org:"CHC",tier:"maybe",type:"P",score2026:7.0,scoreDyn:7.5,note:"24yo, 3.67 ERA",cats:["ERA","WHIP","K"]},
-  {name:"Jack Leiter",eligible:["SP"],org:"TEX",tier:"keep12",type:"P",score2026:6.5,scoreDyn:7.8,note:"24yo, developing ace",cats:["K","ERA"]},
-  {name:"Gavin Williams",eligible:["SP"],org:"CLE",tier:"keep12",type:"P",score2026:7.0,scoreDyn:7.5,note:"174 K, 25yo",cats:["K","K/9"]},
-  {name:"Edward Cabrera",eligible:["SP"],org:"CHC",tier:"maybe",type:"P",score2026:6.5,scoreDyn:7.2,note:"9.70 K/9, 25yo",cats:["K","K/9"]},
-  {name:"Jack Flaherty",eligible:["SP"],org:"DET",tier:"keep12",type:"P",score2026:7.5,scoreDyn:6.0,note:"9.86 K/9, proven innings",cats:["K","K/9","ERA"]},
-  {name:"Kevin Gausman",eligible:["SP"],org:"TOR",tier:"bridge",type:"P",score2026:8.0,scoreDyn:4.0,note:"181 K, bridge innings",cats:["K","ERA","WHIP"]},
-  {name:"Cam Schlittler",eligible:["SP"],org:"NYY",tier:"keep12",type:"P",score2026:5.5,scoreDyn:7.0,note:"9.22 K/9, 24yo stash",cats:["K","K/9"]},
-  {name:"George Kirby",eligible:["SP"],org:"SEA",tier:"keep12",type:"P",score2026:8.0,scoreDyn:7.0,note:"EST — elite BB/9, 27yo",cats:["ERA","WHIP","BB/9","K"],est:true},
-  {name:"Logan Gilbert",eligible:["SP"],org:"SEA",tier:"keep12",type:"P",score2026:7.5,scoreDyn:6.5,note:"EST — innings/K, 28yo",cats:["K","ERA","WHIP","IP"],est:true},
-  {name:"Michael King",eligible:["SP"],org:"SD",tier:"keep12",type:"P",score2026:7.5,scoreDyn:6.5,note:"EST — elite K/9, 29yo",cats:["K","K/9","ERA","WHIP"],est:true},
-  {name:"Pablo Lopez",eligible:["SP"],org:"MIN",tier:"bridge",type:"P",score2026:7.5,scoreDyn:5.0,note:"EST — elite WHIP, 29yo",cats:["ERA","WHIP","K","BB/9"],est:true},
-  {name:"MacKenzie Gore",eligible:["SP"],org:"WSH",tier:"keep12",type:"P",score2026:7.0,scoreDyn:6.5,note:"EST — K/9 upside, 27yo",cats:["K","K/9","ERA"],est:true},
-  {name:"Hunter Brown",eligible:["SP"],org:"HOU",tier:"keep12",type:"P",score2026:7.0,scoreDyn:6.5,note:"EST — K/9 upside, 26yo",cats:["K","K/9","ERA"],est:true},
-  {name:"Cristopher Sanchez",eligible:["SP"],org:"PHI",tier:"keep12",type:"P",score2026:7.0,scoreDyn:6.0,note:"EST — WHIP specialist, 27yo",cats:["ERA","WHIP","BB/9"],est:true},
-  {name:"Dylan Cease",eligible:["SP"],org:"SD",tier:"keep12",type:"P",score2026:7.5,scoreDyn:6.0,note:"EST — high K, high BB",cats:["K","K/9","ERA"],est:true},
-  {name:"Andrew Painter",eligible:["SP"],org:"PHI",tier:"keep12",type:"P",score2026:5.5,scoreDyn:8.0,note:"EST — elite prospect, TJ recovery",cats:["K","K/9","ERA","WHIP"],il:true,est:true},
-  {name:"Kodai Senga",eligible:["SP"],org:"NYM",tier:"maybe",type:"P",score2026:5.0,scoreDyn:7.5,note:"EST — elite when healthy, IL risk",cats:["K","K/9","ERA"],il:true,est:true},
-  {name:"Jacob Misiorowski",eligible:["SP"],org:"MIL",tier:"maybe",type:"P",score2026:5.0,scoreDyn:7.5,note:"EST — elite K/9, control developing",cats:["K","K/9"],est:true},
-  {name:"AJ Smith-Shawver",eligible:["SP"],org:"ATL",tier:"maybe",type:"P",score2026:5.5,scoreDyn:7.0,note:"EST — 23yo, K upside",cats:["K","K/9"],est:true},
-  {name:"Max Meyer",eligible:["SP"],org:"MIA",tier:"maybe",type:"P",score2026:6.0,scoreDyn:7.0,note:"EST — 27yo, K/9 upside",cats:["K","K/9"],est:true},
-  {name:"Ryan Pepiot",eligible:["SP"],org:"TB",tier:"maybe",type:"P",score2026:6.5,scoreDyn:6.5,note:"EST — K upside, health TBD",cats:["K","K/9","ERA"],est:true},
-  {name:"Reese Olson",eligible:["SP"],org:"DET",tier:"maybe",type:"P",score2026:6.5,scoreDyn:6.5,note:"EST — K/9 + BB/9 combo",cats:["K","K/9","BB/9"],est:true},
-  {name:"Clarke Schmidt",eligible:["SP"],org:"NYY",tier:"maybe",type:"P",score2026:6.5,scoreDyn:6.0,note:"EST — K/9, NYY depth",cats:["K","K/9","ERA"],est:true},
-  {name:"Bryce Miller",eligible:["SP"],org:"SEA",tier:"maybe",type:"P",score2026:6.5,scoreDyn:6.5,note:"EST — K/9 + BB/9, 26yo",cats:["K","K/9","BB/9"],est:true},
-  {name:"Landen Roupp",eligible:["SP"],org:"SF",tier:"maybe",type:"P",score2026:6.0,scoreDyn:6.5,note:"EST — 25yo, developing",cats:["K","ERA","WHIP"],est:true},
-  {name:"Nestor Cortes",eligible:["SP"],org:"MIL",tier:"maybe",type:"P",score2026:6.5,scoreDyn:5.0,note:"EST — BB/9, WHIP, low K",cats:["ERA","WHIP","BB/9"],est:true},
-  {name:"Ranger Suarez",eligible:["SP"],org:"PHI",tier:"maybe",type:"P",score2026:6.5,scoreDyn:5.5,note:"EST — ERA/WHIP, health risk",cats:["ERA","WHIP","BB/9"],est:true},
-  {name:"Merrill Kelly",eligible:["SP"],org:"ARI",tier:"bridge",type:"P",score2026:7.0,scoreDyn:4.0,note:"EST — ratios, aging out",cats:["ERA","WHIP","IP"],est:true},
-  {name:"Graham Ashcraft",eligible:["SP"],org:"CIN",tier:"maybe",type:"P",score2026:6.0,scoreDyn:5.5,note:"EST — groundball, ERA depth",cats:["ERA","WHIP","IP"],est:true},
-  // ── RELIEVERS
-  {name:"Mason Miller",eligible:["RP"],org:"OAK",tier:"keep12",type:"P",score2026:7.0,scoreDyn:6.5,note:"EST — elite velocity closer",cats:["NSVH","K/9","ERA"],est:true},
-  {name:"Jhoan Duran",eligible:["RP"],org:"MIN",tier:"keep12",type:"P",score2026:7.0,scoreDyn:6.5,note:"EST — elite K/9 closer",cats:["NSVH","K/9","ERA"],est:true},
-  {name:"Ryan Helsley",eligible:["RP"],org:"STL",tier:"maybe",type:"P",score2026:7.0,scoreDyn:5.5,note:"EST — elite closer, K/9",cats:["NSVH","K/9","ERA"],est:true},
-  {name:"Emmanuel Clase",eligible:["RP"],org:"CLE",tier:"maybe",type:"P",score2026:7.0,scoreDyn:5.0,note:"EST — saves leader, cutter",cats:["NSVH","ERA","WHIP"],est:true},
-  {name:"Josh Hader",eligible:["RP"],org:"HOU",tier:"bridge",type:"P",score2026:7.0,scoreDyn:4.0,note:"EST — saves, elite K/9, aging",cats:["NSVH","K/9","ERA"],est:true},
-  {name:"Devin Williams",eligible:["RP"],org:"NYY",tier:"maybe",type:"P",score2026:6.5,scoreDyn:5.0,note:"EST — SV/HD, elite K/9",cats:["NSVH","K/9","ERA"],est:true},
-  {name:"Tanner Scott",eligible:["RP"],org:"LAD",tier:"maybe",type:"P",score2026:6.5,scoreDyn:5.0,note:"EST — saves/holds, BB risk",cats:["NSVH","ERA","WHIP"],est:true},
-  {name:"Edwin Diaz",eligible:["RP"],org:"NYM",tier:"maybe",type:"P",score2026:7.0,scoreDyn:5.5,note:"EST — saves + K/9 elite",cats:["NSVH","K/9","ERA"],est:true},
-  {name:"Alexis Diaz",eligible:["RP"],org:"CIN",tier:"maybe",type:"P",score2026:6.5,scoreDyn:5.5,note:"EST — saves, K/9",cats:["NSVH","K/9"],est:true},
-  {name:"David Bednar",eligible:["RP"],org:"PIT",tier:"maybe",type:"P",score2026:6.5,scoreDyn:5.0,note:"EST — saves, K upside",cats:["NSVH","K/9","ERA"],est:true},
-  {name:"Felix Bautista",eligible:["RP"],org:"BAL",tier:"maybe",type:"P",score2026:5.5,scoreDyn:6.0,note:"EST — elite when healthy, IL",cats:["NSVH","K/9","ERA"],il:true,est:true},
-  {name:"Clay Holmes",eligible:["RP"],org:"NYM",tier:"maybe",type:"P",score2026:6.0,scoreDyn:4.5,note:"EST — SV/sinker, BB risk",cats:["NSVH","ERA","WHIP"],est:true},
-  {name:"Pete Fairbanks",eligible:["RP"],org:"TB",tier:"maybe",type:"P",score2026:6.0,scoreDyn:4.5,note:"EST — SV opps, health risk",cats:["NSVH","K/9"],est:true},
-];
+// Loaded from data/targets.json (generated by data/build.py + data/zar_model.py)
+// Fields: name, eligible, org, tier, type, score2026, scoreDyn, scoreFTDyn,
+//         zar_raw, age, note, cats, il, est, pct_owned, rostered
+const TARGETS = targetsData.players;
 
 // ─── SCORING ENGINE ────────────────────────────────────────────────────────────
 const DYNASTY_WEIGHT = 0.75;
