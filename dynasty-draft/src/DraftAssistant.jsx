@@ -76,10 +76,10 @@ const TARGETS = targetsData.players.map(p => ({
 }));
 
 // ─── SCORING ENGINE ────────────────────────────────────────────────────────────
-// Weights: 35% current-year, 65% dynasty
-// FT Dyn is the dynasty anchor when available. Unranked players get 50% ZAR.
-const DYNASTY_WEIGHT = 0.65;
-const NOW_WEIGHT = 0.35;
+// DNS weights: 2026 / 2028 / Dynasty / FanTrax
+// When FT is missing, redistribute its 30% toward 2028 and Dyn.
+const W_FT   = { s26: 0.20, s28: 0.20, dyn: 0.30, ft: 0.30 };
+const W_NOFT = { s26: 0.15, s28: 0.30, dyn: 0.55 };
 const IL_2026_DISCOUNT = 0.4;
 
 // BASE category needs — never mutated, used as reference for "original"
@@ -131,16 +131,21 @@ function calcCatScore(player, catNeed) {
 }
 
 function calcBaseScore(player, catNeed) {
-  const s2026 = player.il ? player.score2026 * IL_2026_DISCOUNT : player.score2026;
-  const dynastyScore = player.scoreFTDyn != null ? player.scoreFTDyn : player.scoreDyn * 0.5;
+  const s26 = player.il ? player.score2026 * IL_2026_DISCOUNT : player.score2026;
+  const s28 = player.score2028 ?? player.score2026;
+  const dyn = player.scoreDyn;
+  const ft  = player.scoreFTDyn;
   const catMult = 0.6 + 0.4 * calcCatScore(player, catNeed);
   const posDiscount = player.eligible.every(p => p === "RP") ? 0.75 : 1.0;
-  const base = (s2026 * NOW_WEIGHT + dynastyScore * DYNASTY_WEIGHT) * catMult * posDiscount;
+
+  const base = ft != null
+    ? s26 * W_FT.s26 + s28 * W_FT.s28 + dyn * W_FT.dyn + ft * W_FT.ft
+    : s26 * W_NOFT.s26 + s28 * W_NOFT.s28 + dyn * W_NOFT.dyn;
+
   // Ceiling bonus: when dynasty ceiling >> current floor, reward the upside gap.
-  // This surfaces IL stashes (Schwellenbach, Strider), young high-ceiling players,
-  // and prospects where FT ranks them higher than their 2026 production suggests.
-  const ceilingBonus = Math.min(Math.max(0, dynastyScore - s2026) * 0.3, 3.0) * posDiscount;
-  return Math.round((base + ceilingBonus) * 10) / 10;
+  const dynastyScore = ft ?? dyn;
+  const ceilingBonus = Math.min(Math.max(0, dynastyScore - s26) * 0.3, 3.0) * posDiscount;
+  return Math.round((base * catMult * posDiscount + ceilingBonus) * 10) / 10;
 }
 
 // Positional scarcity: slope-based VOR
@@ -518,8 +523,10 @@ export default function App() {
             <div style={{fontSize:11,color:"#64748b"}}>
               <div style={{color:"#94a3b8",marginBottom:3,fontSize:10,textTransform:"uppercase",letterSpacing:".06em"}}>Score Breakdown</div>
               <div>Base: <span style={{color:"#94a3b8"}}>{t.baseScore}</span></div>
-              <div>2026 ({t.il?"IL-discounted":"full"}): <span style={{color:"#94a3b8"}}>{t.il ? Math.round(t.score2026*IL_2026_DISCOUNT*10)/10 : t.score2026}</span></div>
+              <div>2026{t.il?" (IL)":""}: <span style={{color:"#94a3b8"}}>{t.il ? Math.round(t.score2026*IL_2026_DISCOUNT*10)/10 : t.score2026}</span></div>
+              <div>2028: <span style={{color:"#94a3b8"}}>{t.score2028??"-"}</span></div>
               <div>Dynasty: <span style={{color:"#94a3b8"}}>{t.scoreDyn}</span></div>
+              {t.scoreFTDyn!=null&&<div>FT Dyn: <span style={{color:"#94a3b8"}}>{t.scoreFTDyn}</span></div>}
               <div>VOR @ {t.scarcity.scarcePos}: <span style={{color:t.scarcity.vor>0?"#22c55e":"#f87171"}}>{t.scarcity.vor>0?"+":""}{t.scarcity.vor}</span></div>
               <div>Urgency bonus: <span style={{color:"#94a3b8"}}>+{Math.round(t.urgency/100*1.5*10)/10}</span></div>
               <div>Round value: <span style={{color:rvColor}}>{rvLabel}</span></div>
@@ -783,7 +790,7 @@ export default function App() {
               </div>
               {/* Score legend */}
               <div style={{display:"flex",gap:12,marginBottom:10,flexWrap:"wrap",alignItems:"center"}}>
-                <span style={{fontSize:10,color:"#475569"}}>DNS = Draft Now Score · </span>
+                <span style={{fontSize:10,color:"#475569"}}>DNS = 20% 2026 · 20% 2028 · 30% Dyn · 30% FT (15/30/55 when no FT) · </span>
                 {[["≥8.0","#f59e0b","Elite"],["≥6.5","#22c55e","Strong"],["≥5.0","#60a5fa","Solid"],["<5.0","#64748b","Stash"]].map(([r,c,l])=>(
                   <div key={r} style={{display:"flex",alignItems:"center",gap:4,fontSize:10}}>
                     <div style={{width:7,height:7,borderRadius:2,background:c}}/>
