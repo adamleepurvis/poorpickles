@@ -81,11 +81,23 @@ STAT_DIRECTION = {
     "K9": True,  "BB9": False,
 }
 
-# Age curve — dynasty score multiplier by age
+# Age curve — dynasty score multiplier by age (used for scoreDyn)
+# Young players get a boost reflecting future seasons of prime value.
 AGE_CURVE = {
     21: 1.30, 22: 1.25, 23: 1.20, 24: 1.15, 25: 1.10,
     26: 1.05, 27: 1.02, 28: 1.00, 29: 0.97, 30: 0.93,
     31: 0.87, 32: 0.80, 33: 0.72, 34: 0.63, 35: 0.52,
+}
+
+# Performance trajectory — used ONLY for score2027/score2028 projection
+# Reflects expected on-field stats at each age relative to peak (age 27-28).
+# Separate from AGE_CURVE (dynasty value) because a 25-year-old's stats
+# should still be rising toward peak, not yet declining.
+PERF_TRAJECTORY = {
+    21: 0.68, 22: 0.76, 23: 0.83, 24: 0.90, 25: 0.95,
+    26: 0.98, 27: 1.00, 28: 1.00, 29: 0.98, 30: 0.95,
+    31: 0.90, 32: 0.84, 33: 0.77, 34: 0.69, 35: 0.60,
+    36: 0.51, 37: 0.43, 38: 0.36, 39: 0.30, 40: 0.25,
 }
 
 # Manual dynasty overrides — for prospects/IL players whose 2026 projection
@@ -328,10 +340,21 @@ def age_curve_factor(age) -> float:
         return 1.0
 
 
+def perf_trajectory_factor(age) -> float:
+    """Return expected performance factor at a given age relative to peak (age 27-28 = 1.0)."""
+    try:
+        age_int = int(float(age))
+        # Clamp to table range — past 40, use the 40 value
+        age_int = max(min(age_int, max(PERF_TRAJECTORY.keys())), min(PERF_TRAJECTORY.keys()))
+        return PERF_TRAJECTORY.get(age_int, 0.25)
+    except (TypeError, ValueError):
+        return 1.0
+
+
 def project_future_score(score_base: float, age: int, years_forward: int) -> float:
-    """Project a ZAR score N years forward using the age curve ratio."""
-    current_factor = age_curve_factor(age)
-    future_factor  = age_curve_factor(age + years_forward)
+    """Project a ZAR score N years forward using the performance trajectory ratio."""
+    current_factor = perf_trajectory_factor(age)
+    future_factor  = perf_trajectory_factor(age + years_forward)
     if current_factor < 1e-9:
         return round(min(score_base, 10.0), 1)
     return round(min(score_base * (future_factor / current_factor), 10.0), 1)
