@@ -531,6 +531,18 @@ export default function App() {
               ))}
               <span style={{fontSize:10,color:"#475569"}}>· {t.org}</span>
               {t.age > 0 && <span style={{fontSize:10,color:"#475569"}}>· {t.age}</span>}
+              {t.prospectFV != null && (() => {
+                const fvColor = t.prospectFV >= 60 ? "#f59e0b" : t.prospectFV >= 55 ? "#22c55e" : t.prospectFV >= 50 ? "#60a5fa" : "#94a3b8";
+                const riskDot = t.prospectRisk === "Low" ? "●" : t.prospectRisk === "Med" ? "●" : t.prospectRisk === "High" ? "●" : "●";
+                const riskColor = t.prospectRisk === "Low" ? "#22c55e" : t.prospectRisk === "Med" ? "#f59e0b" : "#f87171";
+                return (
+                  <span style={{fontSize:9,padding:"1px 6px",borderRadius:3,background:`${fvColor}18`,color:fvColor,border:`1px solid ${fvColor}44`,fontWeight:600}}>
+                    FV{t.prospectFV}
+                    <span style={{color:riskColor,marginLeft:3}}>{riskDot}</span>
+                    {t.prospectETA && <span style={{color:"#475569",fontWeight:400}}> {t.prospectETA}</span>}
+                  </span>
+                );
+              })()}
               <span style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${TIER_COLOR[t.tier]}18`,color:TIER_COLOR[t.tier]}}>{TIER_LABEL[t.tier]}</span>
             </div>
             <div style={{fontSize:10,color:"#475569",marginTop:1}}>{playerNotes[t.name]||t.note}</div>
@@ -563,6 +575,7 @@ export default function App() {
               <div>2028: <span style={{color:"#94a3b8"}}>{t.score2028??"-"}</span></div>
               <div>Dynasty: <span style={{color:"#94a3b8"}}>{t.scoreDyn}</span></div>
               {t.scoreFTDyn!=null&&<div>FT Dyn: <span style={{color:"#94a3b8"}}>{t.scoreFTDyn}</span></div>}
+              {t.prospectFV!=null&&<div>Prospect: <span style={{color:"#94a3b8"}}>FV{t.prospectFV} · {t.prospectRisk} risk · ETA {t.prospectETA}{t.prospectRank?" · #"+t.prospectRank:""}</span></div>}
               <div>VOR @ {t.scarcity.scarcePos}: <span style={{color:t.scarcity.vor>0?"#22c55e":"#f87171"}}>{t.scarcity.vor>0?"+":""}{t.scarcity.vor}</span></div>
               <div>Urgency bonus: <span style={{color:"#94a3b8"}}>+{Math.round(t.urgency/100*1.5*10)/10}</span></div>
               <div>Round value: <span style={{color:rvColor}}>{rvLabel}</span></div>

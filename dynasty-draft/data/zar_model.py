@@ -164,6 +164,81 @@ def fetch_fangraphs_ages() -> dict:
     return ages
 
 
+# ─── FANGRAPHS PROSPECT GRADES ───────────────────────────────────────────────
+
+# FV grade → 0-10 scale (ceiling score)
+FV_TO_SCORE = {
+    "70": 10.0, "65": 8.5, "60": 7.0, "55": 6.0, "50": 5.0,
+    "45+": 4.5, "45": 4.0, "40+": 3.5, "40": 3.0, "35+": 2.5, "35": 2.0,
+}
+RISK_MULTIPLIER = {"Low": 1.0, "Med": 0.9, "High": 0.75, "Extreme": 0.6}
+
+def fetch_prospect_grades() -> dict:
+    """
+    Fetch FanGraphs prospect FV grades from The Board.
+    Fetches 2026 board (top 625, most recent) and 2025 board (1285 players, broader).
+    2026 data takes priority when available.
+    Returns dict of normalized_name -> {fv, fv_score, risk, eta, rank}.
+    """
+    import re as _re
+    import unicodedata
+    def _norm(n): return unicodedata.normalize("NFD", n).encode("ascii","ignore").decode().lower().strip()
+
+    browser_headers = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+    }
+
+    def _fetch_board(url):
+        try:
+            resp = requests.get(url, headers=browser_headers, timeout=20)
+            resp.raise_for_status()
+            m = _re.search(r'<script id="__NEXT_DATA__" type="application/json">(.*?)</script>',
+                           resp.text, _re.DOTALL)
+            if not m:
+                return []
+            nd = json.loads(m.group(1))
+            return nd["props"]["pageProps"]["dehydratedState"]["queries"][0]["state"]["data"]
+        except Exception as e:
+            print(f"  WARNING: Could not fetch prospect board from {url}: {e}")
+            return []
+
+    print("  Fetching FanGraphs prospect grades...")
+    prospects_2026 = _fetch_board("https://www.fangraphs.com/prospects/the-board")
+    prospects_2025 = _fetch_board("https://www.fangraphs.com/prospects/the-board/2025-prospect-list")
+    print(f"    2026 board: {len(prospects_2026)} prospects, 2025 board: {len(prospects_2025)} prospects")
+
+    grades = {}
+    # Process 2025 first (lower priority), then 2026 overwrites
+    for prospect_list in (prospects_2025, prospects_2026):
+        for p in prospect_list:
+            name = str(p.get("playerName", ""))
+            fv   = str(p.get("cFV") or p.get("FV_Current") or "").strip()
+            if not name or not fv:
+                continue
+            risk = str(p.get("cRisk") or "").strip()
+            eta  = str(p.get("cETA") or p.get("ETA_Current") or "").strip()
+            rank = p.get("cOVR") or p.get("Ovr_Rank")
+            try:
+                rank = int(rank) if rank else None
+            except (ValueError, TypeError):
+                rank = None
+            fv_score = FV_TO_SCORE.get(fv)
+            if fv_score is not None:
+                risk_mult = RISK_MULTIPLIER.get(risk, 0.85)
+                grades[_norm(name)] = {
+                    "fv":       fv,
+                    "fv_score": round(fv_score * risk_mult, 1),
+                    "risk":     risk or None,
+                    "eta":      eta or None,
+                    "rank":     rank,
+                }
+
+    print(f"    Total: {len(grades)} players with FV grades")
+    return grades
+
+
 # ─── FANTRAX DYNASTY RANKINGS ────────────────────────────────────────────────
 
 def load_fantrax_dynasty() -> tuple[dict, dict]:
@@ -473,6 +548,7 @@ def main():
 
     fantrax, fantrax_ages = load_fantrax_dynasty()
     fg_ages = fetch_fangraphs_ages()
+    prospect_grades = fetch_prospect_grades()
     # Merge: FanGraphs 2025 stats takes priority (actual age), Fantrax fills gaps
     all_ages = {**fantrax_ages, **fg_ages}  # fg_ages overwrites fantrax where both exist
 
@@ -613,6 +689,16 @@ def main():
             "cats":       get_cats(row, hitting_stats, False),
             "il":         bool(row["il"]),
             "est":        False,
+            **({
+                "prospectFV":   g["fv"],
+                "prospectScore":g["fv_score"],
+                "prospectRisk": g["risk"],
+                "prospectETA":  g["eta"],
+                "prospectRank": g["rank"],
+            } if (g := prospect_grades.get(_norm(name))) else {
+                "prospectFV": None, "prospectScore": None,
+                "prospectRisk": None, "prospectETA": None, "prospectRank": None,
+            }),
         })
 
     for _, row in pitchers.iterrows():
@@ -640,6 +726,16 @@ def main():
             "cats":       get_cats(row, pitching_stats, True),
             "il":         bool(row["il"]),
             "est":        False,
+            **({
+                "prospectFV":   g["fv"],
+                "prospectScore":g["fv_score"],
+                "prospectRisk": g["risk"],
+                "prospectETA":  g["eta"],
+                "prospectRank": g["rank"],
+            } if (g := prospect_grades.get(_norm(name))) else {
+                "prospectFV": None, "prospectScore": None,
+                "prospectRisk": None, "prospectETA": None, "prospectRank": None,
+            }),
         })
 
     # Sort by combined score descending
