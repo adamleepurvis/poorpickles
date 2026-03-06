@@ -188,10 +188,11 @@ def fetch_fangraphs(player_type: str, system: str) -> pd.DataFrame:
 # FanGraphs column names → our internal stat names
 HITTER_COL_MAP = {
     "R": "R", "H": "H", "HR": "HR", "RBI": "RBI", "SB": "SB",
-    "TB": "TB", "AVG": "AVG", "OBP": "OBP", "SLG": "SLG",
-    "PA": "PA", "Age": "Age",
+    "2B": "2B", "3B": "3B",       # used to compute TB
+    "AVG": "AVG", "OBP": "OBP", "SLG": "SLG",
+    "PA": "PA",
     "PlayerName": "name", "Name": "name",
-    "Team": "team", "Pos": "pos",
+    "Team": "team", "minpos": "pos",  # FanGraphs uses "minpos" for position string
 }
 
 PITCHER_COL_MAP = {
@@ -199,9 +200,9 @@ PITCHER_COL_MAP = {
     "SV": "SV", "HLD": "HLD", "BB": "BB",
     "K/9": "K9", "BB/9": "BB9",
     "ER": "ER",
-    "PA": "PA", "Age": "Age", "GS": "GS", "G": "G",
+    "GS": "GS", "G": "G",
     "PlayerName": "name", "Name": "name",
-    "Team": "team", "Pos": "pos",
+    "Team": "team",
 }
 
 def normalize_df(df: pd.DataFrame, col_map: dict) -> pd.DataFrame:
@@ -454,6 +455,14 @@ def main():
     # ── Normalize columns ──────────────────────────────────────────────────────
     hitters  = normalize_df(raw_hitters,  HITTER_COL_MAP)
     pitchers = normalize_df(raw_pitchers, PITCHER_COL_MAP)
+
+    # ── Compute TB (FanGraphs doesn't return it directly) ─────────────────────
+    # TB = H + 2B + 2×3B + 3×HR  (singles = H - 2B - 3B - HR, but we just expand)
+    if "H" in hitters.columns:
+        h2b = hitters.get("2B", 0) if "2B" in hitters.columns else 0
+        h3b = hitters.get("3B", 0) if "3B" in hitters.columns else 0
+        hhr = hitters.get("HR", 0) if "HR" in hitters.columns else 0
+        hitters["TB"] = hitters["H"] + h2b + 2 * h3b + 3 * hhr
 
     # ── Filter to draftable pool ───────────────────────────────────────────────
     if "PA" in hitters.columns:
