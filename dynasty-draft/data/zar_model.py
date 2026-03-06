@@ -120,6 +120,38 @@ DEFAULT_AGE = 27
 OUTPUT_FILE = Path(__file__).parent / "zar_scores.json"
 FANTRAX_FILE = Path(__file__).parent / "fantrax_dynasty.csv"
 
+# ─── PLAYER AGE LOOKUP ───────────────────────────────────────────────────────
+
+def fetch_fangraphs_ages() -> dict:
+    """
+    Pull player ages from FanGraphs 2025 actual stats leaderboard.
+    Returns dict of normalized_name -> age (int).
+    Covers ~1000 hitters + ~1000 pitchers who appeared in 2025.
+    """
+    import unicodedata
+    def _norm(n): return unicodedata.normalize("NFD", n).encode("ascii","ignore").decode().lower().strip()
+
+    ages = {}
+    for stats_type in ("bat", "pit"):
+        url = (
+            "https://www.fangraphs.com/api/leaders/major-league/data"
+            f"?pos=all&stats={stats_type}&lg=all&season=2025&season1=2025"
+            "&pageitems=2000&type=0&month=0&ind=0&qual=0"
+        )
+        try:
+            resp = requests.get(url, headers=FANGRAPHS_HEADERS, timeout=20)
+            resp.raise_for_status()
+            for row in resp.json().get("data", []):
+                name = row.get("PlayerName", "")
+                age  = row.get("Age")
+                if name and age and float(age) > 0:
+                    ages[_norm(name)] = int(float(age))
+        except Exception as e:
+            print(f"  WARNING: Could not fetch ages for {stats_type}: {e}")
+    print(f"  Fetched ages for {len(ages)} players from FanGraphs 2025 stats.")
+    return ages
+
+
 # ─── FANTRAX DYNASTY RANKINGS ────────────────────────────────────────────────
 
 def load_fantrax_dynasty() -> tuple[dict, dict]:
@@ -417,6 +449,9 @@ def main():
         return unicodedata.normalize("NFD", name).encode("ascii", "ignore").decode().lower().strip()
 
     fantrax, fantrax_ages = load_fantrax_dynasty()
+    fg_ages = fetch_fangraphs_ages()
+    # Merge: FanGraphs 2025 stats takes priority (actual age), Fantrax fills gaps
+    all_ages = {**fantrax_ages, **fg_ages}  # fg_ages overwrites fantrax where both exist
 
     # ── Fetch primary system ───────────────────────────────────────────────────
     raw_hitters  = fetch_fangraphs("bat", system)
@@ -486,22 +521,24 @@ def main():
 
     # ── Dynasty score = score2026 × age curve ─────────────────────────────────
     def get_age(row) -> int:
-        """Extract age: Fantrax CSV first, then FanGraphs, then DEFAULT_AGE."""
+        """
+        Extract age from FanGraphs 2025 stats or Fantrax CSV.
+        Returns 0 when unknown (not DEFAULT_AGE) so callers can distinguish.
+        Use age_for_curve() for scoring which falls back to DEFAULT_AGE.
+        """
         name_key = _norm(str(row.get("name", "")))
-        if name_key in fantrax_ages:
-            return fantrax_ages[name_key]
-        raw = row.get("Age", None)
-        try:
-            v = float(raw)
-            return int(v) if (v > 0 and not np.isnan(v)) else DEFAULT_AGE
-        except (TypeError, ValueError):
-            return DEFAULT_AGE
+        return all_ages.get(name_key, 0)
+
+    def age_for_curve(row) -> int:
+        """Age for dynasty curve calculations — uses DEFAULT_AGE when unknown."""
+        a = get_age(row)
+        return a if a > 0 else DEFAULT_AGE
 
     def compute_dyn(row):
         name = str(row["name"])
         if name in DYNASTY_OVERRIDES:
             return DYNASTY_OVERRIDES[name]
-        factor = age_curve_factor(get_age(row))
+        factor = age_curve_factor(age_for_curve(row))
         return round(min(float(row["score2026"]) * factor, 10.0), 1)
 
     hitters["scoreDyn"]  = hitters.apply(compute_dyn, axis=1)
@@ -509,8 +546,7 @@ def main():
 
     # ── Projected 2027 / 2028 scores (computed before IL discount) ────────────
     def compute_future(row, years_forward):
-        age = get_age(row)
-        return project_future_score(float(row["score2026"]), age, years_forward)
+        return project_future_score(float(row["score2026"]), age_for_curve(row), years_forward)
 
     hitters["score2027"]  = hitters.apply(lambda r: compute_future(r, 1), axis=1)
     hitters["score2028"]  = hitters.apply(lambda r: compute_future(r, 2), axis=1)
