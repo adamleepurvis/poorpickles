@@ -1027,20 +1027,39 @@ export default function App() {
               <div style={{fontSize:10,color:"#475569",marginBottom:10}}>Keeper rosters R1-10. Use to assess positional pressure and SP scarcity.</div>
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>
                 {DRAFT_ORDER.filter(t=>t!==MY_TEAM).map(team=>{
-                  const roster = KEEPER_PICKS.filter(p=>p.team===team);
-                  const spCount = roster.filter(p=>p.pos==="SP").length;
+                  const keepers = KEEPER_PICKS.filter(p=>p.team===team);
+                  const drafted = Object.entries(livePicks)
+                    .filter(([pick]) => getPickOwner(Number(pick)) === team)
+                    .sort((a,b) => Number(a[0])-Number(b[0]))
+                    .map(([pick, name]) => {
+                      const t = TARGETS.find(x=>x.name===name);
+                      return {pick:Number(pick), name, pos: t?.eligible?.[0] ?? "?"};
+                    });
+                  const spCount = keepers.filter(p=>p.pos==="SP").length + drafted.filter(p=>p.pos==="SP").length;
                   return (
                     <div key={team} style={{background:"#0d0f16",border:"1px solid #1e293b",borderRadius:4,padding:"8px 10px"}}>
                       <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:5}}>
                         <span style={{fontSize:11,color:"#94a3b8",fontWeight:600}}>{team}</span>
                         {spCount>0&&<span style={{fontSize:9,color:"#60a5fa",background:"#1e3a5f33",padding:"1px 5px",borderRadius:3}}>{spCount} SP</span>}
                       </div>
-                      {roster.map((p,i)=>(
+                      {keepers.map((p,i)=>(
                         <div key={i} style={{display:"flex",gap:6,marginBottom:2,fontSize:11}}>
                           <span style={{color:"#475569",width:26,flexShrink:0}}>{p.pos}</span>
                           <span style={{color:"#94a3b8"}}>{p.player}</span>
                         </div>
                       ))}
+                      {drafted.length>0&&(
+                        <>
+                          <div style={{borderTop:"1px solid #1e293b",margin:"4px 0"}}/>
+                          {drafted.map((p,i)=>(
+                            <div key={i} style={{display:"flex",gap:6,marginBottom:2,fontSize:11}}>
+                              <span style={{color:"#334155",width:26,flexShrink:0}}>{p.pos}</span>
+                              <span style={{color:"#64748b"}}>{p.name}</span>
+                              <span style={{color:"#1e3a5f",marginLeft:"auto",fontSize:9}}>#{p.pick}</span>
+                            </div>
+                          ))}
+                        </>
+                      )}
                     </div>
                   );
                 })}
