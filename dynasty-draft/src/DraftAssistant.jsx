@@ -601,6 +601,15 @@ export default function App() {
               style={{fontSize:9,padding:"1px 6px",background:compareList.includes(t.name)?"#84cc1622":"#1e293b",color:compareList.includes(t.name)?"#84cc16":"#475569",border:compareList.includes(t.name)?"1px solid #84cc1644":"1px solid transparent"}}>
               {compareList.includes(t.name)?"✓ vs":"vs"}
             </button>
+            <button className="btn" onClick={e=>{
+              e.stopPropagation();
+              const mine = getPickOwner(currentPick) === MY_TEAM;
+              setLivePicks(prev => ({...prev, [currentPick]: t.name}));
+              if (mine) setMyDrafted(prev => [...prev, t.name]);
+              setCurrentPick(p => p + 1);
+            }} style={{fontSize:9,padding:"1px 6px",background:"#1e40af44",color:"#60a5fa",border:"1px solid #1e40af"}}>
+              draft
+            </button>
           </div>
         </div>
         {/* Expanded score breakdown */}
