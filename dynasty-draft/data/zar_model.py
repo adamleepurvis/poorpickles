@@ -122,36 +122,40 @@ FANTRAX_FILE = Path(__file__).parent / "fantrax_dynasty.csv"
 
 # ─── FANTRAX DYNASTY RANKINGS ────────────────────────────────────────────────
 
-def load_fantrax_dynasty() -> dict:
+def load_fantrax_dynasty() -> tuple[dict, dict]:
     """
-    Load Fantrax Top-500 dynasty rankings CSV and return a dict of
-    normalized_name -> scoreFTDyn (0-10 scale, rank 1 = 10, rank 500 = 0).
+    Load Fantrax Top-500 dynasty rankings CSV.
+    Returns:
+      scores: normalized_name -> scoreFTDyn (0-10 scale)
+      ages:   normalized_name -> age (int)
     Uses the Roto rank column (better fit for category leagues).
     """
     if not FANTRAX_FILE.exists():
         print("  No fantrax_dynasty.csv found — skipping FT dynasty scores.")
-        return {}
+        return {}, {}
 
     def _norm(name: str) -> str:
         import unicodedata
         return unicodedata.normalize("NFD", name).encode("ascii", "ignore").decode().lower().strip()
 
     df = pd.read_csv(FANTRAX_FILE)
-    # Column is "Roto" rank
-    df = df.rename(columns={"Roto": "roto_rank", "Player": "player_name"})
+    df = df.rename(columns={"Roto": "roto_rank", "Player": "player_name", "Age": "age"})
     df["roto_rank"] = pd.to_numeric(df["roto_rank"], errors="coerce")
+    df["age"]       = pd.to_numeric(df["age"],       errors="coerce")
     df = df.dropna(subset=["roto_rank"])
 
     max_rank = df["roto_rank"].max()
-    result = {}
+    scores, ages = {}, {}
     for _, row in df.iterrows():
         name = str(row["player_name"])
+        key  = _norm(name)
         rank = float(row["roto_rank"])
-        score = round(10 * (1 - (rank - 1) / max_rank), 1)
-        result[_norm(name)] = score
+        scores[key] = round(10 * (1 - (rank - 1) / max_rank), 1)
+        if pd.notna(row.get("age")) and float(row["age"]) > 0:
+            ages[key] = int(row["age"])
 
-    print(f"  Loaded {len(result)} Fantrax dynasty rankings.")
-    return result
+    print(f"  Loaded {len(scores)} Fantrax dynasty rankings, {len(ages)} ages.")
+    return scores, ages
 
 # ─── FANGRAPHS FETCH ─────────────────────────────────────────────────────────
 
@@ -412,7 +416,7 @@ def main():
     def _norm(name: str) -> str:
         return unicodedata.normalize("NFD", name).encode("ascii", "ignore").decode().lower().strip()
 
-    fantrax = load_fantrax_dynasty()
+    fantrax, fantrax_ages = load_fantrax_dynasty()
 
     # ── Fetch primary system ───────────────────────────────────────────────────
     raw_hitters  = fetch_fangraphs("bat", system)
@@ -482,7 +486,10 @@ def main():
 
     # ── Dynasty score = score2026 × age curve ─────────────────────────────────
     def get_age(row) -> int:
-        """Extract age, falling back to DEFAULT_AGE when missing or zero."""
+        """Extract age: Fantrax CSV first, then FanGraphs, then DEFAULT_AGE."""
+        name_key = _norm(str(row.get("name", "")))
+        if name_key in fantrax_ages:
+            return fantrax_ages[name_key]
         raw = row.get("Age", None)
         try:
             v = float(raw)
