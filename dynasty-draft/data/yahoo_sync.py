@@ -69,7 +69,10 @@ OUTPUT_FILE = Path(__file__).parent / "yahoo_data.json"
 # Yahoo position codes → our eligible[] format
 POS_MAP = {
     "C": "C", "1B": "1B", "2B": "2B", "3B": "3B", "SS": "SS",
-    "LF": "LF", "CF": "CF", "RF": "RF", "OF": "RF",  # OF → RF as fallback
+    "LF": "LF", "CF": "CF", "RF": "RF",
+    # Generic OF only appears in leagues without LF/CF/RF distinction — skip it
+    # so it doesn't clobber specific eligibility in leagues that do distinguish.
+    "OF": None,
     "Util": "Util", "SP": "SP", "RP": "RP", "P": "SP",
     "DL": None, "IL": None, "NA": None,  # injury slots — skip
 }
@@ -257,6 +260,35 @@ def sync_ownership(query, player_keys=None):
     return ownership
 
 
+def sync_player_eligibility(query, limit=500):
+    """
+    Fetch eligible positions for the top N players from Yahoo.
+    Returns dict of player_name -> [eligible positions].
+    Uses Yahoo's actual game-based eligibility, which correctly distinguishes
+    LF/CF/RF in leagues with per-OF-spot slots.
+    """
+    print(f"  Fetching player eligibility (top {limit} players)...")
+    eligibility = {}
+    try:
+        players = query.get_league_players(player_count_limit=limit)
+        for p in (players or []):
+            name = str(getattr(getattr(p, "name", None), "full", ""))
+            if not name:
+                continue
+            try:
+                eligible = normalize_positions(
+                    p.eligible_positions if hasattr(p, "eligible_positions") else []
+                )
+            except Exception:
+                eligible = []
+            if eligible:
+                eligibility[name] = eligible
+        print(f"    Got eligibility for {len(eligibility)} players")
+    except Exception as e:
+        print(f"  WARNING: Could not fetch player eligibility: {e}")
+    return eligibility
+
+
 # ─── ENTRY POINT ─────────────────────────────────────────────────────────────
 
 def main():
@@ -293,6 +325,8 @@ def main():
 
     if not args.no_ownership:
         data["ownership"] = sync_ownership(query)
+
+    data["player_eligibility"] = sync_player_eligibility(query)
 
     OUTPUT_FILE.write_text(json.dumps(data, indent=2))
     print(f"\nWrote {OUTPUT_FILE}")

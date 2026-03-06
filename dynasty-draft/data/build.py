@@ -172,10 +172,12 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
     """
     Build final player list:
     - Start with ZAR scores as the base player pool
+    - Override eligible positions with Yahoo data (accurate LF/CF/RF)
     - Augment with Yahoo ownership %
     - Mark players on active rosters as "rostered"
     """
     ownership = yahoo_data.get("ownership", {})
+    yahoo_eligibility = yahoo_data.get("player_eligibility", {})
 
     # Build set of rostered player names
     rostered = set()
@@ -187,9 +189,10 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
 
     for p in players:
         name = p["name"]
-        # Add ownership % (used by urgency model)
+        # Override eligible positions with Yahoo data when available
+        if name in yahoo_eligibility:
+            p["eligible"] = yahoo_eligibility[name]
         p["pct_owned"] = ownership.get(name, 0.0)
-        # Mark if currently rostered in the league
         p["rostered"] = name in rostered
 
     return players
