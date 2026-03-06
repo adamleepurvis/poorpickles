@@ -406,7 +406,6 @@ export default function App() {
     setLivePicks({}); setMyDrafted([]); setCurrentPick(DRAFT_START_PICK);
     setPickInput(""); setSuggestions([]); setCatStatus(MY_KEEPER_CATS);
     setCatNeed(BASE_CAT_NEED);
-    setMessages([{role:"assistant", content:"Reset to pick 121. Scoring engine ready."}]);
   };
 
   const toggleCompare = useCallback((name) => {
