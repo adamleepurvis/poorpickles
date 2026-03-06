@@ -433,9 +433,11 @@ export default function App() {
   }, []);
 
   const myRoster = [
-    ...KEEPER_PICKS.filter(p=>p.team===MY_TEAM).map(p=>({name:p.player,pos:p.pos,kept:true})),
-    ...myDrafted.map(n=>({name:n, pos:TARGETS.find(t=>t.name===n)?.eligible[0]||"?", kept:false}))
-  ];
+    ...KEEPER_PICKS.filter(p=>p.team===MY_TEAM).map(p=>({name:p.player,kept:true})),
+    ...myDrafted.map(n=>({name:n,kept:false}))
+  ].map(p => ({...p, target: TARGETS.find(t=>t.name===p.name)||null}));
+
+  const [rosterSelected, setRosterSelected] = useState(null);
 
 
   // Score bar color
@@ -675,12 +677,44 @@ export default function App() {
           {/* My roster */}
           <div style={{flex:1,overflowY:"auto",padding:10}}>
             <div style={{fontSize:10,color:"#475569",letterSpacing:".08em",textTransform:"uppercase",marginBottom:6}}>My Roster ({myRoster.length}/28)</div>
-            {myRoster.map((p,i)=>(
-              <div key={i} style={{padding:"3px 7px",marginBottom:2,background:p.kept?"#0c1624":"#0c1a10",borderRadius:3,borderLeft:`2px solid ${p.kept?"#3b82f6":"#22c55e"}`}}>
-                <div style={{fontSize:12,color:"#e2e8f0"}}>{p.name}</div>
-                <div style={{fontSize:10,color:"#475569"}}>{p.pos}{p.kept?" · K":""}</div>
-              </div>
-            ))}
+            {myRoster.map((p,i)=>{
+              const isSelected = rosterSelected === p.name;
+              const t = p.target;
+              return (
+                <div key={i}>
+                  <div onClick={()=>setRosterSelected(isSelected ? null : p.name)}
+                    style={{padding:"3px 7px",marginBottom:2,background:isSelected?(p.kept?"#1e3a5f":"#14532d"):p.kept?"#0c1624":"#0c1a10",borderRadius:3,borderLeft:`2px solid ${p.kept?"#3b82f6":"#22c55e"}`,cursor:"pointer"}}>
+                    <div style={{fontSize:12,color:"#e2e8f0"}}>{p.name}</div>
+                    <div style={{display:"flex",gap:3,flexWrap:"wrap",marginTop:1}}>
+                      {t ? t.eligible.map(e=>(
+                        <span key={e} style={{fontSize:9,color:"#94a3b8",background:"#1e293b",padding:"0 4px",borderRadius:2}}>{e}</span>
+                      )) : <span style={{fontSize:9,color:"#475569"}}>?</span>}
+                      {p.kept && <span style={{fontSize:9,color:"#3b82f6",marginLeft:2}}>K</span>}
+                    </div>
+                  </div>
+                  {isSelected && t && (
+                    <div style={{background:"#0d1829",border:"1px solid #1e3a5f",borderRadius:3,padding:"6px 8px",marginBottom:4,fontSize:11}}>
+                      <div style={{display:"flex",gap:6,marginBottom:4,flexWrap:"wrap"}}>
+                        {[["DNS", calcBaseScore(t,catNeed)],["26",t.score2026],["28",t.score2028??"-"],["FT",t.scoreFTDyn??"-"]].map(([l,v])=>(
+                          <div key={l} style={{textAlign:"center"}}>
+                            <div style={{fontSize:9,color:"#475569"}}>{l}</div>
+                            <div style={{fontSize:12,fontWeight:700,color:"#60a5fa"}}>{v}</div>
+                          </div>
+                        ))}
+                      </div>
+                      <div style={{color:"#475569",fontSize:10,marginBottom:2}}>{t.note}</div>
+                      <div style={{display:"flex",gap:3,flexWrap:"wrap"}}>
+                        {t.cats.map(c=><span key={c} style={{fontSize:9,color:"#94a3b8",background:"#1e293b",padding:"0 4px",borderRadius:2}}>{c}</span>)}
+                      </div>
+                      <div style={{marginTop:4}}>
+                        <span style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${TIER_COLOR[t.tier]}18`,color:TIER_COLOR[t.tier]}}>{TIER_LABEL[t.tier]}</span>
+                        {t.il && <span style={{fontSize:9,color:"#f87171",marginLeft:4}}>IL</span>}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
 
