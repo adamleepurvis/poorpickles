@@ -76,12 +76,10 @@ const TARGETS = targetsData.players.map(p => ({
 }));
 
 // ─── SCORING ENGINE ────────────────────────────────────────────────────────────
-// Weights: 40% current-year, 60% dynasty
-// FT Dyn is used as the dynasty anchor when available (more reliable than ZAR for dynasty).
-// Players not in Fantrax top-500 (scoreFTDyn == null) get a 50% dynasty discount
-// since ZAR normalizes per-position, inflating fringe arms.
-const DYNASTY_WEIGHT = 0.60;
-const NOW_WEIGHT = 0.40;
+// Weights: 35% current-year, 65% dynasty
+// FT Dyn is the dynasty anchor when available. Unranked players get 50% ZAR.
+const DYNASTY_WEIGHT = 0.65;
+const NOW_WEIGHT = 0.35;
 const IL_2026_DISCOUNT = 0.4;
 
 // BASE category needs — never mutated, used as reference for "original"
@@ -134,16 +132,15 @@ function calcCatScore(player, catNeed) {
 
 function calcBaseScore(player, catNeed) {
   const s2026 = player.il ? player.score2026 * IL_2026_DISCOUNT : player.score2026;
-  // Use Fantrax dynasty score when available (reliable external ranking).
-  // Players not in Fantrax top-500 get 50% of their ZAR dynasty score —
-  // ZAR normalizes per-position, which inflates fringe arms to 10.0.
   const dynastyScore = player.scoreFTDyn != null ? player.scoreFTDyn : player.scoreDyn * 0.5;
   const catMult = 0.6 + 0.4 * calcCatScore(player, catNeed);
-  // RP-only arms (not SP-eligible) are volatile, fill fewer slots, and
-  // shouldn't crowd out elite hitters/starters. Apply 0.75 discount.
   const posDiscount = player.eligible.every(p => p === "RP") ? 0.75 : 1.0;
   const base = (s2026 * NOW_WEIGHT + dynastyScore * DYNASTY_WEIGHT) * catMult * posDiscount;
-  return Math.round(base * 10) / 10;
+  // Ceiling bonus: when dynasty ceiling >> current floor, reward the upside gap.
+  // This surfaces IL stashes (Schwellenbach, Strider), young high-ceiling players,
+  // and prospects where FT ranks them higher than their 2026 production suggests.
+  const ceilingBonus = Math.min(Math.max(0, dynastyScore - s2026) * 0.3, 3.0) * posDiscount;
+  return Math.round((base + ceilingBonus) * 10) / 10;
 }
 
 // Positional scarcity: slope-based VOR
