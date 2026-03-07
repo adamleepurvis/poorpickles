@@ -395,6 +395,7 @@ export default function App() {
     if (sortBy === "2026") return [...f].sort((a, b) => b.score2026 - a.score2026);
     if (sortBy === "2028") return [...f].sort((a, b) => (b.score2028 ?? 0) - (a.score2028 ?? 0));
     if (sortBy === "ftdyn") return [...f].sort((a, b) => (b.scoreFTDyn ?? -1) - (a.scoreFTDyn ?? -1));
+    if (sortBy === "adp")   return [...f].sort((a, b) => (a.fpAdp ?? 9999) - (b.fpAdp ?? 9999));
     if (sortBy === "zips") return [...f].sort((a, b) => (b.scoreZiPS ?? -1) - (a.scoreZiPS ?? -1));
     return f; // "dns" — already sorted
   }, [scoredAvailable, typeFilter, posFilter, sortBy, search, fvFilter]);
@@ -628,6 +629,7 @@ export default function App() {
               <div>2028: <span style={{color:"#94a3b8"}}>{t.score2028??"-"}</span></div>
               {t.scoreFTDyn!=null&&<div>FT Dyn: <span style={{color:"#94a3b8"}}>{t.scoreFTDyn}</span></div>}
               {t.scoreYahoo!=null&&<div>Yahoo proj: <span style={{color:t.scoreYahoo>t.score2026?"#34d399":t.scoreYahoo<t.score2026?"#f87171":"#94a3b8"}}>{t.scoreYahoo}{t.scoreYahoo>t.score2026?" ↑":t.scoreYahoo<t.score2026?" ↓":""}</span></div>}
+              {t.fpAdp!=null&&<div>FP ADP: <span style={{color:"#94a3b8"}}>#{t.fpRank} (avg {t.fpAdp})</span></div>}
               {t.espnRank!=null&&<div>ESPN: <span style={{color:"#a78bfa"}}>#{t.espnRank}{t.espnAscending?" ↑ (career-best)":""}{t.espnPrevPeak&&t.espnPrevPeak!==t.espnRank?" (prev peak #"+t.espnPrevPeak+")":""}</span></div>}
               {t.prospectFV!=null&&<div>Prospect: <span style={{color:"#94a3b8"}}>FV{t.prospectFV} · {t.prospectRisk} risk · ETA {t.prospectETA}{t.prospectRank?" · #"+t.prospectRank:""}</span></div>}
               <div>VOR @ {t.scarcity.scarcePos}: <span style={{color:t.scarcity.vor>0?"#22c55e":"#f87171"}}>{t.scarcity.vor>0?"+":""}{t.scarcity.vor}</span></div>
@@ -785,6 +787,33 @@ export default function App() {
             </div>
           </div>
 
+          {/* Pick tracker */}
+          <div style={{padding:"6px 10px",borderBottom:"1px solid #1e293b",flexShrink:0}}>
+            <div style={{fontSize:9,color:"#475569",textTransform:"uppercase",letterSpacing:".08em",marginBottom:4}}>Pick Order</div>
+            <div style={{display:"flex",flexDirection:"column",gap:1}}>
+              {Array.from({length:18},(_,i)=>currentPick+i-3).filter(p=>p>=DRAFT_START_PICK&&p<=TOTAL_TEAMS*TOTAL_ROUNDS).map(p=>{
+                const owner = getPickOwner(p);
+                const isMine = owner===MY_TEAM;
+                const isCurrent = p===currentPick;
+                const isDone = p<currentPick;
+                const drafted = livePicks[p];
+                return (
+                  <div key={p} style={{display:"flex",gap:5,alignItems:"center",padding:"1px 4px",borderRadius:3,
+                    background:isCurrent?"#14532d44":isMine&&!isDone?"#14532d22":"transparent",
+                    borderLeft:isCurrent?"2px solid #22c55e":isMine&&!isDone?"2px solid #14532d":"2px solid transparent",
+                    opacity:isDone?0.4:1}}>
+                    <span style={{fontSize:9,color:"#334155",width:22,flexShrink:0}}>#{p}</span>
+                    <span style={{fontSize:9,color:isCurrent?"#22c55e":isMine?"#86efac":"#475569",flex:1,fontWeight:isMine?600:400}}>
+                      {isMine?"YOU":owner.split(" ")[0]}
+                    </span>
+                    {drafted&&<span style={{fontSize:8,color:"#334155",maxWidth:70,overflow:"hidden",whiteSpace:"nowrap",textOverflow:"ellipsis"}}>{drafted.split(" ").slice(-1)[0]}</span>}
+                    {isCurrent&&<span style={{fontSize:8,color:"#22c55e"}}>◄</span>}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
           {/* My roster */}
           <div style={{flex:1,overflowY:"auto",padding:10}}>
             <div style={{fontSize:10,color:"#475569",letterSpacing:".08em",textTransform:"uppercase",marginBottom:6}}>My Roster ({myRoster.length}/28)</div>
@@ -845,7 +874,7 @@ export default function App() {
                   style={{background:"#1e293b",border:"1px solid #334155",borderRadius:3,color:"#e2e8f0",fontSize:11,padding:"3px 8px",width:110,fontFamily:"inherit",outline:"none"}}
                   onKeyDown={e=>e.key==="Escape"&&setSearch("")}/>
                 <span style={{color:"#1e293b",margin:"0 2px"}}>|</span>
-                {[["dns","DNS"],["2026","2026"],["2028","2028"],["ftdyn","FT Dyn"],["zips","ZiPS"]].map(([v,l])=>(
+                {[["dns","DNS"],["2026","2026"],["2028","2028"],["ftdyn","FT Dyn"],["adp","ADP"],["zips","ZiPS"]].map(([v,l])=>(
                   <button key={v} className="btn" onClick={()=>setSortBy(v)}
                     style={{background:sortBy===v?"#60a5fa22":"#1e293b",color:sortBy===v?"#60a5fa":"#64748b",border:sortBy===v?"1px solid #60a5fa44":"1px solid transparent"}}>
                     {l}

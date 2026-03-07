@@ -232,6 +232,46 @@ FV_TO_SCORE = {
 }
 RISK_MULTIPLIER = {"Low": 1.0, "Med": 0.9, "High": 0.75, "Extreme": 0.6}
 
+def fetch_fantasypros_adp() -> dict:
+    """
+    Fetch FantasyPros dynasty ADP (consensus of 6 experts).
+    Returns dict of normalized_name -> {fpRank, fpAdp}.
+    """
+    import re as _re
+    import unicodedata
+    def _norm(n): return unicodedata.normalize("NFD", n).encode("ascii", "ignore").decode().lower().strip()
+    url = "https://www.fantasypros.com/mlb/adp/dynasty.php"
+    try:
+        resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
+        if resp.status_code != 200:
+            print(f"  WARNING: FantasyPros ADP returned {resp.status_code}")
+            return {}
+        rows = _re.findall(r'<tr class="mpb-player-\d+">(.*?)</tr>', resp.text, _re.DOTALL)
+        if not rows:
+            print("  WARNING: No player rows found in FantasyPros ADP page")
+            return {}
+        tds_raw = _re.findall(r'<td[^>]*>(.*?)</td>', rows[0], _re.DOTALL)
+        tds = [_re.sub(r'<[^>]+>', '', t).strip().replace('&nbsp;', '').replace('&#160;', '') for t in tds_raw]
+        result = {}
+        for i in range(0, len(tds) - 9, 10):
+            g = tds[i:i+10]
+            try:
+                rank   = int(g[0])
+                adp    = float(g[9])
+                name   = _re.sub(r'\s*\(.*?\)\s*$', '', g[2]).strip()
+                # Strip NRI suffix
+                name   = _re.sub(r'\s+NRI$', '', name).strip()
+                key    = _norm(name)
+                result[key] = {"fpRank": rank, "fpAdp": adp}
+            except Exception:
+                continue
+        print(f"  FantasyPros ADP: {len(result)} players")
+        return result
+    except Exception as e:
+        print(f"  WARNING: Could not fetch FantasyPros ADP: {e}")
+        return {}
+
+
 def fetch_prospect_grades() -> dict:
     """
     Fetch FanGraphs prospect FV grades from The Board.
@@ -609,6 +649,7 @@ def main():
     fg_ages = fetch_fangraphs_ages()
     prospect_grades = fetch_prospect_grades()
     espn_dynasty = fetch_espn_dynasty()
+    fp_adp = fetch_fantasypros_adp()
     # Merge: FanGraphs 2025 stats takes priority (actual age), Fantrax fills gaps
     all_ages = {**fantrax_ages, **fg_ages}  # fg_ages overwrites fantrax where both exist
 
@@ -763,6 +804,7 @@ def main():
                 "espnRank": None, "espnAge": None, "espnPrevPeak": None,
                 "espnWhenPeak": None, "espnAscending": None,
             })),
+            **(fp_adp.get(_norm(name), {"fpRank": None, "fpAdp": None})),
         })
 
     for _, row in pitchers.iterrows():
@@ -804,6 +846,7 @@ def main():
                 "espnRank": None, "espnAge": None, "espnPrevPeak": None,
                 "espnWhenPeak": None, "espnAscending": None,
             })),
+            **(fp_adp.get(_norm(name), {"fpRank": None, "fpAdp": None})),
         })
 
     # Sort by combined score descending
