@@ -337,6 +337,99 @@ def sync_player_eligibility(query):
     return eligibility
 
 
+# ─── YAHOO PROJECTED STATS ───────────────────────────────────────────────────
+
+# Yahoo stat IDs we want for projection comparison
+PROJ_STAT_IDS = {
+    "7":  "R",    "8":  "H",    "12": "HR",   "13": "RBI",
+    "16": "SB",   "18": "TB",   "3":  "AVG",  "54": "OBP",  "55": "SLG",
+    "28": "IP",   "53": "W",    "48": "ER",   "42": "K",
+    "26": "ERA",  "27": "WHIP", "56": "K/9",  "57": "BB/9",
+    "32": "SV",   "39": "HLD",
+}
+
+def sync_projected_stats(query):
+    """
+    Fetch Yahoo projected season stats for all active players by position.
+    Returns dict of player_name -> {stat_name: value, ...}
+    Uses the same direct REST approach as sync_player_eligibility.
+    """
+    QUERY_POSITIONS = ["C", "1B", "2B", "3B", "SS", "LF", "CF", "RF", "SP", "RP"]
+    game_key = "469"
+    session  = query.oauth.session
+    projections = {}
+
+    for pos in QUERY_POSITIONS:
+        print(f"    Fetching projections {pos}...", end=" ", flush=True)
+        count = 0
+        start = 0
+        page_size = 25
+        while True:
+            url = (
+                f"https://fantasysports.yahooapis.com/fantasy/v2/"
+                f"games;game_keys={game_key}/players"
+                f";position={pos};status=A;count={page_size};start={start}"
+                f"/stats;type=projected_season?format=json"
+            )
+            try:
+                resp = session.get(url)
+                if resp.status_code != 200:
+                    break
+                data = resp.json()
+                players_raw = (data.get("fantasy_content", {})
+                                   .get("games", {}).get("0", {})
+                                   .get("game", [{}, {}])[1]
+                                   .get("players", {}))
+                returned = int(players_raw.get("count", 0))
+                for k, v in players_raw.items():
+                    if k == "count":
+                        continue
+                    try:
+                        player_list = v["player"]
+                        name = next(
+                            (x["name"]["full"] for x in player_list[0] if "name" in x), None
+                        )
+                        if not name:
+                            continue
+                        # Stats are in player_list[1]
+                        stats_raw = player_list[1].get("player_stats", {}).get("stats", [])
+                        stats = {}
+                        sv = hld = 0
+                        for stat_entry in stats_raw:
+                            s = stat_entry.get("stat", {})
+                            sid = str(s.get("stat_id", ""))
+                            val = s.get("value", "-")
+                            if val in ("-", "", None):
+                                continue
+                            try:
+                                val = float(val)
+                            except (ValueError, TypeError):
+                                continue
+                            if sid == "32":
+                                sv = val
+                            elif sid == "39":
+                                hld = val
+                            elif sid in PROJ_STAT_IDS:
+                                stats[PROJ_STAT_IDS[sid]] = round(val, 3)
+                        if sv or hld:
+                            stats["NSVH"] = round(sv + hld, 1)
+                        if stats and name not in projections:
+                            projections[name] = stats
+                            count += 1
+                    except Exception:
+                        continue
+                start += page_size
+                if returned < page_size or start >= 400:
+                    break
+            except Exception as e:
+                print(f"(error: {e})")
+                break
+        print(f"{count} players")
+
+    print(f"    Total: {len(projections)} players with Yahoo projections")
+    return projections
+
+
 # ─── ENTRY POINT ─────────────────────────────────────────────────────────────
 
 def main():
@@ -376,6 +469,9 @@ def main():
 
     print("  Fetching player eligibility by position...")
     data["player_eligibility"] = sync_player_eligibility(query)
+
+    print("  Fetching Yahoo projected stats...")
+    data["yahoo_projections"] = sync_projected_stats(query)
 
     OUTPUT_FILE.write_text(json.dumps(data, indent=2))
     print(f"\nWrote {OUTPUT_FILE}")

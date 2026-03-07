@@ -90,10 +90,10 @@ const TARGETS = targetsData.players.map(p => ({
 // When FT is missing, apply uncertainty discounts to ZAR-derived scores (dyn×0.5, s28×0.7)
 // to correct for ZAR's separate H/P normalization inflating unranked pitcher scores.
 // Prospect FV (raw, no risk discount) acts as an expert ceiling signal same as FT.
-const W_FT         = { s26: 0.20, s28: 0.20, dyn: 0.30, ft: 0.30 };           // FT only
-const W_PROS       = { s26: 0.20, s28: 0.20, dyn: 0.30, fv: 0.30 };           // prospect only
-const W_FT_PROS    = { s26: 0.15, s28: 0.15, dyn: 0.20, ft: 0.25, fv: 0.25 }; // both
-const W_NOFT       = { s26: 0.15, s28: 0.30, dyn: 0.55 };                      // neither
+const W_FT         = { s26: 0.25, s28: 0.35, ft: 0.40 };                       // FT only (dyn removed — FT captures dynasty value)
+const W_PROS       = { s26: 0.20, s28: 0.35, fv: 0.45 };                       // prospect only
+const W_FT_PROS    = { s26: 0.15, s28: 0.25, ft: 0.30, fv: 0.30 };            // both
+const W_NOFT       = { s26: 0.15, s28: 0.30, dyn: 0.55 };                      // neither — dyn stays as dynasty proxy
 const NOFT_DYN_DISCOUNT = 0.5;
 const NOFT_S28_DISCOUNT = 0.7;
 
@@ -196,11 +196,11 @@ function calcBaseScore(player, catNeed) {
   const fv = FV_RAW[player.prospectFV] ?? null;
   let base;
   if (expert != null && fv != null)
-    base = s26*W_FT_PROS.s26 + s28*W_FT_PROS.s28 + dyn*W_FT_PROS.dyn + expert*W_FT_PROS.ft + fv*W_FT_PROS.fv;
+    base = s26*W_FT_PROS.s26 + s28*W_FT_PROS.s28 + expert*W_FT_PROS.ft + fv*W_FT_PROS.fv;
   else if (expert != null)
-    base = s26*W_FT.s26 + s28*W_FT.s28 + dyn*W_FT.dyn + expert*W_FT.ft;
+    base = s26*W_FT.s26 + s28*W_FT.s28 + expert*W_FT.ft;
   else if (fv != null)
-    base = s26*W_PROS.s26 + s28*W_PROS.s28 + dyn*W_PROS.dyn + fv*W_PROS.fv;
+    base = s26*W_PROS.s26 + s28*W_PROS.s28 + fv*W_PROS.fv;
   else
     base = s26*W_NOFT.s26 + (s28*NOFT_S28_DISCOUNT)*W_NOFT.s28 + (dyn*NOFT_DYN_DISCOUNT)*W_NOFT.dyn;
 
@@ -629,6 +629,7 @@ export default function App() {
               <div>2028: <span style={{color:"#94a3b8"}}>{t.score2028??"-"}</span></div>
               <div>Dynasty: <span style={{color:"#94a3b8"}}>{t.scoreDyn}</span></div>
               {t.scoreFTDyn!=null&&<div>FT Dyn: <span style={{color:"#94a3b8"}}>{t.scoreFTDyn}</span></div>}
+              {t.scoreYahoo!=null&&<div>Yahoo proj: <span style={{color:t.scoreYahoo>t.score2026?"#34d399":t.scoreYahoo<t.score2026?"#f87171":"#94a3b8"}}>{t.scoreYahoo}{t.scoreYahoo>t.score2026?" ↑":t.scoreYahoo<t.score2026?" ↓":""}</span></div>}
               {t.espnRank!=null&&<div>ESPN: <span style={{color:"#a78bfa"}}>#{t.espnRank}{t.espnAscending?" ↑ (career-best)":""}{t.espnPrevPeak&&t.espnPrevPeak!==t.espnRank?" (prev peak #"+t.espnPrevPeak+")":""}</span></div>}
               {t.prospectFV!=null&&<div>Prospect: <span style={{color:"#94a3b8"}}>FV{t.prospectFV} · {t.prospectRisk} risk · ETA {t.prospectETA}{t.prospectRank?" · #"+t.prospectRank:""}</span></div>}
               <div>VOR @ {t.scarcity.scarcePos}: <span style={{color:t.scarcity.vor>0?"#22c55e":"#f87171"}}>{t.scarcity.vor>0?"+":""}{t.scarcity.vor}</span></div>

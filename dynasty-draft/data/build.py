@@ -25,6 +25,7 @@ import json
 import argparse
 import subprocess
 import sys
+import numpy as np
 from pathlib import Path
 from datetime import datetime
 
@@ -168,6 +169,100 @@ def build_keeper_picks(yahoo_data: dict) -> list[dict]:
     return picks
 
 
+CAT_WEIGHTS = {
+    "HR": 3.0, "RBI": 3.0, "SLG": 3.0, "TB": 2.0,
+    "R":  1.0, "H":   1.0, "SB":  1.0, "AVG": 1.0, "OBP": 1.0,
+    "K":  2.0, "ERA": 2.0, "WHIP": 2.0, "K/9": 2.0, "BB/9": 2.0,
+    "IP": 1.0, "W":   1.0, "ER":   1.0, "NSVH": 3.0,
+}
+STAT_DIRECTION = {
+    "HR": True,  "RBI": True,  "R":   True,  "H":   True,
+    "SB": True,  "TB":  True,  "AVG": True,  "OBP": True,  "SLG": True,
+    "K":  True,  "W":   True,  "IP":  True,  "NSVH": True,
+    "ERA": False, "WHIP": False, "ER": False, "BB/9": False,
+    "K/9": True,
+}
+HITTING_CATS  = ["R", "H", "HR", "RBI", "SB", "TB", "AVG", "OBP", "SLG"]
+PITCHING_CATS = ["IP", "W", "ER", "K", "ERA", "WHIP", "K/9", "BB/9", "NSVH"]
+
+
+def score_yahoo_projections(yahoo_projections: dict, zar_scores: dict) -> dict:
+    """
+    Compute a ZAR-style 0-10 score from Yahoo projected stats.
+    Uses the same category weights and stat directions as zar_model.py.
+    Normalizes hitters and pitchers separately using percentile clipping.
+    Returns dict of player_name -> scoreYahoo (0-10).
+    """
+    if not yahoo_projections:
+        return {}
+
+    # Separate hitters from pitchers using zar_scores type field
+    player_types = {name: p.get("type") for name, p in zar_scores.items()}
+
+    def raw_zar(players_stats: dict, cats: list) -> dict:
+        """Compute raw ZAR scores for a group of players."""
+        names = list(players_stats.keys())
+        if not names:
+            return {}
+
+        # Build stat matrix
+        stat_vecs = {cat: [] for cat in cats}
+        for name in names:
+            stats = players_stats[name]
+            for cat in cats:
+                stat_vecs[cat].append(stats.get(cat, np.nan))
+
+        # Compute pool means/stdevs (top 60% by counting stat sum)
+        counting = [c for c in cats if c not in ("ERA", "WHIP", "AVG", "OBP", "SLG", "K/9", "BB/9")]
+        rank_vals = []
+        for i, name in enumerate(names):
+            rank_vals.append(sum(players_stats[name].get(c, 0) for c in counting))
+        pool_size = max(int(len(names) * 0.6), 1)
+        pool_idxs = set(np.argsort(rank_vals)[-pool_size:])
+
+        zar_raw = np.zeros(len(names))
+        for cat in cats:
+            vals = np.array(stat_vecs[cat], dtype=float)
+            pool_vals = vals[[i for i in range(len(names)) if i in pool_idxs and not np.isnan(vals[i])]]
+            if len(pool_vals) < 2:
+                continue
+            mean, std = pool_vals.mean(), pool_vals.std()
+            if std < 1e-9:
+                continue
+            z = (vals - mean) / std
+            if not STAT_DIRECTION.get(cat, True):
+                z = -z
+            z = np.nan_to_num(z, nan=0.0)
+            zar_raw += z * CAT_WEIGHTS.get(cat, 1.0)
+
+        return dict(zip(names, zar_raw))
+
+    # Split projections by type
+    h_projs = {n: s for n, s in yahoo_projections.items()
+                if player_types.get(n) == "H" or any(c in s for c in HITTING_CATS[:3])}
+    p_projs = {n: s for n, s in yahoo_projections.items()
+                if player_types.get(n) == "P" or any(c in s for c in ["ERA", "WHIP", "K"])}
+
+    h_raw = raw_zar(h_projs, HITTING_CATS)
+    p_raw = raw_zar(p_projs, PITCHING_CATS)
+
+    def normalize(raw_dict):
+        if not raw_dict:
+            return {}
+        vals = np.array(list(raw_dict.values()))
+        lo, hi = np.percentile(vals, 5), np.percentile(vals, 95)
+        if hi == lo:
+            return {n: 5.0 for n in raw_dict}
+        return {n: round(float(np.clip((v - lo) / (hi - lo) * 10, 0, 10)), 1)
+                for n, v in raw_dict.items()}
+
+    scores = {}
+    scores.update(normalize(h_raw))
+    scores.update(normalize(p_raw))
+    print(f"  Scored {len(scores)} players from Yahoo projections")
+    return scores
+
+
 def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
     """
     Build final player list:
@@ -178,6 +273,7 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
     """
     ownership = yahoo_data.get("ownership", {})
     yahoo_eligibility = yahoo_data.get("player_eligibility", {})
+    yahoo_proj_scores = score_yahoo_projections(yahoo_data.get("yahoo_projections", {}), zar_scores)
 
     # Build set of rostered player names
     rostered = set()
@@ -194,6 +290,7 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
             p["eligible"] = yahoo_eligibility[name]
         p["pct_owned"] = ownership.get(name, 0.0)
         p["rostered"] = name in rostered
+        p["scoreYahoo"] = yahoo_proj_scores.get(name, None)
 
     return players
 
