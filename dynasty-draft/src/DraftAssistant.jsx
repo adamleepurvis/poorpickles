@@ -81,6 +81,9 @@ const TARGETS = targetsData.players.map(p => ({
     if (p.score2028 == null) return null;
     const raw = p.type === "P" ? Math.round(p.score2028 * 0.85 * 10) / 10 : p.score2028;
     if (p.il && p.scoreDyn != null) return Math.round(((raw + p.scoreDyn) / 2) * 10) / 10;
+    // For prospects, Steamer can't project upside — blend s28 toward FV raw ceiling
+    const fvRaw = {"70":10,"65":8.5,"60":7.0,"55":6.0,"50":5.0,"45+":4.5,"45":4.0,"40+":3.5,"40":3.0,"35+":2.5,"35":2.0}[p.prospectFV] ?? null;
+    if (fvRaw != null) return Math.round(((raw + fvRaw) / 2) * 10) / 10;
     return raw;
   })(),
 }));
