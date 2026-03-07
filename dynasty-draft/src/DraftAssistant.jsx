@@ -207,16 +207,26 @@ function calcBaseScore(player, catNeed) {
   else
     base = s26*W_NOFT.s26 + (s28*NOFT_S28_DISCOUNT)*W_NOFT.s28 + (dyn*NOFT_DYN_DISCOUNT)*W_NOFT.dyn;
 
-  // Ceiling bonus: when dynasty ceiling >> current floor, reward the upside gap.
-  const dynastyScore = ft ?? dyn;
-  const ceilingBonus = Math.min(Math.max(0, dynastyScore - s26) * 0.3, 3.0) * posDiscount;
-  return Math.round((base * catMult * posDiscount + ceilingBonus) * 10) / 10;
+  // Durability proxy: penalize players projected for limited playing time.
+  // IL players are already discounted via IL_2026_DISCOUNT so skip them.
+  let durabilityDisc = 1.0;
+  if (!player.il) {
+    const isRP = player.eligible.every(p => p === "RP");
+    const fullPT = player.type === "P" ? (isRP ? 65 : 160) : 500;
+    const projPT = player.type === "P" ? (player.projIP ?? fullPT) : (player.projPA ?? fullPT);
+    durabilityDisc = 0.80 + 0.20 * Math.min(1.0, projPT / fullPT);
+  }
+
+  // Ceiling bonus: gap between projected 2028 ceiling and current 2026 floor.
+  // Uses s28 directly (already blended with FV/IL corrections at source).
+  const ceilingBonus = Math.min(Math.max(0, (s28 - s26)) * 0.3, 3.0) * posDiscount;
+  return Math.round((base * catMult * posDiscount * durabilityDisc + ceilingBonus) * 10) / 10;
 }
 
 // Positional scarcity: slope-based VOR
 // Uses least-squares regression on rank vs. score to measure how steeply
 // values drop at this position, then computes VOR vs. replacement level.
-function calcPositionalScarcity(player, available, catNeed) {
+function calcPositionalScarcity(player, available, catNeed, drafted = []) {
   const posRanked = [...player.eligible].sort(
     (a, b) => POS_SCARCITY_ORDER.indexOf(a) - POS_SCARCITY_ORDER.indexOf(b)
   );
@@ -226,9 +236,11 @@ function calcPositionalScarcity(player, available, catNeed) {
     .map(p => calcBaseScore(p, catNeed))
     .sort((a, b) => b - a);
 
-  // Replacement level = value of the player just past the drafted pool for this pos
+  // Replacement level = actual # of this position already drafted (keepers + live picks)
+  // Falls back to roster-slot estimate if no draft data yet.
   const slotsPerPos = { C:1, "1B":1, "2B":1, "3B":1, SS:1, LF:1, CF:1, RF:1, Util:1, SP:4, RP:2 };
-  const draftedAtPos = (slotsPerPos[scarcePos] || 1) * TOTAL_TEAMS;
+  const actualDrafted = drafted.filter(p => p.eligible?.includes(scarcePos)).length;
+  const draftedAtPos = actualDrafted > 0 ? actualDrafted : (slotsPerPos[scarcePos] || 1) * TOTAL_TEAMS;
   const replacementIdx = Math.min(draftedAtPos, posPool.length - 1);
   const replacementVal = posPool[replacementIdx] ?? (posPool[posPool.length - 1] ?? 0);
 
@@ -289,9 +301,9 @@ function calcUrgency(player, currentPick, available) {
 }
 
 // Final adjusted score shown in UI
-function calcDraftNowScore(player, available, livePicks, currentPick, catNeed, filledPositions) {
+function calcDraftNowScore(player, available, livePicks, currentPick, catNeed, filledPositions, drafted = []) {
   const base = calcBaseScore(player, catNeed);
-  const { vor } = calcPositionalScarcity(player, available, catNeed);
+  const { vor } = calcPositionalScarcity(player, available, catNeed, drafted);
   const urgency = calcUrgency(player, currentPick, available) / 100;
   const urgencyBonus = urgency * 1.5;
   const vorBonus = Math.min(Math.max(vor * 0.3, 0), 1.0);
@@ -369,17 +381,36 @@ export default function App() {
   const filledPositions = useMemo(() => getFilledPositions(myDrafted), [myDrafted]);
 
   // Scored and sorted available targets — recalculates live as catNeed evolves
-  const scoredAvailable = useMemo(() =>
-    available.map(t => ({
+  const scoredAvailable = useMemo(() => {
+    // Players already taken (keepers + live draft) — for realistic replacement level
+    const drafted = TARGETS.filter(t => !available.some(a => a.name === t.name));
+
+    // First pass: compute all scores
+    const withScores = available.map(t => ({
       ...t,
       baseScore: calcBaseScore(t, catNeed),
-      draftNowScore: calcDraftNowScore(t, available, livePicks, currentPick, catNeed, needsMode ? filledPositions : null),
-      scarcity: calcPositionalScarcity(t, available, catNeed),
+      draftNowScore: calcDraftNowScore(t, available, livePicks, currentPick, catNeed, needsMode ? filledPositions : null, drafted),
+      scarcity: calcPositionalScarcity(t, available, catNeed, drafted),
       urgency: calcUrgency(t, currentPick, available),
       leagueDepletion: calcLeagueScarcity(t, available, livePicks),
-    })).sort((a, b) => b.draftNowScore - a.draftNowScore),
-    [available, livePicks, currentPick, catNeed, needsMode, filledPositions]
-  );
+    }));
+
+    // Second pass: steal score = DNS vs. expected DNS at player's ADP
+    // Expected DNS = average DNS of players within ±15 ADP of this player
+    const adpPool = withScores.filter(t => t.fpAdp != null).sort((a, b) => a.fpAdp - b.fpAdp);
+    const expectedDnsAtAdp = (adp) => {
+      const nearby = adpPool.filter(p => Math.abs(p.fpAdp - adp) <= 15);
+      if (nearby.length < 3) return null;
+      return nearby.reduce((s, p) => s + p.draftNowScore, 0) / nearby.length;
+    };
+
+    return withScores.map(t => ({
+      ...t,
+      stealScore: t.fpAdp != null
+        ? Math.round((t.draftNowScore - (expectedDnsAtAdp(t.fpAdp) ?? t.draftNowScore)) * 10) / 10
+        : null,
+    })).sort((a, b) => b.draftNowScore - a.draftNowScore);
+  }, [available, livePicks, currentPick, catNeed, needsMode, filledPositions]);
 
   const OF_POSITIONS = ["LF","CF","RF"];
   const filtered = useMemo(() => {
@@ -633,9 +664,12 @@ export default function App() {
               <div>2028: <span style={{color:"#94a3b8"}}>{t.score2028??"-"}</span></div>
               {t.scoreFTDyn!=null&&<div>FT Dyn: <span style={{color:"#94a3b8"}}>{t.scoreFTDyn}</span></div>}
               {t.scoreYahoo!=null&&<div>Yahoo proj: <span style={{color:t.scoreYahoo>t.score2026?"#34d399":t.scoreYahoo<t.score2026?"#f87171":"#94a3b8"}}>{t.scoreYahoo}{t.scoreYahoo>t.score2026?" ↑":t.scoreYahoo<t.score2026?" ↓":""}</span></div>}
-              {t.fpAdp!=null&&<div>FP ADP: <span style={{color:"#94a3b8"}}>#{t.fpRank} (avg {t.fpAdp})</span></div>}
+              {t.fpAdp!=null&&<div>FP ADP: <span style={{color:"#94a3b8"}}>#{t.fpRank} (avg {t.fpAdp})</span>{t.stealScore!=null&&<span style={{marginLeft:4,color:t.stealScore>0.5?"#34d399":t.stealScore<-0.5?"#f87171":"#94a3b8"}}>{t.stealScore>0?"+":""}{t.stealScore} steal</span>}</div>}
               {t.espnRank!=null&&<div>ESPN: <span style={{color:"#a78bfa"}}>#{t.espnRank}{t.espnAscending?" ↑ (career-best)":""}{t.espnPrevPeak&&t.espnPrevPeak!==t.espnRank?" (prev peak #"+t.espnPrevPeak+")":""}</span></div>}
               {t.prospectFV!=null&&<div>Prospect: <span style={{color:"#94a3b8"}}>FV{t.prospectFV} · {t.prospectRisk} risk · ETA {t.prospectETA}{t.prospectRank?" · #"+t.prospectRank:""}</span></div>}
+              {(t.projPA!=null&&t.projPA>0&&t.projPA<480)||((t.projIP!=null&&t.projIP>0&&t.projIP<(t.eligible?.every(p=>p==="RP")?62:150)))
+                ?<div>Playing time: <span style={{color:"#f59e0b"}}>{t.type==="P"?`${t.projIP} IP`:`${t.projPA} PA`} projected</span></div>
+                :null}
               <div>VOR @ {t.scarcity.scarcePos}: <span style={{color:t.scarcity.vor>0?"#22c55e":"#f87171"}}>{t.scarcity.vor>0?"+":""}{t.scarcity.vor}</span></div>
               <div>Urgency bonus: <span style={{color:"#94a3b8"}}>+{Math.round(t.urgency/100*1.5*10)/10}</span></div>
               <div>Round value: <span style={{color:rvColor}}>{rvLabel}</span></div>

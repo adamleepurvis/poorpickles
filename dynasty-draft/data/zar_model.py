@@ -790,6 +790,7 @@ def main():
             "cats":       get_cats(row, hitting_stats, False),
             "il":         bool(row["il"]),
             "est":        False,
+            "projPA":     int(row.get("PA", 0) or 0),
             **({
                 "prospectFV":   g["fv"],
                 "prospectScore":g["fv_score"],
@@ -832,6 +833,7 @@ def main():
             "cats":       get_cats(row, pitching_stats, True),
             "il":         bool(row["il"]),
             "est":        False,
+            "projIP":     round(float(row.get("IP", 0) or 0), 1),
             **({
                 "prospectFV":   g["fv"],
                 "prospectScore":g["fv_score"],
