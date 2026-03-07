@@ -395,6 +395,7 @@ export default function App() {
     if (sortBy === "2026") return [...f].sort((a, b) => b.score2026 - a.score2026);
     if (sortBy === "2028") return [...f].sort((a, b) => (b.score2028 ?? 0) - (a.score2028 ?? 0));
     if (sortBy === "ftdyn") return [...f].sort((a, b) => (b.scoreFTDyn ?? -1) - (a.scoreFTDyn ?? -1));
+    if (sortBy === "espn")  return [...f].sort((a, b) => (a.espnRank ?? 9999) - (b.espnRank ?? 9999));
     if (sortBy === "adp")   return [...f].sort((a, b) => (a.fpAdp ?? 9999) - (b.fpAdp ?? 9999));
     if (sortBy === "zips") return [...f].sort((a, b) => (b.scoreZiPS ?? -1) - (a.scoreZiPS ?? -1));
     return f; // "dns" — already sorted
@@ -874,7 +875,7 @@ export default function App() {
                   style={{background:"#1e293b",border:"1px solid #334155",borderRadius:3,color:"#e2e8f0",fontSize:11,padding:"3px 8px",width:110,fontFamily:"inherit",outline:"none"}}
                   onKeyDown={e=>e.key==="Escape"&&setSearch("")}/>
                 <span style={{color:"#1e293b",margin:"0 2px"}}>|</span>
-                {[["dns","DNS"],["2026","2026"],["2028","2028"],["ftdyn","FT Dyn"],["adp","ADP"],["zips","ZiPS"]].map(([v,l])=>(
+                {[["dns","DNS"],["2026","2026"],["2028","2028"],["ftdyn","FT Dyn"],["espn","ESPN"],["adp","ADP"],["zips","ZiPS"]].map(([v,l])=>(
                   <button key={v} className="btn" onClick={()=>setSortBy(v)}
                     style={{background:sortBy===v?"#60a5fa22":"#1e293b",color:sortBy===v?"#60a5fa":"#64748b",border:sortBy===v?"1px solid #60a5fa44":"1px solid transparent"}}>
                     {l}
