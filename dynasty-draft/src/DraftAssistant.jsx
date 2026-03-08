@@ -287,7 +287,8 @@ export default function DraftAssistant({ config }) {
   const totalRounds    = config.totalRounds;
   const draftStartPick = config.draftStartPick;
   const draftOrder     = config.draftOrder;
-  const keeperPicks    = config.keeperPicks.length > 0 ? config.keeperPicks : KEEPER_PICKS;
+  const keeperPicks    = config.keeperPicks.length > 0 ? config.keeperPicks
+                       : config.leagueName === "Poor Pickles" ? KEEPER_PICKS : [];
   const baseCatNeed    = config.baseCatNeed;
   const hitCats        = config.hittingCats;
   const pitchCats      = config.pitchingCats;
