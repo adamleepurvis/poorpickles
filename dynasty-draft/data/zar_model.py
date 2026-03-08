@@ -72,6 +72,12 @@ CAT_WEIGHTS = {
     "NSVH":3.0,                             # semi-punt but nonzero
 }
 
+# 5x5 category weights — equal weight for all five hitting and five pitching cats
+CAT_WEIGHTS_5X5 = {
+    "HR": 2.0, "RBI": 2.0, "R": 2.0, "SB": 2.0, "OBP": 2.0,
+    "K":  2.0, "W":   2.0, "ERA": 2.0, "WHIP": 2.0, "NSVH": 2.0,
+}
+
 # Stat directions: True = higher is better, False = lower is better
 STAT_DIRECTION = {
     "HR": True,  "RBI": True,  "R":   True,  "H":   True,
@@ -79,6 +85,7 @@ STAT_DIRECTION = {
     "K":  True,  "W":   True,  "IP":  True,  "SV":  True,  "HLD": True,
     "ERA":False, "WHIP":False, "ER":  False,
     "K9": True,  "BB9": False,
+    "NSVH": True,
 }
 
 # Age curve — dynasty score multiplier by age (used for scoreDyn)
@@ -447,7 +454,7 @@ def normalize_df(df: pd.DataFrame, col_map: dict) -> pd.DataFrame:
 
 # ─── ZAR CALCULATION ─────────────────────────────────────────────────────────
 
-def compute_zar(df: pd.DataFrame, stats: list[str], n_rostered: int) -> pd.Series:
+def compute_zar(df: pd.DataFrame, stats: list[str], n_rostered: int, weights: dict = None) -> pd.Series:
     """
     Compute Z-Score Above Replacement for each player.
 
@@ -498,7 +505,7 @@ def compute_zar(df: pd.DataFrame, stats: list[str], n_rostered: int) -> pd.Serie
         if not STAT_DIRECTION.get(stat, True):
             z = -z
 
-        weight = CAT_WEIGHTS.get(stat, 1.0)
+        weight = (weights or CAT_WEIGHTS).get(stat, 1.0)
         zar_components[stat] = z * weight
 
     return zar_components.sum(axis=1)
@@ -703,6 +710,11 @@ def main():
         hhr = hitters.get("HR", 0) if "HR" in hitters.columns else 0
         hitters["TB"] = hitters["H"] + h2b + 2 * h3b + 3 * hhr
 
+    # ── Compute NSVH = SV + HLD for pitchers (used in 5x5 model) ─────────────
+    sv_col  = pitchers["SV"]  if "SV"  in pitchers.columns else 0
+    hld_col = pitchers["HLD"] if "HLD" in pitchers.columns else 0
+    pitchers["NSVH"] = sv_col + hld_col
+
     # ── Filter to draftable pool ───────────────────────────────────────────────
     if "PA" in hitters.columns:
         hitters = hitters[hitters["PA"] >= MIN_PA].copy()
@@ -764,6 +776,49 @@ def main():
     pitchers[["score2026","il"]] = pd.DataFrame(pitchers.apply(
         lambda r: apply_il(r), axis=1).tolist(), index=pitchers.index)
 
+    # ── 5x5 league scores (second pass with different cat weights) ────────────
+    hitting_stats_5x5  = ["HR", "RBI", "R", "SB", "OBP"]
+    pitching_stats_5x5 = ["K", "W", "ERA", "WHIP", "NSVH"]
+
+    hitters["zar_5x5"]  = compute_zar(hitters,  hitting_stats_5x5,  DRAFTED_HITTERS,  CAT_WEIGHTS_5X5)
+    pitchers["zar_5x5"] = compute_zar(pitchers, pitching_stats_5x5, DRAFTED_PITCHERS, CAT_WEIGHTS_5X5)
+
+    # Normalize across combined hitter+pitcher pool for consistent scale
+    all_zar_5x5 = pd.concat([hitters["zar_5x5"], pitchers["zar_5x5"]])
+    lo5 = float(np.percentile(all_zar_5x5.dropna(), 5))
+    hi5 = float(np.percentile(all_zar_5x5.dropna(), 95))
+    def _norm5(v):
+        return round(max(0.0, min(10.0, (v - lo5) / (hi5 - lo5) * 10)), 1) if hi5 > lo5 else 5.0
+
+    hitters["score2026_5x5"]  = hitters["zar_5x5"].apply(_norm5)
+    pitchers["score2026_5x5"] = pitchers["zar_5x5"].apply(_norm5)
+
+    # Apply IL discount to 5x5 score2026
+    for df_l in (hitters, pitchers):
+        df_l["score2026_5x5"] = df_l.apply(
+            lambda r: round(float(r["score2026_5x5"]) * IL_DISCOUNT, 1)
+                      if str(r["name"]) in IL_PLAYERS else float(r["score2026_5x5"]),
+            axis=1
+        )
+
+    # Dynasty score 5x5
+    def compute_dyn_5x5(row):
+        name = str(row["name"])
+        if name in DYNASTY_OVERRIDES:
+            return DYNASTY_OVERRIDES[name]
+        return round(min(float(row["score2026_5x5"]) * age_curve_factor(age_for_curve(row)), 10.0), 1)
+
+    hitters["scoreDyn_5x5"]  = hitters.apply(compute_dyn_5x5, axis=1)
+    pitchers["scoreDyn_5x5"] = pitchers.apply(compute_dyn_5x5, axis=1)
+
+    # Future scores 5x5
+    hitters["score2027_5x5"]  = hitters.apply(lambda r: project_future_score(float(r["score2026_5x5"]), age_for_curve(r), 1), axis=1)
+    hitters["score2028_5x5"]  = hitters.apply(lambda r: project_future_score(float(r["score2026_5x5"]), age_for_curve(r), 2), axis=1)
+    pitchers["score2027_5x5"] = pitchers.apply(lambda r: project_future_score(float(r["score2026_5x5"]), age_for_curve(r), 1), axis=1)
+    pitchers["score2028_5x5"] = pitchers.apply(lambda r: project_future_score(float(r["score2026_5x5"]), age_for_curve(r), 2), axis=1)
+
+    print(f"  5x5 scores computed ({len(hitters)} hitters, {len(pitchers)} pitchers)")
+
     # ── Build output records ───────────────────────────────────────────────────
     players = []
 
@@ -787,6 +842,10 @@ def main():
             "note":       (f"{system}: {int(row.get('HR',0))}HR "
                           f"{int(row.get('SB',0))}SB "
                           f".{str(row.get('AVG',0)).replace('0.','').replace('.','')[:3]}AVG"),
+            "score2026_5x5": float(row["score2026_5x5"]),
+            "scoreDyn_5x5":  float(row["scoreDyn_5x5"]),
+            "score2027_5x5": float(row["score2027_5x5"]),
+            "score2028_5x5": float(row["score2028_5x5"]),
             "cats":       get_cats(row, hitting_stats, False),
             "il":         bool(row["il"]),
             "est":        False,
@@ -830,6 +889,10 @@ def main():
             "note":       (f"{system}: {int(row.get('K',0))}K "
                           f"{row.get('ERA','?')}ERA "
                           f"{row.get('WHIP','?')}WHIP"),
+            "score2026_5x5": float(row["score2026_5x5"]),
+            "scoreDyn_5x5":  float(row["scoreDyn_5x5"]),
+            "score2027_5x5": float(row["score2027_5x5"]),
+            "score2028_5x5": float(row["score2028_5x5"]),
             "cats":       get_cats(row, pitching_stats, True),
             "il":         bool(row["il"]),
             "est":        False,

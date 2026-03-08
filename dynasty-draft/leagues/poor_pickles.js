@@ -46,4 +46,8 @@ export const POOR_PICKLES_CONFIG = {
   // Format: { pick, r, player, pos, team }
   // Populated by `python data/build.py` after the draft completes
   keeperPicks: [],
+
+  // Score prefix for per-league ZAR scores stored in targets.json
+  // null = use main 9x9 scores; "5x5" = use score2026_5x5 etc.
+  scorePrefix: null,
 }

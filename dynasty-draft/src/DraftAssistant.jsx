@@ -1,33 +1,7 @@
 import { useState, useCallback, useRef, useEffect, useMemo } from "react";
 import targetsData from "../data/targets.json";
 
-// ─── CONSTANTS ────────────────────────────────────────────────────────────────
-const MY_TEAM = "Poor Pickles";
-const TOTAL_TEAMS = 12;
-const TOTAL_ROUNDS = 29;
-const DRAFT_START_PICK = 121;
-
-// Snake order slot 1-12 in round 1 (Poor Pickles = slot 8)
-const DRAFT_ORDER = [
-  "Dynasty","Bay of Papi","gamma's Team","Hideo Lobo","JP Licks","Loch Neskie",
-  "Nighthawks",MY_TEAM,"Snipe City","StickyBanditz","Team Underdog","Toms River"
-];
-
-function getRound(pick) { return Math.ceil(pick / TOTAL_TEAMS); }
-function getPickOwner(pick) {
-  const round = getRound(pick);
-  const pos = (pick - 1) % TOTAL_TEAMS;
-  return DRAFT_ORDER[round % 2 === 0 ? (TOTAL_TEAMS - 1 - pos) : pos];
-}
-function getMyPicks() {
-  const picks = [];
-  for (let p = DRAFT_START_PICK; p <= TOTAL_TEAMS * TOTAL_ROUNDS; p++)
-    if (getPickOwner(p) === MY_TEAM) picks.push(p);
-  return picks;
-}
-const MY_PICKS = getMyPicks();
-
-// ─── KEEPER DATA ─────────────────────────────────────────────────────────────
+// ─── KEEPER DATA (sourced from config.keeperPicks) ───────────────────────────
 const KEEPER_PICKS = [
   {pick:1,r:1,player:"Bobby Witt Jr.",pos:"SS",team:"Dynasty"},{pick:2,r:1,player:"Fernando Tatis Jr.",pos:"RF",team:"Bay of Papi"},{pick:3,r:1,player:"José Ramírez",pos:"3B",team:"gamma's Team"},{pick:4,r:1,player:"Shohei Ohtani (Batter)",pos:"Util",team:"Hideo Lobo"},{pick:5,r:1,player:"Zach Neto",pos:"SS",team:"JP Licks"},{pick:6,r:1,player:"Elly De La Cruz",pos:"SS",team:"Loch Neskie"},{pick:7,r:1,player:"Juan Soto",pos:"LF",team:"Nighthawks"},{pick:8,r:1,player:"Geraldo Perdomo",pos:"SS",team:MY_TEAM},{pick:9,r:1,player:"Brent Rooker",pos:"LF",team:"Snipe City"},{pick:10,r:1,player:"Aaron Judge",pos:"RF",team:"StickyBanditz"},{pick:11,r:1,player:"Julio Rodríguez",pos:"CF",team:"Team Underdog"},{pick:12,r:1,player:"Jazz Chisholm Jr.",pos:"2B",team:"Toms River"},
   {pick:13,r:2,player:"Wyatt Langford",pos:"CF",team:"Toms River"},{pick:14,r:2,player:"Ronald Acuña Jr.",pos:"RF",team:"Team Underdog"},{pick:15,r:2,player:"Rafael Devers",pos:"1B",team:"StickyBanditz"},{pick:16,r:2,player:"James Wood",pos:"LF",team:"Snipe City"},{pick:17,r:2,player:"Vinnie Pasquantino",pos:"1B",team:MY_TEAM},{pick:18,r:2,player:"Kyle Tucker",pos:"RF",team:"Nighthawks"},{pick:19,r:2,player:"Kyle Schwarber",pos:"LF",team:"Loch Neskie"},{pick:20,r:2,player:"Matt Olson",pos:"1B",team:"JP Licks"},{pick:21,r:2,player:"Trea Turner",pos:"SS",team:"Hideo Lobo"},{pick:22,r:2,player:"Junior Caminero",pos:"3B",team:"gamma's Team"},{pick:23,r:2,player:"Nick Kurtz",pos:"1B",team:"Bay of Papi"},{pick:24,r:2,player:"Pete Alonso",pos:"1B",team:"Dynasty"},
@@ -41,7 +15,18 @@ const KEEPER_PICKS = [
   {pick:109,r:10,player:"Andrew Painter",pos:"SP",team:"Toms River"},{pick:110,r:10,player:"Shohei Ohtani",pos:"SP",team:"Team Underdog"},{pick:111,r:10,player:"Dylan Cease",pos:"SP",team:"StickyBanditz"},{pick:112,r:10,player:"Shota Imanaga",pos:"SP",team:"Snipe City"},{pick:113,r:10,player:"Roki Sasaki",pos:"SP",team:MY_TEAM},{pick:114,r:10,player:"Eury Pérez",pos:"SP",team:"Nighthawks"},{pick:115,r:10,player:"Edwin Díaz",pos:"RP",team:"Loch Neskie"},{pick:116,r:10,player:"Hunter Greene",pos:"SP",team:"JP Licks"},{pick:117,r:10,player:"Kodai Senga",pos:"SP",team:"Hideo Lobo"},{pick:118,r:10,player:"Chris Sale",pos:"SP",team:"gamma's Team"},{pick:119,r:10,player:"Jacob Misiorowski",pos:"SP",team:"Bay of Papi"},{pick:120,r:10,player:"Jacob deGrom",pos:"SP",team:"Dynasty"},
 ];
 
+// ─── HELPERS ──────────────────────────────────────────────────────────────────
 const POS_SCARCITY_ORDER = ["C","SS","2B","3B","CF","LF","RF","1B","SP","RP"];
+
+// Extract score2028 blending logic so it can be reused for per-league scores
+function computeBlendedScore2028(p, rawScore2028, rawScoreDyn) {
+  if (rawScore2028 == null) return null;
+  const raw = p.type === "P" ? Math.round(rawScore2028 * 0.85 * 10) / 10 : rawScore2028;
+  if (p.il && rawScoreDyn != null) return Math.round(((raw + rawScoreDyn) / 2) * 10) / 10;
+  const fvRaw = {"70":10,"65":8.5,"60":7.0,"55":6.0,"50":5.0,"45+":4.5,"45":4.0,"40+":3.5,"40":3.0,"35+":2.5,"35":2.0}[p.prospectFV] ?? null;
+  if (fvRaw != null) return Math.round(((raw + fvRaw) / 2) * 10) / 10;
+  return raw;
+}
 
 // ─── TARGET PLAYERS ───────────────────────────────────────────────────────────
 // Tier is recomputed from FT Dyn score (which already embeds age/dynasty value)
@@ -77,15 +62,7 @@ const TARGETS = targetsData.players.map(p => ({
   // so sorting, display, and DNS all use the same adjusted number.
   // For IL players, Steamer depresses 2026 IP/stats, so blend projected 2028 with
   // dynasty score to better reflect their healthy ceiling.
-  score2028: (() => {
-    if (p.score2028 == null) return null;
-    const raw = p.type === "P" ? Math.round(p.score2028 * 0.85 * 10) / 10 : p.score2028;
-    if (p.il && p.scoreDyn != null) return Math.round(((raw + p.scoreDyn) / 2) * 10) / 10;
-    // For prospects, Steamer can't project upside — blend s28 toward FV raw ceiling
-    const fvRaw = {"70":10,"65":8.5,"60":7.0,"55":6.0,"50":5.0,"45+":4.5,"45":4.0,"40+":3.5,"40":3.0,"35+":2.5,"35":2.0}[p.prospectFV] ?? null;
-    if (fvRaw != null) return Math.round(((raw + fvRaw) / 2) * 10) / 10;
-    return raw;
-  })(),
+  score2028: computeBlendedScore2028(p, p.score2028, p.scoreDyn),
 }));
 
 // ─── SCORING ENGINE ────────────────────────────────────────────────────────────
@@ -108,18 +85,11 @@ function espnScore(rank) { return rank != null ? Math.max(0, 10 - (rank - 1) * (
 const IL_2026_DISCOUNT = 0.4;
 const NEEDS_DISCOUNT = 0.72; // multiplier when all eligible positions already filled on my roster
 
-// BASE category needs — never mutated, used as reference for "original"
-const BASE_CAT_NEED = {
-  R:1, H:1, HR:3, RBI:3, SB:1, TB:2, AVG:1, OBP:1, SLG:3,
-  K:2, IP:1, W:1, ER:1, ERA:2, WHIP:2, "K/9":2, "BB/9":2, NSVH:3
-};
-
 // Compute dynamic CAT_NEED by decaying based on my drafted players
-// Each pick covering a category drops its need by 1 (floor 0)
-function computeDynamicCatNeed(myDraftedNames) {
-  const needs = {...BASE_CAT_NEED};
+function computeDynamicCatNeed(myDraftedNames, targets, baseCatNeed) {
+  const needs = {...baseCatNeed};
   myDraftedNames.forEach(name => {
-    const player = TARGETS.find(t => t.name === name);
+    const player = targets.find(t => t.name === name);
     if (!player) return;
     player.cats.forEach(cat => {
       if (needs[cat] !== undefined && needs[cat] > 0) {
@@ -127,30 +97,17 @@ function computeDynamicCatNeed(myDraftedNames) {
       }
     });
   });
-  // Also factor in keepers — they've already partially filled categories
-  // Keepers contribute half a decay step (0.5, floored to int after all picks)
-  const keeperCatCounts = {};
-  KEEPER_PICKS.filter(p => p.team === MY_TEAM).forEach(kp => {
-    const kt = TARGETS.find(t => t.name === kp.player);
-    if (!kt) return;
-    kt.cats.forEach(cat => {
-      keeperCatCounts[cat] = (keeperCatCounts[cat] || 0) + 1;
-    });
-  });
-  // Keepers already encoded in MY_KEEPER_CATS status, so just clamp
-  Object.keys(needs).forEach(cat => {
-    needs[cat] = Math.max(0, needs[cat]);
-  });
+  Object.keys(needs).forEach(cat => { needs[cat] = Math.max(0, needs[cat]); });
   return needs;
 }
 
 // Compute which starting positions are already filled on my roster.
 // Used by "Needs" mode to discount players at filled positions.
-function getFilledPositions(myDraftedNames) {
+function getFilledPositions(myDraftedNames, targets, keeperPicks, myTeam) {
   const myPlayers = [
-    ...KEEPER_PICKS.filter(k => k.team === MY_TEAM)
-      .map(k => TARGETS.find(t => t.name === k.player)).filter(Boolean),
-    ...myDraftedNames.map(name => TARGETS.find(t => t.name === name)).filter(Boolean),
+    ...keeperPicks.filter(k => k.team === myTeam)
+      .map(k => targets.find(t => t.name === k.player)).filter(Boolean),
+    ...myDraftedNames.map(name => targets.find(t => t.name === name)).filter(Boolean),
   ];
   const counts = { C:0, "1B":0, "2B":0, "3B":0, SS:0, LF:0, CF:0, RF:0, SP:0, RP:0 };
   myPlayers.forEach(p => {
@@ -174,7 +131,7 @@ function normalizeName(name) {
 }
 
 function calcCatScore(player, catNeed) {
-  const need = catNeed || BASE_CAT_NEED;
+  const need = catNeed || {};
   const totalNeed = player.cats.reduce((sum, c) => sum + (need[c] || 0), 0);
   const maxPossible = player.cats.length * 3;
   return maxPossible > 0 ? totalNeed / maxPossible : 0;
@@ -226,7 +183,7 @@ function calcBaseScore(player, catNeed) {
 // Positional scarcity: slope-based VOR
 // Uses least-squares regression on rank vs. score to measure how steeply
 // values drop at this position, then computes VOR vs. replacement level.
-function calcPositionalScarcity(player, available, catNeed, drafted = []) {
+function calcPositionalScarcity(player, available, catNeed, drafted = [], totalTeams = 12) {
   const posRanked = [...player.eligible].sort(
     (a, b) => POS_SCARCITY_ORDER.indexOf(a) - POS_SCARCITY_ORDER.indexOf(b)
   );
@@ -240,7 +197,7 @@ function calcPositionalScarcity(player, available, catNeed, drafted = []) {
   // Falls back to roster-slot estimate if no draft data yet.
   const slotsPerPos = { C:1, "1B":1, "2B":1, "3B":1, SS:1, LF:1, CF:1, RF:1, Util:1, SP:4, RP:2 };
   const actualDrafted = drafted.filter(p => p.eligible?.includes(scarcePos)).length;
-  const draftedAtPos = actualDrafted > 0 ? actualDrafted : (slotsPerPos[scarcePos] || 1) * TOTAL_TEAMS;
+  const draftedAtPos = actualDrafted > 0 ? actualDrafted : (slotsPerPos[scarcePos] || 1) * totalTeams;
   const replacementIdx = Math.min(draftedAtPos, posPool.length - 1);
   const replacementVal = posPool[replacementIdx] ?? (posPool[posPool.length - 1] ?? 0);
 
@@ -263,8 +220,8 @@ function calcPositionalScarcity(player, available, catNeed, drafted = []) {
 }
 
 // League scarcity: how fast is this tier/position being depleted?
-function calcLeagueScarcity(player, available, livePicks) {
-  const totalAtPos = TARGETS.filter(p => p.eligible.some(e => player.eligible.includes(e))).length;
+function calcLeagueScarcity(player, available, targets) {
+  const totalAtPos = targets.filter(p => p.eligible.some(e => player.eligible.includes(e))).length;
   const availAtPos = available.filter(p => p.eligible.some(e => player.eligible.includes(e))).length;
   const depletionRate = 1 - (availAtPos / totalAtPos);
   return Math.round(depletionRate * 100);
@@ -273,21 +230,19 @@ function calcLeagueScarcity(player, available, livePicks) {
 // Urgency: probability player is gone by next pick
 // Uses live position depletion rate (how fast this pos is being taken)
 // calibrated to actual picks-away from your next turn.
-function calcUrgency(player, currentPick, available) {
-  const nextMyPick = MY_PICKS.find(p => p > currentPick);
+function calcUrgency(player, currentPick, available, myPicks, targets, draftStartPick) {
+  const nextMyPick = myPicks.find(p => p > currentPick);
   if (!nextMyPick) return 0;
   const picksAway = nextMyPick - currentPick;
 
-  // Live depletion rate for this position: fraction of pool already gone
   const scarcePos = [...player.eligible].sort(
     (a, b) => POS_SCARCITY_ORDER.indexOf(a) - POS_SCARCITY_ORDER.indexOf(b)
   )[0];
-  const totalAtPos = TARGETS.filter(p => p.eligible.includes(scarcePos)).length;
+  const totalAtPos = targets.filter(p => p.eligible.includes(scarcePos)).length;
   const availAtPos = available.filter(p => p.eligible.includes(scarcePos)).length;
   const depletionRate = totalAtPos > 0 ? (totalAtPos - availAtPos) / totalAtPos : 0;
 
-  // Base pick rate per pick = depletion rate / picks elapsed, floored by tier
-  const picksElapsed = Math.max(currentPick - DRAFT_START_PICK, 1);
+  const picksElapsed = Math.max(currentPick - draftStartPick, 1);
   const tierFloor = { keep6: 0.12, keep12: 0.07, bridge: 0.08, maybe: 0.04, specialist: 0.03 };
   const baseRate = Math.max(depletionRate / picksElapsed, tierFloor[player.tier] || 0.05);
 
@@ -301,10 +256,10 @@ function calcUrgency(player, currentPick, available) {
 }
 
 // Final adjusted score shown in UI
-function calcDraftNowScore(player, available, livePicks, currentPick, catNeed, filledPositions, drafted = []) {
+function calcDraftNowScore(player, available, livePicks, currentPick, catNeed, filledPositions, drafted = [], myPicks = [], targets = [], draftStartPick = 1, totalTeams = 12) {
   const base = calcBaseScore(player, catNeed);
-  const { vor } = calcPositionalScarcity(player, available, catNeed, drafted);
-  const urgency = calcUrgency(player, currentPick, available) / 100;
+  const { vor } = calcPositionalScarcity(player, available, catNeed, drafted, totalTeams);
+  const urgency = calcUrgency(player, currentPick, available, myPicks, targets, draftStartPick) / 100;
   const urgencyBonus = urgency * 1.5;
   const vorBonus = Math.min(Math.max(vor * 0.3, 0), 1.0);
   let final = base + urgencyBonus + vorBonus;
@@ -316,26 +271,56 @@ function calcDraftNowScore(player, available, livePicks, currentPick, catNeed, f
   return Math.round(final * 10) / 10;
 }
 
-const HIT_CATS   = ["R","H","HR","RBI","SB","TB","AVG","OBP","SLG"];
-const PITCH_CATS = ["IP","W","ER","K","ERA","WHIP","K/9","BB/9","NSVH"];
-
 // ─── STYLE CONSTANTS ──────────────────────────────────────────────────────────
 const TIER_COLOR = {keep6:"#f59e0b",keep12:"#22c55e",bridge:"#60a5fa",maybe:"#c084fc",specialist:"#f472b6"};
 const TIER_LABEL = {keep6:"Keep-6 🔒",keep12:"Keep-12",bridge:"Bridge",maybe:"Maybe",specialist:"Specialist"};
 const CAT_NEED_COLOR = {0:"#1e293b",1:"#475569",2:"#60a5fa",3:"#f87171"};
-const MY_KEEPER_CATS = {
-  R:"ok",H:"ok",HR:"thin",RBI:"thin",SB:"strong",TB:"thin",AVG:"ok",OBP:"ok",SLG:"thin",
-  K:"ok",IP:"ok",W:"ok",ER:"ok",ERA:"ok",WHIP:"ok","K/9":"ok","BB/9":"ok",NSVH:"thin"
-};
 const CAT_STATUS_COLOR = {strong:"#22c55e",ok:"#60a5fa",thin:"#84cc16",missing:"#f87171"};
 
 
 // ─── MAIN COMPONENT ───────────────────────────────────────────────────────────
-export default function App() {
+export default function DraftAssistant({ config }) {
+  // ── Derived league constants ─────────────────────────────────────────────
+  const myTeam         = config.draftOrder[config.mySlot - 1];
+  const totalTeams     = config.totalTeams;
+  const totalRounds    = config.totalRounds;
+  const draftStartPick = config.draftStartPick;
+  const draftOrder     = config.draftOrder;
+  const keeperPicks    = config.keeperPicks.length > 0 ? config.keeperPicks : KEEPER_PICKS;
+  const baseCatNeed    = config.baseCatNeed;
+  const hitCats        = config.hittingCats;
+  const pitchCats      = config.pitchingCats;
+
+  const getRound     = (pick) => Math.ceil(pick / totalTeams);
+  const getPickOwner = (pick) => {
+    const round = getRound(pick);
+    const pos   = (pick - 1) % totalTeams;
+    return draftOrder[round % 2 === 0 ? (totalTeams - 1 - pos) : pos];
+  };
+  const myPicks = useMemo(() => {
+    const picks = [];
+    for (let p = draftStartPick; p <= totalTeams * totalRounds; p++)
+      if (getPickOwner(p) === myTeam) picks.push(p);
+    return picks;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [draftStartPick, totalTeams, totalRounds, myTeam, draftOrder.join(",")]);
+
+  // ── Per-league score remapping ───────────────────────────────────────────
+  const leagueTargets = useMemo(() => {
+    const prefix = config.scorePrefix;
+    if (!prefix) return TARGETS;
+    return TARGETS.map(p => {
+      const s26 = p[`score2026_${prefix}`] ?? p.score2026;
+      const dyn = p[`scoreDyn_${prefix}`]  ?? p.scoreDyn;
+      const s28 = computeBlendedScore2028(p, p[`score2028_${prefix}`] ?? p.score2028, dyn);
+      return { ...p, score2026: s26, scoreDyn: dyn, score2028: s28, tier: inferTier({...p, score2026: s26, scoreDyn: dyn}) };
+    });
+  }, [config.scorePrefix]);
+
   const [livePicks, setLivePicks] = useState({});
   const [myDrafted, setMyDrafted] = useState([]);
   const [playerNotes, setPlayerNotes] = useState({});
-  const [currentPick, setCurrentPick] = useState(DRAFT_START_PICK);
+  const [currentPick, setCurrentPick] = useState(draftStartPick);
   const [pickInput, setPickInput] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [compareList, setCompareList] = useState([]);
@@ -349,8 +334,8 @@ export default function App() {
   const [needsMode, setNeedsMode] = useState(false);
   const [fvFilter, setFvFilter] = useState(null); // null | 40 | 45 | 50 | 55 | 60
   const [noteInput, setNoteInput] = useState("");
-  const [catStatus, setCatStatus] = useState(MY_KEEPER_CATS);
-  const [catNeed, setCatNeed] = useState(BASE_CAT_NEED);
+  const [catStatus, setCatStatus] = useState(config.myCatStatus);
+  const [catNeed, setCatNeed] = useState(baseCatNeed);
   const [showScoreBreakdown, setShowScoreBreakdown] = useState(null);
   const pickInputRef = useRef(null);
 
@@ -365,34 +350,32 @@ export default function App() {
 
   // Recompute dynamic category needs whenever my roster changes
   useEffect(() => {
-    setCatNeed(computeDynamicCatNeed(myDrafted));
+    setCatNeed(computeDynamicCatNeed(myDrafted, leagueTargets, baseCatNeed));
   }, [myDrafted]);
 
   const allTaken = useMemo(() =>
-    new Set([...KEEPER_PICKS.map(p=>normalizeName(p.player)), ...Object.values(livePicks).map(normalizeName)]),
-    [livePicks]
+    new Set([...keeperPicks.map(p=>normalizeName(p.player)), ...Object.values(livePicks).map(normalizeName)]),
+    [livePicks, keeperPicks]
   );
 
   const available = useMemo(() =>
-    TARGETS.filter(t => !allTaken.has(normalizeName(t.name))),
-    [allTaken]
+    leagueTargets.filter(t => !allTaken.has(normalizeName(t.name))),
+    [allTaken, leagueTargets]
   );
 
-  const filledPositions = useMemo(() => getFilledPositions(myDrafted), [myDrafted]);
+  const filledPositions = useMemo(() => getFilledPositions(myDrafted, leagueTargets, keeperPicks, myTeam), [myDrafted, leagueTargets, keeperPicks, myTeam]);
 
   // Scored and sorted available targets — recalculates live as catNeed evolves
   const scoredAvailable = useMemo(() => {
-    // Players already taken (keepers + live draft) — for realistic replacement level
-    const drafted = TARGETS.filter(t => !available.some(a => a.name === t.name));
+    const drafted = leagueTargets.filter(t => !available.some(a => a.name === t.name));
 
-    // First pass: compute all scores
     const withScores = available.map(t => ({
       ...t,
       baseScore: calcBaseScore(t, catNeed),
-      draftNowScore: calcDraftNowScore(t, available, livePicks, currentPick, catNeed, needsMode ? filledPositions : null, drafted),
-      scarcity: calcPositionalScarcity(t, available, catNeed, drafted),
-      urgency: calcUrgency(t, currentPick, available),
-      leagueDepletion: calcLeagueScarcity(t, available, livePicks),
+      draftNowScore: calcDraftNowScore(t, available, livePicks, currentPick, catNeed, needsMode ? filledPositions : null, drafted, myPicks, leagueTargets, draftStartPick, totalTeams),
+      scarcity: calcPositionalScarcity(t, available, catNeed, drafted, totalTeams),
+      urgency: calcUrgency(t, currentPick, available, myPicks, leagueTargets, draftStartPick),
+      leagueDepletion: calcLeagueScarcity(t, available, leagueTargets),
     }));
 
     // Second pass: steal score = DNS vs. expected DNS at player's ADP
@@ -436,10 +419,10 @@ export default function App() {
   }, [scoredAvailable, typeFilter, posFilter, sortBy, search, fvFilter]);
 
   const currentRound = getRound(currentPick);
-  const isMyClock = MY_PICKS.includes(currentPick);
-  const nextMine = MY_PICKS.find(p => p >= currentPick);
+  const isMyClock = myPicks.includes(currentPick);
+  const nextMine = myPicks.find(p => p >= currentPick);
   const until = nextMine ? nextMine - currentPick : 0;
-  const snakePicks = MY_PICKS.filter(p => p >= currentPick).slice(0, 4);
+  const snakePicks = myPicks.filter(p => p >= currentPick).slice(0, 4);
   const lateAlerts = scoredAvailable.filter(t => t.tier === "keep6" && t.urgency >= 60);
 
   // Watch list toggle
@@ -458,9 +441,9 @@ export default function App() {
   const POS_SLOTS = { C:1, "1B":1, "2B":1, "3B":1, SS:1, OF:3, SP:4, RP:2 };
   const posDepth = useMemo(() => {
     const myPlayers = [
-      ...KEEPER_PICKS.filter(k => k.team === MY_TEAM)
-        .map(k => TARGETS.find(t => t.name === k.player)).filter(Boolean),
-      ...myDrafted.map(name => TARGETS.find(t => t.name === name)).filter(Boolean),
+      ...keeperPicks.filter(k => k.team === myTeam)
+        .map(k => leagueTargets.find(t => t.name === k.player)).filter(Boolean),
+      ...myDrafted.map(name => leagueTargets.find(t => t.name === name)).filter(Boolean),
     ];
     return ["C","1B","2B","3B","SS","OF","SP","RP"].map(pos => {
       const isOF = pos === "OF";
@@ -480,24 +463,24 @@ export default function App() {
   // Category projection: my projected rank in each category vs all 12 teams (based on keepers + drafted)
   const catProjection = useMemo(() => {
     const teamCoverage = {};
-    DRAFT_ORDER.forEach(team => {
+    draftOrder.forEach(team => {
       const roster = [
-        ...KEEPER_PICKS.filter(p => p.team === team)
-          .map(kp => TARGETS.find(t => normalizeName(t.name) === normalizeName(kp.player)))
+        ...keeperPicks.filter(p => p.team === team)
+          .map(kp => leagueTargets.find(t => normalizeName(t.name) === normalizeName(kp.player)))
           .filter(Boolean),
-        ...(team === MY_TEAM
-          ? myDrafted.map(n => TARGETS.find(t => t.name === n)).filter(Boolean)
+        ...(team === myTeam
+          ? myDrafted.map(n => leagueTargets.find(t => t.name === n)).filter(Boolean)
           : []),
       ];
       const scores = {};
-      [...HIT_CATS, ...PITCH_CATS].forEach(cat => {
+      [...hitCats, ...pitchCats].forEach(cat => {
         scores[cat] = roster.filter(p => p.cats.includes(cat)).reduce((s, p) => s + p.score2026, 0);
       });
       teamCoverage[team] = scores;
     });
-    return [...HIT_CATS, ...PITCH_CATS].map(cat => {
-      const myScore = teamCoverage[MY_TEAM]?.[cat] || 0;
-      const allScores = DRAFT_ORDER.map(t => teamCoverage[t]?.[cat] || 0).sort((a, b) => b - a);
+    return [...hitCats, ...pitchCats].map(cat => {
+      const myScore = teamCoverage[myTeam]?.[cat] || 0;
+      const allScores = draftOrder.map(t => teamCoverage[t]?.[cat] || 0).sort((a, b) => b - a);
       const rank = allScores.findIndex(s => s <= myScore) + 1;
       const max = allScores[0] || 1;
       return { cat, myScore, rank, max };
@@ -507,17 +490,17 @@ export default function App() {
   // Team rosters from keepers
   const teamRosters = useMemo(() => {
     const rosters = {};
-    DRAFT_ORDER.filter(t => t !== MY_TEAM).forEach(team => {
-      rosters[team] = KEEPER_PICKS.filter(p => p.team === team);
+    draftOrder.filter(t => t !== myTeam).forEach(team => {
+      rosters[team] = keeperPicks.filter(p => p.team === team);
     });
     return rosters;
-  }, []);
+  }, [draftOrder, myTeam, keeperPicks]);
 
   const handlePickInput = (val) => {
     setPickInput(val);
     if (val.length < 2) { setSuggestions([]); return; }
     const lower = normalizeName(val);
-    const allNames = [...new Set([...TARGETS.map(t=>t.name), ...KEEPER_PICKS.map(p=>p.player)])];
+    const allNames = [...new Set([...leagueTargets.map(t=>t.name), ...keeperPicks.map(p=>p.player)])];
     const matches = allNames.filter(n => normalizeName(n).includes(lower) && !allTaken.has(normalizeName(n))).slice(0, 5);
     setSuggestions(matches);
   };
@@ -525,7 +508,7 @@ export default function App() {
   const record = () => {
     if (!pickInput.trim()) return;
     const name = pickInput.trim();
-    const mine = getPickOwner(currentPick) === MY_TEAM;
+    const mine = getPickOwner(currentPick) === myTeam;
     setLivePicks(prev => ({...prev, [currentPick]: name}));
     if (mine) setMyDrafted(prev => [...prev, name]);
     setPickInput(""); setSuggestions([]);
@@ -534,9 +517,9 @@ export default function App() {
   };
 
   const reset = () => {
-    setLivePicks({}); setMyDrafted([]); setCurrentPick(DRAFT_START_PICK);
-    setPickInput(""); setSuggestions([]); setCatStatus(MY_KEEPER_CATS);
-    setCatNeed(BASE_CAT_NEED);
+    setLivePicks({}); setMyDrafted([]); setCurrentPick(draftStartPick);
+    setPickInput(""); setSuggestions([]); setCatStatus(config.myCatStatus);
+    setCatNeed(baseCatNeed);
   };
 
   const toggleCompare = useCallback((name) => {
@@ -548,9 +531,9 @@ export default function App() {
   }, []);
 
   const myRoster = [
-    ...KEEPER_PICKS.filter(p=>p.team===MY_TEAM).map(p=>({name:p.player,kept:true})),
+    ...keeperPicks.filter(p=>p.team===myTeam).map(p=>({name:p.player,kept:true})),
     ...myDrafted.map(n=>({name:n,kept:false}))
-  ].map(p => ({...p, target: TARGETS.find(t=>t.name===p.name)||null}));
+  ].map(p => ({...p, target: leagueTargets.find(t=>t.name===p.name)||null}));
 
   const [rosterSelected, setRosterSelected] = useState(null);
 
@@ -562,7 +545,7 @@ export default function App() {
   const renderCard = (t, idx, isWatched) => {
     const isExpanded = showScoreBreakdown === t.name;
     const rank = dnsRankMap[t.name] ?? 0;
-    const roundDelta = Math.round((DRAFT_START_PICK + rank - 1 - currentPick) / TOTAL_TEAMS);
+    const roundDelta = Math.round((draftStartPick + rank - 1 - currentPick) / totalTeams);
     const rvColor = roundDelta >= 3 ? "#22c55e" : roundDelta > 0 ? "#84cc16" : roundDelta === 0 ? "#475569" : "#f59e0b";
     const rvLabel = roundDelta > 0 ? `+R${roundDelta}` : roundDelta === 0 ? "~R0" : `-R${Math.abs(roundDelta)}`;
     return (
@@ -645,7 +628,7 @@ export default function App() {
             </button>
             <button className="btn" onClick={e=>{
               e.stopPropagation();
-              const mine = getPickOwner(currentPick) === MY_TEAM;
+              const mine = getPickOwner(currentPick) === myTeam;
               setLivePicks(prev => ({...prev, [currentPick]: t.name}));
               if (mine) setMyDrafted(prev => [...prev, t.name]);
               setCurrentPick(p => p + 1);
@@ -679,7 +662,7 @@ export default function App() {
               <div style={{color:"#94a3b8",marginBottom:3,fontSize:10,textTransform:"uppercase",letterSpacing:".06em"}}>Category Fit</div>
               <div style={{display:"flex",gap:4,flexWrap:"wrap"}}>
                 {t.cats.map(c=>{
-                  const orig = BASE_CAT_NEED[c]||0;
+                  const orig = baseCatNeed[c]||0;
                   const curr = catNeed[c]??orig;
                   const decayed = curr < orig;
                   return (
@@ -730,7 +713,7 @@ export default function App() {
       {/* HEADER */}
       <div style={{background:"#0b0d14",borderBottom:"1px solid #1e293b",padding:"9px 16px",display:"flex",alignItems:"center",justifyContent:"space-between",flexShrink:0}}>
         <div style={{display:"flex",alignItems:"center",gap:12}}>
-          <span style={{fontSize:22,letterSpacing:".15em",color:"#84cc16",fontWeight:700}}>POOR PICKLES</span>
+          <span style={{fontSize:22,letterSpacing:".15em",color:"#84cc16",fontWeight:700}}>{config.leagueName.toUpperCase()}</span>
           <span style={{color:"#1e293b"}}>|</span>
           <span style={{fontSize:10,color:"#475569",letterSpacing:".1em"}}>DYNASTY DRAFT · SCORING ENGINE v2</span>
         </div>
@@ -792,7 +775,7 @@ export default function App() {
               {suggestions.length>0&&(
                 <div style={{position:"absolute",top:"100%",left:0,right:0,background:"#111318",border:"1px solid #84cc1666",borderTop:"none",borderRadius:"0 0 4px 4px",zIndex:200}}>
                   {suggestions.map(s=>{
-                    const t = TARGETS.find(x=>x.name===s);
+                    const t = leagueTargets.find(x=>x.name===s);
                     const scored = scoredAvailable.find(x=>x.name===s);
                     return (
                       <div key={s} className="sug-item" onClick={()=>{setPickInput(s);setSuggestions([]);pickInputRef.current?.focus();}}
@@ -813,8 +796,8 @@ export default function App() {
             </button>
             <div style={{display:"flex",gap:3,marginTop:3}}>
               <button className="btn" style={{flex:1,background:"#1e293b",color:"#64748b"}} onClick={()=>{
-                const lastPick = Math.max(...Object.keys(livePicks).map(Number), DRAFT_START_PICK-1);
-                if(lastPick>=DRAFT_START_PICK){
+                const lastPick = Math.max(...Object.keys(livePicks).map(Number), draftStartPick-1);
+                if(lastPick>=draftStartPick){
                   const name=livePicks[lastPick];
                   setLivePicks(prev=>{const n={...prev};delete n[lastPick];return n;});
                   setMyDrafted(prev=>prev.filter(p=>p!==name));
@@ -829,9 +812,9 @@ export default function App() {
           <div style={{padding:"6px 10px",borderBottom:"1px solid #1e293b",flexShrink:0}}>
             <div style={{fontSize:9,color:"#475569",textTransform:"uppercase",letterSpacing:".08em",marginBottom:4}}>Pick Order</div>
             <div style={{display:"flex",flexDirection:"column",gap:1}}>
-              {Array.from({length:18},(_,i)=>currentPick+i-3).filter(p=>p>=DRAFT_START_PICK&&p<=TOTAL_TEAMS*TOTAL_ROUNDS).map(p=>{
+              {Array.from({length:18},(_,i)=>currentPick+i-3).filter(p=>p>=draftStartPick&&p<=totalTeams*totalRounds).map(p=>{
                 const owner = getPickOwner(p);
-                const isMine = owner===MY_TEAM;
+                const isMine = owner===myTeam;
                 const isCurrent = p===currentPick;
                 const isDone = p<currentPick;
                 const drafted = livePicks[p];
@@ -854,7 +837,7 @@ export default function App() {
 
           {/* My roster */}
           <div style={{flex:1,overflowY:"auto",padding:10}}>
-            <div style={{fontSize:10,color:"#475569",letterSpacing:".08em",textTransform:"uppercase",marginBottom:6}}>My Roster ({myRoster.length}/28)</div>
+            <div style={{fontSize:10,color:"#475569",letterSpacing:".08em",textTransform:"uppercase",marginBottom:6}}>My Roster ({myRoster.length}/{totalRounds})</div>
             {myRoster.map((p,i)=>{
               const isSelected = rosterSelected === p.name;
               const t = p.target;
@@ -1007,14 +990,14 @@ export default function App() {
               <div style={{marginBottom:10,fontSize:11,color:"#475569"}}>
                 Need weights update live as you draft. <span style={{color:"#84cc16"}}>Amber = decayed by your picks.</span> Click to manually cycle status.
               </div>
-              {[["HITTING",HIT_CATS],["PITCHING",PITCH_CATS]].map(([label,cats])=>(
+              {[["HITTING",hitCats],["PITCHING",pitchCats]].map(([label,cats])=>(
                 <div key={label} style={{marginBottom:18}}>
                   <div style={{fontSize:10,color:"#475569",letterSpacing:".1em",textTransform:"uppercase",marginBottom:8}}>{label}</div>
                   <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
                     {cats.map(c=>{
                       const statuses=["missing","thin","ok","strong"];
                       const cur=catStatus[c]||"ok";
-                      const origNeed = BASE_CAT_NEED[c] || 0;
+                      const origNeed = baseCatNeed[c] || 0;
                       const currNeed = catNeed[c] ?? origNeed;
                       const decayed = currNeed < origNeed;
                       return (
@@ -1045,7 +1028,7 @@ export default function App() {
                 {myDrafted.length === 0
                   ? <div style={{fontSize:11,color:"#1e293b"}}>No picks recorded yet.</div>
                   : myDrafted.map((name, i) => {
-                    const t = TARGETS.find(x => x.name === name);
+                    const t = leagueTargets.find(x => x.name === name);
                     if (!t) return null;
                     return (
                       <div key={i} style={{fontSize:11,color:"#64748b",marginBottom:2,display:"flex",gap:6}}>
@@ -1065,7 +1048,7 @@ export default function App() {
                 <div style={{fontSize:10,color:"#475569",letterSpacing:".1em",textTransform:"uppercase",marginBottom:6}}>
                   Projected Standing <span style={{color:"#334155",fontWeight:400}}>— based on keepers + drafted</span>
                 </div>
-                {[["HITTING",HIT_CATS],["PITCHING",PITCH_CATS]].map(([label,cats])=>(
+                {[["HITTING",hitCats],["PITCHING",pitchCats]].map(([label,cats])=>(
                   <div key={label} style={{marginBottom:12}}>
                     <div style={{fontSize:9,color:"#334155",letterSpacing:".08em",textTransform:"uppercase",marginBottom:5}}>{label}</div>
                     {cats.map(cat => {
@@ -1080,7 +1063,7 @@ export default function App() {
                             <div style={{width:`${barW}%`,height:"100%",background:rankColor,borderRadius:3,transition:"width .3s"}}/>
                           </div>
                           <span style={{fontSize:10,fontWeight:600,color:rankColor,width:32,textAlign:"right",flexShrink:0}}>
-                            #{proj.rank}/12
+                            #{proj.rank}/{totalTeams}
                           </span>
                         </div>
                       );
@@ -1099,13 +1082,13 @@ export default function App() {
             <div style={{flex:1,overflowY:"auto",padding:12}}>
               <div style={{fontSize:10,color:"#475569",marginBottom:10}}>Keeper rosters R1-10. Use to assess positional pressure and SP scarcity.</div>
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>
-                {DRAFT_ORDER.filter(t=>t!==MY_TEAM).map(team=>{
-                  const keepers = KEEPER_PICKS.filter(p=>p.team===team);
+                {draftOrder.filter(t=>t!==myTeam).map(team=>{
+                  const keepers = keeperPicks.filter(p=>p.team===team);
                   const drafted = Object.entries(livePicks)
                     .filter(([pick]) => getPickOwner(Number(pick)) === team)
                     .sort((a,b) => Number(a[0])-Number(b[0]))
                     .map(([pick, name]) => {
-                      const t = TARGETS.find(x=>x.name===name);
+                      const t = leagueTargets.find(x=>x.name===name);
                       return {pick:Number(pick), name, pos: t?.eligible?.[0] ?? "?"};
                     });
                   const spCount = keepers.filter(p=>p.pos==="SP").length + drafted.filter(p=>p.pos==="SP").length;
@@ -1147,7 +1130,7 @@ export default function App() {
               {Object.keys(livePicks).length===0&&<div style={{color:"#1e293b",textAlign:"center",padding:40}}>No picks recorded yet.</div>}
               {Object.entries(livePicks).sort((a,b)=>Number(b[0])-Number(a[0])).map(([pick,name])=>{
                 const mine = myDrafted.includes(name);
-                const t = TARGETS.find(x=>x.name===name);
+                const t = leagueTargets.find(x=>x.name===name);
                 const owner = getPickOwner(Number(pick));
                 return (
                   <div key={pick} style={{padding:"5px 8px",marginBottom:3,background:"#0d0f16",borderRadius:3,display:"flex",gap:8,fontSize:12,borderLeft:`2px solid ${mine?"#84cc16":"#1e293b"}`}}>

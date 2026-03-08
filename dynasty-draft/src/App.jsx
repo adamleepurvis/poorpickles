@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import DraftAssistant from './DraftAssistant.jsx'
 import { POOR_PICKLES_CONFIG } from '../leagues/poor_pickles.js'
-// import { OTHER_LEAGUE_CONFIG } from '../leagues/other_league.js'  // add more leagues here
+import { SOUTH_OSSETIAN_CONFIG } from '../leagues/south_ossetian.js'
 
 const LEAGUES = [
-  { id: 'poor_pickles', label: 'Poor Pickles (12-team)', config: POOR_PICKLES_CONFIG },
-  // { id: 'other', label: 'Other League', config: OTHER_LEAGUE_CONFIG },
+  { id: 'poor_pickles',   label: 'Poor Pickles (9x9)',    config: POOR_PICKLES_CONFIG },
+  { id: 'south_ossetian', label: 'SouthOssetian (5x5)',   config: SOUTH_OSSETIAN_CONFIG },
 ]
 
 export default function App() {
@@ -14,7 +14,7 @@ export default function App() {
 
   // If only one league, skip the selector entirely
   if (LEAGUES.length === 1) {
-    return <DraftAssistant config={LEAGUES[0].config} />
+    return <DraftAssistant key={LEAGUES[0].id} config={LEAGUES[0].config} />
   }
 
   return (
@@ -35,7 +35,7 @@ export default function App() {
           </button>
         ))}
       </div>
-      <DraftAssistant config={league.config} />
+      <DraftAssistant key={league.id} config={league.config} />
     </div>
   )
 }
