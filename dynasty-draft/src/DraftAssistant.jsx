@@ -262,7 +262,7 @@ function calcDraftNowScore(player, available, livePicks, currentPick, catNeed, f
   const { vor } = calcPositionalScarcity(player, available, catNeed, drafted, totalTeams);
   const urgency = calcUrgency(player, currentPick, available, myPicks, targets, draftStartPick) / 100;
   const urgencyBonus = urgency * 1.5;
-  const vorBonus = Math.min(Math.max(vor * 0.3, 0), 1.0);
+  const vorBonus = Math.min(Math.max(vor * 0.3, 0), 0.3);
   let final = base + urgencyBonus + vorBonus;
   // Needs mode: discount players whose eligible positions are all already filled
   if (filledPositions && player.eligible.length > 0 &&
