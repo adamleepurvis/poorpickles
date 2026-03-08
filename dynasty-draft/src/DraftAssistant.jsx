@@ -677,6 +677,20 @@ export default function DraftAssistant({ config }) {
               <div style={{marginTop:6,fontSize:10,color:"#475569"}}>
                 Pos depth @ {t.scarcity.scarcePos}: {t.scarcity.depth} left
               </div>
+              {t.projStats&&(
+                <div style={{marginTop:6}}>
+                  <div style={{color:"#94a3b8",marginBottom:3,fontSize:10,textTransform:"uppercase",letterSpacing:".06em"}}>Steamer Proj</div>
+                  <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
+                    {(t.type==="H"?hitCats:pitchCats).filter(c=>t.projStats[c]!=null).map(c=>{
+                      const v=t.projStats[c];
+                      const disp=["AVG","OBP","SLG"].includes(c)?v.toFixed(3).replace(/^0/,""):
+                                 ["ERA","WHIP"].includes(c)?v.toFixed(2):
+                                 ["K/9","BB/9"].includes(c)?v.toFixed(1):v;
+                      return <span key={c} style={{fontSize:9,color:"#94a3b8"}}><span style={{color:"#64748b"}}>{c}:</span> {disp}</span>;
+                    })}
+                  </div>
+                </div>
+              )}
               <div style={{marginTop:2,display:"flex",gap:4}}>
                 {editingNote===t.name?(
                   <input value={noteInput} onChange={e=>setNoteInput(e.target.value)}
