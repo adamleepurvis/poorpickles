@@ -264,7 +264,8 @@ function calcDraftNowScore(player, available, livePicks, currentPick, catNeed, f
   const base = calcBaseScore(player, catNeed);
   const { vor } = calcPositionalScarcity(player, available, catNeed, drafted, totalTeams);
   const urgency = calcUrgency(player, currentPick, available, myPicks, targets, draftStartPick) / 100;
-  const urgencyBonus = urgency * 1.5;
+  const draftProgress = Math.min(1.0, Math.max(0, currentPick - draftStartPick) / (totalTeams * 4));
+  const urgencyBonus = urgency * 1.5 * (0.4 + 0.6 * draftProgress);
   const vorBonus = Math.min(Math.max(vor * 0.3, 0), 0.3);
   let final = base + urgencyBonus + vorBonus;
   // Needs mode: discount players whose eligible positions are all already filled
@@ -318,7 +319,7 @@ export default function DraftAssistant({ config }) {
       const s26 = p[`score2026_${prefix}`] ?? p.score2026;
       const dyn = p[`scoreDyn_${prefix}`]  ?? p.scoreDyn;
       const s28 = computeBlendedScore2028(p, p[`score2028_${prefix}`] ?? p.score2028, dyn);
-      return { ...p, score2026: s26, scoreDyn: dyn, score2028: s28, tier: inferTier({...p, score2026: s26, scoreDyn: dyn}) };
+      return { ...p, score2026: s26, scoreDyn: dyn, score2028: s28, cats: p.cats_5x5 ?? p.cats, tier: inferTier({...p, score2026: s26, scoreDyn: dyn}) };
     });
   }, [config.scorePrefix]);
 

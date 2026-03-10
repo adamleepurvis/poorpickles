@@ -605,7 +605,7 @@ def get_cats(row, stat_list: list[str], is_pitcher: bool) -> list[str]:
         "HR": 18, "RBI": 65, "R": 65, "SB": 12, "TB": 180,
         "AVG": 0.265, "OBP": 0.335, "SLG": 0.440,
         # Pitching
-        "K":  140, "K9": 9.0, "ERA": 3.90, "WHIP": 1.22,
+        "K":  140, "W": 8, "K9": 9.0, "ERA": 3.90, "WHIP": 1.22,
         "BB9": 2.8, "IP": 130,
         "SV": 15, "HLD": 12,
     }
@@ -847,6 +847,7 @@ def main():
             "score2027_5x5": float(row["score2027_5x5"]),
             "score2028_5x5": float(row["score2028_5x5"]),
             "cats":       get_cats(row, hitting_stats, False),
+            "cats_5x5":   [c for c in get_cats(row, hitting_stats, False) if c in {"HR","RBI","R","SB","OBP"}],
             "il":         bool(row["il"]),
             "est":        False,
             "projPA":     int(row.get("PA", 0) or 0),
@@ -905,6 +906,7 @@ def main():
             "score2027_5x5": float(row["score2027_5x5"]),
             "score2028_5x5": float(row["score2028_5x5"]),
             "cats":       get_cats(row, pitching_stats, True),
+            "cats_5x5":   [c for c in get_cats(row, pitching_stats, True) if c in {"K","W","ERA","WHIP","NSVH"}],
             "il":         bool(row["il"]),
             "est":        False,
             "projIP":     round(float(row.get("IP", 0) or 0), 1),
