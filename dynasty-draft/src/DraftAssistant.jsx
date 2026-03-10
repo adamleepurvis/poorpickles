@@ -314,12 +314,13 @@ export default function DraftAssistant({ config }) {
   // ── Per-league score remapping ───────────────────────────────────────────
   const leagueTargets = useMemo(() => {
     const prefix = config.scorePrefix;
+    // Fast path: no remapping needed
+    if (!prefix && !neutralMode) return TARGETS;
     return TARGETS.map(p => {
-      // 1. Start from 5x5 scores if applicable
-      let s26 = prefix ? (p[`score2026_${prefix}`] ?? p.score2026) : p.score2026;
-      let dyn = prefix ? (p[`scoreDyn_${prefix}`]  ?? p.scoreDyn)  : p.scoreDyn;
+      let s26    = prefix ? (p[`score2026_${prefix}`] ?? p.score2026) : p.score2026;
+      let dyn    = prefix ? (p[`scoreDyn_${prefix}`]  ?? p.scoreDyn)  : p.scoreDyn;
       let s28raw = prefix ? (p[`score2028_${prefix}`] ?? p.score2028) : p.score2028;
-      // 2. Apply neutral override for hitters (only in 9x9; 5x5 already has equal weights)
+      // Neutral override for hitters (9x9 only; 5x5 already has equal weights)
       if (neutralMode && !prefix && p.type === "H") {
         s26    = p.score2026_neutral ?? s26;
         dyn    = p.scoreDyn_neutral  ?? dyn;
