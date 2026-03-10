@@ -727,9 +727,11 @@ def main():
     hitters["zar_raw"]  = compute_zar(hitters,  hitting_stats,  DRAFTED_HITTERS)
     pitchers["zar_raw"] = compute_zar(pitchers, pitching_stats, DRAFTED_PITCHERS)
 
-    # ── Normalize to 0-10 ─────────────────────────────────────────────────────
+    # ── Normalize to 0-10 separately, then discount pitchers to reflect draft value ──
+    # Top pitchers go 2-4 rounds after top hitters — apply 0.85 scale so scores
+    # are comparable across types (Freeman 10.0, Skenes ~8.5, Keller ~7.x)
     hitters["score2026"]  = normalize_to_scale(hitters["zar_raw"])
-    pitchers["score2026"] = normalize_to_scale(pitchers["zar_raw"])
+    pitchers["score2026"] = normalize_to_scale(pitchers["zar_raw"]).apply(lambda v: round(v * 0.85, 1))
 
     # ── Dynasty score = score2026 × age curve ─────────────────────────────────
     def get_age(row) -> int:
