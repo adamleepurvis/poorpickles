@@ -314,14 +314,22 @@ export default function DraftAssistant({ config }) {
   // ── Per-league score remapping ───────────────────────────────────────────
   const leagueTargets = useMemo(() => {
     const prefix = config.scorePrefix;
-    if (!prefix) return TARGETS;
     return TARGETS.map(p => {
-      const s26 = p[`score2026_${prefix}`] ?? p.score2026;
-      const dyn = p[`scoreDyn_${prefix}`]  ?? p.scoreDyn;
-      const s28 = computeBlendedScore2028(p, p[`score2028_${prefix}`] ?? p.score2028, dyn);
-      return { ...p, score2026: s26, scoreDyn: dyn, score2028: s28, cats: p.cats_5x5 ?? p.cats, tier: inferTier({...p, score2026: s26, scoreDyn: dyn}) };
+      // 1. Start from 5x5 scores if applicable
+      let s26 = prefix ? (p[`score2026_${prefix}`] ?? p.score2026) : p.score2026;
+      let dyn = prefix ? (p[`scoreDyn_${prefix}`]  ?? p.scoreDyn)  : p.scoreDyn;
+      let s28raw = prefix ? (p[`score2028_${prefix}`] ?? p.score2028) : p.score2028;
+      // 2. Apply neutral override for hitters (only in 9x9; 5x5 already has equal weights)
+      if (neutralMode && !prefix && p.type === "H") {
+        s26    = p.score2026_neutral ?? s26;
+        dyn    = p.scoreDyn_neutral  ?? dyn;
+        s28raw = p.score2028_neutral ?? s28raw;
+      }
+      const s28 = computeBlendedScore2028(p, s28raw, dyn);
+      const cats = prefix ? (p.cats_5x5 ?? p.cats) : p.cats;
+      return { ...p, score2026: s26, scoreDyn: dyn, score2028: s28, cats, tier: inferTier({...p, score2026: s26, scoreDyn: dyn}) };
     });
-  }, [config.scorePrefix]);
+  }, [config.scorePrefix, neutralMode]);
 
   const [livePicks, setLivePicks] = useState({});
   const [myDrafted, setMyDrafted] = useState([]);
@@ -338,6 +346,7 @@ export default function DraftAssistant({ config }) {
   const [typeFilter, setTypeFilter] = useState("all");
   const [editingNote, setEditingNote] = useState(null);
   const [needsMode, setNeedsMode] = useState(false);
+  const [neutralMode, setNeutralMode] = useState(false);
   const [fvFilter, setFvFilter] = useState(null); // null | 40 | 45 | 50 | 55 | 60
   const [noteInput, setNoteInput] = useState("");
   const [catStatus, setCatStatus] = useState(config.myCatStatus);
@@ -941,6 +950,11 @@ export default function DraftAssistant({ config }) {
                   style={{background:needsMode?"#f59e0b22":"#1e293b",color:needsMode?"#f59e0b":"#64748b",border:needsMode?"1px solid #f59e0b44":"1px solid transparent",fontWeight:needsMode?700:400}}>
                   Needs
                 </button>
+                {!config.scorePrefix&&<button className="btn" onClick={()=>setNeutralMode(n=>!n)}
+                  title="Score hitters with equal category weights (ignores personal gaps)"
+                  style={{background:neutralMode?"#34d39922":"#1e293b",color:neutralMode?"#34d399":"#64748b",border:neutralMode?"1px solid #34d39944":"1px solid transparent",fontWeight:neutralMode?700:400}}>
+                  Neutral
+                </button>}
                 <span style={{color:"#1e293b",margin:"0 2px"}}>|</span>
                 {[[null,"All"],[3.0,"FV40+"],[4.0,"FV45+"],[5.0,"FV50+"],[6.0,"FV55+"],[7.0,"FV60+"]].map(([v,l])=>(
                   <button key={l} className="btn" onClick={()=>setFvFilter(fvFilter===v?null:v)}

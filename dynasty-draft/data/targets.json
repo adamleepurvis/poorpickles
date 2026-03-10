@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-09T21:59:28.627770",
+  "generated": "2026-03-09T22:03:21.124660",
   "count": 1004,
   "players": [
     {
@@ -40,6 +40,8 @@
       "est": false,
       "projPA": 633,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 10.0,
+      "score2028_neutral": 10.0,
       "projStats": {
         "R": 98,
         "H": 168,
@@ -105,6 +107,8 @@
       "est": false,
       "projPA": 665,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 10.0,
+      "score2028_neutral": 10.0,
       "projStats": {
         "R": 100,
         "H": 159,
@@ -169,6 +173,8 @@
       "est": false,
       "projPA": 614,
       "score2026_neutral": 9.4,
+      "scoreDyn_neutral": 9.4,
+      "score2028_neutral": 8.9,
       "projStats": {
         "R": 88,
         "H": 121,
@@ -234,6 +240,8 @@
       "est": false,
       "projPA": 617,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 10.0,
+      "score2028_neutral": 10.0,
       "projStats": {
         "R": 85,
         "H": 154,
@@ -300,6 +308,8 @@
       "est": false,
       "projPA": 621,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 10.0,
+      "score2028_neutral": 10.0,
       "projStats": {
         "R": 104,
         "H": 134,
@@ -365,6 +375,8 @@
       "est": false,
       "projPA": 676,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 10.0,
+      "score2028_neutral": 9.8,
       "projStats": {
         "R": 109,
         "H": 162,
@@ -429,6 +441,8 @@
       "est": false,
       "projPA": 636,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 10.0,
+      "score2028_neutral": 10.0,
       "projStats": {
         "R": 93,
         "H": 163,
@@ -494,6 +508,8 @@
       "est": false,
       "projPA": 579,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 10.0,
+      "score2028_neutral": 10.0,
       "projStats": {
         "R": 85,
         "H": 138,
@@ -558,6 +574,8 @@
       "est": false,
       "projPA": 550,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 10.0,
+      "score2028_neutral": 9.5,
       "projStats": {
         "R": 89,
         "H": 140,
@@ -624,6 +642,8 @@
       "est": false,
       "projPA": 604,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 10.0,
+      "score2028_neutral": 10.0,
       "projStats": {
         "R": 90,
         "H": 137,
@@ -688,6 +708,8 @@
       "est": false,
       "projPA": 521,
       "score2026_neutral": 9.7,
+      "scoreDyn_neutral": 10.0,
+      "score2028_neutral": 10.0,
       "projStats": {
         "R": 71,
         "H": 129,
@@ -1261,6 +1283,8 @@
       "est": false,
       "projPA": 616,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 10.0,
+      "score2028_neutral": 10.0,
       "projStats": {
         "R": 83,
         "H": 143,
@@ -1391,6 +1415,8 @@
       "est": false,
       "projPA": 493,
       "score2026_neutral": 9.0,
+      "scoreDyn_neutral": 10.0,
+      "score2028_neutral": 10.0,
       "projStats": {
         "R": 77,
         "H": 109,
@@ -1456,6 +1482,8 @@
       "est": false,
       "projPA": 562,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 10.0,
+      "score2028_neutral": 9.5,
       "projStats": {
         "R": 90,
         "H": 128,
@@ -1522,6 +1550,8 @@
       "est": false,
       "projPA": 582,
       "score2026_neutral": 8.7,
+      "scoreDyn_neutral": 10.0,
+      "score2028_neutral": 9.5,
       "projStats": {
         "R": 73,
         "H": 135,
@@ -1586,6 +1616,8 @@
       "est": false,
       "projPA": 585,
       "score2026_neutral": 8.8,
+      "scoreDyn_neutral": 10.0,
+      "score2028_neutral": 10.0,
       "projStats": {
         "R": 75,
         "H": 144,
@@ -1712,6 +1744,8 @@
       "est": false,
       "projPA": 598,
       "score2026_neutral": 9.1,
+      "scoreDyn_neutral": 10.0,
+      "score2028_neutral": 9.9,
       "projStats": {
         "R": 82,
         "H": 135,
@@ -1840,6 +1874,8 @@
       "est": false,
       "projPA": 642,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 9.3,
+      "score2028_neutral": 8.8,
       "projStats": {
         "R": 87,
         "H": 143,
@@ -1905,6 +1941,8 @@
       "est": false,
       "projPA": 607,
       "score2026_neutral": 9.7,
+      "scoreDyn_neutral": 9.0,
+      "score2028_neutral": 8.6,
       "projStats": {
         "R": 82,
         "H": 138,
@@ -2097,6 +2135,8 @@
       "est": false,
       "projPA": 587,
       "score2026_neutral": 8.1,
+      "scoreDyn_neutral": 8.9,
+      "score2028_neutral": 8.5,
       "projStats": {
         "R": 75,
         "H": 115,
@@ -2286,6 +2326,8 @@
       "est": false,
       "projPA": 616,
       "score2026_neutral": 9.1,
+      "scoreDyn_neutral": 9.1,
+      "score2028_neutral": 8.6,
       "projStats": {
         "R": 78,
         "H": 145,
@@ -2476,6 +2518,8 @@
       "est": false,
       "projPA": 560,
       "score2026_neutral": 8.9,
+      "scoreDyn_neutral": 9.1,
+      "score2028_neutral": 8.7,
       "projStats": {
         "R": 72,
         "H": 133,
@@ -2540,6 +2584,8 @@
       "est": false,
       "projPA": 612,
       "score2026_neutral": 8.3,
+      "scoreDyn_neutral": 10.0,
+      "score2028_neutral": 9.5,
       "projStats": {
         "R": 77,
         "H": 149,
@@ -2668,6 +2714,8 @@
       "est": false,
       "projPA": 651,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 8.7,
+      "score2028_neutral": 8.6,
       "projStats": {
         "R": 88,
         "H": 144,
@@ -2733,6 +2781,8 @@
       "est": false,
       "projPA": 624,
       "score2026_neutral": 9.0,
+      "scoreDyn_neutral": 9.0,
+      "score2028_neutral": 8.5,
       "projStats": {
         "R": 86,
         "H": 132,
@@ -2797,6 +2847,8 @@
       "est": false,
       "projPA": 601,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 8.7,
+      "score2028_neutral": 8.6,
       "projStats": {
         "R": 90,
         "H": 146,
@@ -3427,6 +3479,8 @@
       "est": false,
       "projPA": 603,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 8.0,
+      "score2028_neutral": 8.2,
       "projStats": {
         "R": 82,
         "H": 147,
@@ -3491,6 +3545,8 @@
       "est": false,
       "projPA": 598,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 8.0,
+      "score2028_neutral": 8.2,
       "projStats": {
         "R": 82,
         "H": 140,
@@ -3556,6 +3612,8 @@
       "est": false,
       "projPA": 626,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 8.0,
+      "score2028_neutral": 8.2,
       "projStats": {
         "R": 96,
         "H": 119,
@@ -3744,6 +3802,8 @@
       "est": false,
       "projPA": 570,
       "score2026_neutral": 8.7,
+      "scoreDyn_neutral": 8.7,
+      "score2028_neutral": 8.3,
       "projStats": {
         "R": 71,
         "H": 136,
@@ -3927,6 +3987,8 @@
       "est": false,
       "projPA": 584,
       "score2026_neutral": 9.0,
+      "scoreDyn_neutral": 9.2,
+      "score2028_neutral": 8.8,
       "projStats": {
         "R": 72,
         "H": 154,
@@ -4111,6 +4173,8 @@
       "est": false,
       "projPA": 573,
       "score2026_neutral": 8.6,
+      "scoreDyn_neutral": 8.3,
+      "score2028_neutral": 7.9,
       "projStats": {
         "R": 72,
         "H": 136,
@@ -4360,6 +4424,8 @@
       "est": false,
       "projPA": 499,
       "score2026_neutral": 7.3,
+      "scoreDyn_neutral": 8.8,
+      "score2028_neutral": 8.4,
       "projStats": {
         "R": 62,
         "H": 116,
@@ -4423,6 +4489,8 @@
       "est": false,
       "projPA": 462,
       "score2026_neutral": 7.0,
+      "scoreDyn_neutral": 8.4,
+      "score2028_neutral": 8.0,
       "projStats": {
         "R": 60,
         "H": 107,
@@ -4548,6 +4616,8 @@
       "est": false,
       "projPA": 492,
       "score2026_neutral": 7.7,
+      "scoreDyn_neutral": 8.9,
+      "score2028_neutral": 8.4,
       "projStats": {
         "R": 60,
         "H": 127,
@@ -4614,6 +4684,8 @@
       "est": false,
       "projPA": 540,
       "score2026_neutral": 8.2,
+      "scoreDyn_neutral": 8.6,
+      "score2028_neutral": 8.4,
       "projStats": {
         "R": 66,
         "H": 137,
@@ -4804,6 +4876,8 @@
       "est": false,
       "projPA": 586,
       "score2026_neutral": 8.6,
+      "scoreDyn_neutral": 8.8,
+      "score2028_neutral": 8.4,
       "projStats": {
         "R": 74,
         "H": 137,
@@ -4928,6 +5002,8 @@
       "est": false,
       "projPA": 593,
       "score2026_neutral": 8.2,
+      "scoreDyn_neutral": 9.4,
+      "score2028_neutral": 8.9,
       "projStats": {
         "R": 80,
         "H": 137,
@@ -5046,6 +5122,8 @@
       "est": false,
       "projPA": 514,
       "score2026_neutral": 6.2,
+      "scoreDyn_neutral": 8.8,
+      "score2028_neutral": 7.1,
       "projStats": {
         "R": 58,
         "H": 113,
@@ -5415,6 +5493,8 @@
       "est": false,
       "projPA": 492,
       "score2026_neutral": 7.4,
+      "scoreDyn_neutral": 7.5,
+      "score2028_neutral": 7.3,
       "projStats": {
         "R": 68,
         "H": 111,
@@ -5601,6 +5681,8 @@
       "est": false,
       "projPA": 468,
       "score2026_neutral": 6.9,
+      "scoreDyn_neutral": 7.6,
+      "score2028_neutral": 7.3,
       "projStats": {
         "R": 59,
         "H": 110,
@@ -5665,6 +5747,8 @@
       "est": false,
       "projPA": 515,
       "score2026_neutral": 9.0,
+      "scoreDyn_neutral": 7.8,
+      "score2028_neutral": 7.7,
       "projStats": {
         "R": 72,
         "H": 124,
@@ -5728,6 +5812,8 @@
       "est": false,
       "projPA": 628,
       "score2026_neutral": 7.7,
+      "scoreDyn_neutral": 9.2,
+      "score2028_neutral": 8.8,
       "projStats": {
         "R": 71,
         "H": 149,
@@ -5794,6 +5880,8 @@
       "est": false,
       "projPA": 545,
       "score2026_neutral": 7.9,
+      "scoreDyn_neutral": 8.1,
+      "score2028_neutral": 7.7,
       "projStats": {
         "R": 69,
         "H": 116,
@@ -6045,6 +6133,8 @@
       "est": false,
       "projPA": 633,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 7.2,
+      "score2028_neutral": 7.8,
       "projStats": {
         "R": 108,
         "H": 143,
@@ -6112,6 +6202,8 @@
       "est": false,
       "projPA": 594,
       "score2026_neutral": 9.6,
+      "scoreDyn_neutral": 7.5,
+      "score2028_neutral": 10.0,
       "projStats": {
         "R": 82,
         "H": 147,
@@ -6177,6 +6269,8 @@
       "est": false,
       "projPA": 500,
       "score2026_neutral": 8.0,
+      "scoreDyn_neutral": 8.0,
+      "score2028_neutral": 9.5,
       "projStats": {
         "R": 70,
         "H": 112,
@@ -6301,6 +6395,8 @@
       "est": false,
       "projPA": 594,
       "score2026_neutral": 9.3,
+      "scoreDyn_neutral": 7.4,
+      "score2028_neutral": 7.6,
       "projStats": {
         "R": 75,
         "H": 144,
@@ -6425,6 +6521,8 @@
       "est": false,
       "projPA": 558,
       "score2026_neutral": 8.5,
+      "scoreDyn_neutral": 7.8,
+      "score2028_neutral": 9.7,
       "projStats": {
         "R": 78,
         "H": 123,
@@ -6491,6 +6589,8 @@
       "est": false,
       "projPA": 620,
       "score2026_neutral": 8.9,
+      "scoreDyn_neutral": 9.8,
+      "score2028_neutral": 9.4,
       "projStats": {
         "R": 81,
         "H": 153,
@@ -6556,6 +6656,8 @@
       "est": false,
       "projPA": 608,
       "score2026_neutral": 9.3,
+      "scoreDyn_neutral": 8.1,
+      "score2028_neutral": 8.0,
       "projStats": {
         "R": 89,
         "H": 139,
@@ -6676,6 +6778,8 @@
       "est": false,
       "projPA": 474,
       "score2026_neutral": 7.3,
+      "scoreDyn_neutral": 8.2,
+      "score2028_neutral": 8.4,
       "projStats": {
         "R": 56,
         "H": 131,
@@ -6990,6 +7094,8 @@
       "est": false,
       "projPA": 591,
       "score2026_neutral": 9.5,
+      "scoreDyn_neutral": 7.6,
+      "score2028_neutral": 7.8,
       "projStats": {
         "R": 84,
         "H": 141,
@@ -7304,6 +7410,8 @@
       "est": false,
       "projPA": 511,
       "score2026_neutral": 7.1,
+      "scoreDyn_neutral": 9.2,
+      "score2028_neutral": 8.7,
       "projStats": {
         "R": 72,
         "H": 114,
@@ -7429,6 +7537,8 @@
       "est": false,
       "projPA": 638,
       "score2026_neutral": 8.8,
+      "scoreDyn_neutral": 7.7,
+      "score2028_neutral": 7.5,
       "projStats": {
         "R": 85,
         "H": 144,
@@ -7556,6 +7666,8 @@
       "est": false,
       "projPA": 485,
       "score2026_neutral": 6.6,
+      "scoreDyn_neutral": 7.6,
+      "score2028_neutral": 7.2,
       "projStats": {
         "R": 60,
         "H": 113,
@@ -7863,6 +7975,8 @@
       "est": false,
       "projPA": 557,
       "score2026_neutral": 7.9,
+      "scoreDyn_neutral": 7.3,
+      "score2028_neutral": 7.0,
       "projStats": {
         "R": 70,
         "H": 124,
@@ -8043,6 +8157,8 @@
       "est": false,
       "projPA": 464,
       "score2026_neutral": 6.7,
+      "scoreDyn_neutral": 7.0,
+      "score2028_neutral": 6.8,
       "projStats": {
         "R": 62,
         "H": 100,
@@ -8164,6 +8280,8 @@
       "est": false,
       "projPA": 517,
       "score2026_neutral": 7.2,
+      "scoreDyn_neutral": 7.3,
+      "score2028_neutral": 7.1,
       "projStats": {
         "R": 71,
         "H": 112,
@@ -8529,6 +8647,8 @@
       "est": false,
       "projPA": 545,
       "score2026_neutral": 7.3,
+      "scoreDyn_neutral": 8.8,
+      "score2028_neutral": 8.4,
       "projStats": {
         "R": 70,
         "H": 126,
@@ -8592,6 +8712,8 @@
       "est": false,
       "projPA": 620,
       "score2026_neutral": 7.4,
+      "scoreDyn_neutral": 7.2,
+      "score2028_neutral": 6.8,
       "projStats": {
         "R": 74,
         "H": 126,
@@ -8655,6 +8777,8 @@
       "est": false,
       "projPA": 485,
       "score2026_neutral": 6.9,
+      "scoreDyn_neutral": 7.9,
+      "score2028_neutral": 7.5,
       "projStats": {
         "R": 64,
         "H": 115,
@@ -8718,6 +8842,8 @@
       "est": false,
       "projPA": 569,
       "score2026_neutral": 6.3,
+      "scoreDyn_neutral": 6.9,
+      "score2028_neutral": 6.6,
       "projStats": {
         "R": 67,
         "H": 113,
@@ -9197,6 +9323,8 @@
       "est": false,
       "projPA": 565,
       "score2026_neutral": 8.0,
+      "scoreDyn_neutral": 8.2,
+      "score2028_neutral": 7.8,
       "projStats": {
         "R": 70,
         "H": 140,
@@ -9260,6 +9388,8 @@
       "est": false,
       "projPA": 610,
       "score2026_neutral": 7.9,
+      "scoreDyn_neutral": 6.9,
+      "score2028_neutral": 6.8,
       "projStats": {
         "R": 80,
         "H": 130,
@@ -9323,6 +9453,8 @@
       "est": false,
       "projPA": 459,
       "score2026_neutral": 6.2,
+      "scoreDyn_neutral": 6.5,
+      "score2028_neutral": 6.3,
       "projStats": {
         "R": 57,
         "H": 98,
@@ -9508,6 +9640,8 @@
       "est": false,
       "projPA": 576,
       "score2026_neutral": 7.9,
+      "scoreDyn_neutral": 7.9,
+      "score2028_neutral": 7.5,
       "projStats": {
         "R": 74,
         "H": 133,
@@ -9753,6 +9887,8 @@
       "est": false,
       "projPA": 613,
       "score2026_neutral": 7.8,
+      "scoreDyn_neutral": 8.6,
+      "score2028_neutral": 8.2,
       "projStats": {
         "R": 76,
         "H": 141,
@@ -9817,6 +9953,8 @@
       "est": false,
       "projPA": 494,
       "score2026_neutral": 7.3,
+      "scoreDyn_neutral": 8.0,
+      "score2028_neutral": 7.7,
       "projStats": {
         "R": 65,
         "H": 117,
@@ -9882,6 +10020,8 @@
       "est": false,
       "projPA": 629,
       "score2026_neutral": 7.7,
+      "scoreDyn_neutral": 7.2,
+      "score2028_neutral": 6.8,
       "projStats": {
         "R": 79,
         "H": 130,
@@ -10363,6 +10503,8 @@
       "est": false,
       "projPA": 609,
       "score2026_neutral": 9.6,
+      "scoreDyn_neutral": 7.7,
+      "score2028_neutral": 7.9,
       "projStats": {
         "R": 85,
         "H": 156,
@@ -10428,6 +10570,8 @@
       "est": false,
       "projPA": 548,
       "score2026_neutral": 7.9,
+      "scoreDyn_neutral": 6.3,
+      "score2028_neutral": 6.5,
       "projStats": {
         "R": 68,
         "H": 128,
@@ -10553,6 +10697,8 @@
       "est": false,
       "projPA": 500,
       "score2026_neutral": 6.6,
+      "scoreDyn_neutral": 6.4,
+      "score2028_neutral": 6.1,
       "projStats": {
         "R": 60,
         "H": 114,
@@ -10680,6 +10826,8 @@
       "est": false,
       "projPA": 488,
       "score2026_neutral": 7.5,
+      "scoreDyn_neutral": 6.5,
+      "score2028_neutral": 6.4,
       "projStats": {
         "R": 71,
         "H": 108,
@@ -10866,6 +11014,8 @@
       "est": false,
       "projPA": 512,
       "score2026_neutral": 7.0,
+      "scoreDyn_neutral": 7.4,
+      "score2028_neutral": 7.1,
       "projStats": {
         "R": 71,
         "H": 106,
@@ -10929,6 +11079,8 @@
       "est": false,
       "projPA": 481,
       "score2026_neutral": 6.8,
+      "scoreDyn_neutral": 7.1,
+      "score2028_neutral": 6.9,
       "projStats": {
         "R": 55,
         "H": 123,
@@ -10993,6 +11145,8 @@
       "est": false,
       "projPA": 567,
       "score2026_neutral": 7.9,
+      "scoreDyn_neutral": 5.7,
+      "score2028_neutral": 6.2,
       "projStats": {
         "R": 72,
         "H": 118,
@@ -11118,6 +11272,8 @@
       "est": false,
       "projPA": 637,
       "score2026_neutral": 7.8,
+      "scoreDyn_neutral": 7.8,
+      "score2028_neutral": 7.4,
       "projStats": {
         "R": 80,
         "H": 144,
@@ -11361,6 +11517,8 @@
       "est": false,
       "projPA": 412,
       "score2026_neutral": 5.9,
+      "scoreDyn_neutral": 7.7,
+      "score2028_neutral": 7.2,
       "projStats": {
         "R": 50,
         "H": 100,
@@ -11544,6 +11702,8 @@
       "est": false,
       "projPA": 605,
       "score2026_neutral": 7.6,
+      "scoreDyn_neutral": 7.1,
+      "score2028_neutral": 6.7,
       "projStats": {
         "R": 72,
         "H": 137,
@@ -11610,6 +11770,8 @@
       "est": false,
       "projPA": 641,
       "score2026_neutral": 8.6,
+      "scoreDyn_neutral": 6.9,
+      "score2028_neutral": 7.1,
       "projStats": {
         "R": 84,
         "H": 144,
@@ -11674,6 +11836,8 @@
       "est": false,
       "projPA": 611,
       "score2026_neutral": 9.6,
+      "scoreDyn_neutral": 6.9,
+      "score2028_neutral": 7.5,
       "projStats": {
         "R": 82,
         "H": 154,
@@ -11864,6 +12028,8 @@
       "est": false,
       "projPA": 516,
       "score2026_neutral": 6.5,
+      "scoreDyn_neutral": 6.6,
+      "score2028_neutral": 6.4,
       "projStats": {
         "R": 60,
         "H": 114,
@@ -11990,6 +12156,8 @@
       "est": false,
       "projPA": 562,
       "score2026_neutral": 7.7,
+      "scoreDyn_neutral": 8.5,
+      "score2028_neutral": 8.1,
       "projStats": {
         "R": 77,
         "H": 130,
@@ -12051,6 +12219,8 @@
       "est": false,
       "projPA": 525,
       "score2026_neutral": 6.5,
+      "scoreDyn_neutral": 7.2,
+      "score2028_neutral": 6.8,
       "projStats": {
         "R": 61,
         "H": 120,
@@ -12117,6 +12287,8 @@
       "est": false,
       "projPA": 631,
       "score2026_neutral": 7.6,
+      "scoreDyn_neutral": 7.1,
+      "score2028_neutral": 6.7,
       "projStats": {
         "R": 76,
         "H": 126,
@@ -12418,6 +12590,8 @@
       "est": false,
       "projPA": 502,
       "score2026_neutral": 6.3,
+      "scoreDyn_neutral": 7.2,
+      "score2028_neutral": 6.9,
       "projStats": {
         "R": 57,
         "H": 120,
@@ -12775,6 +12949,8 @@
       "est": false,
       "projPA": 472,
       "score2026_neutral": 6.4,
+      "scoreDyn_neutral": 6.7,
+      "score2028_neutral": 6.5,
       "projStats": {
         "R": 62,
         "H": 99,
@@ -13080,6 +13256,8 @@
       "est": false,
       "projPA": 480,
       "score2026_neutral": 6.1,
+      "scoreDyn_neutral": 7.0,
+      "score2028_neutral": 6.6,
       "projStats": {
         "R": 60,
         "H": 105,
@@ -13198,6 +13376,8 @@
       "est": false,
       "projPA": 472,
       "score2026_neutral": 6.2,
+      "scoreDyn_neutral": 6.5,
+      "score2028_neutral": 6.3,
       "projStats": {
         "R": 56,
         "H": 108,
@@ -13260,6 +13440,8 @@
       "est": false,
       "projPA": 508,
       "score2026_neutral": 5.0,
+      "scoreDyn_neutral": 6.0,
+      "score2028_neutral": 5.7,
       "projStats": {
         "R": 58,
         "H": 99,
@@ -13502,6 +13684,8 @@
       "est": false,
       "projPA": 532,
       "score2026_neutral": 7.0,
+      "scoreDyn_neutral": 7.0,
+      "score2028_neutral": 6.6,
       "projStats": {
         "R": 61,
         "H": 133,
@@ -13565,6 +13749,8 @@
       "est": false,
       "projPA": 544,
       "score2026_neutral": 6.7,
+      "scoreDyn_neutral": 6.8,
+      "score2028_neutral": 6.6,
       "projStats": {
         "R": 67,
         "H": 121,
@@ -13689,6 +13875,8 @@
       "est": false,
       "projPA": 460,
       "score2026_neutral": 6.5,
+      "scoreDyn_neutral": 7.2,
+      "score2028_neutral": 6.8,
       "projStats": {
         "R": 52,
         "H": 117,
@@ -13875,6 +14063,8 @@
       "est": false,
       "projPA": 478,
       "score2026_neutral": 6.0,
+      "scoreDyn_neutral": 7.2,
+      "score2028_neutral": 6.9,
       "projStats": {
         "R": 55,
         "H": 111,
@@ -14061,6 +14251,8 @@
       "est": false,
       "projPA": 658,
       "score2026_neutral": 10.0,
+      "scoreDyn_neutral": 5.2,
+      "score2028_neutral": 7.2,
       "projStats": {
         "R": 88,
         "H": 160,
@@ -14117,6 +14309,8 @@
       "est": false,
       "projPA": 548,
       "score2026_neutral": 6.9,
+      "scoreDyn_neutral": 6.9,
+      "score2028_neutral": 6.6,
       "projStats": {
         "R": 63,
         "H": 128,
@@ -14368,6 +14562,8 @@
       "est": false,
       "projPA": 432,
       "score2026_neutral": 5.5,
+      "scoreDyn_neutral": 6.1,
+      "score2028_neutral": 5.8,
       "projStats": {
         "R": 53,
         "H": 97,
@@ -14667,6 +14863,8 @@
       "est": false,
       "projPA": 494,
       "score2026_neutral": 6.0,
+      "scoreDyn_neutral": 6.1,
+      "score2028_neutral": 5.9,
       "projStats": {
         "R": 59,
         "H": 105,
@@ -14728,6 +14926,8 @@
       "est": false,
       "projPA": 421,
       "score2026_neutral": 5.8,
+      "scoreDyn_neutral": 5.9,
+      "score2028_neutral": 5.7,
       "projStats": {
         "R": 53,
         "H": 97,
@@ -15248,6 +15448,8 @@
       "est": false,
       "projPA": 420,
       "score2026_neutral": 5.3,
+      "scoreDyn_neutral": 6.4,
+      "score2028_neutral": 6.1,
       "projStats": {
         "R": 50,
         "H": 95,
@@ -15966,6 +16168,8 @@
       "est": false,
       "projPA": 592,
       "score2026_neutral": 7.3,
+      "scoreDyn_neutral": 5.8,
+      "score2028_neutral": 6.0,
       "projStats": {
         "R": 71,
         "H": 122,
@@ -16088,6 +16292,8 @@
       "est": false,
       "projPA": 395,
       "score2026_neutral": 4.9,
+      "scoreDyn_neutral": 5.9,
+      "score2028_neutral": 5.6,
       "projStats": {
         "R": 48,
         "H": 84,
@@ -16148,6 +16354,8 @@
       "est": false,
       "projPA": 477,
       "score2026_neutral": 5.8,
+      "scoreDyn_neutral": 7.5,
+      "score2028_neutral": 7.1,
       "projStats": {
         "R": 65,
         "H": 107,
@@ -16205,6 +16413,8 @@
       "est": false,
       "projPA": 420,
       "score2026_neutral": 5.9,
+      "scoreDyn_neutral": 6.2,
+      "score2028_neutral": 6.0,
       "projStats": {
         "R": 54,
         "H": 101,
@@ -16325,6 +16535,8 @@
       "est": false,
       "projPA": 591,
       "score2026_neutral": 8.1,
+      "scoreDyn_neutral": 8.1,
+      "score2028_neutral": 7.7,
       "projStats": {
         "R": 72,
         "H": 167,
@@ -16389,6 +16601,8 @@
       "est": false,
       "projPA": 518,
       "score2026_neutral": 5.7,
+      "scoreDyn_neutral": 5.7,
+      "score2028_neutral": 5.4,
       "projStats": {
         "R": 65,
         "H": 105,
@@ -16446,6 +16660,8 @@
       "est": false,
       "projPA": 446,
       "score2026_neutral": 5.8,
+      "scoreDyn_neutral": 7.2,
+      "score2028_neutral": 6.9,
       "projStats": {
         "R": 49,
         "H": 110,
@@ -16510,6 +16726,8 @@
       "est": false,
       "projPA": 593,
       "score2026_neutral": 7.7,
+      "scoreDyn_neutral": 7.9,
+      "score2028_neutral": 7.5,
       "projStats": {
         "R": 76,
         "H": 146,
@@ -16753,6 +16971,8 @@
       "est": false,
       "projPA": 429,
       "score2026_neutral": 5.8,
+      "scoreDyn_neutral": 6.1,
+      "score2028_neutral": 5.9,
       "projStats": {
         "R": 54,
         "H": 93,
@@ -16876,6 +17096,8 @@
       "est": false,
       "projPA": 489,
       "score2026_neutral": 6.1,
+      "scoreDyn_neutral": 5.7,
+      "score2028_neutral": 5.4,
       "projStats": {
         "R": 63,
         "H": 106,
@@ -16938,6 +17160,8 @@
       "est": false,
       "projPA": 585,
       "score2026_neutral": 7.7,
+      "scoreDyn_neutral": 7.7,
+      "score2028_neutral": 7.3,
       "projStats": {
         "R": 64,
         "H": 151,
@@ -16997,6 +17221,8 @@
       "est": false,
       "projPA": 412,
       "score2026_neutral": 4.9,
+      "scoreDyn_neutral": 5.6,
+      "score2028_neutral": 5.3,
       "projStats": {
         "R": 51,
         "H": 85,
@@ -17298,6 +17524,8 @@
       "est": false,
       "projPA": 474,
       "score2026_neutral": 6.1,
+      "scoreDyn_neutral": 7.6,
+      "score2028_neutral": 7.2,
       "projStats": {
         "R": 55,
         "H": 111,
@@ -17589,6 +17817,8 @@
       "est": false,
       "projPA": 472,
       "score2026_neutral": 6.3,
+      "scoreDyn_neutral": 5.9,
+      "score2028_neutral": 5.6,
       "projStats": {
         "R": 61,
         "H": 103,
@@ -17940,6 +18170,8 @@
       "est": false,
       "projPA": 445,
       "score2026_neutral": 6.1,
+      "scoreDyn_neutral": 6.4,
+      "score2028_neutral": 6.2,
       "projStats": {
         "R": 53,
         "H": 107,
@@ -18125,6 +18357,8 @@
       "est": false,
       "projPA": 485,
       "score2026_neutral": 6.4,
+      "scoreDyn_neutral": 6.0,
+      "score2028_neutral": 5.7,
       "projStats": {
         "R": 58,
         "H": 116,
@@ -18370,6 +18604,8 @@
       "est": false,
       "projPA": 438,
       "score2026_neutral": 5.3,
+      "scoreDyn_neutral": 5.8,
+      "score2028_neutral": 5.6,
       "projStats": {
         "R": 53,
         "H": 97,
@@ -18491,6 +18727,8 @@
       "est": false,
       "projPA": 478,
       "score2026_neutral": 6.0,
+      "scoreDyn_neutral": 6.1,
+      "score2028_neutral": 5.9,
       "projStats": {
         "R": 56,
         "H": 106,
@@ -18731,6 +18969,8 @@
       "est": false,
       "projPA": 544,
       "score2026_neutral": 6.8,
+      "scoreDyn_neutral": 6.8,
+      "score2028_neutral": 6.5,
       "projStats": {
         "R": 68,
         "H": 131,
@@ -18788,6 +19028,8 @@
       "est": false,
       "projPA": 360,
       "score2026_neutral": 4.6,
+      "scoreDyn_neutral": 5.8,
+      "score2028_neutral": 5.4,
       "projStats": {
         "R": 44,
         "H": 83,
@@ -19392,6 +19634,8 @@
       "est": false,
       "projPA": 494,
       "score2026_neutral": 5.4,
+      "scoreDyn_neutral": 5.5,
+      "score2028_neutral": 5.3,
       "projStats": {
         "R": 54,
         "H": 111,
@@ -19450,6 +19694,8 @@
       "est": false,
       "projPA": 394,
       "score2026_neutral": 5.3,
+      "scoreDyn_neutral": 5.4,
+      "score2028_neutral": 5.2,
       "projStats": {
         "R": 48,
         "H": 94,
@@ -19572,6 +19818,8 @@
       "est": false,
       "projPA": 608,
       "score2026_neutral": 9.1,
+      "scoreDyn_neutral": 4.7,
+      "score2028_neutral": 6.5,
       "projStats": {
         "R": 86,
         "H": 138,
@@ -19631,6 +19879,8 @@
       "est": false,
       "projPA": 419,
       "score2026_neutral": 5.0,
+      "scoreDyn_neutral": 6.0,
+      "score2028_neutral": 5.7,
       "projStats": {
         "R": 49,
         "H": 97,
@@ -19809,6 +20059,8 @@
       "est": false,
       "projPA": 468,
       "score2026_neutral": 6.0,
+      "scoreDyn_neutral": 5.2,
+      "score2028_neutral": 5.1,
       "projStats": {
         "R": 58,
         "H": 103,
@@ -19992,6 +20244,8 @@
       "est": false,
       "projPA": 527,
       "score2026_neutral": 6.3,
+      "scoreDyn_neutral": 6.4,
+      "score2028_neutral": 6.2,
       "projStats": {
         "R": 60,
         "H": 121,
@@ -20834,6 +21088,8 @@
       "est": false,
       "projPA": 557,
       "score2026_neutral": 7.2,
+      "scoreDyn_neutral": 7.9,
+      "score2028_neutral": 7.6,
       "projStats": {
         "R": 67,
         "H": 142,
@@ -20956,6 +21212,8 @@
       "est": false,
       "projPA": 500,
       "score2026_neutral": 5.9,
+      "scoreDyn_neutral": 4.7,
+      "score2028_neutral": 4.8,
       "projStats": {
         "R": 58,
         "H": 107,
@@ -21192,6 +21450,8 @@
       "est": false,
       "projPA": 406,
       "score2026_neutral": 5.6,
+      "scoreDyn_neutral": 6.2,
+      "score2028_neutral": 5.9,
       "projStats": {
         "R": 48,
         "H": 101,
@@ -21312,6 +21572,8 @@
       "est": false,
       "projPA": 668,
       "score2026_neutral": 7.6,
+      "scoreDyn_neutral": 4.8,
+      "score2028_neutral": 5.6,
       "projStats": {
         "R": 79,
         "H": 143,
@@ -21377,6 +21639,8 @@
       "est": false,
       "projPA": 563,
       "score2026_neutral": 7.8,
+      "scoreDyn_neutral": 4.1,
+      "score2028_neutral": 5.6,
       "projStats": {
         "R": 68,
         "H": 133,
@@ -21436,6 +21700,8 @@
       "est": false,
       "projPA": 486,
       "score2026_neutral": 5.4,
+      "scoreDyn_neutral": 5.5,
+      "score2028_neutral": 5.3,
       "projStats": {
         "R": 54,
         "H": 109,
@@ -21610,6 +21876,8 @@
       "est": false,
       "projPA": 441,
       "score2026_neutral": 5.0,
+      "scoreDyn_neutral": 5.8,
+      "score2028_neutral": 5.4,
       "projStats": {
         "R": 51,
         "H": 99,
@@ -21730,6 +21998,8 @@
       "est": false,
       "projPA": 554,
       "score2026_neutral": 7.2,
+      "scoreDyn_neutral": 5.8,
+      "score2028_neutral": 5.9,
       "projStats": {
         "R": 68,
         "H": 134,
@@ -21846,6 +22116,8 @@
       "est": false,
       "projPA": 477,
       "score2026_neutral": 5.3,
+      "scoreDyn_neutral": 5.4,
+      "score2028_neutral": 5.2,
       "projStats": {
         "R": 56,
         "H": 100,
@@ -22207,6 +22479,8 @@
       "est": false,
       "projPA": 474,
       "score2026_neutral": 5.4,
+      "scoreDyn_neutral": 5.5,
+      "score2028_neutral": 5.3,
       "projStats": {
         "R": 57,
         "H": 101,
@@ -22265,6 +22539,8 @@
       "est": false,
       "projPA": 442,
       "score2026_neutral": 5.0,
+      "scoreDyn_neutral": 5.1,
+      "score2028_neutral": 4.9,
       "projStats": {
         "R": 48,
         "H": 104,
@@ -22381,6 +22657,8 @@
       "est": false,
       "projPA": 524,
       "score2026_neutral": 5.7,
+      "scoreDyn_neutral": 6.0,
+      "score2028_neutral": 5.8,
       "projStats": {
         "R": 58,
         "H": 120,
@@ -22681,6 +22959,8 @@
       "est": false,
       "projPA": 478,
       "score2026_neutral": 5.3,
+      "scoreDyn_neutral": 6.4,
+      "score2028_neutral": 6.1,
       "projStats": {
         "R": 62,
         "H": 106,
@@ -22798,6 +23078,8 @@
       "est": false,
       "projPA": 445,
       "score2026_neutral": 5.6,
+      "scoreDyn_neutral": 6.2,
+      "score2028_neutral": 5.9,
       "projStats": {
         "R": 50,
         "H": 105,
@@ -22857,6 +23139,8 @@
       "est": false,
       "projPA": 471,
       "score2026_neutral": 4.8,
+      "scoreDyn_neutral": 5.3,
+      "score2028_neutral": 5.1,
       "projStats": {
         "R": 54,
         "H": 97,
@@ -22917,6 +23201,8 @@
       "est": false,
       "projPA": 402,
       "score2026_neutral": 4.5,
+      "scoreDyn_neutral": 4.6,
+      "score2028_neutral": 4.4,
       "projStats": {
         "R": 49,
         "H": 79,
@@ -22977,6 +23263,8 @@
       "est": false,
       "projPA": 485,
       "score2026_neutral": 5.7,
+      "scoreDyn_neutral": 6.0,
+      "score2028_neutral": 5.8,
       "projStats": {
         "R": 50,
         "H": 119,
@@ -23152,6 +23440,8 @@
       "est": false,
       "projPA": 524,
       "score2026_neutral": 5.5,
+      "scoreDyn_neutral": 6.3,
+      "score2028_neutral": 6.0,
       "projStats": {
         "R": 68,
         "H": 104,
@@ -23464,6 +23754,8 @@
       "est": false,
       "projPA": 589,
       "score2026_neutral": 8.3,
+      "scoreDyn_neutral": 4.3,
+      "score2028_neutral": 5.9,
       "projStats": {
         "R": 79,
         "H": 141,
@@ -23522,6 +23814,8 @@
       "est": false,
       "projPA": 477,
       "score2026_neutral": 4.7,
+      "scoreDyn_neutral": 4.7,
+      "score2028_neutral": 4.5,
       "projStats": {
         "R": 64,
         "H": 89,
@@ -23638,6 +23932,8 @@
       "est": false,
       "projPA": 486,
       "score2026_neutral": 6.0,
+      "scoreDyn_neutral": 4.8,
+      "score2028_neutral": 4.9,
       "projStats": {
         "R": 61,
         "H": 107,
@@ -23869,6 +24165,8 @@
       "est": false,
       "projPA": 440,
       "score2026_neutral": 4.5,
+      "scoreDyn_neutral": 5.0,
+      "score2028_neutral": 4.7,
       "projStats": {
         "R": 51,
         "H": 89,
@@ -23930,6 +24228,8 @@
       "est": false,
       "projPA": 449,
       "score2026_neutral": 5.8,
+      "scoreDyn_neutral": 5.0,
+      "score2028_neutral": 5.0,
       "projStats": {
         "R": 52,
         "H": 107,
@@ -23989,6 +24289,8 @@
       "est": false,
       "projPA": 444,
       "score2026_neutral": 3.9,
+      "scoreDyn_neutral": 4.3,
+      "score2028_neutral": 4.1,
       "projStats": {
         "R": 49,
         "H": 85,
@@ -24217,6 +24519,8 @@
       "est": false,
       "projPA": 467,
       "score2026_neutral": 5.6,
+      "scoreDyn_neutral": 5.9,
+      "score2028_neutral": 5.7,
       "projStats": {
         "R": 52,
         "H": 115,
@@ -24516,6 +24820,8 @@
       "est": false,
       "projPA": 512,
       "score2026_neutral": 5.7,
+      "scoreDyn_neutral": 5.5,
+      "score2028_neutral": 5.2,
       "projStats": {
         "R": 66,
         "H": 110,
@@ -24631,6 +24937,8 @@
       "est": false,
       "projPA": 451,
       "score2026_neutral": 4.9,
+      "scoreDyn_neutral": 4.9,
+      "score2028_neutral": 4.7,
       "projStats": {
         "R": 53,
         "H": 96,
@@ -24752,6 +25060,8 @@
       "est": false,
       "projPA": 524,
       "score2026_neutral": 5.6,
+      "scoreDyn_neutral": 4.9,
+      "score2028_neutral": 4.8,
       "projStats": {
         "R": 57,
         "H": 113,
@@ -24934,6 +25244,8 @@
       "est": false,
       "projPA": 456,
       "score2026_neutral": 6.0,
+      "scoreDyn_neutral": 4.3,
+      "score2028_neutral": 4.7,
       "projStats": {
         "R": 57,
         "H": 98,
@@ -24993,6 +25305,8 @@
       "est": false,
       "projPA": 441,
       "score2026_neutral": 4.3,
+      "scoreDyn_neutral": 5.2,
+      "score2028_neutral": 4.9,
       "projStats": {
         "R": 46,
         "H": 97,
@@ -25240,6 +25554,8 @@
       "est": false,
       "projPA": 440,
       "score2026_neutral": 4.8,
+      "scoreDyn_neutral": 4.5,
+      "score2028_neutral": 4.2,
       "projStats": {
         "R": 50,
         "H": 96,
@@ -25300,6 +25616,8 @@
       "est": false,
       "projPA": 241,
       "score2026_neutral": 1.0,
+      "scoreDyn_neutral": 1.2,
+      "score2028_neutral": 1.2,
       "projStats": {
         "R": 26,
         "H": 52,
@@ -25421,6 +25739,8 @@
       "est": false,
       "projPA": 434,
       "score2026_neutral": 4.4,
+      "scoreDyn_neutral": 5.1,
+      "score2028_neutral": 4.8,
       "projStats": {
         "R": 48,
         "H": 99,
@@ -25537,6 +25857,8 @@
       "est": false,
       "projPA": 470,
       "score2026_neutral": 6.3,
+      "scoreDyn_neutral": 4.5,
+      "score2028_neutral": 4.9,
       "projStats": {
         "R": 57,
         "H": 106,
@@ -25712,6 +26034,8 @@
       "est": false,
       "projPA": 522,
       "score2026_neutral": 5.9,
+      "scoreDyn_neutral": 3.7,
+      "score2028_neutral": 4.4,
       "projStats": {
         "R": 62,
         "H": 107,
@@ -26004,6 +26328,8 @@
       "est": false,
       "projPA": 437,
       "score2026_neutral": 4.4,
+      "scoreDyn_neutral": 5.1,
+      "score2028_neutral": 4.8,
       "projStats": {
         "R": 46,
         "H": 97,
@@ -26243,6 +26569,8 @@
       "est": false,
       "projPA": 465,
       "score2026_neutral": 5.4,
+      "scoreDyn_neutral": 5.2,
+      "score2028_neutral": 5.0,
       "projStats": {
         "R": 51,
         "H": 119,
@@ -26361,6 +26689,8 @@
       "est": false,
       "projPA": 393,
       "score2026_neutral": 4.3,
+      "scoreDyn_neutral": 5.6,
+      "score2028_neutral": 5.2,
       "projStats": {
         "R": 50,
         "H": 86,
@@ -26424,6 +26754,8 @@
       "est": false,
       "projPA": 456,
       "score2026_neutral": 5.3,
+      "scoreDyn_neutral": 5.8,
+      "score2028_neutral": 5.6,
       "projStats": {
         "R": 50,
         "H": 111,
@@ -26542,6 +26874,8 @@
       "est": false,
       "projPA": 430,
       "score2026_neutral": 5.1,
+      "scoreDyn_neutral": 5.2,
+      "score2028_neutral": 5.0,
       "projStats": {
         "R": 50,
         "H": 97,
@@ -26769,6 +27103,8 @@
       "est": false,
       "projPA": 326,
       "score2026_neutral": 3.2,
+      "scoreDyn_neutral": 4.2,
+      "score2028_neutral": 3.6,
       "projStats": {
         "R": 39,
         "H": 70,
@@ -26950,6 +27286,8 @@
       "est": false,
       "projPA": 476,
       "score2026_neutral": 5.1,
+      "scoreDyn_neutral": 5.1,
+      "score2028_neutral": 4.8,
       "projStats": {
         "R": 52,
         "H": 106,
@@ -27008,6 +27346,8 @@
       "est": false,
       "projPA": 448,
       "score2026_neutral": 4.2,
+      "scoreDyn_neutral": 4.6,
+      "score2028_neutral": 4.4,
       "projStats": {
         "R": 48,
         "H": 97,
@@ -27131,6 +27471,8 @@
       "est": false,
       "projPA": 486,
       "score2026_neutral": 5.2,
+      "scoreDyn_neutral": 6.2,
+      "score2028_neutral": 6.0,
       "projStats": {
         "R": 60,
         "H": 109,
@@ -27307,6 +27649,8 @@
       "est": false,
       "projPA": 428,
       "score2026_neutral": 4.0,
+      "scoreDyn_neutral": 4.6,
+      "score2028_neutral": 4.4,
       "projStats": {
         "R": 49,
         "H": 89,
@@ -27365,6 +27709,8 @@
       "est": false,
       "projPA": 386,
       "score2026_neutral": 3.6,
+      "scoreDyn_neutral": 4.0,
+      "score2028_neutral": 3.8,
       "projStats": {
         "R": 46,
         "H": 78,
@@ -27481,6 +27827,8 @@
       "est": false,
       "projPA": 420,
       "score2026_neutral": 4.5,
+      "scoreDyn_neutral": 4.6,
+      "score2028_neutral": 4.4,
       "projStats": {
         "R": 47,
         "H": 93,
@@ -27537,6 +27885,8 @@
       "est": false,
       "projPA": 525,
       "score2026_neutral": 6.1,
+      "scoreDyn_neutral": 3.8,
+      "score2028_neutral": 4.5,
       "projStats": {
         "R": 58,
         "H": 123,
@@ -27892,6 +28242,8 @@
       "est": false,
       "projPA": 372,
       "score2026_neutral": 3.9,
+      "scoreDyn_neutral": 4.9,
+      "score2028_neutral": 4.6,
       "projStats": {
         "R": 43,
         "H": 79,
@@ -27950,6 +28302,8 @@
       "est": false,
       "projPA": 428,
       "score2026_neutral": 3.5,
+      "scoreDyn_neutral": 4.4,
+      "score2028_neutral": 4.1,
       "projStats": {
         "R": 41,
         "H": 98,
@@ -28133,6 +28487,8 @@
       "est": false,
       "projPA": 480,
       "score2026_neutral": 4.7,
+      "scoreDyn_neutral": 4.9,
+      "score2028_neutral": 4.8,
       "projStats": {
         "R": 53,
         "H": 108,
@@ -28189,6 +28545,8 @@
       "est": false,
       "projPA": 379,
       "score2026_neutral": 4.8,
+      "scoreDyn_neutral": 4.2,
+      "score2028_neutral": 4.1,
       "projStats": {
         "R": 44,
         "H": 94,
@@ -28543,6 +28901,8 @@
       "est": false,
       "projPA": 396,
       "score2026_neutral": 4.3,
+      "scoreDyn_neutral": 4.3,
+      "score2028_neutral": 4.1,
       "projStats": {
         "R": 47,
         "H": 86,
@@ -28658,6 +29018,8 @@
       "est": false,
       "projPA": 441,
       "score2026_neutral": 4.6,
+      "scoreDyn_neutral": 4.3,
+      "score2028_neutral": 4.1,
       "projStats": {
         "R": 47,
         "H": 100,
@@ -28717,6 +29079,8 @@
       "est": false,
       "projPA": 412,
       "score2026_neutral": 4.4,
+      "scoreDyn_neutral": 4.5,
+      "score2028_neutral": 4.3,
       "projStats": {
         "R": 47,
         "H": 91,
@@ -28777,6 +29141,8 @@
       "est": false,
       "projPA": 369,
       "score2026_neutral": 4.1,
+      "scoreDyn_neutral": 4.2,
+      "score2028_neutral": 4.0,
       "projStats": {
         "R": 43,
         "H": 82,
@@ -28836,6 +29202,8 @@
       "est": false,
       "projPA": 410,
       "score2026_neutral": 4.1,
+      "scoreDyn_neutral": 4.2,
+      "score2028_neutral": 4.0,
       "projStats": {
         "R": 47,
         "H": 85,
@@ -28954,6 +29322,8 @@
       "est": false,
       "projPA": 412,
       "score2026_neutral": 4.8,
+      "scoreDyn_neutral": 3.5,
+      "score2028_neutral": 3.7,
       "projStats": {
         "R": 52,
         "H": 81,
@@ -29014,6 +29384,8 @@
       "est": false,
       "projPA": 545,
       "score2026_neutral": 4.9,
+      "scoreDyn_neutral": 4.3,
+      "score2028_neutral": 4.2,
       "projStats": {
         "R": 59,
         "H": 111,
@@ -29073,6 +29445,8 @@
       "est": false,
       "projPA": 366,
       "score2026_neutral": 3.9,
+      "scoreDyn_neutral": 5.1,
+      "score2028_neutral": 3.9,
       "projStats": {
         "R": 41,
         "H": 86,
@@ -29130,7 +29504,9 @@
       "il": true,
       "est": false,
       "projPA": 483,
-      "score2026_neutral": 4.8,
+      "score2026_neutral": 1.9,
+      "scoreDyn_neutral": 5.3,
+      "score2028_neutral": 5.1,
       "projStats": {
         "R": 59,
         "H": 99,
@@ -29374,6 +29750,8 @@
       "est": false,
       "projPA": 453,
       "score2026_neutral": 5.5,
+      "scoreDyn_neutral": 3.5,
+      "score2028_neutral": 4.1,
       "projStats": {
         "R": 55,
         "H": 95,
@@ -29432,6 +29810,8 @@
       "est": false,
       "projPA": 436,
       "score2026_neutral": 4.9,
+      "scoreDyn_neutral": 3.9,
+      "score2028_neutral": 4.0,
       "projStats": {
         "R": 53,
         "H": 99,
@@ -29548,6 +29928,8 @@
       "est": false,
       "projPA": 473,
       "score2026_neutral": 4.7,
+      "scoreDyn_neutral": 4.7,
+      "score2028_neutral": 4.5,
       "projStats": {
         "R": 54,
         "H": 101,
@@ -29607,6 +29989,8 @@
       "est": false,
       "projPA": 357,
       "score2026_neutral": 3.6,
+      "scoreDyn_neutral": 4.0,
+      "score2028_neutral": 3.8,
       "projStats": {
         "R": 40,
         "H": 79,
@@ -29666,6 +30050,8 @@
       "est": false,
       "projPA": 431,
       "score2026_neutral": 3.9,
+      "scoreDyn_neutral": 4.3,
+      "score2028_neutral": 4.1,
       "projStats": {
         "R": 46,
         "H": 93,
@@ -30017,6 +30403,8 @@
       "est": false,
       "projPA": 490,
       "score2026_neutral": 5.7,
+      "scoreDyn_neutral": 4.1,
+      "score2028_neutral": 4.4,
       "projStats": {
         "R": 55,
         "H": 115,
@@ -30252,6 +30640,8 @@
       "est": false,
       "projPA": 409,
       "score2026_neutral": 4.0,
+      "scoreDyn_neutral": 4.8,
+      "score2028_neutral": 4.6,
       "projStats": {
         "R": 49,
         "H": 88,
@@ -30367,6 +30757,8 @@
       "est": false,
       "projPA": 404,
       "score2026_neutral": 3.3,
+      "scoreDyn_neutral": 3.6,
+      "score2028_neutral": 3.5,
       "projStats": {
         "R": 46,
         "H": 78,
@@ -30483,6 +30875,8 @@
       "est": false,
       "projPA": 367,
       "score2026_neutral": 3.8,
+      "scoreDyn_neutral": 3.5,
+      "score2028_neutral": 3.4,
       "projStats": {
         "R": 45,
         "H": 75,
@@ -30722,6 +31116,8 @@
       "est": false,
       "projPA": 435,
       "score2026_neutral": 4.3,
+      "scoreDyn_neutral": 3.1,
+      "score2028_neutral": 3.4,
       "projStats": {
         "R": 50,
         "H": 86,
@@ -30837,6 +31233,8 @@
       "est": false,
       "projPA": 378,
       "score2026_neutral": 3.0,
+      "scoreDyn_neutral": 3.3,
+      "score2028_neutral": 3.2,
       "projStats": {
         "R": 41,
         "H": 79,
@@ -31312,6 +31710,8 @@
       "est": false,
       "projPA": 412,
       "score2026_neutral": 4.0,
+      "scoreDyn_neutral": 3.9,
+      "score2028_neutral": 3.7,
       "projStats": {
         "R": 49,
         "H": 87,
@@ -31848,6 +32248,8 @@
       "est": false,
       "projPA": 307,
       "score2026_neutral": 2.9,
+      "scoreDyn_neutral": 3.8,
+      "score2028_neutral": 3.5,
       "projStats": {
         "R": 34,
         "H": 67,
@@ -31909,6 +32311,8 @@
       "est": false,
       "projPA": 363,
       "score2026_neutral": 4.3,
+      "scoreDyn_neutral": 3.1,
+      "score2028_neutral": 3.4,
       "projStats": {
         "R": 45,
         "H": 75,
@@ -31968,6 +32372,8 @@
       "est": false,
       "projPA": 342,
       "score2026_neutral": 3.1,
+      "scoreDyn_neutral": 3.4,
+      "score2028_neutral": 3.3,
       "projStats": {
         "R": 36,
         "H": 81,
@@ -32028,6 +32434,8 @@
       "est": false,
       "projPA": 393,
       "score2026_neutral": 3.6,
+      "scoreDyn_neutral": 3.5,
+      "score2028_neutral": 3.3,
       "projStats": {
         "R": 42,
         "H": 86,
@@ -32150,6 +32558,8 @@
       "est": false,
       "projPA": 329,
       "score2026_neutral": 3.1,
+      "scoreDyn_neutral": 3.2,
+      "score2028_neutral": 3.0,
       "projStats": {
         "R": 39,
         "H": 66,
@@ -32209,6 +32619,8 @@
       "est": false,
       "projPA": 331,
       "score2026_neutral": 3.2,
+      "scoreDyn_neutral": 3.3,
+      "score2028_neutral": 3.1,
       "projStats": {
         "R": 37,
         "H": 74,
@@ -32383,6 +32795,8 @@
       "est": false,
       "projPA": 364,
       "score2026_neutral": 3.4,
+      "scoreDyn_neutral": 4.2,
+      "score2028_neutral": 4.0,
       "projStats": {
         "R": 40,
         "H": 83,
@@ -32443,6 +32857,8 @@
       "est": false,
       "projPA": 433,
       "score2026_neutral": 4.2,
+      "scoreDyn_neutral": 3.7,
+      "score2028_neutral": 3.6,
       "projStats": {
         "R": 45,
         "H": 97,
@@ -32564,6 +32980,8 @@
       "est": false,
       "projPA": 330,
       "score2026_neutral": 2.5,
+      "scoreDyn_neutral": 3.2,
+      "score2028_neutral": 2.8,
       "projStats": {
         "R": 37,
         "H": 68,
@@ -33025,6 +33443,8 @@
       "est": false,
       "projPA": 506,
       "score2026_neutral": 4.3,
+      "scoreDyn_neutral": 4.0,
+      "score2028_neutral": 3.8,
       "projStats": {
         "R": 55,
         "H": 105,
@@ -33200,6 +33620,8 @@
       "est": false,
       "projPA": 427,
       "score2026_neutral": 3.8,
+      "scoreDyn_neutral": 3.9,
+      "score2028_neutral": 3.7,
       "projStats": {
         "R": 48,
         "H": 91,
@@ -33260,6 +33682,8 @@
       "est": false,
       "projPA": 375,
       "score2026_neutral": 3.6,
+      "scoreDyn_neutral": 3.3,
+      "score2028_neutral": 3.2,
       "projStats": {
         "R": 43,
         "H": 85,
@@ -33318,6 +33742,8 @@
       "est": false,
       "projPA": 329,
       "score2026_neutral": 2.7,
+      "scoreDyn_neutral": 2.8,
+      "score2028_neutral": 2.8,
       "projStats": {
         "R": 37,
         "H": 66,
@@ -33435,6 +33861,8 @@
       "est": false,
       "projPA": 400,
       "score2026_neutral": 3.9,
+      "scoreDyn_neutral": 3.8,
+      "score2028_neutral": 3.6,
       "projStats": {
         "R": 45,
         "H": 90,
@@ -33609,6 +34037,8 @@
       "est": false,
       "projPA": 347,
       "score2026_neutral": 4.1,
+      "scoreDyn_neutral": 2.1,
+      "score2028_neutral": 2.9,
       "projStats": {
         "R": 44,
         "H": 71,
@@ -34020,6 +34450,8 @@
       "est": false,
       "projPA": 399,
       "score2026_neutral": 3.1,
+      "scoreDyn_neutral": 3.1,
+      "score2028_neutral": 2.9,
       "projStats": {
         "R": 42,
         "H": 82,
@@ -34139,6 +34571,8 @@
       "est": false,
       "projPA": 447,
       "score2026_neutral": 3.7,
+      "scoreDyn_neutral": 3.8,
+      "score2028_neutral": 3.6,
       "projStats": {
         "R": 48,
         "H": 94,
@@ -34255,6 +34689,8 @@
       "est": false,
       "projPA": 355,
       "score2026_neutral": 3.0,
+      "scoreDyn_neutral": 3.8,
+      "score2028_neutral": 3.6,
       "projStats": {
         "R": 40,
         "H": 76,
@@ -34314,6 +34750,8 @@
       "est": false,
       "projPA": 306,
       "score2026_neutral": 2.7,
+      "scoreDyn_neutral": 3.4,
+      "score2028_neutral": 3.2,
       "projStats": {
         "R": 34,
         "H": 70,
@@ -34372,6 +34810,8 @@
       "est": false,
       "projPA": 354,
       "score2026_neutral": 2.8,
+      "scoreDyn_neutral": 3.5,
+      "score2028_neutral": 3.3,
       "projStats": {
         "R": 39,
         "H": 76,
@@ -34430,6 +34870,8 @@
       "est": false,
       "projPA": 407,
       "score2026_neutral": 3.3,
+      "scoreDyn_neutral": 3.1,
+      "score2028_neutral": 2.9,
       "projStats": {
         "R": 45,
         "H": 82,
@@ -34552,6 +34994,8 @@
       "est": false,
       "projPA": 346,
       "score2026_neutral": 3.5,
+      "scoreDyn_neutral": 4.5,
+      "score2028_neutral": 4.3,
       "projStats": {
         "R": 39,
         "H": 83,
@@ -34728,6 +35172,8 @@
       "est": false,
       "projPA": 392,
       "score2026_neutral": 3.2,
+      "scoreDyn_neutral": 3.7,
+      "score2028_neutral": 3.5,
       "projStats": {
         "R": 43,
         "H": 84,
@@ -34911,6 +35357,8 @@
       "est": false,
       "projPA": 312,
       "score2026_neutral": 2.9,
+      "scoreDyn_neutral": 3.5,
+      "score2028_neutral": 3.3,
       "projStats": {
         "R": 37,
         "H": 65,
@@ -35029,6 +35477,8 @@
       "est": false,
       "projPA": 309,
       "score2026_neutral": 2.5,
+      "scoreDyn_neutral": 3.1,
+      "score2028_neutral": 3.0,
       "projStats": {
         "R": 36,
         "H": 65,
@@ -35144,6 +35594,8 @@
       "est": false,
       "projPA": 361,
       "score2026_neutral": 2.9,
+      "scoreDyn_neutral": 2.8,
+      "score2028_neutral": 2.7,
       "projStats": {
         "R": 37,
         "H": 79,
@@ -35202,6 +35654,8 @@
       "est": false,
       "projPA": 423,
       "score2026_neutral": 3.4,
+      "scoreDyn_neutral": 3.4,
+      "score2028_neutral": 3.2,
       "projStats": {
         "R": 44,
         "H": 96,
@@ -35265,6 +35719,8 @@
       "est": false,
       "projPA": 290,
       "score2026_neutral": 2.6,
+      "scoreDyn_neutral": 3.0,
+      "score2028_neutral": 2.8,
       "projStats": {
         "R": 32,
         "H": 66,
@@ -35324,6 +35780,8 @@
       "est": false,
       "projPA": 351,
       "score2026_neutral": 3.3,
+      "scoreDyn_neutral": 3.5,
+      "score2028_neutral": 3.4,
       "projStats": {
         "R": 36,
         "H": 84,
@@ -35382,6 +35840,8 @@
       "est": false,
       "projPA": 319,
       "score2026_neutral": 3.7,
+      "scoreDyn_neutral": 3.8,
+      "score2028_neutral": 3.6,
       "projStats": {
         "R": 39,
         "H": 78,
@@ -35735,6 +36195,8 @@
       "est": false,
       "projPA": 363,
       "score2026_neutral": 3.0,
+      "scoreDyn_neutral": 2.9,
+      "score2028_neutral": 2.8,
       "projStats": {
         "R": 41,
         "H": 74,
@@ -35852,6 +36314,8 @@
       "est": false,
       "projPA": 267,
       "score2026_neutral": 2.5,
+      "scoreDyn_neutral": 3.2,
+      "score2028_neutral": 3.1,
       "projStats": {
         "R": 29,
         "H": 63,
@@ -35911,6 +36375,8 @@
       "est": false,
       "projPA": 350,
       "score2026_neutral": 3.0,
+      "scoreDyn_neutral": 3.0,
+      "score2028_neutral": 2.8,
       "projStats": {
         "R": 36,
         "H": 80,
@@ -35969,6 +36435,8 @@
       "est": false,
       "projPA": 382,
       "score2026_neutral": 3.2,
+      "scoreDyn_neutral": 3.2,
+      "score2028_neutral": 3.0,
       "projStats": {
         "R": 42,
         "H": 87,
@@ -36149,6 +36617,8 @@
       "est": false,
       "projPA": 353,
       "score2026_neutral": 4.1,
+      "scoreDyn_neutral": 4.7,
+      "score2028_neutral": 4.5,
       "projStats": {
         "R": 38,
         "H": 92,
@@ -36207,6 +36677,8 @@
       "est": false,
       "projPA": 326,
       "score2026_neutral": 2.5,
+      "scoreDyn_neutral": 2.6,
+      "score2028_neutral": 2.6,
       "projStats": {
         "R": 35,
         "H": 72,
@@ -36266,6 +36738,8 @@
       "est": false,
       "projPA": 351,
       "score2026_neutral": 3.3,
+      "scoreDyn_neutral": 3.4,
+      "score2028_neutral": 3.2,
       "projStats": {
         "R": 41,
         "H": 73,
@@ -36328,6 +36802,8 @@
       "est": false,
       "projPA": 301,
       "score2026_neutral": 3.7,
+      "scoreDyn_neutral": 3.9,
+      "score2028_neutral": 3.8,
       "projStats": {
         "R": 37,
         "H": 74,
@@ -36386,6 +36862,8 @@
       "est": false,
       "projPA": 392,
       "score2026_neutral": 3.2,
+      "scoreDyn_neutral": 3.0,
+      "score2028_neutral": 2.8,
       "projStats": {
         "R": 42,
         "H": 89,
@@ -36444,6 +36922,8 @@
       "est": false,
       "projPA": 350,
       "score2026_neutral": 2.8,
+      "scoreDyn_neutral": 2.2,
+      "score2028_neutral": 2.3,
       "projStats": {
         "R": 40,
         "H": 68,
@@ -36502,6 +36982,8 @@
       "est": false,
       "projPA": 375,
       "score2026_neutral": 3.3,
+      "scoreDyn_neutral": 2.4,
+      "score2028_neutral": 2.6,
       "projStats": {
         "R": 40,
         "H": 85,
@@ -36680,6 +37162,8 @@
       "est": false,
       "projPA": 320,
       "score2026_neutral": 2.5,
+      "scoreDyn_neutral": 2.6,
+      "score2028_neutral": 2.6,
       "projStats": {
         "R": 32,
         "H": 75,
@@ -36852,6 +37336,8 @@
       "est": false,
       "projPA": 411,
       "score2026_neutral": 2.4,
+      "scoreDyn_neutral": 2.2,
+      "score2028_neutral": 2.1,
       "projStats": {
         "R": 44,
         "H": 75,
@@ -36910,6 +37396,8 @@
       "est": false,
       "projPA": 351,
       "score2026_neutral": 2.7,
+      "scoreDyn_neutral": 2.5,
+      "score2028_neutral": 2.4,
       "projStats": {
         "R": 37,
         "H": 75,
@@ -37091,6 +37579,8 @@
       "est": false,
       "projPA": 379,
       "score2026_neutral": 3.4,
+      "scoreDyn_neutral": 2.1,
+      "score2028_neutral": 2.5,
       "projStats": {
         "R": 45,
         "H": 76,
@@ -37150,6 +37640,8 @@
       "est": false,
       "projPA": 306,
       "score2026_neutral": 2.1,
+      "scoreDyn_neutral": 2.4,
+      "score2028_neutral": 2.3,
       "projStats": {
         "R": 37,
         "H": 61,
@@ -37208,6 +37700,8 @@
       "est": false,
       "projPA": 351,
       "score2026_neutral": 3.0,
+      "scoreDyn_neutral": 3.6,
+      "score2028_neutral": 3.4,
       "projStats": {
         "R": 36,
         "H": 83,
@@ -37435,6 +37929,8 @@
       "est": false,
       "projPA": 313,
       "score2026_neutral": 2.5,
+      "scoreDyn_neutral": 2.6,
+      "score2028_neutral": 2.6,
       "projStats": {
         "R": 35,
         "H": 66,
@@ -37549,6 +38045,8 @@
       "est": false,
       "projPA": 334,
       "score2026_neutral": 2.2,
+      "scoreDyn_neutral": 2.0,
+      "score2028_neutral": 1.9,
       "projStats": {
         "R": 38,
         "H": 63,
@@ -37606,6 +38104,8 @@
       "est": false,
       "projPA": 271,
       "score2026_neutral": 2.9,
+      "scoreDyn_neutral": 2.7,
+      "score2028_neutral": 2.6,
       "projStats": {
         "R": 30,
         "H": 69,
@@ -37664,6 +38164,8 @@
       "est": false,
       "projPA": 392,
       "score2026_neutral": 3.5,
+      "scoreDyn_neutral": 2.2,
+      "score2028_neutral": 2.6,
       "projStats": {
         "R": 43,
         "H": 87,
@@ -37723,6 +38225,8 @@
       "est": false,
       "projPA": 360,
       "score2026_neutral": 3.2,
+      "scoreDyn_neutral": 3.1,
+      "score2028_neutral": 2.9,
       "projStats": {
         "R": 41,
         "H": 77,
@@ -37838,6 +38342,8 @@
       "est": false,
       "projPA": 317,
       "score2026_neutral": 2.9,
+      "scoreDyn_neutral": 2.5,
+      "score2028_neutral": 2.5,
       "projStats": {
         "R": 35,
         "H": 73,
@@ -37895,6 +38401,8 @@
       "est": false,
       "projPA": 224,
       "score2026_neutral": 2.5,
+      "scoreDyn_neutral": 2.5,
+      "score2028_neutral": 2.4,
       "projStats": {
         "R": 26,
         "H": 56,
@@ -38010,6 +38518,8 @@
       "est": false,
       "projPA": 339,
       "score2026_neutral": 2.3,
+      "scoreDyn_neutral": 2.4,
+      "score2028_neutral": 2.3,
       "projStats": {
         "R": 38,
         "H": 68,
@@ -38069,6 +38579,8 @@
       "est": false,
       "projPA": 322,
       "score2026_neutral": 2.7,
+      "scoreDyn_neutral": 2.8,
+      "score2028_neutral": 2.8,
       "projStats": {
         "R": 38,
         "H": 66,
@@ -38243,6 +38755,8 @@
       "est": false,
       "projPA": 330,
       "score2026_neutral": 2.9,
+      "scoreDyn_neutral": 2.7,
+      "score2028_neutral": 2.6,
       "projStats": {
         "R": 35,
         "H": 72,
@@ -38597,6 +39111,8 @@
       "est": false,
       "projPA": 366,
       "score2026_neutral": 2.1,
+      "scoreDyn_neutral": 2.3,
+      "score2028_neutral": 2.2,
       "projStats": {
         "R": 36,
         "H": 76,
@@ -38713,6 +39229,8 @@
       "est": false,
       "projPA": 313,
       "score2026_neutral": 2.2,
+      "scoreDyn_neutral": 2.0,
+      "score2028_neutral": 1.9,
       "projStats": {
         "R": 36,
         "H": 65,
@@ -38771,6 +39289,8 @@
       "est": false,
       "projPA": 351,
       "score2026_neutral": 2.2,
+      "scoreDyn_neutral": 2.4,
+      "score2028_neutral": 2.3,
       "projStats": {
         "R": 39,
         "H": 71,
@@ -39013,6 +39533,8 @@
       "est": false,
       "projPA": 389,
       "score2026_neutral": 2.9,
+      "scoreDyn_neutral": 3.0,
+      "score2028_neutral": 2.8,
       "projStats": {
         "R": 43,
         "H": 85,
@@ -39128,6 +39650,8 @@
       "est": false,
       "projPA": 355,
       "score2026_neutral": 3.6,
+      "scoreDyn_neutral": 1.9,
+      "score2028_neutral": 2.5,
       "projStats": {
         "R": 41,
         "H": 81,
@@ -39187,6 +39711,8 @@
       "est": false,
       "projPA": 306,
       "score2026_neutral": 1.8,
+      "scoreDyn_neutral": 1.9,
+      "score2028_neutral": 1.8,
       "projStats": {
         "R": 36,
         "H": 56,
@@ -39361,6 +39887,8 @@
       "est": false,
       "projPA": 307,
       "score2026_neutral": 1.9,
+      "scoreDyn_neutral": 1.8,
+      "score2028_neutral": 1.7,
       "projStats": {
         "R": 36,
         "H": 59,
@@ -39419,6 +39947,8 @@
       "est": false,
       "projPA": 416,
       "score2026_neutral": 2.6,
+      "scoreDyn_neutral": 3.0,
+      "score2028_neutral": 2.8,
       "projStats": {
         "R": 44,
         "H": 84,
@@ -39481,6 +40011,8 @@
       "est": false,
       "projPA": 336,
       "score2026_neutral": 2.6,
+      "scoreDyn_neutral": 2.4,
+      "score2028_neutral": 2.3,
       "projStats": {
         "R": 35,
         "H": 82,
@@ -39888,6 +40420,8 @@
       "est": false,
       "projPA": 252,
       "score2026_neutral": 2.5,
+      "scoreDyn_neutral": 2.3,
+      "score2028_neutral": 2.2,
       "projStats": {
         "R": 29,
         "H": 61,
@@ -40007,6 +40541,8 @@
       "est": false,
       "projPA": 307,
       "score2026_neutral": 1.6,
+      "scoreDyn_neutral": 2.0,
+      "score2028_neutral": 1.9,
       "projStats": {
         "R": 33,
         "H": 62,
@@ -40240,6 +40776,8 @@
       "est": false,
       "projPA": 401,
       "score2026_neutral": 1.8,
+      "scoreDyn_neutral": 1.9,
+      "score2028_neutral": 1.8,
       "projStats": {
         "R": 39,
         "H": 81,
@@ -40359,6 +40897,8 @@
       "est": false,
       "projPA": 277,
       "score2026_neutral": 1.7,
+      "scoreDyn_neutral": 1.9,
+      "score2028_neutral": 1.8,
       "projStats": {
         "R": 30,
         "H": 63,
@@ -40479,6 +41019,8 @@
       "est": false,
       "projPA": 220,
       "score2026_neutral": 1.6,
+      "scoreDyn_neutral": 1.9,
+      "score2028_neutral": 1.8,
       "projStats": {
         "R": 26,
         "H": 47,
@@ -40540,6 +41082,8 @@
       "est": false,
       "projPA": 290,
       "score2026_neutral": 1.5,
+      "scoreDyn_neutral": 1.4,
+      "score2028_neutral": 1.3,
       "projStats": {
         "R": 32,
         "H": 57,
@@ -40715,6 +41259,8 @@
       "est": false,
       "projPA": 218,
       "score2026_neutral": 1.1,
+      "scoreDyn_neutral": 1.3,
+      "score2028_neutral": 1.2,
       "projStats": {
         "R": 25,
         "H": 48,
@@ -40834,6 +41380,8 @@
       "est": false,
       "projPA": 278,
       "score2026_neutral": 1.4,
+      "scoreDyn_neutral": 1.4,
+      "score2028_neutral": 1.3,
       "projStats": {
         "R": 31,
         "H": 51,
@@ -40949,6 +41497,8 @@
       "est": false,
       "projPA": 299,
       "score2026_neutral": 1.8,
+      "scoreDyn_neutral": 2.3,
+      "score2028_neutral": 2.2,
       "projStats": {
         "R": 33,
         "H": 63,
@@ -41007,6 +41557,8 @@
       "est": false,
       "projPA": 234,
       "score2026_neutral": 1.2,
+      "scoreDyn_neutral": 1.3,
+      "score2028_neutral": 1.2,
       "projStats": {
         "R": 25,
         "H": 49,
@@ -41067,6 +41619,8 @@
       "est": false,
       "projPA": 293,
       "score2026_neutral": 1.0,
+      "scoreDyn_neutral": 1.1,
+      "score2028_neutral": 1.1,
       "projStats": {
         "R": 32,
         "H": 55,
@@ -41242,6 +41796,8 @@
       "est": false,
       "projPA": 270,
       "score2026_neutral": 1.8,
+      "scoreDyn_neutral": 1.6,
+      "score2028_neutral": 1.5,
       "projStats": {
         "R": 28,
         "H": 61,
@@ -41303,6 +41859,8 @@
       "est": false,
       "projPA": 317,
       "score2026_neutral": 1.9,
+      "scoreDyn_neutral": 1.8,
+      "score2028_neutral": 1.7,
       "projStats": {
         "R": 34,
         "H": 66,
@@ -41478,6 +42036,8 @@
       "est": false,
       "projPA": 278,
       "score2026_neutral": 1.1,
+      "scoreDyn_neutral": 1.1,
+      "score2028_neutral": 1.1,
       "projStats": {
         "R": 29,
         "H": 54,
@@ -41653,6 +42213,8 @@
       "est": false,
       "projPA": 262,
       "score2026_neutral": 1.4,
+      "scoreDyn_neutral": 1.5,
+      "score2028_neutral": 1.4,
       "projStats": {
         "R": 29,
         "H": 56,
@@ -41711,6 +42273,8 @@
       "est": false,
       "projPA": 219,
       "score2026_neutral": 1.3,
+      "scoreDyn_neutral": 1.4,
+      "score2028_neutral": 1.3,
       "projStats": {
         "R": 24,
         "H": 47,
@@ -41771,6 +42335,8 @@
       "est": false,
       "projPA": 301,
       "score2026_neutral": 1.4,
+      "scoreDyn_neutral": 1.5,
+      "score2028_neutral": 1.4,
       "projStats": {
         "R": 30,
         "H": 63,
@@ -41830,6 +42396,8 @@
       "est": false,
       "projPA": 267,
       "score2026_neutral": 1.1,
+      "scoreDyn_neutral": 1.2,
+      "score2028_neutral": 1.2,
       "projStats": {
         "R": 29,
         "H": 52,
@@ -42406,6 +42974,8 @@
       "est": false,
       "projPA": 297,
       "score2026_neutral": 2.3,
+      "scoreDyn_neutral": 2.4,
+      "score2028_neutral": 2.3,
       "projStats": {
         "R": 33,
         "H": 66,
@@ -42578,6 +43148,8 @@
       "est": false,
       "projPA": 169,
       "score2026_neutral": 1.8,
+      "scoreDyn_neutral": 1.6,
+      "score2028_neutral": 1.5,
       "projStats": {
         "R": 19,
         "H": 42,
@@ -42814,6 +43386,8 @@
       "est": false,
       "projPA": 220,
       "score2026_neutral": 1.2,
+      "scoreDyn_neutral": 1.2,
+      "score2028_neutral": 1.2,
       "projStats": {
         "R": 23,
         "H": 52,
@@ -42872,6 +43446,8 @@
       "est": false,
       "projPA": 252,
       "score2026_neutral": 2.2,
+      "scoreDyn_neutral": 2.1,
+      "score2028_neutral": 2.0,
       "projStats": {
         "R": 25,
         "H": 65,
@@ -42933,6 +43509,8 @@
       "est": false,
       "projPA": 206,
       "score2026_neutral": 0.8,
+      "scoreDyn_neutral": 0.8,
+      "score2028_neutral": 0.7,
       "projStats": {
         "R": 23,
         "H": 43,
@@ -43457,6 +44035,8 @@
       "est": false,
       "projPA": 282,
       "score2026_neutral": 1.5,
+      "scoreDyn_neutral": 1.5,
+      "score2028_neutral": 1.5,
       "projStats": {
         "R": 29,
         "H": 63,
@@ -43515,6 +44095,8 @@
       "est": false,
       "projPA": 201,
       "score2026_neutral": 1.2,
+      "scoreDyn_neutral": 1.2,
+      "score2028_neutral": 1.1,
       "projStats": {
         "R": 23,
         "H": 42,
@@ -43575,6 +44157,8 @@
       "est": false,
       "projPA": 206,
       "score2026_neutral": 1.4,
+      "scoreDyn_neutral": 1.4,
+      "score2028_neutral": 1.3,
       "projStats": {
         "R": 23,
         "H": 47,
@@ -43974,6 +44558,8 @@
       "est": false,
       "projPA": 211,
       "score2026_neutral": 0.9,
+      "scoreDyn_neutral": 1.0,
+      "score2028_neutral": 0.9,
       "projStats": {
         "R": 24,
         "H": 48,
@@ -44032,6 +44618,8 @@
       "est": false,
       "projPA": 303,
       "score2026_neutral": 1.2,
+      "scoreDyn_neutral": 1.3,
+      "score2028_neutral": 1.3,
       "projStats": {
         "R": 33,
         "H": 61,
@@ -44258,6 +44846,8 @@
       "est": false,
       "projPA": 221,
       "score2026_neutral": 1.6,
+      "scoreDyn_neutral": 1.4,
+      "score2028_neutral": 1.4,
       "projStats": {
         "R": 26,
         "H": 45,
@@ -44316,6 +44906,8 @@
       "est": false,
       "projPA": 313,
       "score2026_neutral": 0.4,
+      "scoreDyn_neutral": 0.5,
+      "score2028_neutral": 0.5,
       "projStats": {
         "R": 32,
         "H": 55,
@@ -44373,6 +44965,8 @@
       "est": false,
       "projPA": 227,
       "score2026_neutral": 1.5,
+      "scoreDyn_neutral": 1.5,
+      "score2028_neutral": 1.4,
       "projStats": {
         "R": 24,
         "H": 57,
@@ -44433,6 +45027,8 @@
       "est": false,
       "projPA": 221,
       "score2026_neutral": 1.0,
+      "scoreDyn_neutral": 1.0,
+      "score2028_neutral": 0.9,
       "projStats": {
         "R": 23,
         "H": 51,
@@ -44666,6 +45262,8 @@
       "est": false,
       "projPA": 270,
       "score2026_neutral": 0.8,
+      "scoreDyn_neutral": 0.8,
+      "score2028_neutral": 0.8,
       "projStats": {
         "R": 27,
         "H": 56,
@@ -44725,6 +45323,8 @@
       "est": false,
       "projPA": 330,
       "score2026_neutral": 1.8,
+      "scoreDyn_neutral": 2.1,
+      "score2028_neutral": 2.0,
       "projStats": {
         "R": 34,
         "H": 67,
@@ -44959,6 +45559,8 @@
       "est": false,
       "projPA": 243,
       "score2026_neutral": 1.1,
+      "scoreDyn_neutral": 1.3,
+      "score2028_neutral": 1.3,
       "projStats": {
         "R": 24,
         "H": 55,
@@ -45019,6 +45621,8 @@
       "est": false,
       "projPA": 167,
       "score2026_neutral": 0.8,
+      "scoreDyn_neutral": 1.0,
+      "score2028_neutral": 0.9,
       "projStats": {
         "R": 19,
         "H": 38,
@@ -45079,6 +45683,8 @@
       "est": false,
       "projPA": 260,
       "score2026_neutral": 1.1,
+      "scoreDyn_neutral": 1.4,
+      "score2028_neutral": 1.3,
       "projStats": {
         "R": 29,
         "H": 54,
@@ -45249,6 +45855,8 @@
       "est": false,
       "projPA": 184,
       "score2026_neutral": 0.6,
+      "scoreDyn_neutral": 0.6,
+      "score2028_neutral": 0.5,
       "projStats": {
         "R": 21,
         "H": 39,
@@ -45307,6 +45915,8 @@
       "est": false,
       "projPA": 251,
       "score2026_neutral": 1.1,
+      "scoreDyn_neutral": 1.1,
+      "score2028_neutral": 1.0,
       "projStats": {
         "R": 27,
         "H": 52,
@@ -45363,6 +45973,8 @@
       "est": false,
       "projPA": 166,
       "score2026_neutral": 0.9,
+      "scoreDyn_neutral": 0.9,
+      "score2028_neutral": 0.9,
       "projStats": {
         "R": 17,
         "H": 42,
@@ -45421,6 +46033,8 @@
       "est": false,
       "projPA": 173,
       "score2026_neutral": 0.8,
+      "scoreDyn_neutral": 0.8,
+      "score2028_neutral": 0.8,
       "projStats": {
         "R": 19,
         "H": 40,
@@ -45479,6 +46093,8 @@
       "est": false,
       "projPA": 292,
       "score2026_neutral": 1.6,
+      "scoreDyn_neutral": 0.8,
+      "score2028_neutral": 1.3,
       "projStats": {
         "R": 31,
         "H": 60,
@@ -45823,6 +46439,8 @@
       "est": false,
       "projPA": 194,
       "score2026_neutral": 1.1,
+      "scoreDyn_neutral": 1.4,
+      "score2028_neutral": 1.3,
       "projStats": {
         "R": 20,
         "H": 47,
@@ -46168,6 +46786,8 @@
       "est": false,
       "projPA": 241,
       "score2026_neutral": 0.8,
+      "scoreDyn_neutral": 0.8,
+      "score2028_neutral": 0.8,
       "projStats": {
         "R": 25,
         "H": 50,
@@ -46228,6 +46848,8 @@
       "est": false,
       "projPA": 210,
       "score2026_neutral": 0.6,
+      "scoreDyn_neutral": 0.6,
+      "score2028_neutral": 0.6,
       "projStats": {
         "R": 24,
         "H": 40,
@@ -46286,6 +46908,8 @@
       "est": false,
       "projPA": 151,
       "score2026_neutral": 0.6,
+      "scoreDyn_neutral": 0.6,
+      "score2028_neutral": 0.6,
       "projStats": {
         "R": 18,
         "H": 33,
@@ -46344,6 +46968,8 @@
       "est": false,
       "projPA": 170,
       "score2026_neutral": 0.9,
+      "scoreDyn_neutral": 0.9,
+      "score2028_neutral": 0.9,
       "projStats": {
         "R": 19,
         "H": 38,
@@ -46970,6 +47596,8 @@
       "est": false,
       "projPA": 289,
       "score2026_neutral": 1.7,
+      "scoreDyn_neutral": 1.9,
+      "score2028_neutral": 1.8,
       "projStats": {
         "R": 30,
         "H": 66,
@@ -47028,6 +47656,8 @@
       "est": false,
       "projPA": 217,
       "score2026_neutral": 0.8,
+      "scoreDyn_neutral": 0.9,
+      "score2028_neutral": 0.9,
       "projStats": {
         "R": 23,
         "H": 45,
@@ -47255,6 +47885,8 @@
       "est": false,
       "projPA": 186,
       "score2026_neutral": 1.1,
+      "scoreDyn_neutral": 1.4,
+      "score2028_neutral": 1.3,
       "projStats": {
         "R": 19,
         "H": 43,
@@ -47312,6 +47944,8 @@
       "est": false,
       "projPA": 194,
       "score2026_neutral": 1.7,
+      "scoreDyn_neutral": 0.9,
+      "score2028_neutral": 1.2,
       "projStats": {
         "R": 22,
         "H": 48,
@@ -47372,6 +48006,8 @@
       "est": false,
       "projPA": 263,
       "score2026_neutral": 1.3,
+      "scoreDyn_neutral": 1.3,
+      "score2028_neutral": 1.2,
       "projStats": {
         "R": 28,
         "H": 57,
@@ -47434,6 +48070,8 @@
       "est": false,
       "projPA": 225,
       "score2026_neutral": 0.9,
+      "scoreDyn_neutral": 0.9,
+      "score2028_neutral": 0.9,
       "projStats": {
         "R": 24,
         "H": 51,
@@ -47492,6 +48130,8 @@
       "est": false,
       "projPA": 210,
       "score2026_neutral": 0.5,
+      "scoreDyn_neutral": 0.5,
+      "score2028_neutral": 0.5,
       "projStats": {
         "R": 23,
         "H": 43,
@@ -48348,6 +48988,8 @@
       "est": false,
       "projPA": 191,
       "score2026_neutral": 0.6,
+      "scoreDyn_neutral": 0.7,
+      "score2028_neutral": 0.7,
       "projStats": {
         "R": 21,
         "H": 40,
@@ -48406,6 +49048,8 @@
       "est": false,
       "projPA": 164,
       "score2026_neutral": 0.6,
+      "scoreDyn_neutral": 0.7,
+      "score2028_neutral": 0.6,
       "projStats": {
         "R": 18,
         "H": 36,
@@ -48982,6 +49626,8 @@
       "est": false,
       "projPA": 260,
       "score2026_neutral": 0.8,
+      "scoreDyn_neutral": 0.6,
+      "score2028_neutral": 0.7,
       "projStats": {
         "R": 26,
         "H": 58,
@@ -49153,6 +49799,8 @@
       "est": false,
       "projPA": 255,
       "score2026_neutral": 0.6,
+      "scoreDyn_neutral": 0.6,
+      "score2028_neutral": 0.6,
       "projStats": {
         "R": 26,
         "H": 54,
@@ -49215,6 +49863,8 @@
       "est": false,
       "projPA": 277,
       "score2026_neutral": 1.3,
+      "scoreDyn_neutral": 1.3,
+      "score2028_neutral": 1.2,
       "projStats": {
         "R": 31,
         "H": 54,
@@ -49612,6 +50262,8 @@
       "est": false,
       "projPA": 244,
       "score2026_neutral": 0.4,
+      "scoreDyn_neutral": 0.4,
+      "score2028_neutral": 0.4,
       "projStats": {
         "R": 25,
         "H": 48,
@@ -49672,6 +50324,8 @@
       "est": false,
       "projPA": 197,
       "score2026_neutral": 0.9,
+      "scoreDyn_neutral": 0.6,
+      "score2028_neutral": 0.7,
       "projStats": {
         "R": 23,
         "H": 41,
@@ -50185,6 +50839,8 @@
       "est": false,
       "projPA": 230,
       "score2026_neutral": 0.7,
+      "scoreDyn_neutral": 0.7,
+      "score2028_neutral": 0.7,
       "projStats": {
         "R": 25,
         "H": 50,
@@ -50243,6 +50899,8 @@
       "est": false,
       "projPA": 230,
       "score2026_neutral": 0.7,
+      "scoreDyn_neutral": 0.7,
+      "score2028_neutral": 0.6,
       "projStats": {
         "R": 24,
         "H": 50,
@@ -50924,6 +51582,8 @@
       "est": false,
       "projPA": 200,
       "score2026_neutral": 0.6,
+      "scoreDyn_neutral": 0.5,
+      "score2028_neutral": 0.5,
       "projStats": {
         "R": 21,
         "H": 45,
@@ -51041,6 +51701,8 @@
       "est": false,
       "projPA": 202,
       "score2026_neutral": 0.3,
+      "scoreDyn_neutral": 0.3,
+      "score2028_neutral": 0.3,
       "projStats": {
         "R": 21,
         "H": 44,
@@ -51099,6 +51761,8 @@
       "est": false,
       "projPA": 214,
       "score2026_neutral": 0.8,
+      "scoreDyn_neutral": 0.8,
+      "score2028_neutral": 0.8,
       "projStats": {
         "R": 21,
         "H": 47,
@@ -51159,6 +51823,8 @@
       "est": false,
       "projPA": 192,
       "score2026_neutral": 0.3,
+      "scoreDyn_neutral": 0.3,
+      "score2028_neutral": 0.3,
       "projStats": {
         "R": 20,
         "H": 42,
@@ -51843,6 +52509,8 @@
       "est": false,
       "projPA": 168,
       "score2026_neutral": 0.3,
+      "scoreDyn_neutral": 0.3,
+      "score2028_neutral": 0.3,
       "projStats": {
         "R": 18,
         "H": 39,
@@ -52072,6 +52740,8 @@
       "est": false,
       "projPA": 228,
       "score2026_neutral": 0.9,
+      "scoreDyn_neutral": 0.9,
+      "score2028_neutral": 0.9,
       "projStats": {
         "R": 23,
         "H": 48,
@@ -52130,6 +52800,8 @@
       "est": false,
       "projPA": 171,
       "score2026_neutral": 0.3,
+      "scoreDyn_neutral": 0.3,
+      "score2028_neutral": 0.3,
       "projStats": {
         "R": 18,
         "H": 36,
@@ -52756,6 +53428,8 @@
       "est": false,
       "projPA": 253,
       "score2026_neutral": 0.6,
+      "scoreDyn_neutral": 0.8,
+      "score2028_neutral": 0.7,
       "projStats": {
         "R": 26,
         "H": 52,
@@ -52869,6 +53543,8 @@
       "est": false,
       "projPA": 186,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 20,
         "H": 39,
@@ -53043,6 +53719,8 @@
       "est": false,
       "projPA": 222,
       "score2026_neutral": 0.3,
+      "scoreDyn_neutral": 0.3,
+      "score2028_neutral": 0.3,
       "projStats": {
         "R": 23,
         "H": 47,
@@ -53216,6 +53894,8 @@
       "est": false,
       "projPA": 172,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 20,
         "H": 33,
@@ -53275,6 +53955,8 @@
       "est": false,
       "projPA": 227,
       "score2026_neutral": 0.3,
+      "scoreDyn_neutral": 0.3,
+      "score2028_neutral": 0.3,
       "projStats": {
         "R": 23,
         "H": 45,
@@ -53334,6 +54016,8 @@
       "est": false,
       "projPA": 170,
       "score2026_neutral": 0.4,
+      "scoreDyn_neutral": 0.5,
+      "score2028_neutral": 0.4,
       "projStats": {
         "R": 19,
         "H": 37,
@@ -53393,6 +54077,8 @@
       "est": false,
       "projPA": 187,
       "score2026_neutral": 0.7,
+      "scoreDyn_neutral": 0.6,
+      "score2028_neutral": 0.6,
       "projStats": {
         "R": 22,
         "H": 42,
@@ -54594,6 +55280,8 @@
       "est": false,
       "projPA": 150,
       "score2026_neutral": 0.1,
+      "scoreDyn_neutral": 0.1,
+      "score2028_neutral": 0.1,
       "projStats": {
         "R": 16,
         "H": 32,
@@ -54825,6 +55513,8 @@
       "est": false,
       "projPA": 200,
       "score2026_neutral": 0.2,
+      "scoreDyn_neutral": 0.2,
+      "score2028_neutral": 0.2,
       "projStats": {
         "R": 21,
         "H": 43,
@@ -54885,6 +55575,8 @@
       "est": false,
       "projPA": 181,
       "score2026_neutral": 0.3,
+      "scoreDyn_neutral": 0.3,
+      "score2028_neutral": 0.3,
       "projStats": {
         "R": 19,
         "H": 40,
@@ -54943,6 +55635,8 @@
       "est": false,
       "projPA": 185,
       "score2026_neutral": 0.2,
+      "scoreDyn_neutral": 0.2,
+      "score2028_neutral": 0.2,
       "projStats": {
         "R": 19,
         "H": 40,
@@ -55285,6 +55979,8 @@
       "est": false,
       "projPA": 226,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 23,
         "H": 44,
@@ -55343,6 +56039,8 @@
       "est": false,
       "projPA": 167,
       "score2026_neutral": 0.6,
+      "scoreDyn_neutral": 0.7,
+      "score2028_neutral": 0.7,
       "projStats": {
         "R": 19,
         "H": 35,
@@ -55402,6 +56100,8 @@
       "est": false,
       "projPA": 195,
       "score2026_neutral": 0.3,
+      "scoreDyn_neutral": 0.3,
+      "score2028_neutral": 0.3,
       "projStats": {
         "R": 19,
         "H": 43,
@@ -55462,6 +56162,8 @@
       "est": false,
       "projPA": 180,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 19,
         "H": 36,
@@ -55520,6 +56222,8 @@
       "est": false,
       "projPA": 184,
       "score2026_neutral": 0.2,
+      "scoreDyn_neutral": 0.1,
+      "score2028_neutral": 0.1,
       "projStats": {
         "R": 21,
         "H": 37,
@@ -55579,6 +56283,8 @@
       "est": false,
       "projPA": 195,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 20,
         "H": 41,
@@ -56207,6 +56913,8 @@
       "est": false,
       "projPA": 198,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 20,
         "H": 37,
@@ -56265,6 +56973,8 @@
       "est": false,
       "projPA": 217,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 21,
         "H": 40,
@@ -56323,6 +57033,8 @@
       "est": false,
       "projPA": 194,
       "score2026_neutral": 0.1,
+      "scoreDyn_neutral": 0.1,
+      "score2028_neutral": 0.1,
       "projStats": {
         "R": 21,
         "H": 38,
@@ -56382,6 +57094,8 @@
       "est": false,
       "projPA": 181,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 20,
         "H": 35,
@@ -56442,6 +57156,8 @@
       "est": false,
       "projPA": 230,
       "score2026_neutral": 0.1,
+      "scoreDyn_neutral": 0.1,
+      "score2028_neutral": 0.1,
       "projStats": {
         "R": 23,
         "H": 45,
@@ -56502,6 +57218,8 @@
       "est": false,
       "projPA": 159,
       "score2026_neutral": 0.3,
+      "scoreDyn_neutral": 0.3,
+      "score2028_neutral": 0.3,
       "projStats": {
         "R": 16,
         "H": 37,
@@ -56560,6 +57278,8 @@
       "est": false,
       "projPA": 201,
       "score2026_neutral": 0.5,
+      "scoreDyn_neutral": 0.6,
+      "score2028_neutral": 0.5,
       "projStats": {
         "R": 19,
         "H": 47,
@@ -56618,6 +57338,8 @@
       "est": false,
       "projPA": 179,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 18,
         "H": 33,
@@ -56676,6 +57398,8 @@
       "est": false,
       "projPA": 161,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 17,
         "H": 35,
@@ -56736,6 +57460,8 @@
       "est": false,
       "projPA": 168,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 18,
         "H": 31,
@@ -56794,6 +57520,8 @@
       "est": false,
       "projPA": 172,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 17,
         "H": 34,
@@ -56852,6 +57580,8 @@
       "est": false,
       "projPA": 235,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 22,
         "H": 43,
@@ -56910,6 +57640,8 @@
       "est": false,
       "projPA": 152,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 17,
         "H": 33,
@@ -56969,6 +57701,8 @@
       "est": false,
       "projPA": 195,
       "score2026_neutral": 0.1,
+      "scoreDyn_neutral": 0.1,
+      "score2028_neutral": 0.1,
       "projStats": {
         "R": 19,
         "H": 43,
@@ -57027,6 +57761,8 @@
       "est": false,
       "projPA": 180,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 19,
         "H": 36,
@@ -57087,6 +57823,8 @@
       "est": false,
       "projPA": 154,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 15,
         "H": 37,
@@ -57146,6 +57884,8 @@
       "est": false,
       "projPA": 171,
       "score2026_neutral": 0.1,
+      "scoreDyn_neutral": 0.1,
+      "score2028_neutral": 0.1,
       "projStats": {
         "R": 18,
         "H": 38,
@@ -57208,6 +57948,8 @@
       "est": false,
       "projPA": 168,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 17,
         "H": 32,
@@ -57267,6 +58009,8 @@
       "est": false,
       "projPA": 173,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 18,
         "H": 34,
@@ -57327,6 +58071,8 @@
       "est": false,
       "projPA": 156,
       "score2026_neutral": 0.1,
+      "scoreDyn_neutral": 0.1,
+      "score2028_neutral": 0.1,
       "projStats": {
         "R": 17,
         "H": 34,
@@ -57385,6 +58131,8 @@
       "est": false,
       "projPA": 174,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 18,
         "H": 34,
@@ -57445,6 +58193,8 @@
       "est": false,
       "projPA": 158,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 15,
         "H": 33,
@@ -57504,6 +58254,8 @@
       "est": false,
       "projPA": 161,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 16,
         "H": 33,
@@ -57562,6 +58314,8 @@
       "est": false,
       "projPA": 206,
       "score2026_neutral": 0.0,
+      "scoreDyn_neutral": 0.0,
+      "score2028_neutral": 0.0,
       "projStats": {
         "R": 19,
         "H": 41,

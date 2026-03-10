@@ -786,6 +786,16 @@ def main():
     pitchers["score2027"] = pitchers.apply(lambda r: compute_future(r, 1), axis=1)
     pitchers["score2028"] = pitchers.apply(lambda r: compute_future(r, 2), axis=1)
 
+    # ── Neutral dyn + 2028 for hitters ────────────────────────────────────────
+    def compute_dyn_neutral(row):
+        name = str(row["name"])
+        if name in DYNASTY_OVERRIDES:
+            return DYNASTY_OVERRIDES[name]
+        return round(min(float(row["score2026_neutral"]) * age_curve_factor(age_for_curve(row)), 10.0), 1)
+
+    hitters["scoreDyn_neutral"]  = hitters.apply(compute_dyn_neutral, axis=1)
+    hitters["score2028_neutral"] = hitters.apply(lambda r: project_future_score(float(r["score2026_neutral"]), age_for_curve(r), 2), axis=1)
+
     # ── IL discount ───────────────────────────────────────────────────────────
     def apply_il(row):
         if str(row["name"]) in IL_PLAYERS:
@@ -794,6 +804,9 @@ def main():
 
     hitters[["score2026","il"]]  = pd.DataFrame(hitters.apply(
         lambda r: apply_il(r), axis=1).tolist(), index=hitters.index)
+    hitters["score2026_neutral"] = hitters.apply(
+        lambda r: round(float(r["score2026_neutral"]) * IL_DISCOUNT, 1)
+                  if str(r["name"]) in IL_PLAYERS else float(r["score2026_neutral"]), axis=1)
     pitchers[["score2026","il"]] = pd.DataFrame(pitchers.apply(
         lambda r: apply_il(r), axis=1).tolist(), index=pitchers.index)
 
@@ -873,6 +886,8 @@ def main():
             "est":        False,
             "projPA":          int(row.get("PA", 0) or 0),
             "score2026_neutral": float(row.get("score2026_neutral", 0)),
+            "scoreDyn_neutral":  float(row.get("scoreDyn_neutral",  0)),
+            "score2028_neutral": float(row.get("score2028_neutral", 0)),
             "projStats":  {
                 "R":   int(row.get("R",   0) or 0),
                 "H":   int(row.get("H",   0) or 0),
