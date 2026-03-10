@@ -735,8 +735,18 @@ def main():
     pitchers["zar_raw"] = compute_zar(pitchers, pitching_stats, DRAFTED_PITCHERS)
 
     # ── Normalize to 0-10 separately, then discount pitchers to reflect draft value ──
-    hitters["score2026"]  = normalize_to_scale(hitters["zar_raw"])
-    pitchers["score2026"] = normalize_to_scale(pitchers["zar_raw"]).apply(lambda v: round(v * 0.85, 1))
+    # SPs and RPs normalized separately so starters only compete with starters
+    # (prevents closers' NSVH from inflating their scores vs elite SPs)
+    hitters["score2026"] = normalize_to_scale(hitters["zar_raw"])
+
+    gs = pitchers["GS"] if "GS" in pitchers.columns else pd.Series(0, index=pitchers.index)
+    g  = pitchers["G"]  if "G"  in pitchers.columns else pd.Series(1, index=pitchers.index)
+    pitchers["is_rp"] = gs.fillna(0) < g.fillna(1) * 0.4
+    sp_mask = ~pitchers["is_rp"]
+    rp_mask =  pitchers["is_rp"]
+    sp_norm = normalize_to_scale(pitchers.loc[sp_mask, "zar_raw"]).apply(lambda v: round(v * 0.85, 1))
+    rp_norm = normalize_to_scale(pitchers.loc[rp_mask, "zar_raw"]).apply(lambda v: round(v * 0.85, 1))
+    pitchers["score2026"] = pd.concat([sp_norm, rp_norm]).reindex(pitchers.index)
 
     # ── Neutral hitter score — equal weights across all 9 hitting cats ─────────
     hitters["zar_neutral"]       = compute_zar(hitters, hitting_stats, DRAFTED_HITTERS, CAT_WEIGHTS_HIT_NEUTRAL)
