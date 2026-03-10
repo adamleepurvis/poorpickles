@@ -744,7 +744,7 @@ def main():
     pitchers["is_rp"] = gs.fillna(0) < g.fillna(1) * 0.4
     sp_mask = ~pitchers["is_rp"]
     rp_mask =  pitchers["is_rp"]
-    sp_norm = normalize_to_scale(pitchers.loc[sp_mask, "zar_raw"]).apply(lambda v: round(v * 0.85, 1))
+    sp_norm = normalize_to_scale(pitchers.loc[sp_mask, "zar_raw"])
     rp_norm = normalize_to_scale(pitchers.loc[rp_mask, "zar_raw"]).apply(lambda v: round(v * 0.85, 1))
     pitchers["score2026"] = pd.concat([sp_norm, rp_norm]).reindex(pitchers.index)
 

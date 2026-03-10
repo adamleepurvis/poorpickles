@@ -662,7 +662,7 @@ export default function DraftAssistant({ config }) {
               <div>VOR @ {t.scarcity.scarcePos}: <span style={{color:t.scarcity.vor>0?"#22c55e":"#f87171"}}>{t.scarcity.vor>0?"+":""}{t.scarcity.vor}</span></div>
               <div>Urgency bonus: <span style={{color:"#94a3b8"}}>+{Math.round(t.urgency/100*1.5*10)/10}</span></div>
               <div>Round value: <span style={{color:rvColor}}>{rvLabel}</span></div>
-              <div style={{marginTop:4,fontWeight:600,color:scoreColor(t.draftNowScore)}}>DNS: {t.draftNowScore}</div>
+              <div style={{marginTop:4,fontWeight:600,color:scoreColor(t.draftNowScore)}}>DNS: {t.draftNowScore} <span style={{fontWeight:400,color:"#475569",fontSize:10}}>(#{dnsRankMap[t.name]} overall)</span></div>
             </div>
             <div style={{fontSize:11}}>
               <div style={{color:"#94a3b8",marginBottom:3,fontSize:10,textTransform:"uppercase",letterSpacing:".06em"}}>Category Fit</div>
