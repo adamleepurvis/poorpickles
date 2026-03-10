@@ -60,16 +60,23 @@ DRAFTED_PITCHERS = int(LEAGUE_SIZE * (4+2+2) * 1.3)           # ~125
 # Your 9x9 category weights — higher = more important to YOUR team
 # Mirrors baseCatNeed in your league config
 CAT_WEIGHTS = {
-    # Hitting — your gaps
+    # Hitting — your gaps (personal weights, drives score2026 for hitters)
     "HR":  3.0, "RBI": 3.0, "SLG": 3.0,  # critical
     "TB":  2.0,                             # moderate need
     "R":   1.0, "H":   1.0, "SB":  1.0,
     "AVG": 1.0, "OBP": 1.0,               # already strong
-    # Pitching
-    "K":   2.0, "ERA": 2.0, "WHIP": 2.0,
-    "K9":  2.0, "BB9": 2.0,
+    # Pitching — equal weights (no personal bias; avoids NSVH/closer inflation)
+    "K":   1.0, "ERA": 1.0, "WHIP": 1.0,
+    "K9":  1.0, "BB9": 1.0,
     "IP":  1.0, "W":   1.0, "ER":   1.0,
-    "NSVH":3.0,                             # semi-punt but nonzero
+    "NSVH":1.0,
+}
+
+# Neutral hitting weights — equal weight for all 9 hitting cats
+# Used to compute score2026_neutral for comparison vs personal-weighted score2026
+CAT_WEIGHTS_HIT_NEUTRAL = {
+    "HR": 1.0, "RBI": 1.0, "R": 1.0, "H": 1.0, "SB": 1.0,
+    "TB": 1.0, "AVG": 1.0, "OBP": 1.0, "SLG": 1.0,
 }
 
 # 5x5 category weights — equal weight for all five hitting and five pitching cats
@@ -728,10 +735,12 @@ def main():
     pitchers["zar_raw"] = compute_zar(pitchers, pitching_stats, DRAFTED_PITCHERS)
 
     # ── Normalize to 0-10 separately, then discount pitchers to reflect draft value ──
-    # Top pitchers go 2-4 rounds after top hitters — apply 0.85 scale so scores
-    # are comparable across types (Freeman 10.0, Skenes ~8.5, Keller ~7.x)
     hitters["score2026"]  = normalize_to_scale(hitters["zar_raw"])
     pitchers["score2026"] = normalize_to_scale(pitchers["zar_raw"]).apply(lambda v: round(v * 0.85, 1))
+
+    # ── Neutral hitter score — equal weights across all 9 hitting cats ─────────
+    hitters["zar_neutral"]       = compute_zar(hitters, hitting_stats, DRAFTED_HITTERS, CAT_WEIGHTS_HIT_NEUTRAL)
+    hitters["score2026_neutral"] = normalize_to_scale(hitters["zar_neutral"])
 
     # ── Dynasty score = score2026 × age curve ─────────────────────────────────
     def get_age(row) -> int:
@@ -852,7 +861,8 @@ def main():
             "cats_5x5":   [c for c in get_cats(row, hitting_stats, False) if c in {"HR","RBI","R","SB","OBP"}],
             "il":         bool(row["il"]),
             "est":        False,
-            "projPA":     int(row.get("PA", 0) or 0),
+            "projPA":          int(row.get("PA", 0) or 0),
+            "score2026_neutral": float(row.get("score2026_neutral", 0)),
             "projStats":  {
                 "R":   int(row.get("R",   0) or 0),
                 "H":   int(row.get("H",   0) or 0),

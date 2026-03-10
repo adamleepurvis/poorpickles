@@ -649,7 +649,7 @@ export default function DraftAssistant({ config }) {
             <div style={{fontSize:11,color:"#64748b"}}>
               <div style={{color:"#94a3b8",marginBottom:3,fontSize:10,textTransform:"uppercase",letterSpacing:".06em"}}>Score Breakdown</div>
               <div>Base: <span style={{color:"#94a3b8"}}>{t.baseScore}</span></div>
-              <div>2026{t.il?" (IL)":""}: <span style={{color:"#94a3b8"}}>{t.il ? Math.round(t.score2026*IL_2026_DISCOUNT*10)/10 : t.score2026}</span></div>
+              <div>2026{t.il?" (IL)":""}: <span style={{color:"#94a3b8"}}>{t.il ? Math.round(t.score2026*IL_2026_DISCOUNT*10)/10 : t.score2026}</span>{t.type==="H"&&t.score2026_neutral!=null&&<span style={{color:"#475569",marginLeft:6,fontSize:10}}>(neutral: {t.score2026_neutral})</span>}</div>
               <div>2028: <span style={{color:"#94a3b8"}}>{t.score2028??"-"}</span></div>
               {t.scoreFTDyn!=null&&<div>FT Dyn: <span style={{color:"#94a3b8"}}>{t.scoreFTDyn}</span></div>}
               {t.scoreYahoo!=null&&<div>Yahoo proj: <span style={{color:t.scoreYahoo>t.score2026?"#34d399":t.scoreYahoo<t.score2026?"#f87171":"#94a3b8"}}>{t.scoreYahoo}{t.scoreYahoo>t.score2026?" ↑":t.scoreYahoo<t.score2026?" ↓":""}</span></div>}
