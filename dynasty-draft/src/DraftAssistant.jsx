@@ -311,6 +311,8 @@ export default function DraftAssistant({ config }) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [draftStartPick, totalTeams, totalRounds, myTeam, draftOrder.join(",")]);
 
+  const [neutralMode, setNeutralMode] = useState(false);
+
   // ── Per-league score remapping ───────────────────────────────────────────
   const leagueTargets = useMemo(() => {
     const prefix = config.scorePrefix;
@@ -347,7 +349,6 @@ export default function DraftAssistant({ config }) {
   const [typeFilter, setTypeFilter] = useState("all");
   const [editingNote, setEditingNote] = useState(null);
   const [needsMode, setNeedsMode] = useState(false);
-  const [neutralMode, setNeutralMode] = useState(false);
   const [fvFilter, setFvFilter] = useState(null); // null | 40 | 45 | 50 | 55 | 60
   const [noteInput, setNoteInput] = useState("");
   const [catStatus, setCatStatus] = useState(config.myCatStatus);
