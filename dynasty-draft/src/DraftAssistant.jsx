@@ -22,7 +22,10 @@ const POS_SCARCITY_ORDER = ["C","SS","2B","3B","CF","LF","RF","1B","SP","RP"];
 // Extract score2028 blending logic so it can be reused for per-league scores
 function computeBlendedScore2028(p, rawScore2028, rawScoreDyn) {
   if (rawScore2028 == null) return null;
-  const raw = p.type === "P" ? Math.round(rawScore2028 * 0.85 * 10) / 10 : rawScore2028;
+  const pitcherDisc = p.type === "P"
+    ? (p.age <= 25 ? 0.95 : p.age <= 27 ? 0.92 : p.age <= 29 ? 0.90 : p.age <= 31 ? 0.87 : 0.85)
+    : 1.0;
+  const raw = p.type === "P" ? Math.round(rawScore2028 * pitcherDisc * 10) / 10 : rawScore2028;
   if (p.il && rawScoreDyn != null) return Math.round(((raw + rawScoreDyn) / 2) * 10) / 10;
   const fvRaw = {"70":10,"65":8.5,"60":7.0,"55":6.0,"50":5.0,"45+":4.5,"45":4.0,"40+":3.5,"40":3.0,"35+":2.5,"35":2.0}[p.prospectFV] ?? null;
   if (fvRaw != null) return Math.round(((raw + fvRaw) / 2) * 10) / 10;
