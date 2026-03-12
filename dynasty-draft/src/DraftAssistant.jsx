@@ -349,6 +349,7 @@ export default function DraftAssistant({ config }) {
   const [typeFilter, setTypeFilter] = useState("all");
   const [editingNote, setEditingNote] = useState(null);
   const [needsMode, setNeedsMode] = useState(false);
+  const [histPos, setHistPos] = useState("All");
   const [fvFilter, setFvFilter] = useState(null); // null | 40 | 45 | 50 | 55 | 60
   const [noteInput, setNoteInput] = useState("");
   const [catStatus, setCatStatus] = useState(config.myCatStatus);
@@ -913,7 +914,7 @@ export default function DraftAssistant({ config }) {
         {/* CENTER */}
         <div style={{flex:1,display:"flex",flexDirection:"column",overflow:"hidden"}}>
           <div style={{background:"#0b0d14",borderBottom:"1px solid #1e293b",display:"flex",alignItems:"center",padding:"0 10px",flexShrink:0}}>
-            {[["board","Targets"],["cats","Categories"],["teams","Other Teams"],["log","Pick Log"]].map(([v,l])=>(
+            {[["board","Targets"],["depth","Depth"],["cats","Categories"],["teams","Other Teams"],["log","Pick Log"]].map(([v,l])=>(
               <button key={v} className="tabn" onClick={()=>setTab(v)}
                 style={{color:tab===v?"#84cc16":"#475569",borderBottom:tab===v?"2px solid #84cc16":"2px solid transparent"}}>
                 {l}
@@ -1160,6 +1161,84 @@ export default function DraftAssistant({ config }) {
           )}
 
           {/* PICK LOG */}
+          {tab==="depth"&&(
+            <div style={{flex:1,overflowY:"auto",padding:16}}>
+              {/* Position filter */}
+              <div style={{display:"flex",flexWrap:"wrap",gap:4,marginBottom:20}}>
+                {["All","H","P",...POS_SCARCITY_ORDER].map(pos=>(
+                  <button key={pos} className="btn" onClick={()=>setHistPos(pos)}
+                    style={{background:histPos===pos?"#1a2744":"#1e293b",
+                            color:histPos===pos?"#84cc16":"#64748b",
+                            border:histPos===pos?"1px solid #84cc1644":"1px solid transparent",
+                            fontWeight:histPos===pos?700:400,minWidth:32}}>
+                    {pos}
+                  </button>
+                ))}
+              </div>
+              {(()=>{
+                const pool = scoredAvailable.filter(p =>
+                  histPos==="All" ? true :
+                  histPos==="H"   ? p.type==="H" :
+                  histPos==="P"   ? p.type==="P" :
+                  (p.eligible||[]).includes(histPos)
+                );
+                const BINS = 10;
+                const buckets = Array.from({length:BINS},(_,i)=>({
+                  label:`${i}–${i+1}`,
+                  lo:i, hi:i+1,
+                  players:[],
+                }));
+                pool.forEach(p=>{
+                  const dns = p.draftNowScore ?? 0;
+                  const idx = Math.min(Math.floor(dns), BINS-1);
+                  buckets[idx].players.push(p);
+                });
+                const maxCount = Math.max(...buckets.map(b=>b.players.length), 1);
+                const W=44, GAP=6, H=160, LABEL_H=18;
+                const totalW = BINS*(W+GAP)-GAP;
+                const DNS_COLOR = (i) => i>=8?"#84cc16":i>=6?"#4ade80":i>=4?"#facc15":i>=2?"#fb923c":"#94a3b8";
+                return (
+                  <div>
+                    <svg width={totalW} height={H+LABEL_H+24} style={{overflow:"visible",display:"block",margin:"0 auto"}}>
+                      {buckets.map((b,i)=>{
+                        const barH = b.players.length===0 ? 0 : Math.max(4, Math.round((b.players.length/maxCount)*H));
+                        const x = i*(W+GAP);
+                        const y = H - barH;
+                        const color = DNS_COLOR(i);
+                        return (
+                          <g key={i}>
+                            <title>{b.label} DNS — {b.players.length} players:\n{b.players.slice(0,20).map(p=>p.name).join("\n")}</title>
+                            <rect x={x} y={y} width={W} height={barH} fill={color} rx={3} opacity={0.85}/>
+                            {b.players.length>0&&(
+                              <text x={x+W/2} y={y-4} textAnchor="middle" fill={color} fontSize={10} fontFamily="IBM Plex Mono,monospace">{b.players.length}</text>
+                            )}
+                            <text x={x+W/2} y={H+LABEL_H} textAnchor="middle" fill="#475569" fontSize={9} fontFamily="IBM Plex Mono,monospace">{b.label}</text>
+                          </g>
+                        );
+                      })}
+                      <line x1={0} y1={H} x2={totalW} y2={H} stroke="#1e293b" strokeWidth={1}/>
+                    </svg>
+                    <div style={{textAlign:"center",fontSize:9,color:"#334155",marginTop:4,fontFamily:"IBM Plex Mono,monospace",letterSpacing:".06em"}}>
+                      DNS SCORE — {pool.length} AVAILABLE PLAYERS {histPos!=="All"?`(${histPos})`:""}
+                    </div>
+                    {/* Top players by bucket (8+) */}
+                    {buckets.filter(b=>b.lo>=8&&b.players.length>0).reverse().map(b=>(
+                      <div key={b.label} style={{marginTop:16}}>
+                        <div style={{fontSize:9,color:"#84cc16",letterSpacing:".1em",textTransform:"uppercase",marginBottom:4}}>{b.label} DNS ({b.players.length})</div>
+                        {b.players.sort((a,z)=>z.draftNowScore-a.draftNowScore).map(p=>(
+                          <div key={p.name} style={{display:"flex",gap:8,padding:"3px 0",borderBottom:"1px solid #0d0f16",fontSize:11}}>
+                            <span style={{color:"#94a3b8",width:180,flexShrink:0}}>{p.name}</span>
+                            <span style={{color:"#475569",width:28}}>{(p.eligible||[]).join("/")}</span>
+                            <span style={{color:"#84cc16"}}>{p.draftNowScore?.toFixed(1)}</span>
+                          </div>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                );
+              })()}
+            </div>
+          )}
           {tab==="log"&&(
             <div style={{flex:1,overflowY:"auto",padding:12}}>
               <div style={{fontSize:10,color:"#475569",marginBottom:8}}>Live picks only (R1-10 keepers not shown).</div>
