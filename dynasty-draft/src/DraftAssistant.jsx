@@ -350,6 +350,7 @@ export default function DraftAssistant({ config }) {
   const [editingNote, setEditingNote] = useState(null);
   const [needsMode, setNeedsMode] = useState(false);
   const [histPos, setHistPos] = useState("All");
+  const [histScore, setHistScore] = useState("dns");
   const [fvFilter, setFvFilter] = useState(null); // null | 40 | 45 | 50 | 55 | 60
   const [noteInput, setNoteInput] = useState("");
   const [catStatus, setCatStatus] = useState(config.myCatStatus);
@@ -1163,6 +1164,18 @@ export default function DraftAssistant({ config }) {
           {/* PICK LOG */}
           {tab==="depth"&&(
             <div style={{flex:1,overflowY:"auto",padding:16}}>
+              {/* Score toggle */}
+              <div style={{display:"flex",gap:4,marginBottom:8}}>
+                {[["dns","DNS"],["s26","2026"],["dyn","Dyn"],["s28","2028"]].map(([v,l])=>(
+                  <button key={v} className="btn" onClick={()=>setHistScore(v)}
+                    style={{background:histScore===v?"#1a2744":"#1e293b",
+                            color:histScore===v?"#84cc16":"#64748b",
+                            border:histScore===v?"1px solid #84cc1644":"1px solid transparent",
+                            fontWeight:histScore===v?700:400}}>
+                    {l}
+                  </button>
+                ))}
+              </div>
               {/* Position filter */}
               <div style={{display:"flex",flexWrap:"wrap",gap:4,marginBottom:20}}>
                 {["All","H","P",...POS_SCARCITY_ORDER].map(pos=>(
@@ -1176,6 +1189,8 @@ export default function DraftAssistant({ config }) {
                 ))}
               </div>
               {(()=>{
+                const scoreKey = histScore==="dns"?"draftNowScore":histScore==="s26"?"score2026":histScore==="dyn"?"scoreDyn":"score2028";
+                const scoreLabel = histScore==="dns"?"DNS":histScore==="s26"?"2026":histScore==="dyn"?"Dyn":"2028";
                 const pool = scoredAvailable.filter(p =>
                   histPos==="All" ? true :
                   histPos==="H"   ? p.type==="H" :
@@ -1200,14 +1215,14 @@ export default function DraftAssistant({ config }) {
                   {label:"0",    lo:0.0, hi:1.0},
                 ].map(b=>({...b, players:[]}));
                 pool.forEach(p=>{
-                  const dns = p.draftNowScore ?? 0;
-                  const b = buckets.find(b => dns >= b.lo && dns < b.hi) ?? buckets[buckets.length-1];
+                  const val = p[scoreKey] ?? 0;
+                  const b = buckets.find(b => val >= b.lo && val < b.hi) ?? buckets[buckets.length-1];
                   b.players.push(p);
                 });
                 const maxCount = Math.max(...buckets.map(b=>b.players.length), 1);
-                const W=36, GAP=5, H=160, LABEL_H=18;
+                const W=36, GAP=5, H=160, LABEL_H=26;
                 const totalW = buckets.length*(W+GAP)-GAP;
-                const DNS_COLOR = (lo) => lo>=9?"#84cc16":lo>=7.5?"#4ade80":lo>=6?"#facc15":lo>=3?"#fb923c":"#94a3b8";
+                const BAR_COLOR = (lo) => lo>=9?"#84cc16":lo>=7.5?"#4ade80":lo>=6?"#facc15":lo>=3?"#fb923c":"#94a3b8";
                 return (
                   <div>
                     <svg width={totalW} height={H+LABEL_H+24} style={{overflow:"visible",display:"block",margin:"0 auto"}}>
@@ -1215,32 +1230,34 @@ export default function DraftAssistant({ config }) {
                         const barH = b.players.length===0 ? 0 : Math.max(4, Math.round((b.players.length/maxCount)*H));
                         const x = i*(W+GAP);
                         const y = H - barH;
-                        const color = DNS_COLOR(b.lo);
+                        const color = BAR_COLOR(b.lo);
+                        const countY = Math.max(y - 4, 10); // prevent clipping at top
                         return (
                           <g key={i}>
-                            <title>{b.label} DNS — {b.players.length} players:\n{b.players.slice(0,20).map(p=>p.name).join("\n")}</title>
+                            <title>{b.label} {scoreLabel} — {b.players.length} players:\n{b.players.slice(0,20).map(p=>p.name).join("\n")}</title>
                             <rect x={x} y={y} width={W} height={barH} fill={color} rx={3} opacity={0.85}/>
                             {b.players.length>0&&(
-                              <text x={x+W/2} y={y-4} textAnchor="middle" fill={color} fontSize={10} fontFamily="IBM Plex Mono,monospace">{b.players.length}</text>
+                              <text x={x+W/2} y={countY} textAnchor="middle" fill={color} fontSize={10} fontFamily="IBM Plex Mono,monospace">{b.players.length}</text>
                             )}
-                            <text x={x+W/2} y={H+LABEL_H} textAnchor="middle" fill="#475569" fontSize={9} fontFamily="IBM Plex Mono,monospace">{b.label}</text>
+                            <text x={x+W/2} y={H+14} textAnchor="end" fill="#475569" fontSize={9} fontFamily="IBM Plex Mono,monospace"
+                              transform={`rotate(-45,${x+W/2},${H+14})`}>{b.label}</text>
                           </g>
                         );
                       })}
                       <line x1={0} y1={H} x2={totalW} y2={H} stroke="#1e293b" strokeWidth={1}/>
                     </svg>
                     <div style={{textAlign:"center",fontSize:9,color:"#334155",marginTop:4,fontFamily:"IBM Plex Mono,monospace",letterSpacing:".06em"}}>
-                      DNS SCORE — {pool.length} AVAILABLE PLAYERS {histPos!=="All"?`(${histPos})`:""}
+                      {scoreLabel} — {pool.length} AVAILABLE PLAYERS {histPos!=="All"?`(${histPos})`:""}
                     </div>
                     {/* Top players by bucket (8+) */}
                     {buckets.filter(b=>b.lo>=8&&b.players.length>0).map(b=>(
                       <div key={b.label} style={{marginTop:16}}>
-                        <div style={{fontSize:9,color:"#84cc16",letterSpacing:".1em",textTransform:"uppercase",marginBottom:4}}>{b.label} DNS ({b.players.length})</div>
-                        {b.players.sort((a,z)=>z.draftNowScore-a.draftNowScore).map(p=>(
+                        <div style={{fontSize:9,color:"#84cc16",letterSpacing:".1em",textTransform:"uppercase",marginBottom:4}}>{b.label} {scoreLabel} ({b.players.length})</div>
+                        {b.players.sort((a,z)=>(z[scoreKey]??0)-(a[scoreKey]??0)).map(p=>(
                           <div key={p.name} style={{display:"flex",gap:8,padding:"3px 0",borderBottom:"1px solid #0d0f16",fontSize:11}}>
                             <span style={{color:"#94a3b8",width:180,flexShrink:0}}>{p.name}</span>
                             <span style={{color:"#475569",width:28}}>{(p.eligible||[]).join("/")}</span>
-                            <span style={{color:"#84cc16"}}>{p.draftNowScore?.toFixed(1)}</span>
+                            <span style={{color:"#84cc16"}}>{(p[scoreKey]??0).toFixed(1)}</span>
                           </div>
                         ))}
                       </div>
