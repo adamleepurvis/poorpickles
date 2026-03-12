@@ -856,11 +856,15 @@ def main():
     # ── Build output records ───────────────────────────────────────────────────
     players = []
 
+    # Two-way players appear in both DataFrames — disambiguate hitter with "(Batter)"
+    two_way_names = set(hitters["name"]) & set(pitchers["name"])
+
     for _, row in hitters.iterrows():
         name = str(row["name"])
+        display_name = f"{name} (Batter)" if name in two_way_names else name
         age  = get_age(row)
         players.append({
-            "name":       name,
+            "name":       display_name,
             "eligible":   assign_eligible(row.get("pos", ""), False),
             "org":        str(row.get("team", "?")),
             "tier":       assign_tier(float(row["score2026"]), float(row["scoreDyn"])),

@@ -90,8 +90,8 @@ def load_zar():
     if not ZAR_FILE.exists():
         return {}
     data = json.loads(ZAR_FILE.read_text())
-    # Index by player name for fast lookup
-    return {p["name"]: p for p in data.get("players", [])}
+    # Index by name|type to preserve two-way players (e.g. Ohtani as H and P)
+    return {f"{p['name']}|{p.get('type','?')}": p for p in data.get("players", [])}
 
 
 def load_yahoo():
@@ -197,7 +197,7 @@ def score_yahoo_projections(yahoo_projections: dict, zar_scores: dict) -> dict:
         return {}
 
     # Separate hitters from pitchers using zar_scores type field
-    player_types = {name: p.get("type") for name, p in zar_scores.items()}
+    player_types = {p["name"]: p.get("type") for p in zar_scores.values()}
 
     def raw_zar(players_stats: dict, cats: list) -> dict:
         """Compute raw ZAR scores for a group of players."""
