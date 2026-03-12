@@ -1182,21 +1182,32 @@ export default function DraftAssistant({ config }) {
                   histPos==="P"   ? p.type==="P" :
                   (p.eligible||[]).includes(histPos)
                 );
-                const BINS = 10;
-                const buckets = Array.from({length:BINS},(_,i)=>({
-                  label:`${i}–${i+1}`,
-                  lo:i, hi:i+1,
-                  players:[],
-                }));
+                // Half-point buckets 6–10, 1-point buckets 0–6, displayed high→low
+                const buckets = [
+                  {label:"9.5+", lo:9.5, hi:10.0},
+                  {label:"9",    lo:9.0, hi:9.5},
+                  {label:"8.5",  lo:8.5, hi:9.0},
+                  {label:"8",    lo:8.0, hi:8.5},
+                  {label:"7.5",  lo:7.5, hi:8.0},
+                  {label:"7",    lo:7.0, hi:7.5},
+                  {label:"6.5",  lo:6.5, hi:7.0},
+                  {label:"6",    lo:6.0, hi:6.5},
+                  {label:"5",    lo:5.0, hi:6.0},
+                  {label:"4",    lo:4.0, hi:5.0},
+                  {label:"3",    lo:3.0, hi:4.0},
+                  {label:"2",    lo:2.0, hi:3.0},
+                  {label:"1",    lo:1.0, hi:2.0},
+                  {label:"0",    lo:0.0, hi:1.0},
+                ].map(b=>({...b, players:[]}));
                 pool.forEach(p=>{
                   const dns = p.draftNowScore ?? 0;
-                  const idx = Math.min(Math.floor(dns), BINS-1);
-                  buckets[idx].players.push(p);
+                  const b = buckets.find(b => dns >= b.lo && dns < b.hi) ?? buckets[buckets.length-1];
+                  b.players.push(p);
                 });
                 const maxCount = Math.max(...buckets.map(b=>b.players.length), 1);
-                const W=44, GAP=6, H=160, LABEL_H=18;
-                const totalW = BINS*(W+GAP)-GAP;
-                const DNS_COLOR = (i) => i>=8?"#84cc16":i>=6?"#4ade80":i>=4?"#facc15":i>=2?"#fb923c":"#94a3b8";
+                const W=36, GAP=5, H=160, LABEL_H=18;
+                const totalW = buckets.length*(W+GAP)-GAP;
+                const DNS_COLOR = (lo) => lo>=9?"#84cc16":lo>=7.5?"#4ade80":lo>=6?"#facc15":lo>=3?"#fb923c":"#94a3b8";
                 return (
                   <div>
                     <svg width={totalW} height={H+LABEL_H+24} style={{overflow:"visible",display:"block",margin:"0 auto"}}>
@@ -1204,7 +1215,7 @@ export default function DraftAssistant({ config }) {
                         const barH = b.players.length===0 ? 0 : Math.max(4, Math.round((b.players.length/maxCount)*H));
                         const x = i*(W+GAP);
                         const y = H - barH;
-                        const color = DNS_COLOR(i);
+                        const color = DNS_COLOR(b.lo);
                         return (
                           <g key={i}>
                             <title>{b.label} DNS — {b.players.length} players:\n{b.players.slice(0,20).map(p=>p.name).join("\n")}</title>
@@ -1222,7 +1233,7 @@ export default function DraftAssistant({ config }) {
                       DNS SCORE — {pool.length} AVAILABLE PLAYERS {histPos!=="All"?`(${histPos})`:""}
                     </div>
                     {/* Top players by bucket (8+) */}
-                    {buckets.filter(b=>b.lo>=8&&b.players.length>0).reverse().map(b=>(
+                    {buckets.filter(b=>b.lo>=8&&b.players.length>0).map(b=>(
                       <div key={b.label} style={{marginTop:16}}>
                         <div style={{fontSize:9,color:"#84cc16",letterSpacing:".1em",textTransform:"uppercase",marginBottom:4}}>{b.label} DNS ({b.players.length})</div>
                         {b.players.sort((a,z)=>z.draftNowScore-a.draftNowScore).map(p=>(
