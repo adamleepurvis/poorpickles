@@ -572,26 +572,26 @@ export default function DraftAssistant({ config }) {
         style={{background:"#0d0f16",border:`1px solid ${isWatched?"#f59e0b44":TIER_COLOR[t.tier]+"22"}`,borderLeft:`3px solid ${isWatched?"#f59e0b":TIER_COLOR[t.tier]}`,borderRadius:4,padding:"7px 10px",marginBottom:4,cursor:"pointer"}}
         onClick={()=>setShowScoreBreakdown(isExpanded ? null : t.name)}>
         <div style={{display:"flex",alignItems:"center",gap:8}}>
-          <span style={{fontSize:11,color:"#475569",width:18,textAlign:"right",flexShrink:0}}>#{idx+1}</span>
+          <span style={{fontSize:11,color:"#64748b",width:18,textAlign:"right",flexShrink:0}}>#{idx+1}</span>
           {/* Score badges */}
           <div style={{display:"flex",flexDirection:"column",gap:2,flexShrink:0,alignItems:"center"}}>
             <div style={{background:`${scoreColor(t.draftNowScore)}22`,border:`1px solid ${scoreColor(t.draftNowScore)}44`,borderRadius:4,padding:"1px 6px",minWidth:32,textAlign:"center"}}>
-              <span style={{fontSize:9,color:"#475569"}}>DNS </span>
+              <span style={{fontSize:9,color:"#64748b"}}>DNS </span>
               <span style={{fontSize:13,fontWeight:700,color:scoreColor(t.draftNowScore)}}>{t.draftNowScore}</span>
             </div>
             <div style={{background:"#1e293b",borderRadius:4,padding:"1px 6px",minWidth:32,textAlign:"center"}}>
-              <span style={{fontSize:9,color:"#475569"}}>26 </span>
+              <span style={{fontSize:9,color:"#64748b"}}>26 </span>
               <span style={{fontSize:11,fontWeight:600,color:"#60a5fa"}}>{t.score2026}</span>
             </div>
             {t.score2028 != null && (
               <div style={{background:"#1e293b",borderRadius:4,padding:"1px 6px",minWidth:32,textAlign:"center"}}>
-                <span style={{fontSize:9,color:"#475569"}}>28 </span>
+                <span style={{fontSize:9,color:"#64748b"}}>28 </span>
                 <span style={{fontSize:11,fontWeight:600,color:"#34d399"}}>{t.score2028}</span>
               </div>
             )}
             {t.scoreFTDyn != null && (
               <div style={{background:"#1e293b",borderRadius:4,padding:"1px 6px",minWidth:32,textAlign:"center"}}>
-                <span style={{fontSize:9,color:"#475569"}}>FT </span>
+                <span style={{fontSize:9,color:"#64748b"}}>FT </span>
                 <span style={{fontSize:11,fontWeight:600,color:"#a78bfa"}}>{t.scoreFTDyn}</span>
               </div>
             )}
@@ -601,12 +601,12 @@ export default function DraftAssistant({ config }) {
             <div style={{display:"flex",alignItems:"center",gap:6,flexWrap:"wrap"}}>
               <span style={{fontSize:15,color:"#f1f5f9",fontWeight:500}}>{t.name}</span>
               {t.il&&<span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 4px",borderRadius:3}}>IL</span>}
-              {t.est&&<span style={{fontSize:9,color:"#64748b",background:"#1e293b",padding:"1px 4px",borderRadius:3}}>EST</span>}
+              {t.est&&<span style={{fontSize:9,color:"#94a3b8",background:"#1e293b",padding:"1px 4px",borderRadius:3}}>EST</span>}
               {t.eligible.map(p=>(
-                <span key={p} style={{fontSize:9,color:"#94a3b8",background:"#1e293b",padding:"1px 5px",borderRadius:3,border:"1px solid #334155"}}>{p}</span>
+                <span key={p} style={{fontSize:9,color:"#cbd5e1",background:"#1e293b",padding:"1px 5px",borderRadius:3,border:"1px solid #334155"}}>{p}</span>
               ))}
-              <span style={{fontSize:10,color:"#475569"}}>· {t.org}</span>
-              {t.age > 0 && <span style={{fontSize:10,color:"#475569"}}>· {t.age}</span>}
+              <span style={{fontSize:10,color:"#64748b"}}>· {t.org}</span>
+              {t.age > 0 && <span style={{fontSize:10,color:"#64748b"}}>· {t.age}</span>}
               {t.prospectFV != null && (() => {
                 const fvColor = t.prospectFV >= 60 ? "#f59e0b" : t.prospectFV >= 55 ? "#22c55e" : t.prospectFV >= 50 ? "#60a5fa" : "#94a3b8";
                 const riskDot = t.prospectRisk === "Low" ? "●" : t.prospectRisk === "Med" ? "●" : t.prospectRisk === "High" ? "●" : "●";
@@ -615,7 +615,7 @@ export default function DraftAssistant({ config }) {
                   <span style={{fontSize:9,padding:"1px 6px",borderRadius:3,background:`${fvColor}18`,color:fvColor,border:`1px solid ${fvColor}44`,fontWeight:600}}>
                     FV{t.prospectFV}
                     <span style={{color:riskColor,marginLeft:3}}>{riskDot}</span>
-                    {t.prospectETA && <span style={{color:"#475569",fontWeight:400}}> {t.prospectETA}</span>}
+                    {t.prospectETA && <span style={{color:"#64748b",fontWeight:400}}> {t.prospectETA}</span>}
                   </span>
                 );
               })()}
@@ -627,7 +627,7 @@ export default function DraftAssistant({ config }) {
               )}
               <span style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${TIER_COLOR[t.tier]}18`,color:TIER_COLOR[t.tier]}}>{TIER_LABEL[t.tier]}</span>
             </div>
-            <div style={{fontSize:10,color:"#475569",marginTop:1}}>{playerNotes[t.name]||t.note}</div>
+            <div style={{fontSize:10,color:"#64748b",marginTop:1}}>{playerNotes[t.name]||t.note}</div>
           </div>
           {/* Right side: value indicator + urgency + buttons */}
           <div style={{display:"flex",gap:6,flexShrink:0,alignItems:"center"}}>
@@ -635,8 +635,8 @@ export default function DraftAssistant({ config }) {
             {t.urgency >= 50 && (
               <span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 5px",borderRadius:3}}>{t.urgency}% gone</span>
             )}
-            <span style={{fontSize:9,color:"#475569"}}>VOR {t.scarcity.vor > 0 ? "+":""}{t.scarcity.vor}</span>
-            <span style={{fontSize:10,color:"#475569"}}>{t.type==="H"?"⚾":"⚡"}</span>
+            <span style={{fontSize:9,color:"#64748b"}}>VOR {t.scarcity.vor > 0 ? "+":""}{t.scarcity.vor}</span>
+            <span style={{fontSize:10,color:"#64748b"}}>{t.type==="H"?"⚾":"⚡"}</span>
             <button className="btn" onClick={e=>{e.stopPropagation();toggleWatch(t.name);}}
               style={{fontSize:11,padding:"1px 5px",background:isWatched?"#f59e0b22":"#1e293b",color:isWatched?"#f59e0b":"#475569",border:isWatched?"1px solid #f59e0b44":"1px solid transparent"}}>
               {isWatched?"★":"☆"}
@@ -659,26 +659,26 @@ export default function DraftAssistant({ config }) {
         {/* Expanded score breakdown */}
         {isExpanded&&(
           <div style={{marginTop:8,paddingTop:8,borderTop:"1px solid #1e293b",display:"grid",gridTemplateColumns:"1fr 1fr",gap:6}}>
-            <div style={{fontSize:11,color:"#64748b"}}>
-              <div style={{color:"#94a3b8",marginBottom:3,fontSize:10,textTransform:"uppercase",letterSpacing:".06em"}}>Score Breakdown</div>
-              <div>Base: <span style={{color:"#94a3b8"}}>{t.baseScore}</span></div>
-              <div>2026{t.il?" (IL)":""}: <span style={{color:"#94a3b8"}}>{t.il ? Math.round(t.score2026*IL_2026_DISCOUNT*10)/10 : t.score2026}</span>{t.type==="H"&&t.score2026_neutral!=null&&<span style={{color:"#475569",marginLeft:6,fontSize:10}}>(neutral: {t.score2026_neutral})</span>}</div>
-              <div>2028: <span style={{color:"#94a3b8"}}>{t.score2028??"-"}</span></div>
-              {t.scoreFTDyn!=null&&<div>FT Dyn: <span style={{color:"#94a3b8"}}>{t.scoreFTDyn}</span></div>}
+            <div style={{fontSize:11,color:"#94a3b8"}}>
+              <div style={{color:"#cbd5e1",marginBottom:3,fontSize:10,textTransform:"uppercase",letterSpacing:".06em"}}>Score Breakdown</div>
+              <div>Base: <span style={{color:"#cbd5e1"}}>{t.baseScore}</span></div>
+              <div>2026{t.il?" (IL)":""}: <span style={{color:"#cbd5e1"}}>{t.il ? Math.round(t.score2026*IL_2026_DISCOUNT*10)/10 : t.score2026}</span>{t.type==="H"&&t.score2026_neutral!=null&&<span style={{color:"#64748b",marginLeft:6,fontSize:10}}>(neutral: {t.score2026_neutral})</span>}</div>
+              <div>2028: <span style={{color:"#cbd5e1"}}>{t.score2028??"-"}</span></div>
+              {t.scoreFTDyn!=null&&<div>FT Dyn: <span style={{color:"#cbd5e1"}}>{t.scoreFTDyn}</span></div>}
               {t.scoreYahoo!=null&&<div>Yahoo proj: <span style={{color:t.scoreYahoo>t.score2026?"#34d399":t.scoreYahoo<t.score2026?"#f87171":"#94a3b8"}}>{t.scoreYahoo}{t.scoreYahoo>t.score2026?" ↑":t.scoreYahoo<t.score2026?" ↓":""}</span></div>}
-              {t.fpAdp!=null&&<div>FP ADP: <span style={{color:"#94a3b8"}}>#{t.fpRank} (avg {t.fpAdp})</span>{t.stealScore!=null&&<span style={{marginLeft:4,color:t.stealScore>0.5?"#34d399":t.stealScore<-0.5?"#f87171":"#94a3b8"}}>{t.stealScore>0?"+":""}{t.stealScore} steal</span>}</div>}
+              {t.fpAdp!=null&&<div>FP ADP: <span style={{color:"#cbd5e1"}}>#{t.fpRank} (avg {t.fpAdp})</span>{t.stealScore!=null&&<span style={{marginLeft:4,color:t.stealScore>0.5?"#34d399":t.stealScore<-0.5?"#f87171":"#94a3b8"}}>{t.stealScore>0?"+":""}{t.stealScore} steal</span>}</div>}
               {t.espnRank!=null&&<div>ESPN: <span style={{color:"#a78bfa"}}>#{t.espnRank}{t.espnAscending?" ↑ (career-best)":""}{t.espnPrevPeak&&t.espnPrevPeak!==t.espnRank?" (prev peak #"+t.espnPrevPeak+")":""}</span></div>}
-              {t.prospectFV!=null&&<div>Prospect: <span style={{color:"#94a3b8"}}>FV{t.prospectFV} · {t.prospectRisk} risk · ETA {t.prospectETA}{t.prospectRank?" · #"+t.prospectRank:""}</span></div>}
+              {t.prospectFV!=null&&<div>Prospect: <span style={{color:"#cbd5e1"}}>FV{t.prospectFV} · {t.prospectRisk} risk · ETA {t.prospectETA}{t.prospectRank?" · #"+t.prospectRank:""}</span></div>}
               {(t.projPA!=null&&t.projPA>0&&t.projPA<480)||((t.projIP!=null&&t.projIP>0&&t.projIP<(t.eligible?.every(p=>p==="RP")?62:150)))
                 ?<div>Playing time: <span style={{color:"#f59e0b"}}>{t.type==="P"?`${t.projIP} IP`:`${t.projPA} PA`} projected</span></div>
                 :null}
               <div>VOR @ {t.scarcity.scarcePos}: <span style={{color:t.scarcity.vor>0?"#22c55e":"#f87171"}}>{t.scarcity.vor>0?"+":""}{t.scarcity.vor}</span></div>
-              <div>Urgency bonus: <span style={{color:"#94a3b8"}}>+{Math.round(t.urgency/100*1.5*10)/10}</span></div>
+              <div>Urgency bonus: <span style={{color:"#cbd5e1"}}>+{Math.round(t.urgency/100*1.5*10)/10}</span></div>
               <div>Round value: <span style={{color:rvColor}}>{rvLabel}</span></div>
-              <div style={{marginTop:4,fontWeight:600,color:scoreColor(t.draftNowScore)}}>DNS: {t.draftNowScore} <span style={{fontWeight:400,color:"#475569",fontSize:10}}>(#{dnsRankMap[t.name]} overall)</span></div>
+              <div style={{marginTop:4,fontWeight:600,color:scoreColor(t.draftNowScore)}}>DNS: {t.draftNowScore} <span style={{fontWeight:400,color:"#64748b",fontSize:10}}>(#{dnsRankMap[t.name]} overall)</span></div>
             </div>
             <div style={{fontSize:11}}>
-              <div style={{color:"#94a3b8",marginBottom:3,fontSize:10,textTransform:"uppercase",letterSpacing:".06em"}}>Category Fit</div>
+              <div style={{color:"#cbd5e1",marginBottom:3,fontSize:10,textTransform:"uppercase",letterSpacing:".06em"}}>Category Fit</div>
               <div style={{display:"flex",gap:4,flexWrap:"wrap"}}>
                 {t.cats.map(c=>{
                   const orig = baseCatNeed[c]||0;
@@ -691,19 +691,19 @@ export default function DraftAssistant({ config }) {
                   );
                 })}
               </div>
-              <div style={{marginTop:6,fontSize:10,color:"#475569"}}>
+              <div style={{marginTop:6,fontSize:10,color:"#64748b"}}>
                 Pos depth @ {t.scarcity.scarcePos}: {t.scarcity.depth} left
               </div>
               {t.projStats&&(
                 <div style={{marginTop:6}}>
-                  <div style={{color:"#94a3b8",marginBottom:3,fontSize:10,textTransform:"uppercase",letterSpacing:".06em"}}>Steamer Proj</div>
+                  <div style={{color:"#cbd5e1",marginBottom:3,fontSize:10,textTransform:"uppercase",letterSpacing:".06em"}}>Steamer Proj</div>
                   <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
                     {(t.type==="H"?hitCats:pitchCats).filter(c=>t.projStats[c]!=null).map(c=>{
                       const v=t.projStats[c];
                       const disp=["AVG","OBP","SLG"].includes(c)?v.toFixed(3).replace(/^0/,""):
                                  ["ERA","WHIP"].includes(c)?v.toFixed(2):
                                  ["K/9","BB/9"].includes(c)?v.toFixed(1):v;
-                      return <span key={c} style={{fontSize:9,color:"#94a3b8"}}><span style={{color:"#64748b"}}>{c}:</span> {disp}</span>;
+                      return <span key={c} style={{fontSize:9,color:"#cbd5e1"}}><span style={{color:"#94a3b8"}}>{c}:</span> {disp}</span>;
                     })}
                   </div>
                 </div>
@@ -714,7 +714,7 @@ export default function DraftAssistant({ config }) {
                     onKeyDown={e=>{if(e.key==="Enter"){setPlayerNotes(p=>({...p,[t.name]:noteInput}));setEditingNote(null);}}}
                     style={{flex:1,fontSize:10}} onClick={e=>e.stopPropagation()}/>
                 ):(
-                  <button className="btn" style={{background:"#1e293b",color:"#64748b",fontSize:9}} onClick={e=>{e.stopPropagation();setEditingNote(t.name);setNoteInput(playerNotes[t.name]||t.note);}}>
+                  <button className="btn" style={{background:"#1e293b",color:"#94a3b8",fontSize:9}} onClick={e=>{e.stopPropagation();setEditingNote(t.name);setNoteInput(playerNotes[t.name]||t.note);}}>
                     edit note
                   </button>
                 )}
@@ -748,14 +748,14 @@ export default function DraftAssistant({ config }) {
         <div style={{display:"flex",alignItems:"center",gap:12}}>
           <span style={{fontSize:22,letterSpacing:".15em",color:"#84cc16",fontWeight:700}}>{config.leagueName.toUpperCase()}</span>
           <span style={{color:"#1e293b"}}>|</span>
-          <span style={{fontSize:10,color:"#475569",letterSpacing:".1em"}}>DYNASTY DRAFT · SCORING ENGINE v2</span>
+          <span style={{fontSize:10,color:"#64748b",letterSpacing:".1em"}}>DYNASTY DRAFT · SCORING ENGINE v2</span>
         </div>
         <div style={{display:"flex",gap:14,alignItems:"center"}}>
           <div style={{display:"flex",gap:6,alignItems:"center"}}>
-            <span style={{fontSize:10,color:"#475569",marginRight:2}}>MY PICKS:</span>
+            <span style={{fontSize:10,color:"#64748b",marginRight:2}}>MY PICKS:</span>
             {snakePicks.map((p,i)=>(
               <div key={p} style={{textAlign:"center",opacity:i===0?1:0.4+i*0.15}}>
-                <div style={{fontSize:9,color:"#475569"}}>R{getRound(p)}</div>
+                <div style={{fontSize:9,color:"#64748b"}}>R{getRound(p)}</div>
                 <div style={{fontSize:13,fontWeight:600,color:i===0&&isMyClock?"#84cc16":"#94a3b8"}}>#{p}</div>
               </div>
             ))}
@@ -763,7 +763,7 @@ export default function DraftAssistant({ config }) {
           <div style={{width:1,height:24,background:"#1e293b"}}/>
           {[["PICK",currentPick],["RND",currentRound]].map(([l,v])=>(
             <div key={l} style={{textAlign:"center"}}>
-              <div style={{fontSize:9,color:"#475569"}}>{l}</div>
+              <div style={{fontSize:9,color:"#64748b"}}>{l}</div>
               <div style={{fontSize:15,fontWeight:600,color:"#f1f5f9"}}>{v}</div>
             </div>
           ))}
@@ -791,7 +791,7 @@ export default function DraftAssistant({ config }) {
         <div style={{width:210,background:"#09090e",borderRight:"1px solid #1e293b",display:"flex",flexDirection:"column",flexShrink:0}}>
           <div style={{padding:10,borderBottom:"1px solid #1e293b"}}>
             <div style={{marginBottom:6}}>
-              <div style={{fontSize:10,color:"#475569",letterSpacing:".08em",textTransform:"uppercase"}}>Pick #{currentPick} · [/] to focus</div>
+              <div style={{fontSize:10,color:"#64748b",letterSpacing:".08em",textTransform:"uppercase"}}>Pick #{currentPick} · [/] to focus</div>
               <div style={{fontSize:12,fontWeight:600,color:isMyClock?"#84cc16":"#94a3b8",marginTop:2}}>
                 {isMyClock ? "⚡ YOUR PICK" : `🕐 ${getPickOwner(currentPick)}`}
               </div>
@@ -828,7 +828,7 @@ export default function DraftAssistant({ config }) {
               {isMyClock?"Record My Pick [Enter]":"Record + Advance [Enter]"}
             </button>
             <div style={{display:"flex",gap:3,marginTop:3}}>
-              <button className="btn" style={{flex:1,background:"#1e293b",color:"#64748b"}} onClick={()=>{
+              <button className="btn" style={{flex:1,background:"#1e293b",color:"#94a3b8"}} onClick={()=>{
                 const lastPick = Math.max(...Object.keys(livePicks).map(Number), draftStartPick-1);
                 if(lastPick>=draftStartPick){
                   const name=livePicks[lastPick];
@@ -843,7 +843,7 @@ export default function DraftAssistant({ config }) {
 
           {/* Pick tracker */}
           <div style={{padding:"6px 10px",borderBottom:"1px solid #1e293b",flexShrink:0}}>
-            <div style={{fontSize:9,color:"#475569",textTransform:"uppercase",letterSpacing:".08em",marginBottom:4}}>Pick Order</div>
+            <div style={{fontSize:9,color:"#64748b",textTransform:"uppercase",letterSpacing:".08em",marginBottom:4}}>Pick Order</div>
             <div style={{display:"flex",flexDirection:"column",gap:1}}>
               {Array.from({length:18},(_,i)=>currentPick+i-3).filter(p=>p>=draftStartPick&&p<=totalTeams*totalRounds).map(p=>{
                 const owner = getPickOwner(p);
@@ -870,7 +870,7 @@ export default function DraftAssistant({ config }) {
 
           {/* My roster */}
           <div style={{flex:1,overflowY:"auto",padding:10}}>
-            <div style={{fontSize:10,color:"#475569",letterSpacing:".08em",textTransform:"uppercase",marginBottom:6}}>My Roster ({myRoster.length}/{totalRounds})</div>
+            <div style={{fontSize:10,color:"#64748b",letterSpacing:".08em",textTransform:"uppercase",marginBottom:6}}>My Roster ({myRoster.length}/{totalRounds})</div>
             {myRoster.map((p,i)=>{
               const isSelected = rosterSelected === p.name;
               const t = p.target;
@@ -881,8 +881,8 @@ export default function DraftAssistant({ config }) {
                     <div style={{fontSize:12,color:"#e2e8f0"}}>{p.name}</div>
                     <div style={{display:"flex",gap:3,flexWrap:"wrap",marginTop:1}}>
                       {t ? t.eligible.map(e=>(
-                        <span key={e} style={{fontSize:9,color:"#94a3b8",background:"#1e293b",padding:"0 4px",borderRadius:2}}>{e}</span>
-                      )) : <span style={{fontSize:9,color:"#475569"}}>?</span>}
+                        <span key={e} style={{fontSize:9,color:"#cbd5e1",background:"#1e293b",padding:"0 4px",borderRadius:2}}>{e}</span>
+                      )) : <span style={{fontSize:9,color:"#64748b"}}>?</span>}
                       {p.kept && <span style={{fontSize:9,color:"#3b82f6",marginLeft:2}}>K</span>}
                     </div>
                   </div>
@@ -891,14 +891,14 @@ export default function DraftAssistant({ config }) {
                       <div style={{display:"flex",gap:6,marginBottom:4,flexWrap:"wrap"}}>
                         {[["DNS", calcBaseScore(t,catNeed)],["26",t.score2026],["28",t.score2028??"-"],["FT",t.scoreFTDyn??"-"],["Age",t.age||"-"]].map(([l,v])=>(
                           <div key={l} style={{textAlign:"center"}}>
-                            <div style={{fontSize:9,color:"#475569"}}>{l}</div>
+                            <div style={{fontSize:9,color:"#64748b"}}>{l}</div>
                             <div style={{fontSize:12,fontWeight:700,color:"#60a5fa"}}>{v}</div>
                           </div>
                         ))}
                       </div>
-                      <div style={{color:"#475569",fontSize:10,marginBottom:2}}>{t.note}</div>
+                      <div style={{color:"#64748b",fontSize:10,marginBottom:2}}>{t.note}</div>
                       <div style={{display:"flex",gap:3,flexWrap:"wrap"}}>
-                        {t.cats.map(c=><span key={c} style={{fontSize:9,color:"#94a3b8",background:"#1e293b",padding:"0 4px",borderRadius:2}}>{c}</span>)}
+                        {t.cats.map(c=><span key={c} style={{fontSize:9,color:"#cbd5e1",background:"#1e293b",padding:"0 4px",borderRadius:2}}>{c}</span>)}
                       </div>
                       <div style={{marginTop:4}}>
                         <span style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${TIER_COLOR[t.tier]}18`,color:TIER_COLOR[t.tier]}}>{TIER_LABEL[t.tier]}</span>
@@ -975,7 +975,7 @@ export default function DraftAssistant({ config }) {
             <div style={{flex:1,overflowY:"auto",padding:12}}>
               {/* Positional depth gauge */}
               <div style={{display:"flex",gap:4,marginBottom:8,flexWrap:"wrap",alignItems:"center"}}>
-                <span style={{fontSize:9,color:"#475569",letterSpacing:".08em",textTransform:"uppercase",marginRight:2}}>Depth:</span>
+                <span style={{fontSize:9,color:"#64748b",letterSpacing:".08em",textTransform:"uppercase",marginRight:2}}>Depth:</span>
                 {posDepth.map(({pos, myCount, slots, need, quality}) => {
                   // Color based on quality available vs. how many more I still need
                   const color = need === 0 && myCount > slots ? "#60a5fa"  // filled + backup
@@ -985,8 +985,8 @@ export default function DraftAssistant({ config }) {
                     :                                           "#f87171"; // short
                   return (
                     <div key={pos} style={{display:"flex",flexDirection:"column",alignItems:"center",background:"#0d0f16",border:`1px solid ${color}44`,borderRadius:3,padding:"2px 6px",minWidth:28}}>
-                      <span style={{fontSize:9,color:"#475569"}}>{pos}</span>
-                      <span style={{fontSize:10,color:"#64748b"}}>{myCount}/{slots}</span>
+                      <span style={{fontSize:9,color:"#64748b"}}>{pos}</span>
+                      <span style={{fontSize:10,color:"#94a3b8"}}>{myCount}/{slots}</span>
                       <span style={{fontSize:11,fontWeight:700,color}}>{quality}</span>
                     </div>
                   );
@@ -994,16 +994,16 @@ export default function DraftAssistant({ config }) {
               </div>
               {/* Score legend */}
               <div style={{display:"flex",gap:12,marginBottom:10,flexWrap:"wrap",alignItems:"center"}}>
-                <span style={{fontSize:10,color:"#475569"}}>DNS = 20/20/30/30 (26/28/Dyn/FT) · +FV: 15/15/20/25/25 · no expert: 15/21/30 discounted · </span>
+                <span style={{fontSize:10,color:"#64748b"}}>DNS = 20/20/30/30 (26/28/Dyn/FT) · +FV: 15/15/20/25/25 · no expert: 15/21/30 discounted · </span>
                 {[["≥8.0","#f59e0b","Elite"],["≥6.5","#22c55e","Strong"],["≥5.0","#60a5fa","Solid"],["<5.0","#64748b","Stash"]].map(([r,c,l])=>(
                   <div key={r} style={{display:"flex",alignItems:"center",gap:4,fontSize:10}}>
                     <div style={{width:7,height:7,borderRadius:2,background:c}}/>
-                    <span style={{color:"#64748b"}}>{l} {r}</span>
+                    <span style={{color:"#94a3b8"}}>{l} {r}</span>
                   </div>
                 ))}
-                <span style={{fontSize:10,color:"#475569",marginLeft:4}}>·</span>
-                <span style={{fontSize:10,color:"#64748b"}}>⚾ hitter</span>
-                <span style={{fontSize:10,color:"#64748b"}}>⚡ pitcher</span>
+                <span style={{fontSize:10,color:"#64748b",marginLeft:4}}>·</span>
+                <span style={{fontSize:10,color:"#94a3b8"}}>⚾ hitter</span>
+                <span style={{fontSize:10,color:"#94a3b8"}}>⚡ pitcher</span>
               </div>
 
               {filtered.length===0&&<div style={{textAlign:"center",color:"#1e293b",padding:40}}>All targets gone!</div>}
@@ -1025,12 +1025,12 @@ export default function DraftAssistant({ config }) {
           {/* CATEGORY TRACKER */}
           {tab==="cats"&&(
             <div style={{flex:1,overflowY:"auto",padding:14}}>
-              <div style={{marginBottom:10,fontSize:11,color:"#475569"}}>
+              <div style={{marginBottom:10,fontSize:11,color:"#64748b"}}>
                 Need weights update live as you draft. <span style={{color:"#84cc16"}}>Amber = decayed by your picks.</span> Click to manually cycle status.
               </div>
               {[["HITTING",hitCats],["PITCHING",pitchCats]].map(([label,cats])=>(
                 <div key={label} style={{marginBottom:18}}>
-                  <div style={{fontSize:10,color:"#475569",letterSpacing:".1em",textTransform:"uppercase",marginBottom:8}}>{label}</div>
+                  <div style={{fontSize:10,color:"#64748b",letterSpacing:".1em",textTransform:"uppercase",marginBottom:8}}>{label}</div>
                   <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
                     {cats.map(c=>{
                       const statuses=["missing","thin","ok","strong"];
@@ -1048,7 +1048,7 @@ export default function DraftAssistant({ config }) {
                           <div style={{marginTop:3,display:"flex",justifyContent:"center",alignItems:"center",gap:3}}>
                             {decayed ? (
                               <>
-                                <span style={{fontSize:9,color:"#475569",textDecoration:"line-through"}}>{origNeed}</span>
+                                <span style={{fontSize:9,color:"#64748b",textDecoration:"line-through"}}>{origNeed}</span>
                                 <span style={{fontSize:9,color:"#84cc16"}}>→{currNeed}</span>
                               </>
                             ) : (
@@ -1062,16 +1062,16 @@ export default function DraftAssistant({ config }) {
                 </div>
               ))}
               <div style={{marginTop:4,padding:"8px 10px",background:"#0d0f16",borderRadius:4,border:"1px solid #1e293b"}}>
-                <div style={{fontSize:10,color:"#475569",marginBottom:4,letterSpacing:".08em",textTransform:"uppercase"}}>Decay Log</div>
+                <div style={{fontSize:10,color:"#64748b",marginBottom:4,letterSpacing:".08em",textTransform:"uppercase"}}>Decay Log</div>
                 {myDrafted.length === 0
                   ? <div style={{fontSize:11,color:"#1e293b"}}>No picks recorded yet.</div>
                   : myDrafted.map((name, i) => {
                     const t = leagueTargets.find(x => x.name === name);
                     if (!t) return null;
                     return (
-                      <div key={i} style={{fontSize:11,color:"#64748b",marginBottom:2,display:"flex",gap:6}}>
+                      <div key={i} style={{fontSize:11,color:"#94a3b8",marginBottom:2,display:"flex",gap:6}}>
                         <span style={{color:"#22c55e"}}>{name}</span>
-                        <span style={{color:"#475569"}}>↓</span>
+                        <span style={{color:"#64748b"}}>↓</span>
                         {t.cats.map(c => (
                           <span key={c} style={{color:CAT_NEED_COLOR[catNeed[c]]||"#475569",background:"#1e293b",padding:"0 4px",borderRadius:3,fontSize:10}}>{c}</span>
                         ))}
@@ -1083,7 +1083,7 @@ export default function DraftAssistant({ config }) {
 
               {/* Category Projection */}
               <div style={{marginTop:14}}>
-                <div style={{fontSize:10,color:"#475569",letterSpacing:".1em",textTransform:"uppercase",marginBottom:6}}>
+                <div style={{fontSize:10,color:"#64748b",letterSpacing:".1em",textTransform:"uppercase",marginBottom:6}}>
                   Projected Standing <span style={{color:"#334155",fontWeight:400}}>— based on keepers + drafted</span>
                 </div>
                 {[["HITTING",hitCats],["PITCHING",pitchCats]].map(([label,cats])=>(
@@ -1096,7 +1096,7 @@ export default function DraftAssistant({ config }) {
                       const barW = proj.max > 0 ? Math.round((proj.myScore / proj.max) * 100) : 0;
                       return (
                         <div key={cat} style={{display:"flex",alignItems:"center",gap:8,marginBottom:4}}>
-                          <span style={{fontSize:10,color:"#64748b",width:36,flexShrink:0}}>{cat}</span>
+                          <span style={{fontSize:10,color:"#94a3b8",width:36,flexShrink:0}}>{cat}</span>
                           <div style={{flex:1,height:6,background:"#1e293b",borderRadius:3,overflow:"hidden"}}>
                             <div style={{width:`${barW}%`,height:"100%",background:rankColor,borderRadius:3,transition:"width .3s"}}/>
                           </div>
@@ -1118,7 +1118,7 @@ export default function DraftAssistant({ config }) {
           {/* OTHER TEAMS */}
           {tab==="teams"&&(
             <div style={{flex:1,overflowY:"auto",padding:12}}>
-              <div style={{fontSize:10,color:"#475569",marginBottom:10}}>Keeper rosters R1-10. Use to assess positional pressure and SP scarcity.</div>
+              <div style={{fontSize:10,color:"#64748b",marginBottom:10}}>Keeper rosters R1-10. Use to assess positional pressure and SP scarcity.</div>
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>
                 {draftOrder.filter(t=>t!==myTeam).map(team=>{
                   const keepers = keeperPicks.filter(p=>p.team===team);
@@ -1133,13 +1133,13 @@ export default function DraftAssistant({ config }) {
                   return (
                     <div key={team} style={{background:"#0d0f16",border:"1px solid #1e293b",borderRadius:4,padding:"8px 10px"}}>
                       <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:5}}>
-                        <span style={{fontSize:11,color:"#94a3b8",fontWeight:600}}>{team}</span>
+                        <span style={{fontSize:11,color:"#cbd5e1",fontWeight:600}}>{team}</span>
                         {spCount>0&&<span style={{fontSize:9,color:"#60a5fa",background:"#1e3a5f33",padding:"1px 5px",borderRadius:3}}>{spCount} SP</span>}
                       </div>
                       {keepers.map((p,i)=>(
                         <div key={i} style={{display:"flex",gap:6,marginBottom:2,fontSize:11}}>
-                          <span style={{color:"#475569",width:26,flexShrink:0}}>{p.pos}</span>
-                          <span style={{color:"#94a3b8"}}>{p.player}</span>
+                          <span style={{color:"#64748b",width:26,flexShrink:0}}>{p.pos}</span>
+                          <span style={{color:"#cbd5e1"}}>{p.player}</span>
                         </div>
                       ))}
                       {drafted.length>0&&(
@@ -1148,7 +1148,7 @@ export default function DraftAssistant({ config }) {
                           {drafted.map((p,i)=>(
                             <div key={i} style={{display:"flex",gap:6,marginBottom:2,fontSize:11}}>
                               <span style={{color:"#334155",width:26,flexShrink:0}}>{p.pos}</span>
-                              <span style={{color:"#64748b"}}>{p.name}</span>
+                              <span style={{color:"#94a3b8"}}>{p.name}</span>
                               <span style={{color:"#1e3a5f",marginLeft:"auto",fontSize:9}}>#{p.pick}</span>
                             </div>
                           ))}
@@ -1255,8 +1255,8 @@ export default function DraftAssistant({ config }) {
                         <div style={{fontSize:9,color:"#84cc16",letterSpacing:".1em",textTransform:"uppercase",marginBottom:4}}>{b.label} {scoreLabel} ({b.players.length})</div>
                         {b.players.sort((a,z)=>(z[scoreKey]??0)-(a[scoreKey]??0)).map(p=>(
                           <div key={p.name} style={{display:"flex",gap:8,padding:"3px 0",borderBottom:"1px solid #0d0f16",fontSize:11}}>
-                            <span style={{color:"#94a3b8",width:180,flexShrink:0}}>{p.name}</span>
-                            <span style={{color:"#475569",width:60,flexShrink:0}}>{(p.eligible||[]).join("/")}</span>
+                            <span style={{color:"#cbd5e1",width:180,flexShrink:0}}>{p.name}</span>
+                            <span style={{color:"#64748b",width:60,flexShrink:0}}>{(p.eligible||[]).join("/")}</span>
                             <span style={{color:"#84cc16"}}>{(p[scoreKey]??0).toFixed(1)}</span>
                           </div>
                         ))}
@@ -1269,7 +1269,7 @@ export default function DraftAssistant({ config }) {
           )}
           {tab==="log"&&(
             <div style={{flex:1,overflowY:"auto",padding:12}}>
-              <div style={{fontSize:10,color:"#475569",marginBottom:8}}>Live picks only (R1-10 keepers not shown).</div>
+              <div style={{fontSize:10,color:"#64748b",marginBottom:8}}>Live picks only (R1-10 keepers not shown).</div>
               {Object.keys(livePicks).length===0&&<div style={{color:"#1e293b",textAlign:"center",padding:40}}>No picks recorded yet.</div>}
               {Object.entries(livePicks).sort((a,b)=>Number(b[0])-Number(a[0])).map(([pick,name])=>{
                 const mine = myDrafted.includes(name);
@@ -1291,12 +1291,12 @@ export default function DraftAssistant({ config }) {
         {/* RIGHT: COMPARE PANEL */}
         <div style={{width:280,background:"#09090e",borderLeft:"1px solid #1e293b",display:"flex",flexDirection:"column",flexShrink:0}}>
           <div style={{padding:"9px 12px",borderBottom:"1px solid #1e293b",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-            <span style={{fontSize:10,color:"#475569",letterSpacing:".1em",textTransform:"uppercase"}}>Compare Players</span>
+            <span style={{fontSize:10,color:"#64748b",letterSpacing:".1em",textTransform:"uppercase"}}>Compare Players</span>
             {compareList.length>0&&<button className="btn" style={{fontSize:9,color:"#f87171",background:"transparent"}} onClick={()=>setCompareList([])}>clear</button>}
           </div>
           {compareList.length===0&&(
             <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:20,textAlign:"center"}}>
-              <span style={{fontSize:11,color:"#475569",lineHeight:1.6}}>Tap <span style={{color:"#84cc16"}}>vs</span> on any two players to compare them side by side.</span>
+              <span style={{fontSize:11,color:"#64748b",lineHeight:1.6}}>Tap <span style={{color:"#84cc16"}}>vs</span> on any two players to compare them side by side.</span>
             </div>
           )}
           {compareList.length>0&&(
@@ -1309,14 +1309,14 @@ export default function DraftAssistant({ config }) {
                     <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:6}}>
                       <div>
                         <div style={{fontSize:13,fontWeight:600,color:"#f1f5f9"}}>{t.name}</div>
-                        <div style={{fontSize:10,color:"#475569",marginTop:1}}>{t.eligible.join("/")} · {t.org} · {t.type==="H"?"⚾":"⚡"}</div>
+                        <div style={{fontSize:10,color:"#64748b",marginTop:1}}>{t.eligible.join("/")} · {t.org} · {t.type==="H"?"⚾":"⚡"}</div>
                       </div>
                       <button className="btn" style={{fontSize:9,color:"#f87171",background:"transparent"}} onClick={()=>toggleCompare(name)}>✕</button>
                     </div>
                     <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"4px 10px",fontSize:11}}>
                       {[["DNS",t.draftNowScore],["2026",t.score2026],["FT",t.scoreFTDyn??"-"],["VOR",(t.scarcity.vor>0?"+":"")+t.scarcity.vor],["Urgency",t.urgency+"%"],["Tier",TIER_LABEL[t.tier]]].map(([label,val])=>(
                         <div key={label}>
-                          <span style={{color:"#475569"}}>{label}: </span>
+                          <span style={{color:"#64748b"}}>{label}: </span>
                           <span style={{color:"#e2e8f0",fontWeight:600}}>{val}</span>
                         </div>
                       ))}
@@ -1331,7 +1331,7 @@ export default function DraftAssistant({ config }) {
                 );
               })}
               {compareList.length===1&&(
-                <div style={{textAlign:"center",fontSize:10,color:"#475569",padding:"20px 10px",border:"1px dashed #1e293b",borderRadius:4}}>
+                <div style={{textAlign:"center",fontSize:10,color:"#64748b",padding:"20px 10px",border:"1px dashed #1e293b",borderRadius:4}}>
                   Tap <span style={{color:"#84cc16"}}>vs</span> on a second player
                 </div>
               )}
