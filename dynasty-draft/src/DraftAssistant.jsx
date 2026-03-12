@@ -1256,7 +1256,7 @@ export default function DraftAssistant({ config }) {
                         {b.players.sort((a,z)=>(z[scoreKey]??0)-(a[scoreKey]??0)).map(p=>(
                           <div key={p.name} style={{display:"flex",gap:8,padding:"3px 0",borderBottom:"1px solid #0d0f16",fontSize:11}}>
                             <span style={{color:"#94a3b8",width:180,flexShrink:0}}>{p.name}</span>
-                            <span style={{color:"#475569",width:28}}>{(p.eligible||[]).join("/")}</span>
+                            <span style={{color:"#475569",width:60,flexShrink:0}}>{(p.eligible||[]).join("/")}</span>
                             <span style={{color:"#84cc16"}}>{(p[scoreKey]??0).toFixed(1)}</span>
                           </div>
                         ))}
