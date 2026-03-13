@@ -350,11 +350,12 @@ export default function DraftAssistant({ config }) {
   const [posFilter, setPosFilter] = useState("all");
   const [sortBy, setSortBy] = useState("dns");
   const [search, setSearch] = useState("");
+  const lsKey = `watchList_${config.leagueName}`;
   const [watchList, setWatchList] = useState(() => {
-    try { return JSON.parse(localStorage.getItem("watchList") || "[]"); } catch { return []; }
+    try { return JSON.parse(localStorage.getItem(lsKey) || "[]"); } catch { return []; }
   });
   const dragWatchIdx = useRef(null);
-  useEffect(() => { localStorage.setItem("watchList", JSON.stringify(watchList)); }, [watchList]);
+  useEffect(() => { localStorage.setItem(lsKey, JSON.stringify(watchList)); }, [watchList]);
   const [tab, setTab] = useState("board");
   const [rightTab, setRightTab] = useState("watch");
   const [typeFilter, setTypeFilter] = useState("all");
