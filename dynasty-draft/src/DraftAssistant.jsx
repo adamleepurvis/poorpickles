@@ -451,13 +451,10 @@ export default function DraftAssistant({ config }) {
   const snakePicks = myPicks.filter(p => p >= currentPick).slice(0, 4);
   const lateAlerts = scoredAvailable.filter(t => t.tier === "keep6" && t.urgency >= 60);
 
-  // Watch list toggle — auto-switch right panel to Watch tab when adding
+  // Watch list toggle — auto-switch right panel to Watch tab
   const toggleWatch = useCallback((name) => {
-    setWatchList(prev => {
-      const n = new Set(prev);
-      if (n.has(name)) { n.delete(name); } else { n.add(name); setRightTab("watch"); }
-      return n;
-    });
+    setWatchList(prev => { const n = new Set(prev); n.has(name) ? n.delete(name) : n.add(name); return n; });
+    setRightTab("watch");
   }, []);
 
   // DNS rank → round value indicator (how many rounds early/late vs. market)
