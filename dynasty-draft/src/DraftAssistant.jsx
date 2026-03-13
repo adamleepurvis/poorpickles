@@ -299,17 +299,23 @@ export default function DraftAssistant({ config }) {
 
   const getRound     = (pick) => Math.ceil(pick / totalTeams);
   const getPickOwner = (pick) => {
+    if (config.pickOrder) {
+      const round = Math.ceil(pick / totalTeams);
+      const pos   = (pick - 1) % totalTeams;
+      return config.pickOrder[round - 1]?.[pos] ?? null;
+    }
     const round = getRound(pick);
     const pos   = (pick - 1) % totalTeams;
     return draftOrder[round % 2 === 0 ? (totalTeams - 1 - pos) : pos];
   };
   const myPicks = useMemo(() => {
+    if (config.myPicks) return config.myPicks;
     const picks = [];
     for (let p = draftStartPick; p <= totalTeams * totalRounds; p++)
       if (getPickOwner(p) === myTeam) picks.push(p);
     return picks;
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [draftStartPick, totalTeams, totalRounds, myTeam, draftOrder.join(",")]);
+  }, [config.myPicks, draftStartPick, totalTeams, totalRounds, myTeam, draftOrder.join(",")]);
 
   const [neutralMode, setNeutralMode] = useState(false);
 
