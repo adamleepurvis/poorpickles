@@ -352,6 +352,7 @@ export default function DraftAssistant({ config }) {
   const [search, setSearch] = useState("");
   const [watchList, setWatchList] = useState(new Set());
   const [tab, setTab] = useState("board");
+  const [rightTab, setRightTab] = useState("watch");
   const [typeFilter, setTypeFilter] = useState("all");
   const [editingNote, setEditingNote] = useState(null);
   const [needsMode, setNeedsMode] = useState(false);
@@ -450,9 +451,13 @@ export default function DraftAssistant({ config }) {
   const snakePicks = myPicks.filter(p => p >= currentPick).slice(0, 4);
   const lateAlerts = scoredAvailable.filter(t => t.tier === "keep6" && t.urgency >= 60);
 
-  // Watch list toggle
+  // Watch list toggle — auto-switch right panel to Watch tab when adding
   const toggleWatch = useCallback((name) => {
-    setWatchList(prev => { const n = new Set(prev); n.has(name) ? n.delete(name) : n.add(name); return n; });
+    setWatchList(prev => {
+      const n = new Set(prev);
+      if (n.has(name)) { n.delete(name); } else { n.add(name); setRightTab("watch"); }
+      return n;
+    });
   }, []);
 
   // DNS rank → round value indicator (how many rounds early/late vs. market)
@@ -550,6 +555,7 @@ export default function DraftAssistant({ config }) {
   const toggleCompare = useCallback((name) => {
     setCompareList(prev => {
       if (prev.includes(name)) return prev.filter(n => n !== name);
+      setRightTab("compare");
       if (prev.length >= 2) return [prev[1], name];
       return [...prev, name];
     });
@@ -1013,18 +1019,7 @@ export default function DraftAssistant({ config }) {
               </div>
 
               {filtered.length===0&&<div style={{textAlign:"center",color:"#1e293b",padding:40}}>All targets gone!</div>}
-              {(()=>{
-                const watched = filtered.filter(t => watchList.has(t.name));
-                const rest = filtered.filter(t => !watchList.has(t.name));
-                const sections = [];
-                if (watched.length > 0) {
-                  sections.push(<div key="wl-header" style={{fontSize:9,color:"#f59e0b",letterSpacing:".1em",textTransform:"uppercase",marginBottom:4,marginTop:2}}>★ Watch List</div>);
-                  sections.push(...watched.map((t,idx) => renderCard(t, idx, true)));
-                  sections.push(<div key="wl-div" style={{borderTop:"1px solid #1e293b",margin:"8px 0 6px"}}/>);
-                }
-                sections.push(...rest.map((t,idx) => renderCard(t, watched.length + idx, false)));
-                return sections;
-              })()}
+              {filtered.map((t,idx) => renderCard(t, idx, watchList.has(t.name)))}
             </div>
           )}
 
@@ -1294,54 +1289,104 @@ export default function DraftAssistant({ config }) {
           )}
         </div>
 
-        {/* RIGHT: COMPARE PANEL */}
+        {/* RIGHT: WATCH / COMPARE PANEL */}
         <div style={{width:280,background:"#09090e",borderLeft:"1px solid #1e293b",display:"flex",flexDirection:"column",flexShrink:0}}>
-          <div style={{padding:"9px 12px",borderBottom:"1px solid #1e293b",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-            <span style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase"}}>Compare Players</span>
-            {compareList.length>0&&<button className="btn" style={{fontSize:9,color:"#f87171",background:"transparent"}} onClick={()=>setCompareList([])}>clear</button>}
+          {/* Tab header */}
+          <div style={{display:"flex",borderBottom:"1px solid #1e293b",flexShrink:0}}>
+            {[["watch","★ Watch"],["compare","⚖ Compare"]].map(([id,label])=>(
+              <button key={id} className="btn" onClick={()=>setRightTab(id)}
+                style={{flex:1,padding:"8px 0",fontSize:10,letterSpacing:".08em",textTransform:"uppercase",
+                  color:rightTab===id?"#f1f5f9":"#475569",
+                  borderBottom:rightTab===id?"2px solid #84cc16":"2px solid transparent",
+                  background:"transparent",borderRadius:0}}>
+                {label}{id==="watch"&&watchList.size>0?` (${watchList.size})`:""}
+                {id==="compare"&&compareList.length>0?` (${compareList.length})`:""}
+              </button>
+            ))}
           </div>
-          {compareList.length===0&&(
-            <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:20,textAlign:"center"}}>
-              <span style={{fontSize:11,color:"#cbd5e1",lineHeight:1.6}}>Tap <span style={{color:"#84cc16"}}>vs</span> on any two players to compare them side by side.</span>
-            </div>
-          )}
-          {compareList.length>0&&(
-            <div style={{flex:1,overflowY:"auto",padding:10}}>
-              {compareList.map(name=>{
-                const t = scoredAvailable.find(p=>p.name===name);
-                if(!t) return null;
-                return (
-                  <div key={name} style={{background:"#0d0f16",border:`1px solid ${TIER_COLOR[t.tier]}44`,borderLeft:`3px solid ${TIER_COLOR[t.tier]}`,borderRadius:4,padding:"10px",marginBottom:8}}>
-                    <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:6}}>
-                      <div>
-                        <div style={{fontSize:13,fontWeight:600,color:"#f1f5f9"}}>{t.name}</div>
-                        <div style={{fontSize:10,color:"#cbd5e1",marginTop:1}}>{t.eligible.join("/")} · {t.org} · {t.type==="H"?"⚾":"⚡"}</div>
-                      </div>
-                      <button className="btn" style={{fontSize:9,color:"#f87171",background:"transparent"}} onClick={()=>toggleCompare(name)}>✕</button>
-                    </div>
-                    <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"4px 10px",fontSize:11}}>
-                      {[["DNS",t.draftNowScore],["2026",t.score2026],["FT",t.scoreFTDyn??"-"],["VOR",(t.scarcity.vor>0?"+":"")+t.scarcity.vor],["Urgency",t.urgency+"%"],["Tier",TIER_LABEL[t.tier]]].map(([label,val])=>(
-                        <div key={label}>
-                          <span style={{color:"#cbd5e1"}}>{label}: </span>
-                          <span style={{color:"#e2e8f0",fontWeight:600}}>{val}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <div style={{marginTop:6,display:"flex",gap:4,flexWrap:"wrap"}}>
-                      {t.cats.map(c=>(
-                        <span key={c} style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${CAT_NEED_COLOR[catNeed[c]??0]}33`,color:CAT_NEED_COLOR[catNeed[c]??1]||"#475569"}}>{c}</span>
-                      ))}
-                    </div>
-                    {t.il&&<div style={{marginTop:5,fontSize:9,color:"#f87171"}}>⚠ IL — 2026 score discounted 40%</div>}
-                  </div>
-                );
-              })}
-              {compareList.length===1&&(
-                <div style={{textAlign:"center",fontSize:10,color:"#cbd5e1",padding:"20px 10px",border:"1px dashed #1e293b",borderRadius:4}}>
-                  Tap <span style={{color:"#84cc16"}}>vs</span> on a second player
+
+          {/* Watch tab */}
+          {rightTab==="watch"&&(
+            watchList.size===0
+              ? <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:20,textAlign:"center"}}>
+                  <span style={{fontSize:11,color:"#cbd5e1",lineHeight:1.6}}>Tap <span style={{color:"#f59e0b"}}>☆</span> on any player to add them to your watch list.</span>
                 </div>
-              )}
-            </div>
+              : <div style={{flex:1,overflowY:"auto",padding:10}}>
+                  {[...watchList].map(name=>{
+                    const t = scoredAvailable.find(p=>p.name===name) ?? leagueTargets.find(p=>p.name===name);
+                    if(!t) return null;
+                    const drafted = draftedNames.has(name);
+                    return (
+                      <div key={name} style={{background:"#0d0f16",border:`1px solid #f59e0b44`,borderLeft:`3px solid #f59e0b`,borderRadius:4,padding:"10px",marginBottom:8,opacity:drafted?0.5:1}}>
+                        <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:6}}>
+                          <div>
+                            <div style={{fontSize:13,fontWeight:600,color:"#f1f5f9"}}>{t.name}{drafted&&<span style={{fontSize:9,color:"#f87171",marginLeft:5}}>DRAFTED</span>}</div>
+                            <div style={{fontSize:10,color:"#cbd5e1",marginTop:1}}>{t.eligible.join("/")} · {t.org} · {t.type==="H"?"⚾":"⚡"}</div>
+                          </div>
+                          <button className="btn" style={{fontSize:9,color:"#f59e0b",background:"transparent"}} onClick={()=>toggleWatch(name)}>✕</button>
+                        </div>
+                        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"4px 10px",fontSize:11}}>
+                          {[["DNS",t.draftNowScore],["2026",t.score2026],["FT",t.scoreFTDyn??"-"],["VOR",(t.scarcity?.vor>0?"+":"")+t.scarcity?.vor],["Urgency",t.urgency+"%"],["Tier",TIER_LABEL[t.tier]]].map(([label,val])=>(
+                            <div key={label}>
+                              <span style={{color:"#cbd5e1"}}>{label}: </span>
+                              <span style={{color:"#e2e8f0",fontWeight:600}}>{val}</span>
+                            </div>
+                          ))}
+                        </div>
+                        <div style={{marginTop:6,display:"flex",gap:4,flexWrap:"wrap"}}>
+                          {t.cats.map(c=>(
+                            <span key={c} style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${CAT_NEED_COLOR[catNeed[c]??0]}33`,color:CAT_NEED_COLOR[catNeed[c]??1]||"#475569"}}>{c}</span>
+                          ))}
+                        </div>
+                        {t.il&&<div style={{marginTop:5,fontSize:9,color:"#f87171"}}>⚠ IL</div>}
+                      </div>
+                    );
+                  })}
+                </div>
+          )}
+
+          {/* Compare tab */}
+          {rightTab==="compare"&&(
+            compareList.length===0
+              ? <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:20,textAlign:"center"}}>
+                  <span style={{fontSize:11,color:"#cbd5e1",lineHeight:1.6}}>Tap <span style={{color:"#84cc16"}}>vs</span> on any two players to compare them side by side.</span>
+                </div>
+              : <div style={{flex:1,overflowY:"auto",padding:10}}>
+                  {compareList.map(name=>{
+                    const t = scoredAvailable.find(p=>p.name===name);
+                    if(!t) return null;
+                    return (
+                      <div key={name} style={{background:"#0d0f16",border:`1px solid ${TIER_COLOR[t.tier]}44`,borderLeft:`3px solid ${TIER_COLOR[t.tier]}`,borderRadius:4,padding:"10px",marginBottom:8}}>
+                        <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:6}}>
+                          <div>
+                            <div style={{fontSize:13,fontWeight:600,color:"#f1f5f9"}}>{t.name}</div>
+                            <div style={{fontSize:10,color:"#cbd5e1",marginTop:1}}>{t.eligible.join("/")} · {t.org} · {t.type==="H"?"⚾":"⚡"}</div>
+                          </div>
+                          <button className="btn" style={{fontSize:9,color:"#f87171",background:"transparent"}} onClick={()=>toggleCompare(name)}>✕</button>
+                        </div>
+                        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"4px 10px",fontSize:11}}>
+                          {[["DNS",t.draftNowScore],["2026",t.score2026],["FT",t.scoreFTDyn??"-"],["VOR",(t.scarcity.vor>0?"+":"")+t.scarcity.vor],["Urgency",t.urgency+"%"],["Tier",TIER_LABEL[t.tier]]].map(([label,val])=>(
+                            <div key={label}>
+                              <span style={{color:"#cbd5e1"}}>{label}: </span>
+                              <span style={{color:"#e2e8f0",fontWeight:600}}>{val}</span>
+                            </div>
+                          ))}
+                        </div>
+                        <div style={{marginTop:6,display:"flex",gap:4,flexWrap:"wrap"}}>
+                          {t.cats.map(c=>(
+                            <span key={c} style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${CAT_NEED_COLOR[catNeed[c]??0]}33`,color:CAT_NEED_COLOR[catNeed[c]??1]||"#475569"}}>{c}</span>
+                          ))}
+                        </div>
+                        {t.il&&<div style={{marginTop:5,fontSize:9,color:"#f87171"}}>⚠ IL — 2026 score discounted 40%</div>}
+                      </div>
+                    );
+                  })}
+                  {compareList.length===1&&(
+                    <div style={{textAlign:"center",fontSize:10,color:"#cbd5e1",padding:"20px 10px",border:"1px dashed #1e293b",borderRadius:4}}>
+                      Tap <span style={{color:"#84cc16"}}>vs</span> on a second player
+                    </div>
+                  )}
+                </div>
           )}
         </div>
       </div>
