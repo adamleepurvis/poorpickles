@@ -1312,7 +1312,7 @@ export default function DraftAssistant({ config }) {
                   {[...watchList].map(name=>{
                     const t = scoredAvailable.find(p=>p.name===name) ?? leagueTargets.find(p=>p.name===name);
                     if(!t) return null;
-                    const drafted = draftedNames.has(name);
+                    const drafted = !scoredAvailable.some(p => p.name === name);
                     return (
                       <div key={name} style={{background:"#0d0f16",border:`1px solid #f59e0b44`,borderLeft:`3px solid #f59e0b`,borderRadius:4,padding:"10px",marginBottom:8,opacity:drafted?0.5:1}}>
                         <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:6}}>
