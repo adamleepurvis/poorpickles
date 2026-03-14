@@ -34,9 +34,11 @@ DATA_DIR    = Path(__file__).parent
 LEAGUES_DIR = ROOT / "leagues"
 
 ZAR_FILE    = DATA_DIR / "zar_scores.json"
-YAHOO_FILE  = DATA_DIR / "yahoo_data.json"
-OUTPUT_FILE = DATA_DIR / "targets.json"
-LEAGUE_FILE = LEAGUES_DIR / "poor_pickles.js"
+
+# Set per-league paths after arg parsing
+OUTPUT_FILE = None
+YAHOO_FILE  = None
+LEAGUE_FILE = None
 
 # ─── STEP 1: RUN ZAR MODEL ───────────────────────────────────────────────────
 
@@ -63,18 +65,18 @@ def run_zar(system="steamer", skip=False):
 
 # ─── STEP 2: RUN YAHOO SYNC ──────────────────────────────────────────────────
 
-def run_yahoo(skip=False):
+def run_yahoo(skip=False, league="poor_pickles"):
     if skip:
         print("\nSkipping Yahoo sync (--skip-yahoo).")
-        if not YAHOO_FILE.exists():
+        if not YAHOO_FILE or not YAHOO_FILE.exists():
             print("WARNING: No existing yahoo_data.json found. Keeper picks won't be updated.")
-        return YAHOO_FILE.exists()
+        return bool(YAHOO_FILE and YAHOO_FILE.exists())
 
     print("\n" + "=" * 60)
     print("STEP 2: Yahoo Fantasy API sync")
     print("=" * 60)
     result = subprocess.run(
-        [sys.executable, str(DATA_DIR / "yahoo_sync.py")],
+        [sys.executable, str(DATA_DIR / "yahoo_sync.py"), "--league", league],
         capture_output=False
     )
     if result.returncode != 0:
@@ -95,7 +97,7 @@ def load_zar():
 
 
 def load_yahoo():
-    if not YAHOO_FILE.exists():
+    if not YAHOO_FILE or not YAHOO_FILE.exists():
         return {}
     return json.loads(YAHOO_FILE.read_text())
 
@@ -324,11 +326,12 @@ def write_league_config(yahoo_data: dict, dry_run: bool):
         print("Skipping league config update (no Yahoo data).")
         return
 
-    # Skip keeper picks update if draft hasn't happened yet
-    draft_status = yahoo_data.get("settings", {}).get("draft_status", "")
-    if str(draft_status) == "predraft":
-        print("Skipping keeperPicks update — draft hasn't happened yet.")
-        return
+    # keeperPicks are maintained manually in the league config JS files.
+    # For predraft leagues, the JS file has correct keeper assignments.
+    # For postdraft leagues, roster data lives in targets_{league}.json (rostered/owner fields).
+    # Auto-update from Yahoo is unreliable (yfpy returns schedule data for some roster queries).
+    print("Skipping keeperPicks update — maintained manually in league config.")
+    return
 
     keeper_picks = build_keeper_picks(yahoo_data)
     if not keeper_picks:
@@ -411,12 +414,17 @@ def print_summary(players: list[dict], yahoo_data: dict):
               f"dyn:{pl.get('scoreDyn',0):.1f}{il}")
 
     print("\nNext steps:")
-    print("  git add data/targets.json leagues/poor_pickles.js")
+    print(f"  git add data/{OUTPUT_FILE.name} leagues/{LEAGUE_FILE.name}")
     print("  git commit -m 'pre-draft build'")
     print("  git push  →  Vercel auto-deploys")
 
 
 # ─── ENTRY POINT ─────────────────────────────────────────────────────────────
+
+LEAGUE_CONFIG = {
+    "poor_pickles":   "poor_pickles.js",
+    "south_ossetian": "south_ossetian.js",
+}
 
 def main():
     parser = argparse.ArgumentParser(description="Build draft assistant data")
@@ -425,16 +433,23 @@ def main():
     parser.add_argument("--system",     default="steamer",
                         choices=["steamer","zips","atc","thebat","fangraphsdc"])
     parser.add_argument("--dry-run",    action="store_true")
+    parser.add_argument("--league",     default="poor_pickles",
+                        choices=list(LEAGUE_CONFIG.keys()), help="Which league to sync")
     args = parser.parse_args()
 
+    global OUTPUT_FILE, YAHOO_FILE, LEAGUE_FILE
+    OUTPUT_FILE = DATA_DIR / f"targets_{args.league}.json"
+    YAHOO_FILE  = DATA_DIR / f"yahoo_data_{args.league}.json"
+    LEAGUE_FILE = LEAGUES_DIR / LEAGUE_CONFIG[args.league]
+
     print("Dynasty Draft Assistant — Build")
-    print(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M')}\n")
+    print(f"League: {args.league}  |  Time: {datetime.now().strftime('%Y-%m-%d %H:%M')}\n")
 
     # Run ZAR model
     zar_ok = run_zar(system=args.system, skip=args.skip_zar)
 
     # Run Yahoo sync
-    yahoo_ok = run_yahoo(skip=args.skip_yahoo)
+    yahoo_ok = run_yahoo(skip=args.skip_yahoo, league=args.league)
 
     # Load results
     zar_scores = load_zar()

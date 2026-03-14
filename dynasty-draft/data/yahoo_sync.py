@@ -432,13 +432,24 @@ def sync_projected_stats(query):
 
 # ─── ENTRY POINT ─────────────────────────────────────────────────────────────
 
+LEAGUE_KEYS = {
+    "poor_pickles":   os.getenv("YAHOO_LEAGUE_KEY", "469.l.51744"),
+    "south_ossetian": "469.l.40214",
+}
+
 def main():
     parser = argparse.ArgumentParser(description="Sync Yahoo Fantasy league data")
     parser.add_argument("--auth-only",  action="store_true", help="Test auth only")
     parser.add_argument("--rosters",    action="store_true", help="Rosters only")
     parser.add_argument("--no-draft",   action="store_true", help="Skip draft results")
     parser.add_argument("--no-ownership", action="store_true", help="Skip ownership pct")
+    parser.add_argument("--league",     default="poor_pickles",
+                        choices=list(LEAGUE_KEYS.keys()), help="Which league to sync")
     args = parser.parse_args()
+
+    global LEAGUE_KEY, OUTPUT_FILE
+    LEAGUE_KEY  = LEAGUE_KEYS[args.league]
+    OUTPUT_FILE = Path(__file__).parent / f"yahoo_data_{args.league}.json"
 
     if "YOUR_LEAGUE_ID" in LEAGUE_KEY:
         print("\nERROR: Update YAHOO_LEAGUE_KEY in your .env file.")

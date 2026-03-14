@@ -1,5 +1,24 @@
 import { useState, useCallback, useRef, useEffect, useMemo } from "react";
-import targetsData from "../data/targets.json";
+import poorPicklesTargets   from "../data/targets_poor_pickles.json";
+import southOssetianTargets from "../data/targets_south_ossetian.json";
+
+const TARGETS_DATA = {
+  "Poor Pickles":   poorPicklesTargets,
+  "SouthOssetian":  southOssetianTargets,
+};
+const TARGETS_CACHE = {};
+function getTargets(leagueName) {
+  if (!TARGETS_CACHE[leagueName]) {
+    const raw = (TARGETS_DATA[leagueName] || poorPicklesTargets).players;
+    TARGETS_CACHE[leagueName] = raw.map(p => ({
+      ...p,
+      tier:      inferTier(p),
+      cats:      p.cats.map(c => c === "K9" ? "K/9" : c === "BB9" ? "BB/9" : c),
+      score2028: computeBlendedScore2028(p, p.score2028, p.scoreDyn),
+    }));
+  }
+  return TARGETS_CACHE[leagueName];
+}
 
 // ─── KEEPER DATA (sourced from config.keeperPicks) ───────────────────────────
 const MY_TEAM = "Poor Pickles";
@@ -57,17 +76,6 @@ function inferTier(p) {
   return "specialist";
 }
 
-// Normalize zar_model cat names to match BASE_CAT_NEED keys (K9→K/9, BB9→BB/9)
-const TARGETS = targetsData.players.map(p => ({
-  ...p,
-  tier: inferTier(p),
-  cats: p.cats.map(c => c === "K9" ? "K/9" : c === "BB9" ? "BB/9" : c),
-  // Pitchers' 2-year projections carry higher uncertainty — discount at source
-  // so sorting, display, and DNS all use the same adjusted number.
-  // For IL players, Steamer depresses 2026 IP/stats, so blend projected 2028 with
-  // dynasty score to better reflect their healthy ceiling.
-  score2028: computeBlendedScore2028(p, p.score2028, p.scoreDyn),
-}));
 
 // ─── SCORING ENGINE ────────────────────────────────────────────────────────────
 // DNS weights: 2026 / 2028 / Dynasty / FanTrax / Prospect FV
@@ -321,10 +329,11 @@ export default function DraftAssistant({ config }) {
 
   // ── Per-league score remapping ───────────────────────────────────────────
   const leagueTargets = useMemo(() => {
+    const base   = getTargets(config.leagueName);
     const prefix = config.scorePrefix;
     // Fast path: no remapping needed
-    if (!prefix && !neutralMode) return TARGETS;
-    return TARGETS.map(p => {
+    if (!prefix && !neutralMode) return base;
+    return base.map(p => {
       let s26    = prefix ? (p[`score2026_${prefix}`] ?? p.score2026) : p.score2026;
       let dyn    = prefix ? (p[`scoreDyn_${prefix}`]  ?? p.scoreDyn)  : p.scoreDyn;
       let s28raw = prefix ? (p[`score2028_${prefix}`] ?? p.score2028) : p.score2028;

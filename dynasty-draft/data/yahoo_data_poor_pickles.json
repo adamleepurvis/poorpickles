@@ -1,0 +1,7372 @@
+{
+  "generated": "2026-03-14T16:29:58.944918",
+  "league_key": "469.l.51744",
+  "settings": {
+    "league_key": "469.l.51744",
+    "league_name": "LXG XVIII",
+    "season": 2026,
+    "num_teams": 12,
+    "draft_status": "predraft",
+    "scoring_type": "head",
+    "stat_categories": [
+      "R",
+      "H",
+      "HR",
+      "RBI",
+      "SB",
+      "AVG",
+      "IP",
+      "K",
+      "ERA",
+      "WHIP",
+      "BB/9"
+    ],
+    "fetched_at": "2026-03-14T16:29:59.651269"
+  },
+  "teams": [
+    {
+      "team_key": "469.l.51744.t.1",
+      "team_name": "Dynasty",
+      "players": [
+        {
+          "name": "date",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "2026-03-25",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "{'coverage_type': 'week', 'coverage_value': 1, 'value': 0}",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "None",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        }
+      ]
+    },
+    {
+      "team_key": "469.l.51744.t.2",
+      "team_name": "Bay of Papi",
+      "players": [
+        {
+          "name": "date",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "2026-03-25",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "{'coverage_type': 'week', 'coverage_value': 1, 'value': 0}",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "None",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        }
+      ]
+    },
+    {
+      "team_key": "469.l.51744.t.3",
+      "team_name": "gamma's Team",
+      "players": [
+        {
+          "name": "date",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "2026-03-25",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "{'coverage_type': 'week', 'coverage_value': 1, 'value': 0}",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "None",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        }
+      ]
+    },
+    {
+      "team_key": "469.l.51744.t.4",
+      "team_name": "Hideo Lobo",
+      "players": [
+        {
+          "name": "date",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "2026-03-25",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "{'coverage_type': 'week', 'coverage_value': 1, 'value': 0}",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "None",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        }
+      ]
+    },
+    {
+      "team_key": "469.l.51744.t.5",
+      "team_name": "JP Licks",
+      "players": [
+        {
+          "name": "date",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "2026-03-25",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "{'coverage_type': 'week', 'coverage_value': 1, 'value': 0}",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "None",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        }
+      ]
+    },
+    {
+      "team_key": "469.l.51744.t.6",
+      "team_name": "Loch Neskie Monsters",
+      "players": [
+        {
+          "name": "date",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "2026-03-25",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "{'coverage_type': 'week', 'coverage_value': 1, 'value': 0}",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "None",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        }
+      ]
+    },
+    {
+      "team_key": "469.l.51744.t.7",
+      "team_name": "Nighthawks",
+      "players": [
+        {
+          "name": "date",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "2026-03-25",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "{'coverage_type': 'week', 'coverage_value': 1, 'value': 0}",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "None",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        }
+      ]
+    },
+    {
+      "team_key": "469.l.51744.t.8",
+      "team_name": "Poor Pickles",
+      "players": [
+        {
+          "name": "date",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "2026-03-25",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "{'coverage_type': 'week', 'coverage_value': 1, 'value': 0}",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "None",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        }
+      ]
+    },
+    {
+      "team_key": "469.l.51744.t.9",
+      "team_name": "Snipe City Danglers",
+      "players": [
+        {
+          "name": "date",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "2026-03-25",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "{'coverage_type': 'week', 'coverage_value': 1, 'value': 0}",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "None",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        }
+      ]
+    },
+    {
+      "team_key": "469.l.51744.t.10",
+      "team_name": "StickyBanditz",
+      "players": [
+        {
+          "name": "date",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "2026-03-25",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "{'coverage_type': 'week', 'coverage_value': 1, 'value': 0}",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "None",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        }
+      ]
+    },
+    {
+      "team_key": "469.l.51744.t.11",
+      "team_name": "Team Underdog",
+      "players": [
+        {
+          "name": "date",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "2026-03-25",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "{'coverage_type': 'week', 'coverage_value': 1, 'value': 0}",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "None",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        }
+      ]
+    },
+    {
+      "team_key": "469.l.51744.t.12",
+      "team_name": "Toms River",
+      "players": [
+        {
+          "name": "date",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "2026-03-25",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "0",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "{'coverage_type': 'week', 'coverage_value': 1, 'value': 0}",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "None",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        }
+      ]
+    }
+  ],
+  "draft_results": [],
+  "ownership": {
+    "Justin Verlander": 0.0,
+    "Andrew McCutchen": 0.0,
+    "Carlos Carrasco": 0.0,
+    "Max Scherzer": 0.0,
+    "David Robertson": 0.0,
+    "Justin Turner": 0.0,
+    "Aroldis Chapman": 0.0,
+    "Carlos Santana": 0.0,
+    "Jason Heyward": 0.0,
+    "Craig Kimbrel": 0.0,
+    "Giancarlo Stanton": 0.0,
+    "Mart\u00edn P\u00e9rez": 0.0,
+    "Freddie Freeman": 0.0,
+    "Kenley Jansen": 0.0,
+    "Chris Sale": 0.0,
+    "Jose Iglesias": 0.0,
+    "Mike Trout": 0.0,
+    "Shelby Miller": 0.0,
+    "Bryce Harper": 0.0,
+    "Alex Cobb": 0.0,
+    "Paul Goldschmidt": 0.0,
+    "Jose Altuve": 0.0,
+    "Nathan Eovaldi": 0.0,
+    "Salvador Perez": 0.0,
+    "Wade Miley": 0.0,
+    "Liam Hendriks": 0.0,
+    "Drew Pomeranz": 0.0,
+    "Yu Darvish": 0.0,
+    "Travis d'Arnaud": 0.0,
+    "Gary S\u00e1nchez": 0.0,
+    "Nolan Arenado": 0.0,
+    "Anthony Rendon": 0.0,
+    "Nick Castellanos": 0.0,
+    "Manny Machado": 0.0,
+    "Jurickson Profar": 0.0,
+    "Francisco Lindor": 0.0,
+    "Starling Marte": 0.0,
+    "Gerrit Cole": 0.0,
+    "Jameson Taillon": 0.0,
+    "Zack Wheeler": 0.0,
+    "Erasmo Ram\u00edrez": 0.0,
+    "Patrick Corbin": 0.0,
+    "Miles Mikolas": 0.0,
+    "Jose Quintana": 0.0,
+    "Donovan Solano": 0.0,
+    "Jorge Soler": 0.0,
+    "Brooks Raley": 0.0,
+    "Justin Wilson": 0.0,
+    "Xander Bogaerts": 0.0,
+    "Christian Yelich": 0.0,
+    "Taijuan Walker": 0.0,
+    "Michael Wacha": 0.0,
+    "Kevin Gausman": 0.0,
+    "Austin Hedges": 0.0,
+    "George Springer": 0.0,
+    "T.J. McFarland": 0.0,
+    "Ryan Pressly": 0.0,
+    "Marcell Ozuna": 0.0,
+    "Ryan Brasier": 0.0,
+    "Caleb Thielbar": 0.0,
+    "Joc Pederson": 0.0,
+    "Luis Garc\u00eda": 0.0,
+    "Sonny Gray": 0.0,
+    "Wilmer Flores": 0.0,
+    "Jos\u00e9 Ram\u00edrez": 0.0,
+    "Marcus Semien": 0.0,
+    "Christian Bethancourt": 0.0,
+    "Lucas Sims": 0.0,
+    "Eduardo Rodriguez": 0.0,
+    "Hunter Harvey": 0.0,
+    "Mookie Betts": 0.0,
+    "Javier B\u00e1ez": 0.0,
+    "Kris Bryant": 0.0,
+    "Pierce Johnson": 0.0,
+    "Jesse Winker": 0.0,
+    "Robert Stephenson": 0.0,
+    "Jon Gray": 0.0,
+    "Tom Murphy": 0.0,
+    "Trevor Story": 0.0,
+    "Carlos Correa": 0.0,
+    "Lance McCullers Jr.": 0.0,
+    "Sean Manaea": 0.0,
+    "Corey Seager": 0.0,
+    "Andrew Heaney": 0.0,
+    "Byron Buxton": 0.0,
+    "Dominic Smith": 0.0,
+    "Rafael Montero": 0.0,
+    "Steven Matz": 0.0,
+    "Tyler Austin": 0.0,
+    "Matt Olson": 0.0,
+    "Max Muncy": 0.0,
+    "J.P. Crawford": 0.0,
+    "Tyler Glasnow": 0.0,
+    "Max Fried": 0.0,
+    "Luke Jackson": 0.0,
+    "Marcus Stroman": 0.0,
+    "Lucas Giolito": 0.0,
+    "Nick Martinez": 0.0,
+    "Tommy Kahnle": 0.0,
+    "Blake Treinen": 0.0,
+    "Chris Martin": 0.0,
+    "Randal Grichuk": 0.0,
+    "Robbie Ray": 0.0,
+    "Jacob deGrom": 0.0,
+    "Anthony DeSclafani": 0.0,
+    "J.T. Realmuto": 0.0,
+    "Eugenio Su\u00e1rez": 0.0,
+    "Miguel Rojas": 0.0,
+    "Kirby Yates": 0.0,
+    "Jorge Polanco": 0.0,
+    "Enrique Hern\u00e1ndez": 0.0,
+    "Christian V\u00e1zquez": 0.0,
+    "Chris Taylor": 0.0,
+    "H\u00e9ctor Neris": 0.0,
+    "Andrew Chafin": 0.0,
+    "Chris Bassitt": 0.0,
+    "Hunter Strickland": 0.0,
+    "Yimi Garc\u00eda": 0.0,
+    "James McCann": 0.0,
+    "Kendall Graveman": 0.0,
+    "Carlos Rod\u00f3n": 0.0,
+    "Tommy Pham": 0.0,
+    "Danny Coulombe": 0.0,
+    "Christian Walker": 0.0,
+    "Rob Refsnyder": 0.0,
+    "Manuel Margot": 0.0,
+    "Kyle Schwarber": 0.0,
+    "Kyle Freeland": 0.0,
+    "Derek Hill": 0.0,
+    "Sean Newcomb": 0.0,
+    "Orlando Arcia": 0.0,
+    "Jos\u00e9 Berr\u00edos": 0.0,
+    "Michael Conforto": 0.0,
+    "Brandon Nimmo": 0.0,
+    "Aaron Judge": 0.0,
+    "Luis Severino": 0.0,
+    "Aaron Nola": 0.0,
+    "Josh Bell": 0.0,
+    "Alex Jackson": 0.0,
+    "Hunter Renfroe": 0.0,
+    "Willy Adames": 0.0,
+    "Jeff Hoffman": 0.0,
+    "Tim Anderson": 0.0,
+    "Mark Canha": 0.0,
+    "Yo\u00e1n Moncada": 0.0,
+    "Raisel Iglesias": 0.0,
+    "Miguel Castro": 0.0,
+    "Jos\u00e9 Ure\u00f1a": 0.0,
+    "Michael Lorenzen (Pitcher)": 0.0,
+    "Austin Barnes": 0.0,
+    "Joe Ross": 0.0,
+    "Gio Urshela": 0.0,
+    "Matthew Boyd": 0.0,
+    "Frankie Montas": 0.0,
+    "Tyler Anderson": 0.0,
+    "Ketel Marte": 0.0,
+    "Shawn Armstrong": 0.0,
+    "Colin Rea": 0.0,
+    "Travis Jankowski": 0.0,
+    "Scott McGough": 0.0,
+    "Trea Turner": 0.0,
+    "Luke Maile": 0.0,
+    "Scott Alexander": 0.0,
+    "Elias D\u00edaz": 0.0,
+    "Max Kepler": 0.0,
+    "Jorge L\u00f3pez": 0.0,
+    "Adrian Houser": 0.0,
+    "Kenta Maeda": 0.0,
+    "Steven Okert": 0.0,
+    "Mike Yastrzemski": 0.0,
+    "Josh Hader": 0.0,
+    "Taylor Rogers": 0.0,
+    "Zach Eflin": 0.0,
+    "Trevor Williams": 0.0,
+    "Ryan Yarbrough": 0.0,
+    "Blake Snell": 0.0,
+    "Reynaldo L\u00f3pez": 0.0,
+    "Andrew Benintendi": 0.0,
+    "Willson Contreras": 0.0,
+    "Ryan McMahon": 0.0,
+    "Antonio Senzatela": 0.0,
+    "Sam Moll": 0.0,
+    "Alex Bregman": 0.0,
+    "Joe Musgrove": 0.0,
+    "Tyrone Taylor": 0.0,
+    "Tyler Wade": 0.0,
+    "Matt Chapman": 0.0,
+    "Edwin D\u00edaz": 0.0,
+    "Tyler O'Neill": 0.0,
+    "Luke Weaver": 0.0,
+    "Victor Robles": 0.0,
+    "Erick Fedde": 0.0,
+    "Brendan Rodgers": 0.0,
+    "Amed Rosario": 0.0,
+    "Dansby Swanson": 0.0,
+    "Rafael Devers": 0.0,
+    "Gleyber Torres": 0.0,
+    "Ozzie Albies": 0.0,
+    "Jorge Mateo": 0.0,
+    "Chris Devenski": 0.0
+  },
+  "player_eligibility": {
+    "Cal Raleigh": [
+      "C"
+    ],
+    "William Contreras": [
+      "C"
+    ],
+    "Shea Langeliers": [
+      "C"
+    ],
+    "Hunter Goodman": [
+      "C"
+    ],
+    "Ben Rice": [
+      "1B",
+      "C"
+    ],
+    "Salvador Perez": [
+      "1B",
+      "C"
+    ],
+    "Will Smith": [
+      "C"
+    ],
+    "Agust\u00edn Ram\u00edrez": [
+      "C"
+    ],
+    "Drake Baldwin": [
+      "C"
+    ],
+    "Ivan Herrera": [
+      "C"
+    ],
+    "Yainer Diaz": [
+      "C"
+    ],
+    "Adley Rutschman": [
+      "C"
+    ],
+    "Gabriel Moreno": [
+      "C"
+    ],
+    "Alejandro Kirk": [
+      "C"
+    ],
+    "Francisco Alvarez": [
+      "C"
+    ],
+    "Dillon Dingler": [
+      "C"
+    ],
+    "Samuel Basallo": [
+      "C"
+    ],
+    "J.T. Realmuto": [
+      "C"
+    ],
+    "Carter Jensen": [
+      "C"
+    ],
+    "Tyler Stephenson": [
+      "C"
+    ],
+    "Austin Wells": [
+      "C"
+    ],
+    "Ryan Jeffers": [
+      "C"
+    ],
+    "Carson Kelly": [
+      "C"
+    ],
+    "Victor Caratini": [
+      "1B",
+      "C"
+    ],
+    "Kyle Higashioka": [
+      "C"
+    ],
+    "Carlos Narv\u00e1ez": [
+      "C"
+    ],
+    "Logan O'Hoppe": [
+      "C"
+    ],
+    "Patrick Bailey": [
+      "C"
+    ],
+    "Kyle Teel": [
+      "C"
+    ],
+    "Pedro Pag\u00e9s": [
+      "C"
+    ],
+    "Bo Naylor": [
+      "C"
+    ],
+    "Jonah Heim": [
+      "C"
+    ],
+    "Liam Hicks": [
+      "1B",
+      "C"
+    ],
+    "Danny Jansen": [
+      "C"
+    ],
+    "Freddy Fermin": [
+      "C"
+    ],
+    "Sean Murphy": [
+      "C"
+    ],
+    "Edgar Quero": [
+      "C"
+    ],
+    "Joey Bart": [
+      "C"
+    ],
+    "Elias D\u00edaz": [
+      "C"
+    ],
+    "Mitch Garver": [
+      "C"
+    ],
+    "Miguel Amaya": [
+      "C"
+    ],
+    "Keibert Ruiz": [
+      "C"
+    ],
+    "Tyler Heineman": [
+      "C"
+    ],
+    "James McCann": [
+      "C"
+    ],
+    "Jose Trevino": [
+      "C"
+    ],
+    "Gary S\u00e1nchez": [
+      "C"
+    ],
+    "Austin Wynns": [
+      "C"
+    ],
+    "Luis Torrens": [
+      "C"
+    ],
+    "Nick Fortes": [
+      "C"
+    ],
+    "Travis d'Arnaud": [
+      "C"
+    ],
+    "Connor Wong": [
+      "C"
+    ],
+    "Adrian Del Castillo": [
+      "C"
+    ],
+    "Jake Rogers": [
+      "C"
+    ],
+    "Riley Adams": [
+      "C"
+    ],
+    "Yohel Pozo": [
+      "C"
+    ],
+    "Korey Lee": [
+      "C"
+    ],
+    "Mois\u00e9s Ballesteros": [
+      "C"
+    ],
+    "Dalton Rushing": [
+      "C"
+    ],
+    "Alex Jackson": [
+      "C"
+    ],
+    "Drew Millas": [
+      "C"
+    ],
+    "Christian V\u00e1zquez": [
+      "C"
+    ],
+    "Rafael March\u00e1n": [
+      "C"
+    ],
+    "Braxton Fulford": [
+      "C"
+    ],
+    "Tom\u00e1s Nido": [
+      "C"
+    ],
+    "Henry Davis": [
+      "C"
+    ],
+    "Luke Maile": [
+      "C"
+    ],
+    "Andrew Knizner": [
+      "C"
+    ],
+    "Mickey Gasper": [
+      "C"
+    ],
+    "Willie MacIver": [
+      "C"
+    ],
+    "J.C. Escarra": [
+      "C"
+    ],
+    "Christian Bethancourt": [
+      "C"
+    ],
+    "Austin Barnes": [
+      "C"
+    ],
+    "Ben Rortvedt": [
+      "C"
+    ],
+    "Luis Campusano": [
+      "C"
+    ],
+    "Garrett Stubbs": [
+      "C"
+    ],
+    "Jhonny Pereda": [
+      "C"
+    ],
+    "Austin Hedges": [
+      "C"
+    ],
+    "Jacob Stallings": [
+      "C"
+    ],
+    "C\u00e9sar Salazar": [
+      "C"
+    ],
+    "Harry Ford": [
+      "C"
+    ],
+    "Hayden Senger": [
+      "C"
+    ],
+    "Cole Messina": [
+      "C"
+    ],
+    "Jancel Villarroel": [
+      "C"
+    ],
+    "Daiverson Gutierrez": [
+      "C"
+    ],
+    "Jesus Lopez": [
+      "C"
+    ],
+    "Gabriel Davalillo": [
+      "C"
+    ],
+    "Daniel Susac": [
+      "C"
+    ],
+    "Easton Carmichael": [
+      "C"
+    ],
+    "Brandon Valenzuela": [
+      "1B",
+      "C"
+    ],
+    "Alberto Barriga": [
+      "C"
+    ],
+    "Omar Alfonzo": [
+      "1B",
+      "C"
+    ],
+    "Ethan Salas": [
+      "C"
+    ],
+    "Alfredo Duno": [
+      "C"
+    ],
+    "Cooper Ingle": [
+      "C"
+    ],
+    "Lamar King Jr.": [
+      "1B",
+      "C"
+    ],
+    "Thayron Liranzo": [
+      "C"
+    ],
+    "Ricardo Olivar": [
+      "C"
+    ],
+    "Leonardo Bernal": [
+      "C"
+    ],
+    "Juan Flores": [
+      "C"
+    ],
+    "Dario Laverde": [
+      "C"
+    ],
+    "Khadim Diaw": [
+      "C"
+    ],
+    "Caleb Lomavita": [
+      "C"
+    ],
+    "Johanfran Garcia": [
+      "C"
+    ],
+    "Creed Willems": [
+      "1B",
+      "C"
+    ],
+    "Ike Irish": [
+      "1B",
+      "C"
+    ],
+    "Kehden Hettiger": [
+      "1B",
+      "C"
+    ],
+    "Brooks Brannon": [
+      "1B",
+      "C"
+    ],
+    "Chris Suero": [
+      "1B",
+      "C"
+    ],
+    "Caleb Ricketts": [
+      "C"
+    ],
+    "Yovanny Rodriguez": [
+      "C"
+    ],
+    "Jesus Rodriguez": [
+      "C"
+    ],
+    "Jacob Cozart": [
+      "C"
+    ],
+    "Ryan Campos": [
+      "C"
+    ],
+    "Malcolm Moore": [
+      "C"
+    ],
+    "Ethan Anderson": [
+      "1B",
+      "C"
+    ],
+    "Taitn Gray": [
+      "C"
+    ],
+    "Marlon Quintero": [
+      "C"
+    ],
+    "Kevin Bazzell": [
+      "C"
+    ],
+    "Jeferson Quero": [
+      "C"
+    ],
+    "Ronald Hernandez": [
+      "1B",
+      "C"
+    ],
+    "Moises March\u00e1n": [
+      "C"
+    ],
+    "Sammy Hernandez": [
+      "1B",
+      "C"
+    ],
+    "Onil Perez": [
+      "C"
+    ],
+    "Alirio Ferrebus": [
+      "1B",
+      "C"
+    ],
+    "Ivan Luciano": [
+      "C"
+    ],
+    "Jorge Rodriguez": [
+      "C"
+    ],
+    "Kevin Parada": [
+      "C"
+    ],
+    "Nick Montgomery": [
+      "C"
+    ],
+    "Engelth Urena": [
+      "C"
+    ],
+    "Rainiel Rodriguez": [
+      "C"
+    ],
+    "Jase Mitchell": [
+      "C"
+    ],
+    "Daniel Hernandez": [
+      "C"
+    ],
+    "Nathan Flewelling": [
+      "C"
+    ],
+    "Ty Harvey": [
+      "C"
+    ],
+    "Luke Stevenson": [
+      "C"
+    ],
+    "Axiel Plaz": [
+      "1B",
+      "C"
+    ],
+    "Walker Janek": [
+      "C"
+    ],
+    "Ramon Ramirez": [
+      "C"
+    ],
+    "Christian Cerda": [
+      "C"
+    ],
+    "Dom Keegan": [
+      "C"
+    ],
+    "Edgleen Perez": [
+      "C"
+    ],
+    "Joe Mack": [
+      "C"
+    ],
+    "Josue Brice\u00f1o": [
+      "1B",
+      "C"
+    ],
+    "Yohendry Sanchez": [
+      "C"
+    ],
+    "Truitt Madonna": [
+      "C"
+    ],
+    "J.D. Gonzalez": [
+      "C"
+    ],
+    "Eduardo Valencia": [
+      "1B",
+      "C"
+    ],
+    "Michael Oliveto": [
+      "C"
+    ],
+    "Pablo Aliendo": [
+      "1B",
+      "C"
+    ],
+    "Will Bush": [
+      "1B",
+      "C"
+    ],
+    "Sir Jamison Jones": [
+      "C"
+    ],
+    "Eduardo Tait": [
+      "C"
+    ],
+    "Hyungchan Um": [
+      "C"
+    ],
+    "Blake Mitchell": [
+      "C"
+    ],
+    "Enrique Jimenez": [
+      "1B",
+      "C"
+    ],
+    "Landon Hodge": [
+      "C"
+    ],
+    "Caden Bodine": [
+      "C"
+    ],
+    "Edward Duran": [
+      "C"
+    ],
+    "Carlos Virahonda": [
+      "C"
+    ],
+    "Josh Caron": [
+      "C"
+    ],
+    "Tom Murphy": [
+      "C"
+    ],
+    "Drew Romo": [
+      "C"
+    ],
+    "Rafael Flores Jr.": [
+      "1B",
+      "C"
+    ],
+    "Endy Rodr\u00edguez": [
+      "1B",
+      "C"
+    ],
+    "Hunter Feduccia": [
+      "C"
+    ],
+    "Jimmy Crooks": [
+      "C"
+    ],
+    "Maverick Handley": [
+      "C"
+    ],
+    "Vladimir Guerrero Jr.": [
+      "1B"
+    ],
+    "Nick Kurtz": [
+      "1B"
+    ],
+    "Pete Alonso": [
+      "1B"
+    ],
+    "Matt Olson": [
+      "1B"
+    ],
+    "Bryce Harper": [
+      "1B"
+    ],
+    "Rafael Devers": [
+      "1B"
+    ],
+    "Josh Naylor": [
+      "1B"
+    ],
+    "Freddie Freeman": [
+      "1B"
+    ],
+    "Vinnie Pasquantino": [
+      "1B"
+    ],
+    "Tyler Soderstrom": [
+      "1B",
+      "LF"
+    ],
+    "Michael Busch": [
+      "1B"
+    ],
+    "Willson Contreras": [
+      "1B"
+    ],
+    "Yandy D\u00edaz": [
+      "1B"
+    ],
+    "Alec Burleson": [
+      "1B",
+      "LF",
+      "RF"
+    ],
+    "Christian Walker": [
+      "1B"
+    ],
+    "Jonathan Aranda": [
+      "1B"
+    ],
+    "Spencer Torkelson": [
+      "1B"
+    ],
+    "Kazuma Okamoto": [
+      "1B",
+      "3B"
+    ],
+    "Sal Stewart": [
+      "1B"
+    ],
+    "Andrew Vaughn": [
+      "1B"
+    ],
+    "Luis Arraez": [
+      "1B",
+      "2B"
+    ],
+    "Jac Caglianone": [
+      "1B",
+      "RF"
+    ],
+    "Alec Bohm": [
+      "1B",
+      "3B"
+    ],
+    "Nolan Schanuel": [
+      "1B"
+    ],
+    "Kyle Manzardo": [
+      "1B"
+    ],
+    "Munetaka Murakami": [
+      "1B",
+      "3B"
+    ],
+    "Ryan O'Hearn": [
+      "1B",
+      "LF",
+      "RF"
+    ],
+    "Colt Keith": [
+      "1B",
+      "2B",
+      "3B"
+    ],
+    "Ernie Clement": [
+      "1B",
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Spencer Steer": [
+      "1B",
+      "LF"
+    ],
+    "Josh Bell": [
+      "1B"
+    ],
+    "Jake Burger": [
+      "1B"
+    ],
+    "Jake Cronenworth": [
+      "1B",
+      "2B",
+      "SS"
+    ],
+    "Spencer Horwitz": [
+      "1B"
+    ],
+    "Miguel Vargas": [
+      "1B",
+      "3B"
+    ],
+    "Coby Mayo": [
+      "1B"
+    ],
+    "Paul Goldschmidt": [
+      "1B"
+    ],
+    "Lenyn Sosa": [
+      "1B",
+      "2B"
+    ],
+    "Josh Smith": [
+      "1B",
+      "3B",
+      "LF",
+      "RF",
+      "SS"
+    ],
+    "Gavin Sheets": [
+      "1B",
+      "LF",
+      "RF"
+    ],
+    "Romy Gonzalez": [
+      "1B",
+      "2B"
+    ],
+    "Carlos Santana": [
+      "1B"
+    ],
+    "Wilmer Flores": [
+      "1B"
+    ],
+    "Ty France": [
+      "1B"
+    ],
+    "Eric Wagaman": [
+      "1B",
+      "LF"
+    ],
+    "Rhys Hoskins": [
+      "1B"
+    ],
+    "Rowdy Tellez": [
+      "1B"
+    ],
+    "Kody Clemens": [
+      "1B",
+      "2B",
+      "LF",
+      "RF"
+    ],
+    "Ryan Mountcastle": [
+      "1B"
+    ],
+    "Dylan Moore": [
+      "1B",
+      "2B",
+      "3B",
+      "LF",
+      "RF"
+    ],
+    "Pavin Smith": [
+      "1B"
+    ],
+    "Jared Triolo": [
+      "1B",
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Jake Bauers": [
+      "1B",
+      "LF",
+      "RF"
+    ],
+    "Dominic Smith": [
+      "1B"
+    ],
+    "Casey Schmitt": [
+      "1B",
+      "2B",
+      "3B"
+    ],
+    "Enrique Hern\u00e1ndez": [
+      "1B",
+      "2B",
+      "3B",
+      "LF"
+    ],
+    "Michael Toglia": [
+      "1B"
+    ],
+    "Luke Raley": [
+      "1B",
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Otto Kemp": [
+      "1B",
+      "3B",
+      "LF"
+    ],
+    "Kyle Farmer": [
+      "1B",
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Justin Turner": [
+      "1B",
+      "3B"
+    ],
+    "Andruw Monasterio": [
+      "1B",
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Donovan Solano": [
+      "1B"
+    ],
+    "Ildemaro Vargas": [
+      "1B",
+      "2B"
+    ],
+    "Tim Tawa": [
+      "1B",
+      "2B",
+      "CF",
+      "LF"
+    ],
+    "Curtis Mead": [
+      "1B",
+      "2B",
+      "3B"
+    ],
+    "Ezequiel Duran": [
+      "1B",
+      "2B",
+      "3B",
+      "LF",
+      "SS"
+    ],
+    "CJ Kayfus": [
+      "1B",
+      "LF",
+      "RF"
+    ],
+    "Troy Johnston": [
+      "1B",
+      "LF",
+      "RF"
+    ],
+    "Warming Bernabel": [
+      "1B"
+    ],
+    "Christian Encarnacion-Strand": [
+      "1B",
+      "3B"
+    ],
+    "Nick Sogard": [
+      "1B",
+      "2B"
+    ],
+    "Jhonkensy Noel": [
+      "1B",
+      "RF"
+    ],
+    "Orlando Arcia": [
+      "1B",
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Edouard Julien": [
+      "1B",
+      "2B"
+    ],
+    "LaMonte Wade Jr.": [
+      "1B",
+      "RF"
+    ],
+    "Triston Casas": [
+      "1B"
+    ],
+    "Enmanuel Valdez": [
+      "1B"
+    ],
+    "Oswald Peraza": [
+      "1B",
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Blaine Crim": [
+      "1B"
+    ],
+    "Will Wagner": [
+      "1B",
+      "3B"
+    ],
+    "Matt Mervis": [
+      "1B"
+    ],
+    "Cavan Biggio": [
+      "1B",
+      "RF"
+    ],
+    "Jared Young": [
+      "1B",
+      "LF"
+    ],
+    "Tyler Locklear": [
+      "1B"
+    ],
+    "Andr\u00e9s Chaparro": [
+      "1B"
+    ],
+    "Tyler Black": [
+      "1B"
+    ],
+    "Logan Davidson": [
+      "1B",
+      "3B"
+    ],
+    "Blake Burke": [
+      "1B"
+    ],
+    "Jared Jones": [
+      "1B",
+      "SP"
+    ],
+    "Ryan Ward": [
+      "1B",
+      "LF",
+      "RF"
+    ],
+    "Charlie Condon": [
+      "1B"
+    ],
+    "Billy Amick": [
+      "1B",
+      "3B"
+    ],
+    "Enyervert Perez": [
+      "1B",
+      "3B"
+    ],
+    "Ryan Clifford": [
+      "1B"
+    ],
+    "Kale Fountain": [
+      "1B",
+      "3B"
+    ],
+    "Tony Blanco Jr.": [
+      "1B"
+    ],
+    "Robert Hipwell": [
+      "1B",
+      "3B"
+    ],
+    "Juan Brito": [
+      "1B",
+      "2B"
+    ],
+    "Tyler Austin": [
+      "1B"
+    ],
+    "Peyton Stovall": [
+      "1B",
+      "2B"
+    ],
+    "Eric Bitonti": [
+      "1B"
+    ],
+    "Esmerlyn Valdez": [
+      "1B",
+      "LF",
+      "RF"
+    ],
+    "Keaton Anthony": [
+      "1B"
+    ],
+    "Brennan Milone": [
+      "1B"
+    ],
+    "David McCabe": [
+      "1B",
+      "3B"
+    ],
+    "Luke Adams": [
+      "1B",
+      "3B"
+    ],
+    "Blaze Jordan": [
+      "1B",
+      "3B"
+    ],
+    "Diego Benitez": [
+      "1B",
+      "3B"
+    ],
+    "Romeo Sanabria": [
+      "1B"
+    ],
+    "Rubel Cespedes": [
+      "1B",
+      "3B"
+    ],
+    "Tanner Thach": [
+      "1B"
+    ],
+    "Sean Keys": [
+      "1B",
+      "3B"
+    ],
+    "Sterlin Thompson": [
+      "1B",
+      "LF"
+    ],
+    "Ivan Melendez": [
+      "1B"
+    ],
+    "Joshua Liranzo": [
+      "1B",
+      "3B",
+      "SS"
+    ],
+    "Lewin D\u00edaz": [
+      "1B"
+    ],
+    "Deniel Ortiz": [
+      "1B",
+      "3B"
+    ],
+    "Abimelec Ortiz": [
+      "1B"
+    ],
+    "Ruben Santana": [
+      "1B",
+      "3B"
+    ],
+    "Jacob Reimer": [
+      "1B",
+      "3B"
+    ],
+    "Yohandy Morales": [
+      "1B",
+      "3B"
+    ],
+    "Dylan Jasso": [
+      "1B",
+      "2B",
+      "3B"
+    ],
+    "Deyvison De Los Santos": [
+      "1B",
+      "3B"
+    ],
+    "Ralphy Velazquez": [
+      "1B"
+    ],
+    "T.J. Rumfield": [
+      "1B"
+    ],
+    "Cooper Bowman": [
+      "1B",
+      "2B",
+      "LF"
+    ],
+    "Jack Gurevitch": [
+      "1B"
+    ],
+    "Edward Florentino": [
+      "1B"
+    ],
+    "Mike Boeve": [
+      "1B"
+    ],
+    "Jakob Christian": [
+      "1B",
+      "LF",
+      "RF"
+    ],
+    "Parks Harber": [
+      "1B",
+      "3B"
+    ],
+    "Cam Collier": [
+      "1B",
+      "3B"
+    ],
+    "Tre' Morgan": [
+      "1B"
+    ],
+    "Jonathon Long": [
+      "1B"
+    ],
+    "Charles McAdoo": [
+      "1B",
+      "3B"
+    ],
+    "Niko Kavadas": [
+      "1B",
+      "LF",
+      "RF"
+    ],
+    "Bryce Eldridge": [
+      "1B"
+    ],
+    "Justin Foscue": [
+      "1B"
+    ],
+    "Ryan Noda": [
+      "1B"
+    ],
+    "Jazz Chisholm Jr.": [
+      "2B",
+      "3B"
+    ],
+    "Ketel Marte": [
+      "2B"
+    ],
+    "Brice Turang": [
+      "2B"
+    ],
+    "Maikel Garcia": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Nico Hoerner": [
+      "2B"
+    ],
+    "Luke Keaschall": [
+      "2B"
+    ],
+    "Jose Altuve": [
+      "2B",
+      "LF"
+    ],
+    "Ozzie Albies": [
+      "2B"
+    ],
+    "Xavier Edwards": [
+      "2B",
+      "SS"
+    ],
+    "Ceddanne Rafaela": [
+      "2B",
+      "CF"
+    ],
+    "JJ Wetherholt": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Luis Garc\u00eda Jr.": [
+      "2B"
+    ],
+    "Marcus Semien": [
+      "2B"
+    ],
+    "Otto Lopez": [
+      "2B",
+      "SS"
+    ],
+    "Gleyber Torres": [
+      "2B"
+    ],
+    "Brandon Lowe": [
+      "2B"
+    ],
+    "Brendan Donovan": [
+      "2B",
+      "LF",
+      "SS"
+    ],
+    "Jos\u00e9 Caballero": [
+      "2B",
+      "3B",
+      "LF",
+      "RF",
+      "SS"
+    ],
+    "Jorge Polanco": [
+      "2B",
+      "3B"
+    ],
+    "Jordan Westburg": [
+      "2B",
+      "3B"
+    ],
+    "Bryson Stott": [
+      "2B",
+      "SS"
+    ],
+    "Caleb Durbin": [
+      "2B",
+      "3B"
+    ],
+    "Matt McLain": [
+      "2B"
+    ],
+    "Jackson Holliday": [
+      "2B",
+      "SS"
+    ],
+    "Andr\u00e9s Gim\u00e9nez": [
+      "2B",
+      "SS"
+    ],
+    "Jeff McNeil": [
+      "2B",
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Willi Castro": [
+      "2B",
+      "3B",
+      "LF",
+      "RF"
+    ],
+    "Brett Baty": [
+      "2B",
+      "3B"
+    ],
+    "Tommy Edman": [
+      "2B",
+      "3B",
+      "CF"
+    ],
+    "Chase Meidroth": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Brooks Lee": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Tyler Freeman": [
+      "2B",
+      "RF"
+    ],
+    "Javier B\u00e1ez": [
+      "2B",
+      "3B",
+      "CF",
+      "SS"
+    ],
+    "Gavin Lux": [
+      "2B",
+      "3B",
+      "LF"
+    ],
+    "Isiah Kiner-Falefa": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Luis Rengifo": [
+      "2B",
+      "3B"
+    ],
+    "Jonathan India": [
+      "2B",
+      "3B",
+      "LF"
+    ],
+    "Adam Frazier": [
+      "2B",
+      "LF",
+      "RF"
+    ],
+    "Edmundo Sosa": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Miguel Rojas": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Ram\u00f3n Ur\u00edas": [
+      "2B",
+      "3B"
+    ],
+    "David Hamilton": [
+      "2B",
+      "SS"
+    ],
+    "Angel Mart\u00ednez": [
+      "2B",
+      "CF",
+      "LF"
+    ],
+    "Nolan Gorman": [
+      "2B",
+      "3B"
+    ],
+    "Mauricio Dub\u00f3n": [
+      "2B",
+      "3B",
+      "CF",
+      "LF",
+      "SS"
+    ],
+    "Gabriel Arias": [
+      "2B",
+      "SS"
+    ],
+    "Nick Gonzales": [
+      "2B",
+      "SS"
+    ],
+    "Brayan Rocchio": [
+      "2B",
+      "SS"
+    ],
+    "Davis Schneider": [
+      "2B",
+      "LF"
+    ],
+    "Daniel Schneemann": [
+      "2B",
+      "3B",
+      "CF",
+      "RF",
+      "SS"
+    ],
+    "Brooks Baldwin": [
+      "2B",
+      "3B",
+      "CF",
+      "LF",
+      "RF",
+      "SS"
+    ],
+    "Javier Sanoja": [
+      "2B",
+      "3B",
+      "CF",
+      "LF",
+      "SS"
+    ],
+    "Jose Iglesias": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Amed Rosario": [
+      "2B",
+      "3B"
+    ],
+    "Ha-Seong Kim": [
+      "2B",
+      "SS"
+    ],
+    "Paul DeJong": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Tyler Fitzgerald": [
+      "2B"
+    ],
+    "Blaze Alexander": [
+      "2B",
+      "3B"
+    ],
+    "Austin Martin": [
+      "2B",
+      "CF",
+      "LF"
+    ],
+    "Hyeseong Kim": [
+      "2B",
+      "CF",
+      "SS"
+    ],
+    "Michael Massey": [
+      "2B",
+      "LF"
+    ],
+    "Andy Ib\u00e1\u00f1ez": [
+      "2B",
+      "3B"
+    ],
+    "Luisangel Acu\u00f1a": [
+      "2B"
+    ],
+    "Christian Koss": [
+      "2B",
+      "3B"
+    ],
+    "Thairo Estrada": [
+      "2B"
+    ],
+    "Luis Ur\u00edas": [
+      "2B",
+      "3B"
+    ],
+    "Santiago Espinal": [
+      "2B",
+      "3B",
+      "LF",
+      "RF"
+    ],
+    "Thomas Saggese": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Nasim Nu\u00f1ez": [
+      "2B",
+      "SS"
+    ],
+    "Max Schuemann": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Brendan Rodgers": [
+      "2B"
+    ],
+    "Jos\u00e9 Tena": [
+      "2B",
+      "3B"
+    ],
+    "Jorge Mateo": [
+      "2B",
+      "CF",
+      "SS"
+    ],
+    "Leo Rivas": [
+      "2B",
+      "SS"
+    ],
+    "Zack Gelof": [
+      "2B"
+    ],
+    "Kristian Campbell": [
+      "2B",
+      "CF"
+    ],
+    "Miles Mastrobuoni": [
+      "2B",
+      "3B",
+      "LF",
+      "RF"
+    ],
+    "Weston Wilson": [
+      "2B",
+      "LF"
+    ],
+    "Ryan Ritter": [
+      "2B",
+      "SS"
+    ],
+    "Max Muncy": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Kyren Paris": [
+      "2B",
+      "CF"
+    ],
+    "Ronny Mauricio": [
+      "2B",
+      "3B"
+    ],
+    "Cole Young": [
+      "2B"
+    ],
+    "Christian Moore": [
+      "2B"
+    ],
+    "Darell Hernaiz": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Nick Loftin": [
+      "2B",
+      "3B",
+      "LF"
+    ],
+    "Jon Berti": [
+      "2B",
+      "3B"
+    ],
+    "Marcelo Mayer": [
+      "2B",
+      "3B"
+    ],
+    "Chris Taylor": [
+      "2B",
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Cody Freeman": [
+      "2B"
+    ],
+    "Brett Wisely": [
+      "2B"
+    ],
+    "Jos\u00e9 Ferm\u00edn": [
+      "2B"
+    ],
+    "Tyler Wade": [
+      "2B",
+      "CF",
+      "LF"
+    ],
+    "Nick Yorke": [
+      "2B"
+    ],
+    "Tristan Gray": [
+      "2B",
+      "SS"
+    ],
+    "Brice Matthews": [
+      "2B"
+    ],
+    "Garrett Hampson": [
+      "2B",
+      "CF",
+      "LF"
+    ],
+    "Ronny Simon": [
+      "2B",
+      "LF"
+    ],
+    "Ryan Bliss": [
+      "2B"
+    ],
+    "Tim Anderson": [
+      "2B",
+      "SS"
+    ],
+    "Leo Jim\u00e9nez": [
+      "2B"
+    ],
+    "Jorbit Vivas": [
+      "2B",
+      "3B"
+    ],
+    "Marco Luciano": [
+      "2B",
+      "SS"
+    ],
+    "Vaughn Grissom": [
+      "2B"
+    ],
+    "Braden Shewmake": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Orelvis Martinez": [
+      "2B",
+      "3B"
+    ],
+    "Yoeilin Cespedes": [
+      "2B",
+      "SS"
+    ],
+    "Max Anderson": [
+      "2B",
+      "3B"
+    ],
+    "Pedro Ramirez": [
+      "2B",
+      "3B"
+    ],
+    "Cayden Wallace": [
+      "2B",
+      "3B"
+    ],
+    "Angel Genao": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Wyatt Sanford": [
+      "2B",
+      "SS"
+    ],
+    "Jared Serna": [
+      "2B",
+      "SS"
+    ],
+    "Leo Balcazar": [
+      "2B",
+      "SS"
+    ],
+    "Travis Bazzana": [
+      "2B"
+    ],
+    "Logan Wagner": [
+      "2B",
+      "3B"
+    ],
+    "Edwin Arroyo": [
+      "2B",
+      "SS"
+    ],
+    "A.J. Ewing": [
+      "2B"
+    ],
+    "Brock Rodden": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Felix Morrobel": [
+      "2B",
+      "SS"
+    ],
+    "Core Jackson": [
+      "2B",
+      "SS"
+    ],
+    "Carter Johnson": [
+      "2B",
+      "SS"
+    ],
+    "Jhonny Severino": [
+      "2B",
+      "3B"
+    ],
+    "Dauri Fernandez": [
+      "2B",
+      "SS"
+    ],
+    "Roc Riggio": [
+      "2B"
+    ],
+    "Cutter Coffey": [
+      "2B",
+      "3B"
+    ],
+    "Jude Warwick": [
+      "2B",
+      "SS"
+    ],
+    "Jes\u00fas Made": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Henry Godbout": [
+      "2B"
+    ],
+    "JD Dix": [
+      "2B"
+    ],
+    "Austin Gauthier": [
+      "2B"
+    ],
+    "Gage Miller": [
+      "2B",
+      "3B"
+    ],
+    "Angel Cepeda": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Aroon Escobar": [
+      "2B",
+      "3B"
+    ],
+    "Jhoan De La Cruz": [
+      "2B",
+      "SS"
+    ],
+    "Tommy Troy": [
+      "2B"
+    ],
+    "Casey Cook": [
+      "2B",
+      "SS"
+    ],
+    "Brayden Taylor": [
+      "2B",
+      "3B"
+    ],
+    "Jeral Perez": [
+      "2B",
+      "SS"
+    ],
+    "Danny De Andrade": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "John Peck": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Eddinson Paulino": [
+      "2B",
+      "SS"
+    ],
+    "Sam Antonacci": [
+      "2B",
+      "3B"
+    ],
+    "Cristian Hernandez": [
+      "2B",
+      "SS"
+    ],
+    "Javier Mogollon": [
+      "2B",
+      "SS"
+    ],
+    "DJ Layton": [
+      "2B",
+      "SS"
+    ],
+    "Adrian Placencia": [
+      "2B"
+    ],
+    "Diego Velasquez": [
+      "2B"
+    ],
+    "Jonathan Mejia": [
+      "2B",
+      "SS"
+    ],
+    "Gavin Kilen": [
+      "2B",
+      "SS"
+    ],
+    "Rafael Ramirez Jr.": [
+      "2B"
+    ],
+    "Alex Mooney": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Luis Pe\u00f1a": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Kevin Made": [
+      "2B",
+      "SS"
+    ],
+    "Kendry Martinez": [
+      "2B",
+      "SS"
+    ],
+    "Aron Estrada": [
+      "2B"
+    ],
+    "Sam Shaw": [
+      "2B"
+    ],
+    "Luke Dickerson": [
+      "2B",
+      "SS"
+    ],
+    "Ryan Burrowes": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Angel Feliz": [
+      "2B",
+      "SS"
+    ],
+    "Jacob Gonzalez": [
+      "2B",
+      "SS"
+    ],
+    "Dameury Pena": [
+      "2B",
+      "LF"
+    ],
+    "Filippo Di Turi": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Starlyn Caba": [
+      "2B",
+      "SS"
+    ],
+    "Andrew Salas": [
+      "2B",
+      "SS"
+    ],
+    "Cristofer Torin": [
+      "2B",
+      "SS"
+    ],
+    "Demetrio Crisantes": [
+      "2B",
+      "3B"
+    ],
+    "Javi Vaz": [
+      "2B"
+    ],
+    "Jeremy Rodriguez": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Griff O'Ferrall": [
+      "2B",
+      "SS"
+    ],
+    "Cobb Hightower": [
+      "2B",
+      "SS"
+    ],
+    "Daniel Dickinson": [
+      "2B",
+      "SS"
+    ],
+    "Yordany De Los Santos": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Mitch Voit": [
+      "2B"
+    ],
+    "Alejandro Nunez": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Ben Cowles": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Marco Vargas": [
+      "2B",
+      "SS"
+    ],
+    "Mitch Jebb": [
+      "2B"
+    ],
+    "\u00c9milien Pitre": [
+      "2B",
+      "SS"
+    ],
+    "Keiner Delgado": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Waner Luciano": [
+      "2B",
+      "3B"
+    ],
+    "James Triantos": [
+      "2B",
+      "CF",
+      "LF"
+    ],
+    "Jansel Luis": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Boston Baro": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Lorenzo Meola": [
+      "2B"
+    ],
+    "Nazzan Zanetello": [
+      "2B",
+      "SS"
+    ],
+    "Tanner Murray": [
+      "2B",
+      "3B",
+      "LF",
+      "RF",
+      "SS"
+    ],
+    "Mac Horvath": [
+      "2B",
+      "3B",
+      "CF",
+      "RF"
+    ],
+    "Kyle DeBarge": [
+      "2B",
+      "SS"
+    ],
+    "Sammy Stafura": [
+      "2B",
+      "SS"
+    ],
+    "Dyan Jorge": [
+      "2B",
+      "SS"
+    ],
+    "Juan Baez": [
+      "2B",
+      "3B"
+    ],
+    "Bryan Torres": [
+      "2B",
+      "LF",
+      "RF"
+    ],
+    "Mikey Romero": [
+      "2B",
+      "3B"
+    ],
+    "Devin Saltiban": [
+      "2B"
+    ],
+    "Edward Lantigua": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Hao-Yu Lee": [
+      "2B",
+      "3B"
+    ],
+    "Sung-Mun Song": [
+      "2B",
+      "3B"
+    ],
+    "Termarr Johnson": [
+      "2B"
+    ],
+    "Jett Williams": [
+      "2B",
+      "SS"
+    ],
+    "Franyerber Montilla": [
+      "2B",
+      "SS"
+    ],
+    "Cameron Cauley": [
+      "2B",
+      "SS"
+    ],
+    "Leandro Arias": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Cooper Kinney": [
+      "2B",
+      "3B"
+    ],
+    "Josh Adamczewski": [
+      "2B"
+    ],
+    "Pascanel Ferreras": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Chase Jaworsky": [
+      "2B",
+      "SS"
+    ],
+    "Jacob Berry": [
+      "2B",
+      "3B",
+      "RF"
+    ],
+    "George Lombard Jr.": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Michael Arroyo": [
+      "2B"
+    ],
+    "Marconi German": [
+      "2B",
+      "SS"
+    ],
+    "Ty Southisene": [
+      "2B"
+    ],
+    "Capri Ortiz": [
+      "2B",
+      "SS"
+    ],
+    "Jadher Areinamo": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "William Bergolla": [
+      "2B",
+      "SS"
+    ],
+    "Juan Cabada": [
+      "2B",
+      "3B"
+    ],
+    "Jesus Baez": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Elorky Rodriguez": [
+      "2B"
+    ],
+    "Payton Eeles": [
+      "2B",
+      "LF",
+      "SS"
+    ],
+    "Max Wagner": [
+      "2B",
+      "3B"
+    ],
+    "Rosman Verdugo": [
+      "2B",
+      "3B"
+    ],
+    "Tyler Callihan": [
+      "2B",
+      "LF"
+    ],
+    "Coco Montes": [
+      "2B",
+      "3B"
+    ],
+    "Samad Taylor": [
+      "2B",
+      "RF"
+    ],
+    "Shay Whitcomb": [
+      "2B",
+      "3B"
+    ],
+    "Cesar Prieto": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Adael Amador": [
+      "2B"
+    ],
+    "Tsung-Che Cheng": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "Jos\u00e9 Ram\u00edrez": [
+      "3B"
+    ],
+    "Junior Caminero": [
+      "3B"
+    ],
+    "Manny Machado": [
+      "3B"
+    ],
+    "Austin Riley": [
+      "3B"
+    ],
+    "Alex Bregman": [
+      "3B"
+    ],
+    "Eugenio Su\u00e1rez": [
+      "3B"
+    ],
+    "Matt Chapman": [
+      "3B"
+    ],
+    "Colson Montgomery": [
+      "3B",
+      "SS"
+    ],
+    "Noelvi Marte": [
+      "3B",
+      "RF"
+    ],
+    "Royce Lewis": [
+      "3B"
+    ],
+    "Isaac Paredes": [
+      "3B"
+    ],
+    "Addison Barger": [
+      "3B",
+      "LF",
+      "RF"
+    ],
+    "Carlos Correa": [
+      "3B",
+      "SS"
+    ],
+    "Matt Shaw": [
+      "3B"
+    ],
+    "Mark Vientos": [
+      "3B"
+    ],
+    "Jordan Lawlar": [
+      "3B"
+    ],
+    "Zach McKinstry": [
+      "3B",
+      "LF",
+      "RF",
+      "SS"
+    ],
+    "Miguel Andujar": [
+      "3B",
+      "LF"
+    ],
+    "Nolan Arenado": [
+      "3B"
+    ],
+    "Josh Jung": [
+      "3B"
+    ],
+    "Ryan McMahon": [
+      "3B"
+    ],
+    "Ke'Bryan Hayes": [
+      "3B"
+    ],
+    "Connor Norby": [
+      "3B"
+    ],
+    "Yo\u00e1n Moncada": [
+      "3B"
+    ],
+    "Ben Williamson": [
+      "3B"
+    ],
+    "Brady House": [
+      "3B"
+    ],
+    "Jeremiah Jackson": [
+      "3B",
+      "RF"
+    ],
+    "Oswaldo Cabrera": [
+      "3B"
+    ],
+    "Nate Eaton": [
+      "3B",
+      "CF",
+      "RF"
+    ],
+    "Gio Urshela": [
+      "3B"
+    ],
+    "Vidal Bruj\u00e1n": [
+      "3B",
+      "SS"
+    ],
+    "Graham Pauley": [
+      "3B"
+    ],
+    "Nacho Alvarez Jr.": [
+      "3B"
+    ],
+    "Brett Harris": [
+      "3B"
+    ],
+    "Kyle Karros": [
+      "3B"
+    ],
+    "Alex Freeland": [
+      "3B",
+      "SS"
+    ],
+    "Anthony Rendon": [
+      "3B"
+    ],
+    "Anthony Seigler": [
+      "3B"
+    ],
+    "Nicky Lopez": [
+      "3B"
+    ],
+    "Bryan Ramos": [
+      "3B"
+    ],
+    "Denzer Guzman": [
+      "3B",
+      "SS"
+    ],
+    "Gage Workman": [
+      "3B",
+      "CF",
+      "LF",
+      "RF",
+      "SS"
+    ],
+    "Jace Jung": [
+      "3B"
+    ],
+    "Tim Piasentin": [
+      "3B"
+    ],
+    "Yolfran Castillo": [
+      "3B",
+      "SS"
+    ],
+    "Roderick Arias": [
+      "3B",
+      "SS"
+    ],
+    "Yassel Soler": [
+      "3B"
+    ],
+    "Sabin Ceballos": [
+      "3B"
+    ],
+    "Caden Powell": [
+      "3B",
+      "SS"
+    ],
+    "Kevin Hidalgo": [
+      "3B",
+      "SS"
+    ],
+    "Naibel Mariano": [
+      "3B",
+      "SS"
+    ],
+    "Josh Hammond": [
+      "3B"
+    ],
+    "Murf Gray": [
+      "3B"
+    ],
+    "Richie Martin": [
+      "3B",
+      "SS"
+    ],
+    "Deivid Coronil": [
+      "3B",
+      "SS"
+    ],
+    "Luis Almeyda": [
+      "3B",
+      "SS"
+    ],
+    "Chase Harlan": [
+      "3B"
+    ],
+    "Carson DeMartini": [
+      "3B",
+      "SS"
+    ],
+    "LuJames Groover": [
+      "3B"
+    ],
+    "Andrew Fischer": [
+      "3B"
+    ],
+    "Juan Sanchez": [
+      "3B",
+      "SS"
+    ],
+    "Izaac Pacheco": [
+      "3B"
+    ],
+    "Yahil Melendez": [
+      "3B",
+      "SS"
+    ],
+    "Nick Monistere": [
+      "3B",
+      "SS"
+    ],
+    "Sebastian Walcott": [
+      "3B",
+      "SS"
+    ],
+    "Cole Mathis": [
+      "3B"
+    ],
+    "Austin Charles": [
+      "3B",
+      "SS"
+    ],
+    "Gleider Figuereo": [
+      "3B"
+    ],
+    "Myles Naylor": [
+      "3B"
+    ],
+    "Luke Hill": [
+      "3B"
+    ],
+    "Brock Wilken": [
+      "3B"
+    ],
+    "Rayne Doncon": [
+      "3B"
+    ],
+    "Dawel Joseph": [
+      "3B",
+      "SS"
+    ],
+    "Echedry Vargas": [
+      "3B",
+      "SS"
+    ],
+    "Colin Houck": [
+      "3B",
+      "SS"
+    ],
+    "Colin Yeaman": [
+      "3B",
+      "SS"
+    ],
+    "Carson Rucker": [
+      "3B"
+    ],
+    "Cole Fontenelle": [
+      "3B"
+    ],
+    "Josh Kasevich": [
+      "3B",
+      "SS"
+    ],
+    "Jorge Quintana": [
+      "3B",
+      "SS"
+    ],
+    "Jhonayker Ugarte": [
+      "3B",
+      "SS"
+    ],
+    "Tanner Schobel": [
+      "3B",
+      "SS"
+    ],
+    "Jack Brannigan": [
+      "3B",
+      "SS"
+    ],
+    "Caleb Bonemer": [
+      "3B",
+      "SS"
+    ],
+    "Gabriel Rodriguez": [
+      "3B",
+      "SS"
+    ],
+    "Ricky Cabrera": [
+      "3B"
+    ],
+    "Walker Martin": [
+      "3B",
+      "SS"
+    ],
+    "Alexander Albertus": [
+      "3B"
+    ],
+    "Ethan Hedges": [
+      "3B"
+    ],
+    "Tommy White": [
+      "3B"
+    ],
+    "Brandon Winokur": [
+      "3B",
+      "SS"
+    ],
+    "Emilio Sanchez": [
+      "3B",
+      "SS"
+    ],
+    "Luis Suisbel": [
+      "3B",
+      "SS"
+    ],
+    "Cam Devanney": [
+      "3B"
+    ],
+    "Bobby Witt Jr.": [
+      "SS"
+    ],
+    "Elly De La Cruz": [
+      "SS"
+    ],
+    "Gunnar Henderson": [
+      "SS"
+    ],
+    "Zach Neto": [
+      "SS"
+    ],
+    "Trea Turner": [
+      "SS"
+    ],
+    "Francisco Lindor": [
+      "SS"
+    ],
+    "Mookie Betts": [
+      "SS"
+    ],
+    "Geraldo Perdomo": [
+      "SS"
+    ],
+    "Corey Seager": [
+      "SS"
+    ],
+    "Bo Bichette": [
+      "SS"
+    ],
+    "CJ Abrams": [
+      "SS"
+    ],
+    "Jeremy Pe\u00f1a": [
+      "SS"
+    ],
+    "Trevor Story": [
+      "SS"
+    ],
+    "Willy Adames": [
+      "SS"
+    ],
+    "Dansby Swanson": [
+      "SS"
+    ],
+    "Jacob Wilson": [
+      "SS"
+    ],
+    "Ezequiel Tovar": [
+      "SS"
+    ],
+    "Masyn Winn": [
+      "SS"
+    ],
+    "Konnor Griffin": [
+      "CF",
+      "SS"
+    ],
+    "Kevin McGonigle": [
+      "SS"
+    ],
+    "Xander Bogaerts": [
+      "SS"
+    ],
+    "J.P. Crawford": [
+      "SS"
+    ],
+    "Anthony Volpe": [
+      "SS"
+    ],
+    "Joey Ortiz": [
+      "SS"
+    ],
+    "Taylor Walls": [
+      "SS"
+    ],
+    "Trey Sweeney": [
+      "SS"
+    ],
+    "Nick Allen": [
+      "SS"
+    ],
+    "Ryan Fitzgerald": [
+      "SS"
+    ],
+    "Carson Williams": [
+      "SS"
+    ],
+    "Maximo Acosta": [
+      "SS"
+    ],
+    "Mason McCoy": [
+      "SS"
+    ],
+    "Xavier Neyens": [
+      "SS"
+    ],
+    "Mani Cedeno": [
+      "SS"
+    ],
+    "Aeverson Arteaga": [
+      "SS"
+    ],
+    "JoJo Parker": [
+      "SS"
+    ],
+    "Kaeden Kent": [
+      "SS"
+    ],
+    "Aiva Arquette": [
+      "SS"
+    ],
+    "Dean Curley": [
+      "SS"
+    ],
+    "Billy Carlson": [
+      "SS"
+    ],
+    "Welbyn Francisca": [
+      "SS"
+    ],
+    "Joendry Vargas": [
+      "SS"
+    ],
+    "Brayan Cortesia": [
+      "SS"
+    ],
+    "Gavin Fien": [
+      "SS"
+    ],
+    "Jefferson Rojas": [
+      "SS"
+    ],
+    "Brady Ebel": [
+      "SS"
+    ],
+    "Seaver King": [
+      "SS"
+    ],
+    "John Gil": [
+      "SS"
+    ],
+    "Adrian Santana": [
+      "SS"
+    ],
+    "Elian Pe\u00f1a": [
+      "SS"
+    ],
+    "Ethan Holliday": [
+      "SS"
+    ],
+    "Maui Ahuna": [
+      "SS"
+    ],
+    "Wilfri De La Cruz": [
+      "SS"
+    ],
+    "Noah Miller": [
+      "SS"
+    ],
+    "Josuar Gonzalez": [
+      "SS"
+    ],
+    "Dorian Soto": [
+      "SS"
+    ],
+    "Bryce Rainer": [
+      "SS"
+    ],
+    "Franklin Arias": [
+      "SS"
+    ],
+    "Colt Emerson": [
+      "SS"
+    ],
+    "Bryan Rincon": [
+      "SS"
+    ],
+    "Jose Fernandez": [
+      "SS"
+    ],
+    "Cooper Pratt": [
+      "SS"
+    ],
+    "Alex Lodise": [
+      "SS"
+    ],
+    "Gregory Barrios": [
+      "SS"
+    ],
+    "Quentin Young": [
+      "SS"
+    ],
+    "Aidan Miller": [
+      "SS"
+    ],
+    "Arjun Nimmala": [
+      "SS"
+    ],
+    "Felnin Celesten": [
+      "SS"
+    ],
+    "Steele Hall": [
+      "SS"
+    ],
+    "Kaelen Culpepper": [
+      "SS"
+    ],
+    "Liberts Aponte": [
+      "SS"
+    ],
+    "Gustavo Melendez": [
+      "SS"
+    ],
+    "Kyle Lodise": [
+      "SS"
+    ],
+    "Dax Kilby": [
+      "SS"
+    ],
+    "Daniel Vazquez": [
+      "SS"
+    ],
+    "Darell Morel": [
+      "SS"
+    ],
+    "Trei Cruz": [
+      "CF",
+      "LF",
+      "SS"
+    ],
+    "Josh Owens": [
+      "SS"
+    ],
+    "Antonio Jimenez": [
+      "SS"
+    ],
+    "Joshua Kuroda-Grauer": [
+      "SS"
+    ],
+    "Marek Houston": [
+      "SS"
+    ],
+    "Edgar Montero": [
+      "SS"
+    ],
+    "Warren Calca\u00f1o": [
+      "SS"
+    ],
+    "Shotaro Morii": [
+      "SS"
+    ],
+    "Joswa Lugo": [
+      "SS"
+    ],
+    "Ramcell Medina": [
+      "SS"
+    ],
+    "Eli Willits": [
+      "SS"
+    ],
+    "Yandel Ricardo": [
+      "SS"
+    ],
+    "Leo De Vries": [
+      "SS"
+    ],
+    "Emil Morales": [
+      "SS"
+    ],
+    "Stiven Marinez": [
+      "SS"
+    ],
+    "Andy Perez": [
+      "SS"
+    ],
+    "Juan Tomas": [
+      "SS"
+    ],
+    "Wehiwa Aloy": [
+      "SS"
+    ],
+    "Jordan Yost": [
+      "SS"
+    ],
+    "Kellon Lindsey": [
+      "SS"
+    ],
+    "Jose Perdomo": [
+      "SS"
+    ],
+    "Sheng-En Lin": [
+      "SS"
+    ],
+    "Ronny Cruz": [
+      "SS"
+    ],
+    "Jhonny Level": [
+      "SS"
+    ],
+    "Cooper Flemming": [
+      "SS"
+    ],
+    "Nick Becker": [
+      "SS"
+    ],
+    "Bobby Boser": [
+      "SS"
+    ],
+    "Fernando Cruz": [
+      "SS",
+      "P",
+      "RP"
+    ],
+    "Tate Southisene": [
+      "SS"
+    ],
+    "Tyson Lewis": [
+      "SS"
+    ],
+    "Yairo Padilla": [
+      "SS"
+    ],
+    "Aidan West": [
+      "SS"
+    ],
+    "Kayson Cunningham": [
+      "SS"
+    ],
+    "Coy James": [
+      "SS"
+    ],
+    "Ashly Andujar": [
+      "SS"
+    ],
+    "Derniche Valdez": [
+      "SS"
+    ],
+    "Daniel Pierce": [
+      "SS"
+    ],
+    "Aaron Judge": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Juan Soto": [
+      "LF",
+      "RF"
+    ],
+    "Jackson Chourio": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Kyle Schwarber": [
+      "LF"
+    ],
+    "James Wood": [
+      "LF"
+    ],
+    "Brent Rooker": [
+      "LF",
+      "RF"
+    ],
+    "Wyatt Langford": [
+      "CF",
+      "LF"
+    ],
+    "Yordan Alvarez": [
+      "LF"
+    ],
+    "Jarren Duran": [
+      "CF",
+      "LF"
+    ],
+    "Roman Anthony": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Cody Bellinger": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Riley Greene": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Randy Arozarena": [
+      "CF",
+      "LF"
+    ],
+    "Christian Yelich": [
+      "LF"
+    ],
+    "George Springer": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Seiya Suzuki": [
+      "LF",
+      "RF"
+    ],
+    "Kyle Stowers": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Teoscar Hern\u00e1ndez": [
+      "LF",
+      "RF"
+    ],
+    "Jakob Marsee": [
+      "CF",
+      "LF"
+    ],
+    "Andy Pages": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Taylor Ward": [
+      "LF"
+    ],
+    "Ian Happ": [
+      "LF"
+    ],
+    "Steven Kwan": [
+      "LF"
+    ],
+    "Brandon Nimmo": [
+      "CF",
+      "LF"
+    ],
+    "Bryan Reynolds": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Kerry Carpenter": [
+      "LF",
+      "RF"
+    ],
+    "Chandler Simpson": [
+      "CF",
+      "LF"
+    ],
+    "Heliot Ramos": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Wilyer Abreu": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Ram\u00f3n Laureano": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Daylen Lile": [
+      "LF",
+      "RF"
+    ],
+    "Daulton Varsho": [
+      "CF",
+      "LF"
+    ],
+    "TJ Friedl": [
+      "CF",
+      "LF"
+    ],
+    "Sal Frelick": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Jordan Beck": [
+      "LF",
+      "RF"
+    ],
+    "Anthony Santander": [
+      "LF",
+      "RF"
+    ],
+    "Colton Cowser": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Mickey Moniak": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Giancarlo Stanton": [
+      "LF",
+      "RF"
+    ],
+    "Brandon Marsh": [
+      "CF",
+      "LF"
+    ],
+    "Jasson Dom\u00ednguez": [
+      "CF",
+      "LF"
+    ],
+    "Josh Lowe": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Dominic Canzone": [
+      "LF",
+      "RF"
+    ],
+    "Evan Carter": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Jake Mangum": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Matt Wallner": [
+      "LF",
+      "RF"
+    ],
+    "Lourdes Gurriel Jr.": [
+      "LF"
+    ],
+    "Harrison Bader": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Jurickson Profar": [
+      "LF"
+    ],
+    "Trevor Larnach": [
+      "LF",
+      "RF"
+    ],
+    "Austin Hays": [
+      "LF"
+    ],
+    "Jes\u00fas S\u00e1nchez": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Andrew Benintendi": [
+      "LF"
+    ],
+    "Mike Yastrzemski": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Isaac Collins": [
+      "LF",
+      "RF"
+    ],
+    "Nathan Lukes": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Lars Nootbaar": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Starling Marte": [
+      "LF",
+      "RF"
+    ],
+    "Tommy Pham": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Max Kepler": [
+      "LF",
+      "RF"
+    ],
+    "JJ Bleday": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Myles Straw": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Rob Refsnyder": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Heriberto Hern\u00e1ndez": [
+      "LF",
+      "RF"
+    ],
+    "Eli White": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Christopher Morel": [
+      "LF"
+    ],
+    "Will Benson": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Alex Call": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Dane Myers": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Michael Conforto": [
+      "LF"
+    ],
+    "Tyler O'Neill": [
+      "LF",
+      "RF"
+    ],
+    "Jake Fraley": [
+      "LF",
+      "RF"
+    ],
+    "Randal Grichuk": [
+      "LF",
+      "RF"
+    ],
+    "Masataka Yoshida": [
+      "LF"
+    ],
+    "Tyrone Taylor": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Blake Perkins": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Jordan Walker": [
+      "LF",
+      "RF"
+    ],
+    "Jake McCarthy": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Jahmai Jones": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Victor Robles": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Nolan Jones": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Tyler Tolbert": [
+      "CF",
+      "LF"
+    ],
+    "Sam Haggerty": [
+      "CF",
+      "LF"
+    ],
+    "Luis Matos": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Matt Vierling": [
+      "CF",
+      "LF"
+    ],
+    "Joey Loperfido": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Alex Verdugo": [
+      "LF",
+      "RF"
+    ],
+    "Jesse Winker": [
+      "LF",
+      "RF"
+    ],
+    "Derek Hill": [
+      "CF",
+      "LF"
+    ],
+    "Richie Palacios": [
+      "LF"
+    ],
+    "Colby Thomas": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Jonny DeLuca": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Austin Slater": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Carlos Cortes": [
+      "LF",
+      "RF"
+    ],
+    "Brandon Lockridge": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Bryce Johnson": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Drew Waters": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Dairon Blanco": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Justyn-Henry Malloy": [
+      "LF",
+      "RF"
+    ],
+    "Dylan Beavers": [
+      "LF",
+      "RF"
+    ],
+    "Zach Dezenzo": [
+      "LF",
+      "RF"
+    ],
+    "John Rave": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Zach Cole": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Bryan De La Cruz": [
+      "LF"
+    ],
+    "Griffin Conine": [
+      "LF",
+      "RF"
+    ],
+    "Heston Kjerstad": [
+      "LF",
+      "RF"
+    ],
+    "Mark Canha": [
+      "LF",
+      "RF"
+    ],
+    "Jason Heyward": [
+      "LF",
+      "RF"
+    ],
+    "Alejandro Osuna": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Taylor Trammell": [
+      "CF",
+      "LF"
+    ],
+    "Manuel Margot": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Jack Suwinski": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Jonatan Clase": [
+      "CF",
+      "LF"
+    ],
+    "Matthew Lugo": [
+      "CF",
+      "LF"
+    ],
+    "Joey Wiemer": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Travis Jankowski": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Will Brennan": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Esteury Ruiz": [
+      "CF",
+      "LF"
+    ],
+    "Alan Roden": [
+      "LF",
+      "RF"
+    ],
+    "George Valera": [
+      "LF",
+      "RF"
+    ],
+    "Jacob Melton": [
+      "CF",
+      "LF"
+    ],
+    "Nathan Church": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "James Outman": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Blake Dunn": [
+      "LF",
+      "RF"
+    ],
+    "MJ Melendez": [
+      "LF"
+    ],
+    "Dustin Harris": [
+      "LF"
+    ],
+    "Everson Pereira": [
+      "CF",
+      "LF"
+    ],
+    "Grant McCray": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Rhylan Thomas": [
+      "LF"
+    ],
+    "Jorge Barrosa": [
+      "CF",
+      "LF"
+    ],
+    "Estuar Suero": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Jace Bohrofen": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "H\u00e9ctor Rodr\u00edguez": [
+      "LF",
+      "RF"
+    ],
+    "Junior Perez": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Devin Taylor": [
+      "LF",
+      "RF"
+    ],
+    "Avery Owusu-Asiedu": [
+      "CF",
+      "LF"
+    ],
+    "Vance Honeycutt": [
+      "CF",
+      "LF"
+    ],
+    "Zach Levenson": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Joshua Baez": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Brayan Buelvas": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Dasan Brown": [
+      "CF",
+      "LF"
+    ],
+    "Braylin Tavera": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Anthony Scull": [
+      "CF",
+      "LF"
+    ],
+    "Nate Nankil": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Slade Caldwell": [
+      "CF",
+      "LF"
+    ],
+    "Kahlil Watson": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Ryan Waldschmidt": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Victor Hurtado": [
+      "LF"
+    ],
+    "Enmanuel Bonilla": [
+      "CF",
+      "LF"
+    ],
+    "Matt Koperniak": [
+      "LF"
+    ],
+    "Hendry Mendez": [
+      "LF"
+    ],
+    "Douglas Glod": [
+      "LF",
+      "RF"
+    ],
+    "Justice Bigbie": [
+      "LF",
+      "RF"
+    ],
+    "Shalin Polanco": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Jonah Cox": [
+      "CF",
+      "LF"
+    ],
+    "Reed Trimble": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Spencer Nivens": [
+      "LF",
+      "RF"
+    ],
+    "Lonnie White Jr.": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Gabriel Gonzalez": [
+      "LF",
+      "RF"
+    ],
+    "Travis Honeyman": [
+      "CF",
+      "LF"
+    ],
+    "Gabriel Rincones Jr.": [
+      "LF",
+      "RF"
+    ],
+    "Thomas Sosa": [
+      "LF",
+      "RF"
+    ],
+    "Jack Hurley": [
+      "CF",
+      "LF"
+    ],
+    "Christian Franklin": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Alex Ram\u00edrez": [
+      "LF",
+      "RF"
+    ],
+    "Oliver Tejada": [
+      "LF",
+      "RF"
+    ],
+    "Jud Fabian": [
+      "CF",
+      "LF"
+    ],
+    "Kenedy Corona": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Akil Baddoo": [
+      "LF"
+    ],
+    "Ryan Vilade": [
+      "LF",
+      "RF"
+    ],
+    "Zac Veen": [
+      "LF",
+      "RF"
+    ],
+    "Carson McCusker": [
+      "LF",
+      "RF"
+    ],
+    "Tirso Ornelas": [
+      "LF"
+    ],
+    "Will Robertson": [
+      "LF",
+      "RF"
+    ],
+    "Julio Rodr\u00edguez": [
+      "CF"
+    ],
+    "Corbin Carroll": [
+      "CF",
+      "RF"
+    ],
+    "Pete Crow-Armstrong": [
+      "CF"
+    ],
+    "Jackson Merrill": [
+      "CF"
+    ],
+    "Oneil Cruz": [
+      "CF"
+    ],
+    "Michael Harris II": [
+      "CF"
+    ],
+    "Byron Buxton": [
+      "CF"
+    ],
+    "Jo Adell": [
+      "CF",
+      "RF"
+    ],
+    "Luis Robert Jr.": [
+      "CF"
+    ],
+    "Lawrence Butler": [
+      "CF",
+      "RF"
+    ],
+    "Brenton Doyle": [
+      "CF"
+    ],
+    "Dylan Crews": [
+      "CF",
+      "RF"
+    ],
+    "Trent Grisham": [
+      "CF"
+    ],
+    "Mike Trout": [
+      "CF",
+      "RF"
+    ],
+    "Cedric Mullins": [
+      "CF"
+    ],
+    "Jung Hoo Lee": [
+      "CF"
+    ],
+    "Chase DeLauter": [
+      "CF",
+      "RF"
+    ],
+    "Jake Meyers": [
+      "CF"
+    ],
+    "Wenceel P\u00e9rez": [
+      "CF",
+      "RF"
+    ],
+    "Victor Scott II": [
+      "CF"
+    ],
+    "Jacob Young": [
+      "CF"
+    ],
+    "Alek Thomas": [
+      "CF"
+    ],
+    "Kyle Isbel": [
+      "CF"
+    ],
+    "Johan Rojas": [
+      "CF"
+    ],
+    "Leody Taveras": [
+      "CF",
+      "RF"
+    ],
+    "Parker Meadows": [
+      "CF"
+    ],
+    "Lane Thomas": [
+      "CF",
+      "RF"
+    ],
+    "Kameron Misner": [
+      "CF",
+      "RF"
+    ],
+    "Michael Helman": [
+      "CF"
+    ],
+    "Robert Hassell III": [
+      "CF",
+      "RF"
+    ],
+    "Denzel Clarke": [
+      "CF"
+    ],
+    "Garrett Mitchell": [
+      "CF",
+      "RF"
+    ],
+    "Michael Siani": [
+      "CF"
+    ],
+    "Drew Gilbert": [
+      "CF",
+      "RF"
+    ],
+    "Bryce Teodosio": [
+      "CF"
+    ],
+    "Ji Hwan Bae": [
+      "CF",
+      "RF"
+    ],
+    "Owen Caissie": [
+      "CF",
+      "RF"
+    ],
+    "Billy Cook": [
+      "CF"
+    ],
+    "Petey Halpin": [
+      "CF"
+    ],
+    "Steward Berroa": [
+      "CF",
+      "RF"
+    ],
+    "Cal Stevenson": [
+      "CF"
+    ],
+    "Justin Dean": [
+      "CF"
+    ],
+    "Yasser Mercedes": [
+      "CF",
+      "RF"
+    ],
+    "Max Clark": [
+      "CF"
+    ],
+    "Ryan Lasko": [
+      "CF",
+      "RF"
+    ],
+    "Brett Bateman": [
+      "CF"
+    ],
+    "Carlos Jorge": [
+      "CF"
+    ],
+    "Benny Montgomery": [
+      "CF",
+      "RF"
+    ],
+    "Jose Ortiz": [
+      "CF",
+      "RF"
+    ],
+    "Gavin Conticello": [
+      "CF",
+      "RF"
+    ],
+    "Nick Morabito": [
+      "CF"
+    ],
+    "Jaison Chourio": [
+      "CF"
+    ],
+    "Spencer Jones": [
+      "CF"
+    ],
+    "Druw Jones": [
+      "CF",
+      "RF"
+    ],
+    "Eduardo Beltre": [
+      "CF",
+      "RF"
+    ],
+    "Diego Tornes": [
+      "CF"
+    ],
+    "Michael Lorenzen (Batter)": [
+      "CF"
+    ],
+    "Andrew Pintar": [
+      "CF",
+      "RF"
+    ],
+    "Stiven Martinez": [
+      "CF",
+      "RF"
+    ],
+    "Jake Fox": [
+      "CF"
+    ],
+    "Won-Bin Cho": [
+      "CF",
+      "RF"
+    ],
+    "Marcelo Alcala": [
+      "CF"
+    ],
+    "Harold Rivas": [
+      "CF"
+    ],
+    "Roberto Campos": [
+      "CF",
+      "RF"
+    ],
+    "Raudi Rodriguez": [
+      "CF",
+      "RF"
+    ],
+    "Elijah Green": [
+      "CF"
+    ],
+    "Carlos De La Cruz": [
+      "CF",
+      "RF"
+    ],
+    "Nick McLain": [
+      "CF"
+    ],
+    "George Wolkow": [
+      "CF",
+      "RF"
+    ],
+    "Emmanuel Rodriguez": [
+      "CF"
+    ],
+    "Wade Meckler": [
+      "CF"
+    ],
+    "Ryan Kreidler": [
+      "CF"
+    ],
+    "Jhostynxon Garcia": [
+      "CF",
+      "RF"
+    ],
+    "Tristan Peters": [
+      "CF"
+    ],
+    "Kyle Tucker": [
+      "RF"
+    ],
+    "Ronald Acu\u00f1a Jr.": [
+      "RF"
+    ],
+    "Fernando Tatis Jr.": [
+      "RF"
+    ],
+    "Adolis Garc\u00eda": [
+      "RF"
+    ],
+    "Nick Castellanos": [
+      "RF"
+    ],
+    "Cam Smith": [
+      "RF"
+    ],
+    "Andrew McCutchen": [
+      "RF"
+    ],
+    "Jorge Soler": [
+      "RF"
+    ],
+    "Yanquiel Fern\u00e1ndez": [
+      "RF"
+    ],
+    "Jerar Encarnacion": [
+      "RF"
+    ],
+    "Hunter Renfroe": [
+      "RF"
+    ],
+    "Johnathan Rodr\u00edguez": [
+      "RF"
+    ],
+    "Eloy Jim\u00e9nez": [
+      "RF"
+    ],
+    "Victor Mesa Jr.": [
+      "RF"
+    ],
+    "Rece Hinds": [
+      "RF"
+    ],
+    "Kevin Alcantara": [
+      "RF"
+    ],
+    "Carter Mathison": [
+      "RF"
+    ],
+    "Andres Valor": [
+      "RF"
+    ],
+    "Henry Bolte": [
+      "RF"
+    ],
+    "Adriel Radney": [
+      "RF"
+    ],
+    "Gavin Turley": [
+      "RF"
+    ],
+    "Carlos Pacheco": [
+      "RF"
+    ],
+    "Jared Dickey": [
+      "RF"
+    ],
+    "Darwing Ozuna": [
+      "RF"
+    ],
+    "Pedro Le\u00f3n": [
+      "RF"
+    ],
+    "Tyler Gentry": [
+      "RF"
+    ],
+    "Tarik Skubal": [
+      "P",
+      "SP"
+    ],
+    "Paul Skenes": [
+      "P",
+      "SP"
+    ],
+    "Garrett Crochet": [
+      "P",
+      "SP"
+    ],
+    "Cristopher S\u00e1nchez": [
+      "P",
+      "SP"
+    ],
+    "Yoshinobu Yamamoto": [
+      "P",
+      "SP"
+    ],
+    "Logan Gilbert": [
+      "P",
+      "SP"
+    ],
+    "Bryan Woo": [
+      "P",
+      "SP"
+    ],
+    "Chris Sale": [
+      "P",
+      "SP"
+    ],
+    "Logan Webb": [
+      "P",
+      "SP"
+    ],
+    "Hunter Brown": [
+      "P",
+      "SP"
+    ],
+    "Max Fried": [
+      "P",
+      "SP"
+    ],
+    "Jacob deGrom": [
+      "P",
+      "SP"
+    ],
+    "Cole Ragans": [
+      "P",
+      "SP"
+    ],
+    "George Kirby": [
+      "P",
+      "SP"
+    ],
+    "Freddy Peralta": [
+      "P",
+      "SP"
+    ],
+    "Joe Ryan": [
+      "P",
+      "SP"
+    ],
+    "Framber Valdez": [
+      "P",
+      "SP"
+    ],
+    "Kyle Bradish": [
+      "P",
+      "SP"
+    ],
+    "Dylan Cease": [
+      "P",
+      "SP"
+    ],
+    "Jes\u00fas Luzardo": [
+      "P",
+      "SP"
+    ],
+    "Nick Pivetta": [
+      "P",
+      "SP"
+    ],
+    "Nolan McLean": [
+      "P",
+      "SP"
+    ],
+    "Kevin Gausman": [
+      "P",
+      "SP"
+    ],
+    "Sonny Gray": [
+      "P",
+      "SP"
+    ],
+    "Jacob Misiorowski": [
+      "P",
+      "SP"
+    ],
+    "Tyler Glasnow": [
+      "P",
+      "SP"
+    ],
+    "Chase Burns": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Luis Castillo": [
+      "P",
+      "SP"
+    ],
+    "Nick Lodolo": [
+      "P",
+      "SP"
+    ],
+    "Shohei Ohtani (Pitcher)": [
+      "P",
+      "SP"
+    ],
+    "Eury P\u00e9rez": [
+      "P",
+      "SP"
+    ],
+    "Trey Yesavage": [
+      "P",
+      "SP"
+    ],
+    "Brandon Woodruff": [
+      "P",
+      "SP"
+    ],
+    "Cam Schlittler": [
+      "P",
+      "SP"
+    ],
+    "Emmet Sheehan": [
+      "P",
+      "SP"
+    ],
+    "Nathan Eovaldi": [
+      "P",
+      "SP"
+    ],
+    "Blake Snell": [
+      "P",
+      "SP"
+    ],
+    "Sandy Alcantara": [
+      "P",
+      "SP"
+    ],
+    "Ryan Pepiot": [
+      "P",
+      "SP"
+    ],
+    "Zack Wheeler": [
+      "P",
+      "SP"
+    ],
+    "Michael King": [
+      "P",
+      "SP"
+    ],
+    "Bubba Chandler": [
+      "P",
+      "SP"
+    ],
+    "MacKenzie Gore": [
+      "P",
+      "SP"
+    ],
+    "Gavin Williams": [
+      "P",
+      "SP"
+    ],
+    "Trevor Rogers": [
+      "P",
+      "SP"
+    ],
+    "Robbie Ray": [
+      "P",
+      "SP"
+    ],
+    "Tanner Bibee": [
+      "P",
+      "SP"
+    ],
+    "Ranger Su\u00e1rez": [
+      "P",
+      "SP"
+    ],
+    "Jack Flaherty": [
+      "P",
+      "SP"
+    ],
+    "Andrew Abbott": [
+      "P",
+      "SP"
+    ],
+    "Drew Rasmussen": [
+      "P",
+      "SP"
+    ],
+    "Cade Horton": [
+      "P",
+      "SP"
+    ],
+    "Spencer Strider": [
+      "P",
+      "SP"
+    ],
+    "Shota Imanaga": [
+      "P",
+      "SP"
+    ],
+    "Carlos Rod\u00f3n": [
+      "P",
+      "SP"
+    ],
+    "Matthew Boyd": [
+      "P",
+      "SP"
+    ],
+    "Edward Cabrera": [
+      "P",
+      "SP"
+    ],
+    "Shane McClanahan": [
+      "P",
+      "SP"
+    ],
+    "Joe Musgrove": [
+      "P",
+      "SP"
+    ],
+    "Zac Gallen": [
+      "P",
+      "SP"
+    ],
+    "Tatsuya Imai": [
+      "SP"
+    ],
+    "Merrill Kelly": [
+      "P",
+      "SP"
+    ],
+    "Shane Baz": [
+      "P",
+      "SP"
+    ],
+    "Ryne Nelson": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Aaron Nola": [
+      "P",
+      "SP"
+    ],
+    "Kris Bubic": [
+      "P",
+      "SP"
+    ],
+    "Noah Cameron": [
+      "P",
+      "SP"
+    ],
+    "Shane Bieber": [
+      "P",
+      "SP"
+    ],
+    "Bryce Miller": [
+      "P",
+      "SP"
+    ],
+    "Michael Wacha": [
+      "P",
+      "SP"
+    ],
+    "Quinn Priester": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "David Peterson": [
+      "P",
+      "SP"
+    ],
+    "Jos\u00e9 Soriano": [
+      "P",
+      "SP"
+    ],
+    "Reynaldo L\u00f3pez": [
+      "P",
+      "SP"
+    ],
+    "Shane Smith": [
+      "P",
+      "SP"
+    ],
+    "Bailey Ober": [
+      "P",
+      "SP"
+    ],
+    "Connelly Early": [
+      "P",
+      "SP"
+    ],
+    "Sean Manaea": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Roki Sasaki": [
+      "P",
+      "SP"
+    ],
+    "Logan Henderson": [
+      "P",
+      "SP"
+    ],
+    "Ryan Weathers": [
+      "P",
+      "SP"
+    ],
+    "Mike Burrows": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Parker Messick": [
+      "P",
+      "SP"
+    ],
+    "Mitch Keller": [
+      "P",
+      "SP"
+    ],
+    "Jack Leiter": [
+      "P",
+      "SP"
+    ],
+    "Casey Mize": [
+      "P",
+      "SP"
+    ],
+    "Yusei Kikuchi": [
+      "P",
+      "SP"
+    ],
+    "Braxton Ashcraft": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Grayson Rodriguez": [
+      "P",
+      "SP"
+    ],
+    "Chad Patrick": [
+      "P",
+      "SP"
+    ],
+    "Zach Eflin": [
+      "P",
+      "SP"
+    ],
+    "Joey Cantillo": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Gerrit Cole": [
+      "P",
+      "SP"
+    ],
+    "Andrew Painter": [
+      "SP"
+    ],
+    "Cody Ponce": [
+      "SP"
+    ],
+    "Jacob Lopez": [
+      "P",
+      "SP"
+    ],
+    "Brady Singer": [
+      "P",
+      "SP"
+    ],
+    "Kodai Senga": [
+      "P",
+      "SP"
+    ],
+    "Clay Holmes": [
+      "P",
+      "SP"
+    ],
+    "Brayan Bello": [
+      "P",
+      "SP"
+    ],
+    "Chris Bassitt": [
+      "P",
+      "SP"
+    ],
+    "Justin Steele": [
+      "P",
+      "SP"
+    ],
+    "Kyle Harrison": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Will Warren": [
+      "P",
+      "SP"
+    ],
+    "Cade Cavalli": [
+      "P",
+      "SP"
+    ],
+    "Jameson Taillon": [
+      "P",
+      "SP"
+    ],
+    "Seth Lugo": [
+      "P",
+      "SP"
+    ],
+    "Spencer Schwellenbach": [
+      "P",
+      "SP"
+    ],
+    "Ian Seymour": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Brandon Pfaadt": [
+      "P",
+      "SP"
+    ],
+    "Hunter Greene": [
+      "P",
+      "SP"
+    ],
+    "Tyler Holton": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Eric Lauer": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Pablo L\u00f3pez": [
+      "P",
+      "SP"
+    ],
+    "Corbin Burnes": [
+      "P",
+      "SP"
+    ],
+    "Zack Littell": [
+      "P",
+      "SP"
+    ],
+    "Tyler Mahle": [
+      "P",
+      "SP"
+    ],
+    "Jack Dreyer": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Clarke Schmidt": [
+      "P",
+      "SP"
+    ],
+    "Mike Vasil": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Brant Hurter": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "AJ Blubaugh": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Ronel Blanco": [
+      "P",
+      "SP"
+    ],
+    "Drew Pomeranz": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Keegan Akin": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Lucas Giolito": [
+      "P",
+      "SP"
+    ],
+    "Reese Olson": [
+      "P",
+      "SP"
+    ],
+    "Troy Melton": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Colin Rea": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Nick Martinez": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Cole Sands": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Hurston Waldrep": [
+      "P",
+      "SP"
+    ],
+    "Dean Kremer": [
+      "P",
+      "SP"
+    ],
+    "Jeffrey Springs": [
+      "P",
+      "SP"
+    ],
+    "Brandon Walter": [
+      "P",
+      "SP"
+    ],
+    "Luis Gil": [
+      "P",
+      "SP"
+    ],
+    "Luis Morales": [
+      "P",
+      "SP"
+    ],
+    "Huascar Brazob\u00e1n": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Jose Quintana": [
+      "P",
+      "SP"
+    ],
+    "Stephen Kolek": [
+      "P",
+      "SP"
+    ],
+    "Jacob Latz": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Brennan Bernardino": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Carmen Mlodzinski": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Jos\u00e9 Butt\u00f3": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Jos\u00e9 Berr\u00edos": [
+      "P",
+      "SP"
+    ],
+    "Sean Newcomb": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Tyler Wells": [
+      "P",
+      "SP"
+    ],
+    "Ryan Yarbrough": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Tylor Megill": [
+      "P",
+      "SP"
+    ],
+    "Jack Perkins": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Trevor McDonald": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Tyler Gilbert": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Adrian Houser": [
+      "P",
+      "SP"
+    ],
+    "Andrew Alvarez": [
+      "P",
+      "SP"
+    ],
+    "Simeon Woods Richardson": [
+      "P",
+      "SP"
+    ],
+    "Ben Casparius": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Michael McGreevy": [
+      "P",
+      "SP"
+    ],
+    "Javier Assad": [
+      "P",
+      "SP"
+    ],
+    "Gavin Stone": [
+      "P",
+      "SP"
+    ],
+    "Tobias Myers": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Johan Oviedo": [
+      "P",
+      "SP"
+    ],
+    "Cody Bradford": [
+      "P",
+      "SP"
+    ],
+    "Yu Darvish": [
+      "P",
+      "SP"
+    ],
+    "Wikelman Gonz\u00e1lez": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Janson Junk": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Kutter Crawford": [
+      "P",
+      "SP"
+    ],
+    "Cristian Mena": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Hayden Wesneski": [
+      "P",
+      "SP"
+    ],
+    "Hunter Barco": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Ryan Bergert": [
+      "P",
+      "SP"
+    ],
+    "Rhett Lowder": [
+      "P",
+      "SP"
+    ],
+    "Luis L. Ortiz": [
+      "P",
+      "SP"
+    ],
+    "John Means": [
+      "SP"
+    ],
+    "DL Hall": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Joey Gerber": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Joe Rock": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "River Ryan": [
+      "P",
+      "SP"
+    ],
+    "Dietrich Enns": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Michael Soroka": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Alex Cobb": [
+      "SP"
+    ],
+    "Hunter Dobbins": [
+      "P",
+      "SP"
+    ],
+    "Grant Holmes": [
+      "P",
+      "SP"
+    ],
+    "DJ Herz": [
+      "SP"
+    ],
+    "Robert Gasser": [
+      "P",
+      "SP"
+    ],
+    "Alek Manoah": [
+      "P",
+      "SP"
+    ],
+    "Alec Marsh": [
+      "P",
+      "SP"
+    ],
+    "Landon Knack": [
+      "P",
+      "SP"
+    ],
+    "AJ Smith-Shawver": [
+      "P",
+      "SP"
+    ],
+    "Alan Rangel": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Brandon Williamson": [
+      "P",
+      "SP"
+    ],
+    "Mart\u00edn P\u00e9rez": [
+      "P",
+      "SP"
+    ],
+    "Joseph Montalvo": [
+      "SP"
+    ],
+    "Drew Beam": [
+      "SP"
+    ],
+    "Leandro Lopez": [
+      "P",
+      "SP"
+    ],
+    "Tyler Uberstine": [
+      "SP"
+    ],
+    "Dylan Ray": [
+      "SP"
+    ],
+    "Lael Lockhart": [
+      "SP"
+    ],
+    "Cole Miller": [
+      "SP"
+    ],
+    "Izack Tiger": [
+      "SP"
+    ],
+    "Tucker Musgrove": [
+      "RP",
+      "SP"
+    ],
+    "Austin Krob": [
+      "RP",
+      "SP"
+    ],
+    "C.J. Culpepper": [
+      "SP"
+    ],
+    "Blake Wolters": [
+      "SP"
+    ],
+    "Zachary Root": [
+      "P",
+      "SP"
+    ],
+    "Alex McFarlane": [
+      "RP",
+      "SP"
+    ],
+    "Sean Paul Li\u00f1an": [
+      "SP"
+    ],
+    "Hayden Mullins": [
+      "SP"
+    ],
+    "Argenis Cayama": [
+      "P",
+      "SP"
+    ],
+    "Trace Bright": [
+      "RP",
+      "SP"
+    ],
+    "Will Watson": [
+      "P",
+      "SP"
+    ],
+    "Micah Ottenbreit": [
+      "SP"
+    ],
+    "Adam Maier": [
+      "SP"
+    ],
+    "Shane Drohan": [
+      "SP"
+    ],
+    "Tekoah Roby": [
+      "SP"
+    ],
+    "Mavis Graves": [
+      "SP"
+    ],
+    "Keeler Morfe": [
+      "SP"
+    ],
+    "Josh Trentadue": [
+      "P",
+      "SP"
+    ],
+    "Eric Yost": [
+      "P",
+      "SP"
+    ],
+    "Tyson Guerrero": [
+      "SP"
+    ],
+    "Nick Frasso": [
+      "RP",
+      "SP"
+    ],
+    "Steven Zobac": [
+      "SP"
+    ],
+    "Juan Carela": [
+      "SP"
+    ],
+    "Drue Hackenberg": [
+      "SP"
+    ],
+    "Dean Livingston": [
+      "SP"
+    ],
+    "Ethan Schiefelbein": [
+      "SP"
+    ],
+    "Yu-Min Lin": [
+      "SP"
+    ],
+    "Josh Knoth": [
+      "SP"
+    ],
+    "Taylor Dollard": [
+      "SP"
+    ],
+    "John Holobetz": [
+      "SP"
+    ],
+    "Zach Swanson": [
+      "SP"
+    ],
+    "Bryce Mayer": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Henry Baez": [
+      "SP"
+    ],
+    "Ryan Forcucci": [
+      "SP"
+    ],
+    "Alonzo Tredwell": [
+      "RP",
+      "SP"
+    ],
+    "J.D. Thompson": [
+      "SP"
+    ],
+    "Kohei Arihara": [
+      "RP",
+      "SP"
+    ],
+    "Will Sanders": [
+      "SP"
+    ],
+    "Zach Thornton": [
+      "SP"
+    ],
+    "Jonathan Santucci": [
+      "SP"
+    ],
+    "Ixan Henderson": [
+      "SP"
+    ],
+    "James Ellwanger": [
+      "SP"
+    ],
+    "Thatcher Hurd": [
+      "SP"
+    ],
+    "CJ Gray": [
+      "SP"
+    ],
+    "Chris Cortez": [
+      "SP"
+    ],
+    "Frank Mozzicato": [
+      "SP"
+    ],
+    "Brycen Mautz": [
+      "SP"
+    ],
+    "Anthony Solometo": [
+      "SP"
+    ],
+    "Jose Olivares": [
+      "SP"
+    ],
+    "Tyler Bremner": [
+      "SP"
+    ],
+    "Owen Hall": [
+      "SP"
+    ],
+    "Ben Hess": [
+      "SP"
+    ],
+    "Dioris De La Rosa": [
+      "SP"
+    ],
+    "Cooper Hjerpe": [
+      "SP"
+    ],
+    "Dalton Pence": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Jeremy Reyes": [
+      "SP"
+    ],
+    "Chen-Wei Lin": [
+      "SP"
+    ],
+    "Daury Vasquez": [
+      "P",
+      "SP"
+    ],
+    "Nazier Mul\u00e9": [
+      "SP"
+    ],
+    "Walbert Ure\u00f1a": [
+      "SP"
+    ],
+    "JeanPierre Ortiz": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Brody Hopkins": [
+      "SP"
+    ],
+    "Jake Bennett": [
+      "SP"
+    ],
+    "Dasan Hill": [
+      "SP"
+    ],
+    "Kendry Chourio": [
+      "P",
+      "SP"
+    ],
+    "Seth Hernandez": [
+      "SP"
+    ],
+    "Brandon Clarke": [
+      "P",
+      "SP"
+    ],
+    "Carter Holton": [
+      "SP"
+    ],
+    "Hiro Wyatt": [
+      "SP"
+    ],
+    "Griff McGarry": [
+      "SP"
+    ],
+    "Peter Heubeck": [
+      "SP"
+    ],
+    "Levi Wells": [
+      "SP"
+    ],
+    "Andrew Sears": [
+      "SP"
+    ],
+    "Karson Milbrandt": [
+      "SP"
+    ],
+    "Felix Arronde": [
+      "SP"
+    ],
+    "Gary Gill Hill": [
+      "SP"
+    ],
+    "Marco Raya": [
+      "RP",
+      "SP"
+    ],
+    "Connor Noland": [
+      "RP",
+      "SP"
+    ],
+    "Michael Lombardi": [
+      "SP"
+    ],
+    "Winston Santos": [
+      "SP"
+    ],
+    "Sean Youngerman": [
+      "SP"
+    ],
+    "Liomar Martinez": [
+      "P",
+      "SP"
+    ],
+    "Santiago Suarez": [
+      "SP"
+    ],
+    "Austin Peterson": [
+      "SP"
+    ],
+    "Michael Forret": [
+      "SP"
+    ],
+    "Riley Quick": [
+      "SP"
+    ],
+    "Zane Taylor": [
+      "SP"
+    ],
+    "Jordy Vargas": [
+      "SP"
+    ],
+    "Luis De La Torre": [
+      "P",
+      "SP"
+    ],
+    "Tink Hence": [
+      "SP"
+    ],
+    "Quinn Mathews": [
+      "SP"
+    ],
+    "Hyun-Seok Jang": [
+      "SP"
+    ],
+    "Keyner Martinez": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Clark Candiotti": [
+      "SP"
+    ],
+    "Ben Kudrna": [
+      "SP"
+    ],
+    "Frank Cairone": [
+      "SP"
+    ],
+    "Jackson Baumeister": [
+      "SP"
+    ],
+    "Ethan Pecko": [
+      "SP"
+    ],
+    "Juan Valera": [
+      "SP"
+    ],
+    "Michael Morales": [
+      "SP"
+    ],
+    "Josh Stephan": [
+      "SP"
+    ],
+    "Cade Obermueller": [
+      "SP"
+    ],
+    "Esteban Mejia": [
+      "SP"
+    ],
+    "Antoine Kelly": [
+      "SP"
+    ],
+    "Wei-En Lin": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Kash Mayfield": [
+      "SP"
+    ],
+    "David Davalillo": [
+      "SP"
+    ],
+    "Yoniel Curet": [
+      "SP"
+    ],
+    "Miguel Mendez": [
+      "P",
+      "SP"
+    ],
+    "Cameron Sullivan": [
+      "SP"
+    ],
+    "David Shields": [
+      "SP"
+    ],
+    "Landon Harmon": [
+      "SP"
+    ],
+    "Chen Zhong-Ao Zhuang": [
+      "SP"
+    ],
+    "Daniel Espino": [
+      "SP"
+    ],
+    "Kade Anderson": [
+      "SP"
+    ],
+    "Matthew Fisher": [
+      "SP"
+    ],
+    "Dylan Jordan": [
+      "SP"
+    ],
+    "Kolton Curtis": [
+      "P",
+      "SP"
+    ],
+    "Dax Fulton": [
+      "SP"
+    ],
+    "Joel Hurtado": [
+      "SP"
+    ],
+    "Patrick Copen": [
+      "SP"
+    ],
+    "Luke Sinnard": [
+      "SP"
+    ],
+    "Sean Sullivan": [
+      "SP"
+    ],
+    "Jack Wenninger": [
+      "SP"
+    ],
+    "Marcelo Perez": [
+      "SP"
+    ],
+    "Ryan Gallagher": [
+      "SP"
+    ],
+    "Coleman Crow": [
+      "SP"
+    ],
+    "Sam Stuhr": [
+      "RP",
+      "SP"
+    ],
+    "Jakob Wright": [
+      "SP"
+    ],
+    "Johnny King": [
+      "SP"
+    ],
+    "Khal Stephen": [
+      "SP"
+    ],
+    "Nestor German": [
+      "SP"
+    ],
+    "Robby Snelling": [
+      "SP"
+    ],
+    "Kaleb Wing": [
+      "SP"
+    ],
+    "Tyler Schlaffer": [
+      "P",
+      "SP"
+    ],
+    "Jose Fleury": [
+      "RP",
+      "SP"
+    ],
+    "Brendan Beck": [
+      "P",
+      "SP"
+    ],
+    "Cam Leiter": [
+      "SP"
+    ],
+    "Trevor Harrison": [
+      "SP"
+    ],
+    "Jarlin Susana": [
+      "SP"
+    ],
+    "Josh Hansell": [
+      "P",
+      "SP"
+    ],
+    "Riley Kelly": [
+      "SP"
+    ],
+    "Talon Haley": [
+      "SP"
+    ],
+    "Lucas Elissalt": [
+      "P",
+      "SP"
+    ],
+    "Wilber Dotel": [
+      "P",
+      "SP"
+    ],
+    "Cole Hertzler": [
+      "P",
+      "SP"
+    ],
+    "Yhoiker Fajardo": [
+      "SP"
+    ],
+    "Grayson Grinsell": [
+      "SP"
+    ],
+    "Michael Kennedy": [
+      "RP",
+      "SP"
+    ],
+    "Cole Schoenwetter": [
+      "RP",
+      "SP"
+    ],
+    "Owen Murphy": [
+      "SP"
+    ],
+    "Matt Barr": [
+      "SP"
+    ],
+    "Kade Morris": [
+      "SP"
+    ],
+    "Chung-Hsiang Huang": [
+      "P",
+      "SP"
+    ],
+    "Carson Messina": [
+      "SP"
+    ],
+    "Ryan Webb": [
+      "RP",
+      "SP"
+    ],
+    "Darlin Saladin": [
+      "RP",
+      "SP"
+    ],
+    "Noble Meyer": [
+      "SP"
+    ],
+    "Josh Grosz": [
+      "SP"
+    ],
+    "Isaiah Lowe": [
+      "SP"
+    ],
+    "Tanner McDougal": [
+      "SP"
+    ],
+    "Cade Winquest": [
+      "SP"
+    ],
+    "Keyner Benitez": [
+      "SP"
+    ],
+    "David Sandlin": [
+      "RP",
+      "SP"
+    ],
+    "Victor Lizarraga": [
+      "SP"
+    ],
+    "Gage Stanifer": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Chase Mobley": [
+      "SP"
+    ],
+    "Jurrangelo Cijntje": [
+      "SP"
+    ],
+    "Ryan Costeiu": [
+      "RP",
+      "SP"
+    ],
+    "Tyler Schweitzer": [
+      "RP",
+      "SP"
+    ],
+    "JT Quinn": [
+      "SP"
+    ],
+    "Josh Bostick": [
+      "SP"
+    ],
+    "Kevin Defrank": [
+      "P",
+      "SP"
+    ],
+    "Mason Morris": [
+      "SP"
+    ],
+    "Patrick Forbes": [
+      "SP"
+    ],
+    "Jackson Cox": [
+      "SP"
+    ],
+    "Humberto Cruz": [
+      "SP"
+    ],
+    "Blake Larson": [
+      "SP"
+    ],
+    "Chase Hampton": [
+      "SP"
+    ],
+    "Jake Miller": [
+      "SP"
+    ],
+    "Drew Gray": [
+      "SP"
+    ],
+    "Tanner Franklin": [
+      "SP"
+    ],
+    "Po-Chun Lin": [
+      "SP"
+    ],
+    "Seth Keener": [
+      "RP",
+      "SP"
+    ],
+    "Aidan Curry": [
+      "SP"
+    ],
+    "Dalvinson Reyes": [
+      "SP"
+    ],
+    "Dylan Wilson": [
+      "SP"
+    ],
+    "Trystan Vrieling": [
+      "SP"
+    ],
+    "Travis Smith": [
+      "SP"
+    ],
+    "Jagger Haynes": [
+      "SP"
+    ],
+    "Carlson Reed": [
+      "SP"
+    ],
+    "Jackson Nezuh": [
+      "RP",
+      "SP"
+    ],
+    "Wellington Aracena": [
+      "SP"
+    ],
+    "Carlos De La Rosa": [
+      "SP"
+    ],
+    "Juaron Watts-Brown": [
+      "SP"
+    ],
+    "Luis Perales": [
+      "SP"
+    ],
+    "David Hagaman": [
+      "SP"
+    ],
+    "Ian Mejia": [
+      "RP",
+      "SP"
+    ],
+    "Jeter Martinez": [
+      "SP"
+    ],
+    "Blake Wehunt": [
+      "SP"
+    ],
+    "Mason Miller": [
+      "P",
+      "RP"
+    ],
+    "Edwin D\u00edaz": [
+      "P",
+      "RP"
+    ],
+    "Cade Smith": [
+      "P",
+      "RP"
+    ],
+    "Andr\u00e9s Mu\u00f1oz": [
+      "P",
+      "RP"
+    ],
+    "Jhoan Duran": [
+      "P",
+      "RP"
+    ],
+    "David Bednar": [
+      "P",
+      "RP"
+    ],
+    "Aroldis Chapman": [
+      "P",
+      "RP"
+    ],
+    "Devin Williams": [
+      "P",
+      "RP"
+    ],
+    "Raisel Iglesias": [
+      "P",
+      "RP"
+    ],
+    "Josh Hader": [
+      "P",
+      "RP"
+    ],
+    "Ryan Helsley": [
+      "P",
+      "RP"
+    ],
+    "Emilio Pag\u00e1n": [
+      "P",
+      "RP"
+    ],
+    "Carlos Est\u00e9vez": [
+      "P",
+      "RP"
+    ],
+    "Daniel Palencia": [
+      "P",
+      "RP"
+    ],
+    "Jeff Hoffman": [
+      "P",
+      "RP"
+    ],
+    "Pete Fairbanks": [
+      "P",
+      "RP"
+    ],
+    "Trevor Megill": [
+      "P",
+      "RP"
+    ],
+    "Kenley Jansen": [
+      "P",
+      "RP"
+    ],
+    "Dennis Santana": [
+      "P",
+      "RP"
+    ],
+    "Ryan Walker": [
+      "P",
+      "RP"
+    ],
+    "Abner Uribe": [
+      "P",
+      "RP"
+    ],
+    "Griffin Jax": [
+      "P",
+      "RP"
+    ],
+    "Bryan Abreu": [
+      "P",
+      "RP"
+    ],
+    "Robert Suarez": [
+      "P",
+      "RP"
+    ],
+    "Reid Detmers": [
+      "P",
+      "RP"
+    ],
+    "Riley O'Brien": [
+      "P",
+      "RP"
+    ],
+    "Robert Garcia": [
+      "P",
+      "RP"
+    ],
+    "Grant Taylor": [
+      "P",
+      "RP"
+    ],
+    "Edwin Uceta": [
+      "P",
+      "RP"
+    ],
+    "Seranthony Dom\u00ednguez": [
+      "P",
+      "RP"
+    ],
+    "Adrian Morejon": [
+      "P",
+      "RP"
+    ],
+    "Emmanuel Clase": [
+      "P",
+      "RP"
+    ],
+    "Jason Adam": [
+      "P",
+      "RP"
+    ],
+    "Shawn Armstrong": [
+      "P",
+      "RP"
+    ],
+    "Ronny Henriquez": [
+      "P",
+      "RP"
+    ],
+    "Will Vest": [
+      "P",
+      "RP"
+    ],
+    "Kyle Finnegan": [
+      "P",
+      "RP"
+    ],
+    "Alex Vesia": [
+      "P",
+      "RP"
+    ],
+    "Garrett Whitlock": [
+      "P",
+      "RP"
+    ],
+    "Tyler Rogers": [
+      "P",
+      "RP"
+    ],
+    "Luke Weaver": [
+      "P",
+      "RP"
+    ],
+    "Matt Strahm": [
+      "P",
+      "RP"
+    ],
+    "Matt Svanson": [
+      "P",
+      "RP"
+    ],
+    "Randy Rodr\u00edguez": [
+      "P",
+      "RP"
+    ],
+    "Garrett Cleavinger": [
+      "P",
+      "RP"
+    ],
+    "Eduard Bazardo": [
+      "P",
+      "RP"
+    ],
+    "Brad Keller": [
+      "P",
+      "RP"
+    ],
+    "Lucas Erceg": [
+      "P",
+      "RP"
+    ],
+    "Shelby Miller": [
+      "P",
+      "RP"
+    ],
+    "Gabe Speier": [
+      "P",
+      "RP"
+    ],
+    "Phil Maton": [
+      "P",
+      "RP"
+    ],
+    "Aaron Ashby": [
+      "P",
+      "RP"
+    ],
+    "Jared Koenig": [
+      "P",
+      "RP"
+    ],
+    "Andrew Kittredge": [
+      "P",
+      "RP"
+    ],
+    "Bryan King": [
+      "P",
+      "RP"
+    ],
+    "Jeremiah Estrada": [
+      "P",
+      "RP"
+    ],
+    "JoJo Romero": [
+      "P",
+      "RP"
+    ],
+    "Steven Okert": [
+      "P",
+      "RP"
+    ],
+    "Braydon Fisher": [
+      "P",
+      "RP"
+    ],
+    "Tony Santillan": [
+      "P",
+      "RP"
+    ],
+    "Dylan Lee": [
+      "P",
+      "RP"
+    ],
+    "Tanner Scott": [
+      "P",
+      "RP"
+    ],
+    "Tanner Banks": [
+      "P",
+      "RP"
+    ],
+    "Jacob Webb": [
+      "P",
+      "RP"
+    ],
+    "Hunter Gaddis": [
+      "P",
+      "RP"
+    ],
+    "Bennett Sousa": [
+      "P",
+      "RP"
+    ],
+    "Greg Weissert": [
+      "P",
+      "RP"
+    ],
+    "F\u00e9lix Bautista": [
+      "P",
+      "RP"
+    ],
+    "Orion Kerkering": [
+      "P",
+      "RP"
+    ],
+    "Anthony Bender": [
+      "P",
+      "RP"
+    ],
+    "Caleb Thielbar": [
+      "P",
+      "RP"
+    ],
+    "Calvin Faucher": [
+      "P",
+      "RP"
+    ],
+    "Camilo Doval": [
+      "P",
+      "RP"
+    ],
+    "Kirby Yates": [
+      "P",
+      "RP"
+    ],
+    "Justin Sterner": [
+      "P",
+      "RP"
+    ],
+    "Jakob Junis": [
+      "P",
+      "RP"
+    ],
+    "Danny Coulombe": [
+      "P",
+      "RP"
+    ],
+    "Lake Bachar": [
+      "P",
+      "RP"
+    ],
+    "Brooks Raley": [
+      "P",
+      "RP"
+    ],
+    "Steven Matz": [
+      "P",
+      "RP"
+    ],
+    "Connor Phillips": [
+      "P",
+      "RP"
+    ],
+    "Anthony Banda": [
+      "P",
+      "RP"
+    ],
+    "Taylor Clarke": [
+      "P",
+      "RP"
+    ],
+    "Jimmy Herget": [
+      "P",
+      "RP"
+    ],
+    "Pierce Johnson": [
+      "P",
+      "RP"
+    ],
+    "Kyle Leahy": [
+      "P",
+      "RP"
+    ],
+    "Jos\u00e9 Alvarado": [
+      "P",
+      "RP"
+    ],
+    "Nick Mears": [
+      "P",
+      "RP"
+    ],
+    "Bryan Baker": [
+      "P",
+      "RP"
+    ],
+    "Isaac Mattson": [
+      "P",
+      "RP"
+    ],
+    "Jalen Beeks": [
+      "P",
+      "RP"
+    ],
+    "Andrew Saalfrank": [
+      "P",
+      "RP"
+    ],
+    "Matt Festa": [
+      "P",
+      "RP"
+    ],
+    "Victor Vodnik": [
+      "P",
+      "RP"
+    ],
+    "Manuel Rodr\u00edguez": [
+      "P",
+      "RP"
+    ],
+    "Cade Gibson": [
+      "P",
+      "RP"
+    ],
+    "Tyler Kinley": [
+      "P",
+      "RP"
+    ],
+    "Tommy Nance": [
+      "P",
+      "RP"
+    ],
+    "Cole Winn": [
+      "P",
+      "RP"
+    ],
+    "Yariel Rodriguez": [
+      "P",
+      "RP"
+    ],
+    "Jordan Leasure": [
+      "P",
+      "RP"
+    ],
+    "Tim Hill": [
+      "P",
+      "RP"
+    ],
+    "Chris Martin": [
+      "P",
+      "RP"
+    ],
+    "Brock Burke": [
+      "P",
+      "RP"
+    ],
+    "Tyler Phillips": [
+      "P",
+      "RP"
+    ],
+    "Matt Brash": [
+      "P",
+      "RP"
+    ],
+    "Brendon Little": [
+      "P",
+      "RP"
+    ],
+    "Justin Martinez": [
+      "P",
+      "RP"
+    ],
+    "Justin Slaten": [
+      "P",
+      "RP"
+    ],
+    "Daniel Lynch IV": [
+      "P",
+      "RP"
+    ],
+    "Wandy Peralta": [
+      "P",
+      "RP"
+    ],
+    "Erik Miller": [
+      "P",
+      "RP"
+    ],
+    "Erik Sabrowski": [
+      "P",
+      "RP"
+    ],
+    "Michael Kelly": [
+      "P",
+      "RP"
+    ],
+    "Joel Peguero": [
+      "P",
+      "RP"
+    ],
+    "Chase Shugart": [
+      "P",
+      "RP"
+    ],
+    "Reed Garrett": [
+      "P",
+      "RP"
+    ],
+    "Evan Phillips": [
+      "P",
+      "RP"
+    ],
+    "Mason Fluharty": [
+      "P",
+      "RP"
+    ],
+    "Yimi Garc\u00eda": [
+      "P",
+      "RP"
+    ],
+    "Cole Sulser": [
+      "P",
+      "RP"
+    ],
+    "Caleb Ferguson": [
+      "P",
+      "RP"
+    ],
+    "Hunter Harvey": [
+      "P",
+      "RP"
+    ],
+    "Brock Stewart": [
+      "P",
+      "RP"
+    ],
+    "John Schreiber": [
+      "P",
+      "RP"
+    ],
+    "Jose A. Ferrer": [
+      "P",
+      "RP"
+    ],
+    "A.J. Puk": [
+      "P",
+      "RP"
+    ],
+    "Chase Lee": [
+      "P",
+      "RP"
+    ],
+    "A.J. Minter": [
+      "P",
+      "RP"
+    ],
+    "Rob Zastryzny": [
+      "P",
+      "RP"
+    ],
+    "Hogan Harris": [
+      "P",
+      "RP"
+    ],
+    "Chris Murphy": [
+      "P",
+      "RP"
+    ],
+    "David Robertson": [
+      "P",
+      "RP"
+    ],
+    "Edgardo Henriquez": [
+      "P",
+      "RP"
+    ],
+    "Max Kranick": [
+      "P",
+      "RP"
+    ],
+    "Luinder Avila": [
+      "P",
+      "RP"
+    ],
+    "Nick Sandlin": [
+      "P",
+      "RP"
+    ],
+    "David Morgan": [
+      "P",
+      "RP"
+    ],
+    "Louis Varland": [
+      "P",
+      "RP"
+    ],
+    "Steven Cruz": [
+      "P",
+      "RP"
+    ],
+    "Kade Strowd": [
+      "P",
+      "RP"
+    ],
+    "Ryan Thompson": [
+      "P",
+      "RP"
+    ],
+    "Jason Foley": [
+      "P",
+      "RP"
+    ],
+    "Dylan Dodd": [
+      "P",
+      "RP"
+    ],
+    "Brenan Hanifee": [
+      "P",
+      "RP"
+    ],
+    "Taylor Rogers": [
+      "P",
+      "RP"
+    ],
+    "Dylan Smith": [
+      "P",
+      "RP"
+    ],
+    "Justin Wrobleski": [
+      "P",
+      "RP"
+    ],
+    "Craig Kimbrel": [
+      "P",
+      "RP"
+    ],
+    "Derek Law": [
+      "RP"
+    ],
+    "Austin Warren": [
+      "P",
+      "RP"
+    ],
+    "Robert Stephenson": [
+      "P",
+      "RP"
+    ],
+    "Michael Kopech": [
+      "P",
+      "RP"
+    ],
+    "Hunter Strickland": [
+      "P",
+      "RP"
+    ],
+    "Aaron Bummer": [
+      "P",
+      "RP"
+    ],
+    "Ron Marinaccio": [
+      "P",
+      "RP"
+    ],
+    "Joe Jim\u00e9nez": [
+      "P",
+      "RP"
+    ],
+    "Jorge L\u00f3pez": [
+      "P",
+      "RP"
+    ],
+    "Bradgley Rodriguez": [
+      "P",
+      "RP"
+    ],
+    "Paul Sewald": [
+      "P",
+      "RP"
+    ],
+    "Brent Headrick": [
+      "P",
+      "RP"
+    ],
+    "Cody Laweryson": [
+      "P",
+      "RP"
+    ],
+    "Tim Herrin": [
+      "P",
+      "RP"
+    ],
+    "Scott Barlow": [
+      "P",
+      "RP"
+    ],
+    "Justin Lawrence": [
+      "P",
+      "RP"
+    ],
+    "Andrew Chafin": [
+      "P",
+      "RP"
+    ],
+    "Bryan Hoeing": [
+      "P",
+      "RP"
+    ],
+    "Daysbel Hern\u00e1ndez": [
+      "P",
+      "RP"
+    ],
+    "Bryan Hudson": [
+      "P",
+      "RP"
+    ],
+    "Hunter Bigge": [
+      "P",
+      "RP"
+    ],
+    "Erasmo Ram\u00edrez": [
+      "P",
+      "RP"
+    ],
+    "Tyler Ferguson": [
+      "P",
+      "RP"
+    ],
+    "Rico Garcia": [
+      "P",
+      "RP"
+    ],
+    "Ryan Zeferjahn": [
+      "P",
+      "RP"
+    ],
+    "Dedniel N\u00fa\u00f1ez": [
+      "P",
+      "RP"
+    ],
+    "Justin Wilson": [
+      "P",
+      "RP"
+    ],
+    "Elvis Alvarado": [
+      "P",
+      "RP"
+    ],
+    "Juan Mejia": [
+      "P",
+      "RP"
+    ],
+    "Grant Anderson": [
+      "P",
+      "RP"
+    ],
+    "Ben Joyce": [
+      "P",
+      "RP"
+    ],
+    "Hoby Milner": [
+      "P",
+      "RP"
+    ],
+    "Chris Devenski": [
+      "P",
+      "RP"
+    ],
+    "Yuki Matsui": [
+      "P",
+      "RP"
+    ],
+    "Jayden Murray": [
+      "P",
+      "RP"
+    ],
+    "Spencer Bivens": [
+      "P",
+      "RP"
+    ],
+    "Jose Espada": [
+      "P",
+      "RP"
+    ],
+    "Eric Orze": [
+      "P",
+      "RP"
+    ],
+    "Graham Ashcraft": [
+      "P",
+      "RP"
+    ],
+    "Jackson Kowar": [
+      "P",
+      "RP"
+    ],
+    "Tommy Kahnle": [
+      "P",
+      "RP"
+    ],
+    "Keegan Thompson": [
+      "RP"
+    ],
+    "Jos\u00e9 Suarez": [
+      "P",
+      "RP"
+    ],
+    "Luke Jackson": [
+      "P",
+      "RP"
+    ],
+    "PJ Poulin": [
+      "P",
+      "RP"
+    ],
+    "James McArthur": [
+      "RP"
+    ],
+    "Enyel De Los Santos": [
+      "P",
+      "RP"
+    ],
+    "Steven Wilson": [
+      "P",
+      "RP"
+    ],
+    "Julian Fern\u00e1ndez": [
+      "P",
+      "RP"
+    ],
+    "Nick Raquet": [
+      "P",
+      "RP"
+    ],
+    "Jaden Hill": [
+      "P",
+      "RP"
+    ],
+    "Chris Flexen": [
+      "P",
+      "RP"
+    ],
+    "Ian Hamilton": [
+      "P",
+      "RP"
+    ],
+    "Sam Hentges": [
+      "P",
+      "RP"
+    ],
+    "Mark Leiter Jr.": [
+      "P",
+      "RP"
+    ],
+    "Tristan Beck": [
+      "P",
+      "RP"
+    ],
+    "Evan Sisk": [
+      "P",
+      "RP"
+    ],
+    "Blake Treinen": [
+      "P",
+      "RP"
+    ],
+    "Jonathan Bowlan": [
+      "P",
+      "RP"
+    ],
+    "Colin Selby": [
+      "P",
+      "RP"
+    ],
+    "Brusdar Graterol": [
+      "P",
+      "RP"
+    ],
+    "Jose Fermin": [
+      "P",
+      "RP"
+    ],
+    "Clayton Beeter": [
+      "P",
+      "RP"
+    ],
+    "Danny Young": [
+      "P",
+      "RP"
+    ],
+    "Chase Silseth": [
+      "P",
+      "RP"
+    ],
+    "Drew Smith": [
+      "RP"
+    ],
+    "Jeff Criswell": [
+      "P",
+      "RP"
+    ],
+    "Justin Hagenman": [
+      "P",
+      "RP"
+    ],
+    "Andrew Walters": [
+      "P",
+      "RP"
+    ],
+    "Andrew Nardi": [
+      "P",
+      "RP"
+    ],
+    "Prelander Berroa": [
+      "P",
+      "RP"
+    ],
+    "Konnor Pilkington": [
+      "P",
+      "RP"
+    ],
+    "Lou Trivino": [
+      "P",
+      "RP"
+    ],
+    "Carlos Vargas": [
+      "P",
+      "RP"
+    ],
+    "Kyle Hurt": [
+      "P",
+      "RP"
+    ],
+    "Reiver Sanmartin": [
+      "P",
+      "RP"
+    ],
+    "Gus Varland": [
+      "P",
+      "RP"
+    ],
+    "Will Klein": [
+      "P",
+      "RP"
+    ],
+    "Luis Garc\u00eda": [
+      "P",
+      "RP"
+    ],
+    "Eiberson Castellano": [
+      "RP"
+    ],
+    "Brayan Mendoza": [
+      "RP"
+    ],
+    "RJ Petit": [
+      "RP"
+    ],
+    "Alimber Santa": [
+      "RP"
+    ],
+    "Douglas Orellana": [
+      "RP"
+    ],
+    "Josh Ekness": [
+      "RP"
+    ],
+    "Emiliano Teodo": [
+      "RP"
+    ],
+    "Brock Porter": [
+      "RP"
+    ],
+    "Zach McCambley": [
+      "RP"
+    ],
+    "Peyton Gray": [
+      "RP"
+    ],
+    "Dylan Lesko": [
+      "RP"
+    ],
+    "Francis Pena": [
+      "RP"
+    ],
+    "Tyler Samaniego": [
+      "RP"
+    ],
+    "Zack Showalter": [
+      "RP"
+    ],
+    "Garrett Hawkins": [
+      "RP"
+    ],
+    "Tyson Neighbors": [
+      "RP"
+    ],
+    "Ryan Watson": [
+      "RP"
+    ],
+    "Dane Acker": [
+      "RP"
+    ],
+    "Franco Aleman": [
+      "RP"
+    ],
+    "Luis Gastelum": [
+      "RP"
+    ],
+    "Kervin Castro": [
+      "RP"
+    ],
+    "Cole Paplham": [
+      "RP"
+    ],
+    "Cade Denton": [
+      "RP"
+    ],
+    "Marquis Grissom Jr.": [
+      "RP"
+    ],
+    "L.P. Langevin": [
+      "RP"
+    ],
+    "Elison Joseph": [
+      "RP"
+    ],
+    "William Kempner": [
+      "RP"
+    ],
+    "Samy Natera Jr.": [
+      "RP"
+    ],
+    "Branneli Franco": [
+      "RP"
+    ],
+    "Alexander Alberto": [
+      "RP"
+    ],
+    "Josh White": [
+      "RP"
+    ],
+    "Blake Burkhalter": [
+      "RP"
+    ],
+    "Anthony Nunez": [
+      "RP"
+    ],
+    "Robinson Ortiz": [
+      "RP"
+    ],
+    "Wen Hui Pan": [
+      "RP"
+    ],
+    "Matt Pushard": [
+      "RP"
+    ],
+    "Trevor Martin": [
+      "RP"
+    ],
+    "Alex Cook": [
+      "RP"
+    ],
+    "Eric Silva": [
+      "RP"
+    ],
+    "Ronan Kopp": [
+      "RP"
+    ],
+    "Evan Reifert": [
+      "RP"
+    ],
+    "Jaden Woods": [
+      "RP"
+    ],
+    "Eric Reyzelman": [
+      "RP"
+    ],
+    "Brandan Bidois": [
+      "RP"
+    ],
+    "Brandon Neely": [
+      "RP"
+    ],
+    "Cameron Foster": [
+      "RP"
+    ],
+    "Yorman G\u00f3mez": [
+      "RP",
+      "SP"
+    ],
+    "Will Johnston": [
+      "RP",
+      "SP"
+    ],
+    "Kelvis Salcedo": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Jojo Ingrassia": [
+      "RP"
+    ],
+    "Yordin Chalas": [
+      "RP",
+      "SP"
+    ],
+    "Camden Minacci": [
+      "RP"
+    ],
+    "Trent Harris": [
+      "RP"
+    ],
+    "Michael Knorr": [
+      "RP"
+    ],
+    "Dylan Ross": [
+      "P",
+      "RP"
+    ],
+    "Eric Cerantola": [
+      "RP"
+    ],
+    "John Klein": [
+      "RP",
+      "SP"
+    ],
+    "Alex Pham": [
+      "RP"
+    ],
+    "Tzu-Chen Sha": [
+      "RP",
+      "SP"
+    ],
+    "Ubaldo Soto": [
+      "RP",
+      "SP"
+    ],
+    "Miguel Ullola": [
+      "RP",
+      "SP"
+    ],
+    "Drew Anderson": [
+      "RP"
+    ],
+    "Landon Sims": [
+      "RP"
+    ],
+    "Tyler Cleveland": [
+      "RP"
+    ],
+    "Welinton Herrera": [
+      "RP"
+    ],
+    "Ryan Harbin": [
+      "RP"
+    ],
+    "Carter Baumler": [
+      "RP"
+    ],
+    "Zach Messinger": [
+      "RP",
+      "SP"
+    ],
+    "Cory Lewis": [
+      "RP",
+      "SP"
+    ],
+    "Charlie Beilenson": [
+      "RP"
+    ],
+    "Harrison Cohen": [
+      "RP"
+    ],
+    "Riley Martin": [
+      "RP"
+    ],
+    "Domingo Gonz\u00e1lez": [
+      "RP"
+    ],
+    "Kannon Kemp": [
+      "RP",
+      "SP"
+    ],
+    "Grant Shepardson": [
+      "RP",
+      "SP"
+    ],
+    "Jimmy Joyce": [
+      "RP"
+    ],
+    "Hunter Cranton": [
+      "RP"
+    ],
+    "Jack Choate": [
+      "RP",
+      "SP"
+    ],
+    "Peyton Pallette": [
+      "RP"
+    ],
+    "Aldrin Batista": [
+      "RP",
+      "SP"
+    ],
+    "Foster Griffin": [
+      "RP"
+    ],
+    "Ethan Dorchies": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Ty Johnson": [
+      "RP",
+      "SP"
+    ],
+    "Trey Dombroski": [
+      "RP",
+      "SP"
+    ],
+    "Jhancarlos Lara": [
+      "RP",
+      "SP"
+    ],
+    "Ryan Lambert": [
+      "P",
+      "RP"
+    ],
+    "Mathias LaCombe": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Daison Acosta": [
+      "RP"
+    ],
+    "Alex Hoppe": [
+      "RP"
+    ],
+    "Juan Nu\u00f1ez": [
+      "RP",
+      "SP"
+    ],
+    "Yujanyer Herrera": [
+      "RP",
+      "SP"
+    ],
+    "Joey Oakie": [
+      "RP",
+      "SP"
+    ],
+    "Jose Franco": [
+      "P",
+      "RP",
+      "SP"
+    ],
+    "Skylar Hales": [
+      "RP"
+    ],
+    "Adam Macko": [
+      "RP",
+      "SP"
+    ],
+    "Luis Mey": [
+      "P",
+      "RP"
+    ],
+    "Jhonathan D\u00edaz": [
+      "P",
+      "RP"
+    ],
+    "Jairo Iriarte": [
+      "P",
+      "RP"
+    ],
+    "Zach Penrod": [
+      "RP"
+    ],
+    "Luke Little": [
+      "P",
+      "RP"
+    ],
+    "Garrett Acton": [
+      "P",
+      "RP"
+    ]
+  },
+  "yahoo_projections": {}
+}
