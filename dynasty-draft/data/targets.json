@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-11T20:31:41.057434",
+  "generated": "2026-03-14T15:59:27.157364",
   "count": 1003,
   "players": [
     {
@@ -67,6 +67,7 @@
       "fpAdp": 3.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -134,6 +135,7 @@
       "fpAdp": 15.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -200,6 +202,7 @@
       "fpAdp": 14.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -267,6 +270,7 @@
       "fpAdp": 9.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -335,6 +339,7 @@
       "fpAdp": 3.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -402,6 +407,7 @@
       "fpAdp": 7.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -468,6 +474,7 @@
       "fpAdp": 18.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -535,6 +542,7 @@
       "fpAdp": 13.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -601,6 +609,7 @@
       "fpAdp": 32.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -669,6 +678,7 @@
       "fpAdp": 15.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -735,6 +745,7 @@
       "fpAdp": 16.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -798,6 +809,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -862,6 +874,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -925,6 +938,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -990,6 +1004,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -1053,6 +1068,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -1116,6 +1132,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -1179,6 +1196,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -1243,6 +1261,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -1310,6 +1329,7 @@
       "fpAdp": 8.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -1375,6 +1395,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -1442,6 +1463,7 @@
       "fpAdp": 18.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -1509,6 +1531,7 @@
       "fpAdp": 11.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -1577,6 +1600,7 @@
       "fpAdp": 60.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -1643,6 +1667,7 @@
       "fpAdp": 60.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -1704,6 +1729,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -1771,6 +1797,7 @@
       "fpAdp": 33.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -1833,6 +1860,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -1900,6 +1928,7 @@
       "fpAdp": 2.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -1967,6 +1996,7 @@
       "fpAdp": 24.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -2034,6 +2064,7 @@
       "fpAdp": 42.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -2097,6 +2128,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -2161,6 +2193,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -2228,6 +2261,7 @@
       "fpAdp": 186.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -2291,6 +2325,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -2357,6 +2392,7 @@
       "fpAdp": 61.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -2420,6 +2456,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -2483,6 +2520,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -2549,6 +2587,7 @@
       "fpAdp": 80.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -2615,6 +2654,7 @@
       "fpAdp": 227.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -2678,6 +2718,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -2745,6 +2786,7 @@
       "fpAdp": 36.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -2812,6 +2854,7 @@
       "fpAdp": 40.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -2875,6 +2918,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -2941,6 +2985,7 @@
       "fpAdp": 27.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3006,6 +3051,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3069,6 +3115,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3133,6 +3180,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3192,6 +3240,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3256,6 +3305,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3317,6 +3367,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3382,6 +3433,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3443,6 +3495,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3510,6 +3563,7 @@
       "fpAdp": 5.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3576,6 +3630,7 @@
       "fpAdp": 37.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3643,6 +3698,7 @@
       "fpAdp": 19.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3706,6 +3762,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3766,6 +3823,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3833,6 +3891,7 @@
       "fpAdp": 56.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3901,6 +3960,7 @@
       "fpAdp": 177.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3967,6 +4027,7 @@
       "fpAdp": 86.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4030,6 +4091,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4089,6 +4151,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4155,6 +4218,7 @@
       "fpAdp": 100.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4214,6 +4278,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4273,6 +4338,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4341,6 +4407,7 @@
       "fpAdp": 62.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4405,6 +4472,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4468,6 +4536,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4526,6 +4595,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4592,6 +4662,7 @@
       "fpAdp": 29.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4657,6 +4728,7 @@
       "fpAdp": 83.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4718,6 +4790,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4781,6 +4854,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4846,6 +4920,7 @@
       "fpAdp": 290.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4912,6 +4987,7 @@
       "fpAdp": 55.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4973,6 +5049,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5038,6 +5115,7 @@
       "fpAdp": 67.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5100,6 +5178,7 @@
       "fpAdp": 198.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5161,6 +5240,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5225,6 +5305,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5287,6 +5368,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5347,6 +5429,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5405,6 +5488,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5471,6 +5555,7 @@
       "fpAdp": 68.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5534,6 +5619,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5592,6 +5678,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5656,6 +5743,7 @@
       "fpAdp": 73.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5722,6 +5810,7 @@
       "fpAdp": 86.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5790,6 +5879,7 @@
       "fpAdp": 22.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5853,6 +5943,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5921,6 +6012,7 @@
       "fpAdp": 2.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5990,6 +6082,7 @@
       "fpAdp": 21.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6057,6 +6150,7 @@
       "fpAdp": 32.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6117,6 +6211,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6183,6 +6278,7 @@
       "fpAdp": 30.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6241,6 +6337,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6299,6 +6396,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6367,6 +6465,7 @@
       "fpAdp": 46.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6435,6 +6534,7 @@
       "fpAdp": 66.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6498,6 +6598,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6565,6 +6666,7 @@
       "fpAdp": 22.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6626,6 +6728,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6685,6 +6788,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6748,6 +6852,7 @@
       "fpAdp": 164.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6808,6 +6913,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6871,6 +6977,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6932,6 +7039,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6995,6 +7103,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7061,6 +7170,7 @@
       "fpAdp": 45.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7125,6 +7235,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7189,6 +7300,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7252,6 +7364,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7317,6 +7430,7 @@
       "fpAdp": 52.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7377,6 +7491,7 @@
       "fpAdp": 273.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7441,6 +7556,7 @@
       "fpAdp": 305.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7508,6 +7624,7 @@
       "fpAdp": 89.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7571,6 +7688,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7634,6 +7752,7 @@
       "fpAdp": 2.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7694,6 +7813,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7760,6 +7880,7 @@
       "fpAdp": 139.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7817,6 +7938,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7881,6 +8003,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7942,6 +8065,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8009,6 +8133,7 @@
       "fpAdp": 85.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8066,6 +8191,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8126,6 +8252,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8191,6 +8318,7 @@
       "fpAdp": 65.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8255,6 +8383,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8314,6 +8443,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8378,6 +8508,7 @@
       "fpAdp": 102.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8437,6 +8568,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8498,6 +8630,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8560,6 +8693,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8617,6 +8751,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8676,6 +8811,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8741,6 +8877,7 @@
       "fpAdp": 115.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8806,6 +8943,7 @@
       "fpAdp": 103.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8871,6 +9009,7 @@
       "fpAdp": 180.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8932,6 +9071,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8993,6 +9133,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9052,6 +9193,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9111,6 +9253,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9169,6 +9312,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9233,6 +9377,7 @@
       "fpAdp": 100.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9296,6 +9441,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9361,6 +9507,7 @@
       "fpAdp": 129.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9425,6 +9572,7 @@
       "fpAdp": 273.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9486,6 +9634,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9549,6 +9698,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9607,6 +9757,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9668,6 +9819,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9726,6 +9878,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9792,6 +9945,7 @@
       "fpAdp": 62.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9855,6 +10009,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9920,6 +10075,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9983,6 +10139,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10046,6 +10203,7 @@
       "fpAdp": 45.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10113,6 +10271,7 @@
       "fpAdp": 148.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10176,6 +10335,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10235,6 +10395,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10296,6 +10457,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10354,6 +10516,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10419,6 +10582,7 @@
       "fpAdp": 141.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10484,6 +10648,7 @@
       "fpAdp": 123.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10543,6 +10708,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10608,6 +10774,7 @@
       "fpAdp": 27.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10675,6 +10842,7 @@
       "fpAdp": 118.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10738,6 +10906,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10797,6 +10966,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10860,6 +11030,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10926,6 +11097,7 @@
       "fpAdp": 72.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10984,6 +11156,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11042,6 +11215,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11107,6 +11281,7 @@
       "fpAdp": 86.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11174,6 +11349,7 @@
       "fpAdp": 179.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11240,6 +11416,7 @@
       "fpAdp": 88.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11303,6 +11480,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11365,6 +11543,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11430,6 +11609,7 @@
       "fpAdp": 204.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11493,6 +11673,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11557,6 +11738,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11618,6 +11800,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11683,6 +11866,7 @@
       "fpAdp": 175.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11745,6 +11929,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11807,6 +11992,7 @@
       "fpAdp": 202.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11871,6 +12057,7 @@
       "fpAdp": 179.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11926,6 +12113,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11994,6 +12182,7 @@
       "fpAdp": 118.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12060,6 +12249,7 @@
       "fpAdp": 132.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12126,6 +12316,7 @@
       "fpAdp": 61.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12189,6 +12380,7 @@
       "fpAdp": 216.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12253,6 +12445,7 @@
       "fpAdp": 178.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12321,6 +12514,7 @@
       "fpAdp": 84.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12384,6 +12578,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12445,6 +12640,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12503,6 +12699,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12565,6 +12762,7 @@
       "fpAdp": 153.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12629,6 +12827,7 @@
       "fpAdp": 134.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12690,6 +12889,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12748,6 +12948,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12806,6 +13007,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12866,6 +13068,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12925,6 +13128,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12982,6 +13186,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13045,6 +13250,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13109,6 +13315,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13168,6 +13375,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13226,6 +13434,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13284,6 +13493,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13346,6 +13556,7 @@
       "fpAdp": 208.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13410,6 +13621,7 @@
       "fpAdp": 178.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13470,6 +13682,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13533,6 +13746,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13593,6 +13807,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13654,6 +13869,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13717,6 +13933,7 @@
       "fpAdp": 245.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13782,6 +13999,7 @@
       "fpAdp": 148.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13846,6 +14064,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13903,6 +14122,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13965,6 +14185,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14028,6 +14249,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14090,6 +14312,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14153,6 +14376,7 @@
       "fpAdp": 284.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14216,6 +14440,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14275,6 +14500,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14341,6 +14567,7 @@
       "fpAdp": 51.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14399,6 +14626,7 @@
       "fpAdp": 130.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14463,6 +14691,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14526,6 +14755,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14591,6 +14821,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14655,6 +14886,7 @@
       "fpAdp": 113.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14715,6 +14947,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14773,6 +15006,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14834,6 +15068,7 @@
       "fpAdp": 272.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14893,6 +15128,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14951,6 +15187,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15009,6 +15246,7 @@
       "fpAdp": 107.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15066,6 +15304,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15129,6 +15368,7 @@
       "fpAdp": 231.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15188,6 +15428,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15243,6 +15484,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15302,6 +15544,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15360,6 +15603,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15423,6 +15667,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15484,6 +15729,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15542,6 +15788,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15603,6 +15850,7 @@
       "fpAdp": 244.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15667,6 +15915,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15730,6 +15979,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15786,6 +16036,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15842,6 +16093,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15899,6 +16151,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15956,6 +16209,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16021,6 +16275,7 @@
       "fpAdp": 241.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16080,6 +16335,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16138,6 +16394,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16201,6 +16458,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16260,6 +16518,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16318,6 +16577,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16378,6 +16638,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16443,6 +16704,7 @@
       "fpAdp": 140.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16507,6 +16769,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16569,6 +16832,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16628,6 +16892,7 @@
       "fpAdp": 173.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16685,6 +16950,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16751,6 +17017,7 @@
       "fpAdp": 199.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16810,6 +17077,7 @@
       "fpAdp": 209.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16876,6 +17144,7 @@
       "fpAdp": 148.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16934,6 +17203,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16997,6 +17267,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17055,6 +17326,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17118,6 +17390,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17178,6 +17451,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17241,6 +17515,7 @@
       "fpAdp": 224.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17304,6 +17579,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17366,6 +17642,7 @@
       "fpAdp": 149.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17425,6 +17702,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17489,6 +17767,7 @@
       "fpAdp": 92.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17550,6 +17829,7 @@
       "fpAdp": 244.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17608,6 +17888,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17666,6 +17947,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17725,6 +18007,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17789,6 +18072,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17852,6 +18136,7 @@
       "fpAdp": 119.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17914,6 +18199,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17972,6 +18258,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18030,6 +18317,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18088,6 +18376,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18146,6 +18435,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18202,6 +18492,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18263,6 +18554,7 @@
       "fpAdp": 98.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18321,6 +18613,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18376,6 +18669,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18438,6 +18732,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18499,6 +18794,7 @@
       "fpAdp": 175.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18562,6 +18858,7 @@
       "fpAdp": 244.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18621,6 +18918,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18682,6 +18980,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18744,6 +19043,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18806,6 +19106,7 @@
       "fpAdp": 201.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18869,6 +19170,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18929,6 +19231,7 @@
       "fpAdp": 183.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18992,6 +19295,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19050,6 +19354,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19105,6 +19410,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19171,6 +19477,7 @@
       "fpAdp": 210.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19230,6 +19537,7 @@
       "fpAdp": 202.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19294,6 +19602,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19355,6 +19664,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19414,6 +19724,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19471,6 +19782,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19534,6 +19846,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19597,6 +19910,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19655,6 +19969,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19713,6 +20028,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19776,6 +20092,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19839,6 +20156,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19897,6 +20215,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19955,6 +20274,7 @@
       "fpAdp": 282.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20015,6 +20335,7 @@
       "fpAdp": 286.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20084,11 +20405,14 @@
       "fpAdp": 74.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
       "name": "Kyle Harrison",
       "eligible": [
+        "P",
+        "RP",
         "SP"
       ],
       "org": "MIL",
@@ -20139,6 +20463,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20196,6 +20521,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20260,6 +20586,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20323,6 +20650,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20384,6 +20712,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20446,6 +20775,7 @@
       "fpAdp": 206.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20505,6 +20835,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20565,6 +20896,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20627,6 +20959,7 @@
       "fpAdp": 177.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20684,6 +21017,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20748,6 +21082,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20809,6 +21144,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20871,6 +21207,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20930,6 +21267,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20989,6 +21327,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21047,6 +21386,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21104,6 +21444,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21161,6 +21502,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21228,6 +21570,7 @@
       "fpAdp": 164.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21289,6 +21632,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21346,6 +21690,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21409,6 +21754,7 @@
       "fpAdp": 224.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21464,6 +21810,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21525,6 +21872,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21586,6 +21934,7 @@
       "fpAdp": 210.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21643,6 +21992,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21708,6 +22058,7 @@
       "fpAdp": 199.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21775,6 +22126,7 @@
       "fpAdp": 96.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21835,6 +22187,7 @@
       "fpAdp": 120.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21896,6 +22249,7 @@
       "fpAdp": 213.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21956,6 +22310,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22019,6 +22374,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22080,6 +22436,7 @@
       "fpAdp": 246.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22138,6 +22495,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22202,6 +22560,7 @@
       "fpAdp": 254.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22260,6 +22619,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22323,6 +22683,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22380,6 +22741,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22441,6 +22803,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22501,6 +22864,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22560,6 +22924,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22618,6 +22983,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22678,6 +23044,7 @@
       "fpAdp": 325.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22740,6 +23107,7 @@
       "fpAdp": 307.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22796,6 +23164,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22858,6 +23227,7 @@
       "fpAdp": 295.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22918,6 +23288,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22973,6 +23344,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23037,6 +23409,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23099,6 +23472,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23160,6 +23534,7 @@
       "fpAdp": 141.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23224,6 +23599,7 @@
       "fpAdp": 240.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23285,6 +23661,7 @@
       "fpAdp": 293.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23347,6 +23724,7 @@
       "fpAdp": 252.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23409,6 +23787,7 @@
       "fpAdp": 244.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23467,6 +23846,7 @@
       "fpAdp": 248.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23530,6 +23910,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23591,6 +23972,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23649,6 +24031,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23707,6 +24090,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23763,6 +24147,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23826,6 +24211,7 @@
       "fpAdp": 129.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23889,6 +24275,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23947,6 +24334,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24006,6 +24394,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24074,6 +24463,7 @@
       "fpAdp": 96.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24134,6 +24524,7 @@
       "fpAdp": 230.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24191,6 +24582,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24252,6 +24644,7 @@
       "fpAdp": 365.7,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24309,6 +24702,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24367,6 +24761,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24428,6 +24823,7 @@
       "fpAdp": 147.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24491,6 +24887,7 @@
       "fpAdp": 275.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24552,6 +24949,7 @@
       "fpAdp": 372.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24615,6 +25013,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24672,6 +25071,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24728,6 +25128,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24786,6 +25187,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24843,6 +25245,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24904,6 +25307,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24967,6 +25371,7 @@
       "fpAdp": 276.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25026,6 +25431,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25089,6 +25495,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25146,6 +25553,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25206,6 +25614,7 @@
       "fpAdp": 278.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25267,6 +25676,7 @@
       "fpAdp": 388.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25329,6 +25739,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25390,6 +25801,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25453,6 +25865,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25516,6 +25929,7 @@
       "fpAdp": 165.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25574,6 +25988,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25635,6 +26050,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25692,6 +26108,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25754,6 +26171,7 @@
       "fpAdp": 234.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25816,6 +26234,7 @@
       "fpAdp": 664.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25877,6 +26296,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25939,6 +26359,7 @@
       "fpAdp": 316.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25995,6 +26416,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26056,6 +26478,7 @@
       "fpAdp": 266.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26115,6 +26538,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26180,6 +26604,7 @@
       "fpAdp": 203.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26242,6 +26667,7 @@
       "fpAdp": 89.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26300,6 +26726,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26356,6 +26783,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26419,6 +26847,7 @@
       "fpAdp": 176.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26477,6 +26906,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26533,6 +26963,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26595,6 +27026,7 @@
       "fpAdp": 372.3,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26656,6 +27088,7 @@
       "fpAdp": 281.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26714,6 +27147,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26773,6 +27207,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26834,6 +27269,7 @@
       "fpAdp": 163.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26897,6 +27333,7 @@
       "fpAdp": 315.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26957,6 +27394,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27016,6 +27454,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27076,6 +27515,7 @@
       "fpAdp": 365.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27134,6 +27574,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27190,6 +27631,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27250,6 +27692,7 @@
       "fpAdp": 228.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27311,6 +27754,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27370,6 +27814,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27430,6 +27875,7 @@
       "fpAdp": 368.3,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27491,6 +27937,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27555,6 +28002,7 @@
       "fpAdp": 351.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27614,6 +28062,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27673,6 +28122,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27733,6 +28183,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27793,6 +28244,7 @@
       "fpAdp": 349.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27849,6 +28301,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27909,6 +28362,7 @@
       "fpAdp": 240.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27967,6 +28421,7 @@
       "fpAdp": 328.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28025,6 +28480,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28083,6 +28539,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28143,6 +28600,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28205,6 +28663,7 @@
       "fpAdp": 287.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28267,6 +28726,7 @@
       "fpAdp": 355.7,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28327,6 +28787,7 @@
       "fpAdp": 677.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28388,6 +28849,7 @@
       "fpAdp": 275.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28450,6 +28912,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28510,6 +28973,7 @@
       "fpAdp": 387.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28573,6 +29037,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28636,6 +29101,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28696,6 +29162,7 @@
       "fpAdp": 411.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28754,6 +29221,7 @@
       "fpAdp": 674.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28817,6 +29285,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28880,6 +29349,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28940,6 +29410,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28998,6 +29469,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29061,6 +29533,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29119,6 +29592,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29176,6 +29650,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29237,6 +29712,7 @@
       "fpAdp": 364.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29298,6 +29774,7 @@
       "fpAdp": 369.3,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29354,6 +29831,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29410,6 +29888,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29474,6 +29953,7 @@
       "fpAdp": 170.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29536,6 +30016,7 @@
       "fpAdp": 333.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29597,6 +30078,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29657,6 +30139,7 @@
       "fpAdp": 224.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29717,6 +30200,7 @@
       "fpAdp": 117.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29777,6 +30261,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29835,6 +30320,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29900,6 +30386,7 @@
       "fpAdp": 263.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29957,6 +30444,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30019,6 +30507,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30075,6 +30564,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30135,6 +30625,7 @@
       "fpAdp": 361.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30197,6 +30688,7 @@
       "fpAdp": 286.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30258,6 +30750,7 @@
       "fpAdp": 311.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30319,6 +30812,7 @@
       "fpAdp": 423.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30377,6 +30871,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30434,6 +30929,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30491,6 +30987,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30552,6 +31049,7 @@
       "fpAdp": 362.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30615,6 +31113,7 @@
       "fpAdp": 345.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30677,6 +31176,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30733,6 +31233,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30792,6 +31293,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30847,6 +31349,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30909,6 +31412,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30969,6 +31473,7 @@
       "fpAdp": 219.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31026,6 +31531,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31088,6 +31594,7 @@
       "fpAdp": 285.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31145,6 +31652,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31205,6 +31713,7 @@
       "fpAdp": 380.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31268,6 +31777,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31328,6 +31838,7 @@
       "fpAdp": 255.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31389,6 +31900,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31447,6 +31959,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31510,6 +32023,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31567,6 +32081,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31622,6 +32137,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31679,6 +32195,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31736,6 +32253,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31797,6 +32315,7 @@
       "fpAdp": 427.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31860,6 +32379,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31918,6 +32438,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31981,6 +32502,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32036,6 +32558,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32098,6 +32621,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32154,6 +32678,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32214,6 +32739,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32274,6 +32800,7 @@
       "fpAdp": 229.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32331,6 +32858,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32389,6 +32917,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32452,6 +32981,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32513,6 +33043,7 @@
       "fpAdp": 304.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32575,6 +33106,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32637,6 +33169,7 @@
       "fpAdp": 378.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32699,6 +33232,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32760,6 +33294,7 @@
       "fpAdp": 354.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32821,6 +33356,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32876,6 +33412,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32931,6 +33468,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32991,6 +33529,7 @@
       "fpAdp": 373.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33053,6 +33592,7 @@
       "fpAdp": 347.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33116,6 +33656,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33173,6 +33714,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33230,6 +33772,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33288,6 +33831,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33347,6 +33891,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33405,6 +33950,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33462,6 +34008,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33522,6 +34069,7 @@
       "fpAdp": 312.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33579,6 +34127,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33643,6 +34192,7 @@
       "fpAdp": 319.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33700,6 +34250,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33762,6 +34313,7 @@
       "fpAdp": 304.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33819,6 +34371,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33879,6 +34432,7 @@
       "fpAdp": 785.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33938,6 +34492,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33998,6 +34553,7 @@
       "fpAdp": 438.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34055,6 +34611,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34116,6 +34673,7 @@
       "fpAdp": 306.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34176,6 +34734,7 @@
       "fpAdp": 310.3,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34238,6 +34797,7 @@
       "fpAdp": 236.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34301,6 +34861,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34364,6 +34925,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34427,6 +34989,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34485,6 +35048,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34543,6 +35107,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34603,6 +35168,7 @@
       "fpAdp": 276.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34666,6 +35232,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34724,6 +35291,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34787,6 +35355,7 @@
       "fpAdp": 408.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34845,6 +35414,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34905,6 +35475,7 @@
       "fpAdp": 339.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34966,6 +35537,7 @@
       "fpAdp": 344.3,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35026,6 +35598,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35087,6 +35660,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35145,6 +35719,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35206,6 +35781,7 @@
       "fpAdp": 473.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35271,6 +35847,7 @@
       "fpAdp": 609.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35332,6 +35909,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35393,6 +35971,7 @@
       "fpAdp": 771.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35454,6 +36033,7 @@
       "fpAdp": 298.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35514,6 +36094,7 @@
       "fpAdp": 457.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35573,6 +36154,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35630,6 +36212,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35690,6 +36273,7 @@
       "fpAdp": 358.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35750,6 +36334,7 @@
       "fpAdp": 380.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35810,6 +36395,7 @@
       "fpAdp": 675.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35871,6 +36457,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35929,6 +36516,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35990,6 +36578,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36050,6 +36639,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36112,6 +36702,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36173,6 +36764,7 @@
       "fpAdp": 358.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36230,6 +36822,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36290,6 +36883,7 @@
       "fpAdp": 434.7,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36350,6 +36944,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36410,6 +37005,7 @@
       "fpAdp": 308.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36471,6 +37067,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36531,6 +37128,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36589,6 +37187,7 @@
       "fpAdp": 354.3,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36650,6 +37249,7 @@
       "fpAdp": 423.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36711,6 +37311,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36770,6 +37371,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36827,6 +37429,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36889,6 +37492,7 @@
       "fpAdp": 168.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36949,6 +37553,7 @@
       "fpAdp": 259.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37013,6 +37618,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37073,6 +37679,7 @@
       "fpAdp": 334.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37128,6 +37735,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37188,6 +37796,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37247,6 +37856,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37307,6 +37917,7 @@
       "fpAdp": 427.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37364,6 +37975,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37421,6 +38033,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37479,6 +38092,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37542,6 +38156,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37602,6 +38217,7 @@
       "fpAdp": 219.2,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37664,6 +38280,7 @@
       "fpAdp": 373.7,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37725,6 +38342,7 @@
       "fpAdp": 791.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37786,6 +38404,7 @@
       "fpAdp": 381.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37842,6 +38461,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37897,6 +38517,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37954,6 +38575,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38015,6 +38637,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38072,6 +38695,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38130,6 +38754,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38186,6 +38811,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38246,6 +38872,7 @@
       "fpAdp": 406.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38305,6 +38932,7 @@
       "fpAdp": 607.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38361,6 +38989,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38422,6 +39051,7 @@
       "fpAdp": 431.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38479,6 +39109,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38539,6 +39170,7 @@
       "fpAdp": 336.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38600,6 +39232,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38661,6 +39294,7 @@
       "fpAdp": 724.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38722,6 +39356,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38786,6 +39421,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38843,6 +39479,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38901,6 +39538,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38960,6 +39598,7 @@
       "fpAdp": 449.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39017,6 +39656,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39076,6 +39716,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39134,6 +39775,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39194,6 +39836,7 @@
       "fpAdp": 449.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39254,6 +39897,7 @@
       "fpAdp": 387.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39314,6 +39958,7 @@
       "fpAdp": 312.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39374,6 +40019,7 @@
       "fpAdp": 464.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39434,6 +40080,7 @@
       "fpAdp": 391.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39498,6 +40145,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39555,6 +40203,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39616,6 +40265,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39673,6 +40323,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39735,6 +40386,7 @@
       "fpAdp": 717.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39792,6 +40444,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39853,6 +40506,7 @@
       "fpAdp": 774.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39912,6 +40566,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39972,6 +40627,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40036,6 +40692,7 @@
       "fpAdp": 569.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40093,6 +40750,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40151,6 +40809,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40208,6 +40867,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40267,6 +40927,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40324,6 +40985,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40382,6 +41044,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40443,6 +41106,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40506,6 +41170,7 @@
       "fpAdp": 778.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40566,6 +41231,7 @@
       "fpAdp": 436.7,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40623,6 +41289,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40680,6 +41347,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40743,6 +41411,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40798,6 +41467,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40858,6 +41528,7 @@
       "fpAdp": 794.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40921,6 +41592,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40978,6 +41650,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41035,6 +41708,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41095,6 +41769,7 @@
       "fpAdp": 400.3,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41156,6 +41831,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41218,6 +41894,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41278,6 +41955,7 @@
       "fpAdp": 297.6,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41338,6 +42016,7 @@
       "fpAdp": 763.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41396,6 +42075,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41453,6 +42133,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41515,6 +42196,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41574,6 +42256,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41636,6 +42319,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41693,6 +42377,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41753,6 +42438,7 @@
       "fpAdp": 470.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41813,6 +42499,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41875,6 +42562,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41934,6 +42622,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41994,6 +42683,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42055,6 +42745,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42118,6 +42809,7 @@
       "fpAdp": 302.4,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42179,6 +42871,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42240,6 +42933,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42302,6 +42996,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42361,6 +43056,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42419,6 +43115,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42479,6 +43176,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42540,6 +43238,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42597,6 +43296,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42653,6 +43353,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42710,6 +43411,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42765,6 +43467,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42826,6 +43529,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42886,6 +43590,7 @@
       "fpAdp": 356.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42944,6 +43649,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43000,6 +43706,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43056,6 +43763,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43112,6 +43820,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43173,6 +43882,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43230,6 +43940,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43292,6 +44003,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43349,6 +44061,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43404,6 +44117,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43465,6 +44179,7 @@
       "fpAdp": 772.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43524,6 +44239,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43583,6 +44299,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43644,6 +44361,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43707,6 +44425,7 @@
       "fpAdp": 398.7,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43765,6 +44484,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43824,6 +44544,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43882,6 +44603,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43943,6 +44665,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44001,6 +44724,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44059,6 +44783,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44121,6 +44846,7 @@
       "fpAdp": 675.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44176,6 +44902,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44234,6 +44961,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44293,6 +45021,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44354,6 +45083,7 @@
       "fpAdp": 721.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44416,6 +45146,7 @@
       "fpAdp": 838.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44476,6 +45207,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44533,6 +45265,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44589,6 +45322,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44647,6 +45381,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44703,6 +45438,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44762,6 +45498,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44819,6 +45556,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44874,6 +45612,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44934,6 +45673,7 @@
       "fpAdp": 433.3,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44989,6 +45729,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45046,6 +45787,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45101,6 +45843,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45162,6 +45905,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45222,6 +45966,7 @@
       "fpAdp": 449.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45284,6 +46029,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45342,6 +46088,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45400,6 +46147,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45459,6 +46207,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45516,6 +46265,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45571,6 +46321,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45631,6 +46382,7 @@
       "fpAdp": 721.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45692,6 +46444,7 @@
       "fpAdp": 433.7,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45749,6 +46502,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45808,6 +46562,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45863,6 +46618,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45918,6 +46674,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45978,6 +46735,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46040,6 +46798,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46102,6 +46861,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46160,6 +46920,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46215,6 +46976,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46275,6 +47037,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46335,6 +47098,7 @@
       "fpAdp": 679.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46393,6 +47157,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46455,6 +47220,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46515,6 +47281,7 @@
       "fpAdp": 721.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46575,6 +47342,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46635,6 +47403,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46692,6 +47461,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46750,6 +47520,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46805,6 +47576,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46865,6 +47637,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46925,6 +47698,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46986,6 +47760,7 @@
       "fpAdp": 824.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47050,6 +47825,7 @@
       "fpAdp": 690.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47110,6 +47886,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47172,6 +47949,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47229,6 +48007,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47288,6 +48067,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47343,6 +48123,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47400,6 +48181,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47462,6 +48244,7 @@
       "fpAdp": 756.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47522,6 +48305,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47580,6 +48364,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47637,6 +48422,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47693,6 +48479,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47752,6 +48539,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47807,6 +48595,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47862,6 +48651,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47920,6 +48710,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47975,6 +48766,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48033,6 +48825,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48090,6 +48883,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48151,6 +48945,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48208,6 +49003,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48263,6 +49059,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48322,6 +49119,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48384,6 +49182,7 @@
       "fpAdp": 373.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48448,6 +49247,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48508,6 +49308,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48567,6 +49368,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48624,6 +49426,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48681,6 +49484,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48736,6 +49540,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48793,6 +49598,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48848,6 +49654,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48905,6 +49712,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48962,6 +49770,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49019,6 +49828,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49076,6 +49886,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49133,6 +49944,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49193,6 +50005,7 @@
       "fpAdp": 399.3,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49253,6 +50066,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49308,6 +50122,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49365,6 +50180,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49423,6 +50239,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49479,6 +50296,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49538,6 +50356,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49593,6 +50412,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49651,6 +50471,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49707,6 +50528,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49765,6 +50587,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49826,6 +50649,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49889,6 +50713,7 @@
       "fpAdp": 345.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49946,6 +50771,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50005,6 +50831,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50061,6 +50888,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50121,6 +50949,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50185,6 +51014,7 @@
       "fpAdp": 206.8,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50240,6 +51070,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50299,6 +51130,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50355,6 +51187,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50412,6 +51245,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50469,6 +51303,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50529,6 +51364,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50591,6 +51427,7 @@
       "fpAdp": 715.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50648,6 +51485,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50705,6 +51543,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50762,6 +51601,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50819,6 +51659,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50874,6 +51715,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50934,6 +51776,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50991,6 +51834,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51052,6 +51896,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51112,6 +51957,7 @@
       "fpAdp": 861.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51170,6 +52016,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51225,6 +52072,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51282,6 +52130,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51340,6 +52189,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51395,6 +52245,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51452,6 +52303,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51508,6 +52360,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51565,6 +52418,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51621,6 +52475,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51678,6 +52533,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51733,6 +52589,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51792,6 +52649,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51849,6 +52707,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51909,6 +52768,7 @@
       "fpAdp": 846.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51970,6 +52830,7 @@
       "fpAdp": 689.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52032,6 +52893,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52090,6 +52952,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52145,6 +53008,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52200,6 +53064,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52258,6 +53123,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52316,6 +53182,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52374,6 +53241,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52429,6 +53297,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52486,6 +53355,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52543,6 +53413,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52600,6 +53471,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52660,6 +53532,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52720,6 +53593,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52777,6 +53651,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52839,6 +53714,7 @@
       "fpAdp": 690.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52897,6 +53773,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52952,6 +53829,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53009,6 +53887,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53069,6 +53948,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53127,6 +54007,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53183,6 +54064,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53240,6 +54122,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53298,6 +54181,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53355,6 +54239,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53410,6 +54295,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53468,6 +54354,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53525,6 +54412,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53582,6 +54470,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53637,6 +54526,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53697,6 +54587,7 @@
       "fpAdp": 621.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53754,6 +54645,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53811,6 +54703,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53871,6 +54764,7 @@
       "fpAdp": 457.7,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53932,6 +54826,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53993,6 +54888,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54055,6 +54951,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54113,6 +55010,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54171,6 +55069,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54228,6 +55127,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54285,6 +55185,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54342,6 +55243,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54399,6 +55301,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54456,6 +55359,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54512,6 +55416,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54569,6 +55474,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54627,6 +55533,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54684,6 +55591,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54741,6 +55649,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54796,6 +55705,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54854,6 +55764,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54911,6 +55822,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54966,6 +55878,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55023,6 +55936,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55080,6 +55994,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55137,6 +56052,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55194,6 +56110,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55251,6 +56168,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55308,6 +56226,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55365,6 +56284,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55422,6 +56342,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55484,6 +56405,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55546,6 +56468,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55608,6 +56531,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55669,6 +56593,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55731,6 +56656,7 @@
       "fpAdp": 821.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55791,6 +56717,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55849,6 +56776,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55906,6 +56834,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55966,6 +56895,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56024,6 +56954,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56084,6 +57015,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56144,6 +57076,7 @@
       "fpAdp": 542.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56204,6 +57137,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56265,6 +57199,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56321,6 +57256,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56378,6 +57314,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56435,6 +57372,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56492,6 +57430,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56547,6 +57486,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56603,6 +57543,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56660,6 +57601,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56718,6 +57660,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56774,6 +57717,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56831,6 +57775,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56889,6 +57834,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56949,6 +57895,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57009,6 +57956,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57069,6 +58017,7 @@
       "fpAdp": 417.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57129,6 +58078,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57190,6 +58140,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57252,6 +58203,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57312,6 +58264,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57372,6 +58325,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57434,6 +58388,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57494,6 +58449,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57554,6 +58510,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57617,6 +58574,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57678,6 +58636,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57738,6 +58697,7 @@
       "fpAdp": 760.5,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57800,6 +58760,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57861,6 +58822,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57925,6 +58887,7 @@
       "fpAdp": 829.0,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57986,6 +58949,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58048,6 +59012,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58110,6 +59075,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58172,6 +59138,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58232,6 +59199,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58293,6 +59261,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58352,6 +59321,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58409,6 +59379,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58464,6 +59435,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58521,6 +59493,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58578,6 +59551,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58635,6 +59609,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58692,6 +59667,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58747,6 +59723,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58804,6 +59781,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58859,6 +59837,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58916,6 +59895,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58971,6 +59951,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59026,12 +60007,12 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
       "name": "Seth Halvorsen",
       "eligible": [
-        "P",
         "RP"
       ],
       "org": "COL",
@@ -59082,6 +60063,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59137,6 +60119,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59192,6 +60175,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59250,6 +60234,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59307,6 +60292,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59364,6 +60350,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59421,6 +60408,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59478,6 +60466,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59535,6 +60524,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59590,6 +60580,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59647,6 +60638,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59705,6 +60697,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59760,6 +60753,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59817,6 +60811,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59872,6 +60867,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59929,6 +60925,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59984,6 +60981,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -60041,6 +61039,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -60098,6 +61097,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -60153,6 +61153,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -60210,6 +61211,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -60265,6 +61267,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -60320,6 +61323,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     }
   ]
