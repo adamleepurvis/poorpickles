@@ -170,22 +170,65 @@ def sync_league_settings(query):
         return {"league_key": LEAGUE_KEY, "error": str(e)}
 
 
-def sync_rosters(query):
-    """Pull all teams and their rosters."""
+def resolve_player_keys(session, player_keys: list[str]) -> dict[str, str]:
+    """
+    Batch-resolve Yahoo player keys → player names via direct REST API.
+    Returns dict of player_key -> full_name.
+    """
+    result = {}
+    batch_size = 25
+    for i in range(0, len(player_keys), batch_size):
+        batch = player_keys[i:i + batch_size]
+        keys_str = ",".join(batch)
+        url = f"https://fantasysports.yahooapis.com/fantasy/v2/players;player_keys={keys_str}?format=json"
+        try:
+            resp = session.get(url)
+            if resp.status_code != 200:
+                continue
+            data = resp.json()
+            players_raw = data.get("fantasy_content", {}).get("players", {})
+            for k, v in players_raw.items():
+                if k == "count":
+                    continue
+                try:
+                    player_list = v["player"][0]
+                    key  = next((x["player_key"] for x in player_list if "player_key" in x), None)
+                    name = next((x["name"]["full"] for x in player_list if "name" in x), None)
+                    if key and name:
+                        result[key] = name
+                except Exception:
+                    continue
+        except Exception:
+            continue
+    return result
+
+
+def sync_rosters(query, draft_results: list[dict] | None = None):
+    """
+    Pull all teams and their rosters.
+    For postdraft leagues where get_team_roster_by_week returns schedule garbage,
+    falls back to resolving rosters from draft results + player key lookup.
+    """
     print("  Fetching all team rosters...")
     teams_data = []
 
     try:
         teams = query.get_league_teams()
+        team_map = {}  # team_key -> team_name
         for team in teams:
             raw_name  = getattr(team, "name", f"Team {team}")
             team_name = raw_name.decode() if isinstance(raw_name, bytes) else str(raw_name)
             team_key  = str(getattr(team, "team_key", ""))
-            print(f"    {team_name}...")
+            team_map[team_key] = team_name
+            teams_data.append({"team_key": team_key, "team_name": team_name, "players": []})
 
-            players = []
+        # Try roster-by-week first; validate that results look like real players
+        rosters_ok = True
+        for entry in teams_data:
             try:
-                roster = query.get_team_roster_by_week(team_key.split(".")[-1])
+                tid = entry["team_key"].split(".")[-1]
+                roster = query.get_team_roster_by_week(tid)
+                players = []
                 for player in (roster or []):
                     name = str(getattr(player, "name", {}).get("full", "") or
                                getattr(getattr(player, "name", None), "full", str(player)))
@@ -196,25 +239,55 @@ def sync_rosters(query):
                         )
                     except Exception:
                         pass
-
                     players.append({
                         "name":     name,
                         "eligible": pos_list,
-                        "selected_position": str(
-                            getattr(player, "selected_position", {}).get("position", "BN")
-                            if isinstance(getattr(player, "selected_position", None), dict)
-                            else getattr(getattr(player, "selected_position", None), "position", "BN")
-                        ),
+                        "selected_position": "BN",
                         "status": str(getattr(player, "status", "") or ""),
                     })
+                # Sanity check: yfpy returns schedule garbage (["date","2026-03-25","0",...])
+                # when the season hasn't started — detect by checking for known junk names
+                junk_names = {"date", "0", "", "1"}
+                if any(p["name"] in junk_names for p in players):
+                    rosters_ok = False
+                    break
+                entry["players"] = players
             except Exception as e:
-                print(f"      WARNING: Could not fetch roster for {team_name}: {e}")
+                print(f"      WARNING: Roster fetch failed for {entry['team_name']}: {e}")
+                rosters_ok = False
+                break
 
-            teams_data.append({
-                "team_key":  team_key,
-                "team_name": team_name,
-                "players":   players,
-            })
+        # Fallback: build rosters from draft results + batch player-key resolution
+        if not rosters_ok:
+            print("  Roster data looks invalid — falling back to draft results...")
+            if not draft_results:
+                print("  WARNING: No draft results available for fallback.")
+                return teams_data
+
+            # Collect all unique player keys
+            all_keys = list({p["player_key"] for p in draft_results})
+            print(f"  Resolving {len(all_keys)} player keys...")
+            key_to_name = resolve_player_keys(query.oauth.session, all_keys)
+            print(f"  Resolved {len(key_to_name)} names")
+
+            # Reset player lists and rebuild from draft results
+            teams_by_key = {e["team_key"]: e for e in teams_data}
+            for e in teams_data:
+                e["players"] = []
+            for pick in draft_results:
+                tkey  = pick["team_key"]
+                pkey  = pick["player_key"]
+                name  = key_to_name.get(pkey)
+                if name and tkey in teams_by_key:
+                    teams_by_key[tkey]["players"].append({
+                        "name":     name,
+                        "eligible": [],
+                        "selected_position": "BN",
+                        "status": "",
+                    })
+
+        for e in teams_data:
+            print(f"    {e['team_name']}: {len(e['players'])} players")
 
     except Exception as e:
         print(f"  WARNING: Could not fetch teams: {e}")
@@ -470,10 +543,13 @@ def main():
     if not args.rosters:
         data["settings"] = sync_league_settings(query)
 
-    data["teams"] = sync_rosters(query)
-
+    # Fetch draft results first so roster fallback can use them
+    draft_results = []
     if not args.no_draft:
-        data["draft_results"] = sync_draft_results(query)
+        draft_results = sync_draft_results(query)
+        data["draft_results"] = draft_results
+
+    data["teams"] = sync_rosters(query, draft_results=draft_results)
 
     if not args.no_ownership:
         data["ownership"] = sync_ownership(query)

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-14T16:46:18.044336",
+  "generated": "2026-03-14T16:53:47.719266",
   "count": 1003,
   "players": [
     {
@@ -66,8 +66,8 @@
       "fpRank": 4,
       "fpAdp": 3.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -134,8 +134,8 @@
       "fpRank": 13,
       "fpAdp": 15.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -201,8 +201,8 @@
       "fpRank": 12,
       "fpAdp": 14.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -269,8 +269,8 @@
       "fpRank": 9,
       "fpAdp": 9.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -338,8 +338,8 @@
       "fpRank": 5,
       "fpAdp": 3.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -406,8 +406,8 @@
       "fpRank": 7,
       "fpAdp": 7.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -473,8 +473,8 @@
       "fpRank": 16,
       "fpAdp": 18.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -541,8 +541,8 @@
       "fpRank": 11,
       "fpAdp": 13.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -608,8 +608,8 @@
       "fpRank": 28,
       "fpAdp": 32.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -677,8 +677,8 @@
       "fpRank": 14,
       "fpAdp": 15.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -744,8 +744,8 @@
       "fpRank": 15,
       "fpAdp": 16.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -808,8 +808,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -873,8 +873,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -937,8 +937,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -1003,8 +1003,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -1067,8 +1067,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -1131,8 +1131,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -1195,8 +1195,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -1260,8 +1260,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -1328,8 +1328,8 @@
       "fpRank": 8,
       "fpAdp": 8.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -1394,8 +1394,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -1462,8 +1462,8 @@
       "fpRank": 17,
       "fpAdp": 18.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -1530,8 +1530,8 @@
       "fpRank": 10,
       "fpAdp": 11.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -1599,8 +1599,8 @@
       "fpRank": 42,
       "fpAdp": 60.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -1666,8 +1666,8 @@
       "fpRank": 41,
       "fpAdp": 60.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -1796,8 +1796,8 @@
       "fpRank": 29,
       "fpAdp": 33.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -1859,8 +1859,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -1927,8 +1927,8 @@
       "fpRank": 3,
       "fpAdp": 2.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -1995,8 +1995,8 @@
       "fpRank": 22,
       "fpAdp": 24.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -2063,8 +2063,8 @@
       "fpRank": 33,
       "fpAdp": 42.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -2127,8 +2127,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -2192,8 +2192,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -2260,8 +2260,8 @@
       "fpRank": 114,
       "fpAdp": 186.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -2324,8 +2324,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -2391,8 +2391,8 @@
       "fpRank": 43,
       "fpAdp": 61.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -2455,8 +2455,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -2519,8 +2519,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -2586,8 +2586,8 @@
       "fpRank": 54,
       "fpAdp": 80.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -2653,8 +2653,8 @@
       "fpRank": 137,
       "fpAdp": 227.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -2717,8 +2717,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -2785,8 +2785,8 @@
       "fpRank": 30,
       "fpAdp": 36.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -2853,8 +2853,8 @@
       "fpRank": 32,
       "fpAdp": 40.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -2917,8 +2917,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -2984,8 +2984,8 @@
       "fpRank": 23,
       "fpAdp": 27.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -3050,8 +3050,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -3114,8 +3114,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -3304,8 +3304,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -3432,8 +3432,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -3562,8 +3562,8 @@
       "fpRank": 6,
       "fpAdp": 5.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -3629,8 +3629,8 @@
       "fpRank": 31,
       "fpAdp": 37.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -3697,8 +3697,8 @@
       "fpRank": 18,
       "fpAdp": 19.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -3761,8 +3761,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -3890,8 +3890,8 @@
       "fpRank": 40,
       "fpAdp": 56.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -3959,8 +3959,8 @@
       "fpRank": 106,
       "fpAdp": 177.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -4026,8 +4026,8 @@
       "fpRank": 58,
       "fpAdp": 86.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -4090,8 +4090,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -4217,8 +4217,8 @@
       "fpRank": 69,
       "fpAdp": 100.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -4406,8 +4406,8 @@
       "fpRank": 46,
       "fpAdp": 62.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -4471,8 +4471,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -4535,8 +4535,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -4661,8 +4661,8 @@
       "fpRank": 25,
       "fpAdp": 29.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -4727,8 +4727,8 @@
       "fpRank": 55,
       "fpAdp": 83.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -4853,8 +4853,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -4986,8 +4986,8 @@
       "fpRank": 39,
       "fpAdp": 55.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -5114,8 +5114,8 @@
       "fpRank": 49,
       "fpAdp": 67.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -5177,8 +5177,8 @@
       "fpRank": 116,
       "fpAdp": 198.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -5239,8 +5239,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -5367,8 +5367,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -5554,8 +5554,8 @@
       "fpRank": 50,
       "fpAdp": 68.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -5618,8 +5618,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -5742,8 +5742,8 @@
       "fpRank": 52,
       "fpAdp": 73.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -5809,8 +5809,8 @@
       "fpRank": 59,
       "fpAdp": 86.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -5878,8 +5878,8 @@
       "fpRank": 20,
       "fpAdp": 22.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -5942,8 +5942,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -6011,8 +6011,8 @@
       "fpRank": 2,
       "fpAdp": 2.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -6081,8 +6081,8 @@
       "fpRank": 19,
       "fpAdp": 21.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -6149,8 +6149,8 @@
       "fpRank": 27,
       "fpAdp": 32.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -6277,8 +6277,8 @@
       "fpRank": 26,
       "fpAdp": 30.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -6395,8 +6395,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -6464,8 +6464,8 @@
       "fpRank": 36,
       "fpAdp": 46.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -6533,8 +6533,8 @@
       "fpRank": 48,
       "fpAdp": 66.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -6597,8 +6597,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -6665,8 +6665,8 @@
       "fpRank": 21,
       "fpAdp": 22.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -6851,8 +6851,8 @@
       "fpRank": 98,
       "fpAdp": 164.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -6976,8 +6976,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -7102,8 +7102,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -7169,8 +7169,8 @@
       "fpRank": 34,
       "fpAdp": 45.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -7299,8 +7299,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -7363,8 +7363,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -7429,8 +7429,8 @@
       "fpRank": 38,
       "fpAdp": 52.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -7555,8 +7555,8 @@
       "fpRank": 187,
       "fpAdp": 305.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -7623,8 +7623,8 @@
       "fpRank": 62,
       "fpAdp": 89.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -7879,8 +7879,8 @@
       "fpRank": 86,
       "fpAdp": 139.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -8002,8 +8002,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -8132,8 +8132,8 @@
       "fpRank": 57,
       "fpAdp": 85.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -8317,8 +8317,8 @@
       "fpRank": 47,
       "fpAdp": 65.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -8382,8 +8382,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -8507,8 +8507,8 @@
       "fpRank": 70,
       "fpAdp": 102.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -8629,8 +8629,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -8876,8 +8876,8 @@
       "fpRank": 74,
       "fpAdp": 115.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -8942,8 +8942,8 @@
       "fpRank": 71,
       "fpAdp": 103.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -9008,8 +9008,8 @@
       "fpRank": 112,
       "fpAdp": 180.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -9192,8 +9192,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -9376,8 +9376,8 @@
       "fpRank": 68,
       "fpAdp": 100.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -9440,8 +9440,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -9506,8 +9506,8 @@
       "fpRank": 82,
       "fpAdp": 129.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -9571,8 +9571,8 @@
       "fpRank": 163,
       "fpAdp": 273.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -9633,8 +9633,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -9756,8 +9756,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -9944,8 +9944,8 @@
       "fpRank": 45,
       "fpAdp": 62.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -10008,8 +10008,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -10074,8 +10074,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -10138,8 +10138,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -10202,8 +10202,8 @@
       "fpRank": 35,
       "fpAdp": 45.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -10270,8 +10270,8 @@
       "fpRank": 91,
       "fpAdp": 148.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -10334,8 +10334,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -10456,8 +10456,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -10581,8 +10581,8 @@
       "fpRank": 89,
       "fpAdp": 141.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -10647,8 +10647,8 @@
       "fpRank": 80,
       "fpAdp": 123.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -10773,8 +10773,8 @@
       "fpRank": 24,
       "fpAdp": 27.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -10841,8 +10841,8 @@
       "fpRank": 77,
       "fpAdp": 118.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -10905,8 +10905,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -10965,8 +10965,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -11096,8 +11096,8 @@
       "fpRank": 51,
       "fpAdp": 72.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -11280,8 +11280,8 @@
       "fpRank": 60,
       "fpAdp": 86.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -11348,8 +11348,8 @@
       "fpRank": 110,
       "fpAdp": 179.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -11415,8 +11415,8 @@
       "fpRank": 61,
       "fpAdp": 88.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -11479,8 +11479,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -11542,8 +11542,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -11608,8 +11608,8 @@
       "fpRank": 123,
       "fpAdp": 204.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -11672,8 +11672,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -11737,8 +11737,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -11799,8 +11799,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -11865,8 +11865,8 @@
       "fpRank": 104,
       "fpAdp": 175.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -11928,8 +11928,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -11991,8 +11991,8 @@
       "fpRank": 121,
       "fpAdp": 202.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -12181,8 +12181,8 @@
       "fpRank": 76,
       "fpAdp": 118.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -12248,8 +12248,8 @@
       "fpRank": 84,
       "fpAdp": 132.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -12315,8 +12315,8 @@
       "fpRank": 44,
       "fpAdp": 61.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -12379,8 +12379,8 @@
       "fpRank": 131,
       "fpAdp": 216.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -12444,8 +12444,8 @@
       "fpRank": 109,
       "fpAdp": 178.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -12513,8 +12513,8 @@
       "fpRank": 56,
       "fpAdp": 84.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -12577,8 +12577,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -12639,8 +12639,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -12761,8 +12761,8 @@
       "fpRank": 95,
       "fpAdp": 153.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -12826,8 +12826,8 @@
       "fpRank": 85,
       "fpAdp": 134.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -12888,8 +12888,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -13249,8 +13249,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -13314,8 +13314,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -13555,8 +13555,8 @@
       "fpRank": 126,
       "fpAdp": 208.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -13620,8 +13620,8 @@
       "fpRank": 108,
       "fpAdp": 178.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -13745,8 +13745,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -13932,8 +13932,8 @@
       "fpRank": 153,
       "fpAdp": 245.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -13998,8 +13998,8 @@
       "fpRank": 93,
       "fpAdp": 148.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -14063,8 +14063,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -14184,8 +14184,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -14248,8 +14248,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -14311,8 +14311,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -14566,8 +14566,8 @@
       "fpRank": 37,
       "fpAdp": 51.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -14625,8 +14625,8 @@
       "fpRank": 83,
       "fpAdp": 130.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -14690,8 +14690,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -14754,8 +14754,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -14820,8 +14820,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -14885,8 +14885,8 @@
       "fpRank": 73,
       "fpAdp": 113.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -15245,8 +15245,8 @@
       "fpRank": 72,
       "fpAdp": 107.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -15367,8 +15367,8 @@
       "fpRank": 143,
       "fpAdp": 231.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -15666,8 +15666,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -16035,8 +16035,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -16274,8 +16274,8 @@
       "fpRank": 148,
       "fpAdp": 241.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -16334,8 +16334,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -16457,8 +16457,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -16637,8 +16637,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -16703,8 +16703,8 @@
       "fpRank": 87,
       "fpAdp": 140.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -16831,8 +16831,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -16891,8 +16891,8 @@
       "fpRank": 102,
       "fpAdp": 173.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -17016,8 +17016,8 @@
       "fpRank": 118,
       "fpAdp": 199.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -17076,8 +17076,8 @@
       "fpRank": 127,
       "fpAdp": 209.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -17143,8 +17143,8 @@
       "fpRank": 92,
       "fpAdp": 148.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -17266,8 +17266,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -17389,8 +17389,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -17514,8 +17514,8 @@
       "fpRank": 136,
       "fpAdp": 224.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -17578,8 +17578,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -17641,8 +17641,8 @@
       "fpRank": 94,
       "fpAdp": 149.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -17766,8 +17766,8 @@
       "fpRank": 64,
       "fpAdp": 92.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -17828,8 +17828,8 @@
       "fpRank": 149,
       "fpAdp": 244.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -17946,8 +17946,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -18006,8 +18006,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -18071,8 +18071,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -18135,8 +18135,8 @@
       "fpRank": 78,
       "fpAdp": 119.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -18198,8 +18198,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -18553,8 +18553,8 @@
       "fpRank": 67,
       "fpAdp": 98.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -18793,8 +18793,8 @@
       "fpRank": 103,
       "fpAdp": 175.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -18857,8 +18857,8 @@
       "fpRank": 152,
       "fpAdp": 244.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -19105,8 +19105,8 @@
       "fpRank": 119,
       "fpAdp": 201.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -19169,8 +19169,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -19230,8 +19230,8 @@
       "fpRank": 113,
       "fpAdp": 183.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -19294,8 +19294,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -19476,8 +19476,8 @@
       "fpRank": 129,
       "fpAdp": 210.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -19536,8 +19536,8 @@
       "fpRank": 120,
       "fpAdp": 202.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -19601,8 +19601,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -19663,8 +19663,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -19845,8 +19845,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -20091,8 +20091,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -20404,8 +20404,8 @@
       "fpRank": 53,
       "fpAdp": 74.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -20585,8 +20585,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -20649,8 +20649,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -20774,8 +20774,8 @@
       "fpRank": 124,
       "fpAdp": 206.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -20958,8 +20958,8 @@
       "fpRank": 107,
       "fpAdp": 177.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -21206,8 +21206,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -21569,8 +21569,8 @@
       "fpRank": 97,
       "fpAdp": 164.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -21631,8 +21631,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -21753,8 +21753,8 @@
       "fpRank": 135,
       "fpAdp": 224.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -21933,8 +21933,8 @@
       "fpRank": 128,
       "fpAdp": 210.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -22057,8 +22057,8 @@
       "fpRank": 117,
       "fpAdp": 199.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -22125,8 +22125,8 @@
       "fpRank": 66,
       "fpAdp": 96.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -22186,8 +22186,8 @@
       "fpRank": 79,
       "fpAdp": 120.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -22248,8 +22248,8 @@
       "fpRank": 130,
       "fpAdp": 213.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -22373,8 +22373,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -22494,8 +22494,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -22559,8 +22559,8 @@
       "fpRank": 156,
       "fpAdp": 254.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -22682,8 +22682,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -22802,8 +22802,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -23408,8 +23408,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -23471,8 +23471,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -23533,8 +23533,8 @@
       "fpRank": 88,
       "fpAdp": 141.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -23598,8 +23598,8 @@
       "fpRank": 146,
       "fpAdp": 240.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -23723,8 +23723,8 @@
       "fpRank": 155,
       "fpAdp": 252.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -23786,8 +23786,8 @@
       "fpRank": 151,
       "fpAdp": 244.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -23909,8 +23909,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -23971,8 +23971,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -24210,8 +24210,8 @@
       "fpRank": 81,
       "fpAdp": 129.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -24274,8 +24274,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -24333,8 +24333,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -24462,8 +24462,8 @@
       "fpRank": 65,
       "fpAdp": 96.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -24523,8 +24523,8 @@
       "fpRank": 141,
       "fpAdp": 230.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -24822,8 +24822,8 @@
       "fpRank": 90,
       "fpAdp": 147.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -25012,8 +25012,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -25370,8 +25370,8 @@
       "fpRank": 168,
       "fpAdp": 276.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -25494,8 +25494,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -25800,8 +25800,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -25864,8 +25864,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -25928,8 +25928,8 @@
       "fpRank": 99,
       "fpAdp": 165.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -25987,8 +25987,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -26049,8 +26049,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -26170,8 +26170,8 @@
       "fpRank": 144,
       "fpAdp": 234.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -26233,8 +26233,8 @@
       "fpRank": 265,
       "fpAdp": 664.5,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -26477,8 +26477,8 @@
       "fpRank": 161,
       "fpAdp": 266.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -26603,8 +26603,8 @@
       "fpRank": 122,
       "fpAdp": 203.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -26666,8 +26666,8 @@
       "fpRank": 63,
       "fpAdp": 89.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -26846,8 +26846,8 @@
       "fpRank": 105,
       "fpAdp": 176.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -27087,8 +27087,8 @@
       "fpRank": 172,
       "fpAdp": 281.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -27206,8 +27206,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -27268,8 +27268,8 @@
       "fpRank": 96,
       "fpAdp": 163.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -27691,8 +27691,8 @@
       "fpRank": 139,
       "fpAdp": 228.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -27813,8 +27813,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -27936,8 +27936,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -28911,8 +28911,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -29036,8 +29036,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -29284,8 +29284,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -29348,8 +29348,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -29532,8 +29532,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -29952,8 +29952,8 @@
       "fpRank": 101,
       "fpAdp": 170.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -30077,8 +30077,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -30138,8 +30138,8 @@
       "fpRank": 134,
       "fpAdp": 224.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -30199,8 +30199,8 @@
       "fpRank": 75,
       "fpAdp": 117.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -30506,8 +30506,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -30624,8 +30624,8 @@
       "fpRank": 229,
       "fpAdp": 361.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -31472,8 +31472,8 @@
       "fpRank": 132,
       "fpAdp": 219.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "scoreYahoo": null
     },
     {
@@ -31776,8 +31776,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -31899,8 +31899,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -32022,8 +32022,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -32378,8 +32378,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -32620,8 +32620,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "ALP",
       "scoreYahoo": null
     },
     {
@@ -32799,8 +32799,8 @@
       "fpRank": 140,
       "fpAdp": 229.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -33105,8 +33105,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
       "scoreYahoo": null
     },
     {
@@ -33355,8 +33355,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -33655,8 +33655,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -34860,8 +34860,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Scott's Strategic Realignment",
       "scoreYahoo": null
     },
     {
@@ -34924,8 +34924,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -34988,8 +34988,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -35231,8 +35231,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -35659,8 +35659,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -35718,8 +35718,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
       "scoreYahoo": null
     },
     {
@@ -35908,8 +35908,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfc5 Clutch Trey",
       "scoreYahoo": null
     },
     {
@@ -36211,8 +36211,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
       "scoreYahoo": null
     },
     {
@@ -37491,8 +37491,8 @@
       "fpRank": 100,
       "fpAdp": 168.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -38155,8 +38155,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null
     },
     {
@@ -39420,8 +39420,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -39715,8 +39715,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
       "scoreYahoo": null
     },
     {
@@ -40926,8 +40926,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -41410,8 +41410,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -44782,8 +44782,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
@@ -46028,8 +46028,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "scoreYahoo": null
     },
     {
@@ -50004,8 +50004,8 @@
       "fpRank": 232,
       "fpAdp": 399.3,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
@@ -51013,8 +51013,8 @@
       "fpRank": 125,
       "fpAdp": 206.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Ryan Howard's $5 Footlong",
       "scoreYahoo": null
     },
     {
