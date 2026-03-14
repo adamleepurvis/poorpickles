@@ -389,9 +389,20 @@ export default function DraftAssistant({ config }) {
     [livePicks, keeperPicks]
   );
 
+  // Post-draft: if targets.json has Yahoo roster data, use it for availability
+  const hasYahooRosters = useMemo(() => leagueTargets.some(p => p.rostered != null), [leagueTargets]);
+
   const available = useMemo(() =>
-    leagueTargets.filter(t => !allTaken.has(normalizeName(t.name))),
-    [allTaken, leagueTargets]
+    hasYahooRosters
+      ? leagueTargets.filter(t => !t.rostered)
+      : leagueTargets.filter(t => !allTaken.has(normalizeName(t.name))),
+    [allTaken, leagueTargets, hasYahooRosters]
+  );
+
+  // My roster from Yahoo data (post-draft)
+  const myYahooRoster = useMemo(() =>
+    hasYahooRosters ? leagueTargets.filter(p => p.owner === myTeam) : [],
+    [leagueTargets, myTeam, hasYahooRosters]
   );
 
   const filledPositions = useMemo(() => getFilledPositions(myDrafted, leagueTargets, keeperPicks, myTeam), [myDrafted, leagueTargets, keeperPicks, myTeam]);
@@ -929,7 +940,7 @@ export default function DraftAssistant({ config }) {
         {/* CENTER */}
         <div style={{flex:1,display:"flex",flexDirection:"column",overflow:"hidden"}}>
           <div style={{background:"#0b0d14",borderBottom:"1px solid #1e293b",display:"flex",alignItems:"center",padding:"0 10px",flexShrink:0}}>
-            {[["board","Targets"],["depth","Depth"],["cats","Categories"],["teams","Other Teams"],["log","Pick Log"]].map(([v,l])=>(
+            {[["board","FA Board"],["roster","My Roster"],["depth","Depth"],["cats","Categories"],["teams","Other Teams"],["log","Pick Log"]].map(([v,l])=>(
               <button key={v} className="tabn" onClick={()=>setTab(v)}
                 style={{color:tab===v?"#84cc16":"#475569",borderBottom:tab===v?"2px solid #84cc16":"2px solid transparent"}}>
                 {l}
@@ -1024,6 +1035,114 @@ export default function DraftAssistant({ config }) {
               {filtered.map((t,idx) => renderCard(t, idx, watchList.includes(t.name)))}
             </div>
           )}
+
+          {/* MY ROSTER */}
+          {tab==="roster"&&(()=>{
+            const hitters  = myYahooRoster.filter(p => p.type === "H");
+            const pitchers = myYahooRoster.filter(p => p.type === "P");
+            const POS_ORDER = ["C","1B","2B","3B","SS","LF","CF","RF","SP","RP"];
+            const sortRoster = ps => [...ps].sort((a,b) => {
+              const ai = POS_ORDER.indexOf(a.eligible?.[0] ?? "");
+              const bi = POS_ORDER.indexOf(b.eligible?.[0] ?? "");
+              return (ai<0?99:ai) - (bi<0?99:bi);
+            });
+
+            // Sum projected stats across roster for each group
+            const sumProj = (players, cats, rateCats) => {
+              const totals = {};
+              let totalIP = 0;
+              players.forEach(p => {
+                const proj = p.yahooProj || {};
+                cats.forEach(c => {
+                  if (rateCats.includes(c)) return;
+                  totals[c] = (totals[c] || 0) + (proj[c] || 0);
+                });
+                if (proj.IP) totalIP += proj.IP;
+              });
+              // Rate stats: IP-weighted for pitchers, simple avg for hitters
+              rateCats.forEach(c => {
+                const vals = players.map(p => p.yahooProj?.[c]).filter(v => v != null);
+                if (!vals.length) return;
+                if (c === "ERA" || c === "WHIP" || c === "K/9" || c === "BB/9") {
+                  // IP-weighted
+                  const weighted = players.reduce((s, p) => s + (p.yahooProj?.[c] ?? 0) * (p.yahooProj?.IP ?? 0), 0);
+                  totals[c] = totalIP > 0 ? +(weighted / totalIP).toFixed(3) : 0;
+                } else {
+                  totals[c] = +(vals.reduce((a,b) => a+b, 0) / vals.length).toFixed(3);
+                }
+              });
+              return totals;
+            };
+
+            const hitCatsList  = config.hittingCats  || ["R","H","HR","RBI","SB","TB","AVG","OBP","SLG"];
+            const pitchCatsList = config.pitchingCats || ["IP","W","ER","K","ERA","WHIP","K/9","BB/9","NSVH"];
+            const hitRateCats  = ["AVG","OBP","SLG"];
+            const pitRateCats  = ["ERA","WHIP","K/9","BB/9"];
+            const hitTotals    = sumProj(hitters,  hitCatsList,   hitRateCats);
+            const pitTotals    = sumProj(pitchers, pitchCatsList, pitRateCats);
+
+            const PlayerRow = ({p}) => {
+              const scored = scoredAvailable.find(x => x.name === p.name);
+              const dns = scored?.draftNowScore;
+              return (
+                <div style={{display:"flex",gap:6,padding:"6px 0",borderBottom:"1px solid #0d1117",alignItems:"center"}}>
+                  <span style={{fontSize:9,color:"#94a3b8",width:36,flexShrink:0}}>{p.eligible?.[0] ?? "—"}</span>
+                  <span style={{flex:1,fontSize:12,color:p.il?"#f87171":"#f1f5f9",minWidth:0,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{p.name}{p.il&&" ⚠"}</span>
+                  {dns != null && <span style={{fontSize:11,color:"#84cc16",width:36,textAlign:"right",flexShrink:0}}>{"DNS:"+dns}</span>}
+                  <span style={{fontSize:11,color:"#60a5fa",width:36,textAlign:"right",flexShrink:0}}>{p.score2026 != null ? p.score2026 : "—"}</span>
+                  <span style={{fontSize:11,color:"#a78bfa",width:36,textAlign:"right",flexShrink:0,paddingRight:4}}>{p.scoreFTDyn ?? "—"}</span>
+                </div>
+              );
+            };
+
+            const TotalsRow = ({totals, cats}) => (
+              <div style={{marginTop:10,padding:"8px 10px",background:"#0d0f16",borderRadius:4,border:"1px solid #1e293b"}}>
+                <div style={{fontSize:9,color:"#64748b",letterSpacing:".1em",textTransform:"uppercase",marginBottom:6}}>Projected Totals</div>
+                <div style={{display:"flex",flexWrap:"wrap",gap:"6px 14px"}}>
+                  {cats.map(c => {
+                    const v = totals[c];
+                    if (v == null) return null;
+                    const needColor = CAT_NEED_COLOR[catNeed[c] ?? 0] || "#475569";
+                    return (
+                      <div key={c} style={{fontSize:11}}>
+                        <span style={{color:"#64748b"}}>{c} </span>
+                        <span style={{color:needColor, fontWeight:600}}>{typeof v === "number" ? (Number.isInteger(v) ? v : v.toFixed(3)) : v}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+
+            if (!hasYahooRosters) return (
+              <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",padding:40,textAlign:"center"}}>
+                <div>
+                  <div style={{fontSize:13,color:"#f1f5f9",marginBottom:8}}>No Yahoo roster data yet.</div>
+                  <div style={{fontSize:11,color:"#94a3b8",lineHeight:1.7}}>
+                    Run <code style={{background:"#1e293b",padding:"1px 5px",borderRadius:3,color:"#84cc16"}}>python data/build.py --skip-zar</code> to pull live rosters from Yahoo.
+                  </div>
+                </div>
+              </div>
+            );
+
+            return (
+              <div style={{flex:1,overflowY:"auto",padding:14}}>
+                <div style={{marginBottom:4,display:"flex",gap:20,alignItems:"center"}}>
+                  <span style={{fontSize:13,color:"#f1f5f9",fontWeight:600}}>{myTeam}</span>
+                  <span style={{fontSize:10,color:"#475569"}}>{myYahooRoster.length} players · {hitters.length}H / {pitchers.length}P</span>
+                  <span style={{fontSize:10,color:"#475569",marginLeft:"auto"}}>DNS · 2026 · FT</span>
+                </div>
+
+                <div style={{fontSize:9,color:"#64748b",letterSpacing:".1em",textTransform:"uppercase",margin:"10px 0 4px"}}>Hitters</div>
+                {sortRoster(hitters).map(p => <PlayerRow key={p.name} p={p} />)}
+                <TotalsRow totals={hitTotals} cats={hitCatsList} />
+
+                <div style={{fontSize:9,color:"#64748b",letterSpacing:".1em",textTransform:"uppercase",margin:"18px 0 4px"}}>Pitchers</div>
+                {sortRoster(pitchers).map(p => <PlayerRow key={p.name} p={p} />)}
+                <TotalsRow totals={pitTotals} cats={pitchCatsList} />
+              </div>
+            );
+          })()}
 
           {/* CATEGORY TRACKER */}
           {tab==="cats"&&(

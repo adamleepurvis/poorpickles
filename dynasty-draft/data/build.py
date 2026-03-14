@@ -275,12 +275,13 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
     yahoo_eligibility = yahoo_data.get("player_eligibility", {})
     yahoo_proj_scores = score_yahoo_projections(yahoo_data.get("yahoo_projections", {}), zar_scores)
 
-    # Build set of rostered player names
-    rostered = set()
+    # Build owner map: player name -> Yahoo team name
+    owner_map = {}
     for team in yahoo_data.get("teams", []):
         for player in team["players"]:
-            rostered.add(player["name"])
+            owner_map[player["name"]] = team["team_name"]
 
+    yahoo_projections_raw = yahoo_data.get("yahoo_projections", {})
     players = list(zar_scores.values())
 
     for p in players:
@@ -289,8 +290,11 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
         if name in yahoo_eligibility:
             p["eligible"] = yahoo_eligibility[name]
         p["pct_owned"] = ownership.get(name, 0.0)
-        p["rostered"] = name in rostered
+        p["rostered"]  = name in owner_map
+        p["owner"]     = owner_map.get(name, None)
         p["scoreYahoo"] = yahoo_proj_scores.get(name, None)
+        if name in yahoo_projections_raw:
+            p["yahooProj"] = yahoo_projections_raw[name]
 
     return players
 
