@@ -296,6 +296,7 @@ const CAT_STATUS_COLOR = {strong:"#22c55e",ok:"#60a5fa",thin:"#84cc16",missing:"
 // ─── MAIN COMPONENT ───────────────────────────────────────────────────────────
 export default function DraftAssistant({ config }) {
   // ── Derived league constants ─────────────────────────────────────────────
+  const draftMode      = config.draftMode !== false;
   const myTeam         = config.draftOrder[config.mySlot - 1];
   const totalTeams     = config.totalTeams;
   const totalRounds    = config.totalRounds;
@@ -825,7 +826,7 @@ export default function DraftAssistant({ config }) {
 
         {/* LEFT SIDEBAR */}
         <div style={{width:210,background:"#09090e",borderRight:"1px solid #1e293b",display:"flex",flexDirection:"column",flexShrink:0}}>
-          <div style={{padding:10,borderBottom:"1px solid #1e293b"}}>
+          {draftMode && <div style={{padding:10,borderBottom:"1px solid #1e293b"}}>
             <div style={{marginBottom:6}}>
               <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".08em",textTransform:"uppercase"}}>Pick #{currentPick} · [/] to focus</div>
               <div style={{fontSize:12,fontWeight:600,color:isMyClock?"#84cc16":"#94a3b8",marginTop:2}}>
@@ -875,9 +876,9 @@ export default function DraftAssistant({ config }) {
               }}>← undo</button>
               <button className="btn" style={{flex:1,background:"#450a0a44",color:"#f87171",border:"1px solid #450a0a"}} onClick={reset}>reset</button>
             </div>
-          </div>
+          </div>}
 
-          {/* Pick tracker */}
+          {draftMode && /* Pick tracker */
           <div style={{padding:"6px 10px",borderBottom:"1px solid #1e293b",flexShrink:0}}>
             <div style={{fontSize:9,color:"#cbd5e1",textTransform:"uppercase",letterSpacing:".08em",marginBottom:4}}>Pick Order</div>
             <div style={{display:"flex",flexDirection:"column",gap:1}}>
@@ -902,7 +903,7 @@ export default function DraftAssistant({ config }) {
                 );
               })}
             </div>
-          </div>
+          </div>}
 
           {/* My roster */}
           <div style={{flex:1,overflowY:"auto",padding:10}}>

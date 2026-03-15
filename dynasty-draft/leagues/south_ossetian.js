@@ -161,4 +161,6 @@ export const SOUTH_OSSETIAN_CONFIG = {
 
   // ── Score prefix ───────────────────────────────────────────────────────────
   scorePrefix: "5x5",
+
+  draftMode: false,
 }
