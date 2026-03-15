@@ -586,10 +586,12 @@ export default function DraftAssistant({ config }) {
     });
   }, []);
 
-  const myRoster = [
-    ...keeperPicks.filter(p=>p.team===myTeam).map(p=>({name:p.player,kept:true})),
-    ...myDrafted.map(n=>({name:n,kept:false}))
-  ].map(p => ({...p, target: leagueTargets.find(t=>t.name===p.name)||null}));
+  const myRoster = (hasYahooRosters && !draftMode)
+    ? myYahooRoster.map(p => ({name: p.name, kept: false, target: p}))
+    : [
+        ...keeperPicks.filter(p=>p.team===myTeam).map(p=>({name:p.player,kept:true})),
+        ...myDrafted.map(n=>({name:n,kept:false}))
+      ].map(p => ({...p, target: leagueTargets.find(t=>t.name===p.name)||null}));
 
   const [rosterSelected, setRosterSelected] = useState(null);
 
@@ -1252,42 +1254,56 @@ export default function DraftAssistant({ config }) {
           {/* OTHER TEAMS */}
           {tab==="teams"&&(
             <div style={{flex:1,overflowY:"auto",padding:12}}>
-              <div style={{fontSize:10,color:"#cbd5e1",marginBottom:10}}>Keeper rosters R1-10. Use to assess positional pressure and SP scarcity.</div>
+              <div style={{fontSize:10,color:"#cbd5e1",marginBottom:10}}>
+                {hasYahooRosters && !draftMode ? "Full rosters from Yahoo." : "Keeper rosters R1-10. Use to assess positional pressure and SP scarcity."}
+              </div>
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>
                 {draftOrder.filter(t=>t!==myTeam).map(team=>{
-                  const keepers = keeperPicks.filter(p=>p.team===team);
-                  const drafted = Object.entries(livePicks)
+                  const players = (hasYahooRosters && !draftMode)
+                    ? leagueTargets.filter(p => p.owner === team)
+                    : null;
+                  const keepers = players ? [] : keeperPicks.filter(p=>p.team===team);
+                  const drafted = players ? [] : Object.entries(livePicks)
                     .filter(([pick]) => getPickOwner(Number(pick)) === team)
                     .sort((a,b) => Number(a[0])-Number(b[0]))
                     .map(([pick, name]) => {
                       const t = leagueTargets.find(x=>x.name===name);
                       return {pick:Number(pick), name, pos: t?.eligible?.[0] ?? "?"};
                     });
-                  const spCount = keepers.filter(p=>p.pos==="SP").length + drafted.filter(p=>p.pos==="SP").length;
+                  const spCount = players
+                    ? players.filter(p=>p.eligible?.includes("SP")).length
+                    : keepers.filter(p=>p.pos==="SP").length + drafted.filter(p=>p.pos==="SP").length;
                   return (
                     <div key={team} style={{background:"#0d0f16",border:"1px solid #1e293b",borderRadius:4,padding:"8px 10px"}}>
                       <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:5}}>
                         <span style={{fontSize:11,color:"#f1f5f9",fontWeight:600}}>{team}</span>
                         {spCount>0&&<span style={{fontSize:9,color:"#60a5fa",background:"#1e3a5f33",padding:"1px 5px",borderRadius:3}}>{spCount} SP</span>}
                       </div>
-                      {keepers.map((p,i)=>(
+                      {players ? players.map((p,i)=>(
                         <div key={i} style={{display:"flex",gap:6,marginBottom:2,fontSize:11}}>
-                          <span style={{color:"#cbd5e1",width:26,flexShrink:0}}>{p.pos}</span>
-                          <span style={{color:"#f1f5f9"}}>{p.player}</span>
+                          <span style={{color:"#cbd5e1",width:26,flexShrink:0}}>{p.eligible?.[0]??"-"}</span>
+                          <span style={{color:"#f1f5f9"}}>{p.name}</span>
                         </div>
-                      ))}
-                      {drafted.length>0&&(
-                        <>
-                          <div style={{borderTop:"1px solid #1e293b",margin:"4px 0"}}/>
-                          {drafted.map((p,i)=>(
-                            <div key={i} style={{display:"flex",gap:6,marginBottom:2,fontSize:11}}>
-                              <span style={{color:"#334155",width:26,flexShrink:0}}>{p.pos}</span>
-                              <span style={{color:"#e2e8f0"}}>{p.name}</span>
-                              <span style={{color:"#1e3a5f",marginLeft:"auto",fontSize:9}}>#{p.pick}</span>
-                            </div>
-                          ))}
-                        </>
-                      )}
+                      )) : <>
+                        {keepers.map((p,i)=>(
+                          <div key={i} style={{display:"flex",gap:6,marginBottom:2,fontSize:11}}>
+                            <span style={{color:"#cbd5e1",width:26,flexShrink:0}}>{p.pos}</span>
+                            <span style={{color:"#f1f5f9"}}>{p.player}</span>
+                          </div>
+                        ))}
+                        {drafted.length>0&&(
+                          <>
+                            <div style={{borderTop:"1px solid #1e293b",margin:"4px 0"}}/>
+                            {drafted.map((p,i)=>(
+                              <div key={i} style={{display:"flex",gap:6,marginBottom:2,fontSize:11}}>
+                                <span style={{color:"#334155",width:26,flexShrink:0}}>{p.pos}</span>
+                                <span style={{color:"#e2e8f0"}}>{p.name}</span>
+                                <span style={{color:"#1e3a5f",marginLeft:"auto",fontSize:9}}>#{p.pick}</span>
+                              </div>
+                            ))}
+                          </>
+                        )}
+                      </>}
                     </div>
                   );
                 })}
