@@ -894,7 +894,7 @@ export default function DraftAssistant({ config }) {
                     opacity:isDone?0.4:1}}>
                     <span style={{fontSize:9,color:"#334155",width:22,flexShrink:0}}>#{p}</span>
                     <span style={{fontSize:9,color:isCurrent?"#22c55e":isMine?"#86efac":"#475569",flex:1,fontWeight:isMine?600:400}}>
-                      {isMine?"YOU":owner.split(" ")[0]}
+                      {isMine?"YOU":(owner?.split(" ")[0] ?? "?")}
                     </span>
                     {drafted&&<span style={{fontSize:8,color:"#334155",maxWidth:70,overflow:"hidden",whiteSpace:"nowrap",textOverflow:"ellipsis"}}>{drafted.split(" ").slice(-1)[0]}</span>}
                     {isCurrent&&<span style={{fontSize:8,color:"#22c55e"}}>◄</span>}
