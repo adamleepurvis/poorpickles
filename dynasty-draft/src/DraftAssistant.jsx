@@ -515,21 +515,23 @@ export default function DraftAssistant({ config }) {
     });
   }, [scoredAvailable, myDrafted]);
 
-  // Category projection: my projected rank in each category vs all 12 teams (based on keepers + drafted)
+  // Category projection: my projected rank in each category vs all teams
   const catProjection = useMemo(() => {
     const teamCoverage = {};
     draftOrder.forEach(team => {
-      const roster = [
-        ...keeperPicks.filter(p => p.team === team)
-          .map(kp => leagueTargets.find(t => normalizeName(t.name) === normalizeName(kp.player)))
-          .filter(Boolean),
-        ...(team === myTeam
-          ? myDrafted.map(n => leagueTargets.find(t => t.name === n)).filter(Boolean)
-          : []),
-      ];
+      const roster = (hasYahooRosters && !draftMode)
+        ? leagueTargets.filter(p => p.owner === team)
+        : [
+            ...keeperPicks.filter(p => p.team === team)
+              .map(kp => leagueTargets.find(t => normalizeName(t.name) === normalizeName(kp.player)))
+              .filter(Boolean),
+            ...(team === myTeam
+              ? myDrafted.map(n => leagueTargets.find(t => t.name === n)).filter(Boolean)
+              : []),
+          ];
       const scores = {};
       [...hitCats, ...pitchCats].forEach(cat => {
-        scores[cat] = roster.filter(p => p.cats.includes(cat)).reduce((s, p) => s + p.score2026, 0);
+        scores[cat] = roster.filter(p => p.cats?.includes(cat)).reduce((s, p) => s + p.score2026, 0);
       });
       teamCoverage[team] = scores;
     });
@@ -540,7 +542,7 @@ export default function DraftAssistant({ config }) {
       const max = allScores[0] || 1;
       return { cat, myScore, rank, max };
     });
-  }, [myDrafted]);
+  }, [myDrafted, leagueTargets, hasYahooRosters, draftMode]);
 
   // Team rosters from keepers
   const teamRosters = useMemo(() => {
