@@ -380,6 +380,8 @@ export default function DraftAssistant({ config }) {
   const [catStatus, setCatStatus] = useState(config.myCatStatus);
   const [catNeed, setCatNeed] = useState(baseCatNeed);
   const [showScoreBreakdown, setShowScoreBreakdown] = useState(null);
+  const [inSeasonOpponent, setInSeasonOpponent] = useState(null);
+  const [mlbSchedule, setMlbSchedule] = useState(null);
   const pickInputRef = useRef(null);
 
   useEffect(() => {
@@ -395,6 +397,38 @@ export default function DraftAssistant({ config }) {
   useEffect(() => {
     setCatNeed(computeDynamicCatNeed(myDrafted, leagueTargets, baseCatNeed));
   }, [myDrafted]);
+
+  // Fetch MLB schedule when in-season tab opens
+  useEffect(() => {
+    if (tab !== "inseason" || mlbSchedule !== null) return;
+    const today = new Date();
+    const dow = today.getDay();
+    const monday = new Date(today);
+    monday.setDate(today.getDate() - (dow === 0 ? 6 : dow - 1));
+    const fmt = d => d.toISOString().slice(0, 10);
+    const nextWeekEnd = new Date(monday);
+    nextWeekEnd.setDate(monday.getDate() + 13);
+    const thisWeekEnd = new Date(monday);
+    thisWeekEnd.setDate(monday.getDate() + 6);
+    fetch(`https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=${fmt(monday)}&endDate=${fmt(nextWeekEnd)}&gameType=R,S`)
+      .then(r => r.json())
+      .then(data => {
+        const counts = {};
+        data.dates?.forEach(d => {
+          const gameDate = new Date(d.date + "T12:00:00");
+          const isThis = gameDate <= thisWeekEnd;
+          d.games?.forEach(g => {
+            [g.teams?.home?.team?.abbreviation, g.teams?.away?.team?.abbreviation].forEach(org => {
+              if (!org) return;
+              if (!counts[org]) counts[org] = { thisWeek: 0, nextWeek: 0 };
+              if (isThis) counts[org].thisWeek++; else counts[org].nextWeek++;
+            });
+          });
+        });
+        setMlbSchedule(counts);
+      })
+      .catch(() => setMlbSchedule({}));
+  }, [tab, mlbSchedule]);
 
   const allTaken = useMemo(() =>
     new Set([...keeperPicks.map(p=>normalizeName(p.player)), ...Object.values(livePicks).map(normalizeName)]),
@@ -543,6 +577,20 @@ export default function DraftAssistant({ config }) {
       return { cat, myScore, rank, max };
     });
   }, [myDrafted, leagueTargets, hasYahooRosters, draftMode]);
+
+  // Category gap vs opponent (in-season)
+  const catGapAnalysis = useMemo(() => {
+    if (!inSeasonOpponent || !hasYahooRosters) return null;
+    return [...hitCats, ...pitchCats].map(cat => {
+      const myProj = catProjection.find(p => p.cat === cat);
+      const myScore = myProj?.myScore ?? 0;
+      const oppRoster = leagueTargets.filter(p => p.owner === inSeasonOpponent);
+      const oppScore = oppRoster.filter(p => p.cats?.includes(cat)).reduce((s, p) => s + p.score2026, 0);
+      const gap = myScore - oppScore;
+      const total = Math.max(myScore, oppScore, 0.1);
+      return { cat, myScore: Math.round(myScore*10)/10, oppScore: Math.round(oppScore*10)/10, gap: Math.round(gap*10)/10, close: Math.abs(gap)/total < 0.12 };
+    });
+  }, [inSeasonOpponent, catProjection, leagueTargets, hitCats, pitchCats, hasYahooRosters]);
 
   // Team rosters from keepers
   const teamRosters = useMemo(() => {
@@ -956,7 +1004,8 @@ export default function DraftAssistant({ config }) {
         {/* CENTER */}
         <div style={{flex:1,display:"flex",flexDirection:"column",overflow:"hidden"}}>
           <div style={{background:"#0b0d14",borderBottom:"1px solid #1e293b",display:"flex",alignItems:"center",padding:"0 10px",flexShrink:0}}>
-            {[["board","FA Board"],["roster","My Roster"],["depth","Depth"],["cats","Categories"],["teams","Other Teams"],["log","Pick Log"]].map(([v,l])=>(
+            {[["board","FA Board"],["roster","My Roster"],["depth","Depth"],["cats","Categories"],["teams","Other Teams"],["log","Pick Log"],...(!draftMode&&hasYahooRosters?[["inseason","In-Season"]]:[])]
+            .map(([v,l])=>(
               <button key={v} className="tabn" onClick={()=>setTab(v)}
                 style={{color:tab===v?"#84cc16":"#475569",borderBottom:tab===v?"2px solid #84cc16":"2px solid transparent"}}>
                 {l}
@@ -1419,6 +1468,155 @@ export default function DraftAssistant({ config }) {
               })()}
             </div>
           )}
+          {tab==="inseason"&&(()=>{
+            // Ratio stats from my current pitching staff
+            const myPitchers = myYahooRoster.filter(p => p.type === "P");
+            const totalIP = myPitchers.reduce((s,p) => s + (p.yahooProj?.IP ?? p.projIP ?? 0), 0);
+            const wtdERA  = totalIP > 0 ? myPitchers.reduce((s,p) => s + (p.yahooProj?.ERA  ?? p.projStats?.ERA  ?? 0) * (p.yahooProj?.IP ?? p.projIP ?? 0), 0) / totalIP : null;
+            const wtdWHIP = totalIP > 0 ? myPitchers.reduce((s,p) => s + (p.yahooProj?.WHIP ?? p.projStats?.WHIP ?? 0) * (p.yahooProj?.IP ?? p.projIP ?? 0), 0) / totalIP : null;
+
+            // Top FA adds ranked by weighted category fit
+            const faAdds = available
+              .filter(p => p.score2026 > 0)
+              .map(p => {
+                const addValue = Math.round(p.cats.reduce((s,c) => s + (catNeed[c] || 0), 0) * p.score2026 * 10) / 10;
+                const isP = p.type === "P";
+                const pIP   = p.yahooProj?.IP   ?? p.projIP   ?? 0;
+                const pERA  = p.yahooProj?.ERA   ?? p.projStats?.ERA  ?? null;
+                const pWHIP = p.yahooProj?.WHIP  ?? p.projStats?.WHIP ?? null;
+                const newIP   = totalIP + pIP;
+                const newERA  = (isP && pERA  != null && wtdERA  != null && newIP > 0) ? (wtdERA  * totalIP + pERA  * pIP) / newIP : null;
+                const newWHIP = (isP && pWHIP != null && wtdWHIP != null && newIP > 0) ? (wtdWHIP * totalIP + pWHIP * pIP) / newIP : null;
+                const starts  = mlbSchedule ? (mlbSchedule[p.org]?.thisWeek ?? 0) : null;
+                return { ...p, addValue, newERA, newWHIP, starts };
+              })
+              .sort((a,b) => b.addValue - a.addValue)
+              .slice(0, 30);
+
+            // My pitchers with schedule
+            const mySpSchedule = myYahooRoster
+              .filter(p => p.type === "P")
+              .map(p => ({ ...p, thisWeek: mlbSchedule?.[p.org]?.thisWeek ?? null, nextWeek: mlbSchedule?.[p.org]?.nextWeek ?? null }))
+              .sort((a,b) => (b.thisWeek ?? 0) - (a.thisWeek ?? 0));
+
+            return (
+              <div style={{flex:1,overflowY:"auto",padding:14}}>
+
+                {/* 1. Category Gap Analysis */}
+                <div style={{marginBottom:22}}>
+                  <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:8}}>Weekly Category Gap</div>
+                  <div style={{display:"flex",gap:8,alignItems:"center",marginBottom:10,flexWrap:"wrap"}}>
+                    <span style={{fontSize:11,color:"#64748b"}}>vs:</span>
+                    <select value={inSeasonOpponent??""} onChange={e=>setInSeasonOpponent(e.target.value||null)}
+                      style={{background:"#1e293b",border:"1px solid #334155",color:"#e2e8f0",fontSize:11,padding:"3px 8px",borderRadius:3,fontFamily:"inherit",outline:"none"}}>
+                      <option value="">— pick opponent —</option>
+                      {draftOrder.filter(t=>t!==myTeam).map(t=><option key={t} value={t}>{t}</option>)}
+                    </select>
+                  </div>
+                  {catGapAnalysis ? (
+                    <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
+                      {catGapAnalysis.map(({cat,myScore,oppScore,gap,close})=>{
+                        const winning = gap >= 0;
+                        const color = winning ? "#22c55e" : "#f87171";
+                        return (
+                          <div key={cat} style={{background:"#0d0f16",border:`1px solid ${close?"#f59e0b55":color+"22"}`,borderRadius:4,padding:"8px 10px",minWidth:64,textAlign:"center"}}>
+                            {close && <div style={{fontSize:7,color:"#f59e0b",letterSpacing:".08em",marginBottom:2}}>CLOSE</div>}
+                            <div style={{fontSize:12,fontWeight:600,color:"#f1f5f9"}}>{cat}</div>
+                            <div style={{fontSize:11,fontWeight:700,color}}>{winning&&gap>0?"+":""}{gap}</div>
+                            <div style={{fontSize:9,color:"#475569"}}>{myScore} vs {oppScore}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <div style={{fontSize:11,color:"#334155"}}>Select an opponent to see category gaps.</div>
+                  )}
+                </div>
+
+                {/* 3. SP Schedule */}
+                <div style={{marginBottom:22}}>
+                  <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:8}}>
+                    Pitcher Schedule
+                    {mlbSchedule === null && <span style={{color:"#334155",marginLeft:8,fontSize:9,fontWeight:400}}>loading...</span>}
+                    {mlbSchedule !== null && Object.keys(mlbSchedule).length === 0 && <span style={{color:"#f59e0b",marginLeft:8,fontSize:9,fontWeight:400}}>no games found (pre-season?)</span>}
+                  </div>
+                  <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
+                    {mySpSchedule.map(p=>{
+                      const tw = p.thisWeek;
+                      const nw = p.nextWeek;
+                      const twColor = tw == null ? "#334155" : tw >= 2 ? "#22c55e" : tw === 1 ? "#f59e0b" : "#f87171";
+                      return (
+                        <div key={p.name} style={{background:"#0d0f16",border:"1px solid #1e293b",borderRadius:4,padding:"6px 10px",minWidth:84}}>
+                          <div style={{fontSize:10,color:"#e2e8f0",fontWeight:600,marginBottom:2,whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis",maxWidth:80}}>{p.name.split(" ").slice(-1)[0]}</div>
+                          <div style={{fontSize:9,color:"#475569",marginBottom:4}}>{p.org} · {p.eligible?.[0]??"-"}</div>
+                          <div style={{display:"flex",gap:8}}>
+                            <div style={{textAlign:"center"}}>
+                              <div style={{fontSize:8,color:"#334155"}}>THIS</div>
+                              <div style={{fontSize:14,fontWeight:700,color:twColor}}>{tw??"-"}</div>
+                            </div>
+                            <div style={{textAlign:"center"}}>
+                              <div style={{fontSize:8,color:"#334155"}}>NEXT</div>
+                              <div style={{fontSize:14,fontWeight:700,color:"#475569"}}>{nw??"-"}</div>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                    {mySpSchedule.length === 0 && <div style={{fontSize:11,color:"#334155"}}>No pitchers on roster.</div>}
+                  </div>
+                </div>
+
+                {/* 2 + 4. Waiver Wire + Ratio Safety */}
+                <div>
+                  <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:2}}>Top Adds — by category fit</div>
+                  {(wtdERA != null || wtdWHIP != null) && (
+                    <div style={{fontSize:9,color:"#64748b",marginBottom:8}}>
+                      Current staff: ERA {wtdERA?.toFixed(2)} · WHIP {wtdWHIP?.toFixed(3)} · {Math.round(totalIP)} IP projected
+                    </div>
+                  )}
+                  {faAdds.map(p=>{
+                    const isP = p.type === "P";
+                    const eraChange  = isP && p.newERA  != null && wtdERA  != null ? p.newERA  - wtdERA  : null;
+                    const whipChange = isP && p.newWHIP != null && wtdWHIP != null ? p.newWHIP - wtdWHIP : null;
+                    const eraColor = eraChange == null ? null : eraChange <= -0.05 ? "#22c55e" : eraChange < 0.15 ? "#f59e0b" : "#f87171";
+                    return (
+                      <div key={p.name} style={{background:"#0d0f16",border:"1px solid #1e293b",borderRadius:4,padding:"7px 10px",marginBottom:4,display:"flex",gap:8,alignItems:"center"}}>
+                        <div style={{flex:1,minWidth:0}}>
+                          <div style={{display:"flex",alignItems:"center",gap:5,flexWrap:"wrap"}}>
+                            <span style={{fontSize:12,color:"#f1f5f9",fontWeight:500}}>{p.name}</span>
+                            {p.eligible.slice(0,2).map(e=><span key={e} style={{fontSize:9,color:"#f1f5f9",background:"#1e293b",padding:"0 4px",borderRadius:2}}>{e}</span>)}
+                            <span style={{fontSize:9,color:"#64748b"}}>{p.org}</span>
+                            {p.il && <span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 4px",borderRadius:3}}>IL</span>}
+                          </div>
+                          <div style={{display:"flex",gap:5,marginTop:3,flexWrap:"wrap",alignItems:"center"}}>
+                            {p.cats.map(c=>{
+                              const need = catNeed[c]??0;
+                              return <span key={c} style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${CAT_NEED_COLOR[need]||"#1e293b"}18`,color:CAT_NEED_COLOR[need]||"#475569"}}>{c}</span>;
+                            })}
+                            {eraChange != null && (
+                              <span style={{fontSize:9,color:eraColor}}>
+                                ERA {eraChange>=0?"+":""}{eraChange.toFixed(2)} · WHIP {whipChange>=0?"+":""}{whipChange?.toFixed(3)}
+                              </span>
+                            )}
+                            {isP && p.starts != null && (
+                              <span style={{fontSize:9,color:"#60a5fa",background:"#1e3a5f33",padding:"1px 5px",borderRadius:3}}>{p.starts}G this wk</span>
+                            )}
+                          </div>
+                        </div>
+                        <div style={{textAlign:"right",flexShrink:0}}>
+                          <div style={{fontSize:9,color:"#475569"}}>fit</div>
+                          <div style={{fontSize:13,fontWeight:700,color:"#84cc16"}}>{p.addValue}</div>
+                          <div style={{fontSize:9,color:"#334155"}}>{p.score2026}</div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+
+              </div>
+            );
+          })()}
+
           {tab==="log"&&(
             <div style={{flex:1,overflowY:"auto",padding:12}}>
               <div style={{fontSize:10,color:"#cbd5e1",marginBottom:8}}>Live picks only (R1-10 keepers not shown).</div>
