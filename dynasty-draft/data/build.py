@@ -282,6 +282,14 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
     for team in yahoo_data.get("teams", []):
         for player in team["players"]:
             owner_map[player["name"]] = team["team_name"]
+    # Ohtani two-way: Yahoo uses "Shohei Ohtani (Pitcher)" / "(Batter)"
+    # but targets uses plain "Shohei Ohtani" for the pitcher entry.
+    # Add bare-name fallback for any "(Pitcher)" entry not already mapped.
+    for yahoo_name, team_name in list(owner_map.items()):
+        if " (Pitcher)" in yahoo_name:
+            bare = yahoo_name.replace(" (Pitcher)", "")
+            if bare not in owner_map:
+                owner_map[bare] = team_name
 
     # Only set rostered/owner for postdraft leagues.
     # Predraft leagues use keeperPicks from the JS config instead.

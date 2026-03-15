@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-15T09:25:03.339559",
+  "generated": "2026-03-15T09:46:38.959504",
   "count": 1003,
   "players": [
     {
@@ -7751,8 +7751,8 @@
       "fpRank": 3,
       "fpAdp": 2.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Acu\u00f1a Matada",
       "scoreYahoo": null
     },
     {

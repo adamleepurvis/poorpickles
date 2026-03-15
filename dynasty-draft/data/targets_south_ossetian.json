@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-14T16:53:47.719266",
+  "generated": "2026-03-15T09:46:21.151836",
   "count": 1003,
   "players": [
     {
@@ -7751,8 +7751,8 @@
       "fpRank": 3,
       "fpAdp": 2.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
       "scoreYahoo": null
     },
     {
