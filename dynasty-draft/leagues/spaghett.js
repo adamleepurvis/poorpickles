@@ -28,19 +28,19 @@ export const SPAGHETT_CONFIG = {
   ],
 
   // ── Scoring categories ──────────────────────────────────────────────────────
-  hittingCats:  ["R", "HR", "RBI", "SB"],
-  pitchingCats: ["IP", "K", "ERA", "WHIP"],
+  hittingCats:  ["R", "HR", "RBI", "SB", "OBP"],
+  pitchingCats: ["W", "K", "ERA", "WHIP", "NSVH"],
 
   // ── My category status ─────────────────────────────────────────────────────
   myCatStatus: {
-    R:"ok", HR:"ok", RBI:"ok", SB:"ok",
-    IP:"ok", K:"ok", ERA:"ok", WHIP:"ok",
+    R:"ok", HR:"ok", RBI:"ok", SB:"ok", OBP:"ok",
+    W:"ok", K:"ok", ERA:"ok", WHIP:"ok", NSVH:"ok",
   },
 
   // ── Base category need weights ─────────────────────────────────────────────
   baseCatNeed: {
-    R:2, HR:2, RBI:2, SB:2,
-    IP:2, K:2, ERA:2, WHIP:2,
+    R:2, HR:2, RBI:2, SB:2, OBP:2,
+    W:2, K:2, ERA:2, WHIP:2, NSVH:2,
   },
 
   // ── Keeper picks ───────────────────────────────────────────────────────────
@@ -53,6 +53,5 @@ export const SPAGHETT_CONFIG = {
   pickOrder: [],  // postdraft — not needed
 
   // ── Score prefix ───────────────────────────────────────────────────────────
-  // TODO: add 4-cat scoring model to zar_model.py for more accurate scores
-  scorePrefix: null,
+  scorePrefix: "5x5",
 }
