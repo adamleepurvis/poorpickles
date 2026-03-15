@@ -12,8 +12,8 @@ export const SOUTH_OSSETIAN_CONFIG = {
 
   draftOrder: [
     "Ryan Howard's $5 Footlong",
-    "🎯 David Tabor's Aim",
-    "🏝️ Let's Get Tropical 🏝️",
+    "🍆I'm Beaned Up Right Now🍆",
+    "🏝️ Let\u2019s Get Tropical 🏝️",
     "Magnum Kwandoms",
     "Scott's Strategic Realignment",
     "Saggy Boys",
@@ -46,7 +46,7 @@ export const SOUTH_OSSETIAN_CONFIG = {
   keeperPicks: [
     // R1 — slots 1→12
     {pick:1,  r:1, player:"Vladimir Guerrero Jr.",    pos:"1B",   team:"Ryan Howard's $5 Footlong"},
-    {pick:2,  r:1, player:"Ronald Acuña Jr.",         pos:"RF",   team:"🎯 David Tabor's Aim"},
+    {pick:2,  r:1, player:"Ronald Acuña Jr.",         pos:"RF",   team:"🍆I'm Beaned Up Right Now🍆"},
     {pick:3,  r:1, player:"Juan Soto",                pos:"LF",   team:"🏝️ Let's Get Tropical 🏝️"},
     {pick:4,  r:1, player:"Elly De La Cruz",          pos:"SS",   team:"Magnum Kwandoms"},
     {pick:5,  r:1, player:"Mookie Betts",             pos:"SS",   team:"Scott's Strategic Realignment"},
@@ -68,11 +68,11 @@ export const SOUTH_OSSETIAN_CONFIG = {
     {pick:20, r:2, player:"Shea Langeliers",          pos:"C",    team:"Scott's Strategic Realignment"},
     {pick:21, r:2, player:"Josh Naylor",              pos:"1B",   team:"Magnum Kwandoms"},
     {pick:22, r:2, player:"Junior Caminero",          pos:"3B",   team:"🏝️ Let's Get Tropical 🏝️"},
-    {pick:23, r:2, player:"Jackson Chourio",          pos:"CF",   team:"🎯 David Tabor's Aim"},
+    {pick:23, r:2, player:"Jackson Chourio",          pos:"CF",   team:"🍆I'm Beaned Up Right Now🍆"},
     {pick:24, r:2, player:"Adley Rutschman",          pos:"C",    team:"Ryan Howard's $5 Footlong"},
     // R3 — slots 1→12
     {pick:25, r:3, player:"Paul Skenes",              pos:"SP",   team:"Ryan Howard's $5 Footlong"},
-    {pick:26, r:3, player:"Vinnie Pasquantino",       pos:"1B",   team:"🎯 David Tabor's Aim"},
+    {pick:26, r:3, player:"Vinnie Pasquantino",       pos:"1B",   team:"🍆I'm Beaned Up Right Now🍆"},
     {pick:27, r:3, player:"Nick Kurtz",               pos:"1B",   team:"🏝️ Let's Get Tropical 🏝️"},
     {pick:28, r:3, player:"Brice Turang",             pos:"2B",   team:"Magnum Kwandoms"},
     {pick:29, r:3, player:"Tarik Skubal",             pos:"SP",   team:"Scott's Strategic Realignment"},
@@ -94,7 +94,7 @@ export const SOUTH_OSSETIAN_CONFIG = {
     {pick:44, r:4, player:"Garrett Crochet",          pos:"SP",   team:"Scott's Strategic Realignment"},
     {pick:45, r:4, player:"Logan Gilbert",            pos:"SP",   team:"Magnum Kwandoms"},
     {pick:46, r:4, player:"James Wood",               pos:"LF",   team:"🏝️ Let's Get Tropical 🏝️"},
-    {pick:47, r:4, player:"Jackson Holliday",         pos:"2B",   team:"🎯 David Tabor's Aim"},
+    {pick:47, r:4, player:"Jackson Holliday",         pos:"2B",   team:"🍆I'm Beaned Up Right Now🍆"},
     {pick:48, r:4, player:"Hunter Brown",             pos:"SP",   team:"Ryan Howard's $5 Footlong"},
   ],
 
@@ -110,53 +110,53 @@ export const SOUTH_OSSETIAN_CONFIG = {
   //   R20: Decoy has picks 5+6, ALP has none
   pickOrder: [
     // R1 (keeper)
-    ["Ryan Howard's $5 Footlong","🎯 David Tabor's Aim","🏝️ Let's Get Tropical 🏝️","Magnum Kwandoms","Scott's Strategic Realignment","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
+    ["Ryan Howard's $5 Footlong","🍆I'm Beaned Up Right Now🍆","🏝️ Let's Get Tropical 🏝️","Magnum Kwandoms","Scott's Strategic Realignment","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
     // R2 (keeper)
-    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Scott's Strategic Realignment","Magnum Kwandoms","🏝️ Let's Get Tropical 🏝️","🎯 David Tabor's Aim","Ryan Howard's $5 Footlong"],
+    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Scott's Strategic Realignment","Magnum Kwandoms","🏝️ Let's Get Tropical 🏝️","🍆I'm Beaned Up Right Now🍆","Ryan Howard's $5 Footlong"],
     // R3 (keeper)
-    ["Ryan Howard's $5 Footlong","🎯 David Tabor's Aim","🏝️ Let's Get Tropical 🏝️","Magnum Kwandoms","Scott's Strategic Realignment","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
+    ["Ryan Howard's $5 Footlong","🍆I'm Beaned Up Right Now🍆","🏝️ Let's Get Tropical 🏝️","Magnum Kwandoms","Scott's Strategic Realignment","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
     // R4 (keeper)
-    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Scott's Strategic Realignment","Magnum Kwandoms","🏝️ Let's Get Tropical 🏝️","🎯 David Tabor's Aim","Ryan Howard's $5 Footlong"],
+    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Scott's Strategic Realignment","Magnum Kwandoms","🏝️ Let's Get Tropical 🏝️","🍆I'm Beaned Up Right Now🍆","Ryan Howard's $5 Footlong"],
     // R5 — Scott's/Magnum swapped
-    ["Ryan Howard's $5 Footlong","🎯 David Tabor's Aim","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
+    ["Ryan Howard's $5 Footlong","🍆I'm Beaned Up Right Now🍆","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
     // R6 — Scott's/Magnum swapped
-    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🎯 David Tabor's Aim","Ryan Howard's $5 Footlong"],
+    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🍆I'm Beaned Up Right Now🍆","Ryan Howard's $5 Footlong"],
     // R7 — ALP×2 (picks 7+8), LT×2 (picks 3+9), no Decoy, no Bobby Weed Jr
-    ["Ryan Howard's $5 Footlong","🎯 David Tabor's Aim","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","ALP","🏝️ Let's Get Tropical 🏝️","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
+    ["Ryan Howard's $5 Footlong","🍆I'm Beaned Up Right Now🍆","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","ALP","🏝️ Let's Get Tropical 🏝️","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
     // R8 — Scott's/Magnum swapped
-    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🎯 David Tabor's Aim","Ryan Howard's $5 Footlong"],
+    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🍆I'm Beaned Up Right Now🍆","Ryan Howard's $5 Footlong"],
     // R9 — Scott's/Magnum swapped
-    ["Ryan Howard's $5 Footlong","🎯 David Tabor's Aim","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
+    ["Ryan Howard's $5 Footlong","🍆I'm Beaned Up Right Now🍆","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
     // R10 — Scott's/Magnum swapped
-    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🎯 David Tabor's Aim","Ryan Howard's $5 Footlong"],
+    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🍆I'm Beaned Up Right Now🍆","Ryan Howard's $5 Footlong"],
     // R11 — Scott's/Magnum swapped
-    ["Ryan Howard's $5 Footlong","🎯 David Tabor's Aim","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
+    ["Ryan Howard's $5 Footlong","🍆I'm Beaned Up Right Now🍆","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
     // R12 — Scott's/Magnum swapped
-    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🎯 David Tabor's Aim","Ryan Howard's $5 Footlong"],
+    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🍆I'm Beaned Up Right Now🍆","Ryan Howard's $5 Footlong"],
     // R13 — Scott's/Magnum swapped
-    ["Ryan Howard's $5 Footlong","🎯 David Tabor's Aim","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
+    ["Ryan Howard's $5 Footlong","🍆I'm Beaned Up Right Now🍆","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
     // R14 — Scott's/Magnum swapped
-    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🎯 David Tabor's Aim","Ryan Howard's $5 Footlong"],
+    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🍆I'm Beaned Up Right Now🍆","Ryan Howard's $5 Footlong"],
     // R15 — Scott's/Magnum swapped
-    ["Ryan Howard's $5 Footlong","🎯 David Tabor's Aim","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
+    ["Ryan Howard's $5 Footlong","🍆I'm Beaned Up Right Now🍆","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
     // R16 — Scott's/Magnum swapped
-    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🎯 David Tabor's Aim","Ryan Howard's $5 Footlong"],
+    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🍆I'm Beaned Up Right Now🍆","Ryan Howard's $5 Footlong"],
     // R17 — Scott's/Magnum swapped
-    ["Ryan Howard's $5 Footlong","🎯 David Tabor's Aim","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
+    ["Ryan Howard's $5 Footlong","🍆I'm Beaned Up Right Now🍆","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
     // R18 — Scott's/Magnum swapped
-    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🎯 David Tabor's Aim","Ryan Howard's $5 Footlong"],
+    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🍆I'm Beaned Up Right Now🍆","Ryan Howard's $5 Footlong"],
     // R19 — Scott's/Magnum swapped
-    ["Ryan Howard's $5 Footlong","🎯 David Tabor's Aim","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
+    ["Ryan Howard's $5 Footlong","🍆I'm Beaned Up Right Now🍆","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
     // R20 — Decoy×2 (picks 5+6), no ALP; Scott's/Magnum swapped
-    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","🐶 Decoy Fan Club","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🎯 David Tabor's Aim","Ryan Howard's $5 Footlong"],
+    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","🐶 Decoy Fan Club","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🍆I'm Beaned Up Right Now🍆","Ryan Howard's $5 Footlong"],
     // R21 — Scott's/Magnum swapped
-    ["Ryan Howard's $5 Footlong","🎯 David Tabor's Aim","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
+    ["Ryan Howard's $5 Footlong","🍆I'm Beaned Up Right Now🍆","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
     // R22 — Scott's/Magnum swapped
-    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🎯 David Tabor's Aim","Ryan Howard's $5 Footlong"],
+    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🍆I'm Beaned Up Right Now🍆","Ryan Howard's $5 Footlong"],
     // R23 — Scott's/Magnum swapped
-    ["Ryan Howard's $5 Footlong","🎯 David Tabor's Aim","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
+    ["Ryan Howard's $5 Footlong","🍆I'm Beaned Up Right Now🍆","🏝️ Let's Get Tropical 🏝️","Scott's Strategic Realignment","Magnum Kwandoms","Saggy Boys","ALP","🐶 Decoy Fan Club","Bobby Weed Jr","🏅 Clutch Trey","🧑‍⚖️ All Rise","Wade Bogg's Next Beer"],
     // R24 — Scott's/Magnum swapped
-    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🎯 David Tabor's Aim","Ryan Howard's $5 Footlong"],
+    ["Wade Bogg's Next Beer","🧑‍⚖️ All Rise","🏅 Clutch Trey","Bobby Weed Jr","🐶 Decoy Fan Club","ALP","Saggy Boys","Magnum Kwandoms","Scott's Strategic Realignment","🏝️ Let's Get Tropical 🏝️","🍆I'm Beaned Up Right Now🍆","Ryan Howard's $5 Footlong"],
   ],
 
   // ── Score prefix ───────────────────────────────────────────────────────────

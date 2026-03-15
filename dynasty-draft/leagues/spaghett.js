@@ -12,7 +12,7 @@ export const SPAGHETT_CONFIG = {
 
   draftOrder: [
     "Bargain Bangers",
-    "D'ump",
+    "D\u2019ump",
     "Spaghett",
     "Les Sexpos de Montréal",
     "Trash Pandas",
