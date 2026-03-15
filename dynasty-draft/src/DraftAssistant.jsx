@@ -1,10 +1,12 @@
 import { useState, useCallback, useRef, useEffect, useMemo } from "react";
 import poorPicklesTargets   from "../data/targets_poor_pickles.json";
 import southOssetianTargets from "../data/targets_south_ossetian.json";
+import spaghettTargets      from "../data/targets_spaghett.json";
 
 const TARGETS_DATA = {
   "Poor Pickles":   poorPicklesTargets,
   "SouthOssetian":  southOssetianTargets,
+  "Spaghett":       spaghettTargets,
 };
 const TARGETS_CACHE = {};
 function getTargets(leagueName) {

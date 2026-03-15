@@ -424,6 +424,7 @@ def print_summary(players: list[dict], yahoo_data: dict):
 LEAGUE_CONFIG = {
     "poor_pickles":   "poor_pickles.js",
     "south_ossetian": "south_ossetian.js",
+    "spaghett":       "spaghett.js",
 }
 
 def main():

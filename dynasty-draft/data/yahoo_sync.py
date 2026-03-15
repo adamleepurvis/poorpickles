@@ -508,6 +508,7 @@ def sync_projected_stats(query):
 LEAGUE_KEYS = {
     "poor_pickles":   os.getenv("YAHOO_LEAGUE_KEY", "469.l.51744"),
     "south_ossetian": "469.l.40214",
+    "spaghett":       "469.l.91300",
 }
 
 def main():
