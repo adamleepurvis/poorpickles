@@ -283,6 +283,11 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
         for player in team["players"]:
             owner_map[player["name"]] = team["team_name"]
 
+    # Only set rostered/owner for postdraft leagues.
+    # Predraft leagues use keeperPicks from the JS config instead.
+    draft_status = str(yahoo_data.get("settings", {}).get("draft_status", ""))
+    is_postdraft = draft_status == "postdraft"
+
     yahoo_projections_raw = yahoo_data.get("yahoo_projections", {})
     players = list(zar_scores.values())
 
@@ -292,8 +297,9 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
         if name in yahoo_eligibility:
             p["eligible"] = yahoo_eligibility[name]
         p["pct_owned"] = ownership.get(name, 0.0)
-        p["rostered"]  = name in owner_map
-        p["owner"]     = owner_map.get(name, None)
+        if is_postdraft:
+            p["rostered"]  = name in owner_map
+            p["owner"]     = owner_map.get(name, None)
         p["scoreYahoo"] = yahoo_proj_scores.get(name, None)
         if name in yahoo_projections_raw:
             p["yahooProj"] = yahoo_projections_raw[name]

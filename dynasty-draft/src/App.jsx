@@ -7,7 +7,7 @@ import { SPAGHETT_CONFIG }       from '../leagues/spaghett.js'
 const LEAGUES = [
   { id: 'poor_pickles',   label: 'Poor Pickles (9x9)',    config: POOR_PICKLES_CONFIG },
   { id: 'south_ossetian', label: 'SouthOssetian (5x5)',   config: SOUTH_OSSETIAN_CONFIG },
-  { id: 'spaghett',       label: 'Spaghett (8-cat)',      config: SPAGHETT_CONFIG },
+  { id: 'spaghett',       label: 'Awesomeball',           config: SPAGHETT_CONFIG },
 ]
 
 export default function App() {
