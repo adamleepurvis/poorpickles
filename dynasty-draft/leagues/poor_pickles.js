@@ -167,7 +167,7 @@ export const POOR_PICKLES_CONFIG = {
     {pick:110, r:10, player:"Jacob Misiorowski",         pos:"SP",   team:"Bay of Papi"},
     {pick:111, r:10, player:"Dylan Cease",               pos:"SP",   team:"StickyBanditz"},
     {pick:112, r:10, player:"Eury Pérez",                pos:"SP",   team:"Nighthawks"},
-    {pick:113, r:10, player:"Shohei Ohtani (Pitcher)",   pos:"SP",   team:"Team Underdog"},
+    {pick:113, r:10, player:"Shohei Ohtani",              pos:"SP",   team:"Team Underdog"},
     {pick:114, r:10, player:"Edwin Díaz",                pos:"RP",   team:"Loch Neskie"},
     {pick:115, r:10, player:"Shota Imanaga",             pos:"SP",   team:"Snipe City"},
     {pick:116, r:10, player:"Roki Sasaki",               pos:"SP",   team:"Poor Pickles"},
