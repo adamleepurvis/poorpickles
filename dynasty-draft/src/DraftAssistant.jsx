@@ -426,7 +426,7 @@ export default function DraftAssistant({ config }) {
   });
   const dragWatchIdx = useRef(null);
   useEffect(() => { localStorage.setItem(lsKey, JSON.stringify(watchList)); }, [watchList]);
-  const [tab, setTab] = useState("board");
+  const [tab, setTab] = useState(config.draftMode !== false ? "board" : "inseason");
   const [rightTab, setRightTab] = useState("watch");
   const [typeFilter, setTypeFilter] = useState("all");
   const [editingNote, setEditingNote] = useState(null);
