@@ -139,6 +139,64 @@ function getFilledPositions(myDraftedNames, targets, keeperPicks, myTeam) {
   return filled;
 }
 
+// ─── WEEKLY PROJECTION ENGINE ─────────────────────────────────────────────────
+const HIT_COUNT  = ["R","H","HR","RBI","SB","TB"];
+const HIT_RATE   = ["AVG","OBP","SLG"];
+const PIT_COUNT  = ["K","W","ER","IP","NSVH"];
+const PIT_RATE   = ["ERA","WHIP","K/9","BB/9"];
+const LOWER_BETTER = new Set(["ERA","WHIP","BB/9","ER"]);
+
+// Scale a player's season projStats to one week using the MLB schedule.
+// Hitters: linear by team games. SPs: by projected starts (games/5). RPs: linear.
+// fallbackGames used when schedule not yet loaded (defaults to avg week: 162/26 ≈ 6.2).
+function computeWeeklyStats(roster, mlbSchedule, fallbackGames = 6.2) {
+  const numBuf = {};
+  const totals = {};
+  let totalPA = 0, totalIP = 0;
+
+  roster.forEach(p => {
+    const proj = p.projStats;
+    if (!proj) return;
+    const teamGames = mlbSchedule?.[p.org]?.thisWeek ?? fallbackGames;
+    const isH  = p.type === "H";
+    const isRP = !isH && p.eligible?.every(e => e === "RP");
+    const isSP = !isH && !isRP;
+
+    let scale;
+    if (isH || isRP) {
+      scale = teamGames / 162;
+    } else {
+      // SP: one start per ~5 days; season starts ≈ IP / 5.5
+      const seasonGS = Math.max(1, (proj.IP ?? 150) / 5.5);
+      scale = (teamGames / 5) / seasonGS;
+    }
+
+    if (isH) {
+      HIT_COUNT.forEach(c => { if (proj[c] != null) totals[c] = (totals[c] || 0) + proj[c] * scale; });
+      const weekPA = proj.AVG ? (proj.H ?? 0) / proj.AVG * scale : 0;
+      totalPA += weekPA;
+      HIT_RATE.forEach(c => { if (proj[c] != null) numBuf[c] = (numBuf[c] || 0) + proj[c] * weekPA; });
+    } else {
+      PIT_COUNT.forEach(c => { if (proj[c] != null) totals[c] = (totals[c] || 0) + proj[c] * scale; });
+      const weekIP = (proj.IP ?? 0) * scale;
+      totalIP += weekIP;
+      PIT_RATE.forEach(c => { if (proj[c] != null) numBuf[c] = (numBuf[c] || 0) + proj[c] * weekIP; });
+    }
+  });
+
+  HIT_RATE.forEach(c => { totals[c] = totalPA > 0 ? numBuf[c] / totalPA : null; });
+  PIT_RATE.forEach(c => { totals[c] = totalIP > 0 ? numBuf[c] / totalIP : null; });
+  return totals;
+}
+
+function fmtStat(val, cat) {
+  if (val == null) return "—";
+  if (["AVG","OBP","SLG"].includes(cat)) return val.toFixed(3).replace(/^0/, "");
+  if (["ERA","WHIP"].includes(cat))       return val.toFixed(2);
+  if (["K/9","BB/9"].includes(cat))       return val.toFixed(1);
+  return val.toFixed(1);
+}
+
 // Normalize accented characters for fuzzy name matching
 function normalizeName(name) {
   return name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
@@ -578,19 +636,27 @@ export default function DraftAssistant({ config }) {
     });
   }, [myDrafted, leagueTargets, hasYahooRosters, draftMode]);
 
-  // Category gap vs opponent (in-season)
+  // Category gap vs opponent — weekly projected stats scaled by schedule
   const catGapAnalysis = useMemo(() => {
     if (!inSeasonOpponent || !hasYahooRosters) return null;
+    const myRosterFull = leagueTargets.filter(p => p.owner === myTeam);
+    const oppRoster    = leagueTargets.filter(p => p.owner === inSeasonOpponent);
+    const sched = mlbSchedule && Object.keys(mlbSchedule).length > 0 ? mlbSchedule : null;
+    const myStats  = computeWeeklyStats(myRosterFull, sched);
+    const oppStats = computeWeeklyStats(oppRoster,    sched);
     return [...hitCats, ...pitchCats].map(cat => {
-      const myProj = catProjection.find(p => p.cat === cat);
-      const myScore = myProj?.myScore ?? 0;
-      const oppRoster = leagueTargets.filter(p => p.owner === inSeasonOpponent);
-      const oppScore = oppRoster.filter(p => p.cats?.includes(cat)).reduce((s, p) => s + p.score2026, 0);
-      const gap = myScore - oppScore;
-      const total = Math.max(myScore, oppScore, 0.1);
-      return { cat, myScore: Math.round(myScore*10)/10, oppScore: Math.round(oppScore*10)/10, gap: Math.round(gap*10)/10, close: Math.abs(gap)/total < 0.12 };
-    });
-  }, [inSeasonOpponent, catProjection, leagueTargets, hitCats, pitchCats, hasYahooRosters]);
+      const myVal  = myStats[cat]  ?? null;
+      const oppVal = oppStats[cat] ?? null;
+      if (myVal == null && oppVal == null) return null;
+      const lowerBetter = LOWER_BETTER.has(cat);
+      const gap     = myVal != null && oppVal != null ? myVal - oppVal : null;
+      const winning = gap != null ? (lowerBetter ? gap < 0 : gap > 0) : null;
+      const absDiff = gap != null ? Math.abs(gap) : 0;
+      const scale   = Math.max(Math.abs(myVal ?? 0), Math.abs(oppVal ?? 0), 0.01);
+      const close   = absDiff / scale < 0.12;
+      return { cat, myVal, oppVal, gap, winning, lowerBetter, close, isScheduled: sched != null };
+    }).filter(Boolean);
+  }, [inSeasonOpponent, leagueTargets, myTeam, hitCats, pitchCats, mlbSchedule, hasYahooRosters]);
 
   // Team rosters from keepers
   const teamRosters = useMemo(() => {
@@ -1504,32 +1570,57 @@ export default function DraftAssistant({ config }) {
 
                 {/* 1. Category Gap Analysis */}
                 <div style={{marginBottom:22}}>
-                  <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:8}}>Weekly Category Gap</div>
                   <div style={{display:"flex",gap:8,alignItems:"center",marginBottom:10,flexWrap:"wrap"}}>
-                    <span style={{fontSize:11,color:"#64748b"}}>vs:</span>
+                    <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase"}}>Weekly Matchup</div>
                     <select value={inSeasonOpponent??""} onChange={e=>setInSeasonOpponent(e.target.value||null)}
                       style={{background:"#1e293b",border:"1px solid #334155",color:"#e2e8f0",fontSize:11,padding:"3px 8px",borderRadius:3,fontFamily:"inherit",outline:"none"}}>
-                      <option value="">— pick opponent —</option>
+                      <option value="">— vs —</option>
                       {draftOrder.filter(t=>t!==myTeam).map(t=><option key={t} value={t}>{t}</option>)}
                     </select>
+                    {catGapAnalysis && <span style={{fontSize:9,color:"#334155"}}>{catGapAnalysis[0]?.isScheduled ? "scaled by this week's schedule" : "avg week (schedule loading)"}</span>}
                   </div>
                   {catGapAnalysis ? (
-                    <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
-                      {catGapAnalysis.map(({cat,myScore,oppScore,gap,close})=>{
-                        const winning = gap >= 0;
-                        const color = winning ? "#22c55e" : "#f87171";
-                        return (
-                          <div key={cat} style={{background:"#0d0f16",border:`1px solid ${close?"#f59e0b55":color+"22"}`,borderRadius:4,padding:"8px 10px",minWidth:64,textAlign:"center"}}>
-                            {close && <div style={{fontSize:7,color:"#f59e0b",letterSpacing:".08em",marginBottom:2}}>CLOSE</div>}
-                            <div style={{fontSize:12,fontWeight:600,color:"#f1f5f9"}}>{cat}</div>
-                            <div style={{fontSize:11,fontWeight:700,color}}>{winning&&gap>0?"+":""}{gap}</div>
-                            <div style={{fontSize:9,color:"#475569"}}>{myScore} vs {oppScore}</div>
-                          </div>
-                        );
-                      })}
+                    <div style={{overflowX:"auto"}}>
+                      {[["HITTING", hitCats], ["PITCHING", pitchCats]].map(([label, cats]) => (
+                        <div key={label} style={{marginBottom:12}}>
+                          <div style={{fontSize:9,color:"#334155",letterSpacing:".08em",textTransform:"uppercase",marginBottom:5}}>{label}</div>
+                          <table style={{borderCollapse:"collapse",width:"100%",fontSize:11}}>
+                            <thead>
+                              <tr>
+                                {["CAT","YOU","OPP","DIFF"].map(h=>(
+                                  <th key={h} style={{textAlign:h==="CAT"?"left":"right",color:"#334155",fontSize:9,fontWeight:400,letterSpacing:".08em",paddingBottom:3,paddingRight:12}}>{h}</th>
+                                ))}
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {cats.map(cat => {
+                                const row = catGapAnalysis.find(r => r.cat === cat);
+                                if (!row) return null;
+                                const {myVal, oppVal, gap, winning, lowerBetter, close} = row;
+                                const color = winning ? "#22c55e" : winning === false ? "#f87171" : "#475569";
+                                const diffSign = gap != null ? (lowerBetter ? -gap : gap) : null;
+                                return (
+                                  <tr key={cat} style={{borderTop:"1px solid #0d0f16"}}>
+                                    <td style={{padding:"3px 12px 3px 0",color:"#94a3b8",fontWeight:600}}>
+                                      {cat}
+                                      {close && <span style={{marginLeft:4,fontSize:8,color:"#f59e0b"}}>◆</span>}
+                                    </td>
+                                    <td style={{textAlign:"right",padding:"3px 12px 3px 0",color:"#f1f5f9"}}>{fmtStat(myVal,cat)}</td>
+                                    <td style={{textAlign:"right",padding:"3px 12px 3px 0",color:"#64748b"}}>{fmtStat(oppVal,cat)}</td>
+                                    <td style={{textAlign:"right",padding:"3px 0 3px 0",color,fontWeight:600}}>
+                                      {diffSign != null ? (diffSign > 0 ? "+" : "") + fmtStat(Math.abs(gap),cat) : "—"}
+                                    </td>
+                                  </tr>
+                                );
+                              })}
+                            </tbody>
+                          </table>
+                        </div>
+                      ))}
+                      <div style={{fontSize:9,color:"#334155",marginTop:2}}>◆ = close category (within 12%)</div>
                     </div>
                   ) : (
-                    <div style={{fontSize:11,color:"#334155"}}>Select an opponent to see category gaps.</div>
+                    <div style={{fontSize:11,color:"#334155"}}>Select an opponent to see matchup projections.</div>
                   )}
                 </div>
 
