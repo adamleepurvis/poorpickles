@@ -429,6 +429,7 @@ export default function DraftAssistant({ config }) {
   const [tab, setTab] = useState(config.draftMode !== false ? "board" : "inseason");
   const [rightTab, setRightTab] = useState("watch");
   const [syncStatus, setSyncStatus] = useState(null); // null | "loading" | {runUrl} | "error"
+  const [rosterSearch, setRosterSearch] = useState("");
   const [typeFilter, setTypeFilter] = useState("all");
   const [editingNote, setEditingNote] = useState(null);
   const [needsMode, setNeedsMode] = useState(false);
@@ -756,6 +757,7 @@ export default function DraftAssistant({ config }) {
           <div style={{flex:1,minWidth:0}}>
             <div style={{display:"flex",alignItems:"center",gap:6,flexWrap:"wrap"}}>
               <span style={{fontSize:15,color:"#f1f5f9",fontWeight:500}}>{t.name}</span>
+              {t.owner&&<span style={{fontSize:9,color:"#94a3b8",background:"#1e293b",padding:"1px 6px",borderRadius:3}}>{t.owner}</span>}
               {t.il&&<span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 4px",borderRadius:3}}>IL</span>}
               {t.est&&<span style={{fontSize:9,color:"#e2e8f0",background:"#1e293b",padding:"1px 4px",borderRadius:3}}>EST</span>}
               {t.eligible.map(p=>(
@@ -1071,7 +1073,7 @@ export default function DraftAssistant({ config }) {
         {/* CENTER */}
         <div style={{flex:1,display:"flex",flexDirection:"column",overflow:"hidden"}}>
           <div style={{background:"#0b0d14",borderBottom:"1px solid #1e293b",display:"flex",alignItems:"center",padding:"0 10px",flexShrink:0}}>
-            {[["board","FA Board"],["roster","My Roster"],["depth","Depth"],["cats","Categories"],["teams","Other Teams"],["log","Pick Log"],...(!draftMode&&hasYahooRosters?[["inseason","In-Season"]]:[])]
+            {[["board","FA Board"],["roster","My Roster"],["depth","Depth"],["cats","Categories"],["teams","Other Teams"],["log","Pick Log"],...(hasYahooRosters?[["rostered","Rostered"]]:[]),...(!draftMode&&hasYahooRosters?[["inseason","In-Season"]]:[])]
             .map(([v,l])=>(
               <button key={v} className="tabn" onClick={()=>setTab(v)}
                 style={{color:tab===v?"#84cc16":"#475569",borderBottom:tab===v?"2px solid #84cc16":"2px solid transparent"}}>
@@ -1101,6 +1103,14 @@ export default function DraftAssistant({ config }) {
                   disabled={syncStatus==="loading"}>
                   ↺ Sync Yahoo
                 </button>
+              </div>
+            )}
+            {tab==="rostered"&&(
+              <div style={{marginLeft:"auto",display:"flex",gap:3,alignItems:"center"}}>
+                <input value={rosterSearch} onChange={e=>setRosterSearch(e.target.value)}
+                  placeholder="search rostered..."
+                  style={{background:"#1e293b",border:"1px solid #334155",borderRadius:3,color:"#e2e8f0",fontSize:11,padding:"3px 8px",width:140,fontFamily:"inherit",outline:"none"}}
+                  onKeyDown={e=>e.key==="Escape"&&setRosterSearch("")}/>
               </div>
             )}
             {tab==="board"&&(
@@ -1192,6 +1202,20 @@ export default function DraftAssistant({ config }) {
               {filtered.map((t,idx) => renderCard(t, idx, watchList.includes(t.name)))}
             </div>
           )}
+
+          {/* ROSTERED PLAYERS */}
+          {tab==="rostered"&&(()=>{
+            const q = normalizeName(rosterSearch);
+            const rosteredPlayers = leagueTargets
+              .filter(p => p.rostered && (!q || normalizeName(p.name).includes(q)))
+              .sort((a,b) => (b.score2026??0) - (a.score2026??0));
+            return (
+              <div style={{flex:1,overflowY:"auto",padding:12}}>
+                {rosteredPlayers.length===0&&<div style={{textAlign:"center",color:"#475569",padding:40}}>No rostered players found.</div>}
+                {rosteredPlayers.map((t,i) => renderCard(t, i, watchList.includes(t.name)))}
+              </div>
+            );
+          })()}
 
           {/* MY ROSTER */}
           {tab==="roster"&&(()=>{
