@@ -1,0 +1,85 @@
+name: Yahoo Sync
+
+on:
+  workflow_dispatch:
+    inputs:
+      league:
+        description: 'League to sync'
+        default: 'all'
+        type: choice
+        options: [all, poor_pickles, south_ossetian, spaghett]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Python deps
+        run: pip install yfpy python-dotenv
+
+      - name: Install Node deps
+        run: npm ci
+        working-directory: dynasty-draft
+
+      - name: Restore Yahoo token
+        run: |
+          mkdir -p dynasty-draft/data/.yahoo_token
+          printf '%s' "$YAHOO_TOKEN_ENV" | base64 -d > dynasty-draft/data/.yahoo_token/.env
+        env:
+          YAHOO_TOKEN_ENV: ${{ secrets.YAHOO_TOKEN_ENV }}
+
+      - name: Create .env
+        run: |
+          echo "YAHOO_CONSUMER_KEY=${{ secrets.YAHOO_CONSUMER_KEY }}" > dynasty-draft/.env
+          echo "YAHOO_CONSUMER_SECRET=${{ secrets.YAHOO_CONSUMER_SECRET }}" >> dynasty-draft/.env
+
+      - name: Configure git
+        run: |
+          git config user.email "adam.lee.purvis@gmail.com"
+          git config user.name "Adam Lee Purvis"
+
+      - name: Sync selected league
+        if: inputs.league != 'all'
+        run: |
+          cd dynasty-draft
+          python3 data/build.py --skip-zar --league ${{ inputs.league }}
+
+      - name: Sync all leagues + build + push
+        if: inputs.league == 'all'
+        run: bash sync.sh
+
+      - name: Build + push (single league)
+        if: inputs.league != 'all'
+        run: |
+          cd dynasty-draft && npm run build
+          cd ..
+          git add dynasty-draft/data/targets_${{ inputs.league }}.json \
+                  dynasty-draft/data/yahoo_data_${{ inputs.league }}.json \
+                  dynasty-draft/dist/
+          git diff --cached --quiet && echo "Nothing changed." && exit 0
+          git commit -m "Yahoo sync ${{ inputs.league }} $(date '+%Y-%m-%d %H:%M')"
+          git push
+
+      - name: Update token secret (if refreshed)
+        if: always() && secrets.GH_PAT != ''
+        run: |
+          if [ -f "dynasty-draft/data/.yahoo_token/.env" ]; then
+            NEW_TOKEN=$(base64 -w 0 dynasty-draft/data/.yahoo_token/.env)
+            gh secret set YAHOO_TOKEN_ENV --body "$NEW_TOKEN"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}

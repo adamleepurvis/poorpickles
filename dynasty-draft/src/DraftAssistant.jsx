@@ -428,6 +428,7 @@ export default function DraftAssistant({ config }) {
   useEffect(() => { localStorage.setItem(lsKey, JSON.stringify(watchList)); }, [watchList]);
   const [tab, setTab] = useState(config.draftMode !== false ? "board" : "inseason");
   const [rightTab, setRightTab] = useState("watch");
+  const [syncStatus, setSyncStatus] = useState(null); // null | "loading" | {runUrl} | "error"
   const [typeFilter, setTypeFilter] = useState("all");
   const [editingNote, setEditingNote] = useState(null);
   const [needsMode, setNeedsMode] = useState(false);
@@ -1077,8 +1078,33 @@ export default function DraftAssistant({ config }) {
                 {l}
               </button>
             ))}
+            {!draftMode&&hasYahooRosters&&(
+              <div style={{marginLeft:"auto",display:"flex",gap:6,alignItems:"center"}}>
+                {syncStatus==="loading"?(
+                  <span style={{fontSize:10,color:"#64748b"}}>syncing…</span>
+                ):syncStatus&&syncStatus.runUrl?(
+                  <><span style={{fontSize:10,color:"#22c55e"}}>✓ syncing</span>
+                  <a href={syncStatus.runUrl} target="_blank" rel="noreferrer"
+                    style={{fontSize:10,color:"#64748b",textDecoration:"underline"}}>watch</a></>
+                ):syncStatus==="error"?(
+                  <span style={{fontSize:10,color:"#ef4444"}}>sync failed</span>
+                ):null}
+                <button onClick={async()=>{
+                  setSyncStatus("loading");
+                  try {
+                    const r = await fetch("/api/trigger-sync",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({league:"all"})});
+                    const d = await r.json();
+                    setSyncStatus(r.ok?{runUrl:d.runUrl}:"error");
+                  } catch { setSyncStatus("error"); }
+                }} style={{fontSize:10,background:"#1e293b",color:"#94a3b8",border:"1px solid #334155",
+                  borderRadius:3,padding:"2px 8px",cursor:"pointer",fontFamily:"inherit"}}
+                  disabled={syncStatus==="loading"}>
+                  ↺ Sync Yahoo
+                </button>
+              </div>
+            )}
             {tab==="board"&&(
-              <div style={{marginLeft:"auto",display:"flex",gap:3,alignItems:"center",flexWrap:"wrap"}}>
+              <div style={{marginLeft:(!draftMode&&hasYahooRosters)?"4px":"auto",display:"flex",gap:3,alignItems:"center",flexWrap:"wrap"}}>
                 <input value={search} onChange={e=>setSearch(e.target.value)}
                   placeholder="search..."
                   style={{background:"#1e293b",border:"1px solid #334155",borderRadius:3,color:"#e2e8f0",fontSize:11,padding:"3px 8px",width:110,fontFamily:"inherit",outline:"none"}}
