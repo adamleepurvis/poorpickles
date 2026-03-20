@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-20T02:21:50.572293",
+  "generated": "2026-03-20T02:50:18.368117",
   "count": 1003,
   "players": [
     {
@@ -2128,7 +2128,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Munetaka Murakami",
@@ -4207,7 +4208,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Cody Bellinger",
@@ -6201,7 +6203,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Wyatt Langford",
@@ -6463,7 +6466,8 @@
       "fpRank": 21,
       "fpAdp": 22.8,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Aaron Ashby",
@@ -7453,7 +7457,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Shohei Ohtani",
@@ -7884,7 +7889,8 @@
       "fpRank": 57,
       "fpAdp": 85.8,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Mason Englert",
@@ -8365,7 +8371,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL60"
     },
     {
       "name": "Gabe Speier",
@@ -8910,7 +8917,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Tony Santillan",
@@ -9088,7 +9096,8 @@
       "fpRank": 68,
       "fpAdp": 100.6,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Nick Lodolo",
@@ -9337,7 +9346,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Reid Detmers",
@@ -10074,7 +10084,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL60"
     },
     {
       "name": "Will Vest",
@@ -10569,7 +10580,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Braxton Garrett",
@@ -12189,7 +12201,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Jason Adam",
@@ -12249,7 +12262,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Ryan Thompson",
@@ -12430,7 +12444,8 @@
       "fpRank": 85,
       "fpAdp": 134.0,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Edwin Uceta",
@@ -12490,7 +12505,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "John Schreiber",
@@ -13017,7 +13033,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Anthony Bender",
@@ -13627,7 +13644,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Drey Jameson",
@@ -13656,7 +13674,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 59.0,
       "projStats": {
@@ -13683,7 +13701,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Luis Garc\u00eda Jr.",
@@ -14360,7 +14379,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Kyle Stowers",
@@ -15355,7 +15375,8 @@
       "fpRank": 150,
       "fpAdp": 244.6,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Jos\u00e9 Soriano",
@@ -15508,7 +15529,7 @@
         "BB9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 98.1,
       "projStats": {
@@ -15535,7 +15556,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Jordan Leasure",
@@ -16275,7 +16297,7 @@
         "R",
         "OBP"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 477,
       "score2026_neutral": 5.9,
@@ -16305,7 +16327,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Jordan Westburg",
@@ -16363,7 +16386,8 @@
       "fpRank": 102,
       "fpAdp": 173.0,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Zack Kelly",
@@ -16726,7 +16750,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Carlos Vargas",
@@ -17442,7 +17467,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Sean Manaea",
@@ -17742,7 +17768,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Jonathan Bowlan",
@@ -18985,7 +19012,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Trevor Megill",
@@ -19521,7 +19549,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "JoJo Romero",
@@ -19818,7 +19847,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Cionel P\u00e9rez",
@@ -20390,7 +20420,7 @@
         "WHIP",
         "NSVH"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 61.0,
       "projStats": {
@@ -20417,7 +20447,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Caleb Thielbar",
@@ -20538,7 +20569,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Mark Leiter Jr.",
@@ -22699,7 +22731,7 @@
       "cats_5x5": [
         "OBP"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 478,
       "score2026_neutral": 5.3,
@@ -22729,7 +22761,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Noelvi Marte",
@@ -23213,7 +23246,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Grant Holmes",
@@ -24276,7 +24310,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Robert Stephenson",
@@ -24331,7 +24366,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Anthony Banda",
@@ -24504,7 +24540,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "TJ Friedl",
@@ -26167,7 +26204,8 @@
       "fpRank": 220,
       "fpAdp": 372.3,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Chase DeLauter",
@@ -26342,7 +26380,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Jackson Holliday",
@@ -26402,7 +26441,8 @@
       "fpRank": 96,
       "fpAdp": 163.0,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Willi Castro",
@@ -26581,7 +26621,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Spencer Horwitz",
@@ -27345,7 +27386,8 @@
       "fpRank": 210,
       "fpAdp": 349.2,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Eduardo Rodriguez",
@@ -27573,7 +27615,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Bradgley Rodriguez",
@@ -28112,7 +28155,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Chris Bassitt",
@@ -28290,7 +28334,8 @@
       "fpRank": 309,
       "fpAdp": 674.0,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Mason Miller",
@@ -28387,7 +28432,7 @@
         "WHIP",
         "NSVH"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 70.0,
       "projStats": {
@@ -28414,7 +28459,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Zack Littell",
@@ -28765,7 +28811,8 @@
       "fpRank": 245,
       "fpAdp": 364.0,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Brandon Marsh",
@@ -29089,7 +29136,7 @@
       "cats_5x5": [
         "SB"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 366,
       "score2026_neutral": 4.0,
@@ -29119,7 +29166,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Matt McLain",
@@ -29326,7 +29374,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 50.0,
       "projStats": {
@@ -29353,7 +29401,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Marcell Ozuna",
@@ -30468,7 +30517,8 @@
       "fpRank": 132,
       "fpAdp": 219.2,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Luis Morales",
@@ -30911,7 +30961,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 52.0,
       "projStats": {
@@ -30938,7 +30988,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Jhoan Duran",
@@ -31344,7 +31395,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Cole Sulser",
@@ -31780,7 +31832,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 92.3,
       "projStats": {
@@ -31807,7 +31859,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Paul Sewald",
@@ -32748,7 +32801,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Brent Headrick",
@@ -32978,7 +33032,8 @@
       "fpRank": 192,
       "fpAdp": 312.4,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Spencer Arrighetti",
@@ -33214,7 +33269,8 @@
       "fpRank": 185,
       "fpAdp": 304.4,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Aaron Civale",
@@ -33925,7 +33981,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Tyler Ferguson",
@@ -34103,7 +34160,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Bryan Hudson",
@@ -34698,7 +34756,8 @@
       "fpRank": 268,
       "fpAdp": 609.0,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Pete Fairbanks",
@@ -35080,7 +35139,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 302,
       "score2026_neutral": 2.1,
@@ -35110,7 +35169,8 @@
       "fpRank": 211,
       "fpAdp": 358.0,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Austin Hays",
@@ -35318,7 +35378,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 37.8,
       "projStats": {
@@ -35345,7 +35405,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL60"
     },
     {
       "name": "Justin Verlander",
@@ -36411,7 +36472,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Ryan McMahon",
@@ -36553,7 +36615,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 350,
       "score2026_neutral": 2.9,
@@ -36583,7 +36645,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Taylor Rogers",
@@ -36842,7 +36905,7 @@
         "IP"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 135.3,
       "projStats": {
@@ -36869,7 +36932,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "David Bednar",
@@ -37111,7 +37175,8 @@
       "fpRank": 280,
       "fpAdp": 791.5,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Ha-Seong Kim",
@@ -37171,7 +37236,8 @@
       "fpRank": 239,
       "fpAdp": 381.0,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Bailey Falter",
@@ -37537,7 +37603,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 54.0,
       "projStats": {
@@ -37564,7 +37630,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Sean Murphy",
@@ -37623,7 +37690,8 @@
       "fpRank": 258,
       "fpAdp": 406.5,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Miguel Andujar",
@@ -37736,7 +37804,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Victor Caratini",
@@ -38183,7 +38252,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 44.0,
       "projStats": {
@@ -38210,7 +38279,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Lake Bachar",
@@ -38295,7 +38365,7 @@
         "AVG"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 218,
       "score2026_neutral": 2.5,
@@ -38325,7 +38395,8 @@
       "fpRank": 285,
       "fpAdp": 449.0,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL60"
     },
     {
       "name": "Beau Brieske",
@@ -39496,7 +39567,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Ian Seymour",
@@ -39723,7 +39795,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Kyle Freeland",
@@ -39874,7 +39947,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 305,
       "score2026_neutral": 1.7,
@@ -39904,7 +39977,8 @@
       "fpRank": 256,
       "fpAdp": 436.7,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "George Klassen",
@@ -40105,7 +40179,7 @@
         "BB9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 48.0,
       "projStats": {
@@ -40132,7 +40206,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Alek Thomas",
@@ -40545,7 +40620,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Matt Shaw",
@@ -40868,7 +40944,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 45.0,
       "projStats": {
@@ -40895,7 +40971,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Jake Bauers",
@@ -41249,7 +41326,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Troy Melton",
@@ -41281,7 +41359,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 53.3,
       "projStats": {
@@ -41308,7 +41386,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL60"
     },
     {
       "name": "Ram\u00f3n Ur\u00edas",
@@ -41463,7 +41542,7 @@
         "ERA",
         "WHIP"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 42.0,
       "projStats": {
@@ -41490,7 +41569,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL60"
     },
     {
       "name": "Griffin Conine",
@@ -41669,7 +41749,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "River Ryan",
@@ -41699,7 +41780,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 53.9,
       "projStats": {
@@ -41726,7 +41807,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Luis Campusano",
@@ -41985,7 +42067,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 55.4,
       "projStats": {
@@ -42012,7 +42094,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Payton Tolle",
@@ -42099,7 +42182,7 @@
         "ERA",
         "WHIP"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 28.0,
       "projStats": {
@@ -42126,7 +42209,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL60"
     },
     {
       "name": "Jake Mangum",
@@ -42407,7 +42491,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Justin Hagenman",
@@ -42440,7 +42525,7 @@
         "ERA",
         "WHIP"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 27.0,
       "projStats": {
@@ -42467,7 +42552,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL60"
     },
     {
       "name": "John Brebbia",
@@ -42584,7 +42670,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Brad Lord",
@@ -42930,7 +43017,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Kody Clemens",
@@ -43080,7 +43168,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 32.0,
       "projStats": {
@@ -43107,7 +43195,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL60"
     },
     {
       "name": "Jos\u00e9 Suarez",
@@ -43224,7 +43313,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Colton Gordon",
@@ -43628,7 +43718,8 @@
       "fpRank": 317,
       "fpAdp": 721.5,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Edmundo Sosa",
@@ -43832,7 +43923,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 53.5,
       "projStats": {
@@ -43859,7 +43950,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Sawyer Gipson-Long",
@@ -43971,7 +44063,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Julian Fern\u00e1ndez",
@@ -44002,7 +44095,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 38.0,
       "projStats": {
@@ -44029,7 +44122,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Adbert Alzolay",
@@ -44392,7 +44486,7 @@
       "cats_5x5": [
         "OBP"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 221,
       "score2026_neutral": 1.7,
@@ -44422,7 +44516,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Carson Williams",
@@ -44451,7 +44546,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 313,
       "score2026_neutral": 0.6,
@@ -44481,7 +44576,8 @@
       "fpRank": 287,
       "fpAdp": 449.5,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Carson Benge",
@@ -44687,7 +44783,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 33.0,
       "projStats": {
@@ -44714,7 +44810,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL60"
     },
     {
       "name": "Brady Basso",
@@ -44743,7 +44840,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 34.0,
       "projStats": {
@@ -44770,7 +44867,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "JP Sears",
@@ -45403,7 +45501,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Jesse Scholtens",
@@ -45430,7 +45529,7 @@
         "BB9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 36.0,
       "projStats": {
@@ -45457,7 +45556,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Rowdy Tellez",
@@ -45486,7 +45586,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 184,
       "score2026_neutral": 0.7,
@@ -45516,7 +45616,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Joey Bart",
@@ -45811,7 +45912,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Blaine Crim",
@@ -45956,7 +46058,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 25.9,
       "projStats": {
@@ -45983,7 +46085,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL60"
     },
     {
       "name": "Yaramil Hiraldo",
@@ -46155,7 +46258,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Jeremiah Jackson",
@@ -46712,7 +46816,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 210,
       "score2026_neutral": 0.6,
@@ -46742,7 +46846,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Brandon Williamson",
@@ -46910,7 +47015,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Colin Selby",
@@ -46941,7 +47047,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 45.0,
       "projStats": {
@@ -46968,7 +47074,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL60"
     },
     {
       "name": "Shane Drohan",
@@ -47049,7 +47156,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 47.0,
       "projStats": {
@@ -47076,7 +47183,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Austin Warren",
@@ -47825,7 +47933,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Luis Medina",
@@ -47991,7 +48100,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Yariel Rodr\u00edguez",
@@ -48074,7 +48184,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 42.0,
       "projStats": {
@@ -48101,7 +48211,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Jonathan Pintaro",
@@ -48130,7 +48241,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 33.2,
       "projStats": {
@@ -48157,7 +48268,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Ryan Fernandez",
@@ -48242,7 +48354,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 28.0,
       "projStats": {
@@ -48269,7 +48381,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Colin Holderman",
@@ -48413,7 +48526,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 164,
       "score2026_neutral": 0.7,
@@ -48443,7 +48556,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Jonathan Cannon",
@@ -48834,7 +48948,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Andrew Walters",
@@ -48889,7 +49004,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Michael Lorenzen",
@@ -48979,7 +49095,7 @@
         "ERA",
         "WHIP"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 43.0,
       "projStats": {
@@ -49006,7 +49122,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Javier B\u00e1ez",
@@ -49155,7 +49272,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 40.0,
       "projStats": {
@@ -49182,7 +49299,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Jos\u00e9 Urquidy",
@@ -49444,7 +49562,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 36.0,
       "projStats": {
@@ -49471,7 +49589,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Austin Peterson",
@@ -49499,7 +49618,7 @@
         "BB9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 30.5,
       "projStats": {
@@ -49526,7 +49645,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Paxton Schultz",
@@ -50300,7 +50420,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 55.1,
       "projStats": {
@@ -50327,7 +50447,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Kyle Nicolas",
@@ -50410,7 +50531,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 26.2,
       "projStats": {
@@ -50437,7 +50558,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "John Klein",
@@ -50467,7 +50589,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 41.2,
       "projStats": {
@@ -50494,7 +50616,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Anthony Nunez",
@@ -50521,7 +50644,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 28.0,
       "projStats": {
@@ -50548,7 +50671,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Yerry De los Santos",
@@ -50632,7 +50756,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 34.0,
       "projStats": {
@@ -50659,7 +50783,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Ty Adcock",
@@ -50688,7 +50813,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 26.0,
       "projStats": {
@@ -50715,7 +50840,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Gunnar Hoglund",
@@ -50967,7 +51093,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 38.0,
       "projStats": {
@@ -50994,7 +51120,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Luis Torrens",
@@ -51258,7 +51385,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 34.0,
       "projStats": {
@@ -51285,7 +51412,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Josiah Gray",
@@ -51483,7 +51611,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 32.0,
       "projStats": {
@@ -51510,7 +51638,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Albert Su\u00e1rez",
@@ -51649,7 +51778,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 30.0,
       "projStats": {
@@ -51676,7 +51805,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Tyler Anderson",
@@ -51761,7 +51891,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 253,
       "score2026_neutral": 0.7,
@@ -51791,7 +51921,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Cody Freeman",
@@ -51850,7 +51981,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Troy Taylor",
@@ -52051,7 +52183,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 37.0,
       "projStats": {
@@ -52078,7 +52210,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Tim Mayza",
@@ -52107,7 +52240,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 31.0,
       "projStats": {
@@ -52134,7 +52267,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Braxton Fulford",
@@ -52391,7 +52525,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 40.0,
       "projStats": {
@@ -52418,7 +52552,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Ryan Watson",
@@ -52641,7 +52776,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Robinson Ortiz",
@@ -52670,7 +52806,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 40.0,
       "projStats": {
@@ -52697,7 +52833,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Jos\u00e9 Fermin",
@@ -53192,7 +53329,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 64.2,
       "projStats": {
@@ -53219,7 +53356,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Jaden Hill",
@@ -53417,7 +53555,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 58.0,
       "projStats": {
@@ -53444,7 +53582,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Doug Nikhazy",
@@ -53611,7 +53750,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Chris Roycroft",
@@ -53947,7 +54087,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Bailey Horn",
@@ -54003,7 +54144,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Paul Gervase",
@@ -54030,7 +54172,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 33.0,
       "projStats": {
@@ -54057,7 +54199,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Cameron Foster",
@@ -54086,7 +54229,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 32.0,
       "projStats": {
@@ -54113,7 +54256,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Gavin Hollowell",
@@ -54478,7 +54622,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 41.0,
       "projStats": {
@@ -54505,7 +54649,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Darell Hernaiz",
@@ -54838,7 +54983,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 185,
       "score2026_neutral": 0.4,
@@ -54868,7 +55013,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Jorge L\u00f3pez",
@@ -54898,7 +55044,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 30.0,
       "projStats": {
@@ -54925,7 +55071,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Alek Jacob",
@@ -55010,7 +55157,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 184,
       "score2026_neutral": 0.3,
@@ -55040,7 +55187,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Tomoyuki Sugano",
@@ -55362,7 +55510,7 @@
         "AVG"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 44.7,
       "projStats": {
@@ -55389,7 +55537,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Thomas White",
@@ -55418,7 +55567,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 27.7,
       "projStats": {
@@ -55445,7 +55594,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "JR Ritchie",
@@ -55474,7 +55624,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 36.9,
       "projStats": {
@@ -55501,7 +55651,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Chase Petty",
@@ -55639,7 +55790,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 42.0,
       "projStats": {
@@ -55666,7 +55817,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Welinton Herrera",
@@ -55695,7 +55847,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 30.0,
       "projStats": {
@@ -55722,7 +55874,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Tommy Kahnle",
@@ -55752,7 +55905,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 48.0,
       "projStats": {
@@ -55779,7 +55932,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Prelander Berroa",
@@ -55834,7 +55988,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Alexis D\u00edaz",
@@ -55863,7 +56018,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 44.0,
       "projStats": {
@@ -55890,7 +56045,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Jayden Murray",
@@ -55920,7 +56076,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 30.0,
       "projStats": {
@@ -55947,7 +56103,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Jake Rogers",
@@ -56006,7 +56163,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Hunter Feduccia",
@@ -56094,7 +56252,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 194,
       "score2026_neutral": 0.2,
@@ -56124,7 +56282,8 @@
       "fpRank": 263,
       "fpAdp": 417.5,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Joe Mack",
@@ -56153,7 +56312,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 206,
       "score2026_neutral": 0.0,
@@ -56183,7 +56342,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "David Hamilton",
@@ -56274,7 +56434,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 206,
       "score2026_neutral": 0.0,
@@ -56304,7 +56464,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Travis Bazzana",
@@ -56333,7 +56494,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 179,
       "score2026_neutral": 0.0,
@@ -56363,7 +56524,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "James McCann",
@@ -56601,7 +56763,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Oswald Peraza",
@@ -56693,7 +56856,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 195,
       "score2026_neutral": 0.2,
@@ -56723,7 +56886,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Richie Palacios",
@@ -57057,7 +57221,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 156,
       "score2026_neutral": 0.2,
@@ -57087,7 +57251,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Myles Straw",
@@ -57179,7 +57344,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 163,
       "score2026_neutral": 0.0,
@@ -57209,7 +57374,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Bryce Teodosio",
@@ -57525,7 +57691,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 46.2,
       "projStats": {
@@ -57552,7 +57718,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Drew Thorpe",
@@ -57637,7 +57804,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 27.7,
       "projStats": {
@@ -57664,7 +57831,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Caden Dana",
@@ -57803,7 +57971,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 37.7,
       "projStats": {
@@ -57830,7 +57998,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Wade Miley",
@@ -57913,7 +58082,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 34.5,
       "projStats": {
@@ -57940,7 +58109,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Gabriel Hughes",
@@ -57967,7 +58137,7 @@
         "AVG"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 31.2,
       "projStats": {
@@ -57994,7 +58164,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "McCade Brown",
@@ -58240,7 +58411,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 40.0,
       "projStats": {
@@ -58267,7 +58438,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Dan Altavilla",
@@ -58520,7 +58692,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 26.0,
       "projStats": {
@@ -58547,7 +58719,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Bryse Wilson",
@@ -58630,7 +58803,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 27.0,
       "projStats": {
@@ -58657,7 +58830,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Luis Mey",
@@ -58687,7 +58861,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 34.0,
       "projStats": {
@@ -58714,7 +58888,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Jayvien Sandridge",
@@ -58741,7 +58916,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 26.0,
       "projStats": {
@@ -58768,7 +58943,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Cam Sanders",
@@ -59017,7 +59193,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 32.0,
       "projStats": {
@@ -59044,7 +59220,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Brandan Bidois",
@@ -59073,7 +59250,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 42.0,
       "projStats": {
@@ -59100,7 +59277,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Tayron Guerrero",
