@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-16T22:07:51.486944",
+  "generated": "2026-03-20T02:19:01.460951",
   "league_key": "469.l.91300",
   "settings": {
     "league_key": "469.l.91300",
@@ -18,7 +18,7 @@
       "ERA",
       "WHIP"
     ],
-    "fetched_at": "2026-03-16T22:07:52.495004"
+    "fetched_at": "2026-03-20T02:19:02.029545"
   },
   "draft_results": [
     {
@@ -7038,6 +7038,10 @@
     "Esteury Ruiz": [
       "CF",
       "LF"
+    ],
+    "Nelson Vel\u00e1zquez": [
+      "LF",
+      "RF"
     ],
     "Alan Roden": [
       "LF",
