@@ -75,8 +75,9 @@ jobs:
           git push
 
       - name: Update token secret (if refreshed)
-        if: always() && secrets.GH_PAT != ''
+        if: always()
         run: |
+          if [ -z "$GH_TOKEN" ]; then echo "GH_PAT not set, skipping token update."; exit 0; fi
           if [ -f "dynasty-draft/data/.yahoo_token/.env" ]; then
             NEW_TOKEN=$(base64 -w 0 dynasty-draft/data/.yahoo_token/.env)
             gh secret set YAHOO_TOKEN_ENV --body "$NEW_TOKEN"
