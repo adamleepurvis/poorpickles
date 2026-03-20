@@ -1073,7 +1073,7 @@ export default function DraftAssistant({ config }) {
         {/* CENTER */}
         <div style={{flex:1,display:"flex",flexDirection:"column",overflow:"hidden"}}>
           <div style={{background:"#0b0d14",borderBottom:"1px solid #1e293b",display:"flex",alignItems:"center",padding:"0 10px",flexShrink:0}}>
-            {[["board","FA Board"],["roster","My Roster"],["depth","Depth"],["cats","Categories"],["teams","Other Teams"],["log","Pick Log"],...(hasYahooRosters?[["rostered","Rostered"]]:[]),...(!draftMode&&hasYahooRosters?[["inseason","In-Season"]]:[])]
+            {[["board","FA Board"],["roster","My Roster"],["depth","Depth"],["cats","Categories"],["teams","Other Teams"],...(draftMode!==false?[["log","Pick Log"]]:[]),...(hasYahooRosters?[["rostered","Rostered"]]:[]),...(!draftMode&&hasYahooRosters?[["inseason","In-Season"]]:[])]
             .map(([v,l])=>(
               <button key={v} className="tabn" onClick={()=>setTab(v)}
                 style={{color:tab===v?"#84cc16":"#475569",borderBottom:tab===v?"2px solid #84cc16":"2px solid transparent"}}>
