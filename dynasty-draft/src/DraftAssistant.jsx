@@ -1208,7 +1208,16 @@ export default function DraftAssistant({ config }) {
             const q = normalizeName(rosterSearch);
             const rosteredPlayers = leagueTargets
               .filter(p => p.rostered && (!q || normalizeName(p.name).includes(q)))
-              .sort((a,b) => (b.score2026??0) - (a.score2026??0));
+              .sort((a,b) => (b.score2026??0) - (a.score2026??0))
+              .map(p => ({
+                draftNowScore: p.score2026 ?? 0,
+                baseScore: p.score2026 ?? 0,
+                scarcity: {vor: 0, scarcePos: p.eligible?.[0] ?? ""},
+                urgency: 0,
+                cats: p.eligible ?? [],
+                stealScore: null,
+                ...p,
+              }));
             return (
               <div style={{flex:1,overflowY:"auto",padding:12}}>
                 {rosteredPlayers.length===0&&<div style={{textAlign:"center",color:"#475569",padding:40}}>No rostered players found.</div>}
