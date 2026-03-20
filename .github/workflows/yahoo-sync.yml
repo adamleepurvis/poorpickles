@@ -32,7 +32,7 @@ jobs:
         run: pip install yfpy python-dotenv
 
       - name: Install Node deps
-        run: npm ci
+        run: npm install
         working-directory: dynasty-draft
 
       - name: Restore Yahoo token
