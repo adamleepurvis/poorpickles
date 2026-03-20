@@ -758,7 +758,9 @@ export default function DraftAssistant({ config }) {
             <div style={{display:"flex",alignItems:"center",gap:6,flexWrap:"wrap"}}>
               <span style={{fontSize:15,color:"#f1f5f9",fontWeight:500}}>{t.name}</span>
               {t.owner&&<span style={{fontSize:9,color:"#94a3b8",background:"#1e293b",padding:"1px 6px",borderRadius:3}}>{t.owner}</span>}
-              {t.il&&<span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 4px",borderRadius:3}}>IL</span>}
+              {t.il&&<span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 4px",borderRadius:3}}>{t.yahoo_status||"IL"}</span>}
+              {!t.il&&t.yahoo_status==="DTD"&&<span style={{fontSize:9,color:"#fb923c",background:"#7c2d1233",padding:"1px 4px",borderRadius:3}}>DTD</span>}
+              {!t.il&&t.yahoo_status==="O"&&<span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 4px",borderRadius:3}}>OUT</span>}
               {t.est&&<span style={{fontSize:9,color:"#e2e8f0",background:"#1e293b",padding:"1px 4px",borderRadius:3}}>EST</span>}
               {t.eligible.map(p=>(
                 <span key={p} style={{fontSize:9,color:"#f1f5f9",background:"#1e293b",padding:"1px 5px",borderRadius:3,border:"1px solid #334155"}}>{p}</span>

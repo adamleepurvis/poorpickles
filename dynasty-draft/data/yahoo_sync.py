@@ -503,6 +503,71 @@ def sync_projected_stats(query):
     return projections
 
 
+# ─── INJURY STATUS ───────────────────────────────────────────────────────────
+
+# Yahoo status codes that indicate injury / unavailability
+INJURY_STATUSES = {"DTD", "O", "IL10", "IL15", "IL60", "IL", "NA", "SUSP"}
+
+def sync_injury_status(query):
+    """
+    Fetch real-time injury/DTD status for MLB players.
+    Queries each position WITHOUT the status=A filter so DTD/IL players appear.
+    Returns dict of player_name -> status string (e.g. "DTD", "IL10", "O").
+    """
+    QUERY_POSITIONS = ["C", "1B", "2B", "3B", "SS", "LF", "CF", "RF", "SP", "RP"]
+    game_key = "469"
+    session  = query.oauth.session
+    statuses = {}
+
+    for pos in QUERY_POSITIONS:
+        print(f"    Fetching injuries {pos}...", end=" ", flush=True)
+        found = 0
+        start = 0
+        page_size = 25
+        while True:
+            url = (
+                f"https://fantasysports.yahooapis.com/fantasy/v2/"
+                f"games;game_keys={game_key}/players"
+                f";position={pos};count={page_size};start={start}?format=json"
+            )
+            try:
+                resp = session.get(url)
+                if resp.status_code != 200:
+                    break
+                data = resp.json()
+                players_raw = (data.get("fantasy_content", {})
+                                   .get("games", {}).get("0", {})
+                                   .get("game", [{}, {}])[1]
+                                   .get("players", {}))
+                returned = int(players_raw.get("count", 0))
+                for k, v in players_raw.items():
+                    if k == "count":
+                        continue
+                    try:
+                        player_list = v["player"][0]
+                        name = next(
+                            (x["name"]["full"] for x in player_list if "name" in x), None
+                        )
+                        status = next(
+                            (x["status"] for x in player_list if "status" in x), ""
+                        )
+                        if name and status and status.upper() in INJURY_STATUSES:
+                            statuses[name] = status.upper()
+                            found += 1
+                    except Exception:
+                        continue
+                start += page_size
+                if returned < page_size or start >= 500:
+                    break
+            except Exception as e:
+                print(f"(error: {e})")
+                break
+        print(f"{found} injured")
+
+    print(f"    Total: {len(statuses)} players with injury/DTD status")
+    return statuses
+
+
 # ─── ENTRY POINT ─────────────────────────────────────────────────────────────
 
 LEAGUE_KEYS = {
@@ -560,6 +625,9 @@ def main():
 
     print("  Fetching Yahoo projected stats...")
     data["yahoo_projections"] = sync_projected_stats(query)
+
+    print("  Fetching injury/DTD status...")
+    data["player_status"] = sync_injury_status(query)
 
     OUTPUT_FILE.write_text(json.dumps(data, indent=2))
     print(f"\nWrote {OUTPUT_FILE}")

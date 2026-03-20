@@ -276,6 +276,7 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
     ownership = yahoo_data.get("ownership", {})
     yahoo_eligibility = yahoo_data.get("player_eligibility", {})
     yahoo_proj_scores = score_yahoo_projections(yahoo_data.get("yahoo_projections", {}), zar_scores)
+    yahoo_status = yahoo_data.get("player_status", {})
 
     # Build owner map: player name -> Yahoo team name
     owner_map = {}
@@ -311,6 +312,12 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
         p["scoreYahoo"] = yahoo_proj_scores.get(name, None)
         if name in yahoo_projections_raw:
             p["yahooProj"] = yahoo_projections_raw[name]
+        if name in yahoo_status:
+            status = yahoo_status[name]
+            p["yahoo_status"] = status
+            # Promote IL-type statuses to the existing il flag
+            if status.startswith("IL") or status in ("NA", "SUSP"):
+                p["il"] = True
 
     return players
 
