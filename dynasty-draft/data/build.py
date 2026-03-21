@@ -324,12 +324,16 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
 
 # ─── STEP 4: WRITE OUTPUTS ───────────────────────────────────────────────────
 
-def write_targets(players: list[dict], dry_run: bool):
+def write_targets(players: list[dict], yahoo_data: dict, dry_run: bool):
     output = {
         "generated": datetime.now().isoformat(),
         "count":     len(players),
         "players":   players,
     }
+    if yahoo_data.get("scoreboard"):
+        output["scoreboard"] = yahoo_data["scoreboard"]
+    if yahoo_data.get("standings"):
+        output["standings"] = yahoo_data["standings"]
     if dry_run:
         print(f"\n[DRY RUN] Would write {len(players)} players to {OUTPUT_FILE}")
         return
@@ -489,7 +493,7 @@ def main():
     print(f"  Merged {len(players)} players")
 
     # Write outputs
-    write_targets(players, args.dry_run)
+    write_targets(players, yahoo_data, args.dry_run)
     write_league_config(yahoo_data, args.dry_run)
 
     # Summary

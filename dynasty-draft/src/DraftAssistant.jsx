@@ -21,6 +21,10 @@ function getTargets(leagueName) {
   }
   return TARGETS_CACHE[leagueName];
 }
+function getLeagueMeta(leagueName) {
+  const d = TARGETS_DATA[leagueName] || poorPicklesTargets;
+  return { scoreboard: d.scoreboard || null, standings: d.standings || null };
+}
 
 // ─── KEEPER DATA (sourced from config.keeperPicks) ───────────────────────────
 const MY_TEAM = "Poor Pickles";
@@ -414,6 +418,8 @@ export default function DraftAssistant({ config }) {
     });
   }, [config.scorePrefix, neutralMode]);
 
+  const leagueMeta = useMemo(() => getLeagueMeta(config.leagueName), [config.leagueName]);
+
   const [livePicks, setLivePicks] = useState({});
   const [myDrafted, setMyDrafted] = useState([]);
   const [playerNotes, setPlayerNotes] = useState({});
@@ -450,6 +456,15 @@ export default function DraftAssistant({ config }) {
     if (inSeasonOpponent) localStorage.setItem(oppLsKey, inSeasonOpponent);
     else localStorage.removeItem(oppLsKey);
   }, [inSeasonOpponent, oppLsKey]);
+  // Auto-populate opponent from scoreboard on first load (if nothing saved)
+  useEffect(() => {
+    if (inSeasonOpponent || !leagueMeta.scoreboard?.matchups) return;
+    const myMatchup = leagueMeta.scoreboard.matchups.find(m => m.teams.some(t => t.team_name === myTeam));
+    if (myMatchup) {
+      const opp = myMatchup.teams.find(t => t.team_name !== myTeam);
+      if (opp) setInSeasonOpponent(opp.team_name);
+    }
+  }, []); // run once on mount
   const [mlbSchedule, setMlbSchedule] = useState(null);
   const pickInputRef = useRef(null);
 
@@ -1706,6 +1721,39 @@ export default function DraftAssistant({ config }) {
                     <div style={{fontSize:11,color:"#334155"}}>Select an opponent to see matchup projections.</div>
                   )}
                 </div>
+
+                {/* 2. Standings */}
+                {leagueMeta.standings?.length > 0 && (
+                  <div style={{marginBottom:22}}>
+                    <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:8}}>
+                      Standings — Wk {leagueMeta.scoreboard?.week ?? "?"}
+                    </div>
+                    <table style={{borderCollapse:"collapse",width:"100%",fontSize:11}}>
+                      <thead>
+                        <tr>
+                          {["#","TEAM","W","L","T"].map(h=>(
+                            <th key={h} style={{textAlign:h==="TEAM"?"left":"right",color:"#334155",fontSize:9,fontWeight:400,letterSpacing:".08em",paddingBottom:3,paddingRight:h!=="T"?10:0}}>{h}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {leagueMeta.standings.map(t=>{
+                          const isMe = t.team_name === myTeam;
+                          const isOpp = t.team_name === inSeasonOpponent;
+                          return (
+                            <tr key={t.team_key} style={{borderTop:"1px solid #0d0f16",background:isMe?"#0f1f2e":isOpp?"#1a1000":"transparent"}}>
+                              <td style={{textAlign:"right",padding:"3px 10px 3px 0",color:"#475569",width:20}}>{t.rank}</td>
+                              <td style={{padding:"3px 10px 3px 0",color:isMe?"#60a5fa":isOpp?"#f59e0b":"#94a3b8",fontWeight:isMe||isOpp?600:400,maxWidth:110,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{t.team_name}{isMe?" ★":""}</td>
+                              <td style={{textAlign:"right",padding:"3px 10px 3px 0",color:"#22c55e"}}>{t.wins}</td>
+                              <td style={{textAlign:"right",padding:"3px 10px 3px 0",color:"#f87171"}}>{t.losses}</td>
+                              <td style={{textAlign:"right",padding:"3px 0 3px 0",color:"#475569"}}>{t.ties}</td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
 
                 {/* 3. SP Schedule */}
                 <div style={{marginBottom:22}}>

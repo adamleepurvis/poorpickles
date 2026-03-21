@@ -568,6 +568,105 @@ def sync_injury_status(query):
     return statuses
 
 
+# ─── SCOREBOARD & STANDINGS ──────────────────────────────────────────────────
+
+def sync_scoreboard(query):
+    """
+    Fetch current week's matchups.
+    Returns {week, matchups: [{matchup_id, teams: [{team_key, team_name}]}]}
+    """
+    print("  Fetching scoreboard...")
+    session = query.oauth.session
+    url = f"https://fantasysports.yahooapis.com/fantasy/v2/league/{LEAGUE_KEY}/scoreboard?format=json"
+    try:
+        resp = session.get(url)
+        if resp.status_code != 200:
+            print(f"  WARNING: Scoreboard returned {resp.status_code}")
+            return {}
+        data = resp.json()
+        sb_raw = (data.get("fantasy_content", {})
+                      .get("league", [{}, {}])[1]
+                      .get("scoreboard", {}))
+        week = sb_raw.get("week")
+        matchups = []
+        for k, v in sb_raw.items():
+            if k in ("week", "count"):
+                continue
+            try:
+                matchup = v.get("matchup", {})
+                teams_raw = matchup.get("0", {}).get("teams", {})
+                teams = []
+                for tk, tv in teams_raw.items():
+                    if tk == "count":
+                        continue
+                    try:
+                        team_list = tv.get("team", [[]])[0]
+                        team_key  = next((x["team_key"] for x in team_list if isinstance(x, dict) and "team_key" in x), None)
+                        team_name = next((x["name"]     for x in team_list if isinstance(x, dict) and "name"     in x), None)
+                        if team_key and team_name:
+                            teams.append({"team_key": team_key, "team_name": team_name})
+                    except Exception:
+                        continue
+                if len(teams) == 2:
+                    matchups.append({"matchup_id": k, "teams": teams})
+            except Exception:
+                continue
+        print(f"    Week {week}: {len(matchups)} matchups")
+        return {"week": week, "matchups": matchups}
+    except Exception as e:
+        print(f"  WARNING: Could not fetch scoreboard: {e}")
+        return {}
+
+
+def sync_standings(query):
+    """
+    Fetch league standings.
+    Returns list of {team_key, team_name, wins, losses, ties, rank, games_back}
+    sorted by rank.
+    """
+    print("  Fetching standings...")
+    session = query.oauth.session
+    url = f"https://fantasysports.yahooapis.com/fantasy/v2/league/{LEAGUE_KEY}/standings?format=json"
+    try:
+        resp = session.get(url)
+        if resp.status_code != 200:
+            print(f"  WARNING: Standings returned {resp.status_code}")
+            return []
+        data = resp.json()
+        teams_raw = (data.get("fantasy_content", {})
+                         .get("league", [{}, {}])[1]
+                         .get("standings", [{}])[0]
+                         .get("teams", {}))
+        standings = []
+        for k, v in teams_raw.items():
+            if k == "count":
+                continue
+            try:
+                team_data = v.get("team", [])
+                meta   = team_data[0] if len(team_data) > 0 else []
+                ts     = team_data[2].get("team_standings", {}) if len(team_data) > 2 else {}
+                team_key  = next((x["team_key"] for x in meta if isinstance(x, dict) and "team_key" in x), None)
+                team_name = next((x["name"]     for x in meta if isinstance(x, dict) and "name"     in x), None)
+                outcome   = ts.get("outcome_totals", {})
+                standings.append({
+                    "team_key":   team_key,
+                    "team_name":  team_name,
+                    "wins":       int(outcome.get("wins",   0) or 0),
+                    "losses":     int(outcome.get("losses", 0) or 0),
+                    "ties":       int(outcome.get("ties",   0) or 0),
+                    "rank":       int(ts.get("rank", 0) or 0),
+                    "games_back": float(ts.get("games_back", 0) or 0),
+                })
+            except Exception:
+                continue
+        standings.sort(key=lambda x: x["rank"])
+        print(f"    Got {len(standings)} teams")
+        return standings
+    except Exception as e:
+        print(f"  WARNING: Could not fetch standings: {e}")
+        return []
+
+
 # ─── ENTRY POINT ─────────────────────────────────────────────────────────────
 
 LEAGUE_KEYS = {
@@ -628,6 +727,9 @@ def main():
 
     print("  Fetching injury/DTD status...")
     data["player_status"] = sync_injury_status(query)
+
+    data["scoreboard"] = sync_scoreboard(query)
+    data["standings"]  = sync_standings(query)
 
     OUTPUT_FILE.write_text(json.dumps(data, indent=2))
     print(f"\nWrote {OUTPUT_FILE}")
