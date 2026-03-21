@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-20T02:51:07.692035",
+  "generated": "2026-03-21T00:49:08.826205",
   "count": 1003,
   "players": [
     {
@@ -5149,7 +5149,7 @@
       "cats_5x5": [
         "SB"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 521,
       "score2026_neutral": 6.3,
@@ -5181,7 +5181,8 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Tanner Scott",
@@ -12842,8 +12843,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Edwin Uceta",
@@ -14907,7 +14907,8 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Foster Griffin",
@@ -14998,7 +14999,7 @@
       "cats_5x5": [
         "NSVH"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 60.0,
       "projStats": {
@@ -15027,7 +15028,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Mark Vientos",
@@ -20185,8 +20187,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "JoJo Romero",
@@ -29759,8 +29760,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Brandon Marsh",
@@ -30001,7 +30001,8 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Jake Cronenworth",
@@ -33646,7 +33647,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Edwin D\u00edaz",
@@ -35136,7 +35138,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 52.0,
       "projStats": {
@@ -35165,7 +35167,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Tyler Stephenson",
@@ -36093,7 +36096,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Jake McCarthy",
@@ -36185,7 +36189,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 46.0,
       "projStats": {
@@ -36214,7 +36218,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Eric Lauer",
@@ -36855,7 +36860,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 50.0,
       "projStats": {
@@ -36884,7 +36889,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Freddy Fermin",
@@ -38345,7 +38351,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "George Valera",
@@ -48790,7 +48797,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 46.0,
       "projStats": {
@@ -48819,7 +48826,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Brandon Young",
@@ -50325,7 +50333,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 42.0,
       "projStats": {
@@ -50354,7 +50362,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Edgardo Henriquez",
@@ -52399,7 +52408,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 42.0,
       "projStats": {
@@ -52428,7 +52437,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Craig Kimbrel",
@@ -53282,7 +53292,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 45.0,
       "projStats": {
@@ -53311,7 +53321,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Nick Raquet",
@@ -54142,7 +54153,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Tanner Gordon",
@@ -55761,7 +55773,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 34.0,
       "projStats": {
@@ -55790,7 +55802,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "James Karinchak",
@@ -56110,7 +56123,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 28.0,
       "projStats": {
@@ -56139,7 +56152,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Ryan Loutos",
@@ -58830,7 +58844,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 180,
       "score2026_neutral": 0.1,
@@ -58862,7 +58876,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Isiah Kiner-Falefa",
@@ -61503,6 +61518,138 @@
       "rostered": false,
       "owner": null,
       "scoreYahoo": null
+    }
+  ],
+  "scoreboard": {
+    "week": 1,
+    "matchups": []
+  },
+  "standings": [
+    {
+      "team_key": "469.l.91300.t.1",
+      "team_name": "Let Shohei Pitch",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.91300.t.2",
+      "team_name": "Acu\u00f1a Matada",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.91300.t.3",
+      "team_name": "Bargain Bangers",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.91300.t.4",
+      "team_name": "Buehrle 18",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.91300.t.5",
+      "team_name": "Coffee's for Closers",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.91300.t.6",
+      "team_name": "St. Guaranteed Rate",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.91300.t.7",
+      "team_name": "Les Sexpos de Montr\u00e9al",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.91300.t.8",
+      "team_name": "AI Thot Leadership",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.91300.t.9",
+      "team_name": "Spaghett",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.91300.t.10",
+      "team_name": "Clase Innocence Project",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.91300.t.11",
+      "team_name": "PGS",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.91300.t.12",
+      "team_name": "D\u2019ump",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.91300.t.13",
+      "team_name": "Trash Pandas",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.91300.t.14",
+      "team_name": "Yellow King Felix",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
     }
   ]
 }

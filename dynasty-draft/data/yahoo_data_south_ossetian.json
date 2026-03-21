@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-20T02:50:18.723042",
+  "generated": "2026-03-21T00:47:57.257679",
   "league_key": "469.l.40214",
   "settings": {
     "league_key": "469.l.40214",
@@ -18,7 +18,7 @@
       "ERA",
       "WHIP"
     ],
-    "fetched_at": "2026-03-20T02:50:19.125030"
+    "fetched_at": "2026-03-21T00:47:57.857608"
   },
   "draft_results": [
     {
@@ -10590,6 +10590,7 @@
     "Thairo Estrada": "NA",
     "Luis Ur\u00edas": "NA",
     "Brendan Rodgers": "NA",
+    "Zack Gelof": "NA",
     "Miles Mastrobuoni": "DTD",
     "Weston Wilson": "NA",
     "Kyren Paris": "NA",
@@ -10878,20 +10879,27 @@
     "Derniche Valdez": "NA",
     "Daniel Pierce": "NA",
     "Seiya Suzuki": "DTD",
+    "Kyle Stowers": "DTD",
     "Anthony Santander": "DTD",
+    "Jasson Dom\u00ednguez": "NA",
     "Lourdes Gurriel Jr.": "DTD",
+    "Harrison Bader": "DTD",
     "Jurickson Profar": "SUSP",
-    "Trevor Larnach": "DTD",
+    "Mike Yastrzemski": "DTD",
     "Lars Nootbaar": "DTD",
     "Tommy Pham": "NA",
     "Max Kepler": "SUSP",
     "Michael Conforto": "NA",
     "Randal Grichuk": "NA",
     "Blake Perkins": "NA",
+    "Nolan Jones": "NA",
     "Alex Verdugo": "NA",
     "Jesse Winker": "NA",
+    "Richie Palacios": "NA",
     "Austin Slater": "NA",
     "Dairon Blanco": "NA",
+    "Justyn-Henry Malloy": "NA",
+    "Dylan Beavers": "DTD",
     "Zach Dezenzo": "DTD",
     "John Rave": "NA",
     "Bryan De La Cruz": "NA",
@@ -10903,6 +10911,7 @@
     "Jonatan Clase": "NA",
     "Matthew Lugo": "NA",
     "Travis Jankowski": "NA",
+    "Esteury Ruiz": "DTD",
     "Nelson Vel\u00e1zquez": "NA",
     "George Valera": "DTD",
     "Jacob Melton": "NA",
@@ -10951,12 +10960,14 @@
     "Carson McCusker": "NA",
     "Tirso Ornelas": "NA",
     "Will Robertson": "NA",
-    "Lawrence Butler": "DTD",
+    "Dylan Crews": "NA",
+    "Mike Trout": "DTD",
     "Johan Rojas": "SUSP",
     "Kameron Misner": "NA",
     "Robert Hassell III": "NA",
     "Michael Siani": "NA",
     "Ji Hwan Bae": "NA",
+    "Petey Halpin": "NA",
     "Steward Berroa": "DTD",
     "Cal Stevenson": "NA",
     "Justin Dean": "NA",
@@ -11017,7 +11028,6 @@
     "Logan Henderson": "NA",
     "Grayson Rodriguez": "DTD",
     "Gerrit Cole": "DTD",
-    "Brady Singer": "DTD",
     "Justin Steele": "DTD",
     "Kyle Harrison": "DTD",
     "Spencer Schwellenbach": "IL60",
@@ -11052,6 +11062,7 @@
     "Alex Cobb": "NA",
     "Hunter Dobbins": "DTD",
     "DJ Herz": "IL60",
+    "Alek Manoah": "DTD",
     "Alec Marsh": "IL60",
     "AJ Smith-Shawver": "DTD",
     "Alan Rangel": "NA",
@@ -11383,11 +11394,16 @@
     "Rob Zastryzny": "DTD",
     "David Robertson": "NA",
     "Max Kranick": "NA",
+    "Luinder Avila": "NA",
     "Nick Sandlin": "NA",
+    "Steven Cruz": "NA",
+    "Kade Strowd": "NA",
     "Jason Foley": "IL60",
+    "Dylan Dodd": "NA",
     "Dylan Smith": "NA",
     "Craig Kimbrel": "NA",
     "Derek Law": "NA",
+    "Austin Warren": "NA",
     "Robert Stephenson": "DTD",
     "Michael Kopech": "NA",
     "Hunter Strickland": "NA",
@@ -11398,6 +11414,7 @@
     "Bryan Hoeing": "DTD",
     "Daysbel Hern\u00e1ndez": "DTD",
     "Erasmo Ram\u00edrez": "NA",
+    "Tyler Ferguson": "NA",
     "Dedniel N\u00fa\u00f1ez": "IL60",
     "Justin Wilson": "NA",
     "Ben Joyce": "DTD",
@@ -11446,6 +11463,7 @@
     "Dane Acker": "NA",
     "Franco Aleman": "NA",
     "Luis Gastelum": "NA",
+    "Kervin Castro": "NA",
     "Cole Paplham": "NA",
     "Cade Denton": "NA",
     "Marquis Grissom Jr.": "NA",
@@ -11532,6 +11550,7 @@
     "Drey Jameson": "NA",
     "Tyler Owens": "NA",
     "Ty Adcock": "NA",
+    "Ethan Roberts": "NA",
     "Joey Lucchesi": "NA",
     "Jesse Scholtens": "NA",
     "Kyle Nelson": "NA",
@@ -11548,6 +11567,7 @@
     "Anthony DeSclafani": "NA",
     "Mike Baumann": "NA",
     "Blas Castano": "NA",
+    "Gavin Hollowell": "NA",
     "Jonathan Pintaro": "NA",
     "Jake Eder": "NA",
     "Connor Seabold": "NA",
@@ -11559,6 +11579,7 @@
     "Josh Walker": "NA",
     "Tommy Henry": "NA",
     "Logan VanWey": "NA",
+    "Yerry De los Santos": "NA",
     "Jonathan Lo\u00e1isiga": "NA",
     "Max Lazar": "DTD",
     "Liam Hendriks": "NA",
@@ -11568,5 +11589,119 @@
     "Juan Burgos": "NA",
     "Alex Carrillo": "NA",
     "Tim Mayza": "NA"
-  }
+  },
+  "scoreboard": {
+    "week": 1,
+    "matchups": []
+  },
+  "standings": [
+    {
+      "team_key": "469.l.40214.t.1",
+      "team_name": "Bobby Weed Jr",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.40214.t.2",
+      "team_name": "ALP",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.40214.t.3",
+      "team_name": "Magnum Kwandoms",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.40214.t.4",
+      "team_name": "Ryan Howard's $5 Footlong",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.40214.t.5",
+      "team_name": "Saggy Boys",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.40214.t.6",
+      "team_name": "Scott's Strategic Realignment",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.40214.t.7",
+      "team_name": "Wade Bogg's Next Beer",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.40214.t.8",
+      "team_name": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.40214.t.9",
+      "team_name": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.40214.t.10",
+      "team_name": "\ud83c\udfc5 Clutch Trey",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.40214.t.11",
+      "team_name": "\ud83d\udc36 Decoy Fan Club",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    },
+    {
+      "team_key": "469.l.40214.t.12",
+      "team_name": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "rank": 0,
+      "games_back": 0.0
+    }
+  ]
 }
