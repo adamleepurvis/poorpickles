@@ -26,20 +26,20 @@ export const SOUTH_OSSETIAN_CONFIG = {
   ],
 
   // ── Scoring categories ──────────────────────────────────────────────────────
-  // Standard 5x5 with OBP and NSVH
-  hittingCats:  ["R", "HR", "RBI", "SB", "OBP"],
-  pitchingCats: ["W", "K", "ERA", "WHIP", "NSVH"],
+  // Confirmed from Yahoo: R, HR, RBI, SB, IP, K, ERA, WHIP
+  hittingCats:  ["R", "HR", "RBI", "SB"],
+  pitchingCats: ["IP", "K", "ERA", "WHIP"],
 
   // ── My category status ─────────────────────────────────────────────────────
   myCatStatus: {
-    R:"ok", HR:"ok", RBI:"ok", SB:"ok", OBP:"ok",
-    W:"ok", K:"ok", ERA:"ok", WHIP:"ok", NSVH:"ok",
+    R:"ok", HR:"ok", RBI:"ok", SB:"ok",
+    IP:"ok", K:"ok", ERA:"ok", WHIP:"ok",
   },
 
   // ── Base category need weights ─────────────────────────────────────────────
   baseCatNeed: {
-    R:2, HR:2, RBI:2, SB:2, OBP:2,
-    W:2, K:2, ERA:2, WHIP:2, NSVH:2,
+    R:2, HR:2, RBI:2, SB:2,
+    IP:2, K:2, ERA:2, WHIP:2,
   },
 
   // ── Keeper picks ───────────────────────────────────────────────────────────

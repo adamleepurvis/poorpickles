@@ -145,6 +145,10 @@ const HIT_RATE   = ["AVG","OBP","SLG"];
 const PIT_COUNT  = ["K","W","ER","IP","NSVH"];
 const PIT_RATE   = ["ERA","WHIP","K/9","BB/9"];
 const LOWER_BETTER = new Set(["ERA","WHIP","BB/9","ER"]);
+const CLOSE_THRESH = {
+  R:2, HR:0.5, RBI:2, SB:0.5, H:4, TB:6, AVG:0.010, OBP:0.010, SLG:0.015,
+  IP:5, K:4, W:0.5, ERA:0.20, WHIP:0.05, "K/9":0.3, "BB/9":0.2, NSVH:2, ER:1,
+};
 
 // Scale a player's season projStats to one week using the MLB schedule.
 // Hitters: linear by team games. SPs: by projected starts (games/5). RPs: linear.
@@ -440,7 +444,12 @@ export default function DraftAssistant({ config }) {
   const [catStatus, setCatStatus] = useState(config.myCatStatus);
   const [catNeed, setCatNeed] = useState(baseCatNeed);
   const [showScoreBreakdown, setShowScoreBreakdown] = useState(null);
-  const [inSeasonOpponent, setInSeasonOpponent] = useState(null);
+  const oppLsKey = `opp_${config.leagueName}`;
+  const [inSeasonOpponent, setInSeasonOpponent] = useState(() => localStorage.getItem(oppLsKey) || null);
+  useEffect(() => {
+    if (inSeasonOpponent) localStorage.setItem(oppLsKey, inSeasonOpponent);
+    else localStorage.removeItem(oppLsKey);
+  }, [inSeasonOpponent, oppLsKey]);
   const [mlbSchedule, setMlbSchedule] = useState(null);
   const pickInputRef = useRef(null);
 
@@ -654,8 +663,7 @@ export default function DraftAssistant({ config }) {
       const gap     = myVal != null && oppVal != null ? myVal - oppVal : null;
       const winning = gap != null ? (lowerBetter ? gap < 0 : gap > 0) : null;
       const absDiff = gap != null ? Math.abs(gap) : 0;
-      const scale   = Math.max(Math.abs(myVal ?? 0), Math.abs(oppVal ?? 0), 0.01);
-      const close   = absDiff / scale < 0.12;
+      const close   = absDiff < (CLOSE_THRESH[cat] ?? Infinity);
       return { cat, myVal, oppVal, gap, winning, lowerBetter, close, isScheduled: sched != null };
     }).filter(Boolean);
   }, [inSeasonOpponent, leagueTargets, myTeam, hitCats, pitchCats, mlbSchedule, hasYahooRosters]);
@@ -1642,6 +1650,20 @@ export default function DraftAssistant({ config }) {
                   </div>
                   {catGapAnalysis ? (
                     <div style={{overflowX:"auto"}}>
+                      {(()=>{
+                        const wins   = catGapAnalysis.filter(r => r.winning === true && !r.close).length;
+                        const losses = catGapAnalysis.filter(r => r.winning === false && !r.close).length;
+                        const ties   = catGapAnalysis.filter(r => r.close || r.winning === null).length;
+                        const total  = catGapAnalysis.length;
+                        const pct    = total > 0 ? Math.round(wins / total * 100) : 0;
+                        const color  = wins > losses ? "#22c55e" : wins < losses ? "#f87171" : "#f59e0b";
+                        return (
+                          <div style={{display:"flex",alignItems:"baseline",gap:10,marginBottom:10}}>
+                            <span style={{fontSize:22,fontWeight:700,color}}>{wins}–{losses}{ties>0?`–${ties}`:""}</span>
+                            <span style={{fontSize:10,color:"#475569"}}>proj ({pct}% cats)</span>
+                          </div>
+                        );
+                      })()}
                       {[["HITTING", hitCats], ["PITCHING", pitchCats]].map(([label, cats]) => (
                         <div key={label} style={{marginBottom:12}}>
                           <div style={{fontSize:9,color:"#334155",letterSpacing:".08em",textTransform:"uppercase",marginBottom:5}}>{label}</div>
@@ -1678,7 +1700,7 @@ export default function DraftAssistant({ config }) {
                           </table>
                         </div>
                       ))}
-                      <div style={{fontSize:9,color:"#334155",marginTop:2}}>◆ = close category (within 12%)</div>
+                      <div style={{fontSize:9,color:"#334155",marginTop:2}}>◆ = close (within per-cat threshold)</div>
                     </div>
                   ) : (
                     <div style={{fontSize:11,color:"#334155"}}>Select an opponent to see matchup projections.</div>
@@ -1730,7 +1752,8 @@ export default function DraftAssistant({ config }) {
                     const isP = p.type === "P";
                     const eraChange  = isP && p.newERA  != null && wtdERA  != null ? p.newERA  - wtdERA  : null;
                     const whipChange = isP && p.newWHIP != null && wtdWHIP != null ? p.newWHIP - wtdWHIP : null;
-                    const eraColor = eraChange == null ? null : eraChange <= -0.05 ? "#22c55e" : eraChange < 0.15 ? "#f59e0b" : "#f87171";
+                    const eraColor  = eraChange  == null ? null : eraChange  <= -0.10 ? "#22c55e" : eraChange  <= 0.10 ? "#f59e0b" : "#f87171";
+                    const whipColor = whipChange == null ? null : whipChange <= -0.02 ? "#22c55e" : whipChange <= 0.03 ? "#f59e0b" : "#f87171";
                     return (
                       <div key={p.name} style={{background:"#0d0f16",border:"1px solid #1e293b",borderRadius:4,padding:"7px 10px",marginBottom:4,display:"flex",gap:8,alignItems:"center"}}>
                         <div style={{flex:1,minWidth:0}}>
@@ -1746,8 +1769,13 @@ export default function DraftAssistant({ config }) {
                               return <span key={c} style={{fontSize:9,padding:"1px 5px",borderRadius:8,background:`${CAT_NEED_COLOR[need]||"#1e293b"}18`,color:CAT_NEED_COLOR[need]||"#475569"}}>{c}</span>;
                             })}
                             {eraChange != null && (
-                              <span style={{fontSize:9,color:eraColor}}>
-                                ERA {eraChange>=0?"+":""}{eraChange.toFixed(2)} · WHIP {whipChange>=0?"+":""}{whipChange?.toFixed(3)}
+                              <span style={{fontSize:9,fontWeight:600,color:eraColor,background:`${eraColor}18`,padding:"1px 5px",borderRadius:3}}>
+                                ERA {eraChange>=0?"+":""}{eraChange.toFixed(2)}
+                              </span>
+                            )}
+                            {whipChange != null && (
+                              <span style={{fontSize:9,fontWeight:600,color:whipColor,background:`${whipColor}18`,padding:"1px 5px",borderRadius:3}}>
+                                WHIP {whipChange>=0?"+":""}{whipChange.toFixed(3)}
                               </span>
                             )}
                             {isP && p.starts != null && (
