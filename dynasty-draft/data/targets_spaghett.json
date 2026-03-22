@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-22T15:43:25.857078",
+  "generated": "2026-03-22T18:36:29.652293",
   "count": 1003,
   "players": [
     {
@@ -11044,8 +11044,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Spaghett",
       "scoreYahoo": null
     },
     {
@@ -14334,8 +14334,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Colt Keith",
@@ -15600,7 +15599,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 60.0,
       "projStats": {
@@ -15629,7 +15628,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Gavin Williams",
@@ -47811,8 +47811,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Jeremiah Jackson",

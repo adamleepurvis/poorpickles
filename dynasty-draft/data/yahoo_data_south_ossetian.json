@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-22T15:42:15.885291",
+  "generated": "2026-03-22T18:35:29.930727",
   "league_key": "469.l.40214",
   "settings": {
     "league_key": "469.l.40214",
@@ -18,7 +18,7 @@
       "ERA",
       "WHIP"
     ],
-    "fetched_at": "2026-03-22T15:42:16.634483"
+    "fetched_at": "2026-03-22T18:35:30.451340"
   },
   "draft_results": [
     {
@@ -7015,11 +7015,11 @@
       "LF",
       "RF"
     ],
-    "Justyn-Henry Malloy": [
+    "Dylan Beavers": [
       "LF",
       "RF"
     ],
-    "Dylan Beavers": [
+    "Justyn-Henry Malloy": [
       "LF",
       "RF"
     ],
@@ -10503,7 +10503,6 @@
     "Ty France": "NA",
     "Rhys Hoskins": "NA",
     "Rowdy Tellez": "NA",
-    "Dylan Moore": "DTD",
     "Enrique Hern\u00e1ndez": "IL60",
     "Michael Toglia": "NA",
     "Justin Turner": "NA",
@@ -10734,7 +10733,6 @@
     "Tsung-Che Cheng": "NA",
     "Oswaldo Cabrera": "NA",
     "Gio Urshela": "NA",
-    "Graham Pauley": "DTD",
     "Nacho Alvarez Jr.": "NA",
     "Brett Harris": "NA",
     "Anthony Rendon": "DTD",
@@ -11036,7 +11034,6 @@
     "Joe Musgrove": "DTD",
     "Bryce Miller": "DTD",
     "Gerrit Cole": "DTD",
-    "Mike Burrows": "DTD",
     "Logan Henderson": "NA",
     "Quinn Priester": "DTD",
     "Grayson Rodriguez": "DTD",
@@ -11397,6 +11394,7 @@
     "Danny Coulombe": "DTD",
     "Andrew Saalfrank": "IL60",
     "Manuel Rodr\u00edguez": "IL60",
+    "Cade Gibson": "NA",
     "Yariel Rodriguez": "NA",
     "Justin Martinez": "IL60",
     "Joel Peguero": "DTD",

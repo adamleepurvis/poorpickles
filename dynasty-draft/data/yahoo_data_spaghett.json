@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-22T15:42:51.551370",
+  "generated": "2026-03-22T18:36:00.130018",
   "league_key": "469.l.91300",
   "settings": {
     "league_key": "469.l.91300",
@@ -18,7 +18,7 @@
       "ERA",
       "WHIP"
     ],
-    "fetched_at": "2026-03-22T15:42:52.360540"
+    "fetched_at": "2026-03-22T18:36:00.773967"
   },
   "draft_results": [
     {
@@ -10443,7 +10443,6 @@
     "Ty France": "NA",
     "Rhys Hoskins": "NA",
     "Rowdy Tellez": "NA",
-    "Dylan Moore": "DTD",
     "Enrique Hern\u00e1ndez": "IL60",
     "Michael Toglia": "NA",
     "Justin Turner": "NA",
@@ -10470,6 +10469,7 @@
     "Billy Amick": "NA",
     "Enyervert Perez": "NA",
     "Ryan Clifford": "NA",
+    "Kale Fountain": "NA",
     "Tony Blanco Jr.": "NA",
     "Robert Hipwell": "NA",
     "Juan Brito": "NA",
@@ -10673,7 +10673,6 @@
     "Tsung-Che Cheng": "NA",
     "Oswaldo Cabrera": "NA",
     "Gio Urshela": "NA",
-    "Graham Pauley": "DTD",
     "Nacho Alvarez Jr.": "NA",
     "Brett Harris": "NA",
     "Anthony Rendon": "DTD",
@@ -10686,7 +10685,6 @@
     "Roderick Arias": "NA",
     "Yassel Soler": "NA",
     "Sabin Ceballos": "NA",
-    "Kale Fountain": "NA",
     "Caden Powell": "NA",
     "Kevin Hidalgo": "NA",
     "Naibel Mariano": "NA",
@@ -10976,7 +10974,6 @@
     "Joe Musgrove": "DTD",
     "Bryce Miller": "DTD",
     "Gerrit Cole": "DTD",
-    "Mike Burrows": "DTD",
     "Logan Henderson": "NA",
     "Quinn Priester": "DTD",
     "Grayson Rodriguez": "DTD",
@@ -11337,6 +11334,7 @@
     "Danny Coulombe": "DTD",
     "Andrew Saalfrank": "IL60",
     "Manuel Rodr\u00edguez": "IL60",
+    "Cade Gibson": "NA",
     "Yariel Rodriguez": "NA",
     "Justin Martinez": "IL60",
     "Joel Peguero": "DTD",

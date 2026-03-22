@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-22T15:41:39.747905",
+  "generated": "2026-03-22T18:34:58.837602",
   "league_key": "469.l.51744",
   "settings": {
     "league_key": "469.l.51744",
@@ -21,7 +21,7 @@
       "WHIP",
       "BB/9"
     ],
-    "fetched_at": "2026-03-22T15:41:40.756366"
+    "fetched_at": "2026-03-22T18:34:59.523988"
   },
   "draft_results": [
     {
@@ -5774,16 +5774,16 @@
       "RF",
       "SS"
     ],
-    "Jose Iglesias": [
-      "2B",
-      "3B",
-      "SS"
-    ],
     "Javier Sanoja": [
       "2B",
       "3B",
       "CF",
       "LF",
+      "SS"
+    ],
+    "Jose Iglesias": [
+      "2B",
+      "3B",
       "SS"
     ],
     "Amed Rosario": [
@@ -7594,11 +7594,11 @@
       "LF",
       "RF"
     ],
-    "Dylan Beavers": [
+    "Justyn-Henry Malloy": [
       "LF",
       "RF"
     ],
-    "Justyn-Henry Malloy": [
+    "Dylan Beavers": [
       "LF",
       "RF"
     ],
@@ -11082,7 +11082,6 @@
     "Ty France": "NA",
     "Rhys Hoskins": "NA",
     "Rowdy Tellez": "NA",
-    "Dylan Moore": "DTD",
     "Enrique Hern\u00e1ndez": "IL60",
     "Michael Toglia": "NA",
     "Justin Turner": "NA",
@@ -11313,7 +11312,6 @@
     "Tsung-Che Cheng": "NA",
     "Oswaldo Cabrera": "NA",
     "Gio Urshela": "NA",
-    "Graham Pauley": "DTD",
     "Nacho Alvarez Jr.": "NA",
     "Brett Harris": "NA",
     "Anthony Rendon": "DTD",
@@ -11484,8 +11482,8 @@
     "Richie Palacios": "NA",
     "Austin Slater": "NA",
     "Dairon Blanco": "NA",
-    "Dylan Beavers": "DTD",
     "Justyn-Henry Malloy": "NA",
+    "Dylan Beavers": "DTD",
     "Zach Dezenzo": "DTD",
     "John Rave": "NA",
     "Bryan De La Cruz": "NA",
@@ -11615,7 +11613,6 @@
     "Joe Musgrove": "DTD",
     "Bryce Miller": "DTD",
     "Gerrit Cole": "DTD",
-    "Mike Burrows": "DTD",
     "Logan Henderson": "NA",
     "Quinn Priester": "DTD",
     "Grayson Rodriguez": "DTD",
@@ -11976,6 +11973,7 @@
     "Danny Coulombe": "DTD",
     "Andrew Saalfrank": "IL60",
     "Manuel Rodr\u00edguez": "IL60",
+    "Cade Gibson": "NA",
     "Yariel Rodriguez": "NA",
     "Justin Martinez": "IL60",
     "Joel Peguero": "DTD",
