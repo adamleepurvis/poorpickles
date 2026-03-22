@@ -25,6 +25,7 @@ import json
 import argparse
 import subprocess
 import sys
+import unicodedata
 import numpy as np
 from pathlib import Path
 from datetime import datetime
@@ -278,11 +279,20 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
     yahoo_proj_scores = score_yahoo_projections(yahoo_data.get("yahoo_projections", {}), zar_scores)
     yahoo_status = yahoo_data.get("player_status", {})
 
+    def strip_accents(s):
+        return unicodedata.normalize("NFD", s).encode("ascii", "ignore").decode("ascii")
+
     # Build owner map: player name -> Yahoo team name
+    # Index by both original and accent-stripped name so ZAR names (no accents)
+    # still match Yahoo names that include accents (e.g. "Suárez" → "Suarez").
     owner_map = {}
     for team in yahoo_data.get("teams", []):
         for player in team["players"]:
-            owner_map[player["name"]] = team["team_name"]
+            yahoo_name = player["name"]
+            owner_map[yahoo_name] = team["team_name"]
+            stripped = strip_accents(yahoo_name)
+            if stripped != yahoo_name:
+                owner_map.setdefault(stripped, team["team_name"])
     # Ohtani two-way: Yahoo uses "Shohei Ohtani (Pitcher)" / "(Batter)"
     # but targets uses plain "Shohei Ohtani" for the pitcher entry.
     # Add bare-name fallback for any "(Pitcher)" entry not already mapped.
