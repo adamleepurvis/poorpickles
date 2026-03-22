@@ -32,14 +32,14 @@ export const POOR_PICKLES_CONFIG = {
     R:"ok", H:"ok", HR:"thin", RBI:"thin", SB:"strong", TB:"thin",
     AVG:"ok", OBP:"ok", SLG:"thin",
     K:"ok", IP:"ok", W:"ok", ER:"ok", ERA:"ok", WHIP:"ok",
-    "K/9":"ok", "BB/9":"ok", NSVH:"thin"
+    "K/9":"ok", "BB/9":"ok", NSVH:"ok"
   },
 
   // ── Base category need weights (drives scoring model) ─────────────────────
   // 3 = critical gap, 2 = want more, 1 = covered, 0 = punting
   baseCatNeed: {
     R:1, H:1, HR:3, RBI:3, SB:1, TB:2, AVG:1, OBP:1, SLG:3,
-    K:2, IP:1, W:1, ER:1, ERA:2, WHIP:2, "K/9":2, "BB/9":2, NSVH:3
+    K:2, IP:1, W:1, ER:1, ERA:2, WHIP:2, "K/9":2, "BB/9":2, NSVH:0
   },
 
   // ── Keeper picks (rounds 1-10, all 12 teams) ───────────────────────────────
