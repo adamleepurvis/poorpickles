@@ -11,8 +11,9 @@ export const POOR_PICKLES_CONFIG = {
   leagueName: "Poor Pickles",
   totalTeams: 12,
   totalRounds: 29,
-  draftStartPick: 121,         // first pick of the live draft (after keepers)
-  mySlot: 5,                   // draft slot (1-indexed)
+  draftMode: false,            // draft complete — in-season mode
+  draftStartPick: 121,
+  mySlot: 5,
 
   // Snake draft order — slot 1 through totalTeams
   draftOrder: [
