@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-21T00:47:56.946100",
+  "generated": "2026-03-22T00:32:13.227930",
   "count": 1003,
   "players": [
     {
@@ -5267,7 +5267,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Greg Weissert",
@@ -11263,7 +11264,8 @@
       "fpRank": 123,
       "fpAdp": 204.8,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Nick Pivetta",
@@ -13886,7 +13888,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Colt Keith",
@@ -15377,8 +15380,7 @@
       "fpRank": 150,
       "fpAdp": 244.6,
       "pct_owned": 0.0,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Jos\u00e9 Soriano",
@@ -24635,7 +24637,7 @@
         "IP"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 135.2,
       "projStats": {
@@ -24662,7 +24664,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Yusei Kikuchi",
@@ -32193,7 +32196,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 331,
       "score2026_neutral": 3.2,
@@ -32223,7 +32226,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Dominic Canzone",
@@ -39165,7 +39169,8 @@
       "fpRank": 311,
       "fpAdp": 717.5,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Zach McCambley",
@@ -51368,7 +51373,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Liam Hendriks",
@@ -54997,7 +55003,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projPA": 185,
       "score2026_neutral": 0.4,
@@ -55027,8 +55033,7 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Jorge L\u00f3pez",
@@ -55347,7 +55352,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 152,
       "score2026_neutral": 0.1,
@@ -55377,7 +55382,8 @@
       "fpRank": 312,
       "fpAdp": 542.5,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "David Fry",
@@ -59042,7 +59048,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 40.0,
       "projStats": {
@@ -59069,7 +59075,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Kyle Keller",
@@ -59484,7 +59491,7 @@
         "AVG"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 36.0,
       "projStats": {
@@ -59511,7 +59518,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     }
   ],
   "scoreboard": {

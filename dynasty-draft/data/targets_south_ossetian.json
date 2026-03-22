@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-21T00:48:33.271363",
+  "generated": "2026-03-22T00:32:36.763561",
   "count": 1003,
   "players": [
     {
@@ -5433,7 +5433,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Greg Weissert",
@@ -11623,7 +11624,8 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Ryan Howard's $5 Footlong",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Nick Pivetta",
@@ -14332,7 +14334,8 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Wade Bogg's Next Beer",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Colt Keith",
@@ -15873,8 +15876,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Jos\u00e9 Soriano",
@@ -25441,7 +25443,7 @@
         "IP"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 135.2,
       "projStats": {
@@ -25470,7 +25472,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Yusei Kikuchi",
@@ -33255,7 +33258,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 331,
       "score2026_neutral": 3.2,
@@ -33287,7 +33290,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Dominic Canzone",
@@ -40465,7 +40469,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Zach McCambley",
@@ -53090,7 +53095,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Liam Hendriks",
@@ -56845,7 +56851,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projPA": 185,
       "score2026_neutral": 0.4,
@@ -56877,8 +56883,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Jorge L\u00f3pez",
@@ -57207,7 +57212,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 152,
       "score2026_neutral": 0.1,
@@ -57239,7 +57244,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "David Fry",
@@ -61030,7 +61036,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 40.0,
       "projStats": {
@@ -61059,7 +61065,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Kyle Keller",
@@ -61488,7 +61495,7 @@
         "AVG"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 36.0,
       "projStats": {
@@ -61517,7 +61524,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     }
   ],
   "scoreboard": {
