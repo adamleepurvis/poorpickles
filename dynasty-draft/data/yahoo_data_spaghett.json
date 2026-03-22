@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-22T15:27:54.505267",
+  "generated": "2026-03-22T15:42:51.551370",
   "league_key": "469.l.91300",
   "settings": {
     "league_key": "469.l.91300",
@@ -18,7 +18,7 @@
       "ERA",
       "WHIP"
     ],
-    "fetched_at": "2026-03-22T15:27:54.965010"
+    "fetched_at": "2026-03-22T15:42:52.360540"
   },
   "draft_results": [
     {
@@ -4497,6 +4497,9 @@
     "Lenyn Sosa": [
       "1B",
       "2B"
+    ],
+    "Nathaniel Lowe": [
+      "1B"
     ],
     "Josh Smith": [
       "1B",
@@ -10467,7 +10470,6 @@
     "Billy Amick": "NA",
     "Enyervert Perez": "NA",
     "Ryan Clifford": "NA",
-    "Kale Fountain": "NA",
     "Tony Blanco Jr.": "NA",
     "Robert Hipwell": "NA",
     "Juan Brito": "NA",
@@ -10684,6 +10686,7 @@
     "Roderick Arias": "NA",
     "Yassel Soler": "NA",
     "Sabin Ceballos": "NA",
+    "Kale Fountain": "NA",
     "Caden Powell": "NA",
     "Kevin Hidalgo": "NA",
     "Naibel Mariano": "NA",
@@ -11378,7 +11381,6 @@
     "Tommy Kahnle": "NA",
     "Luke Jackson": "NA",
     "James McArthur": "DTD",
-    "Enyel De Los Santos": "DTD",
     "Steven Wilson": "DTD",
     "Julian Fern\u00e1ndez": "NA",
     "Nick Raquet": "NA",

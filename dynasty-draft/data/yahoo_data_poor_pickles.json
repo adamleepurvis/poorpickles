@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-22T15:27:03.668853",
+  "generated": "2026-03-22T15:41:39.747905",
   "league_key": "469.l.51744",
   "settings": {
     "league_key": "469.l.51744",
@@ -21,7 +21,7 @@
       "WHIP",
       "BB/9"
     ],
-    "fetched_at": "2026-03-22T15:27:04.275817"
+    "fetched_at": "2026-03-22T15:41:40.756366"
   },
   "draft_results": [
     {
@@ -5137,6 +5137,9 @@
       "1B",
       "2B"
     ],
+    "Nathaniel Lowe": [
+      "1B"
+    ],
     "Josh Smith": [
       "1B",
       "3B",
@@ -5771,16 +5774,16 @@
       "RF",
       "SS"
     ],
+    "Jose Iglesias": [
+      "2B",
+      "3B",
+      "SS"
+    ],
     "Javier Sanoja": [
       "2B",
       "3B",
       "CF",
       "LF",
-      "SS"
-    ],
-    "Jose Iglesias": [
-      "2B",
-      "3B",
       "SS"
     ],
     "Amed Rosario": [
@@ -7591,11 +7594,11 @@
       "LF",
       "RF"
     ],
-    "Justyn-Henry Malloy": [
+    "Dylan Beavers": [
       "LF",
       "RF"
     ],
-    "Dylan Beavers": [
+    "Justyn-Henry Malloy": [
       "LF",
       "RF"
     ],
@@ -12017,7 +12020,6 @@
     "Tommy Kahnle": "NA",
     "Luke Jackson": "NA",
     "James McArthur": "DTD",
-    "Enyel De Los Santos": "DTD",
     "Steven Wilson": "DTD",
     "Julian Fern\u00e1ndez": "NA",
     "Nick Raquet": "NA",

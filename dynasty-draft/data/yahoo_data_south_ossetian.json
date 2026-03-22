@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-22T15:27:29.156513",
+  "generated": "2026-03-22T15:42:15.885291",
   "league_key": "469.l.40214",
   "settings": {
     "league_key": "469.l.40214",
@@ -18,7 +18,7 @@
       "ERA",
       "WHIP"
     ],
-    "fetched_at": "2026-03-22T15:27:29.554881"
+    "fetched_at": "2026-03-22T15:42:16.634483"
   },
   "draft_results": [
     {
@@ -11441,7 +11441,6 @@
     "Tommy Kahnle": "NA",
     "Luke Jackson": "NA",
     "James McArthur": "DTD",
-    "Enyel De Los Santos": "DTD",
     "Steven Wilson": "DTD",
     "Julian Fern\u00e1ndez": "NA",
     "Nick Raquet": "NA",

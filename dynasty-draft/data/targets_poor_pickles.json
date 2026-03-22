@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-22T15:27:28.809417",
+  "generated": "2026-03-22T15:42:15.538950",
   "count": 1003,
   "players": [
     {
@@ -13454,8 +13454,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Anthony Bender",
