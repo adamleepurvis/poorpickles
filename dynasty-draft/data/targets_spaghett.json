@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-22T00:33:00.221611",
+  "generated": "2026-03-22T15:28:18.907596",
   "count": 1003,
   "players": [
     {
@@ -3369,7 +3369,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Shane McClanahan",
@@ -38355,8 +38356,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "George Valera",
@@ -40469,8 +40469,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Zach McCambley",
@@ -44102,8 +44101,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Brad Lord",
@@ -57336,7 +57334,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 195,
       "score2026_neutral": 0.0,
@@ -57368,7 +57366,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Mart\u00edn P\u00e9rez",

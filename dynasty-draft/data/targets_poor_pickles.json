@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-22T00:32:13.227930",
+  "generated": "2026-03-22T15:27:28.809417",
   "count": 1003,
   "players": [
     {
@@ -66,6 +66,8 @@
       "fpRank": 4,
       "fpAdp": 3.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -132,6 +134,8 @@
       "fpRank": 13,
       "fpAdp": 15.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -197,6 +201,8 @@
       "fpRank": 12,
       "fpAdp": 14.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -263,6 +269,8 @@
       "fpRank": 9,
       "fpAdp": 9.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -330,6 +338,8 @@
       "fpRank": 5,
       "fpAdp": 3.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -396,6 +406,8 @@
       "fpRank": 7,
       "fpAdp": 7.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -461,6 +473,8 @@
       "fpRank": 16,
       "fpAdp": 18.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -527,6 +541,8 @@
       "fpRank": 11,
       "fpAdp": 13.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -592,6 +608,8 @@
       "fpRank": 28,
       "fpAdp": 32.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -659,6 +677,8 @@
       "fpRank": 14,
       "fpAdp": 15.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -724,6 +744,8 @@
       "fpRank": 15,
       "fpAdp": 16.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -786,6 +808,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -849,6 +873,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -911,6 +937,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -975,6 +1003,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -1037,6 +1067,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -1099,6 +1131,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -1161,6 +1195,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -1224,6 +1260,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -1290,6 +1328,8 @@
       "fpRank": 8,
       "fpAdp": 8.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -1354,6 +1394,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -1420,6 +1462,8 @@
       "fpRank": 17,
       "fpAdp": 18.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -1486,6 +1530,8 @@
       "fpRank": 10,
       "fpAdp": 11.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -1553,6 +1599,8 @@
       "fpRank": 42,
       "fpAdp": 60.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -1618,6 +1666,8 @@
       "fpRank": 41,
       "fpAdp": 60.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -1678,6 +1728,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -1744,6 +1796,8 @@
       "fpRank": 29,
       "fpAdp": 33.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null
     },
     {
@@ -1805,6 +1859,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -1871,6 +1927,8 @@
       "fpRank": 3,
       "fpAdp": 2.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -1937,6 +1995,8 @@
       "fpRank": 22,
       "fpAdp": 24.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -2003,6 +2063,8 @@
       "fpRank": 33,
       "fpAdp": 42.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -2065,6 +2127,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -2128,6 +2192,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -2195,6 +2261,8 @@
       "fpRank": 114,
       "fpAdp": 186.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -2257,6 +2325,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -2322,6 +2392,8 @@
       "fpRank": 43,
       "fpAdp": 61.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -2384,6 +2456,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -2446,6 +2520,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -2511,6 +2587,8 @@
       "fpRank": 54,
       "fpAdp": 80.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -2576,6 +2654,8 @@
       "fpRank": 137,
       "fpAdp": 227.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -2638,6 +2718,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -2704,6 +2786,8 @@
       "fpRank": 30,
       "fpAdp": 36.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null
     },
     {
@@ -2770,6 +2854,8 @@
       "fpRank": 32,
       "fpAdp": 40.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -2832,6 +2918,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -2897,6 +2985,8 @@
       "fpRank": 23,
       "fpAdp": 27.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -2961,6 +3051,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -3023,6 +3115,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -3086,6 +3180,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3144,6 +3240,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3207,6 +3305,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -3267,7 +3367,10 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "rostered": false,
+      "owner": null,
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Shane McClanahan",
@@ -3331,6 +3434,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -3391,6 +3496,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3457,6 +3564,8 @@
       "fpRank": 6,
       "fpAdp": 5.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -3522,6 +3631,8 @@
       "fpRank": 31,
       "fpAdp": 37.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -3588,6 +3699,8 @@
       "fpRank": 18,
       "fpAdp": 19.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -3650,6 +3763,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3709,6 +3824,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -3775,6 +3892,8 @@
       "fpRank": 40,
       "fpAdp": 56.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -3842,6 +3961,8 @@
       "fpRank": 106,
       "fpAdp": 177.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -3907,6 +4028,8 @@
       "fpRank": 58,
       "fpAdp": 86.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -3969,6 +4092,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -4027,6 +4152,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4092,6 +4219,8 @@
       "fpRank": 69,
       "fpAdp": 100.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -4150,6 +4279,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4208,6 +4339,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -4276,6 +4409,8 @@
       "fpRank": 46,
       "fpAdp": 62.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -4339,6 +4474,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -4401,6 +4538,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4458,6 +4597,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4523,6 +4664,8 @@
       "fpRank": 25,
       "fpAdp": 29.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -4587,6 +4730,8 @@
       "fpRank": 55,
       "fpAdp": 83.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -4647,6 +4792,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4709,6 +4856,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -4773,6 +4922,8 @@
       "fpRank": 177,
       "fpAdp": 290.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -4838,6 +4989,8 @@
       "fpRank": 39,
       "fpAdp": 55.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -4898,6 +5051,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -4962,6 +5117,8 @@
       "fpRank": 49,
       "fpAdp": 67.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -5023,6 +5180,8 @@
       "fpRank": 116,
       "fpAdp": 198.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -5084,6 +5243,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5147,6 +5308,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5208,6 +5371,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5267,6 +5432,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -5325,6 +5492,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5390,6 +5559,8 @@
       "fpRank": 50,
       "fpAdp": 68.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -5452,6 +5623,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5509,6 +5682,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -5572,6 +5747,8 @@
       "fpRank": 52,
       "fpAdp": 73.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -5637,6 +5814,8 @@
       "fpRank": 59,
       "fpAdp": 86.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -5704,6 +5883,8 @@
       "fpRank": 20,
       "fpAdp": 22.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -5766,6 +5947,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -5833,6 +6016,8 @@
       "fpRank": 2,
       "fpAdp": 2.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -5901,6 +6086,8 @@
       "fpRank": 19,
       "fpAdp": 21.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -5967,6 +6154,8 @@
       "fpRank": 27,
       "fpAdp": 32.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -6026,6 +6215,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6091,6 +6282,8 @@
       "fpRank": 26,
       "fpAdp": 30.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -6148,6 +6341,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6205,6 +6400,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -6273,6 +6470,8 @@
       "fpRank": 36,
       "fpAdp": 46.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -6340,6 +6539,8 @@
       "fpRank": 48,
       "fpAdp": 66.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -6402,6 +6603,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -6468,6 +6671,8 @@
       "fpRank": 21,
       "fpAdp": 22.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -6529,6 +6734,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6587,6 +6794,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6649,6 +6858,8 @@
       "fpRank": 98,
       "fpAdp": 164.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null
     },
     {
@@ -6708,6 +6919,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6770,6 +6983,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6830,6 +7045,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6892,6 +7109,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -6957,6 +7176,8 @@
       "fpRank": 34,
       "fpAdp": 45.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -7020,6 +7241,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7083,6 +7306,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -7145,6 +7370,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -7209,6 +7436,8 @@
       "fpRank": 38,
       "fpAdp": 52.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -7268,6 +7497,8 @@
       "fpRank": 164,
       "fpAdp": 273.4,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7331,6 +7562,8 @@
       "fpRank": 187,
       "fpAdp": 305.8,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7397,6 +7630,8 @@
       "fpRank": 62,
       "fpAdp": 89.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -7459,6 +7694,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -7522,6 +7759,8 @@
       "fpRank": 3,
       "fpAdp": 2.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -7581,6 +7820,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7646,6 +7887,8 @@
       "fpRank": 86,
       "fpAdp": 139.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null
     },
     {
@@ -7702,6 +7945,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7765,6 +8010,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -7825,6 +8072,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -7891,6 +8140,8 @@
       "fpRank": 57,
       "fpAdp": 85.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -7948,6 +8199,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8007,6 +8260,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8071,6 +8326,8 @@
       "fpRank": 47,
       "fpAdp": 65.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -8134,6 +8391,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -8192,6 +8451,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8255,6 +8516,8 @@
       "fpRank": 70,
       "fpAdp": 102.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -8313,6 +8576,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8373,6 +8638,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -8435,6 +8702,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8491,6 +8760,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8549,6 +8820,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8613,6 +8886,8 @@
       "fpRank": 74,
       "fpAdp": 115.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -8677,6 +8952,8 @@
       "fpRank": 71,
       "fpAdp": 103.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -8741,6 +9018,8 @@
       "fpRank": 112,
       "fpAdp": 180.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -8801,6 +9080,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8861,6 +9142,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8919,6 +9202,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -8978,6 +9263,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9035,6 +9322,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9098,6 +9387,8 @@
       "fpRank": 68,
       "fpAdp": 100.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -9161,6 +9452,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -9225,6 +9518,8 @@
       "fpRank": 82,
       "fpAdp": 129.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -9288,6 +9583,8 @@
       "fpRank": 163,
       "fpAdp": 273.2,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9348,6 +9645,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -9411,6 +9710,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -9468,6 +9769,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -9528,6 +9831,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9585,6 +9890,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9650,6 +9957,8 @@
       "fpRank": 45,
       "fpAdp": 62.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -9712,6 +10021,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -9776,6 +10087,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -9838,6 +10151,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null
     },
     {
@@ -9900,6 +10215,8 @@
       "fpRank": 35,
       "fpAdp": 45.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null
     },
     {
@@ -9966,6 +10283,8 @@
       "fpRank": 91,
       "fpAdp": 148.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -10028,6 +10347,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null
     },
     {
@@ -10086,6 +10407,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -10147,6 +10470,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10204,6 +10529,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10268,6 +10595,8 @@
       "fpRank": 89,
       "fpAdp": 141.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -10332,6 +10661,8 @@
       "fpRank": 80,
       "fpAdp": 123.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -10390,6 +10721,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10454,6 +10787,8 @@
       "fpRank": 24,
       "fpAdp": 27.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -10520,6 +10855,8 @@
       "fpRank": 77,
       "fpAdp": 118.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -10582,6 +10919,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -10641,6 +10980,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10703,6 +11044,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10768,6 +11111,8 @@
       "fpRank": 51,
       "fpAdp": 72.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -10825,6 +11170,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10882,6 +11229,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -10946,6 +11295,8 @@
       "fpRank": 60,
       "fpAdp": 86.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -11012,6 +11363,8 @@
       "fpRank": 110,
       "fpAdp": 179.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -11077,6 +11430,8 @@
       "fpRank": 61,
       "fpAdp": 88.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -11139,6 +11494,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null
     },
     {
@@ -11200,6 +11557,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -11264,6 +11623,8 @@
       "fpRank": 123,
       "fpAdp": 204.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -11327,6 +11688,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -11390,6 +11753,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -11450,6 +11815,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11514,6 +11881,8 @@
       "fpRank": 104,
       "fpAdp": 175.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -11575,6 +11944,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -11636,6 +12007,8 @@
       "fpRank": 121,
       "fpAdp": 202.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -11699,6 +12072,8 @@
       "fpRank": 111,
       "fpAdp": 179.8,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11753,6 +12128,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11820,6 +12197,8 @@
       "fpRank": 76,
       "fpAdp": 118.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null
     },
     {
@@ -11885,6 +12264,8 @@
       "fpRank": 84,
       "fpAdp": 132.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -11950,6 +12331,8 @@
       "fpRank": 44,
       "fpAdp": 61.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -12012,6 +12395,8 @@
       "fpRank": 131,
       "fpAdp": 216.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -12075,6 +12460,8 @@
       "fpRank": 109,
       "fpAdp": 178.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -12142,6 +12529,8 @@
       "fpRank": 56,
       "fpAdp": 84.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -12204,6 +12593,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -12265,6 +12656,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -12323,6 +12716,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12384,6 +12779,8 @@
       "fpRank": 95,
       "fpAdp": 153.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -12447,6 +12844,8 @@
       "fpRank": 85,
       "fpAdp": 134.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null
     },
     {
@@ -12507,6 +12906,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -12565,6 +12966,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12622,6 +13025,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12681,6 +13086,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12739,6 +13146,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12795,6 +13204,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12857,6 +13268,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -12920,6 +13333,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -12978,6 +13393,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13035,6 +13452,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -13093,6 +13512,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13154,6 +13575,8 @@
       "fpRank": 126,
       "fpAdp": 208.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -13217,6 +13640,8 @@
       "fpRank": 108,
       "fpAdp": 178.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -13276,6 +13701,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -13338,6 +13765,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -13397,6 +13826,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -13457,6 +13888,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -13519,6 +13952,8 @@
       "fpRank": 153,
       "fpAdp": 245.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -13583,6 +14018,8 @@
       "fpRank": 93,
       "fpAdp": 148.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null
     },
     {
@@ -13646,6 +14083,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -13703,6 +14142,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -13765,6 +14206,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -13827,6 +14270,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -13888,6 +14333,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -13951,6 +14398,8 @@
       "fpRank": 174,
       "fpAdp": 284.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -14013,6 +14462,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14071,6 +14522,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14136,6 +14589,8 @@
       "fpRank": 37,
       "fpAdp": 51.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -14193,6 +14648,8 @@
       "fpRank": 83,
       "fpAdp": 130.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -14256,6 +14713,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -14318,6 +14777,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -14382,6 +14843,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -14446,6 +14909,8 @@
       "fpRank": 73,
       "fpAdp": 113.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -14506,6 +14971,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14563,6 +15030,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -14624,6 +15093,8 @@
       "fpRank": 162,
       "fpAdp": 272.4,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14682,6 +15153,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14739,6 +15212,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14796,6 +15271,8 @@
       "fpRank": 72,
       "fpAdp": 107.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -14852,6 +15329,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -14914,6 +15393,8 @@
       "fpRank": 143,
       "fpAdp": 231.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -14972,6 +15453,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15026,6 +15509,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15084,6 +15569,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15141,6 +15628,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15203,6 +15692,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -15263,6 +15754,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -15320,6 +15813,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15380,6 +15875,8 @@
       "fpRank": 150,
       "fpAdp": 244.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -15443,6 +15940,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -15505,6 +16004,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -15560,6 +16061,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -15616,6 +16119,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15672,6 +16177,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15728,6 +16235,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15792,6 +16301,8 @@
       "fpRank": 148,
       "fpAdp": 241.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -15850,6 +16361,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -15907,6 +16420,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -15969,6 +16484,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null
     },
     {
@@ -16027,6 +16544,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16084,6 +16603,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16143,6 +16664,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -16207,6 +16730,8 @@
       "fpRank": 87,
       "fpAdp": 140.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null
     },
     {
@@ -16270,6 +16795,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16331,6 +16858,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -16390,6 +16919,8 @@
       "fpRank": 102,
       "fpAdp": 173.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -16447,6 +16978,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16512,6 +17045,8 @@
       "fpRank": 118,
       "fpAdp": 199.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -16570,6 +17105,8 @@
       "fpRank": 127,
       "fpAdp": 209.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -16635,6 +17172,8 @@
       "fpRank": 92,
       "fpAdp": 148.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -16692,6 +17231,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16754,6 +17295,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -16812,6 +17355,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16874,6 +17419,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -16933,6 +17480,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -16995,6 +17544,8 @@
       "fpRank": 136,
       "fpAdp": 224.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -17057,6 +17608,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -17118,6 +17671,8 @@
       "fpRank": 94,
       "fpAdp": 149.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -17176,6 +17731,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17239,6 +17796,8 @@
       "fpRank": 64,
       "fpAdp": 92.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -17299,6 +17858,8 @@
       "fpRank": 149,
       "fpAdp": 244.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -17356,6 +17917,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17413,6 +17976,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -17471,6 +18036,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -17535,6 +18102,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -17597,6 +18166,8 @@
       "fpRank": 78,
       "fpAdp": 119.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -17658,6 +18229,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -17715,6 +18288,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17772,6 +18347,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -17830,6 +18407,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17887,6 +18466,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17942,6 +18523,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18002,6 +18585,8 @@
       "fpRank": 67,
       "fpAdp": 98.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -18059,6 +18644,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18113,6 +18700,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18174,6 +18763,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -18234,6 +18825,8 @@
       "fpRank": 103,
       "fpAdp": 175.2,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18296,6 +18889,8 @@
       "fpRank": 152,
       "fpAdp": 244.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -18354,6 +18949,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18414,6 +19011,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18475,6 +19074,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18536,6 +19137,8 @@
       "fpRank": 119,
       "fpAdp": 201.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -18598,6 +19201,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -18657,6 +19262,8 @@
       "fpRank": 113,
       "fpAdp": 183.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -18719,6 +19326,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -18776,6 +19385,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18830,6 +19441,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18895,6 +19508,8 @@
       "fpRank": 129,
       "fpAdp": 210.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -18953,6 +19568,8 @@
       "fpRank": 120,
       "fpAdp": 202.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -19016,6 +19633,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -19077,6 +19696,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19135,6 +19756,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19191,6 +19814,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19253,6 +19878,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -19315,6 +19942,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -19372,6 +20001,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19429,6 +20060,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19491,6 +20124,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -19553,6 +20188,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19610,6 +20247,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19667,6 +20306,8 @@
       "fpRank": 173,
       "fpAdp": 282.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -19726,6 +20367,8 @@
       "fpRank": 175,
       "fpAdp": 286.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -19794,6 +20437,8 @@
       "fpRank": 53,
       "fpAdp": 74.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -19850,6 +20495,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -19907,6 +20554,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19970,6 +20619,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -20032,6 +20683,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -20092,6 +20745,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20153,6 +20808,8 @@
       "fpRank": 124,
       "fpAdp": 206.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -20211,6 +20868,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20270,6 +20929,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20331,6 +20992,8 @@
       "fpRank": 107,
       "fpAdp": 177.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -20387,6 +21050,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20450,6 +21115,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -20511,6 +21178,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20572,6 +21241,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -20631,6 +21302,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20689,6 +21362,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20746,6 +21421,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20802,6 +21479,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20858,6 +21537,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -20924,6 +21605,8 @@
       "fpRank": 97,
       "fpAdp": 164.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -20984,6 +21667,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -21040,6 +21725,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21102,6 +21789,8 @@
       "fpRank": 135,
       "fpAdp": 224.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -21156,6 +21845,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21216,6 +21907,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21276,6 +21969,8 @@
       "fpRank": 128,
       "fpAdp": 210.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -21332,6 +22027,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21396,6 +22093,8 @@
       "fpRank": 117,
       "fpAdp": 199.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -21462,6 +22161,8 @@
       "fpRank": 66,
       "fpAdp": 96.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -21521,6 +22222,8 @@
       "fpRank": 79,
       "fpAdp": 120.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -21581,6 +22284,8 @@
       "fpRank": 130,
       "fpAdp": 213.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -21640,6 +22345,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21702,6 +22409,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21762,6 +22471,8 @@
       "fpRank": 180,
       "fpAdp": 246.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -21819,6 +22530,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -21882,6 +22595,8 @@
       "fpRank": 156,
       "fpAdp": 254.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -21939,6 +22654,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22001,6 +22718,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -22057,6 +22776,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22117,6 +22838,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -22176,6 +22899,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22234,6 +22959,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22291,6 +23018,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22350,6 +23079,8 @@
       "fpRank": 196,
       "fpAdp": 325.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22411,6 +23142,8 @@
       "fpRank": 208,
       "fpAdp": 307.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -22466,6 +23199,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22527,6 +23262,8 @@
       "fpRank": 179,
       "fpAdp": 295.4,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22586,6 +23323,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -22640,6 +23379,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22703,6 +23444,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22764,6 +23507,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -22825,6 +23570,8 @@
       "fpRank": 88,
       "fpAdp": 141.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -22888,6 +23635,8 @@
       "fpRank": 146,
       "fpAdp": 240.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -22948,6 +23697,8 @@
       "fpRank": 178,
       "fpAdp": 293.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23009,6 +23760,8 @@
       "fpRank": 155,
       "fpAdp": 252.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -23070,6 +23823,8 @@
       "fpRank": 151,
       "fpAdp": 244.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -23127,6 +23882,8 @@
       "fpRank": 154,
       "fpAdp": 248.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -23189,6 +23946,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -23249,6 +24008,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -23307,6 +24068,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23364,6 +24127,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23419,6 +24184,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23481,6 +24248,8 @@
       "fpRank": 81,
       "fpAdp": 129.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -23543,6 +24312,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null
     },
     {
@@ -23600,6 +24371,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -23658,6 +24431,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23725,6 +24500,8 @@
       "fpRank": 65,
       "fpAdp": 96.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -23784,6 +24561,8 @@
       "fpRank": 141,
       "fpAdp": 230.8,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23840,6 +24619,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23900,6 +24681,8 @@
       "fpRank": 233,
       "fpAdp": 365.7,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23956,6 +24739,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24013,6 +24798,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24073,6 +24860,8 @@
       "fpRank": 90,
       "fpAdp": 147.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -24135,6 +24924,8 @@
       "fpRank": 165,
       "fpAdp": 275.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24195,6 +24986,8 @@
       "fpRank": 235,
       "fpAdp": 372.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24257,6 +25050,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null
     },
     {
@@ -24313,6 +25108,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -24369,6 +25166,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -24427,6 +25226,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24483,6 +25284,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24543,6 +25346,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -24606,6 +25411,8 @@
       "fpRank": 168,
       "fpAdp": 276.8,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24664,6 +25471,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -24727,6 +25536,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -24783,6 +25594,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24842,6 +25655,8 @@
       "fpRank": 170,
       "fpAdp": 278.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24902,6 +25717,8 @@
       "fpRank": 217,
       "fpAdp": 388.8,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24963,6 +25780,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -25023,6 +25842,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25085,6 +25906,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25147,6 +25970,8 @@
       "fpRank": 99,
       "fpAdp": 165.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -25204,6 +26029,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -25264,6 +26091,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -25320,6 +26149,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25381,6 +26212,8 @@
       "fpRank": 144,
       "fpAdp": 234.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -25442,6 +26275,8 @@
       "fpRank": 265,
       "fpAdp": 664.5,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -25502,6 +26337,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -25563,6 +26400,8 @@
       "fpRank": 194,
       "fpAdp": 316.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25618,6 +26457,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25678,6 +26519,8 @@
       "fpRank": 161,
       "fpAdp": 266.2,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25736,6 +26579,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25800,6 +26645,8 @@
       "fpRank": 122,
       "fpAdp": 203.2,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25861,6 +26708,8 @@
       "fpRank": 63,
       "fpAdp": 89.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -25918,6 +26767,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25973,6 +26824,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26035,6 +26888,8 @@
       "fpRank": 105,
       "fpAdp": 176.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -26092,6 +26947,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26147,6 +27004,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26208,6 +27067,8 @@
       "fpRank": 220,
       "fpAdp": 372.3,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -26269,6 +27130,8 @@
       "fpRank": 172,
       "fpAdp": 281.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -26326,6 +27189,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26384,6 +27249,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -26445,6 +27312,8 @@
       "fpRank": 96,
       "fpAdp": 163.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -26508,6 +27377,8 @@
       "fpRank": 193,
       "fpAdp": 315.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -26567,6 +27438,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -26625,6 +27498,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -26685,6 +27560,8 @@
       "fpRank": 231,
       "fpAdp": 365.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26742,6 +27619,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26797,6 +27676,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26856,6 +27737,8 @@
       "fpRank": 139,
       "fpAdp": 228.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -26916,6 +27799,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26974,6 +27859,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27033,6 +27920,8 @@
       "fpRank": 234,
       "fpAdp": 368.3,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27093,6 +27982,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -27156,6 +28047,8 @@
       "fpRank": 243,
       "fpAdp": 351.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -27214,6 +28107,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27272,6 +28167,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27331,6 +28228,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27390,6 +28289,8 @@
       "fpRank": 210,
       "fpAdp": 349.2,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -27446,6 +28347,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27505,6 +28408,8 @@
       "fpRank": 147,
       "fpAdp": 240.8,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27562,6 +28467,8 @@
       "fpRank": 197,
       "fpAdp": 328.4,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27619,6 +28526,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -27677,6 +28586,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27736,6 +28647,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27797,6 +28710,8 @@
       "fpRank": 176,
       "fpAdp": 287.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -27858,6 +28773,8 @@
       "fpRank": 226,
       "fpAdp": 355.7,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27917,6 +28834,8 @@
       "fpRank": 310,
       "fpAdp": 677.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -27977,6 +28896,8 @@
       "fpRank": 166,
       "fpAdp": 275.2,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28038,6 +28959,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -28097,6 +29020,8 @@
       "fpRank": 225,
       "fpAdp": 387.8,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28159,6 +29084,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -28222,6 +29149,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28281,6 +29210,8 @@
       "fpRank": 260,
       "fpAdp": 411.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28338,6 +29269,8 @@
       "fpRank": 309,
       "fpAdp": 674.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -28401,6 +29334,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -28463,6 +29398,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -28523,6 +29460,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28580,6 +29519,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28642,6 +29583,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null
     },
     {
@@ -28699,6 +29642,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28755,6 +29700,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28815,6 +29762,8 @@
       "fpRank": 245,
       "fpAdp": 364.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28875,6 +29824,8 @@
       "fpRank": 219,
       "fpAdp": 369.3,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28930,6 +29881,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28985,6 +29938,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29048,6 +30003,8 @@
       "fpRank": 101,
       "fpAdp": 170.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -29110,6 +30067,8 @@
       "fpRank": 201,
       "fpAdp": 333.6,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29170,6 +30129,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -29230,6 +30191,8 @@
       "fpRank": 134,
       "fpAdp": 224.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -29289,6 +30252,8 @@
       "fpRank": 75,
       "fpAdp": 117.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -29348,6 +30313,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29405,6 +30372,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -29470,6 +30439,8 @@
       "fpRank": 160,
       "fpAdp": 263.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -29526,6 +30497,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29587,6 +30560,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -29642,6 +30617,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29701,6 +30678,8 @@
       "fpRank": 229,
       "fpAdp": 361.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29762,6 +30741,8 @@
       "fpRank": 200,
       "fpAdp": 286.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29822,6 +30803,8 @@
       "fpRank": 190,
       "fpAdp": 311.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -29882,6 +30865,8 @@
       "fpRank": 267,
       "fpAdp": 423.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29939,6 +30924,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29995,6 +30982,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30051,6 +31040,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -30111,6 +31102,8 @@
       "fpRank": 218,
       "fpAdp": 362.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30173,6 +31166,8 @@
       "fpRank": 207,
       "fpAdp": 345.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -30234,6 +31229,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -30289,6 +31286,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30347,6 +31346,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30401,6 +31402,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30462,6 +31465,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30521,6 +31526,8 @@
       "fpRank": 132,
       "fpAdp": 219.2,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -30578,6 +31585,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30639,6 +31648,8 @@
       "fpRank": 199,
       "fpAdp": 285.8,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30695,6 +31706,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30754,6 +31767,8 @@
       "fpRank": 249,
       "fpAdp": 380.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30816,6 +31831,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -30875,6 +31892,8 @@
       "fpRank": 157,
       "fpAdp": 255.4,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30935,6 +31954,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -30992,6 +32013,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -31055,6 +32078,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -31111,6 +32136,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31165,6 +32192,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31221,6 +32250,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31277,6 +32308,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31337,6 +32370,8 @@
       "fpRank": 251,
       "fpAdp": 427.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31399,6 +32434,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -31457,6 +32494,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31519,6 +32558,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31573,6 +32614,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31634,6 +32677,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -31689,6 +32734,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31748,6 +32795,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31807,6 +32856,8 @@
       "fpRank": 140,
       "fpAdp": 229.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -31863,6 +32914,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -31921,6 +32974,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31983,6 +33038,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32043,6 +33100,8 @@
       "fpRank": 186,
       "fpAdp": 304.4,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32104,6 +33163,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32165,6 +33226,8 @@
       "fpRank": 222,
       "fpAdp": 378.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32226,6 +33289,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -32287,6 +33352,8 @@
       "fpRank": 215,
       "fpAdp": 354.8,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32347,6 +33414,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32401,6 +33470,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32455,6 +33526,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32514,6 +33587,8 @@
       "fpRank": 221,
       "fpAdp": 373.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32575,6 +33650,8 @@
       "fpRank": 209,
       "fpAdp": 347.4,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -32638,6 +33715,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -32694,6 +33773,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32750,6 +33831,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32807,6 +33890,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -32866,6 +33951,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32923,6 +34010,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -32979,6 +34068,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -33038,6 +34129,8 @@
       "fpRank": 192,
       "fpAdp": 312.4,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -33095,6 +34188,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33158,6 +34253,8 @@
       "fpRank": 195,
       "fpAdp": 319.8,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33214,6 +34311,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33275,6 +34374,8 @@
       "fpRank": 185,
       "fpAdp": 304.4,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -33332,6 +34433,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33391,6 +34494,8 @@
       "fpRank": 330,
       "fpAdp": 785.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33449,6 +34554,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33508,6 +34615,8 @@
       "fpRank": 273,
       "fpAdp": 438.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33564,6 +34673,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -33624,6 +34735,8 @@
       "fpRank": 188,
       "fpAdp": 306.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -33683,6 +34796,8 @@
       "fpRank": 216,
       "fpAdp": 310.3,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -33744,6 +34859,8 @@
       "fpRank": 145,
       "fpAdp": 236.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -33806,6 +34923,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -33868,6 +34987,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -33930,6 +35051,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -33987,6 +35110,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -34045,6 +35170,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -34105,6 +35232,8 @@
       "fpRank": 167,
       "fpAdp": 276.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34167,6 +35296,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -34225,6 +35356,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34287,6 +35420,8 @@
       "fpRank": 244,
       "fpAdp": 408.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34344,6 +35479,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34403,6 +35540,8 @@
       "fpRank": 205,
       "fpAdp": 339.4,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -34463,6 +35602,8 @@
       "fpRank": 223,
       "fpAdp": 344.3,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -34522,6 +35663,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -34582,6 +35725,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null
     },
     {
@@ -34639,6 +35784,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34699,6 +35846,8 @@
       "fpRank": 318,
       "fpAdp": 473.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34763,6 +35912,8 @@
       "fpRank": 268,
       "fpAdp": 609.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -34824,6 +35975,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null
     },
     {
@@ -34884,6 +36037,8 @@
       "fpRank": 340,
       "fpAdp": 771.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34944,6 +36099,8 @@
       "fpRank": 204,
       "fpAdp": 298.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -35004,6 +36161,8 @@
       "fpRank": 296,
       "fpAdp": 457.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35062,6 +36221,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -35119,6 +36280,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35178,6 +36341,8 @@
       "fpRank": 211,
       "fpAdp": 358.0,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -35238,6 +36403,8 @@
       "fpRank": 238,
       "fpAdp": 380.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35297,6 +36464,8 @@
       "fpRank": 300,
       "fpAdp": 675.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35357,6 +36526,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35414,6 +36585,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -35475,6 +36648,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35534,6 +36709,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35595,6 +36772,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35655,6 +36834,8 @@
       "fpRank": 228,
       "fpAdp": 358.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35711,6 +36892,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -35771,6 +36954,8 @@
       "fpRank": 255,
       "fpAdp": 434.7,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35830,6 +37015,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35889,6 +37076,8 @@
       "fpRank": 189,
       "fpAdp": 308.4,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -35949,6 +37138,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36008,6 +37199,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36065,6 +37258,8 @@
       "fpRank": 214,
       "fpAdp": 354.3,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -36125,6 +37320,8 @@
       "fpRank": 266,
       "fpAdp": 423.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36185,6 +37382,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36243,6 +37442,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36299,6 +37500,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36360,6 +37563,8 @@
       "fpRank": 100,
       "fpAdp": 168.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Hideo Lobo",
       "scoreYahoo": null
     },
     {
@@ -36419,6 +37624,8 @@
       "fpRank": 158,
       "fpAdp": 259.2,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36482,6 +37689,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -36542,6 +37751,8 @@
       "fpRank": 203,
       "fpAdp": 334.8,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36596,6 +37807,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36655,6 +37868,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -36714,6 +37929,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36773,6 +37990,8 @@
       "fpRank": 269,
       "fpAdp": 427.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36829,6 +38048,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36885,6 +38106,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -36942,6 +38165,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -37005,6 +38230,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -37064,6 +38291,8 @@
       "fpRank": 133,
       "fpAdp": 219.2,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37125,8 +38354,9 @@
       "fpRank": 236,
       "fpAdp": 373.7,
       "pct_owned": 0.0,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "rostered": false,
+      "owner": null,
+      "scoreYahoo": null
     },
     {
       "name": "George Valera",
@@ -37186,6 +38416,8 @@
       "fpRank": 280,
       "fpAdp": 791.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -37247,6 +38479,8 @@
       "fpRank": 239,
       "fpAdp": 381.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -37303,6 +38537,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37357,6 +38593,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37413,6 +38651,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37473,6 +38713,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -37529,6 +38771,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37586,6 +38830,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37641,6 +38887,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -37701,6 +38949,8 @@
       "fpRank": 258,
       "fpAdp": 406.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -37760,6 +39010,8 @@
       "fpRank": 276,
       "fpAdp": 607.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37815,6 +39067,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -37876,6 +39130,8 @@
       "fpRank": 270,
       "fpAdp": 431.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37932,6 +39188,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37991,6 +39249,8 @@
       "fpRank": 213,
       "fpAdp": 336.8,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38051,6 +39311,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38111,6 +39373,8 @@
       "fpRank": 343,
       "fpAdp": 724.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38171,6 +39435,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38234,6 +39500,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -38290,6 +39558,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -38348,6 +39618,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38406,6 +39678,8 @@
       "fpRank": 285,
       "fpAdp": 449.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -38463,6 +39737,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38521,6 +39797,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -38578,6 +39856,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38637,6 +39917,8 @@
       "fpRank": 212,
       "fpAdp": 449.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -38696,6 +39978,8 @@
       "fpRank": 224,
       "fpAdp": 387.8,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38755,6 +40039,8 @@
       "fpRank": 191,
       "fpAdp": 312.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38814,6 +40100,8 @@
       "fpRank": 306,
       "fpAdp": 464.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38873,6 +40161,8 @@
       "fpRank": 252,
       "fpAdp": 391.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -38936,6 +40226,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
       "scoreYahoo": null
     },
     {
@@ -38992,6 +40284,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39052,6 +40346,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39108,6 +40404,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39169,8 +40467,9 @@
       "fpRank": 311,
       "fpAdp": 717.5,
       "pct_owned": 0.0,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "rostered": false,
+      "owner": null,
+      "scoreYahoo": null
     },
     {
       "name": "Zach McCambley",
@@ -39226,6 +40525,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39286,6 +40587,8 @@
       "fpRank": 281,
       "fpAdp": 774.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39344,6 +40647,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39403,6 +40708,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39466,6 +40773,8 @@
       "fpRank": 257,
       "fpAdp": 569.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39522,6 +40831,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39579,6 +40890,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -39636,6 +40949,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -39694,6 +41009,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39750,6 +41067,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39807,6 +41126,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -39868,6 +41189,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39930,6 +41253,8 @@
       "fpRank": 326,
       "fpAdp": 778.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -39989,6 +41314,8 @@
       "fpRank": 256,
       "fpAdp": 436.7,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -40046,6 +41373,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40102,6 +41431,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40164,6 +41495,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -40218,6 +41551,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -40278,6 +41613,8 @@
       "fpRank": 314,
       "fpAdp": 794.5,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -40340,6 +41677,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40396,6 +41735,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40452,6 +41793,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40511,6 +41854,8 @@
       "fpRank": 242,
       "fpAdp": 400.3,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40571,6 +41916,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40632,6 +41979,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -40692,6 +42041,8 @@
       "fpRank": 181,
       "fpAdp": 297.6,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null
     },
     {
@@ -40751,6 +42102,8 @@
       "fpRank": 316,
       "fpAdp": 763.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40808,6 +42161,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null
     },
     {
@@ -40864,6 +42219,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40925,6 +42282,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -40983,6 +42342,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -41045,6 +42406,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41101,6 +42464,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41160,6 +42525,8 @@
       "fpRank": 293,
       "fpAdp": 470.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41219,6 +42586,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41280,6 +42649,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41338,6 +42709,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -41398,6 +42771,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -41459,6 +42834,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41521,6 +42898,8 @@
       "fpRank": 184,
       "fpAdp": 302.4,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41581,6 +42960,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -41642,6 +43023,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41703,6 +43086,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41761,6 +43146,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -41819,6 +43206,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -41879,6 +43268,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41939,6 +43330,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41995,6 +43388,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42050,6 +43445,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42106,6 +43503,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -42161,6 +43560,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
       "scoreYahoo": null
     },
     {
@@ -42221,6 +43622,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -42281,6 +43684,8 @@
       "fpRank": 227,
       "fpAdp": 356.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42338,6 +43743,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -42393,6 +43800,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42448,6 +43857,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -42503,6 +43914,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -42564,6 +43977,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -42621,6 +44036,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42682,8 +44099,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "rostered": false,
+      "owner": null,
+      "scoreYahoo": null
     },
     {
       "name": "Brad Lord",
@@ -42739,6 +44157,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42793,6 +44213,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42853,6 +44275,8 @@
       "fpRank": 291,
       "fpAdp": 772.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42911,6 +44335,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -42969,6 +44395,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Dynasty",
       "scoreYahoo": null
     },
     {
@@ -43029,6 +44457,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -43092,6 +44522,8 @@
       "fpRank": 241,
       "fpAdp": 398.7,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43149,6 +44581,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43207,6 +44641,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -43265,6 +44701,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43325,6 +44763,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -43383,6 +44823,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43440,6 +44882,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "StickyBanditz",
       "scoreYahoo": null
     },
     {
@@ -43501,6 +44945,8 @@
       "fpRank": 275,
       "fpAdp": 675.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43555,6 +45001,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43612,6 +45060,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43670,6 +45120,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43730,6 +45182,8 @@
       "fpRank": 317,
       "fpAdp": 721.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -43792,6 +45246,8 @@
       "fpRank": 320,
       "fpAdp": 838.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43851,6 +45307,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -43907,6 +45365,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -43962,6 +45422,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -44020,6 +45482,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44075,6 +45539,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -44134,6 +45600,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -44191,6 +45659,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44245,6 +45715,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44304,6 +45776,8 @@
       "fpRank": 253,
       "fpAdp": 433.3,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44358,6 +45832,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44414,6 +45890,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44468,6 +45946,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44528,6 +46008,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -44588,6 +46070,8 @@
       "fpRank": 287,
       "fpAdp": 449.5,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -44650,6 +46134,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Toms River",
       "scoreYahoo": null
     },
     {
@@ -44707,6 +46193,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44764,6 +46252,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44822,6 +46312,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -44879,6 +46371,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -44934,6 +46428,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -44993,6 +46489,8 @@
       "fpRank": 290,
       "fpAdp": 721.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45053,6 +46551,8 @@
       "fpRank": 254,
       "fpAdp": 433.7,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45109,6 +46609,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -45167,6 +46669,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45221,6 +46725,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45275,6 +46781,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45334,6 +46842,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45395,6 +46905,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45456,6 +46968,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45513,6 +47027,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -45568,6 +47084,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -45628,6 +47146,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -45688,6 +47208,8 @@
       "fpRank": 315,
       "fpAdp": 679.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45745,6 +47267,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45806,6 +47330,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45865,6 +47391,8 @@
       "fpRank": 304,
       "fpAdp": 721.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -45924,6 +47452,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -45984,6 +47514,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46040,6 +47572,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46097,6 +47631,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -46152,6 +47688,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46211,6 +47749,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46270,6 +47810,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -46331,6 +47873,8 @@
       "fpRank": 313,
       "fpAdp": 824.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46394,6 +47938,8 @@
       "fpRank": 250,
       "fpAdp": 690.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46453,6 +47999,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46514,6 +48062,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46570,6 +48120,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46628,6 +48180,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46682,6 +48236,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46738,6 +48294,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46799,6 +48357,8 @@
       "fpRank": 279,
       "fpAdp": 756.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46858,6 +48418,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -46916,6 +48478,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -46972,6 +48536,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47027,6 +48593,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -47086,6 +48654,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -47141,6 +48711,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47195,6 +48767,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -47253,6 +48827,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -47308,6 +48884,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47365,6 +48943,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47421,6 +49001,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47481,6 +49063,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47537,6 +49121,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47591,6 +49177,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47649,6 +49237,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47710,6 +49300,8 @@
       "fpRank": 246,
       "fpAdp": 373.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47773,6 +49365,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47832,6 +49426,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47890,6 +49486,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -47946,6 +49544,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -48003,6 +49603,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48057,6 +49659,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48113,6 +49717,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -48168,6 +49774,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48224,6 +49832,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -48281,6 +49891,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -48338,6 +49950,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48394,6 +50008,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -48451,6 +50067,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48510,6 +50128,8 @@
       "fpRank": 232,
       "fpAdp": 399.3,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "gamma's Team",
       "scoreYahoo": null
     },
     {
@@ -48569,6 +50189,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -48624,6 +50246,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48680,6 +50304,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48737,6 +50363,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -48793,6 +50421,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48851,6 +50481,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48905,6 +50537,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -48962,6 +50596,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -49018,6 +50654,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -49076,6 +50714,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49136,6 +50776,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -49199,6 +50841,8 @@
       "fpRank": 206,
       "fpAdp": 345.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49255,6 +50899,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49313,6 +50959,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -49369,6 +51017,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49428,6 +51078,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49491,6 +51143,8 @@
       "fpRank": 125,
       "fpAdp": 206.8,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Team Underdog",
       "scoreYahoo": null
     },
     {
@@ -49545,6 +51199,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49603,6 +51259,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -49659,6 +51317,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -49716,6 +51376,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49772,6 +51434,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49831,6 +51495,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49892,6 +51558,8 @@
       "fpRank": 286,
       "fpAdp": 715.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -49948,6 +51616,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50004,6 +51674,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50060,6 +51732,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50116,6 +51790,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50170,6 +51846,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50229,6 +51907,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50285,6 +51965,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50345,6 +52027,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50404,6 +52088,8 @@
       "fpRank": 334,
       "fpAdp": 861.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50461,6 +52147,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -50516,6 +52204,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50572,6 +52262,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -50630,6 +52322,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -50685,6 +52379,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -50742,6 +52438,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -50798,6 +52496,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -50855,6 +52555,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -50911,6 +52613,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -50967,6 +52671,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51021,6 +52727,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51079,6 +52787,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51135,6 +52845,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -51195,6 +52907,8 @@
       "fpRank": 341,
       "fpAdp": 846.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51255,6 +52969,8 @@
       "fpRank": 274,
       "fpAdp": 689.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51316,6 +53032,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51373,6 +53091,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -51428,6 +53148,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -51483,6 +53205,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51540,6 +53264,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51597,6 +53323,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -51655,6 +53383,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -51710,6 +53440,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51766,6 +53498,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51822,6 +53556,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -51879,6 +53615,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -51938,6 +53676,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Nighthawks",
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -51998,6 +53738,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -52055,6 +53797,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52116,6 +53860,8 @@
       "fpRank": 333,
       "fpAdp": 690.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52173,6 +53919,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52227,6 +53975,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -52284,6 +54034,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -52344,6 +54096,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52401,6 +54155,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -52457,6 +54213,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52513,6 +54271,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52570,6 +54330,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -52627,6 +54389,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52681,6 +54445,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52738,6 +54504,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52794,6 +54562,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -52851,6 +54621,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -52906,6 +54678,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -52965,6 +54739,8 @@
       "fpRank": 295,
       "fpAdp": 621.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53021,6 +54797,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53077,6 +54855,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53136,6 +54916,8 @@
       "fpRank": 272,
       "fpAdp": 457.7,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53196,6 +54978,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53256,6 +55040,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53317,6 +55103,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53374,6 +55162,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -53432,6 +55222,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53488,6 +55280,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53544,6 +55338,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53600,6 +55396,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -53657,6 +55455,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53713,6 +55513,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53768,6 +55570,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -53825,6 +55629,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53882,6 +55688,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53938,6 +55746,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -53994,6 +55804,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -54049,6 +55861,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54106,6 +55920,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -54163,6 +55979,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -54218,6 +56036,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -54275,6 +56095,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -54332,6 +56154,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -54389,6 +56213,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54445,6 +56271,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54501,6 +56329,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54557,6 +56387,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54613,6 +56445,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54669,6 +56503,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -54731,6 +56567,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54792,6 +56630,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54853,6 +56693,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54913,6 +56755,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -54974,6 +56818,8 @@
       "fpRank": 339,
       "fpAdp": 821.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55033,6 +56879,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55090,6 +56938,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -55147,6 +56997,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55206,6 +57058,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -55264,6 +57118,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55323,6 +57179,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55382,6 +57240,8 @@
       "fpRank": 312,
       "fpAdp": 542.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -55442,6 +57302,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55472,7 +57334,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 195,
       "score2026_neutral": 0.0,
@@ -55502,7 +57364,10 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "scoreYahoo": null
+      "rostered": false,
+      "owner": null,
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Mart\u00edn P\u00e9rez",
@@ -55557,6 +57422,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -55614,6 +57481,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Poor Pickles",
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -55671,6 +57540,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -55728,6 +57599,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55782,6 +57655,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -55837,6 +57712,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -55894,6 +57771,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -55952,6 +57831,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -56008,6 +57889,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -56065,6 +57948,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -56123,6 +58008,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -56183,6 +58070,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -56243,6 +58132,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56302,6 +58193,8 @@
       "fpRank": 263,
       "fpAdp": 417.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -56362,6 +58255,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -56423,6 +58318,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56484,6 +58381,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -56544,6 +58443,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "JP Licks",
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -56604,6 +58505,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56665,6 +58568,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56724,6 +58629,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56783,6 +58690,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -56846,6 +58755,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -56906,6 +58817,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -56966,6 +58879,8 @@
       "fpRank": 302,
       "fpAdp": 760.5,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -57028,6 +58943,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57088,6 +59005,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57151,6 +59070,8 @@
       "fpRank": 319,
       "fpAdp": 829.0,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57211,6 +59132,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57272,6 +59195,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -57334,6 +59259,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57395,6 +59322,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -57455,6 +59384,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57515,6 +59446,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57573,6 +59506,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57629,6 +59564,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": true,
+      "owner": "Bay of Papi",
       "scoreYahoo": null
     },
     {
@@ -57683,6 +59620,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57739,6 +59678,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -57796,6 +59737,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57852,6 +59795,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -57909,6 +59854,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -57963,6 +59910,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58019,6 +59968,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -58074,6 +60025,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58130,6 +60083,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -58185,6 +60140,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -58240,6 +60197,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58294,6 +60253,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58348,6 +60309,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58402,6 +60365,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58459,6 +60424,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -58516,6 +60483,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58572,6 +60541,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58628,6 +60599,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58684,6 +60657,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58740,6 +60715,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -58795,6 +60772,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -58851,6 +60830,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -58909,6 +60890,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -58964,6 +60947,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -59021,6 +61006,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59075,6 +61062,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -59132,6 +61121,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59186,6 +61177,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59242,6 +61235,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -59299,6 +61294,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -59354,6 +61351,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59410,6 +61409,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59464,6 +61465,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -59518,6 +61521,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     }

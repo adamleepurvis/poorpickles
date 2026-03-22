@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-22T00:32:37.107574",
+  "generated": "2026-03-22T15:27:54.505267",
   "league_key": "469.l.91300",
   "settings": {
     "league_key": "469.l.91300",
@@ -18,7 +18,7 @@
       "ERA",
       "WHIP"
     ],
-    "fetched_at": "2026-03-22T00:32:37.486515"
+    "fetched_at": "2026-03-22T15:27:54.965010"
   },
   "draft_results": [
     {
@@ -5132,16 +5132,16 @@
       "RF",
       "SS"
     ],
+    "Jose Iglesias": [
+      "2B",
+      "3B",
+      "SS"
+    ],
     "Javier Sanoja": [
       "2B",
       "3B",
       "CF",
       "LF",
-      "SS"
-    ],
-    "Jose Iglesias": [
-      "2B",
-      "3B",
       "SS"
     ],
     "Amed Rosario": [
@@ -6952,11 +6952,11 @@
       "LF",
       "RF"
     ],
-    "Justyn-Henry Malloy": [
+    "Dylan Beavers": [
       "LF",
       "RF"
     ],
-    "Dylan Beavers": [
+    "Justyn-Henry Malloy": [
       "LF",
       "RF"
     ],
@@ -10518,14 +10518,12 @@
     "Jackson Holliday": "DTD",
     "Tommy Edman": "DTD",
     "Tyler Freeman": "DTD",
-    "Gavin Lux": "DTD",
     "Adam Frazier": "NA",
     "Brooks Baldwin": "DTD",
     "Jose Iglesias": "SUSP",
     "Ha-Seong Kim": "DTD",
     "Paul DeJong": "NA",
     "Tyler Fitzgerald": "NA",
-    "Austin Martin": "DTD",
     "Michael Massey": "DTD",
     "Thairo Estrada": "NA",
     "Luis Ur\u00edas": "NA",
@@ -10831,7 +10829,6 @@
     "Lourdes Gurriel Jr.": "DTD",
     "Harrison Bader": "DTD",
     "Jurickson Profar": "SUSP",
-    "Mike Yastrzemski": "DTD",
     "Lars Nootbaar": "DTD",
     "Tommy Pham": "NA",
     "Max Kepler": "SUSP",
@@ -10845,8 +10842,8 @@
     "Richie Palacios": "NA",
     "Austin Slater": "NA",
     "Dairon Blanco": "NA",
-    "Justyn-Henry Malloy": "NA",
     "Dylan Beavers": "DTD",
+    "Justyn-Henry Malloy": "NA",
     "Zach Dezenzo": "DTD",
     "John Rave": "NA",
     "Bryan De La Cruz": "NA",
@@ -10948,6 +10945,7 @@
     "George Wolkow": "NA",
     "Emmanuel Rodriguez": "NA",
     "Wade Meckler": "NA",
+    "Jhostynxon Garcia": "NA",
     "Andrew McCutchen": "NA",
     "Yanquiel Fern\u00e1ndez": "NA",
     "Hunter Renfroe": "NA",
@@ -11332,6 +11330,7 @@
     "Hunter Gaddis": "DTD",
     "Bennett Sousa": "DTD",
     "F\u00e9lix Bautista": "IL60",
+    "Orion Kerkering": "DTD",
     "Danny Coulombe": "DTD",
     "Andrew Saalfrank": "IL60",
     "Manuel Rodr\u00edguez": "IL60",
