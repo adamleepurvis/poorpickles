@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-24T14:36:36.777612",
+  "generated": "2026-03-24T19:24:37.092686",
   "league_key": "469.l.91300",
   "settings": {
     "league_key": "469.l.91300",
@@ -18,7 +18,7 @@
       "ERA",
       "WHIP"
     ],
-    "fetched_at": "2026-03-24T14:36:37.493173"
+    "fetched_at": "2026-03-24T19:24:37.849605"
   },
   "draft_results": [
     {
@@ -4858,7 +4858,7 @@
     "Ralphy Velazquez": [
       "1B"
     ],
-    "T.J. Rumfield": [
+    "TJ Rumfield": [
       "1B"
     ],
     "Cooper Bowman": [
@@ -10506,7 +10506,7 @@
     "Dylan Jasso": "NA",
     "Deyvison De Los Santos": "NA",
     "Ralphy Velazquez": "NA",
-    "T.J. Rumfield": "NA",
+    "TJ Rumfield": "NA",
     "Cooper Bowman": "NA",
     "Jack Gurevitch": "NA",
     "Edward Florentino": "NA",
@@ -10521,12 +10521,11 @@
     "Bryce Eldridge": "NA",
     "Justin Foscue": "NA",
     "Ryan Noda": "NA",
-    "Matt McLain": "DTD",
-    "JJ Wetherholt": "NA",
+    "Ketel Marte": "DTD",
     "Jordan Westburg": "DTD",
     "Jackson Holliday": "DTD",
     "Tommy Edman": "DTD",
-    "Tyler Freeman": "DTD",
+    "Tyler Freeman": "IL10",
     "Gavin Lux": "DTD",
     "Adam Frazier": "NA",
     "Brooks Baldwin": "DTD",
@@ -10690,6 +10689,7 @@
     "Nicky Lopez": "NA",
     "Denzer Guzman": "NA",
     "Gage Workman": "NA",
+    "Jace Jung": "NA",
     "Tim Piasentin": "NA",
     "Yolfran Castillo": "NA",
     "Roderick Arias": "NA",
@@ -10743,7 +10743,6 @@
     "Cam Devanney": "NA",
     "Francisco Lindor": "DTD",
     "Jeremy Pe\u00f1a": "DTD",
-    "Kevin McGonigle": "NA",
     "Konnor Griffin": "NA",
     "J.P. Crawford": "DTD",
     "Anthony Volpe": "DTD",
@@ -10797,6 +10796,7 @@
     "Dax Kilby": "NA",
     "Daniel Vazquez": "NA",
     "Darell Morel": "NA",
+    "Trei Cruz": "NA",
     "Josh Owens": "NA",
     "Antonio Jimenez": "NA",
     "Joshua Kuroda-Grauer": "NA",
@@ -10918,11 +10918,12 @@
     "Oliver Tejada": "NA",
     "Jud Fabian": "NA",
     "Kenedy Corona": "NA",
-    "Akil Baddoo": "DTD",
+    "Akil Baddoo": "IL60",
     "Carson McCusker": "NA",
     "Tirso Ornelas": "NA",
     "Will Robertson": "NA",
     "Dylan Crews": "NA",
+    "Wenceel P\u00e9rez": "NA",
     "Johan Rojas": "SUSP",
     "Kameron Misner": "NA",
     "Michael Helman": "NA",
@@ -10983,6 +10984,7 @@
     "Tyler Gentry": "NA",
     "Nick Lodolo": "DTD",
     "Zack Wheeler": "DTD",
+    "Ryan Pepiot": "IL15",
     "Trey Yesavage": "DTD",
     "Blake Snell": "DTD",
     "Carlos Rod\u00f3n": "DTD",
@@ -11007,6 +11009,7 @@
     "Lucas Giolito": "NA",
     "Reese Olson": "IL60",
     "Troy Melton": "IL60",
+    "Nick Martinez": "DTD",
     "Hurston Waldrep": "DTD",
     "Dean Kremer": "NA",
     "Brandon Walter": "DTD",
@@ -11389,6 +11392,7 @@
     "Andrew Chafin": "NA",
     "Bryan Hoeing": "DTD",
     "Daysbel Hern\u00e1ndez": "DTD",
+    "Hunter Bigge": "NA",
     "Erasmo Ram\u00edrez": "NA",
     "Tyler Ferguson": "NA",
     "Dedniel N\u00fa\u00f1ez": "IL60",
@@ -11587,7 +11591,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.2",
@@ -11596,7 +11601,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.3",
@@ -11605,7 +11611,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.4",
@@ -11614,7 +11621,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.5",
@@ -11623,7 +11631,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.6",
@@ -11632,7 +11641,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.7",
@@ -11641,7 +11651,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.8",
@@ -11650,7 +11661,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.9",
@@ -11659,7 +11671,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.10",
@@ -11668,7 +11681,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.11",
@@ -11677,7 +11691,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.12",
@@ -11686,7 +11701,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.13",
@@ -11695,7 +11711,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.14",
@@ -11704,7 +11721,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     }
   ]
 }

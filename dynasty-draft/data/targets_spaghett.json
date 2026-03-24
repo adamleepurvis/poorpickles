@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-24T14:37:16.174392",
+  "generated": "2026-03-24T19:25:16.430395",
   "count": 1003,
   "players": [
     {
@@ -68,6 +68,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -136,6 +137,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -203,6 +205,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -271,6 +274,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -340,6 +344,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -408,6 +413,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -475,6 +481,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -543,6 +550,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -610,6 +618,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -679,6 +688,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -746,6 +756,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -810,6 +821,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -875,6 +887,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -939,6 +952,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -1005,6 +1019,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -1069,6 +1084,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -1133,6 +1149,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -1197,6 +1214,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -1262,6 +1280,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -1330,6 +1349,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -1396,6 +1416,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -1464,6 +1485,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -1532,6 +1554,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -1601,6 +1624,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -1668,6 +1692,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -1730,6 +1755,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -1798,6 +1824,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -1861,6 +1888,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -1929,6 +1957,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -1997,6 +2026,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -2065,6 +2095,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -2129,6 +2160,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -2194,6 +2226,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -2263,6 +2296,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -2327,6 +2361,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -2394,6 +2429,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -2458,6 +2494,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -2589,6 +2626,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -2656,6 +2694,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -2720,6 +2759,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -2788,6 +2828,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -2856,6 +2897,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -2920,6 +2962,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -2987,7 +3030,9 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
-      "scoreYahoo": null
+      "selected_position": "BN",
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Yoshinobu Yamamoto",
@@ -3053,6 +3098,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -3117,6 +3163,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -3307,6 +3354,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -3436,6 +3484,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -3566,6 +3615,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -3633,6 +3683,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -3701,6 +3752,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -3765,6 +3817,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -3894,6 +3947,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -3963,6 +4017,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -4030,6 +4085,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -4094,6 +4150,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -4221,6 +4278,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -4411,6 +4469,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -4476,6 +4535,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -4540,6 +4600,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -4666,6 +4727,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -4732,6 +4794,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -4858,6 +4921,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -4991,6 +5055,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -5119,6 +5184,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -5182,6 +5248,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -5245,6 +5312,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -5561,6 +5629,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -5625,6 +5694,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -5749,6 +5819,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -5816,6 +5887,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -5885,6 +5957,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -5949,6 +6022,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -6019,6 +6093,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -6089,6 +6164,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -6157,6 +6233,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -6285,6 +6362,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -6403,6 +6481,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -6473,6 +6552,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -6542,6 +6622,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -6606,6 +6687,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -6674,6 +6756,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -6861,6 +6944,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -6986,6 +7070,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -7112,6 +7197,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -7179,6 +7265,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -7309,6 +7396,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -7373,6 +7461,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -7439,6 +7528,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -7565,6 +7655,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -7633,6 +7724,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -7890,6 +7982,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -8013,6 +8106,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -8075,6 +8169,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -8143,6 +8238,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -8329,6 +8425,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -8394,6 +8491,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -8519,6 +8617,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -8641,6 +8740,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -8889,6 +8989,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -8955,6 +9056,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -9021,6 +9123,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -9205,6 +9308,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -9390,6 +9494,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -9455,6 +9560,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -9522,6 +9628,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -9649,6 +9756,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -9714,6 +9822,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -9961,6 +10070,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -9996,7 +10106,7 @@
         "K",
         "W"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 174.8,
       "projStats": {
@@ -10025,7 +10135,9 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
-      "scoreYahoo": null
+      "selected_position": "BN",
+      "scoreYahoo": null,
+      "yahoo_status": "IL15"
     },
     {
       "name": "Tyler Glasnow",
@@ -10091,6 +10203,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -10155,6 +10268,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -10219,6 +10333,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -10287,6 +10402,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -10351,6 +10467,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -10474,6 +10591,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -10599,6 +10717,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -10665,6 +10784,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -10791,6 +10911,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -10859,6 +10980,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -10923,6 +11045,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -11047,6 +11170,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -11114,6 +11238,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -11298,6 +11423,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -11366,6 +11492,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -11433,6 +11560,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -11497,6 +11625,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -11560,6 +11689,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -11626,6 +11756,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -11690,6 +11821,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -11755,6 +11887,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -11817,6 +11950,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -11883,6 +12017,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -11946,6 +12081,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -12009,6 +12145,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -12199,6 +12336,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -12266,6 +12404,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -12333,6 +12472,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -12397,6 +12537,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -12531,6 +12672,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -12595,6 +12737,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -12657,6 +12800,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -12780,6 +12924,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -12845,6 +12990,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -12907,6 +13053,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -13269,6 +13416,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -13334,6 +13482,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -13575,6 +13724,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -13640,6 +13790,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -13765,6 +13916,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -13952,6 +14104,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -14018,6 +14171,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -14083,6 +14237,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -14206,6 +14361,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -14270,6 +14426,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -14333,6 +14490,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -14588,6 +14746,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -14647,6 +14806,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -14712,6 +14872,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -14776,6 +14937,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -14842,6 +15004,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -14908,6 +15071,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -15092,6 +15256,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -15270,6 +15435,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -15392,6 +15558,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -15692,6 +15859,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -15754,6 +15922,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -15875,6 +16044,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -16301,6 +16471,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -16361,6 +16532,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -16484,6 +16656,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -16664,6 +16837,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -16730,6 +16904,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -16826,7 +17001,7 @@
         "R",
         "OBP"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projPA": 477,
       "score2026_neutral": 5.9,
@@ -16858,8 +17033,8 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "selected_position": "BN",
+      "scoreYahoo": null
     },
     {
       "name": "Jordan Westburg",
@@ -16919,6 +17094,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -17046,6 +17222,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -17173,6 +17350,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -17296,6 +17474,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -17420,6 +17599,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -17545,6 +17725,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -17609,6 +17790,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -17672,6 +17854,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -17732,6 +17915,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -17797,6 +17981,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -17977,6 +18162,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -18037,6 +18223,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -18103,6 +18290,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -18167,6 +18355,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -18230,6 +18419,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -18586,6 +18776,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -18826,6 +19017,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -19075,6 +19267,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -19138,6 +19331,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -19202,6 +19396,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -19263,6 +19458,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -19327,6 +19523,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -19509,6 +19706,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -19569,6 +19767,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -19634,6 +19833,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -19697,6 +19897,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -19879,6 +20080,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -20125,6 +20327,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -20248,6 +20451,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -20439,6 +20643,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -20620,6 +20825,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -20684,6 +20890,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -20809,6 +21016,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -20993,6 +21201,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -21242,6 +21451,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -21606,6 +21816,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -21668,6 +21879,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -21790,6 +22002,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -22094,6 +22307,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -22162,6 +22376,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -22223,6 +22438,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -22285,6 +22501,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -22410,6 +22627,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -22531,6 +22749,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -22719,6 +22938,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -22839,6 +23059,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -23143,6 +23364,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -23476,7 +23698,7 @@
       "cats_5x5": [
         "OBP"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projPA": 478,
       "score2026_neutral": 5.3,
@@ -23508,8 +23730,8 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "selected_position": "BN",
+      "scoreYahoo": null
     },
     {
       "name": "Noelvi Marte",
@@ -23571,6 +23793,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -23636,6 +23859,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -23761,6 +23985,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -23824,6 +24049,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -23947,6 +24173,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -24249,6 +24476,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -24313,6 +24541,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -24372,6 +24601,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -24501,6 +24731,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -24562,6 +24793,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -24861,6 +25093,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -25051,6 +25284,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -25412,6 +25646,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -25537,6 +25772,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -25907,6 +26143,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -25971,6 +26208,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -26030,6 +26268,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -26092,6 +26331,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -26213,6 +26453,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -26276,6 +26517,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -26520,6 +26762,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -26709,6 +26952,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -26889,6 +27133,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -27250,6 +27495,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -27313,6 +27559,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -27378,6 +27625,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -27739,6 +27987,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -27801,6 +28050,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -27984,6 +28234,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -28528,6 +28779,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -28961,6 +29213,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -29086,6 +29339,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -29336,6 +29590,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -29400,6 +29655,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -29585,6 +29841,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -29911,7 +30168,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 52.0,
       "projStats": {
@@ -29940,7 +30197,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Mike Trout",
@@ -30005,6 +30263,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -30130,6 +30389,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -30192,8 +30452,8 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "selected_position": "BN",
+      "scoreYahoo": null
     },
     {
       "name": "Trevor Story",
@@ -30254,6 +30514,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -30805,6 +31066,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -30835,7 +31097,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 431,
       "score2026_neutral": 4.0,
@@ -30867,7 +31129,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Chase Silseth",
@@ -31528,6 +31791,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -31833,6 +32097,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -31956,6 +32221,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -32080,6 +32346,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bargain Bangers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -32438,6 +32705,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -32562,6 +32830,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -32681,6 +32950,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -32799,7 +33069,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Carter Jensen",
@@ -33104,6 +33375,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -33418,6 +33690,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -33719,6 +33992,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -34257,6 +34531,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -34991,6 +35266,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -35055,6 +35331,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Les Sexpos de Montr\u00e9al",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -35300,6 +35577,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "DTD"
     },
@@ -35729,6 +36007,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -35788,6 +36067,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -35979,6 +36259,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -37567,6 +37848,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -37661,7 +37943,7 @@
         "SB",
         "OBP"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 297,
       "score2026_neutral": 3.7,
@@ -37694,7 +37976,7 @@
       "rostered": false,
       "owner": null,
       "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "yahoo_status": "IL10"
     },
     {
       "name": "Ryan McMahon",
@@ -38233,6 +38515,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -39503,6 +39786,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -39800,6 +40084,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -40229,6 +40514,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -41015,6 +41301,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -41501,6 +41788,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -44403,6 +44691,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -44890,6 +45179,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -51152,6 +51442,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Clase Innocence Project",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -61549,7 +61840,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.2",
@@ -61558,7 +61850,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.3",
@@ -61567,7 +61860,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.4",
@@ -61576,7 +61870,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.5",
@@ -61585,7 +61880,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.6",
@@ -61594,7 +61890,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.7",
@@ -61603,7 +61900,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.8",
@@ -61612,7 +61910,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.9",
@@ -61621,7 +61920,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.10",
@@ -61630,7 +61930,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.11",
@@ -61639,7 +61940,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.12",
@@ -61648,7 +61950,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.13",
@@ -61657,7 +61960,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     },
     {
       "team_key": "469.l.91300.t.14",
@@ -61666,7 +61970,8 @@
       "losses": 0,
       "ties": 0,
       "rank": 0,
-      "games_back": 0.0
+      "games_back": 0.0,
+      "cat_stats": {}
     }
   ]
 }
