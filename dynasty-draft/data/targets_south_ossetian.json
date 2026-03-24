@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-22T18:35:59.779139",
+  "generated": "2026-03-24T13:22:24.918781",
   "count": 1003,
   "players": [
     {
@@ -5949,7 +5949,8 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Scott's Strategic Realignment",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Aaron Judge",
@@ -9454,7 +9455,8 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Taylor Ward",
@@ -10921,8 +10923,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Braxton Garrett",
@@ -11625,8 +11626,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Ryan Howard's $5 Footlong",
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Nick Pivetta",
@@ -12595,8 +12595,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Scott's Strategic Realignment",
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Jason Adam",
@@ -16950,7 +16949,7 @@
       "cats_5x5": [
         "NSVH"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 58.0,
       "projStats": {
@@ -16979,7 +16978,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Daulton Varsho",
@@ -18008,7 +18008,7 @@
       "cats_5x5": [
         "WHIP"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 82.6,
       "projStats": {
@@ -18038,7 +18038,7 @@
       "rostered": true,
       "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "yahoo_status": "IL60"
     },
     {
       "name": "Sean Manaea",
@@ -20368,7 +20368,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "George Springer",
@@ -20496,8 +20497,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Cionel P\u00e9rez",
@@ -27591,7 +27591,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 60.8,
       "projStats": {
@@ -27620,7 +27620,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Connor Phillips",
@@ -30004,8 +30005,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Ryan Howard's $5 Footlong",
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Jake Cronenworth",
@@ -30192,7 +30192,8 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfc5 Clutch Trey",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Trevor Story",
@@ -32108,7 +32109,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 52.0,
       "projStats": {
@@ -32137,7 +32138,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Griff McGarry",
@@ -32164,7 +32166,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 52.0,
       "projStats": {
@@ -32193,7 +32195,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Kyle Backhus",
@@ -37837,7 +37840,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projPA": 350,
       "score2026_neutral": 2.9,
@@ -37869,8 +37872,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Taylor Rogers",
@@ -40468,7 +40470,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Zach McCambley",
@@ -40497,7 +40500,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 48.0,
       "projStats": {
@@ -40526,7 +40529,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Davis Schneider",
@@ -40803,7 +40807,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 46.0,
       "projStats": {
@@ -40832,7 +40836,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Joel Peguero",
@@ -42251,7 +42256,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 218,
       "score2026_neutral": 1.2,
@@ -42283,7 +42288,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Wikelman Gonz\u00e1lez",
@@ -43417,7 +43423,7 @@
         "BB9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 80.1,
       "projStats": {
@@ -43446,7 +43452,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Gage Jump",
@@ -46814,7 +46821,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 30.0,
       "projStats": {
@@ -46843,7 +46850,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Thomas Saggese",
@@ -48682,7 +48690,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 39.2,
       "projStats": {
@@ -48711,7 +48719,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Josh White",
@@ -51347,7 +51356,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 46.0,
       "projStats": {
@@ -51376,7 +51385,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL15"
     },
     {
       "name": "Easton McGee",
@@ -51761,7 +51771,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 28.0,
       "projStats": {
@@ -51790,7 +51800,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Trevor Williams",
@@ -52175,7 +52186,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 42.0,
       "projStats": {
@@ -52204,7 +52215,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Ty Madden",
@@ -53091,8 +53103,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Liam Hendriks",
@@ -54005,7 +54016,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 31.0,
       "projStats": {
@@ -54034,8 +54045,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Braxton Fulford",
@@ -54064,7 +54074,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 171,
       "score2026_neutral": 0.4,
@@ -54096,7 +54106,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Alek Manoah",
@@ -55659,7 +55670,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 42.0,
       "projStats": {
@@ -55688,7 +55699,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Luis Curvelo",
@@ -55717,7 +55729,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 34.0,
       "projStats": {
@@ -55746,7 +55758,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Kervin Castro",
@@ -58070,8 +58083,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Hunter Feduccia",
@@ -58847,7 +58859,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projPA": 180,
       "score2026_neutral": 0.1,
@@ -58879,8 +58891,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Isiah Kiner-Falefa",
@@ -59132,7 +59143,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Tommy Pham",
