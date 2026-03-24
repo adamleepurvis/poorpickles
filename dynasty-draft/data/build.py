@@ -357,6 +357,30 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
             if status.startswith("IL") or status in ("NA", "SUSP"):
                 p["il"] = True
 
+    # Add stub records for Yahoo-rostered players not in Steamer projections
+    # (e.g. pure prospects). Without this, they won't appear in leagueTargets
+    # and the app won't know they're owned.
+    if is_postdraft:
+        existing_names = {p["name"] for p in players}
+        existing_stripped = {strip_accents(p["name"]) for p in players}
+        for team in yahoo_data.get("teams", []):
+            for player in team["players"]:
+                yahoo_name = player["name"]
+                stripped = strip_accents(yahoo_name)
+                if yahoo_name not in existing_names and stripped not in existing_stripped:
+                    stub = {
+                        "name": stripped,  # use accent-stripped for consistency
+                        "owner": team["team_name"],
+                        "rostered": True,
+                        "eligible": player.get("eligible_positions", []),
+                        "pct_owned": 100.0,
+                    }
+                    if player.get("selected_position"):
+                        stub["selected_position"] = player["selected_position"]
+                    if stripped in fantrax_rank_map:
+                        stub["fantraxProspectRank"] = fantrax_rank_map[stripped]
+                    players.append(stub)
+
     return players
 
 
