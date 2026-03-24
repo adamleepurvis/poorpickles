@@ -72,6 +72,7 @@ jobs:
                   dynasty-draft/dist/
           git diff --cached --quiet && echo "Nothing changed." && exit 0
           git commit -m "Yahoo sync ${{ inputs.league }} $(date '+%Y-%m-%d %H:%M')"
+          git pull --rebase origin main
           git push
 
       - name: Update token secret (if refreshed)

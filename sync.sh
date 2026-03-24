@@ -30,5 +30,6 @@ git add dynasty-draft/data/targets_poor_pickles.json \
 git diff --cached --quiet && echo "Nothing changed." && exit 0
 
 git commit -m "Yahoo sync $(date '+%Y-%m-%d %H:%M')"
+git pull --rebase origin main
 git push
 echo "==> Done — Vercel deploying."
