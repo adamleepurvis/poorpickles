@@ -1096,8 +1096,8 @@ export default function DraftAssistant({ config }) {
             </div>
           </div>}
 
-          {/* My roster */}
-          <div style={{flex:1,overflowY:"auto",padding:10}}>
+          {/* My roster — draft mode only */}
+          {draftMode !== false && <div style={{flex:1,overflowY:"auto",padding:10}}>
             <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".08em",textTransform:"uppercase",marginBottom:6}}>My Roster ({myRoster.length}/{totalRounds})</div>
             {myRoster.map((p,i)=>{
               const isSelected = rosterSelected === p.name;
@@ -1137,13 +1137,13 @@ export default function DraftAssistant({ config }) {
                 </div>
               );
             })}
-          </div>
+          </div>}
         </div>
 
         {/* CENTER */}
         <div style={{flex:1,display:"flex",flexDirection:"column",overflow:"hidden"}}>
           <div style={{background:"#0b0d14",borderBottom:"1px solid #1e293b",display:"flex",alignItems:"center",padding:"0 10px",flexShrink:0}}>
-            {[["board","FA Board"],...(draftMode!==false||!hasYahooRosters?[["roster","My Roster"]]:[]),["depth","Depth"],["cats","Categories"],["teams","Other Teams"],...(draftMode!==false?[["log","Pick Log"]]:[]),...(hasYahooRosters?[["rostered","Rostered"]]:[]),...(!draftMode&&hasYahooRosters?[["lineup","Lineup"],["inseason","In-Season"]]:[])]
+            {[["board","FA Board"],["roster","My Roster"],["depth","Depth"],["cats","Categories"],["teams","Other Teams"],...(draftMode!==false?[["log","Pick Log"]]:[]),...(hasYahooRosters?[["rostered","Rostered"]]:[]),...(!draftMode&&hasYahooRosters?[["lineup","Lineup"],["inseason","In-Season"]]:[])]
             .map(([v,l])=>(
               <button key={v} className="tabn" onClick={()=>setTab(v)}
                 style={{color:tab===v?"#84cc16":"#475569",borderBottom:tab===v?"2px solid #84cc16":"2px solid transparent"}}>
