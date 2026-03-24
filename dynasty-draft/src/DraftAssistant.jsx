@@ -695,6 +695,39 @@ export default function DraftAssistant({ config }) {
       }));
   }, [myYahooRoster, scoredAvailable, hasYahooRosters, draftMode]);
 
+  // Per-player weekly projections for Lineup tab
+  const computeLineup = useCallback((roster) => {
+    return roster.map(p => {
+      const proj = p.projStats;
+      const games = mlbSchedule?.[p.org]?.thisWeek ?? null;
+      const isH  = p.type === "H";
+      const isRP = !isH && (p.eligible||[]).every(e => e === "RP");
+      const isSP = !isH && !isRP;
+      let weekStats = {}, weeklyValue = 0, starts = null;
+      if (proj) {
+        if (isH) {
+          const scale = (games ?? 6.2) / 162;
+          HIT_COUNT.forEach(c => { if (proj[c] != null) weekStats[c] = proj[c] * scale; });
+          HIT_RATE.forEach(c => { if (proj[c] != null) weekStats[c] = proj[c]; });
+          weeklyValue = (weekStats.R||0) + (weekStats.HR||0)*2 + (weekStats.RBI||0) + (weekStats.SB||0);
+        } else if (isSP) {
+          const seasonGS = Math.max(1, (proj.IP ?? 150) / 5.5);
+          const scale = (games ?? 6.2) / 5 / seasonGS;
+          starts = Math.max(0, Math.min(2, Math.round((games ?? 0) / 5)));
+          PIT_COUNT.forEach(c => { if (proj[c] != null) weekStats[c] = proj[c] * scale; });
+          const weekIP = (proj.IP ?? 0) * scale;
+          if (weekIP > 0) PIT_RATE.forEach(c => { if (proj[c] != null) weekStats[c] = proj[c]; });
+          weeklyValue = (weekStats.K||0) + (starts||0)*2 - (weekStats.ERA||4)*0.5;
+        } else {
+          const scale = (games ?? 6.2) / 162;
+          PIT_COUNT.forEach(c => { if (proj[c] != null) weekStats[c] = proj[c] * scale; });
+          weeklyValue = (weekStats.K||0) + (weekStats.NSVH||0)*1.5;
+        }
+      }
+      return { ...p, games, starts, weekStats, weeklyValue };
+    }).sort((a,b) => b.weeklyValue - a.weeklyValue);
+  }, [mlbSchedule]);
+
   // Team rosters from keepers
   const teamRosters = useMemo(() => {
     const rosters = {};
@@ -1110,7 +1143,7 @@ export default function DraftAssistant({ config }) {
         {/* CENTER */}
         <div style={{flex:1,display:"flex",flexDirection:"column",overflow:"hidden"}}>
           <div style={{background:"#0b0d14",borderBottom:"1px solid #1e293b",display:"flex",alignItems:"center",padding:"0 10px",flexShrink:0}}>
-            {[["board","FA Board"],["roster","My Roster"],["depth","Depth"],["cats","Categories"],["teams","Other Teams"],...(draftMode!==false?[["log","Pick Log"]]:[]),...(hasYahooRosters?[["rostered","Rostered"]]:[]),...(!draftMode&&hasYahooRosters?[["inseason","In-Season"]]:[])]
+            {[["board","FA Board"],...(draftMode!==false||!hasYahooRosters?[["roster","My Roster"]]:[]),["depth","Depth"],["cats","Categories"],["teams","Other Teams"],...(draftMode!==false?[["log","Pick Log"]]:[]),...(hasYahooRosters?[["rostered","Rostered"]]:[]),...(!draftMode&&hasYahooRosters?[["lineup","Lineup"],["inseason","In-Season"]]:[])]
             .map(([v,l])=>(
               <button key={v} className="tabn" onClick={()=>setTab(v)}
                 style={{color:tab===v?"#84cc16":"#475569",borderBottom:tab===v?"2px solid #84cc16":"2px solid transparent"}}>
@@ -1630,6 +1663,75 @@ export default function DraftAssistant({ config }) {
               })()}
             </div>
           )}
+          {tab==="lineup"&&(()=>{
+            if (!hasYahooRosters) return null;
+            const myL  = computeLineup(myYahooRoster);
+            const oppL = inSeasonOpponent ? computeLineup(leagueTargets.filter(p=>p.owner===inSeasonOpponent)) : [];
+            const BADGE = p => {
+              const isSP = p.type==="P" && p.eligible?.includes("SP");
+              if (p.il) return [p.yahoo_status||"IL","#f87171"];
+              if (p.games===0) return ["SIT","#f87171"];
+              if (isSP && p.starts===0) return ["SIT","#f87171"];
+              if (p.games!=null && p.games<4) return ["SIT?","#f59e0b"];
+              return ["START","#22c55e"];
+            };
+            const renderRow = p => {
+              const isSP = p.type==="P" && p.eligible?.includes("SP");
+              const [badge, bc] = BADGE(p);
+              return (
+                <tr key={p.name+p.type} style={{borderTop:"1px solid #0d0f16"}}>
+                  <td style={{padding:"4px 8px 4px 0",maxWidth:130,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>
+                    <span style={{fontSize:11,color:"#e2e8f0",fontWeight:500}}>{p.name}</span>
+                    <span style={{fontSize:9,color:"#475569",marginLeft:5}}>{(p.eligible||[]).slice(0,2).join("/")}</span>
+                  </td>
+                  <td style={{textAlign:"center",padding:"4px 8px 4px 0",fontSize:10,color:"#475569"}}>{p.org||"—"}</td>
+                  <td style={{textAlign:"center",padding:"4px 8px 4px 0"}}>
+                    {isSP
+                      ? <span style={{fontSize:12,fontWeight:700,color:p.starts===0?"#f87171":p.starts>=2?"#22c55e":"#f59e0b"}}>{p.starts??"-"}<span style={{fontSize:8,color:"#475569"}}> GS</span></span>
+                      : <span style={{fontSize:12,fontWeight:700,color:p.games===0?"#f87171":p.games>=6?"#22c55e":p.games>=4?"#f59e0b":"#f87171"}}>{p.games??"-"}<span style={{fontSize:8,color:"#475569"}}> G</span></span>
+                    }
+                  </td>
+                  <td style={{textAlign:"right",padding:"4px 8px 4px 0",fontSize:9,color:"#64748b",whiteSpace:"nowrap"}}>
+                    {p.type==="H"
+                      ? `${(p.weekStats.R||0).toFixed(1)}R ${(p.weekStats.HR||0).toFixed(1)}HR ${(p.weekStats.RBI||0).toFixed(1)}RBI ${(p.weekStats.SB||0).toFixed(1)}SB`
+                      : isSP
+                        ? `${(p.weekStats.K||0).toFixed(1)}K ${p.weekStats.ERA!=null?p.weekStats.ERA.toFixed(2):"—"}ERA ${p.weekStats.WHIP!=null?p.weekStats.WHIP.toFixed(2):"—"}WHIP`
+                        : `${(p.weekStats.K||0).toFixed(1)}K`
+                    }
+                  </td>
+                  <td style={{textAlign:"right",padding:"4px 0",minWidth:40}}>
+                    <span style={{fontSize:9,fontWeight:700,color:bc,background:`${bc}18`,padding:"1px 5px",borderRadius:3}}>{badge}</span>
+                  </td>
+                </tr>
+              );
+            };
+            const Section = ({label, rows}) => rows.length===0 ? null : (
+              <div style={{marginBottom:16}}>
+                <div style={{fontSize:9,color:"#334155",letterSpacing:".08em",textTransform:"uppercase",marginBottom:4}}>{label}</div>
+                <table style={{borderCollapse:"collapse",width:"100%"}}>
+                  <thead><tr>{["PLAYER","TEAM","G","PROJ WEEK",""].map((h,i)=>(
+                    <th key={i} style={{textAlign:i>=2?"center":"left",color:"#334155",fontSize:8,fontWeight:400,letterSpacing:".08em",paddingBottom:3,paddingRight:8}}>{h}</th>
+                  ))}</tr></thead>
+                  <tbody>{rows.map(renderRow)}</tbody>
+                </table>
+              </div>
+            );
+            const Side = ({label, lineup}) => (
+              <div style={{marginBottom:24}}>
+                <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:10,paddingBottom:5,borderBottom:"1px solid #1e293b"}}>{label}</div>
+                <Section label="Hitters" rows={lineup.filter(p=>p.type==="H")}/>
+                <Section label="Pitchers" rows={lineup.filter(p=>p.type==="P")}/>
+              </div>
+            );
+            return (
+              <div style={{flex:1,overflowY:"auto",padding:14}}>
+                {!inSeasonOpponent && <div style={{fontSize:11,color:"#475569",marginBottom:12}}>Select an opponent in In-Season to also compare their lineup.</div>}
+                <Side label={myTeam} lineup={myL}/>
+                {inSeasonOpponent && <Side label={inSeasonOpponent} lineup={oppL}/>}
+              </div>
+            );
+          })()}
+
           {tab==="inseason"&&(()=>{
             // Ratio stats from my current pitching staff
             const myPitchers = myYahooRoster.filter(p => p.type === "P");
