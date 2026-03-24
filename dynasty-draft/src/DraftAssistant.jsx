@@ -2,6 +2,7 @@ import { useState, useCallback, useRef, useEffect, useMemo } from "react";
 import poorPicklesTargets   from "../data/targets_poor_pickles.json";
 import southOssetianTargets from "../data/targets_south_ossetian.json";
 import spaghettTargets      from "../data/targets_spaghett.json";
+import fantraxProspects     from "../data/fantrax_prospects.json";
 
 const TARGETS_DATA = {
   "Poor Pickles":   poorPicklesTargets,
@@ -2114,6 +2115,10 @@ export default function DraftAssistant({ config }) {
                   const dropCandidates = myYahooRoster
                     .filter(p => !p.prospectFV && (p.score2026||0) < 5 && (p.scoreDyn||0) < 5)
                     .sort((a,b) => (a.score2026||0)-(b.score2026||0));
+                  const ownedNames = new Set(leagueTargets.filter(p=>p.owner).map(p=>p.name));
+                  const topFAProspects = fantraxProspects.prospects
+                    .filter(p => !ownedNames.has(p.name))
+                    .slice(0, 10);
                   return (
                     <div>
                       {/* IL/NA slots section */}
@@ -2165,23 +2170,45 @@ export default function DraftAssistant({ config }) {
                         )}
                       </div>
 
-                      {/* Prospect tracker */}
+                      {/* My Prospects */}
                       {prospects.length > 0 && (
                         <div style={{marginBottom:22}}>
-                          <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:10}}>Prospects</div>
+                          <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:10}}>My Prospects</div>
                           {prospects.map(p=>{
                             const fvColor = p.prospectFV>=60?"#f59e0b":p.prospectFV>=55?"#22c55e":p.prospectFV>=50?"#60a5fa":"#94a3b8";
                             const etaYear = parseInt(p.prospectETA)||null;
                             const arriving = etaYear != null && etaYear <= 2026;
+                            const ftRank = p.fantraxProspectRank;
                             return (
                               <div key={p.name} style={{display:"flex",alignItems:"center",gap:8,padding:"5px 8px",marginBottom:3,background:"#0d0f16",borderRadius:3,borderLeft:`2px solid ${fvColor}`}}>
                                 <div style={{flex:1,minWidth:0}}>
                                   <div style={{fontSize:11,color:"#e2e8f0",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{p.name}</div>
-                                  <div style={{fontSize:9,color:"#475569",marginTop:1}}>{p.eligible?.[0]??""} · {p.org??""}{p.prospectRank?` · #${p.prospectRank} prospect`:""}</div>
+                                  <div style={{fontSize:9,color:"#475569",marginTop:1}}>{p.eligible?.[0]??""} · {p.org??""}{ftRank?` · FTX #${ftRank}`:""}</div>
                                 </div>
                                 <span style={{fontSize:10,fontWeight:700,color:fvColor,background:`${fvColor}18`,padding:"1px 6px",borderRadius:3,flexShrink:0}}>FV{p.prospectFV}</span>
                                 {etaYear&&<span style={{fontSize:10,color:arriving?"#84cc16":"#64748b",flexShrink:0}}>{etaYear}{arriving?" ↑":""}</span>}
                                 {p.il&&<span style={{fontSize:9,color:"#f87171",flexShrink:0}}>IL</span>}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
+
+                      {/* Top FA Prospects */}
+                      {topFAProspects.length > 0 && (
+                        <div style={{marginBottom:22}}>
+                          <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:10}}>Top FA Prospects — FantraxHQ</div>
+                          {topFAProspects.map(p=>{
+                            const target = leagueTargets.find(t=>t.name===p.name);
+                            const fvColor = target?.prospectFV>=60?"#f59e0b":target?.prospectFV>=55?"#22c55e":target?.prospectFV>=50?"#60a5fa":"#64748b";
+                            return (
+                              <div key={p.name} style={{display:"flex",alignItems:"center",gap:8,padding:"5px 8px",marginBottom:3,background:"#0d0f16",borderRadius:3,borderLeft:"2px solid #334155"}}>
+                                <span style={{fontSize:10,color:"#334155",width:28,flexShrink:0}}>#{p.rank}</span>
+                                <div style={{flex:1,minWidth:0}}>
+                                  <div style={{fontSize:11,color:"#e2e8f0",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{p.name}</div>
+                                  <div style={{fontSize:9,color:"#475569",marginTop:1}}>{p.pos} · {p.team} · {p.level}{p.eta?` · ETA ${p.eta}`:""}</div>
+                                </div>
+                                {target?.prospectFV&&<span style={{fontSize:10,fontWeight:700,color:fvColor,background:`${fvColor}18`,padding:"1px 6px",borderRadius:3,flexShrink:0}}>FV{target.prospectFV}</span>}
                               </div>
                             );
                           })}

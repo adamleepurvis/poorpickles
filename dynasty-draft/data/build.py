@@ -282,6 +282,18 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
     def strip_accents(s):
         return unicodedata.normalize("NFD", s).encode("ascii", "ignore").decode("ascii")
 
+    # Load Fantrax prospect rankings
+    fantrax_rank_map = {}
+    fantrax_path = Path(__file__).parent / "fantrax_prospects.json"
+    if fantrax_path.exists():
+        ft_data = json.loads(fantrax_path.read_text())
+        for p in ft_data.get("prospects", []):
+            name = p["name"]
+            fantrax_rank_map[name] = p["rank"]
+            stripped = strip_accents(name)
+            if stripped != name:
+                fantrax_rank_map.setdefault(stripped, p["rank"])
+
     # Build owner map: player name -> Yahoo team name
     # Index by both original and accent-stripped name so ZAR names (no accents)
     # still match Yahoo names that include accents (e.g. "Suárez" → "Suarez").
@@ -333,6 +345,8 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
             p["owner"]     = owner_map.get(name, None)
             if name in selected_pos_map:
                 p["selected_position"] = selected_pos_map[name]
+        if name in fantrax_rank_map:
+            p["fantraxProspectRank"] = fantrax_rank_map[name]
         p["scoreYahoo"] = yahoo_proj_scores.get(name, None)
         if name in yahoo_projections_raw:
             p["yahooProj"] = yahoo_projections_raw[name]
