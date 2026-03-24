@@ -1850,7 +1850,7 @@ export default function DraftAssistant({ config }) {
             return (
               <div style={{flex:1,display:"flex",flexDirection:"column",overflow:"hidden"}}>
                 <div style={{background:"#0b0d14",borderBottom:"1px solid #1e293b",display:"flex",padding:"0 10px",flexShrink:0}}>
-                  {[["matchup","Matchup"],["standings","Standings"],["il","IL/NA"],["trade","Trade"]].map(([v,l])=>(
+                  {[["matchup","Matchup"],["standings","Standings"],["il","Roster"],["trade","Trade"]].map(([v,l])=>(
                     <button key={v} className="tabn" onClick={()=>setInSeasonTab(v)}
                       style={{color:inSeasonTab===v?"#84cc16":"#475569",borderBottom:inSeasonTab===v?"2px solid #84cc16":"2px solid transparent",fontSize:11}}>
                       {l}
@@ -2106,56 +2106,119 @@ export default function DraftAssistant({ config }) {
                   </div>
                 )}
 
-                {/* IL/NA sub-tab */}
-                {inSeasonTab==="il"&&(
-                  <div>
-                    <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:12}}>IL / NA Slots</div>
-                    {!ilOptimizer ? (
-                      <div style={{fontSize:11,color:"#334155"}}>Not available.</div>
-                    ) : ilOptimizer.healthyOnIL.length===0&&ilOptimizer.injuredNotOnIL.length===0 ? (
-                      ilOptimizer.injured.length===0
-                        ? <div style={{fontSize:11,color:"#22c55e"}}>✓ No injured players on your roster.</div>
-                        : <div>
-                            <div style={{fontSize:10,color:"#f59e0b",marginBottom:8}}>{ilOptimizer.injured.length} injured — verify IL/NA placement in Yahoo.</div>
-                            {ilOptimizer.injured.map(p=>(
-                              <div key={p.name} style={{display:"flex",alignItems:"center",gap:8,padding:"4px 8px",marginBottom:3,background:"#0d0f16",borderRadius:3,borderLeft:"2px solid #f87171"}}>
-                                <span style={{fontSize:11,color:"#e2e8f0",flex:1}}>{p.name}</span>
-                                <span style={{fontSize:9,color:"#94a3b8"}}>{p.eligible?.[0]??""}</span>
-                                <span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 5px",borderRadius:3}}>{p.yahoo_status||"IL"}</span>
+                {/* ROSTER sub-tab */}
+                {inSeasonTab==="il"&&(()=>{
+                  const prospects = myYahooRoster
+                    .filter(p => p.prospectFV != null)
+                    .sort((a,b) => (b.prospectFV||0)-(a.prospectFV||0)||(a.prospectETA||9999)-(b.prospectETA||9999));
+                  const dropCandidates = myYahooRoster
+                    .filter(p => !p.prospectFV && (p.score2026||0) < 5 && (p.scoreDyn||0) < 5)
+                    .sort((a,b) => (a.score2026||0)-(b.score2026||0));
+                  return (
+                    <div>
+                      {/* IL/NA slots section */}
+                      <div style={{marginBottom:22}}>
+                        <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:10}}>IL / NA Slots</div>
+                        {!ilOptimizer ? (
+                          <div style={{fontSize:11,color:"#334155"}}>Not available.</div>
+                        ) : ilOptimizer.healthyOnIL.length===0&&ilOptimizer.injuredNotOnIL.length===0 ? (
+                          ilOptimizer.injured.length===0
+                            ? <div style={{fontSize:11,color:"#22c55e"}}>✓ No injured players on your roster.</div>
+                            : <div>
+                                <div style={{fontSize:10,color:"#f59e0b",marginBottom:8}}>{ilOptimizer.injured.length} injured — verify IL/NA placement in Yahoo.</div>
+                                {ilOptimizer.injured.map(p=>(
+                                  <div key={p.name} style={{display:"flex",alignItems:"center",gap:8,padding:"4px 8px",marginBottom:3,background:"#0d0f16",borderRadius:3,borderLeft:"2px solid #f87171"}}>
+                                    <span style={{fontSize:11,color:"#e2e8f0",flex:1}}>{p.name}</span>
+                                    <span style={{fontSize:9,color:"#94a3b8"}}>{p.eligible?.[0]??""}</span>
+                                    <span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 5px",borderRadius:3}}>{p.yahoo_status||"IL"}</span>
+                                  </div>
+                                ))}
                               </div>
-                            ))}
-                          </div>
-                    ) : (
-                      <div>
-                        {ilOptimizer.healthyOnIL.length>0&&(
-                          <div style={{marginBottom:16}}>
-                            <div style={{fontSize:10,color:"#f87171",marginBottom:6}}>Move off IL/NA (healthy, wasting a slot):</div>
-                            {ilOptimizer.healthyOnIL.map(p=>(
-                              <div key={p.name} style={{display:"flex",alignItems:"center",gap:8,padding:"4px 8px",marginBottom:3,background:"#0d0f16",borderRadius:3,borderLeft:"2px solid #f87171"}}>
-                                <span style={{fontSize:11,color:"#e2e8f0",flex:1}}>{p.name}</span>
-                                <span style={{fontSize:9,color:"#94a3b8"}}>{p.selected_position}</span>
-                                <span style={{fontSize:9,color:"#22c55e",background:"#14532d33",padding:"1px 5px",borderRadius:3}}>→ BN</span>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                        {ilOptimizer.injuredNotOnIL.length>0&&(
+                        ) : (
                           <div>
-                            <div style={{fontSize:10,color:"#f59e0b",marginBottom:6}}>Move to IL/NA (injured, wasting active slot):</div>
-                            {ilOptimizer.injuredNotOnIL.map(p=>(
-                              <div key={p.name} style={{display:"flex",alignItems:"center",gap:8,padding:"4px 8px",marginBottom:3,background:"#0d0f16",borderRadius:3,borderLeft:"2px solid #f59e0b"}}>
-                                <span style={{fontSize:11,color:"#e2e8f0",flex:1}}>{p.name}</span>
-                                <span style={{fontSize:9,color:"#94a3b8"}}>{p.selected_position}</span>
-                                <span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 5px",borderRadius:3}}>{p.yahoo_status||"IL"}</span>
-                                <span style={{fontSize:9,color:"#f59e0b"}}>→ IL</span>
+                            {ilOptimizer.healthyOnIL.length>0&&(
+                              <div style={{marginBottom:12}}>
+                                <div style={{fontSize:10,color:"#f87171",marginBottom:6}}>Move off IL/NA (healthy, wasting a slot):</div>
+                                {ilOptimizer.healthyOnIL.map(p=>(
+                                  <div key={p.name} style={{display:"flex",alignItems:"center",gap:8,padding:"4px 8px",marginBottom:3,background:"#0d0f16",borderRadius:3,borderLeft:"2px solid #f87171"}}>
+                                    <span style={{fontSize:11,color:"#e2e8f0",flex:1}}>{p.name}</span>
+                                    <span style={{fontSize:9,color:"#94a3b8"}}>{p.selected_position}</span>
+                                    <span style={{fontSize:9,color:"#22c55e",background:"#14532d33",padding:"1px 5px",borderRadius:3}}>→ BN</span>
+                                  </div>
+                                ))}
                               </div>
-                            ))}
+                            )}
+                            {ilOptimizer.injuredNotOnIL.length>0&&(
+                              <div>
+                                <div style={{fontSize:10,color:"#f59e0b",marginBottom:6}}>Move to IL/NA (injured, wasting active slot):</div>
+                                {ilOptimizer.injuredNotOnIL.map(p=>(
+                                  <div key={p.name} style={{display:"flex",alignItems:"center",gap:8,padding:"4px 8px",marginBottom:3,background:"#0d0f16",borderRadius:3,borderLeft:"2px solid #f59e0b"}}>
+                                    <span style={{fontSize:11,color:"#e2e8f0",flex:1}}>{p.name}</span>
+                                    <span style={{fontSize:9,color:"#94a3b8"}}>{p.selected_position}</span>
+                                    <span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 5px",borderRadius:3}}>{p.yahoo_status||"IL"}</span>
+                                    <span style={{fontSize:9,color:"#f59e0b"}}>→ IL</span>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
                           </div>
                         )}
                       </div>
-                    )}
-                  </div>
-                )}
+
+                      {/* Prospect tracker */}
+                      {prospects.length > 0 && (
+                        <div style={{marginBottom:22}}>
+                          <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:10}}>Prospects</div>
+                          {prospects.map(p=>{
+                            const fvColor = p.prospectFV>=60?"#f59e0b":p.prospectFV>=55?"#22c55e":p.prospectFV>=50?"#60a5fa":"#94a3b8";
+                            const etaYear = parseInt(p.prospectETA)||null;
+                            const arriving = etaYear != null && etaYear <= 2026;
+                            return (
+                              <div key={p.name} style={{display:"flex",alignItems:"center",gap:8,padding:"5px 8px",marginBottom:3,background:"#0d0f16",borderRadius:3,borderLeft:`2px solid ${fvColor}`}}>
+                                <div style={{flex:1,minWidth:0}}>
+                                  <div style={{fontSize:11,color:"#e2e8f0",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{p.name}</div>
+                                  <div style={{fontSize:9,color:"#475569",marginTop:1}}>{p.eligible?.[0]??""} · {p.org??""}{p.prospectRank?` · #${p.prospectRank} prospect`:""}</div>
+                                </div>
+                                <span style={{fontSize:10,fontWeight:700,color:fvColor,background:`${fvColor}18`,padding:"1px 6px",borderRadius:3,flexShrink:0}}>FV{p.prospectFV}</span>
+                                {etaYear&&<span style={{fontSize:10,color:arriving?"#84cc16":"#64748b",flexShrink:0}}>{etaYear}{arriving?" ↑":""}</span>}
+                                {p.il&&<span style={{fontSize:9,color:"#f87171",flexShrink:0}}>IL</span>}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
+
+                      {/* Drop candidates */}
+                      {dropCandidates.length > 0 && (
+                        <div>
+                          <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:6}}>Consider Dropping</div>
+                          <div style={{fontSize:9,color:"#334155",marginBottom:8}}>Low score2026 + no dynasty upside (non-prospect)</div>
+                          {dropCandidates.map(p=>{
+                            const bestFA = scoredAvailable.find(fa =>
+                              fa.type === p.type && !fa.il && (fa.score2026||0) > (p.score2026||0)
+                            );
+                            return (
+                              <div key={p.name} style={{display:"flex",alignItems:"center",gap:8,padding:"5px 8px",marginBottom:3,background:"#0d0f16",borderRadius:3,borderLeft:"2px solid #334155"}}>
+                                <div style={{flex:1,minWidth:0}}>
+                                  <div style={{fontSize:11,color:"#94a3b8",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{p.name}</div>
+                                  <div style={{fontSize:9,color:"#334155",marginTop:1}}>{p.eligible?.[0]??""} · age {p.age??""}{p.il?` · ${p.yahoo_status||"IL"}`:""}</div>
+                                </div>
+                                <span style={{fontSize:10,color:"#475569",flexShrink:0}}>{p.score2026??"-"}</span>
+                                {bestFA&&(
+                                  <div style={{textAlign:"right",flexShrink:0}}>
+                                    <div style={{fontSize:9,color:"#334155"}}>best FA</div>
+                                    <div style={{fontSize:10,color:"#22c55e"}}>{bestFA.name.split(" ").slice(-1)[0]}</div>
+                                    <div style={{fontSize:9,color:"#475569"}}>{bestFA.score2026}</div>
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })()}
 
                 {/* TRADE ANALYZER sub-tab */}
                 {inSeasonTab==="trade"&&(
