@@ -648,6 +648,23 @@ def sync_standings(query):
                 team_key  = next((x["team_key"] for x in meta if isinstance(x, dict) and "team_key" in x), None)
                 team_name = next((x["name"]     for x in meta if isinstance(x, dict) and "name"     in x), None)
                 outcome   = ts.get("outcome_totals", {})
+                raw_stats = ts.get("stats", {})
+                stat_list = (raw_stats.get("stats", []) if isinstance(raw_stats, dict)
+                             else (raw_stats if isinstance(raw_stats, list) else []))
+                cat_stats = {}
+                for s in stat_list:
+                    if isinstance(s, dict):
+                        inner = s.get("stat", s)
+                        sid = str(inner.get("stat_id", ""))
+                        val = inner.get("value", None)
+                        cat = STAT_ID_MAP.get(sid)
+                        if cat and val not in (None, "-", ""):
+                            try:
+                                cat_stats[cat] = float(val)
+                            except (ValueError, TypeError):
+                                pass
+                if "SV" in cat_stats or "HLD" in cat_stats:
+                    cat_stats["NSVH"] = cat_stats.pop("SV", 0) + cat_stats.pop("HLD", 0)
                 standings.append({
                     "team_key":   team_key,
                     "team_name":  team_name,
@@ -656,6 +673,7 @@ def sync_standings(query):
                     "ties":       int(outcome.get("ties",   0) or 0),
                     "rank":       int(ts.get("rank", 0) or 0),
                     "games_back": float(ts.get("games_back", 0) or 0),
+                    "cat_stats":  cat_stats,
                 })
             except Exception:
                 continue

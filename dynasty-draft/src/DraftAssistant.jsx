@@ -437,6 +437,12 @@ export default function DraftAssistant({ config }) {
   const [showScoreBreakdown, setShowScoreBreakdown] = useState(null);
   const oppLsKey = `opp_${config.leagueName}`;
   const [inSeasonOpponent, setInSeasonOpponent] = useState(() => localStorage.getItem(oppLsKey) || null);
+  const [inSeasonTab, setInSeasonTab] = useState("matchup");
+  const [catStandingsCat, setCatStandingsCat] = useState("R");
+  const [tradeGive, setTradeGive] = useState([]);
+  const [tradeReceive, setTradeReceive] = useState([]);
+  const [tradeSearch, setTradeSearch] = useState("");
+  const [tradeSearchSide, setTradeSearchSide] = useState("give");
   useEffect(() => {
     if (inSeasonOpponent) localStorage.setItem(oppLsKey, inSeasonOpponent);
     else localStorage.removeItem(oppLsKey);
@@ -694,6 +700,39 @@ export default function DraftAssistant({ config }) {
           .slice(0, 4),
       }));
   }, [myYahooRoster, scoredAvailable, hasYahooRosters, draftMode]);
+
+  // IL/NA slot optimizer
+  const ilOptimizer = useMemo(() => {
+    if (!hasYahooRosters || draftMode !== false) return null;
+    const IL_SLOTS = new Set(["IL", "IL10", "IL15", "IL60", "NA"]);
+    const injured = myYahooRoster.filter(p => p.il);
+    const healthyOnIL = myYahooRoster.filter(p => !p.il && p.selected_position && IL_SLOTS.has(p.selected_position));
+    const injuredNotOnIL = myYahooRoster.filter(p => p.il && p.selected_position && !IL_SLOTS.has(p.selected_position));
+    return { injured, healthyOnIL, injuredNotOnIL };
+  }, [myYahooRoster, hasYahooRosters, draftMode]);
+
+  // Trade analyzer
+  const tradeAnalysis = useMemo(() => {
+    if (!tradeGive.length && !tradeReceive.length) return null;
+    const scoreKeys = ["score2026", "score2028", "scoreDyn"];
+    const giving    = tradeGive.map(n => leagueTargets.find(p => p.name === n)).filter(Boolean);
+    const receiving = tradeReceive.map(n => leagueTargets.find(p => p.name === n)).filter(Boolean);
+    const scoreDelta = {};
+    scoreKeys.forEach(k => {
+      const give = giving.reduce((s, p) => s + (p[k] || 0), 0);
+      const recv = receiving.reduce((s, p) => s + (p[k] || 0), 0);
+      scoreDelta[k] = { give: +give.toFixed(1), recv: +recv.toFixed(1), net: +(recv - give).toFixed(1) };
+    });
+    const RATE_CATS = new Set(["AVG", "OBP", "SLG", "ERA", "WHIP", "K/9", "BB/9"]);
+    const allCats = [...(config.hittingCats || []), ...(config.pitchingCats || [])];
+    const catDelta = {};
+    allCats.filter(c => !RATE_CATS.has(c)).forEach(c => {
+      const lose = giving.reduce((s, p) => s + (p.projStats?.[c] ?? p.yahooProj?.[c] ?? 0), 0);
+      const gain = receiving.reduce((s, p) => s + (p.projStats?.[c] ?? p.yahooProj?.[c] ?? 0), 0);
+      catDelta[c] = +(gain - lose).toFixed(1);
+    });
+    return { giving, receiving, scoreDelta, catDelta };
+  }, [tradeGive, tradeReceive, leagueTargets, config]);
 
   // Per-player weekly projections for Lineup tab
   const computeLineup = useCallback((roster) => {
@@ -1794,9 +1833,33 @@ export default function DraftAssistant({ config }) {
               .map(p => ({ ...p, thisWeek: mlbSchedule?.[p.org]?.thisWeek ?? null, nextWeek: mlbSchedule?.[p.org]?.nextWeek ?? null }))
               .sort((a,b) => (b.thisWeek ?? 0) - (a.thisWeek ?? 0));
 
-            return (
-              <div style={{flex:1,overflowY:"auto",padding:14}}>
+            const standings = leagueMeta.standings || [];
+            const catStandingsAllCats = [...(config.hittingCats||[]), ...(config.pitchingCats||[])];
+            const lowerBetterCats = new Set(["ERA","WHIP","BB/9","ER"]);
+            const rankedByCat = standings.length > 0 ? [...standings].sort((a,b) => {
+              const av = a.cat_stats?.[catStandingsCat] ?? -1;
+              const bv = b.cat_stats?.[catStandingsCat] ?? -1;
+              return lowerBetterCats.has(catStandingsCat) ? av - bv : bv - av;
+            }) : [];
+            const tradeSearchNorm = tradeSearch.toLowerCase();
+            const tradeResults = tradeSearch.length > 1
+              ? leagueTargets.filter(p => p.name.toLowerCase().includes(tradeSearchNorm)
+                  && !tradeGive.includes(p.name) && !tradeReceive.includes(p.name)).slice(0, 8)
+              : [];
 
+            return (
+              <div style={{flex:1,display:"flex",flexDirection:"column",overflow:"hidden"}}>
+                <div style={{background:"#0b0d14",borderBottom:"1px solid #1e293b",display:"flex",padding:"0 10px",flexShrink:0}}>
+                  {[["matchup","Matchup"],["standings","Standings"],["il","IL/NA"],["trade","Trade"]].map(([v,l])=>(
+                    <button key={v} className="tabn" onClick={()=>setInSeasonTab(v)}
+                      style={{color:inSeasonTab===v?"#84cc16":"#475569",borderBottom:inSeasonTab===v?"2px solid #84cc16":"2px solid transparent",fontSize:11}}>
+                      {l}
+                    </button>
+                  ))}
+                </div>
+                <div style={{flex:1,overflowY:"auto",padding:14}}>
+
+                {inSeasonTab==="matchup"&&<>
                 {/* 1. Category Gap Analysis */}
                 <div style={{marginBottom:22}}>
                   <div style={{display:"flex",gap:8,alignItems:"center",marginBottom:10,flexWrap:"wrap"}}>
@@ -1866,39 +1929,6 @@ export default function DraftAssistant({ config }) {
                     <div style={{fontSize:11,color:"#334155"}}>Select an opponent to see matchup projections.</div>
                   )}
                 </div>
-
-                {/* 2. Standings */}
-                {leagueMeta.standings?.length > 0 && (
-                  <div style={{marginBottom:22}}>
-                    <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:8}}>
-                      Standings — Wk {leagueMeta.scoreboard?.week ?? "?"}
-                    </div>
-                    <table style={{borderCollapse:"collapse",width:"100%",fontSize:11}}>
-                      <thead>
-                        <tr>
-                          {["#","TEAM","W","L","T"].map(h=>(
-                            <th key={h} style={{textAlign:h==="TEAM"?"left":"right",color:"#334155",fontSize:9,fontWeight:400,letterSpacing:".08em",paddingBottom:3,paddingRight:h!=="T"?10:0}}>{h}</th>
-                          ))}
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {leagueMeta.standings.map(t=>{
-                          const isMe = t.team_name === myTeam;
-                          const isOpp = t.team_name === inSeasonOpponent;
-                          return (
-                            <tr key={t.team_key} style={{borderTop:"1px solid #0d0f16",background:isMe?"#0f1f2e":isOpp?"#1a1000":"transparent"}}>
-                              <td style={{textAlign:"right",padding:"3px 10px 3px 0",color:"#475569",width:20}}>{t.rank}</td>
-                              <td style={{padding:"3px 10px 3px 0",color:isMe?"#60a5fa":isOpp?"#f59e0b":"#94a3b8",fontWeight:isMe||isOpp?600:400,maxWidth:110,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{t.team_name}{isMe?" ★":""}</td>
-                              <td style={{textAlign:"right",padding:"3px 10px 3px 0",color:"#22c55e"}}>{t.wins}</td>
-                              <td style={{textAlign:"right",padding:"3px 10px 3px 0",color:"#f87171"}}>{t.losses}</td>
-                              <td style={{textAlign:"right",padding:"3px 0 3px 0",color:"#475569"}}>{t.ties}</td>
-                            </tr>
-                          );
-                        })}
-                      </tbody>
-                    </table>
-                  </div>
-                )}
 
                 {/* 3. Roster Holes */}
                 {rosterHoles.length > 0 && (
@@ -2017,7 +2047,213 @@ export default function DraftAssistant({ config }) {
                     );
                   })}
                 </div>
+                </>}
 
+                {/* STANDINGS sub-tab */}
+                {inSeasonTab==="standings"&&(
+                  <div>
+                    {standings.length > 0 ? (
+                      <div>
+                        <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:8}}>
+                          Standings — Wk {leagueMeta.scoreboard?.week ?? "?"}
+                        </div>
+                        <table style={{borderCollapse:"collapse",width:"100%",fontSize:11,marginBottom:18}}>
+                          <thead><tr>{["#","TEAM","W","L","T"].map(h=>(
+                            <th key={h} style={{textAlign:h==="TEAM"?"left":"right",color:"#334155",fontSize:9,fontWeight:400,paddingBottom:3,paddingRight:h!=="T"?10:0}}>{h}</th>
+                          ))}</tr></thead>
+                          <tbody>{standings.map(t=>{
+                            const isMe=t.team_name===myTeam, isOpp=t.team_name===inSeasonOpponent;
+                            return <tr key={t.team_key} style={{borderTop:"1px solid #0d0f16",background:isMe?"#0f1f2e":isOpp?"#1a1000":"transparent"}}>
+                              <td style={{textAlign:"right",padding:"3px 10px 3px 0",color:"#475569",width:20}}>{t.rank}</td>
+                              <td style={{padding:"3px 10px 3px 0",color:isMe?"#60a5fa":isOpp?"#f59e0b":"#94a3b8",fontWeight:isMe||isOpp?600:400,maxWidth:110,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{t.team_name}{isMe?" ★":""}</td>
+                              <td style={{textAlign:"right",padding:"3px 10px 3px 0",color:"#22c55e"}}>{t.wins}</td>
+                              <td style={{textAlign:"right",padding:"3px 10px 3px 0",color:"#f87171"}}>{t.losses}</td>
+                              <td style={{textAlign:"right",color:"#475569"}}>{t.ties}</td>
+                            </tr>;
+                          })}</tbody>
+                        </table>
+                        <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:8}}>Category Rankings</div>
+                        <div style={{display:"flex",flexWrap:"wrap",gap:4,marginBottom:12}}>
+                          {catStandingsAllCats.map(c=>(
+                            <button key={c} onClick={()=>setCatStandingsCat(c)}
+                              style={{fontSize:10,padding:"2px 8px",borderRadius:3,border:"none",cursor:"pointer",fontFamily:"inherit",
+                                background:catStandingsCat===c?"#84cc16":"#1e293b",color:catStandingsCat===c?"#0d0f16":"#94a3b8"}}>
+                              {c}
+                            </button>
+                          ))}
+                        </div>
+                        {rankedByCat.map((t,i)=>{
+                          const isMe=t.team_name===myTeam, isOpp=t.team_name===inSeasonOpponent;
+                          const val=t.cat_stats?.[catStandingsCat];
+                          const hasData=val!=null&&val!==0;
+                          return (
+                            <div key={t.team_key} style={{display:"flex",alignItems:"center",gap:8,padding:"3px 6px",marginBottom:2,borderRadius:3,
+                              background:isMe?"#0f1f2e":isOpp?"#1a1000":"transparent",
+                              borderLeft:`2px solid ${isMe?"#60a5fa":isOpp?"#f59e0b":"#1e293b"}`}}>
+                              <span style={{fontSize:9,color:"#334155",width:16,flexShrink:0}}>#{i+1}</span>
+                              <span style={{fontSize:11,color:isMe?"#60a5fa":isOpp?"#f59e0b":"#94a3b8",flex:1,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap",fontWeight:isMe||isOpp?600:400}}>
+                                {t.team_name}{isMe?" ★":""}
+                              </span>
+                              <span style={{fontSize:11,color:hasData?"#e2e8f0":"#334155",flexShrink:0}}>{hasData?val:"—"}</span>
+                            </div>
+                          );
+                        })}
+                        {!rankedByCat.some(t=>t.cat_stats?.[catStandingsCat])&&(
+                          <div style={{fontSize:10,color:"#334155",marginTop:8}}>Season stats not yet available — sync after Opening Day.</div>
+                        )}
+                      </div>
+                    ) : <div style={{fontSize:10,color:"#334155"}}>No standings data. Run a sync.</div>}
+                  </div>
+                )}
+
+                {/* IL/NA sub-tab */}
+                {inSeasonTab==="il"&&(
+                  <div>
+                    <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:12}}>IL / NA Slots</div>
+                    {!ilOptimizer ? (
+                      <div style={{fontSize:11,color:"#334155"}}>Not available.</div>
+                    ) : ilOptimizer.healthyOnIL.length===0&&ilOptimizer.injuredNotOnIL.length===0 ? (
+                      ilOptimizer.injured.length===0
+                        ? <div style={{fontSize:11,color:"#22c55e"}}>✓ No injured players on your roster.</div>
+                        : <div>
+                            <div style={{fontSize:10,color:"#f59e0b",marginBottom:8}}>{ilOptimizer.injured.length} injured — verify IL/NA placement in Yahoo.</div>
+                            {ilOptimizer.injured.map(p=>(
+                              <div key={p.name} style={{display:"flex",alignItems:"center",gap:8,padding:"4px 8px",marginBottom:3,background:"#0d0f16",borderRadius:3,borderLeft:"2px solid #f87171"}}>
+                                <span style={{fontSize:11,color:"#e2e8f0",flex:1}}>{p.name}</span>
+                                <span style={{fontSize:9,color:"#94a3b8"}}>{p.eligible?.[0]??""}</span>
+                                <span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 5px",borderRadius:3}}>{p.yahoo_status||"IL"}</span>
+                              </div>
+                            ))}
+                          </div>
+                    ) : (
+                      <div>
+                        {ilOptimizer.healthyOnIL.length>0&&(
+                          <div style={{marginBottom:16}}>
+                            <div style={{fontSize:10,color:"#f87171",marginBottom:6}}>Move off IL/NA (healthy, wasting a slot):</div>
+                            {ilOptimizer.healthyOnIL.map(p=>(
+                              <div key={p.name} style={{display:"flex",alignItems:"center",gap:8,padding:"4px 8px",marginBottom:3,background:"#0d0f16",borderRadius:3,borderLeft:"2px solid #f87171"}}>
+                                <span style={{fontSize:11,color:"#e2e8f0",flex:1}}>{p.name}</span>
+                                <span style={{fontSize:9,color:"#94a3b8"}}>{p.selected_position}</span>
+                                <span style={{fontSize:9,color:"#22c55e",background:"#14532d33",padding:"1px 5px",borderRadius:3}}>→ BN</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                        {ilOptimizer.injuredNotOnIL.length>0&&(
+                          <div>
+                            <div style={{fontSize:10,color:"#f59e0b",marginBottom:6}}>Move to IL/NA (injured, wasting active slot):</div>
+                            {ilOptimizer.injuredNotOnIL.map(p=>(
+                              <div key={p.name} style={{display:"flex",alignItems:"center",gap:8,padding:"4px 8px",marginBottom:3,background:"#0d0f16",borderRadius:3,borderLeft:"2px solid #f59e0b"}}>
+                                <span style={{fontSize:11,color:"#e2e8f0",flex:1}}>{p.name}</span>
+                                <span style={{fontSize:9,color:"#94a3b8"}}>{p.selected_position}</span>
+                                <span style={{fontSize:9,color:"#f87171",background:"#7f1d1d33",padding:"1px 5px",borderRadius:3}}>{p.yahoo_status||"IL"}</span>
+                                <span style={{fontSize:9,color:"#f59e0b"}}>→ IL</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* TRADE ANALYZER sub-tab */}
+                {inSeasonTab==="trade"&&(
+                  <div>
+                    <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:12}}>Trade Analyzer</div>
+                    <div style={{display:"flex",gap:6,marginBottom:10,alignItems:"center"}}>
+                      <input value={tradeSearch} onChange={e=>setTradeSearch(e.target.value)} placeholder="Search player…"
+                        style={{flex:1,background:"#0d0f16",border:"1px solid #1e293b",color:"#e2e8f0",fontSize:11,padding:"5px 8px",borderRadius:3,fontFamily:"inherit",outline:"none"}}/>
+                      {[["give","I Give"],["receive","I Get"]].map(([v,l])=>(
+                        <button key={v} onClick={()=>setTradeSearchSide(v)}
+                          style={{fontSize:10,padding:"4px 10px",borderRadius:3,border:"none",cursor:"pointer",fontFamily:"inherit",
+                            background:tradeSearchSide===v?(v==="give"?"#7f1d1d":"#14532d"):"#1e293b",
+                            color:tradeSearchSide===v?"#f1f5f9":"#64748b"}}>
+                          {l}
+                        </button>
+                      ))}
+                    </div>
+                    {tradeResults.length>0&&(
+                      <div style={{background:"#0d0f16",border:"1px solid #1e293b",borderRadius:4,marginBottom:10,maxHeight:160,overflowY:"auto"}}>
+                        {tradeResults.map(p=>(
+                          <div key={p.name}
+                            onClick={()=>{tradeSearchSide==="give"?setTradeGive(g=>[...g,p.name]):setTradeReceive(r=>[...r,p.name]);setTradeSearch("");}}
+                            style={{padding:"5px 10px",cursor:"pointer",borderBottom:"1px solid #0b0d14",display:"flex",alignItems:"center",gap:8}}
+                            onMouseEnter={e=>e.currentTarget.style.background="#131926"} onMouseLeave={e=>e.currentTarget.style.background="transparent"}>
+                            <span style={{fontSize:11,color:"#e2e8f0",flex:1}}>{p.name}</span>
+                            <span style={{fontSize:9,color:"#64748b"}}>{p.eligible?.[0]??""} · {p.org??""}</span>
+                            {p.owner&&<span style={{fontSize:9,color:"#475569",background:"#1e293b",padding:"1px 5px",borderRadius:3,maxWidth:80,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{p.owner.split(" ").slice(-1)[0]}</span>}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:14}}>
+                      {[["I Give",tradeGive,setTradeGive,"#7f1d1d","#f87171"],["I Get",tradeReceive,setTradeReceive,"#14532d","#22c55e"]].map(([label,list,setter,bg,color])=>(
+                        <div key={label}>
+                          <div style={{fontSize:9,color:"#64748b",textTransform:"uppercase",letterSpacing:".08em",marginBottom:5}}>{label}</div>
+                          <div style={{minHeight:36,background:"#0d0f16",border:`1px solid ${bg}`,borderRadius:4,padding:6,display:"flex",flexWrap:"wrap",gap:4}}>
+                            {list.map(name=>(
+                              <div key={name} onClick={()=>setter(l=>l.filter(n=>n!==name))}
+                                style={{fontSize:10,color,background:`${bg}44`,padding:"2px 7px",borderRadius:3,cursor:"pointer"}}>
+                                {name.split(" ").slice(-1)[0]} ×
+                              </div>
+                            ))}
+                            {list.length===0&&<span style={{fontSize:9,color:"#334155"}}>click search result to add</span>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    {tradeAnalysis&&(
+                      <div>
+                        <div style={{marginBottom:14}}>
+                          <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".08em",textTransform:"uppercase",marginBottom:6}}>ZAR Score Impact</div>
+                          <table style={{borderCollapse:"collapse",width:"100%",fontSize:11}}>
+                            <thead><tr>
+                              <th style={{textAlign:"left",color:"#334155",fontSize:9,fontWeight:400,paddingBottom:4}}>Score</th>
+                              <th style={{textAlign:"right",color:"#f87171",fontSize:9,fontWeight:400,paddingBottom:4}}>Give</th>
+                              <th style={{textAlign:"right",color:"#22c55e",fontSize:9,fontWeight:400,paddingBottom:4}}>Get</th>
+                              <th style={{textAlign:"right",color:"#94a3b8",fontSize:9,fontWeight:400,paddingBottom:4}}>Net</th>
+                            </tr></thead>
+                            <tbody>
+                              {[["2026","score2026"],["2028","score2028"],["Dyn","scoreDyn"]].map(([label,key])=>{
+                                const d=tradeAnalysis.scoreDelta[key]||{};
+                                const netColor=d.net>0?"#22c55e":d.net<0?"#f87171":"#475569";
+                                return <tr key={key} style={{borderTop:"1px solid #0d0f16"}}>
+                                  <td style={{padding:"3px 0",color:"#94a3b8"}}>{label}</td>
+                                  <td style={{textAlign:"right",padding:"3px 8px 3px 0",color:"#f87171"}}>{d.give}</td>
+                                  <td style={{textAlign:"right",padding:"3px 8px 3px 0",color:"#22c55e"}}>{d.recv}</td>
+                                  <td style={{textAlign:"right",color:netColor,fontWeight:600}}>{d.net>0?"+":""}{d.net}</td>
+                                </tr>;
+                              })}
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".08em",textTransform:"uppercase",marginBottom:6}}>Category Impact</div>
+                          <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
+                            {Object.entries(tradeAnalysis.catDelta).map(([cat,delta])=>{
+                              const lower=lowerBetterCats.has(cat);
+                              const good=lower?delta<0:delta>0, bad=lower?delta>0:delta<0;
+                              const color=good?"#22c55e":bad?"#f87171":"#475569";
+                              const weight=catNeed[cat]??0;
+                              return (
+                                <div key={cat} style={{background:"#0d0f16",border:`1px solid ${color}33`,borderRadius:4,padding:"4px 8px",minWidth:52,textAlign:"center"}}>
+                                  <div style={{fontSize:8,color:"#475569",marginBottom:1}}>{cat}</div>
+                                  <div style={{fontSize:12,fontWeight:700,color}}>{delta>0?"+":""}{delta}</div>
+                                  {weight>0&&<div style={{width:4,height:4,borderRadius:"50%",background:CAT_NEED_COLOR[weight]||"#334155",margin:"2px auto 0"}}/>}
+                                </div>
+                              );
+                            })}
+                          </div>
+                          <div style={{fontSize:9,color:"#334155",marginTop:8}}>Rate stats (AVG, ERA, WHIP, etc.) excluded — see Matchup tab.</div>
+                        </div>
+                      </div>
+                    )}
+                    {!tradeAnalysis&&<div style={{fontSize:11,color:"#334155",marginTop:8}}>Add players to both sides to see the analysis.</div>}
+                  </div>
+                )}
+
+                </div>
               </div>
             );
           })()}

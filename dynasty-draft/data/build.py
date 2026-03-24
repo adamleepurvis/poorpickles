@@ -302,6 +302,18 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
             if bare not in owner_map:
                 owner_map[bare] = team_name
 
+    # Build selected_position map: player name → their current Yahoo slot
+    selected_pos_map = {}
+    for team in yahoo_data.get("teams", []):
+        for player in team["players"]:
+            pname = player["name"]
+            pos = player.get("selected_position")
+            if pos:
+                selected_pos_map[pname] = pos
+                stripped_pname = strip_accents(pname)
+                if stripped_pname != pname:
+                    selected_pos_map.setdefault(stripped_pname, pos)
+
     # Only set rostered/owner for postdraft leagues.
     # Predraft leagues use keeperPicks from the JS config instead.
     draft_status = str(yahoo_data.get("settings", {}).get("draft_status", ""))
@@ -319,6 +331,8 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
         if is_postdraft:
             p["rostered"]  = name in owner_map
             p["owner"]     = owner_map.get(name, None)
+            if name in selected_pos_map:
+                p["selected_position"] = selected_pos_map[name]
         p["scoreYahoo"] = yahoo_proj_scores.get(name, None)
         if name in yahoo_projections_raw:
             p["yahooProj"] = yahoo_projections_raw[name]
