@@ -668,6 +668,33 @@ export default function DraftAssistant({ config }) {
     }).filter(Boolean);
   }, [inSeasonOpponent, leagueTargets, myTeam, hitCats, pitchCats, mlbSchedule, hasYahooRosters]);
 
+  // Roster holes — positions below healthy threshold
+  const rosterHoles = useMemo(() => {
+    if (!hasYahooRosters || draftMode !== false) return [];
+    const THRESHOLDS = { SP: 4, C: 1, "1B": 1, "2B": 1, "3B": 1, SS: 1, OF: 3 };
+    const OF_POS = new Set(["LF", "CF", "RF"]);
+    const healthy = {}, total = {};
+    myYahooRoster.forEach(p => {
+      const elig = p.eligible || [];
+      const positions = [...elig.filter(e => !OF_POS.has(e)), ...(elig.some(e => OF_POS.has(e)) ? ["OF"] : [])];
+      positions.forEach(pos => {
+        if (!(pos in THRESHOLDS)) return;
+        total[pos] = (total[pos] || 0) + 1;
+        if (!p.il) healthy[pos] = (healthy[pos] || 0) + 1;
+      });
+    });
+    return Object.entries(THRESHOLDS)
+      .filter(([pos, thresh]) => (healthy[pos] || 0) < thresh)
+      .map(([pos, thresh]) => ({
+        pos, thresh,
+        healthy: healthy[pos] || 0,
+        total:   total[pos]   || 0,
+        topFA: scoredAvailable
+          .filter(p => pos === "OF" ? p.eligible?.some(e => OF_POS.has(e)) : p.eligible?.includes(pos))
+          .slice(0, 4),
+      }));
+  }, [myYahooRoster, scoredAvailable, hasYahooRosters, draftMode]);
+
   // Team rosters from keepers
   const teamRosters = useMemo(() => {
     const rosters = {};
@@ -1740,7 +1767,39 @@ export default function DraftAssistant({ config }) {
                   </div>
                 )}
 
-                {/* 3. SP Schedule */}
+                {/* 3. Roster Holes */}
+                {rosterHoles.length > 0 && (
+                  <div style={{marginBottom:22}}>
+                    <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:8}}>Roster Holes</div>
+                    {rosterHoles.map(({pos, healthy, total, thresh, topFA}) => {
+                      const color = healthy === 0 ? "#f87171" : "#f59e0b";
+                      const boardPos = pos === "OF" ? null : pos; // OF needs special handling
+                      return (
+                        <div key={pos} style={{marginBottom:10,background:"#0d0f16",border:`1px solid ${color}33`,borderRadius:4,padding:"8px 10px"}}>
+                          <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:6}}>
+                            <span style={{fontSize:11,fontWeight:700,color,minWidth:30}}>{pos}</span>
+                            <span style={{fontSize:10,color:"#475569"}}>{healthy}/{total} healthy (need {thresh}+)</span>
+                            <button onClick={()=>{setTab("board"); setPosFilter(pos==="OF"?"OF":pos); setSortBy("dns");}}
+                              style={{marginLeft:"auto",fontSize:9,color:"#60a5fa",background:"#1e3a5f33",border:"1px solid #1e3a5f",borderRadius:3,padding:"2px 7px",cursor:"pointer",fontFamily:"inherit"}}>
+                              View Board →
+                            </button>
+                          </div>
+                          <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
+                            {topFA.map(p => (
+                              <div key={p.name} style={{background:"#131926",border:"1px solid #1e293b",borderRadius:3,padding:"4px 8px",fontSize:10}}>
+                                <span style={{color:"#e2e8f0",fontWeight:500}}>{p.name}</span>
+                                <span style={{color:"#475569",marginLeft:5}}>{p.draftNowScore?.toFixed(1)}</span>
+                              </div>
+                            ))}
+                            {topFA.length === 0 && <span style={{fontSize:10,color:"#334155"}}>No FA available at this position.</span>}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+
+                {/* 4. SP Schedule */}
                 <div style={{marginBottom:22}}>
                   <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:8}}>
                     Pitcher Schedule
