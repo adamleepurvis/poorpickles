@@ -16,7 +16,7 @@ function getTargets(leagueName) {
     TARGETS_CACHE[leagueName] = raw.map(p => ({
       ...p,
       tier:      inferTier(p),
-      cats:      p.cats.map(c => c === "K9" ? "K/9" : c === "BB9" ? "BB/9" : c),
+      cats:      (p.cats || []).map(c => c === "K9" ? "K/9" : c === "BB9" ? "BB/9" : c),
       score2028: computeBlendedScore2028(p, p.score2028, p.scoreDyn),
     }));
   }
