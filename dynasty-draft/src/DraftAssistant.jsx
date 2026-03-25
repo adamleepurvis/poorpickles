@@ -486,7 +486,7 @@ export default function DraftAssistant({ config }) {
     nextWeekEnd.setDate(monday.getDate() + 13);
     const thisWeekEnd = new Date(monday);
     thisWeekEnd.setDate(monday.getDate() + 6);
-    fetch(`https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=${fmt(monday)}&endDate=${fmt(nextWeekEnd)}&gameType=R`)
+    fetch(`https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=${fmt(monday)}&endDate=${fmt(nextWeekEnd)}&gameType=R&hydrate=team`)
       .then(r => r.json())
       .then(data => {
         const counts = {};
