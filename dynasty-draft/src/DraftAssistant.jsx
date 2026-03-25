@@ -494,10 +494,13 @@ export default function DraftAssistant({ config }) {
           const gameDate = new Date(d.date + "T12:00:00");
           const isThis = gameDate <= thisWeekEnd;
           d.games?.forEach(g => {
-            [g.teams?.home?.team?.abbreviation, g.teams?.away?.team?.abbreviation].forEach(org => {
-              if (!org) return;
-              if (!counts[org]) counts[org] = { thisWeek: 0, nextWeek: 0 };
-              if (isThis) counts[org].thisWeek++; else counts[org].nextWeek++;
+            const home = g.teams?.home?.team?.abbreviation;
+            const away = g.teams?.away?.team?.abbreviation;
+            if (!home || !away) return;
+            [[home, `vs ${away}`], [away, `@ ${home}`]].forEach(([org, opp]) => {
+              if (!counts[org]) counts[org] = { thisWeek: 0, nextWeek: 0, thisWeekOpps: [], nextWeekOpps: [] };
+              if (isThis) { counts[org].thisWeek++; counts[org].thisWeekOpps.push(opp); }
+              else { counts[org].nextWeek++; counts[org].nextWeekOpps.push(opp); }
             });
           });
         });
@@ -1963,42 +1966,55 @@ export default function DraftAssistant({ config }) {
                   </div>
                 )}
 
-                {/* 4. SP Schedule */}
-                <div style={{marginBottom:22}}>
-                  <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:8}}>
-                    Pitcher Schedule
-                    {mlbSchedule === null && <span style={{color:"#334155",marginLeft:8,fontSize:9,fontWeight:400}}>loading...</span>}
-                    {mlbSchedule !== null && Object.keys(mlbSchedule).length === 0 && <span style={{color:"#f59e0b",marginLeft:8,fontSize:9,fontWeight:400}}>no games found (pre-season?)</span>}
-                  </div>
-                  <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
-                    {mySpSchedule.map(p=>{
-                      const isSP = p.eligible?.includes("SP");
-                      const tw = p.thisWeek;
-                      const nw = p.nextWeek;
-                      const twVal = tw == null ? null : isSP ? Math.round(tw / 5) : tw;
-                      const nwVal = nw == null ? null : isSP ? Math.round(nw / 5) : nw;
-                      const twColor = twVal == null ? "#334155" : twVal >= 2 ? "#22c55e" : twVal === 1 ? "#f59e0b" : "#f87171";
-                      const label = isSP ? "GS" : "G";
-                      return (
-                        <div key={p.name} style={{background:"#0d0f16",border:"1px solid #1e293b",borderRadius:4,padding:"6px 10px",minWidth:84}}>
-                          <div style={{fontSize:10,color:"#e2e8f0",fontWeight:600,marginBottom:2,whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis",maxWidth:80}}>{p.name.split(" ").slice(-1)[0]}</div>
-                          <div style={{fontSize:9,color:"#475569",marginBottom:4}}>{p.org} · {p.eligible?.[0]??"-"}</div>
-                          <div style={{display:"flex",gap:8}}>
-                            <div style={{textAlign:"center"}}>
-                              <div style={{fontSize:8,color:"#334155"}}>THIS {label}</div>
-                              <div style={{fontSize:14,fontWeight:700,color:twColor}}>{twVal??"-"}</div>
-                            </div>
-                            <div style={{textAlign:"center"}}>
-                              <div style={{fontSize:8,color:"#334155"}}>NEXT {label}</div>
-                              <div style={{fontSize:14,fontWeight:700,color:"#475569"}}>{nwVal??"-"}</div>
-                            </div>
+                {/* 4. My Lineup */}
+                {(()=>{
+                  const IL_SLOTS = new Set(["IL","IL10","IL15","IL60","NA"]);
+                  const SLOT_ORDER = ["C","1B","2B","3B","SS","LF","CF","RF","OF","Util","SP","RP","P","BN","IL","IL10","IL15","IL60","NA"];
+                  const slotSort = s => { const i = SLOT_ORDER.indexOf(s); return i === -1 ? 99 : i; };
+                  const sorted = [...myYahooRoster].sort((a,b) => slotSort(a.selected_position??"BN") - slotSort(b.selected_position??"BN"));
+                  const starters = sorted.filter(p => p.selected_position && !IL_SLOTS.has(p.selected_position) && p.selected_position !== "BN");
+                  const bench    = sorted.filter(p => !p.selected_position || p.selected_position === "BN");
+                  const il       = sorted.filter(p => p.selected_position && IL_SLOTS.has(p.selected_position));
+
+                  const renderGroup = (label, players) => players.length === 0 ? null : (
+                    <div style={{marginBottom:14}}>
+                      <div style={{fontSize:9,color:"#334155",letterSpacing:".08em",textTransform:"uppercase",marginBottom:5}}>{label}</div>
+                      {players.map(p => {
+                        const isSP = p.eligible?.includes("SP") && !p.eligible?.every(e=>e==="RP");
+                        const isRP = !isSP && p.type === "P";
+                        const sched = mlbSchedule?.[p.org];
+                        const games = sched?.thisWeek ?? null;
+                        const dispGames = games == null ? null : isSP ? Math.round(games / 5) : games;
+                        const opps = (sched?.thisWeekOpps ?? []).join(", ");
+                        const gColor = dispGames == null ? "#334155" : isSP
+                          ? (dispGames >= 2 ? "#22c55e" : dispGames === 1 ? "#f59e0b" : "#f87171")
+                          : (dispGames >= 5 ? "#22c55e" : dispGames >= 3 ? "#f59e0b" : "#f87171");
+                        const gLabel = isSP ? `${dispGames??"-"}GS` : `${dispGames??"-"}G`;
+                        return (
+                          <div key={p.name} style={{display:"flex",alignItems:"center",gap:6,padding:"4px 0",borderBottom:"1px solid #0d0f16"}}>
+                            <span style={{fontSize:9,color:"#475569",width:28,flexShrink:0,textAlign:"right"}}>{p.selected_position??"BN"}</span>
+                            <span style={{fontSize:11,color:"#e2e8f0",flex:"0 0 110px",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{p.name}</span>
+                            <span style={{fontSize:9,color:"#475569",width:26,flexShrink:0}}>{p.org??""}</span>
+                            <span style={{fontSize:10,fontWeight:700,color:gColor,width:28,flexShrink:0}}>{mlbSchedule ? gLabel : "—"}</span>
+                            <span style={{fontSize:9,color:"#334155",flex:1,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{opps}</span>
                           </div>
-                        </div>
-                      );
-                    })}
-                    {mySpSchedule.length === 0 && <div style={{fontSize:11,color:"#334155"}}>No pitchers on roster.</div>}
-                  </div>
-                </div>
+                        );
+                      })}
+                    </div>
+                  );
+                  return (
+                    <div style={{marginBottom:22}}>
+                      <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:10}}>
+                        My Lineup — This Week
+                        {mlbSchedule === null && <span style={{color:"#334155",marginLeft:8,fontSize:9,fontWeight:400}}>loading schedule...</span>}
+                        {mlbSchedule !== null && Object.keys(mlbSchedule).length === 0 && <span style={{color:"#f59e0b",marginLeft:8,fontSize:9,fontWeight:400}}>schedule unavailable</span>}
+                      </div>
+                      {renderGroup("Starting", starters)}
+                      {renderGroup("Bench", bench)}
+                      {renderGroup("IL / NA", il)}
+                    </div>
+                  );
+                })()}
 
                 {/* 2 + 4. Waiver Wire + Ratio Safety */}
                 <div>
