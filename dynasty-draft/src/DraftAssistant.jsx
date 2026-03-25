@@ -476,7 +476,7 @@ export default function DraftAssistant({ config }) {
 
   // Fetch MLB schedule when in-season tab opens
   useEffect(() => {
-    if (tab !== "inseason" || mlbSchedule !== null) return;
+    if (tab !== "inseason" || (mlbSchedule !== null && Object.keys(mlbSchedule || {}).length > 0)) return;
     const today = new Date();
     const dow = today.getDay();
     const monday = new Date(today);
@@ -486,7 +486,7 @@ export default function DraftAssistant({ config }) {
     nextWeekEnd.setDate(monday.getDate() + 13);
     const thisWeekEnd = new Date(monday);
     thisWeekEnd.setDate(monday.getDate() + 6);
-    fetch(`https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=${fmt(monday)}&endDate=${fmt(nextWeekEnd)}&gameType=R,S`)
+    fetch(`https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=${fmt(monday)}&endDate=${fmt(nextWeekEnd)}&gameType=R`)
       .then(r => r.json())
       .then(data => {
         const counts = {};
