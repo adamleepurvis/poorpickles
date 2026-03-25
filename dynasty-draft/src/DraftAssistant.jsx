@@ -1972,21 +1972,25 @@ export default function DraftAssistant({ config }) {
                   </div>
                   <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
                     {mySpSchedule.map(p=>{
+                      const isSP = p.eligible?.includes("SP");
                       const tw = p.thisWeek;
                       const nw = p.nextWeek;
-                      const twColor = tw == null ? "#334155" : tw >= 2 ? "#22c55e" : tw === 1 ? "#f59e0b" : "#f87171";
+                      const twVal = tw == null ? null : isSP ? Math.round(tw / 5) : tw;
+                      const nwVal = nw == null ? null : isSP ? Math.round(nw / 5) : nw;
+                      const twColor = twVal == null ? "#334155" : twVal >= 2 ? "#22c55e" : twVal === 1 ? "#f59e0b" : "#f87171";
+                      const label = isSP ? "GS" : "G";
                       return (
                         <div key={p.name} style={{background:"#0d0f16",border:"1px solid #1e293b",borderRadius:4,padding:"6px 10px",minWidth:84}}>
                           <div style={{fontSize:10,color:"#e2e8f0",fontWeight:600,marginBottom:2,whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis",maxWidth:80}}>{p.name.split(" ").slice(-1)[0]}</div>
                           <div style={{fontSize:9,color:"#475569",marginBottom:4}}>{p.org} · {p.eligible?.[0]??"-"}</div>
                           <div style={{display:"flex",gap:8}}>
                             <div style={{textAlign:"center"}}>
-                              <div style={{fontSize:8,color:"#334155"}}>THIS</div>
-                              <div style={{fontSize:14,fontWeight:700,color:twColor}}>{tw??"-"}</div>
+                              <div style={{fontSize:8,color:"#334155"}}>THIS {label}</div>
+                              <div style={{fontSize:14,fontWeight:700,color:twColor}}>{twVal??"-"}</div>
                             </div>
                             <div style={{textAlign:"center"}}>
-                              <div style={{fontSize:8,color:"#334155"}}>NEXT</div>
-                              <div style={{fontSize:14,fontWeight:700,color:"#475569"}}>{nw??"-"}</div>
+                              <div style={{fontSize:8,color:"#334155"}}>NEXT {label}</div>
+                              <div style={{fontSize:14,fontWeight:700,color:"#475569"}}>{nwVal??"-"}</div>
                             </div>
                           </div>
                         </div>
