@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-24T20:49:26.071943",
+  "generated": "2026-03-25T13:14:03.458115",
   "league_key": "469.l.51744",
   "settings": {
     "league_key": "469.l.51744",
@@ -21,7 +21,7 @@
       "WHIP",
       "BB/9"
     ],
-    "fetched_at": "2026-03-24T20:49:26.955339"
+    "fetched_at": "2026-03-25T13:14:04.401056"
   },
   "draft_results": [
     {
@@ -5331,6 +5331,10 @@
     "Blaine Crim": [
       "1B"
     ],
+    "Jeimer Candelario": [
+      "1B",
+      "3B"
+    ],
     "Will Wagner": [
       "1B",
       "3B"
@@ -5443,9 +5447,6 @@
     "Rubel Cespedes": [
       "1B",
       "3B"
-    ],
-    "Tanner Thach": [
-      "1B"
     ],
     "Sean Keys": [
       "1B",
@@ -5777,16 +5778,16 @@
       "RF",
       "SS"
     ],
-    "Jose Iglesias": [
-      "2B",
-      "3B",
-      "SS"
-    ],
     "Javier Sanoja": [
       "2B",
       "3B",
       "CF",
       "LF",
+      "SS"
+    ],
+    "Jose Iglesias": [
+      "2B",
+      "3B",
       "SS"
     ],
     "Amed Rosario": [
@@ -6628,10 +6629,10 @@
     "Anthony Rendon": [
       "3B"
     ],
-    "Anthony Seigler": [
+    "Nicky Lopez": [
       "3B"
     ],
-    "Nicky Lopez": [
+    "Anthony Seigler": [
       "3B"
     ],
     "Bryan Ramos": [
@@ -7592,16 +7593,21 @@
       "LF",
       "RF"
     ],
+    "Dylan Carlson": [
+      "CF",
+      "LF",
+      "RF"
+    ],
     "Dairon Blanco": [
       "CF",
       "LF",
       "RF"
     ],
-    "Dylan Beavers": [
+    "Justyn-Henry Malloy": [
       "LF",
       "RF"
     ],
-    "Justyn-Henry Malloy": [
+    "Dylan Beavers": [
       "LF",
       "RF"
     ],
@@ -7614,13 +7620,13 @@
       "LF",
       "RF"
     ],
+    "Bryan De La Cruz": [
+      "LF"
+    ],
     "Zach Cole": [
       "CF",
       "LF",
       "RF"
-    ],
-    "Bryan De La Cruz": [
-      "LF"
     ],
     "Griffin Conine": [
       "LF",
@@ -10411,6 +10417,10 @@
       "P",
       "RP"
     ],
+    "Jake Cousins": [
+      "P",
+      "RP"
+    ],
     "Erasmo Ram\u00edrez": [
       "P",
       "RP"
@@ -10973,10 +10983,6 @@
     "Luke Little": [
       "P",
       "RP"
-    ],
-    "Garrett Acton": [
-      "P",
-      "RP"
     ]
   },
   "yahoo_projections": {},
@@ -10987,7 +10993,6 @@
     "Mitch Garver": "NA",
     "Adrian Del Castillo": "DTD",
     "Riley Adams": "NA",
-    "Christian V\u00e1zquez": "NA",
     "Braxton Fulford": "NA",
     "Tom\u00e1s Nido": "NA",
     "Luke Maile": "NA",
@@ -11118,7 +11123,7 @@
     "Tony Blanco Jr.": "NA",
     "Robert Hipwell": "NA",
     "Juan Brito": "NA",
-    "Tyler Austin": "DTD",
+    "Tyler Austin": "IL60",
     "Peyton Stovall": "NA",
     "Eric Bitonti": "NA",
     "Esmerlyn Valdez": "NA",
@@ -11165,7 +11170,6 @@
     "Tommy Edman": "DTD",
     "Tyler Freeman": "IL10",
     "Gavin Lux": "DTD",
-    "Adam Frazier": "NA",
     "Brooks Baldwin": "DTD",
     "Jose Iglesias": "SUSP",
     "Ha-Seong Kim": "DTD",
@@ -11192,7 +11196,7 @@
     "Ronny Simon": "NA",
     "Tim Anderson": "NA",
     "Marco Luciano": "NA",
-    "Vaughn Grissom": "DTD",
+    "Vaughn Grissom": "IL10",
     "Braden Shewmake": "NA",
     "Orelvis Martinez": "NA",
     "Yoeilin Cespedes": "NA",
@@ -11322,9 +11326,10 @@
     "Gio Urshela": "NA",
     "Nacho Alvarez Jr.": "NA",
     "Brett Harris": "NA",
-    "Anthony Rendon": "DTD",
+    "Anthony Rendon": "IL60",
     "Anthony Seigler": "DTD",
     "Nicky Lopez": "NA",
+    "Bryan Ramos": "NA",
     "Denzer Guzman": "NA",
     "Gage Workman": "NA",
     "Jace Jung": "NA",
@@ -11387,7 +11392,6 @@
     "Taylor Walls": "DTD",
     "Trey Sweeney": "DTD",
     "Ryan Fitzgerald": "NA",
-    "Carson Williams": "NA",
     "Maximo Acosta": "DTD",
     "Mason McCoy": "NA",
     "Xavier Neyens": "NA",
@@ -11477,14 +11481,12 @@
     "Anthony Santander": "DTD",
     "Jasson Dom\u00ednguez": "NA",
     "Lourdes Gurriel Jr.": "DTD",
-    "Harrison Bader": "DTD",
     "Jurickson Profar": "SUSP",
     "Lars Nootbaar": "DTD",
     "Tommy Pham": "NA",
     "Max Kepler": "SUSP",
     "JJ Bleday": "NA",
     "Michael Conforto": "NA",
-    "Randal Grichuk": "NA",
     "Blake Perkins": "NA",
     "Nolan Jones": "NA",
     "Alex Verdugo": "NA",
@@ -11492,8 +11494,8 @@
     "Colby Thomas": "NA",
     "Austin Slater": "NA",
     "Dairon Blanco": "NA",
-    "Dylan Beavers": "DTD",
     "Justyn-Henry Malloy": "NA",
+    "Dylan Beavers": "DTD",
     "Zach Dezenzo": "DTD",
     "John Rave": "NA",
     "Bryan De La Cruz": "NA",
@@ -11507,6 +11509,7 @@
     "Jonatan Clase": "NA",
     "Matthew Lugo": "NA",
     "Travis Jankowski": "NA",
+    "Will Brennan": "NA",
     "Esteury Ruiz": "DTD",
     "Nelson Vel\u00e1zquez": "NA",
     "Alan Roden": "NA",
@@ -11557,6 +11560,7 @@
     "Jud Fabian": "NA",
     "Kenedy Corona": "NA",
     "Akil Baddoo": "IL60",
+    "Zac Veen": "DTD",
     "Carson McCusker": "NA",
     "Tirso Ornelas": "NA",
     "Will Robertson": "NA",
@@ -11567,6 +11571,7 @@
     "Michael Helman": "NA",
     "Robert Hassell III": "NA",
     "Michael Siani": "NA",
+    "Drew Gilbert": "NA",
     "Ji Hwan Bae": "NA",
     "Petey Halpin": "NA",
     "Steward Berroa": "DTD",
@@ -11602,7 +11607,6 @@
     "Wade Meckler": "NA",
     "Ryan Kreidler": "NA",
     "Jhostynxon Garcia": "NA",
-    "Andrew McCutchen": "NA",
     "Yanquiel Fern\u00e1ndez": "NA",
     "Hunter Renfroe": "NA",
     "Johnathan Rodr\u00edguez": "NA",
@@ -11634,7 +11638,7 @@
     "Gerrit Cole": "DTD",
     "Logan Henderson": "NA",
     "Quinn Priester": "DTD",
-    "Grayson Rodriguez": "DTD",
+    "Grayson Rodriguez": "IL15",
     "Justin Steele": "DTD",
     "Spencer Schwellenbach": "IL60",
     "Hunter Greene": "IL60",
@@ -11656,6 +11660,7 @@
     "Jos\u00e9 Berr\u00edos": "DTD",
     "Tylor Megill": "IL60",
     "Jack Perkins": "NA",
+    "Trevor McDonald": "NA",
     "Andrew Alvarez": "NA",
     "Javier Assad": "NA",
     "Gavin Stone": "DTD",
@@ -11675,7 +11680,7 @@
     "Hunter Dobbins": "DTD",
     "DJ Herz": "IL60",
     "Robert Gasser": "NA",
-    "Alek Manoah": "DTD",
+    "Alek Manoah": "IL15",
     "Alec Marsh": "IL60",
     "AJ Smith-Shawver": "DTD",
     "Alan Rangel": "NA",
@@ -11984,6 +11989,7 @@
     "Jose Urbina": "NA",
     "Hunter Owen": "NA",
     "Josh Hader": "DTD",
+    "Kirby Yates": "IL15",
     "Edwin Uceta": "DTD",
     "Emmanuel Clase": "NA",
     "Jason Adam": "DTD",
@@ -12018,11 +12024,12 @@
     "Kade Strowd": "NA",
     "Jason Foley": "IL60",
     "Dylan Dodd": "NA",
+    "Brenan Hanifee": "NA",
     "Dylan Smith": "NA",
     "Craig Kimbrel": "NA",
     "Derek Law": "NA",
     "Austin Warren": "NA",
-    "Robert Stephenson": "DTD",
+    "Robert Stephenson": "IL60",
     "Michael Kopech": "NA",
     "Hunter Strickland": "NA",
     "Joe Jim\u00e9nez": "IL60",
@@ -12036,10 +12043,11 @@
     "Tyler Ferguson": "NA",
     "Dedniel N\u00fa\u00f1ez": "IL60",
     "Justin Wilson": "NA",
-    "Ben Joyce": "DTD",
+    "Ben Joyce": "IL15",
     "Chris Devenski": "NA",
     "Yuki Matsui": "DTD",
     "Jayden Murray": "NA",
+    "Spencer Bivens": "NA",
     "Jose Espada": "NA",
     "Tommy Kahnle": "NA",
     "Luke Jackson": "NA",
@@ -12050,6 +12058,7 @@
     "Chris Flexen": "NA",
     "Ian Hamilton": "NA",
     "Sam Hentges": "DTD",
+    "Tristan Beck": "NA",
     "Evan Sisk": "NA",
     "Colin Selby": "IL60",
     "Brusdar Graterol": "DTD",
@@ -12151,6 +12160,7 @@
     "Zach Penrod": "NA",
     "Luke Little": "NA",
     "Garrett Acton": "NA",
+    "Seth Halvorsen": "NA",
     "Blake Walston": "DTD",
     "Zack Kelly": "NA",
     "Brady Basso": "NA",
@@ -12175,7 +12185,6 @@
     "Tyler Owens": "NA",
     "Ty Adcock": "NA",
     "Ethan Roberts": "NA",
-    "Joey Lucchesi": "NA",
     "Jesse Scholtens": "NA",
     "Kyle Nelson": "NA",
     "H\u00e9ctor Neris": "NA",
@@ -12216,6 +12225,7 @@
     "Miguel Castro": "NA",
     "Juan Burgos": "NA",
     "Alex Carrillo": "NA",
+    "Carson Seymour": "NA",
     "Kyle Nicolas": "NA"
   },
   "scoreboard": {
