@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 
 function useIsMobile() {
   const [mobile, setMobile] = useState(() => window.innerWidth < 640)
@@ -349,6 +349,43 @@ function buildTransactions(allData) {
   return grouped
 }
 
+// All unique team names in a league across all seasons
+function getTeamsInLeague(allData, leagueName) {
+  const teams = new Set()
+  for (const leagues of Object.values(allData)) {
+    if (!leagues[leagueName]) continue
+    for (const entry of leagues[leagueName]) {
+      if (entry.team) teams.add(entry.team)
+      if (entry.from_team) teams.add(entry.from_team)
+    }
+  }
+  return Array.from(teams).sort()
+}
+
+// Season-by-season activity for a franchise
+function buildFranchiseData(allData, leagueName, teamName) {
+  const seasons = {}
+  for (const [playerName, leagues] of Object.entries(allData)) {
+    if (!leagues[leagueName]) continue
+    for (const entry of leagues[leagueName]) {
+      const s = entry.season
+      if (!seasons[s]) seasons[s] = { drafted: [], added: [], tradedIn: [], tradedOut: [], dropped: [] }
+      if (entry.team === teamName) {
+        if (entry.how === 'drafted') seasons[s].drafted.push(playerName)
+        else if (entry.how === 'add') seasons[s].added.push(playerName)
+        else if (entry.how === 'trade') seasons[s].tradedIn.push({ player: playerName, from: entry.from_team })
+        else if (entry.how === 'drop') seasons[s].dropped.push(playerName)
+      }
+      if (entry.from_team === teamName && entry.how === 'trade') {
+        seasons[s].tradedOut.push({ player: playerName, to: entry.team })
+      }
+    }
+  }
+  return Object.entries(seasons)
+    .sort(([a], [b]) => b - a)
+    .map(([season, d]) => ({ season: parseInt(season), ...d }))
+}
+
 // ─── Components ────────────────────────────────────────────────────────────
 
 function Loading() {
@@ -683,6 +720,78 @@ function TransactionsTab({ data, activeLeague }) {
   )
 }
 
+// ─── Trades Tab ────────────────────────────────────────────────────────────
+
+function TradesTab({ data, activeLeague }) {
+  const allTrades = useMemo(() => {
+    return buildTransactions(data)
+      .map(tx => ({ ...tx, tradeItems: tx.items.filter(i => i.entry.how === 'trade') }))
+      .filter(tx => tx.tradeItems.length > 0)
+  }, [data])
+
+  const seasons = useMemo(() => {
+    const s = new Set()
+    for (const tx of allTrades) for (const i of tx.tradeItems) s.add(i.entry.season)
+    return ['All', ...Array.from(s).sort((a, b) => b - a)]
+  }, [allTrades])
+
+  const [seasonFilter, setSeasonFilter] = useState('All')
+
+  const filtered = useMemo(() => {
+    if (seasonFilter === 'All') return allTrades
+    const s = parseInt(seasonFilter)
+    return allTrades.filter(tx => tx.tradeItems.some(i => i.entry.season === s))
+  }, [allTrades, seasonFilter])
+
+  function renderTrade(tx) {
+    // Group players by receiving team
+    const received = {}
+    for (const { playerName, entry } of tx.tradeItems) {
+      if (!received[entry.team]) received[entry.team] = []
+      received[entry.team].push({ player: playerName, from: entry.from_team })
+    }
+    const teams = Object.keys(received)
+    const season = tx.tradeItems[0]?.entry.season
+
+    return (
+      <div key={`${tx.ts}_${tx.league}`} style={S.txRow}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 10, flexWrap: 'wrap', gap: 4 }}>
+          <span style={S.txDate}>{tx.ts ? formatDate(tx.ts) : 'Unknown date'} · <span style={{ color: '#84cc16' }}>{tx.league}</span></span>
+          {season && <span style={S.muted}>{season}</span>}
+        </div>
+        <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+          {teams.map((team, idx) => (
+            <div key={team} style={{ flex: 1, minWidth: 140 }}>
+              <div style={{ color: '#84cc16', fontWeight: 700, fontSize: 12, marginBottom: 6 }}>{team} received</div>
+              {received[team].map(({ player, from }) => (
+                <div key={player} style={{ fontSize: 13, color: '#f1f5f9', padding: '3px 0', borderBottom: '1px solid #1a2133' }}>
+                  {player}
+                  {from && <div style={{ color: '#475569', fontSize: 11 }}>from {from}</div>}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div>
+      <div style={S.filterRow}>
+        <select style={S.select} value={seasonFilter} onChange={e => setSeasonFilter(e.target.value)}>
+          {seasons.map(s => <option key={s} value={s}>{s}</option>)}
+        </select>
+        <span style={S.muted}>{filtered.length} trade{filtered.length !== 1 ? 's' : ''}</span>
+      </div>
+      <div style={{ maxHeight: 'calc(100vh - 230px)', overflowY: 'auto', paddingRight: 4 }}>
+        {filtered.length === 0 && <div style={{ color: '#475569', marginTop: 40, textAlign: 'center' }}>No trades found</div>}
+        {filtered.map(tx => renderTrade(tx))}
+      </div>
+    </div>
+  )
+}
+
 // ─── Teams Tab ─────────────────────────────────────────────────────────────
 
 function TeamsTab({ data, activeLeague }) {
@@ -694,8 +803,10 @@ function TeamsTab({ data, activeLeague }) {
     return Array.from(s).sort()
   }, [data])
 
+  const [mode, setMode] = useState('rosters') // 'rosters' | 'franchise'
   const [selectedLeagueLocal, setSelectedLeagueLocal] = useState(leagues[0] || '')
   const [selectedSeason, setSelectedSeason] = useState('All')
+  const [selectedTeam, setSelectedTeam] = useState('')
 
   const selectedLeague = activeLeague !== 'All' ? activeLeague : selectedLeagueLocal
 
@@ -703,66 +814,157 @@ function TeamsTab({ data, activeLeague }) {
     const s = new Set()
     for (const leagues of Object.values(data)) {
       for (const [lName, entries] of Object.entries(leagues)) {
-        if (lName === selectedLeague) {
-          for (const e of entries) s.add(e.season)
-        }
+        if (lName === selectedLeague) for (const e of entries) s.add(e.season)
       }
     }
     return Array.from(s).sort((a, b) => b - a)
   }, [data, selectedLeague])
 
+  const allTeamNames = useMemo(() => getTeamsInLeague(data, selectedLeague), [data, selectedLeague])
+
+  // Rosters mode
   const displaySeason = selectedSeason === 'All' ? (seasons[0] || null) : parseInt(selectedSeason)
-
   const rosters = useMemo(() => {
-    if (!displaySeason || !selectedLeague) return {}
+    if (mode !== 'rosters' || !displaySeason || !selectedLeague) return {}
     return computeRostersForLeague(data, selectedLeague, displaySeason)
-  }, [data, selectedLeague, displaySeason])
+  }, [data, selectedLeague, displaySeason, mode])
+  const rosterTeamNames = Object.keys(rosters).sort()
 
-  const teamNames = Object.keys(rosters).sort()
+  // Franchise mode
+  const franchiseHistory = useMemo(() => {
+    if (mode !== 'franchise' || !selectedTeam || !selectedLeague) return []
+    return buildFranchiseData(data, selectedLeague, selectedTeam)
+  }, [data, selectedLeague, selectedTeam, mode])
+
+  const ModeBtn = ({ m, label }) => (
+    <button
+      onClick={() => setMode(m)}
+      style={{
+        padding: '6px 14px', borderRadius: 6, cursor: 'pointer', fontSize: 13,
+        border: `1px solid ${mode === m ? '#84cc16' : '#1e293b'}`,
+        background: mode === m ? 'rgba(132,204,22,0.1)' : 'transparent',
+        color: mode === m ? '#84cc16' : '#94a3b8',
+        fontWeight: mode === m ? 700 : 400,
+      }}
+    >{label}</button>
+  )
 
   return (
     <div>
-      <div style={S.filterRow}>
+      <div style={{ ...S.filterRow, marginBottom: 12 }}>
         {activeLeague === 'All' && (
-          <select style={S.select} value={selectedLeagueLocal} onChange={e => { setSelectedLeagueLocal(e.target.value); setSelectedSeason('All') }}>
+          <select style={S.select} value={selectedLeagueLocal} onChange={e => { setSelectedLeagueLocal(e.target.value); setSelectedSeason('All'); setSelectedTeam('') }}>
             {leagues.map(l => <option key={l} value={l}>{l}</option>)}
           </select>
         )}
-        <select style={S.select} value={selectedSeason} onChange={e => setSelectedSeason(e.target.value)}>
-          <option value="All">Latest ({seasons[0]})</option>
-          {seasons.map(s => <option key={s} value={s}>{s}</option>)}
-        </select>
-        {displaySeason && (
-          <span style={S.muted}>{teamNames.length} team{teamNames.length !== 1 ? 's' : ''} &middot; {displaySeason}</span>
-        )}
+        <ModeBtn m="rosters" label="Rosters" />
+        <ModeBtn m="franchise" label="Franchise" />
       </div>
 
-      {teamNames.length === 0 && (
-        <div style={{ color: '#475569', marginTop: 40, textAlign: 'center' }}>No roster data for this selection</div>
+      {/* Rosters mode */}
+      {mode === 'rosters' && (
+        <>
+          <div style={{ ...S.filterRow, marginBottom: 16 }}>
+            <select style={S.select} value={selectedSeason} onChange={e => setSelectedSeason(e.target.value)}>
+              <option value="All">Latest ({seasons[0]})</option>
+              {seasons.map(s => <option key={s} value={s}>{s}</option>)}
+            </select>
+            {displaySeason && (
+              <span style={S.muted}>{rosterTeamNames.length} team{rosterTeamNames.length !== 1 ? 's' : ''} · {displaySeason}</span>
+            )}
+          </div>
+          {rosterTeamNames.length === 0 && (
+            <div style={{ color: '#475569', marginTop: 40, textAlign: 'center' }}>No roster data</div>
+          )}
+          <div style={{ maxHeight: 'calc(100vh - 270px)', overflowY: 'auto', paddingRight: 4 }}>
+            <div style={S.teamGrid}>
+              {rosterTeamNames.map(team => {
+                const players = Array.from(rosters[team]).sort()
+                return (
+                  <div key={team} style={S.teamCard}>
+                    <div style={{ fontWeight: 700, color: '#84cc16', marginBottom: 10, fontSize: 13 }}>{team}</div>
+                    <div style={S.muted}>{players.length} player{players.length !== 1 ? 's' : ''}</div>
+                    <div style={{ marginTop: 8 }}>
+                      {players.map(p => (
+                        <div key={p} style={{ padding: '3px 0', borderBottom: '1px solid #1a2133', color: '#f1f5f9', fontSize: 12 }}>{p}</div>
+                      ))}
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </>
       )}
 
-      <div style={{ maxHeight: 'calc(100vh - 230px)', overflowY: 'auto', paddingRight: 4 }}>
-        <div style={S.teamGrid}>
-          {teamNames.map(team => {
-            const players = Array.from(rosters[team]).sort()
-            return (
-              <div key={team} style={S.teamCard}>
-                <div style={{ fontWeight: 700, color: '#84cc16', marginBottom: 10, fontSize: 13 }}>
-                  {team}
+      {/* Franchise mode */}
+      {mode === 'franchise' && (
+        <>
+          <div style={{ ...S.filterRow, marginBottom: 16 }}>
+            <select style={S.select} value={selectedTeam} onChange={e => setSelectedTeam(e.target.value)}>
+              <option value="">Select a team...</option>
+              {allTeamNames.map(t => <option key={t} value={t}>{t}</option>)}
+            </select>
+          </div>
+
+          {!selectedTeam && (
+            <div style={{ color: '#475569', marginTop: 40, textAlign: 'center' }}>Select a team to view their history</div>
+          )}
+
+          {selectedTeam && (
+            <div style={{ maxHeight: 'calc(100vh - 270px)', overflowY: 'auto', paddingRight: 4 }}>
+              {franchiseHistory.length === 0 && (
+                <div style={{ color: '#475569', marginTop: 40, textAlign: 'center' }}>No history found</div>
+              )}
+              {franchiseHistory.map(({ season, drafted, tradedIn, tradedOut, added, dropped }) => (
+                <div key={season} style={{ ...S.card, marginBottom: 10 }}>
+                  <div style={{ fontWeight: 700, color: '#84cc16', fontSize: 15, marginBottom: 10 }}>{season}</div>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: 12 }}>
+                    {drafted.length > 0 && (
+                      <div>
+                        <div style={{ ...S.sectionLabel, marginTop: 0 }}>Drafted ({drafted.length})</div>
+                        {drafted.map(p => <div key={p} style={{ fontSize: 12, color: '#94a3b8', padding: '2px 0' }}>{p}</div>)}
+                      </div>
+                    )}
+                    {tradedIn.length > 0 && (
+                      <div>
+                        <div style={{ ...S.sectionLabel, marginTop: 0 }}>Traded In</div>
+                        {tradedIn.map(({ player, from }) => (
+                          <div key={player} style={{ fontSize: 12, color: '#f1f5f9', padding: '2px 0' }}>
+                            {player} <span style={{ color: '#475569' }}>← {from}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    {tradedOut.length > 0 && (
+                      <div>
+                        <div style={{ ...S.sectionLabel, marginTop: 0 }}>Traded Out</div>
+                        {tradedOut.map(({ player, to }) => (
+                          <div key={player} style={{ fontSize: 12, color: '#f87171', padding: '2px 0' }}>
+                            {player} <span style={{ color: '#475569' }}>→ {to}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    {added.length > 0 && (
+                      <div>
+                        <div style={{ ...S.sectionLabel, marginTop: 0 }}>Added</div>
+                        {added.map(p => <div key={p} style={{ fontSize: 12, color: '#22c55e', padding: '2px 0' }}>{p}</div>)}
+                      </div>
+                    )}
+                    {dropped.length > 0 && (
+                      <div>
+                        <div style={{ ...S.sectionLabel, marginTop: 0 }}>Dropped</div>
+                        {dropped.map(p => <div key={p} style={{ fontSize: 12, color: '#475569', padding: '2px 0' }}>{p}</div>)}
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <div style={S.muted}>{players.length} player{players.length !== 1 ? 's' : ''}</div>
-                <div style={{ marginTop: 8 }}>
-                  {players.map(p => (
-                    <div key={p} style={{ padding: '3px 0', borderBottom: '1px solid #1a2133', color: '#f1f5f9', fontSize: 12 }}>
-                      {p}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </div>
+              ))}
+            </div>
+          )}
+        </>
+      )}
     </div>
   )
 }
@@ -856,7 +1058,7 @@ export default function App() {
       </div>
 
       <div style={S.tabs}>
-        {['players', 'transactions', 'teams'].map(t => (
+        {['players', 'transactions', 'trades', 'teams'].map(t => (
           <button key={t} style={S.tab(tab === t)} onClick={() => setTab(t)}>
             {t.charAt(0).toUpperCase() + t.slice(1)}
           </button>
@@ -873,6 +1075,7 @@ export default function App() {
 
       {filteredData && tab === 'players' && <PlayersTab data={filteredData} isMobile={isMobile} />}
       {filteredData && tab === 'transactions' && <TransactionsTab data={filteredData} activeLeague={activeLeague} />}
+      {filteredData && tab === 'trades' && <TradesTab data={filteredData} activeLeague={activeLeague} />}
       {filteredData && tab === 'teams' && <TeamsTab data={filteredData} activeLeague={activeLeague} />}
     </div>
   )
