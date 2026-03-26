@@ -1,4 +1,14 @@
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useEffect, useMemo, useCallback } from 'react'
+
+function useIsMobile() {
+  const [mobile, setMobile] = useState(() => window.innerWidth < 640)
+  useEffect(() => {
+    const handler = () => setMobile(window.innerWidth < 640)
+    window.addEventListener('resize', handler)
+    return () => window.removeEventListener('resize', handler)
+  }, [])
+  return mobile
+}
 
 // ─── Styles ────────────────────────────────────────────────────────────────
 
@@ -444,7 +454,7 @@ function PlayerTimeline({ playerName, leagues }) {
   )
 }
 
-function PlayersTab({ data }) {
+function PlayersTab({ data, isMobile }) {
   const [search, setSearch] = useState('')
   const [selected, setSelected] = useState(null)
 
@@ -478,6 +488,21 @@ function PlayersTab({ data }) {
     return { leagueNames, currentTeam, latestSeason }
   }
 
+  // Mobile: drill-down — show list or detail, not both
+  if (isMobile && selected) {
+    return (
+      <div>
+        <button
+          onClick={() => setSelected(null)}
+          style={{ background: 'none', border: 'none', color: '#84cc16', cursor: 'pointer', padding: '0 0 12px', fontSize: 13, display: 'flex', alignItems: 'center', gap: 4 }}
+        >
+          ← Back
+        </button>
+        <PlayerTimeline playerName={selected} leagues={data[selected]} />
+      </div>
+    )
+  }
+
   return (
     <div>
       <div style={{ marginBottom: 12 }}>
@@ -486,12 +511,12 @@ function PlayersTab({ data }) {
           placeholder="Search players..."
           value={search}
           onChange={e => setSearch(e.target.value)}
-          autoFocus
+          autoFocus={!isMobile}
         />
       </div>
-      <div style={S.panelWrap}>
+      <div style={isMobile ? {} : S.panelWrap}>
         {/* Player list */}
-        <div style={S.listScroll}>
+        <div style={isMobile ? {} : S.listScroll}>
           <div style={S.muted}>{filtered.length} player{filtered.length !== 1 ? 's' : ''}</div>
           <div style={{ marginTop: 8 }}>
             {filtered.map(name => {
@@ -522,16 +547,18 @@ function PlayersTab({ data }) {
           </div>
         </div>
 
-        {/* Detail panel */}
-        <div>
-          {selected ? (
-            <PlayerTimeline playerName={selected} leagues={data[selected]} />
-          ) : (
-            <div style={{ color: '#475569', marginTop: 40, textAlign: 'center' }}>
-              Select a player to view their history
-            </div>
-          )}
-        </div>
+        {/* Detail panel — desktop only (mobile uses drill-down above) */}
+        {!isMobile && (
+          <div>
+            {selected ? (
+              <PlayerTimeline playerName={selected} leagues={data[selected]} />
+            ) : (
+              <div style={{ color: '#475569', marginTop: 40, textAlign: 'center' }}>
+                Select a player to view their history
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   )
@@ -743,6 +770,7 @@ function TeamsTab({ data, activeLeague }) {
 // ─── App ───────────────────────────────────────────────────────────────────
 
 export default function App() {
+  const isMobile = useIsMobile()
   const [data, setData] = useState(null)
   const [error, setError] = useState(null)
   const [tab, setTab] = useState('players')
@@ -781,8 +809,8 @@ export default function App() {
   const playerCount = filteredData ? Object.keys(filteredData).length : 0
 
   return (
-    <div style={S.app}>
-      <div style={S.header}>
+    <div style={{ ...S.app, padding: isMobile ? '12px' : '16px' }}>
+      <div style={{ ...S.header, flexDirection: isMobile ? 'column' : 'row', alignItems: isMobile ? 'flex-start' : 'center', gap: isMobile ? 10 : 16 }}>
         <div style={{ flex: 1 }}>
           <h1 style={S.title}>League History</h1>
           <p style={S.subtitle}>
@@ -792,7 +820,7 @@ export default function App() {
           </p>
         </div>
         {leagueNames.length > 0 && (
-          <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+          <div style={{ display: 'flex', gap: 6, alignItems: 'center', flexWrap: 'wrap' }}>
             {['All', ...leagueNames].map(lg => (
               <label
                 key={lg}
@@ -843,7 +871,7 @@ export default function App() {
 
       {!data && !error && <Loading />}
 
-      {filteredData && tab === 'players' && <PlayersTab data={filteredData} />}
+      {filteredData && tab === 'players' && <PlayersTab data={filteredData} isMobile={isMobile} />}
       {filteredData && tab === 'transactions' && <TransactionsTab data={filteredData} activeLeague={activeLeague} />}
       {filteredData && tab === 'teams' && <TeamsTab data={filteredData} activeLeague={activeLeague} />}
     </div>
