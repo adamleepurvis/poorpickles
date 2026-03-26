@@ -539,15 +539,7 @@ function PlayersTab({ data }) {
 
 // ─── Transactions Tab ──────────────────────────────────────────────────────
 
-function TransactionsTab({ data }) {
-  const leagues = useMemo(() => {
-    const s = new Set()
-    for (const leagues of Object.values(data)) {
-      for (const l of Object.keys(leagues)) s.add(l)
-    }
-    return ['All', ...Array.from(s).sort()]
-  }, [data])
-
+function TransactionsTab({ data, activeLeague }) {
   const seasons = useMemo(() => {
     const s = new Set()
     for (const leagues of Object.values(data)) {
@@ -558,7 +550,6 @@ function TransactionsTab({ data }) {
     return ['All', ...Array.from(s).sort((a, b) => b - a)]
   }, [data])
 
-  const [leagueFilter, setLeagueFilter] = useState('All')
   const [seasonFilter, setSeasonFilter] = useState('All')
   const [typeFilter, setTypeFilter] = useState('All')
 
@@ -566,7 +557,7 @@ function TransactionsTab({ data }) {
 
   const filtered = useMemo(() => {
     return transactions.filter(tx => {
-      if (leagueFilter !== 'All' && tx.league !== leagueFilter) return false
+      if (activeLeague !== 'All' && tx.league !== activeLeague) return false
       if (seasonFilter !== 'All') {
         const s = parseInt(seasonFilter)
         if (!tx.items.some(item => item.entry.season === s)) return false
@@ -577,7 +568,7 @@ function TransactionsTab({ data }) {
       }
       return true
     })
-  }, [transactions, leagueFilter, seasonFilter, typeFilter])
+  }, [transactions, activeLeague, seasonFilter, typeFilter])
 
   // Group items within a tx by type
   function renderTx(tx) {
@@ -646,9 +637,6 @@ function TransactionsTab({ data }) {
   return (
     <div>
       <div style={S.filterRow}>
-        <select style={S.select} value={leagueFilter} onChange={e => setLeagueFilter(e.target.value)}>
-          {leagues.map(l => <option key={l} value={l}>{l}</option>)}
-        </select>
         <select style={S.select} value={seasonFilter} onChange={e => setSeasonFilter(e.target.value)}>
           {seasons.map(s => <option key={s} value={s}>{s}</option>)}
         </select>
@@ -670,7 +658,7 @@ function TransactionsTab({ data }) {
 
 // ─── Teams Tab ─────────────────────────────────────────────────────────────
 
-function TeamsTab({ data }) {
+function TeamsTab({ data, activeLeague }) {
   const leagues = useMemo(() => {
     const s = new Set()
     for (const leagues of Object.values(data)) {
@@ -679,8 +667,10 @@ function TeamsTab({ data }) {
     return Array.from(s).sort()
   }, [data])
 
-  const [selectedLeague, setSelectedLeague] = useState(leagues[0] || '')
+  const [selectedLeagueLocal, setSelectedLeagueLocal] = useState(leagues[0] || '')
   const [selectedSeason, setSelectedSeason] = useState('All')
+
+  const selectedLeague = activeLeague !== 'All' ? activeLeague : selectedLeagueLocal
 
   const seasons = useMemo(() => {
     const s = new Set()
@@ -706,9 +696,11 @@ function TeamsTab({ data }) {
   return (
     <div>
       <div style={S.filterRow}>
-        <select style={S.select} value={selectedLeague} onChange={e => { setSelectedLeague(e.target.value); setSelectedSeason('All') }}>
-          {leagues.map(l => <option key={l} value={l}>{l}</option>)}
-        </select>
+        {activeLeague === 'All' && (
+          <select style={S.select} value={selectedLeagueLocal} onChange={e => { setSelectedLeagueLocal(e.target.value); setSelectedSeason('All') }}>
+            {leagues.map(l => <option key={l} value={l}>{l}</option>)}
+          </select>
+        )}
         <select style={S.select} value={selectedSeason} onChange={e => setSelectedSeason(e.target.value)}>
           <option value="All">Latest ({seasons[0]})</option>
           {seasons.map(s => <option key={s} value={s}>{s}</option>)}
@@ -754,6 +746,7 @@ export default function App() {
   const [data, setData] = useState(null)
   const [error, setError] = useState(null)
   const [tab, setTab] = useState('players')
+  const [activeLeague, setActiveLeague] = useState('LXG')
 
   useEffect(() => {
     fetch('/ownership_history.json')
@@ -765,7 +758,6 @@ export default function App() {
       .catch(e => setError(e.message))
   }, [])
 
-  const playerCount = data ? Object.keys(data).length : 0
   const leagueNames = useMemo(() => {
     if (!data) return []
     const s = new Set()
@@ -775,17 +767,64 @@ export default function App() {
     return Array.from(s).sort()
   }, [data])
 
+  const filteredData = useMemo(() => {
+    if (!data || activeLeague === 'All') return data
+    const result = {}
+    for (const [playerName, leagues] of Object.entries(data)) {
+      if (leagues[activeLeague]) {
+        result[playerName] = { [activeLeague]: leagues[activeLeague] }
+      }
+    }
+    return result
+  }, [data, activeLeague])
+
+  const playerCount = filteredData ? Object.keys(filteredData).length : 0
+
   return (
     <div style={S.app}>
       <div style={S.header}>
-        <div>
+        <div style={{ flex: 1 }}>
           <h1 style={S.title}>League History</h1>
           <p style={S.subtitle}>
             {data
-              ? `${playerCount} players · ${leagueNames.join(', ')}`
+              ? `${playerCount} players · ${activeLeague === 'All' ? leagueNames.join(', ') : activeLeague}`
               : 'Loading...'}
           </p>
         </div>
+        {leagueNames.length > 0 && (
+          <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+            {['All', ...leagueNames].map(lg => (
+              <label
+                key={lg}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 5,
+                  cursor: 'pointer',
+                  padding: '5px 12px',
+                  borderRadius: 6,
+                  border: `1px solid ${activeLeague === lg ? '#84cc16' : '#1e293b'}`,
+                  background: activeLeague === lg ? 'rgba(132,204,22,0.1)' : 'transparent',
+                  color: activeLeague === lg ? '#84cc16' : '#94a3b8',
+                  fontSize: 13,
+                  fontWeight: activeLeague === lg ? 700 : 400,
+                  transition: 'all 0.15s',
+                  userSelect: 'none',
+                }}
+              >
+                <input
+                  type="radio"
+                  name="league"
+                  value={lg}
+                  checked={activeLeague === lg}
+                  onChange={() => setActiveLeague(lg)}
+                  style={{ display: 'none' }}
+                />
+                {lg}
+              </label>
+            ))}
+          </div>
+        )}
       </div>
 
       <div style={S.tabs}>
@@ -804,9 +843,9 @@ export default function App() {
 
       {!data && !error && <Loading />}
 
-      {data && tab === 'players' && <PlayersTab data={data} />}
-      {data && tab === 'transactions' && <TransactionsTab data={data} />}
-      {data && tab === 'teams' && <TeamsTab data={data} />}
+      {filteredData && tab === 'players' && <PlayersTab data={filteredData} />}
+      {filteredData && tab === 'transactions' && <TransactionsTab data={filteredData} activeLeague={activeLeague} />}
+      {filteredData && tab === 'teams' && <TeamsTab data={filteredData} activeLeague={activeLeague} />}
     </div>
   )
 }
