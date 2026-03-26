@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-26T01:38:38.862279",
+  "generated": "2026-03-26T01:54:13.992274",
   "league_key": "469.l.51744",
   "settings": {
     "league_key": "469.l.51744",
@@ -21,7 +21,7 @@
       "WHIP",
       "BB/9"
     ],
-    "fetched_at": "2026-03-26T01:38:39.756238"
+    "fetched_at": "2026-03-26T01:54:14.909684"
   },
   "draft_results": [
     {
@@ -10420,6 +10420,10 @@
       "P",
       "RP"
     ],
+    "Jake Cousins": [
+      "P",
+      "RP"
+    ],
     "Erasmo Ram\u00edrez": [
       "P",
       "RP"
@@ -10982,10 +10986,6 @@
     "Luke Little": [
       "P",
       "RP"
-    ],
-    "Garrett Acton": [
-      "P",
-      "RP"
     ]
   },
   "yahoo_projections": {},
@@ -11337,8 +11337,8 @@
     "Nacho Alvarez Jr.": "NA",
     "Brett Harris": "NA",
     "Anthony Rendon": "IL60",
-    "Anthony Seigler": "IL10",
     "Nicky Lopez": "NA",
+    "Anthony Seigler": "IL10",
     "Bryan Ramos": "NA",
     "Denzer Guzman": "NA",
     "Gage Workman": "NA",
@@ -12050,6 +12050,7 @@
     "Daysbel Hern\u00e1ndez": "IL15",
     "Bryan Hudson": "NA",
     "Hunter Bigge": "NA",
+    "Jake Cousins": "NA",
     "Erasmo Ram\u00edrez": "NA",
     "Tyler Ferguson": "NA",
     "Dedniel N\u00fa\u00f1ez": "IL60",
