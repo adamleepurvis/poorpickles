@@ -228,8 +228,11 @@ def sync_rosters(query, draft_results: list[dict] | None = None):
             try:
                 tid = entry["team_key"].split(".")[-1]
                 roster = query.get_team_roster_by_week(tid)
+                roster_players = getattr(roster, "players", roster) or []
+                if isinstance(roster_players, dict):
+                    roster_players = list(roster_players.values())
                 players = []
-                for player in (roster or []):
+                for player in roster_players:
                     name = str(getattr(player, "name", {}).get("full", "") or
                                getattr(getattr(player, "name", None), "full", str(player)))
                     pos_list = []
@@ -239,17 +242,12 @@ def sync_rosters(query, draft_results: list[dict] | None = None):
                         )
                     except Exception:
                         pass
-                    # Extract selected_position from yfpy player object.
-                    # Yahoo API nests it as selected_position.position (a dict/obj).
                     sel_pos = "BN"
                     try:
                         sp = player.selected_position
-                        if isinstance(sp, dict):
-                            sel_pos = str(sp.get("position", "BN"))
-                        elif hasattr(sp, "position"):
-                            sel_pos = str(sp.position or "BN")
-                        elif isinstance(sp, str) and sp:
-                            sel_pos = sp
+                        sel_pos = str(getattr(sp, "position", None) or
+                                      (sp.get("position") if isinstance(sp, dict) else None) or
+                                      "BN")
                     except Exception:
                         pass
                     players.append({
