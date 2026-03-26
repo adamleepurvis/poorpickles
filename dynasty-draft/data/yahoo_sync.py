@@ -233,8 +233,13 @@ def sync_rosters(query, draft_results: list[dict] | None = None):
                     roster_players = list(roster_players.values())
                 players = []
                 for player in roster_players:
-                    name = str(getattr(player, "name", {}).get("full", "") or
-                               getattr(getattr(player, "name", None), "full", str(player)))
+                    name_obj = getattr(player, "name", None)
+                    if hasattr(name_obj, "full"):
+                        name = str(name_obj.full or "")
+                    elif isinstance(name_obj, dict):
+                        name = str(name_obj.get("full", ""))
+                    else:
+                        name = str(name_obj or player)
                     pos_list = []
                     try:
                         pos_list = normalize_positions(

@@ -2026,7 +2026,7 @@ export default function DraftAssistant({ config }) {
                       totals[c] = denom > 0 ? totals[`_num_${c}`] / denom : null;
                     });
 
-                    const nameW = 90, slotW = 26, schedW = 32, statW = 38;
+                    const nameW = 160, slotW = 26, schedW = 32, statW = 38;
                     const thStyle = {fontSize:8,color:"#64748b",textAlign:"right",padding:"2px 4px",fontWeight:400,letterSpacing:".06em",whiteSpace:"nowrap"};
                     const tdStyle = (dim) => ({fontSize:10,color:dim?"#64748b":"#e2e8f0",textAlign:"right",padding:"3px 4px",whiteSpace:"nowrap"});
 

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-26T01:54:13.992274",
+  "generated": "2026-03-25T22:07:01.900978",
   "league_key": "469.l.51744",
   "settings": {
     "league_key": "469.l.51744",
@@ -21,7 +21,7 @@
       "WHIP",
       "BB/9"
     ],
-    "fetched_at": "2026-03-26T01:54:14.909684"
+    "fetched_at": "2026-03-25T22:07:02.663117"
   },
   "draft_results": [
     {
@@ -2119,176 +2119,234 @@
       "team_name": "Dynasty",
       "players": [
         {
-          "name": "Bobby Witt Jr.",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Shea Langeliers",
+          "eligible": [
+            "C"
+          ],
+          "selected_position": "C",
           "status": ""
         },
         {
           "name": "Pete Alonso",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Jarren Duran",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Pete Crow-Armstrong",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Shea Langeliers",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Kyle Stowers",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Tarik Skubal",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Yoshinobu Yamamoto",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Cole Ragans",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Jacob deGrom",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Cody Bellinger",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Eugenio Su\u00e1rez",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Connelly Early",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "1B",
           "status": ""
         },
         {
           "name": "Nico Hoerner",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "2B",
+          "status": ""
+        },
+        {
+          "name": "Eugenio Su\u00e1rez",
+          "eligible": [
+            "3B"
+          ],
+          "selected_position": "3B",
+          "status": ""
+        },
+        {
+          "name": "Bobby Witt Jr.",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "SS",
+          "status": ""
+        },
+        {
+          "name": "Jarren Duran",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "LF",
+          "status": ""
+        },
+        {
+          "name": "Pete Crow-Armstrong",
+          "eligible": [
+            "CF"
+          ],
+          "selected_position": "CF",
+          "status": ""
+        },
+        {
+          "name": "Cody Bellinger",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "RF",
           "status": ""
         },
         {
           "name": "Ceddanne Rafaela",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Sonny Gray",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Ranger Suarez",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Luis Castillo",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "Util",
           "status": ""
         },
         {
           "name": "Daylen Lile",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Cody Ponce",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Aroldis Chapman",
-          "eligible": [],
+          "eligible": [
+            "LF"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Matt Wallner",
-          "eligible": [],
+          "eligible": [
+            "LF"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Mickey Moniak",
-          "eligible": [],
+          "eligible": [
+            "LF"
+          ],
           "selected_position": "BN",
-          "status": ""
+          "status": "DTD"
         },
         {
           "name": "Isaac Paredes",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Ian Seymour",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Brayan Bello",
-          "eligible": [],
+          "eligible": [
+            "3B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Brenton Doyle",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Emilio Pag\u00e1n",
-          "eligible": [],
+          "eligible": [
+            "CF"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Masyn Winn",
-          "eligible": [],
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Kyle Stowers",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "IL",
+          "status": "IL10"
+        },
+        {
+          "name": "Tarik Skubal",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Yoshinobu Yamamoto",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Cole Ragans",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Jacob deGrom",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Aroldis Chapman",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Emilio Pag\u00e1n",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Sonny Gray",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Connelly Early",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Ian Seymour",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Luis Castillo",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Ranger Suarez",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Cody Ponce",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Brayan Bello",
+          "eligible": [
+            "SP"
+          ],
           "selected_position": "BN",
           "status": ""
         }
@@ -2299,176 +2357,242 @@
       "team_name": "Bay of Papi",
       "players": [
         {
-          "name": "Fernando Tatis Jr.",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Ben Rice",
+          "eligible": [
+            "C"
+          ],
+          "selected_position": "C",
           "status": ""
         },
         {
           "name": "Nick Kurtz",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Manny Machado",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Yordan Alvarez",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Mookie Betts",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Ben Rice",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Konnor Griffin",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Bryan Woo",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Max Fried",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Jacob Misiorowski",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Sal Stewart",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "1B",
           "status": ""
         },
         {
           "name": "Matt McLain",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "2B",
           "status": ""
         },
         {
-          "name": "Tatsuya Imai",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Manny Machado",
+          "eligible": [
+            "3B"
+          ],
+          "selected_position": "3B",
+          "status": ""
+        },
+        {
+          "name": "Mookie Betts",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "SS",
+          "status": ""
+        },
+        {
+          "name": "Yordan Alvarez",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "LF",
           "status": ""
         },
         {
           "name": "Mike Trout",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "CF"
+          ],
+          "selected_position": "CF",
           "status": ""
         },
         {
-          "name": "Robbie Ray",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Fernando Tatis Jr.",
+          "eligible": [
+            "RF"
+          ],
+          "selected_position": "RF",
           "status": ""
         },
         {
-          "name": "Shane Baz",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Sal Stewart",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "Util",
           "status": ""
         },
         {
           "name": "Chase DeLauter",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Ryan Weathers",
-          "eligible": [],
+          "eligible": [
+            "CF"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Marcelo Mayer",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Mike Burrows",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Mick Abel",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Kyle Harrison",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Jacob Lopez",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Jeff Hoffman",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Bryce Rainer",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Jeremiah Estrada",
-          "eligible": [],
+          "eligible": [
+            "2B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Carson Williams",
-          "eligible": [],
+          "eligible": [
+            "SS"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
-          "name": "Chase Dollander",
-          "eligible": [],
+          "name": "Konnor Griffin",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "BN",
+          "status": "NA"
+        },
+        {
+          "name": "Nolan Gorman",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Bryce Rainer",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "NA",
+          "status": "NA"
+        },
+        {
+          "name": "Bryan Woo",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Max Fried",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Jacob Misiorowski",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Tatsuya Imai",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Jeff Hoffman",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Mike Burrows",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Robbie Ray",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Shane Baz",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Jeremiah Estrada",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Kyle Harrison",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Ryan Weathers",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Mick Abel",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Jacob Lopez",
+          "eligible": [
+            "SP"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Brandon Sproat",
-          "eligible": [],
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Joe Boyle",
+          "eligible": [
+            "SP"
+          ],
           "selected_position": "BN",
           "status": ""
         }
@@ -2479,178 +2603,252 @@
       "team_name": "gamma's Team",
       "players": [
         {
-          "name": "Jos\u00e9 Ram\u00edrez",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Junior Caminero",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Jackson Chourio",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
           "name": "Cal Raleigh",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "C"
+          ],
+          "selected_position": "C",
           "status": ""
         },
         {
           "name": "Vladimir Guerrero Jr.",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "1B",
           "status": ""
         },
         {
-          "name": "Roman Anthony",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Jorge Polanco",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "2B",
+          "status": ""
+        },
+        {
+          "name": "Jos\u00e9 Ram\u00edrez",
+          "eligible": [
+            "3B"
+          ],
+          "selected_position": "3B",
           "status": ""
         },
         {
           "name": "Kevin McGonigle",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Garrett Crochet",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Cristopher S\u00e1nchez",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Chris Sale",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Tyler Glasnow",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "SS",
           "status": ""
         },
         {
           "name": "Christian Yelich",
-          "eligible": [],
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "LF",
+          "status": ""
+        },
+        {
+          "name": "Roman Anthony",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "CF",
+          "status": ""
+        },
+        {
+          "name": "Jackson Chourio",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "RF",
+          "status": ""
+        },
+        {
+          "name": "Junior Caminero",
+          "eligible": [
+            "3B"
+          ],
+          "selected_position": "Util",
+          "status": ""
+        },
+        {
+          "name": "Ezequiel Tovar",
+          "eligible": [
+            "SS"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Wilyer Abreu",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Ezequiel Tovar",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Devin Williams",
-          "eligible": [],
+          "eligible": [
+            "LF"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Justin Crawford",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Jorge Polanco",
-          "eligible": [],
+          "eligible": [
+            "Util"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Coby Mayo",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Parker Messick",
-          "eligible": [],
+          "eligible": [
+            "1B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Jeff McNeil",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Cade Cavalli",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Ryan Weiss",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Daniel Palencia",
-          "eligible": [],
+          "eligible": [
+            "2B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Jett Williams",
-          "eligible": [],
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "BN",
+          "status": "NA"
+        },
+        {
+          "name": "Alek Thomas",
+          "eligible": [
+            "CF"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Alex Freeland",
+          "eligible": [
+            "3B"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Dylan Beavers",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Garrett Crochet",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Cristopher S\u00e1nchez",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Chris Sale",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Tyler Glasnow",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Devin Williams",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Daniel Palencia",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Parker Messick",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Cade Cavalli",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Ryan Weiss",
+          "eligible": [
+            "SP"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Jos\u00e9 Soriano",
-          "eligible": [],
+          "eligible": [
+            "SP"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Clay Holmes",
-          "eligible": [],
+          "eligible": [
+            "SP"
+          ],
           "selected_position": "BN",
           "status": ""
+        },
+        {
+          "name": "Jackson Jobe",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "IL",
+          "status": "IL60"
         },
         {
           "name": "Ryan Sloan",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Johan Oviedo",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Alek Thomas",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "NA",
+          "status": "NA"
         }
       ]
     },
@@ -2659,178 +2857,252 @@
       "team_name": "Hideo Lobo",
       "players": [
         {
-          "name": "Shohei Ohtani (Batter)",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Trea Turner",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
           "name": "Agust\u00edn Ram\u00edrez",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "C"
+          ],
+          "selected_position": "C",
           "status": ""
         },
         {
-          "name": "Noelvi Marte",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Freddie Freeman",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "1B",
           "status": ""
         },
         {
-          "name": "JJ Wetherholt",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Otto Lopez",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "2B",
           "status": ""
         },
         {
           "name": "Royce Lewis",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "3B"
+          ],
+          "selected_position": "3B",
           "status": ""
         },
         {
-          "name": "Jackson Holliday",
-          "eligible": [],
+          "name": "Trea Turner",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "SS",
+          "status": ""
+        },
+        {
+          "name": "Chandler Simpson",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "LF",
+          "status": ""
+        },
+        {
+          "name": "Byron Buxton",
+          "eligible": [
+            "CF"
+          ],
+          "selected_position": "CF",
+          "status": ""
+        },
+        {
+          "name": "Kerry Carpenter",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "RF",
+          "status": ""
+        },
+        {
+          "name": "Shohei Ohtani (Batter)",
+          "eligible": [
+            "Util"
+          ],
+          "selected_position": "Util",
+          "status": ""
+        },
+        {
+          "name": "JJ Wetherholt",
+          "eligible": [
+            "2B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Evan Carter",
-          "eligible": [],
+          "eligible": [
+            "LF"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
-          "name": "Shane McClanahan",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Kodai Senga",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Freddie Freeman",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Byron Buxton",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Sandy Alcantara",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Nathan Eovaldi",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Brandon Woodruff",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Chandler Simpson",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Gerrit Cole",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Andrew Abbott",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Kerry Carpenter",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Zac Gallen",
-          "eligible": [],
+          "name": "Noelvi Marte",
+          "eligible": [
+            "3B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Jordan Lawlar",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Otto Lopez",
-          "eligible": [],
+          "eligible": [
+            "3B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Jonathan Aranda",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Corbin Burnes",
-          "eligible": [],
+          "eligible": [
+            "1B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Brett Baty",
-          "eligible": [],
+          "eligible": [
+            "2B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
-          "name": "Abner Uribe",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Jackson Holliday",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "IL",
+          "status": "IL10"
+        },
+        {
+          "name": "Charlie Condon",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "NA",
+          "status": "NA"
+        },
+        {
+          "name": "Sandy Alcantara",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Nathan Eovaldi",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Seth Lugo",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
           "status": ""
         },
         {
           "name": "Tyler Mahle",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
           "status": ""
         },
         {
-          "name": "Charlie Condon",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Abner Uribe",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
           "status": ""
         },
         {
           "name": "Luke Weaver",
-          "eligible": [],
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Andrew Abbott",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Alex Vesia",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Kodai Senga",
+          "eligible": [
+            "SP"
+          ],
           "selected_position": "BN",
           "status": ""
+        },
+        {
+          "name": "Shane McClanahan",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Brandon Woodruff",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Zac Gallen",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Gerrit Cole",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "IL",
+          "status": "IL15"
+        },
+        {
+          "name": "Corbin Burnes",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "IL",
+          "status": "IL60"
         }
       ]
     },
@@ -2839,176 +3111,234 @@
       "team_name": "JP Licks",
       "players": [
         {
-          "name": "Zach Neto",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Adley Rutschman",
+          "eligible": [
+            "C"
+          ],
+          "selected_position": "C",
           "status": ""
         },
         {
           "name": "Matt Olson",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "1B",
           "status": ""
         },
         {
           "name": "Brice Turang",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "2B",
           "status": ""
         },
         {
-          "name": "Matt Shaw",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Matt Chapman",
+          "eligible": [
+            "3B"
+          ],
+          "selected_position": "3B",
           "status": ""
         },
         {
-          "name": "Travis Bazzana",
-          "eligible": [],
+          "name": "Zach Neto",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "SS",
+          "status": ""
+        },
+        {
+          "name": "Andy Pages",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "LF",
+          "status": ""
+        },
+        {
+          "name": "Brandon Nimmo",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "CF",
+          "status": ""
+        },
+        {
+          "name": "Seiya Suzuki",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "RF",
+          "status": "IL10"
+        },
+        {
+          "name": "Jeremy Pe\u00f1a",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "Util",
+          "status": ""
+        },
+        {
+          "name": "Lawrence Butler",
+          "eligible": [
+            "CF"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Max Clark",
-          "eligible": [],
+          "eligible": [
+            "CF"
+          ],
+          "selected_position": "BN",
+          "status": "NA"
+        },
+        {
+          "name": "Matt Shaw",
+          "eligible": [
+            "3B"
+          ],
           "selected_position": "BN",
           "status": ""
+        },
+        {
+          "name": "Travis Bazzana",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "BN",
+          "status": "NA"
         },
         {
           "name": "Jes\u00fas Made",
-          "eligible": [],
+          "eligible": [
+            "2B"
+          ],
           "selected_position": "BN",
-          "status": ""
+          "status": "NA"
         },
         {
           "name": "Walker Jenkins",
-          "eligible": [],
+          "eligible": [
+            "Util"
+          ],
           "selected_position": "BN",
-          "status": ""
+          "status": "NA"
         },
         {
           "name": "Zyhir Hope",
-          "eligible": [],
+          "eligible": [
+            "Util"
+          ],
           "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Hunter Greene",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
+          "status": "NA"
         },
         {
           "name": "Sebastian Walcott",
-          "eligible": [],
+          "eligible": [
+            "3B"
+          ],
           "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Jeremy Pe\u00f1a",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Andy Pages",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
+          "status": "NA"
         },
         {
           "name": "Jacob Wilson",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Lawrence Butler",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Seiya Suzuki",
-          "eligible": [],
+          "eligible": [
+            "SS"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Luis Pe\u00f1a",
-          "eligible": [],
+          "eligible": [
+            "2B"
+          ],
           "selected_position": "BN",
-          "status": ""
+          "status": "NA"
+        },
+        {
+          "name": "Hunter Greene",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": "IL60"
         },
         {
           "name": "Michael King",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Adley Rutschman",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Matt Chapman",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Brandon Nimmo",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
           "status": ""
         },
         {
           "name": "Tanner Bibee",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
           "status": ""
         },
         {
           "name": "Jack Flaherty",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Matthew Boyd",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Joe Musgrove",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Jack Leiter",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
           "status": ""
         },
         {
           "name": "Ryne Nelson",
-          "eligible": [],
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Ryan Helsley",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Matthew Boyd",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Joe Musgrove",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "P",
+          "status": "IL15"
+        },
+        {
+          "name": "Jack Leiter",
+          "eligible": [
+            "SP"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Shane Smith",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Ryan Helsley",
-          "eligible": [],
+          "eligible": [
+            "SP"
+          ],
           "selected_position": "BN",
           "status": ""
         }
@@ -3019,176 +3349,250 @@
       "team_name": "Loch Neskie Monsters",
       "players": [
         {
-          "name": "Elly De La Cruz",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Kyle Schwarber",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Ketel Marte",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Riley Greene",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Ivan Herrera",
+          "eligible": [
+            "C"
+          ],
+          "selected_position": "C",
           "status": ""
         },
         {
           "name": "Josh Naylor",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "1B",
           "status": ""
         },
         {
-          "name": "Oneil Cruz",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Ketel Marte",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "2B",
+          "status": "DTD"
+        },
+        {
+          "name": "Kazuma Okamoto",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "3B",
           "status": ""
         },
         {
-          "name": "Hunter Brown",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Elly De La Cruz",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "SS",
           "status": ""
         },
         {
-          "name": "Logan Webb",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Kyle Schwarber",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "LF",
           "status": ""
         },
         {
-          "name": "George Kirby",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Edwin D\u00edaz",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Riley Greene",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "CF",
           "status": ""
         },
         {
           "name": "Teoscar Hern\u00e1ndez",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "RF",
           "status": ""
         },
         {
-          "name": "Emmet Sheehan",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Oneil Cruz",
+          "eligible": [
+            "CF"
+          ],
+          "selected_position": "Util",
           "status": ""
         },
         {
           "name": "Taylor Ward",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Ivan Herrera",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Cade Horton",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Jhoan Duran",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Kazuma Okamoto",
-          "eligible": [],
+          "eligible": [
+            "LF"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Bryson Stott",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Aaron Nola",
-          "eligible": [],
+          "eligible": [
+            "2B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Colt Keith",
-          "eligible": [],
+          "eligible": [
+            "1B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Daulton Varsho",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Joey Cantillo",
-          "eligible": [],
+          "eligible": [
+            "LF"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Colton Cowser",
-          "eligible": [],
+          "eligible": [
+            "LF"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Alec Bohm",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Matthew Liberatore",
-          "eligible": [],
+          "eligible": [
+            "1B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Willi Castro",
-          "eligible": [],
+          "eligible": [
+            "2B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Garrett Mitchell",
-          "eligible": [],
+          "eligible": [
+            "CF"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Owen Caissie",
-          "eligible": [],
+          "eligible": [
+            "CF"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Romy Gonzalez",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "IL",
+          "status": "IL60"
+        },
+        {
+          "name": "TJ Rumfield",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "NA",
+          "status": ""
+        },
+        {
+          "name": "Hunter Brown",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Logan Webb",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "George Kirby",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Matthew Liberatore",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Edwin D\u00edaz",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Jhoan Duran",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Cade Horton",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Aaron Nola",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Emmet Sheehan",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Joey Cantillo",
+          "eligible": [
+            "SP"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Chad Patrick",
-          "eligible": [],
+          "eligible": [
+            "SP"
+          ],
           "selected_position": "BN",
           "status": ""
         }
@@ -3199,178 +3603,252 @@
       "team_name": "Nighthawks",
       "players": [
         {
-          "name": "Juan Soto",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Kyle Tucker",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Gunnar Henderson",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Hunter Goodman",
+          "eligible": [
+            "C"
+          ],
+          "selected_position": "C",
           "status": ""
         },
         {
           "name": "Bryce Harper",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "1B",
           "status": ""
         },
         {
-          "name": "Jackson Merrill",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Brandon Lowe",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "2B",
           "status": ""
         },
         {
           "name": "Austin Riley",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "3B"
+          ],
+          "selected_position": "3B",
+          "status": ""
+        },
+        {
+          "name": "Gunnar Henderson",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "SS",
+          "status": ""
+        },
+        {
+          "name": "Juan Soto",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "LF",
+          "status": ""
+        },
+        {
+          "name": "Jackson Merrill",
+          "eligible": [
+            "CF"
+          ],
+          "selected_position": "CF",
+          "status": ""
+        },
+        {
+          "name": "Kyle Tucker",
+          "eligible": [
+            "RF"
+          ],
+          "selected_position": "RF",
           "status": ""
         },
         {
           "name": "Bo Bichette",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Nick Pivetta",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Nolan McLean",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Eury P\u00e9rez",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Colt Emerson",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Ryan Pepiot",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Drew Rasmussen",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Hunter Goodman",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Edward Cabrera",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Kris Bubic",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "Util",
           "status": ""
         },
         {
           "name": "Francisco Alvarez",
-          "eligible": [],
+          "eligible": [
+            "C"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Carter Jensen",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Brandon Lowe",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Braxton Ashcraft",
-          "eligible": [],
+          "eligible": [
+            "C"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Cam Smith",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Max Meyer",
-          "eligible": [],
+          "eligible": [
+            "RF"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Luis Garc\u00eda Jr.",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Will Warren",
-          "eligible": [],
+          "eligible": [
+            "2B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Gabriel Moreno",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Pete Fairbanks",
-          "eligible": [],
+          "eligible": [
+            "C"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Emmanuel Rodriguez",
-          "eligible": [],
+          "eligible": [
+            "CF"
+          ],
+          "selected_position": "BN",
+          "status": "NA"
+        },
+        {
+          "name": "Cole Young",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Colt Emerson",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "NA",
+          "status": "NA"
+        },
+        {
+          "name": "Eury P\u00e9rez",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Nolan McLean",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Nick Pivetta",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Drew Rasmussen",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Braxton Ashcraft",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Pete Fairbanks",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Will Warren",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Max Meyer",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Edward Cabrera",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Kris Bubic",
+          "eligible": [
+            "SP"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Dustin May",
-          "eligible": [],
+          "eligible": [
+            "SP"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Reid Detmers",
-          "eligible": [],
+          "eligible": [
+            "RP"
+          ],
           "selected_position": "BN",
           "status": ""
+        },
+        {
+          "name": "Grant Holmes",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Ryan Pepiot",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "IL",
+          "status": "IL15"
         }
       ]
     },
@@ -3379,178 +3857,260 @@
       "team_name": "Poor Pickles",
       "players": [
         {
-          "name": "Geraldo Perdomo",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Drake Baldwin",
+          "eligible": [
+            "C"
+          ],
+          "selected_position": "C",
           "status": ""
         },
         {
           "name": "Vinnie Pasquantino",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "1B",
           "status": ""
         },
         {
           "name": "Maikel Garcia",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Tyler Soderstrom",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Michael Harris II",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Jo Adell",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Drake Baldwin",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Bryce Eldridge",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Framber Valdez",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Roki Sasaki",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Luke Keaschall",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "2B",
           "status": ""
         },
         {
           "name": "Munetaka Murakami",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "3B",
           "status": ""
         },
         {
-          "name": "Spencer Schwellenbach",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Geraldo Perdomo",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "SS",
           "status": ""
         },
         {
-          "name": "Jordan Westburg",
-          "eligible": [],
+          "name": "Tyler Soderstrom",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "LF",
+          "status": ""
+        },
+        {
+          "name": "Michael Harris II",
+          "eligible": [
+            "CF"
+          ],
+          "selected_position": "CF",
+          "status": ""
+        },
+        {
+          "name": "Jo Adell",
+          "eligible": [
+            "CF"
+          ],
+          "selected_position": "RF",
+          "status": ""
+        },
+        {
+          "name": "Willy Adames",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "Util",
+          "status": ""
+        },
+        {
+          "name": "Steven Kwan",
+          "eligible": [
+            "LF"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Spencer Torkelson",
-          "eligible": [],
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Luke Keaschall",
+          "eligible": [
+            "2B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Luis Robert Jr.",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Grayson Rodriguez",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Willy Adames",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Thomas White",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Bryce Miller",
-          "eligible": [],
+          "eligible": [
+            "CF"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Addison Barger",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Jared Jones",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Garrett Whitlock",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Jonah Tong",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Steven Kwan",
-          "eligible": [],
+          "eligible": [
+            "3B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Heliot Ramos",
-          "eligible": [],
+          "eligible": [
+            "LF"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
-          "name": "Gage Jump",
-          "eligible": [],
+          "name": "Spencer Jones",
+          "eligible": [
+            "CF"
+          ],
           "selected_position": "BN",
+          "status": "NA"
+        },
+        {
+          "name": "Jordan Westburg",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "IL",
+          "status": "IL10"
+        },
+        {
+          "name": "Bryce Eldridge",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "NA",
+          "status": "NA"
+        },
+        {
+          "name": "Framber Valdez",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Roki Sasaki",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Brady Singer",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "David Peterson",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Garrett Whitlock",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
           "status": ""
         },
         {
           "name": "Grant Taylor",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
           "status": ""
         },
         {
-          "name": "Kyle Teel",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Garrett Cleavinger",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "P",
           "status": ""
+        },
+        {
+          "name": "JoJo Romero",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Bryce Miller",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": "IL15"
+        },
+        {
+          "name": "Thomas White",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": "NA"
+        },
+        {
+          "name": "Jonah Tong",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": "NA"
+        },
+        {
+          "name": "Grayson Rodriguez",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "IL",
+          "status": "IL15"
+        },
+        {
+          "name": "Jared Jones",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "IL",
+          "status": "IL60"
+        },
+        {
+          "name": "Spencer Schwellenbach",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "IL",
+          "status": "IL60"
         }
       ]
     },
@@ -3559,176 +4119,234 @@
       "team_name": "Snipe City Danglers",
       "players": [
         {
-          "name": "Brent Rooker",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "James Wood",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Randy Arozarena",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Samuel Basallo",
+          "eligible": [
+            "C"
+          ],
+          "selected_position": "C",
           "status": ""
         },
         {
           "name": "Michael Busch",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Samuel Basallo",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Leo De Vries",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Joe Ryan",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Jes\u00fas Luzardo",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Trevor Rogers",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Shota Imanaga",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Trey Yesavage",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Alex Bregman",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Trevor Story",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Andr\u00e9s Mu\u00f1oz",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "1B",
           "status": ""
         },
         {
           "name": "Xavier Edwards",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "2B",
           "status": ""
         },
         {
-          "name": "David Bednar",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Alex Bregman",
+          "eligible": [
+            "3B"
+          ],
+          "selected_position": "3B",
           "status": ""
         },
         {
-          "name": "Dylan Crews",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Trevor Story",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "SS",
           "status": ""
         },
         {
-          "name": "Merrill Kelly",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "James Wood",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "LF",
           "status": ""
         },
         {
-          "name": "Payton Tolle",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Randy Arozarena",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "CF",
+          "status": ""
+        },
+        {
+          "name": "Brent Rooker",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "RF",
           "status": ""
         },
         {
           "name": "Jakob Marsee",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "Util",
           "status": ""
         },
         {
+          "name": "Dylan Crews",
+          "eligible": [
+            "CF"
+          ],
+          "selected_position": "BN",
+          "status": "NA"
+        },
+        {
+          "name": "Leo De Vries",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "BN",
+          "status": "NA"
+        },
+        {
           "name": "Xander Bogaerts",
-          "eligible": [],
+          "eligible": [
+            "SS"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Cedric Mullins",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Seth Hernandez",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Raisel Iglesias",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Jameson Taillon",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Yusei Kikuchi",
-          "eligible": [],
+          "eligible": [
+            "CF"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Brendan Donovan",
-          "eligible": [],
+          "eligible": [
+            "2B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Kyle Manzardo",
-          "eligible": [],
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Joe Ryan",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Jes\u00fas Luzardo",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Trevor Rogers",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Shota Imanaga",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Andr\u00e9s Mu\u00f1oz",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "David Bednar",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Trey Yesavage",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "P",
+          "status": "IL15"
+        },
+        {
+          "name": "Merrill Kelly",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "P",
+          "status": "IL15"
+        },
+        {
+          "name": "Payton Tolle",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": "NA"
+        },
+        {
+          "name": "Seth Hernandez",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": "NA"
+        },
+        {
+          "name": "Raisel Iglesias",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Jameson Taillon",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Yusei Kikuchi",
+          "eligible": [
+            "SP"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Brandon Pfaadt",
-          "eligible": [],
+          "eligible": [
+            "SP"
+          ],
           "selected_position": "BN",
           "status": ""
         }
@@ -3739,178 +4357,244 @@
       "team_name": "StickyBanditz",
       "players": [
         {
-          "name": "Aaron Judge",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "William Contreras",
+          "eligible": [
+            "C"
+          ],
+          "selected_position": "C",
           "status": ""
         },
         {
           "name": "Rafael Devers",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Corey Seager",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "William Contreras",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "1B",
           "status": ""
         },
         {
           "name": "Ozzie Albies",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "2B",
           "status": ""
         },
         {
           "name": "Colson Montgomery",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "3B"
+          ],
+          "selected_position": "3B",
           "status": ""
         },
         {
-          "name": "Jac Caglianone",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Paul Skenes",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Freddy Peralta",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Dylan Cease",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Spencer Strider",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Zack Wheeler",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Kevin Gausman",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Adolis Garc\u00eda",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Corey Seager",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "SS",
           "status": ""
         },
         {
           "name": "Bryan Reynolds",
-          "eligible": [],
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "LF",
+          "status": ""
+        },
+        {
+          "name": "Aaron Judge",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "CF",
+          "status": ""
+        },
+        {
+          "name": "Adolis Garc\u00eda",
+          "eligible": [
+            "RF"
+          ],
+          "selected_position": "RF",
+          "status": ""
+        },
+        {
+          "name": "Giancarlo Stanton",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "Util",
+          "status": ""
+        },
+        {
+          "name": "Jac Caglianone",
+          "eligible": [
+            "1B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Yainer Diaz",
-          "eligible": [],
+          "eligible": [
+            "C"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Luis Arraez",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Bailey Ober",
-          "eligible": [],
+          "eligible": [
+            "1B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Jung Hoo Lee",
-          "eligible": [],
+          "eligible": [
+            "CF"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Marcus Semien",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Robert Suarez",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Casey Mize",
-          "eligible": [],
+          "eligible": [
+            "2B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Dansby Swanson",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Carlos Est\u00e9vez",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Giancarlo Stanton",
-          "eligible": [],
+          "eligible": [
+            "SS"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Max Muncy",
-          "eligible": [],
+          "eligible": [
+            "3B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
+          "name": "Paul Skenes",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Freddy Peralta",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Kevin Gausman",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Dylan Cease",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Robert Suarez",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Carlos Est\u00e9vez",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Trevor Megill",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Bailey Ober",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
           "name": "Noah Cameron",
-          "eligible": [],
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": ""
+        },
+        {
+          "name": "Casey Mize",
+          "eligible": [
+            "SP"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Sean Manaea",
-          "eligible": [],
+          "eligible": [
+            "SP"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
+          "name": "Zack Wheeler",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "IL",
+          "status": "IL15"
+        },
+        {
+          "name": "Spencer Strider",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "IL",
+          "status": "IL15"
+        },
+        {
           "name": "Emmanuel Clase",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "NA",
+          "status": "NA"
         }
       ]
     },
@@ -3919,178 +4603,244 @@
       "team_name": "Team Underdog",
       "players": [
         {
-          "name": "Julio Rodr\u00edguez",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Ronald Acu\u00f1a Jr.",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Corbin Carroll",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Francisco Lindor",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
           "name": "Will Smith",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Logan Gilbert",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Kyle Bradish",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Chase Burns",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Nick Lodolo",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Shohei Ohtani (Pitcher)",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Jose Altuve",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "George Springer",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Mason Miller",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "C"
+          ],
+          "selected_position": "C",
           "status": ""
         },
         {
           "name": "Yandy D\u00edaz",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "1B",
           "status": ""
         },
         {
-          "name": "Cade Smith",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Jose Altuve",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "2B",
           "status": ""
         },
         {
           "name": "Carlos Correa",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "3B"
+          ],
+          "selected_position": "3B",
           "status": ""
         },
         {
-          "name": "Carlos Rod\u00f3n",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Francisco Lindor",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "SS",
+          "status": "DTD"
+        },
+        {
+          "name": "George Springer",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "LF",
           "status": ""
         },
         {
-          "name": "Shane Bieber",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Julio Rodr\u00edguez",
+          "eligible": [
+            "CF"
+          ],
+          "selected_position": "CF",
+          "status": ""
+        },
+        {
+          "name": "Ronald Acu\u00f1a Jr.",
+          "eligible": [
+            "RF"
+          ],
+          "selected_position": "RF",
+          "status": ""
+        },
+        {
+          "name": "Corbin Carroll",
+          "eligible": [
+            "CF"
+          ],
+          "selected_position": "Util",
           "status": ""
         },
         {
           "name": "Gleyber Torres",
-          "eligible": [],
+          "eligible": [
+            "2B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Ram\u00f3n Laureano",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Jasson Dom\u00ednguez",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Luis Gil",
-          "eligible": [],
+          "eligible": [
+            "LF"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Chase Meidroth",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Griffin Jax",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Logan Henderson",
-          "eligible": [],
+          "eligible": [
+            "2B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Jos\u00e9 Caballero",
-          "eligible": [],
+          "eligible": [
+            "2B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Mois\u00e9s Ballesteros",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Didier Fuentes",
-          "eligible": [],
+          "eligible": [
+            "C"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Eli Willits",
-          "eligible": [],
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "BN",
+          "status": "NA"
+        },
+        {
+          "name": "Jasson Dom\u00ednguez",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "NA",
+          "status": "NA"
+        },
+        {
+          "name": "Logan Gilbert",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Kyle Bradish",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Chase Burns",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Shohei Ohtani (Pitcher)",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Mason Miller",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Cade Smith",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Luis Severino",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Griffin Jax",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Luis Gil",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": "NA"
+        },
+        {
+          "name": "Logan Henderson",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "BN",
+          "status": "NA"
+        },
+        {
+          "name": "Didier Fuentes",
+          "eligible": [
+            "SP"
+          ],
           "selected_position": "BN",
           "status": ""
+        },
+        {
+          "name": "Shane Bieber",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "IL",
+          "status": "IL15"
+        },
+        {
+          "name": "Nick Lodolo",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "IL",
+          "status": "IL15"
+        },
+        {
+          "name": "Carlos Rod\u00f3n",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "IL",
+          "status": "IL15"
         }
       ]
     },
@@ -4099,178 +4849,236 @@
       "team_name": "Toms River",
       "players": [
         {
-          "name": "Jazz Chisholm Jr.",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Wyatt Langford",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "CJ Abrams",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Salvador Perez",
+          "eligible": [
+            "C"
+          ],
+          "selected_position": "C",
           "status": ""
         },
         {
           "name": "Willson Contreras",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "1B",
+          "status": ""
+        },
+        {
+          "name": "Jazz Chisholm Jr.",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "2B",
+          "status": ""
+        },
+        {
+          "name": "Caleb Durbin",
+          "eligible": [
+            "2B"
+          ],
+          "selected_position": "3B",
+          "status": ""
+        },
+        {
+          "name": "CJ Abrams",
+          "eligible": [
+            "SS"
+          ],
+          "selected_position": "SS",
+          "status": ""
+        },
+        {
+          "name": "Ian Happ",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "LF",
+          "status": ""
+        },
+        {
+          "name": "Wyatt Langford",
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "CF",
           "status": ""
         },
         {
           "name": "Alec Burleson",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "RF",
           "status": ""
         },
         {
           "name": "Christian Walker",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Blake Snell",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Bubba Chandler",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "MacKenzie Gore",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Andrew Painter",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Carson Benge",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Cam Schlittler",
-          "eligible": [],
-          "selected_position": "BN",
+          "eligible": [
+            "1B"
+          ],
+          "selected_position": "Util",
           "status": ""
         },
         {
           "name": "Ryan Waldschmidt",
-          "eligible": [],
+          "eligible": [
+            "LF"
+          ],
+          "selected_position": "BN",
+          "status": "NA"
+        },
+        {
+          "name": "Carson Benge",
+          "eligible": [
+            "Util"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Aidan Miller",
-          "eligible": [],
+          "eligible": [
+            "SS"
+          ],
           "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Gavin Williams",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Salvador Perez",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
+          "status": "NA"
         },
         {
           "name": "Eduardo Quintero",
-          "eligible": [],
+          "eligible": [
+            "Util"
+          ],
           "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Caleb Durbin",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
+          "status": "NA"
         },
         {
           "name": "Andrew Vaughn",
-          "eligible": [],
+          "eligible": [
+            "1B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Kaelen Culpepper",
-          "eligible": [],
+          "eligible": [
+            "SS"
+          ],
           "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Robby Snelling",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
+          "status": "NA"
         },
         {
           "name": "Josue De Paula",
-          "eligible": [],
+          "eligible": [
+            "Util"
+          ],
           "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Josh Hader",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Ian Happ",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Bryan Abreu",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
+          "status": "NA"
         },
         {
           "name": "Marcell Ozuna",
-          "eligible": [],
-          "selected_position": "BN",
-          "status": ""
-        },
-        {
-          "name": "Justin Steele",
-          "eligible": [],
+          "eligible": [
+            "Util"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
           "name": "Paul Goldschmidt",
-          "eligible": [],
+          "eligible": [
+            "1B"
+          ],
           "selected_position": "BN",
           "status": ""
         },
         {
-          "name": "Tyler Rogers",
-          "eligible": [],
-          "selected_position": "BN",
+          "name": "Bubba Chandler",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
           "status": ""
+        },
+        {
+          "name": "MacKenzie Gore",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Andrew Painter",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Cam Schlittler",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "SP",
+          "status": ""
+        },
+        {
+          "name": "Josh Hader",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
+          "status": "IL15"
+        },
+        {
+          "name": "Bryan Abreu",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "RP",
+          "status": ""
+        },
+        {
+          "name": "Gavin Williams",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Tyler Rogers",
+          "eligible": [
+            "RP"
+          ],
+          "selected_position": "P",
+          "status": ""
+        },
+        {
+          "name": "Justin Steele",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "IL",
+          "status": "IL60"
+        },
+        {
+          "name": "Blake Snell",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "IL",
+          "status": "IL15"
+        },
+        {
+          "name": "Robby Snelling",
+          "eligible": [
+            "SP"
+          ],
+          "selected_position": "NA",
+          "status": "NA"
         }
       ]
     }
@@ -12050,7 +12858,7 @@
     "Daysbel Hern\u00e1ndez": "IL15",
     "Bryan Hudson": "NA",
     "Hunter Bigge": "NA",
-    "Jake Cousins": "NA",
+    "Jake Cousins": "DTD",
     "Erasmo Ram\u00edrez": "NA",
     "Tyler Ferguson": "NA",
     "Dedniel N\u00fa\u00f1ez": "IL60",
