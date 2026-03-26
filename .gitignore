@@ -1,6 +1,11 @@
 # Build artifacts — Vercel builds dist/ from source on deploy
 dynasty-draft/dist/
 
+# Generated data files — owned by GH Actions yahoo-sync, never commit locally
+dynasty-draft/data/targets_*.json
+dynasty-draft/data/yahoo_data_*.json
+dynasty-draft/data/zar_scores.json
+
 # Local secrets and tokens
 dynasty-draft/.env
 dynasty-draft/data/.yahoo_token/
