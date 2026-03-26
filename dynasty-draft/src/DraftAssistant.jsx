@@ -1966,9 +1966,10 @@ export default function DraftAssistant({ config }) {
                   </div>
                 )}
 
-                {/* 4. My Lineup */}
+                {/* 4. Stat Tracker */}
                 {(()=>{
                   const IL_SLOTS = new Set(["IL","IL10","IL15","IL60","NA"]);
+                  const RATE_CATS = new Set(["AVG","OBP","SLG","ERA","WHIP","K/9","BB/9"]);
                   const SLOT_ORDER = ["C","1B","2B","3B","SS","LF","CF","RF","OF","Util","SP","RP","P","BN","IL","IL10","IL15","IL60","NA"];
                   const slotSort = s => { const i = SLOT_ORDER.indexOf(s); return i === -1 ? 99 : i; };
                   const sorted = [...myYahooRoster].sort((a,b) => slotSort(a.selected_position??"BN") - slotSort(b.selected_position??"BN"));
@@ -1976,32 +1977,107 @@ export default function DraftAssistant({ config }) {
                   const bench    = sorted.filter(p => !p.selected_position || p.selected_position === "BN");
                   const il       = sorted.filter(p => p.selected_position && IL_SLOTS.has(p.selected_position));
 
-                  const renderGroup = (label, players) => players.length === 0 ? null : (
-                    <div style={{marginBottom:14}}>
-                      <div style={{fontSize:9,color:"#334155",letterSpacing:".08em",textTransform:"uppercase",marginBottom:5}}>{label}</div>
-                      {players.map(p => {
-                        const isSP = p.eligible?.includes("SP") && !p.eligible?.every(e=>e==="RP");
-                        const isRP = !isSP && p.type === "P";
-                        const sched = mlbSchedule?.[p.org];
-                        const games = sched?.thisWeek ?? null;
-                        const dispGames = games == null ? null : isSP ? Math.round(games / 5) : games;
-                        const opps = (sched?.thisWeekOpps ?? []).join(", ");
-                        const gColor = dispGames == null ? "#334155" : isSP
-                          ? (dispGames >= 2 ? "#22c55e" : dispGames === 1 ? "#f59e0b" : "#f87171")
-                          : (dispGames >= 5 ? "#22c55e" : dispGames >= 3 ? "#f59e0b" : "#f87171");
-                        const gLabel = isSP ? `${dispGames??"-"}GS` : `${dispGames??"-"}G`;
-                        return (
-                          <div key={p.name} style={{display:"flex",alignItems:"center",gap:6,padding:"4px 0",borderBottom:"1px solid #0d0f16"}}>
-                            <span style={{fontSize:9,color:"#475569",width:28,flexShrink:0,textAlign:"right"}}>{p.selected_position??"BN"}</span>
-                            <span style={{fontSize:11,color:"#e2e8f0",flex:"0 0 110px",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{p.name}</span>
-                            <span style={{fontSize:9,color:"#475569",width:26,flexShrink:0}}>{p.org??""}</span>
-                            <span style={{fontSize:10,fontWeight:700,color:gColor,width:28,flexShrink:0}}>{mlbSchedule ? gLabel : "—"}</span>
-                            <span style={{fontSize:9,color:"#334155",flex:1,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{opps}</span>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  );
+                  const playerScale = p => {
+                    const isSP = p.eligible?.includes("SP") && !p.eligible?.every(e=>e==="RP");
+                    const games = mlbSchedule?.[p.org]?.thisWeek ?? 6.2;
+                    if (p.type !== "P" || !isSP) return games / 162;
+                    const seasonGS = Math.max(1, (p.projStats?.IP ?? 150) / 5.5);
+                    return (games / 5) / seasonGS;
+                  };
+
+                  const scaledStat = (p, cat) => {
+                    const v = p.projStats?.[cat];
+                    if (v == null) return null;
+                    if (RATE_CATS.has(cat)) return v;
+                    return v * playerScale(p);
+                  };
+
+                  const renderTable = (players, cats, dim) => {
+                    if (!players.length) return null;
+                    const totals = {};
+                    const paMap = {}, ipMap = {};
+                    players.forEach(p => {
+                      const sc = playerScale(p);
+                      const proj = p.projStats || {};
+                      if (p.type === "H") {
+                        const pa = (proj.H != null && proj.AVG ? proj.H / proj.AVG * sc : 0);
+                        paMap[p.name] = pa;
+                        cats.filter(c=>!RATE_CATS.has(c)).forEach(c => {
+                          if (proj[c] != null) totals[c] = (totals[c]||0) + proj[c] * sc;
+                        });
+                        ["AVG","OBP","SLG"].forEach(c => {
+                          if (proj[c] != null) totals[`_num_${c}`] = (totals[`_num_${c}`]||0) + proj[c] * pa;
+                          totals[`_pa`] = (totals[`_pa`]||0) + pa;
+                        });
+                      } else {
+                        const ip = (proj.IP ?? 0) * sc;
+                        ipMap[p.name] = ip;
+                        cats.filter(c=>!RATE_CATS.has(c)).forEach(c => {
+                          if (proj[c] != null) totals[c] = (totals[c]||0) + proj[c] * sc;
+                        });
+                        ["ERA","WHIP","K/9","BB/9"].forEach(c => {
+                          if (proj[c] != null) totals[`_num_${c}`] = (totals[`_num_${c}`]||0) + proj[c] * ip;
+                        });
+                        totals[`_ip`] = (totals[`_ip`]||0) + ip;
+                      }
+                    });
+                    cats.filter(c=>RATE_CATS.has(c)).forEach(c => {
+                      const denom = ["AVG","OBP","SLG"].includes(c) ? totals[`_pa`] : totals[`_ip`];
+                      totals[c] = denom > 0 ? totals[`_num_${c}`] / denom : null;
+                    });
+
+                    const nameW = 90, slotW = 26, schedW = 32, statW = 38;
+                    const thStyle = {fontSize:8,color:"#334155",textAlign:"right",padding:"2px 4px",fontWeight:400,letterSpacing:".06em",whiteSpace:"nowrap"};
+                    const tdStyle = (dim) => ({fontSize:10,color:dim?"#334155":"#e2e8f0",textAlign:"right",padding:"3px 4px",whiteSpace:"nowrap"});
+
+                    return (
+                      <div style={{overflowX:"auto",marginBottom:10}}>
+                        <table style={{borderCollapse:"collapse",fontSize:10,width:"100%"}}>
+                          <thead>
+                            <tr>
+                              <th style={{...thStyle,textAlign:"left",width:slotW}}>SLT</th>
+                              <th style={{...thStyle,textAlign:"left",width:nameW}}>NAME</th>
+                              <th style={{...thStyle,width:schedW}}>OPP</th>
+                              {cats.map(c=><th key={c} style={{...thStyle,width:statW}}>{c}</th>)}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {players.map(p => {
+                              const sched = mlbSchedule?.[p.org];
+                              const isSP = p.eligible?.includes("SP") && !p.eligible?.every(e=>e==="RP");
+                              const games = sched?.thisWeek ?? null;
+                              const dispG = games == null ? "—" : isSP ? `${Math.round(games/5)}GS` : `${games}G`;
+                              const opps = (sched?.thisWeekOpps ?? []).map(o=>o.replace("vs ","").replace("@ ","@")).join(" ");
+                              return (
+                                <tr key={p.name} style={{borderTop:"1px solid #0d0f16"}}>
+                                  <td style={{fontSize:9,color:"#475569",padding:"3px 4px",whiteSpace:"nowrap"}}>{p.selected_position??"BN"}</td>
+                                  <td style={{padding:"3px 4px"}}>
+                                    <div style={{fontSize:10,color:dim?"#334155":"#e2e8f0",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap",maxWidth:nameW}}>{p.name}</div>
+                                    <div style={{fontSize:8,color:"#334155"}}>{p.org} {opps && <span style={{color:"#475569"}}>{opps}</span>}</div>
+                                  </td>
+                                  <td style={{...tdStyle(dim),fontSize:9,color:games==null?"#334155":isSP?(Math.round(games/5)>=2?"#22c55e":Math.round(games/5)===1?"#f59e0b":"#f87171"):(games>=5?"#22c55e":games>=3?"#f59e0b":"#f87171")}}>{dispG}</td>
+                                  {cats.map(c => {
+                                    const v = scaledStat(p, c);
+                                    return <td key={c} style={tdStyle(dim)}>{v==null?"—":fmtStat(v,c)}</td>;
+                                  })}
+                                </tr>
+                              );
+                            })}
+                            <tr style={{borderTop:"2px solid #1e293b"}}>
+                              <td colSpan={3} style={{fontSize:9,color:"#475569",padding:"3px 4px",fontWeight:700}}>TOTAL</td>
+                              {cats.map(c => <td key={c} style={{fontSize:10,color:"#84cc16",fontWeight:700,textAlign:"right",padding:"3px 4px"}}>{totals[c]==null?"—":fmtStat(totals[c],c)}</td>)}
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    );
+                  };
+
+                  const hitters  = starters.filter(p => p.type === "H");
+                  const pitchers = starters.filter(p => p.type === "P");
+                  const benchH   = bench.filter(p => p.type === "H");
+                  const benchP   = bench.filter(p => p.type === "P");
+
                   return (
                     <div style={{marginBottom:22}}>
                       <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:10}}>
@@ -2009,9 +2085,22 @@ export default function DraftAssistant({ config }) {
                         {mlbSchedule === null && <span style={{color:"#334155",marginLeft:8,fontSize:9,fontWeight:400}}>loading schedule...</span>}
                         {mlbSchedule !== null && Object.keys(mlbSchedule).length === 0 && <span style={{color:"#f59e0b",marginLeft:8,fontSize:9,fontWeight:400}}>schedule unavailable</span>}
                       </div>
-                      {renderGroup("Starting", starters)}
-                      {renderGroup("Bench", bench)}
-                      {renderGroup("IL / NA", il)}
+                      {(hitters.length>0||benchH.length>0) && <>
+                        <div style={{fontSize:9,color:"#334155",letterSpacing:".08em",textTransform:"uppercase",marginBottom:4}}>Hitters</div>
+                        {renderTable(hitters, hitCats, false)}
+                        {benchH.length>0 && renderTable(benchH, hitCats, true)}
+                      </>}
+                      {(pitchers.length>0||benchP.length>0) && <>
+                        <div style={{fontSize:9,color:"#334155",letterSpacing:".08em",textTransform:"uppercase",marginBottom:4,marginTop:8}}>Pitchers</div>
+                        {renderTable(pitchers, pitchCats, false)}
+                        {benchP.length>0 && renderTable(benchP, pitchCats, true)}
+                      </>}
+                      {il.length>0 && (
+                        <div style={{marginTop:8}}>
+                          <div style={{fontSize:9,color:"#334155",letterSpacing:".08em",textTransform:"uppercase",marginBottom:4}}>IL / NA</div>
+                          {il.map(p=><div key={p.name} style={{fontSize:10,color:"#334155",padding:"2px 0"}}>{p.selected_position} · {p.name} · {p.org}</div>)}
+                        </div>
+                      )}
                     </div>
                   );
                 })()}
