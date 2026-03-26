@@ -31,10 +31,6 @@ jobs:
       - name: Install Python deps
         run: pip install yfpy python-dotenv numpy pandas requests
 
-      - name: Install Node deps
-        run: npm install
-        working-directory: dynasty-draft
-
       - name: Restore Yahoo token
         run: |
           mkdir -p dynasty-draft/data/.yahoo_token
@@ -62,14 +58,11 @@ jobs:
         if: inputs.league == 'all'
         run: bash sync.sh
 
-      - name: Build + push (single league)
+      - name: Push (single league)
         if: inputs.league != 'all'
         run: |
-          cd dynasty-draft && npm run build
-          cd ..
           git add dynasty-draft/data/targets_${{ inputs.league }}.json \
-                  dynasty-draft/data/yahoo_data_${{ inputs.league }}.json \
-                  dynasty-draft/dist/
+                  dynasty-draft/data/yahoo_data_${{ inputs.league }}.json
           git diff --cached --quiet && echo "Nothing changed." && exit 0
           git commit -m "Yahoo sync ${{ inputs.league }} $(date '+%Y-%m-%d %H:%M')"
           git pull --rebase origin main
