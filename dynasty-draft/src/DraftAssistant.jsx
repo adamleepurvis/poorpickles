@@ -1971,11 +1971,13 @@ export default function DraftAssistant({ config }) {
                   const IL_SLOTS = new Set(["IL","IL10","IL15","IL60","NA"]);
                   const RATE_CATS = new Set(["AVG","OBP","SLG","ERA","WHIP","K/9","BB/9"]);
                   const SLOT_ORDER = ["C","1B","2B","3B","SS","LF","CF","RF","OF","Util","SP","RP","P","BN","IL","IL10","IL15","IL60","NA"];
-                  const slotSort = s => { const i = SLOT_ORDER.indexOf(s); return i === -1 ? 99 : i; };
-                  const sorted = [...myYahooRoster].sort((a,b) => slotSort(a.selected_position??"BN") - slotSort(b.selected_position??"BN"));
-                  const starters = sorted.filter(p => p.selected_position && !IL_SLOTS.has(p.selected_position) && p.selected_position !== "BN");
-                  const bench    = sorted.filter(p => !p.selected_position || p.selected_position === "BN");
-                  const il       = sorted.filter(p => p.selected_position && IL_SLOTS.has(p.selected_position));
+                  const posSort = s => { const i = SLOT_ORDER.indexOf(s); return i === -1 ? 99 : i; };
+                  const displaySlot = p => p.selected_position && !IL_SLOTS.has(p.selected_position) && p.selected_position !== "BN"
+                    ? p.selected_position : (p.eligible?.[0] ?? "?");
+                  const sorted = [...myYahooRoster].sort((a,b) => posSort(displaySlot(a)) - posSort(displaySlot(b)));
+                  const starters = sorted.filter(p => !IL_SLOTS.has(p.selected_position ?? ""));
+                  const bench    = [];
+                  const il       = sorted.filter(p => IL_SLOTS.has(p.selected_position ?? ""));
 
                   const playerScale = p => {
                     const isSP = p.eligible?.includes("SP") && !p.eligible?.every(e=>e==="RP");
@@ -2028,7 +2030,7 @@ export default function DraftAssistant({ config }) {
 
                     const nameW = 90, slotW = 26, schedW = 32, statW = 38;
                     const thStyle = {fontSize:8,color:"#64748b",textAlign:"right",padding:"2px 4px",fontWeight:400,letterSpacing:".06em",whiteSpace:"nowrap"};
-                    const tdStyle = (dim) => ({fontSize:10,color:dim?"#475569":"#f1f5f9",textAlign:"right",padding:"3px 4px",whiteSpace:"nowrap"});
+                    const tdStyle = (dim) => ({fontSize:10,color:dim?"#64748b":"#e2e8f0",textAlign:"right",padding:"3px 4px",whiteSpace:"nowrap"});
 
                     return (
                       <div style={{overflowX:"auto",marginBottom:10}}>
@@ -2050,9 +2052,9 @@ export default function DraftAssistant({ config }) {
                               const opps = (sched?.thisWeekOpps ?? []).map(o=>o.replace("vs ","").replace("@ ","@")).join(" ");
                               return (
                                 <tr key={p.name} style={{borderTop:"1px solid #0d0f16"}}>
-                                  <td style={{fontSize:9,color:"#475569",padding:"3px 4px",whiteSpace:"nowrap"}}>{p.selected_position??"BN"}</td>
+                                  <td style={{fontSize:9,color:"#64748b",padding:"3px 4px",whiteSpace:"nowrap"}}>{displaySlot(p)}</td>
                                   <td style={{padding:"3px 4px"}}>
-                                    <div style={{fontSize:10,color:dim?"#475569":"#f1f5f9",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap",maxWidth:nameW}}>{p.name}</div>
+                                    <div style={{fontSize:10,color:dim?"#64748b":"#ffffff",fontWeight:dim?400:500,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap",maxWidth:nameW}}>{p.name}</div>
                                     <div style={{fontSize:8,color:"#475569"}}>{p.org} {opps && <span style={{color:"#64748b"}}>{opps}</span>}</div>
                                   </td>
                                   <td style={{...tdStyle(dim),fontSize:9,color:games==null?"#334155":isSP?(Math.round(games/5)>=2?"#22c55e":Math.round(games/5)===1?"#f59e0b":"#f87171"):(games>=5?"#22c55e":games>=3?"#f59e0b":"#f87171")}}>{dispG}</td>
