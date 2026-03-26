@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-25T20:51:43.268327",
+  "generated": "2026-03-26T01:39:03.506699",
   "league_key": "469.l.40214",
   "settings": {
     "league_key": "469.l.40214",
@@ -18,7 +18,7 @@
       "ERA",
       "WHIP"
     ],
-    "fetched_at": "2026-03-25T20:51:43.697787"
+    "fetched_at": "2026-03-26T01:39:03.885154"
   },
   "draft_results": [
     {
@@ -3316,7 +3316,7 @@
           "status": ""
         },
         {
-          "name": "Ranger Su\u00e1rez",
+          "name": "Ranger Suarez",
           "eligible": [],
           "selected_position": "BN",
           "status": ""
@@ -6043,6 +6043,9 @@
     "Brett Harris": [
       "3B"
     ],
+    "Kyle Karros": [
+      "3B"
+    ],
     "Alex Freeland": [
       "3B",
       "SS"
@@ -6050,10 +6053,10 @@
     "Anthony Rendon": [
       "3B"
     ],
-    "Anthony Seigler": [
+    "Nicky Lopez": [
       "3B"
     ],
-    "Nicky Lopez": [
+    "Anthony Seigler": [
       "3B"
     ],
     "Bryan Ramos": [
@@ -7873,7 +7876,7 @@
       "P",
       "SP"
     ],
-    "Ranger Su\u00e1rez": [
+    "Ranger Suarez": [
       "P",
       "SP"
     ],
@@ -10411,18 +10414,19 @@
     "Kyle Teel": "IL10",
     "Sean Murphy": "IL10",
     "Elias D\u00edaz": "NA",
-    "Mitch Garver": "NA",
     "Adrian Del Castillo": "IL10",
     "Riley Adams": "NA",
     "Korey Lee": "NA",
     "Braxton Fulford": "NA",
     "Tom\u00e1s Nido": "NA",
     "Luke Maile": "NA",
+    "Andrew Knizner": "NA",
     "Mickey Gasper": "NA",
     "Willie MacIver": "NA",
     "Christian Bethancourt": "NA",
     "Austin Barnes": "NA",
     "Ben Rortvedt": "NA",
+    "Garrett Stubbs": "NA",
     "Jhonny Pereda": "NA",
     "Austin Hedges": "DTD",
     "Jacob Stallings": "NA",
@@ -10531,7 +10535,7 @@
     "Triston Casas": "IL10",
     "Enmanuel Valdez": "NA",
     "Blaine Crim": "IL10",
-    "Will Wagner": "DTD",
+    "Will Wagner": "IL10",
     "Matt Mervis": "NA",
     "Cavan Biggio": "NA",
     "Tyler Locklear": "IL10",
@@ -10615,10 +10619,12 @@
     "Jon Berti": "NA",
     "Chris Taylor": "NA",
     "Cody Freeman": "IL10",
+    "Brett Wisely": "NA",
     "Tyler Wade": "NA",
     "Garrett Hampson": "NA",
     "Ronny Simon": "NA",
     "Tim Anderson": "NA",
+    "Leo Jim\u00e9nez": "NA",
     "Marco Luciano": "NA",
     "Vaughn Grissom": "IL10",
     "Braden Shewmake": "NA",
@@ -10714,7 +10720,7 @@
     "Devin Saltiban": "NA",
     "Edward Lantigua": "NA",
     "Hao-Yu Lee": "NA",
-    "Sung-Mun Song": "DTD",
+    "Sung-Mun Song": "IL10",
     "Termarr Johnson": "NA",
     "Jett Williams": "NA",
     "Franyerber Montilla": "NA",
@@ -10752,8 +10758,8 @@
     "Nacho Alvarez Jr.": "NA",
     "Brett Harris": "NA",
     "Anthony Rendon": "IL60",
-    "Anthony Seigler": "IL10",
     "Nicky Lopez": "NA",
+    "Anthony Seigler": "IL10",
     "Bryan Ramos": "NA",
     "Denzer Guzman": "NA",
     "Gage Workman": "NA",
@@ -10916,7 +10922,6 @@
     "Alex Verdugo": "NA",
     "Jesse Winker": "NA",
     "Colby Thomas": "NA",
-    "Austin Slater": "NA",
     "Drew Waters": "NA",
     "Dairon Blanco": "NA",
     "Justyn-Henry Malloy": "NA",
@@ -10935,7 +10940,7 @@
     "Matthew Lugo": "NA",
     "Travis Jankowski": "NA",
     "Will Brennan": "NA",
-    "Esteury Ruiz": "DTD",
+    "Esteury Ruiz": "IL10",
     "Nelson Vel\u00e1zquez": "NA",
     "Alan Roden": "NA",
     "George Valera": "IL10",
@@ -10943,7 +10948,6 @@
     "Blake Dunn": "NA",
     "MJ Melendez": "NA",
     "Dustin Harris": "NA",
-    "Everson Pereira": "DTD",
     "Grant McCray": "NA",
     "Rhylan Thomas": "NA",
     "Estuar Suero": "NA",
@@ -11058,7 +11062,7 @@
     "Spencer Strider": "IL15",
     "Merrill Kelly": "IL15",
     "Shane Bieber": "IL15",
-    "Joe Musgrove": "DTD",
+    "Joe Musgrove": "IL15",
     "Bryce Miller": "IL15",
     "Gerrit Cole": "IL15",
     "Logan Henderson": "NA",
@@ -11090,7 +11094,7 @@
     "Javier Assad": "NA",
     "Gavin Stone": "IL15",
     "Cody Bradford": "IL15",
-    "Yu Darvish": "DTD",
+    "Yu Darvish": "NA",
     "Wikelman Gonz\u00e1lez": "NA",
     "Kutter Crawford": "IL15",
     "Cristian Mena": "IL60",
@@ -11418,7 +11422,7 @@
     "Kirby Yates": "IL15",
     "Edwin Uceta": "IL15",
     "Emmanuel Clase": "NA",
-    "Jason Adam": "DTD",
+    "Jason Adam": "IL15",
     "Ronny Henriquez": "IL60",
     "Randy Rodr\u00edguez": "IL60",
     "Shelby Miller": "IL60",
@@ -11440,8 +11444,9 @@
     "Caleb Ferguson": "IL15",
     "Brock Stewart": "IL15",
     "A.J. Puk": "IL60",
+    "Chase Lee": "NA",
     "A.J. Minter": "IL15",
-    "Rob Zastryzny": "IL10",
+    "Rob Zastryzny": "IL15",
     "David Robertson": "NA",
     "Max Kranick": "NA",
     "Luinder Avila": "NA",
@@ -11462,20 +11467,22 @@
     "Jorge L\u00f3pez": "NA",
     "Cody Laweryson": "NA",
     "Andrew Chafin": "NA",
-    "Bryan Hoeing": "DTD",
+    "Bryan Hoeing": "IL15",
     "Daysbel Hern\u00e1ndez": "IL15",
     "Bryan Hudson": "NA",
     "Hunter Bigge": "NA",
+    "Jake Cousins": "NA",
     "Erasmo Ram\u00edrez": "NA",
     "Tyler Ferguson": "NA",
     "Dedniel N\u00fa\u00f1ez": "IL60",
     "Justin Wilson": "NA",
     "Ben Joyce": "IL15",
     "Chris Devenski": "NA",
-    "Yuki Matsui": "DTD",
+    "Yuki Matsui": "IL15",
     "Jayden Murray": "NA",
     "Spencer Bivens": "NA",
     "Jose Espada": "NA",
+    "Jackson Kowar": "NA",
     "Tommy Kahnle": "NA",
     "Keegan Thompson": "NA",
     "Luke Jackson": "NA",
@@ -11492,7 +11499,7 @@
     "Colin Selby": "IL60",
     "Brusdar Graterol": "IL15",
     "Jose Fermin": "NA",
-    "Danny Young": "NA",
+    "Danny Young": "IL15",
     "Drew Smith": "NA",
     "Jeff Criswell": "IL60",
     "Justin Hagenman": "IL60",
@@ -11533,7 +11540,6 @@
     "Alexander Alberto": "NA",
     "Josh White": "NA",
     "Blake Burkhalter": "NA",
-    "Anthony Nunez": "NA",
     "Robinson Ortiz": "NA",
     "Wen Hui Pan": "NA",
     "Trevor Martin": "NA",
@@ -11565,6 +11571,7 @@
     "Domingo Gonz\u00e1lez": "NA",
     "Kannon Kemp": "NA",
     "Grant Shepardson": "NA",
+    "Jimmy Joyce": "NA",
     "Hunter Cranton": "NA",
     "Jack Choate": "NA",
     "Aldrin Batista": "NA",

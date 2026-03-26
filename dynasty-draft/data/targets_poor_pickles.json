@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-25T20:51:42.927935",
+  "generated": "2026-03-26T01:39:03.158550",
   "count": 1026,
   "players": [
     {
@@ -11106,6 +11106,7 @@
     {
       "name": "Ranger Suarez",
       "eligible": [
+        "P",
         "SP"
       ],
       "org": "BOS",
@@ -12768,7 +12769,7 @@
         "ERA",
         "NSVH"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 60.0,
       "projStats": {
@@ -12798,7 +12799,7 @@
       "rostered": false,
       "owner": null,
       "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "yahoo_status": "IL15"
     },
     {
       "name": "Ryan Thompson",
@@ -19812,7 +19813,7 @@
         "W",
         "WHIP"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 158.9,
       "projStats": {
@@ -19843,7 +19844,7 @@
       "owner": "JP Licks",
       "selected_position": "BN",
       "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "yahoo_status": "IL15"
     },
     {
       "name": "Trevor Megill",
@@ -39366,7 +39367,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 48.0,
       "projStats": {
@@ -39396,7 +39397,7 @@
       "rostered": false,
       "owner": null,
       "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "yahoo_status": "IL15"
     },
     {
       "name": "Victor Caratini",
@@ -41462,7 +41463,7 @@
       "rostered": false,
       "owner": null,
       "scoreYahoo": null,
-      "yahoo_status": "IL10"
+      "yahoo_status": "IL15"
     },
     {
       "name": "Kyle Freeland",
@@ -45506,7 +45507,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 282,
       "score2026_neutral": 1.6,
@@ -45539,7 +45540,7 @@
       "rostered": false,
       "owner": null,
       "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "yahoo_status": "IL10"
     },
     {
       "name": "Edmundo Sosa",
@@ -49283,7 +49284,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 25.0,
       "projStats": {
@@ -49312,7 +49313,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Jon Gray",
@@ -52732,7 +52734,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 28.0,
       "projStats": {
@@ -52761,8 +52763,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Yerry De los Santos",
@@ -59525,8 +59526,7 @@
       "rostered": false,
       "owner": null,
       "fantraxProspectRank": 369,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Tommy Pham",
