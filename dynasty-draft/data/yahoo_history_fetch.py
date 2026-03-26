@@ -19,6 +19,15 @@ OUTPUT = Path(__file__).parent / "ownership_history.json"
 # All known season keys for our dynasty leagues
 LEAGUES = {
     "LXG": [
+        {"season": 2009, "key": "215.l.26614"},
+        {"season": 2010, "key": "238.l.153606"},
+        {"season": 2011, "key": "253.l.34980"},
+        {"season": 2012, "key": "268.l.30899"},
+        {"season": 2013, "key": "308.l.20590"},
+        {"season": 2014, "key": "328.l.274"},
+        {"season": 2015, "key": "346.l.81289"},
+        {"season": 2016, "key": "357.l.1332"},
+        {"season": 2017, "key": "370.l.22999"},
         {"season": 2018, "key": "378.l.7717"},
         {"season": 2019, "key": "388.l.3135"},
         {"season": 2020, "key": "398.l.18246"},
