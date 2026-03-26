@@ -1972,12 +1972,10 @@ export default function DraftAssistant({ config }) {
                   const RATE_CATS = new Set(["AVG","OBP","SLG","ERA","WHIP","K/9","BB/9"]);
                   const SLOT_ORDER = ["C","1B","2B","3B","SS","LF","CF","RF","OF","Util","SP","RP","P","BN","IL","IL10","IL15","IL60","NA"];
                   const posSort = s => { const i = SLOT_ORDER.indexOf(s); return i === -1 ? 99 : i; };
-                  const displaySlot = p => p.selected_position && !IL_SLOTS.has(p.selected_position) && p.selected_position !== "BN"
-                    ? p.selected_position : (p.eligible?.[0] ?? "?");
-                  const sorted = [...myYahooRoster].sort((a,b) => posSort(displaySlot(a)) - posSort(displaySlot(b)));
-                  const starters = sorted.filter(p => !IL_SLOTS.has(p.selected_position ?? ""));
-                  const bench    = [];
-                  const il       = sorted.filter(p => IL_SLOTS.has(p.selected_position ?? ""));
+                  const sorted = [...myYahooRoster].sort((a,b) => posSort(a.selected_position??"BN") - posSort(b.selected_position??"BN"));
+                  const starters = sorted.filter(p => p.selected_position && !IL_SLOTS.has(p.selected_position) && p.selected_position !== "BN");
+                  const bench    = sorted.filter(p => !p.selected_position || p.selected_position === "BN");
+                  const il       = sorted.filter(p => p.selected_position && IL_SLOTS.has(p.selected_position));
 
                   const playerScale = p => {
                     const isSP = p.eligible?.includes("SP") && !p.eligible?.every(e=>e==="RP");
@@ -2052,7 +2050,7 @@ export default function DraftAssistant({ config }) {
                               const opps = (sched?.thisWeekOpps ?? []).map(o=>o.replace("vs ","").replace("@ ","@")).join(" ");
                               return (
                                 <tr key={p.name} style={{borderTop:"1px solid #0d0f16"}}>
-                                  <td style={{fontSize:9,color:"#64748b",padding:"3px 4px",whiteSpace:"nowrap"}}>{displaySlot(p)}</td>
+                                  <td style={{fontSize:9,color:"#64748b",padding:"3px 4px",whiteSpace:"nowrap"}}>{p.selected_position??"BN"}</td>
                                   <td style={{padding:"3px 4px"}}>
                                     <div style={{fontSize:10,color:dim?"#64748b":"#ffffff",fontWeight:dim?400:500,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap",maxWidth:nameW}}>{p.name}</div>
                                     <div style={{fontSize:8,color:"#475569"}}>{p.org} {opps && <span style={{color:"#64748b"}}>{opps}</span>}</div>

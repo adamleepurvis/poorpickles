@@ -239,10 +239,23 @@ def sync_rosters(query, draft_results: list[dict] | None = None):
                         )
                     except Exception:
                         pass
+                    # Extract selected_position from yfpy player object.
+                    # Yahoo API nests it as selected_position.position (a dict/obj).
+                    sel_pos = "BN"
+                    try:
+                        sp = player.selected_position
+                        if isinstance(sp, dict):
+                            sel_pos = str(sp.get("position", "BN"))
+                        elif hasattr(sp, "position"):
+                            sel_pos = str(sp.position or "BN")
+                        elif isinstance(sp, str) and sp:
+                            sel_pos = sp
+                    except Exception:
+                        pass
                     players.append({
                         "name":     name,
                         "eligible": pos_list,
-                        "selected_position": "BN",
+                        "selected_position": sel_pos,
                         "status": str(getattr(player, "status", "") or ""),
                     })
                 # Sanity check: yfpy returns schedule garbage (["date","2026-03-25","0",...])
