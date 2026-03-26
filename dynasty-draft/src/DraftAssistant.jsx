@@ -2027,8 +2027,8 @@ export default function DraftAssistant({ config }) {
                     });
 
                     const nameW = 90, slotW = 26, schedW = 32, statW = 38;
-                    const thStyle = {fontSize:8,color:"#334155",textAlign:"right",padding:"2px 4px",fontWeight:400,letterSpacing:".06em",whiteSpace:"nowrap"};
-                    const tdStyle = (dim) => ({fontSize:10,color:dim?"#334155":"#e2e8f0",textAlign:"right",padding:"3px 4px",whiteSpace:"nowrap"});
+                    const thStyle = {fontSize:8,color:"#64748b",textAlign:"right",padding:"2px 4px",fontWeight:400,letterSpacing:".06em",whiteSpace:"nowrap"};
+                    const tdStyle = (dim) => ({fontSize:10,color:dim?"#475569":"#f1f5f9",textAlign:"right",padding:"3px 4px",whiteSpace:"nowrap"});
 
                     return (
                       <div style={{overflowX:"auto",marginBottom:10}}>
@@ -2052,8 +2052,8 @@ export default function DraftAssistant({ config }) {
                                 <tr key={p.name} style={{borderTop:"1px solid #0d0f16"}}>
                                   <td style={{fontSize:9,color:"#475569",padding:"3px 4px",whiteSpace:"nowrap"}}>{p.selected_position??"BN"}</td>
                                   <td style={{padding:"3px 4px"}}>
-                                    <div style={{fontSize:10,color:dim?"#334155":"#e2e8f0",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap",maxWidth:nameW}}>{p.name}</div>
-                                    <div style={{fontSize:8,color:"#334155"}}>{p.org} {opps && <span style={{color:"#475569"}}>{opps}</span>}</div>
+                                    <div style={{fontSize:10,color:dim?"#475569":"#f1f5f9",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap",maxWidth:nameW}}>{p.name}</div>
+                                    <div style={{fontSize:8,color:"#475569"}}>{p.org} {opps && <span style={{color:"#64748b"}}>{opps}</span>}</div>
                                   </td>
                                   <td style={{...tdStyle(dim),fontSize:9,color:games==null?"#334155":isSP?(Math.round(games/5)>=2?"#22c55e":Math.round(games/5)===1?"#f59e0b":"#f87171"):(games>=5?"#22c55e":games>=3?"#f59e0b":"#f87171")}}>{dispG}</td>
                                   {cats.map(c => {
