@@ -1,5 +1,15 @@
 {
   "LXG": {
+    "2010": {
+      "Toms River": ["Albert Pujols", "Evan Longoria", "Matt Wieters", "Carlos Quentin", "Kyle Blanks", "Tommy Hanson", "Neftali Feliz", "Cole Hamels", "J.A. Happ", "David Price", "Jimmy Rollins", "Lance Berkman", "Brett Anderson"],
+      "Poor Pickles": ["Ryan Braun", "Troy Tulowitzki", "Prince Fielder", "Justin Upton", "Dustin Pedroia", "Johan Santana", "Dan Haren", "Aramis Ramirez", "Jonathan Broxton", "Ben Zobrist", "Scott Kazmir", "Buster Posey", "Colby Rasmus"],
+      "JP Licks": ["Matt Kemp", "Ian Kinsler", "Carl Crawford", "Adrián González", "Mark Reynolds", "Jayson Werth", "Justin Verlander", "Josh Hamilton", "Hunter Pence", "Miguel Montero", "John Lackey", "Gavin Floyd", "Max Scherzer"],
+      "Dynasty": ["Matt Holliday", "Grady Sizemore", "Kevin Youkilis", "Jason Bay", "Justin Morneau", "Nick Markakis", "B.J. Upton", "Matt LaPorta", "Yovani Gallardo", "Jake Peavy", "Jered Weaver", "Edwin Jackson", "John Danks"],
+      "StickyBanditz": ["Alex Rodriguez", "Joe Mauer", "David Wright", "Jacoby Ellsbury", "Zack Greinke", "Robinson Canó", "Andrew McCutchen", "Billy Butler", "Adam Jones", "Clayton Kershaw", "Gordon Beckham", "Brian Matusz", "Chad Billingsley"],
+      "Nighthawks": ["Hanley Ramírez", "Chase Utley", "Roy Halladay", "Ryan Zimmerman", "Félix Hernández", "Curtis Granderson", "Adam Lind", "Adam Wainwright", "Nelson Cruz", "Josh Johnson", "Kendrys Morales", "Victor Martínez", "Matt Cain"],
+      "gamma's Team": ["Mark Teixeira", "Miguel Cabrera", "CC Sabathia", "Derek Jeter", "Brian McCann", "Aaron Hill", "Cliff Lee", "Carlos Lee", "Adam Dunn", "Jon Lester", "Manny Ramirez", "Matt Garza", "Brandon Webb"],
+      "Bay of Papi": ["Tim Lincecum", "Ryan Howard", "Joey Votto", "Ichiro Suzuki", "Pablo Sandoval", "Brandon Phillips", "Shin-Soo Choo", "José Reyes", "Ubaldo Jiménez", "Javier Vazquez", "Andre Ethier", "Josh Beckett", "Carlos Beltrán"]
+    },
     "2011": {
       "Bay of Papi": ["Joey Votto", "José Reyes", "Shin-Soo Choo", "Ubaldo Jiménez", "Alex Rios", "B.J. Upton", "Matt Cain", "Chris Young", "Mark Reynolds", "Corey Hart", "Clay Buchholz", "Desmond Jennings", "Johnny Cueto", "Rick Porcello", "Josh Beckett", "Ian Stewart", "Derek Holland", "Matt LaPorta"],
       "Poor Pickles": ["Troy Tulowitzki", "Ryan Braun", "Prince Fielder", "Justin Upton", "Carlos Marmol", "Aramis Ramirez", "Drew Stubbs", "Dan Haren", "Colby Rasmus", "Max Scherzer", "Casey McGehee", "Ian Kennedy", "Ted Lilly", "Jonathan Broxton", "Stephen Strasburg", "Johan Santana", "Aroldis Chapman", "David Ortiz"],
