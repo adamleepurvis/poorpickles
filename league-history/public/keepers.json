@@ -226,5 +226,21 @@
       "Team Underdog": ["Julio Rodríguez", "Ronald Acuña Jr.", "Corbin Carroll", "Francisco Lindor", "Will Smith", "Logan Gilbert", "Kyle Bradish", "Chase Burns", "Nick Lodolo", "Shohei Ohtani (Pitcher)"],
       "Toms River": ["Jazz Chisholm Jr.", "Wyatt Langford", "CJ Abrams", "Willson Contreras", "Alec Burleson", "Christian Walker", "Blake Snell", "Bubba Chandler", "MacKenzie Gore", "Andrew Painter"]
     }
+  },
+  "SouthOssetian": {
+    "2026": {
+      "Bobby Weed Jr": ["Bobby Witt Jr.", "Jazz Chisholm Jr.", "Cristopher Sánchez", "Edwin Díaz"],
+      "Dangerous Nights Crew": ["Gunnar Henderson", "Roman Anthony", "Yoshinobu Yamamoto", "Bryan Woo"],
+      "Magnum Kwandoms": ["Elly De La Cruz", "Josh Naylor", "Brice Turang", "Logan Gilbert"],
+      "Ryan Howard's $5 Footlong": ["Vladimir Guerrero Jr.", "Adley Rutschman", "Paul Skenes", "Hunter Brown"],
+      "Saggy Boys": ["Julio Rodríguez", "Pete Alonso", "CJ Abrams", "Chris Sale"],
+      "Scott's Strategic Realignment": ["Mookie Betts", "Shea Langeliers", "Tarik Skubal", "Garrett Crochet"],
+      "Wade Bogg's Next Beer": ["José Ramírez", "Francisco Lindor", "Nico Hoerner", "Freddy Peralta"],
+      "\uD83C\uDFDD\uFE0F Let\u2019s Get Tropical \uD83C\uDFDD\uFE0F": ["Juan Soto", "Junior Caminero", "Nick Kurtz", "James Wood"],
+      "\uD83C\uDF46I\u2019m Beaned Up Right Now\uD83C\uDF46": ["Ronald Acuña Jr.", "Jackson Chourio", "Vinnie Pasquantino", "Jackson Holliday"],
+      "\uD83C\uDFC5 Clutch Trey": ["Kyle Tucker", "Cal Raleigh", "Corbin Carroll", "Ketel Marte"],
+      "\uD83D\uDC36 Decoy Fan Club": ["Shohei Ohtani (Batter)", "Trea Turner", "Bryce Harper", "Yordan Alvarez"],
+      "\uD83E\uDDD1\u200D\u2696\uFE0F All Rise": ["Aaron Judge", "Fernando Tatis Jr.", "Kyle Schwarber", "Manny Machado"]
+    }
   }
 }
