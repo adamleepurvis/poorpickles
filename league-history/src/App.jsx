@@ -1266,6 +1266,114 @@ function TeamsTab({ data, activeLeague, keepers }) {
   )
 }
 
+// ─── computeRecords ─────────────────────────────────────────────────────────
+
+function computeRecords(data, leagueName, keepers) {
+  // mostDrafted: count how === 'drafted' per player (per-league if leagueName set, else all)
+  const draftedCount = {}   // playerName -> count
+  const tradedCount = {}    // playerName -> count
+  const teamsSet = {}       // playerName -> Set of distinct teams
+  const seasonsCount = {}   // playerName -> season count (for longestInLeague)
+  const keeperSeasons = {}  // playerName -> keeper season count
+  let firstEverDrafted = null // { playerName, season, team, round, pick, league }
+
+  for (const [playerName, leagues] of Object.entries(data)) {
+    for (const [lg, entries] of Object.entries(leagues)) {
+      if (leagueName && lg !== leagueName) continue
+
+      // mostDrafted
+      for (const e of entries) {
+        if (e.how === 'drafted') {
+          draftedCount[playerName] = (draftedCount[playerName] || 0) + 1
+          // firstEverDrafted
+          if (
+            firstEverDrafted === null ||
+            e.season < firstEverDrafted.season ||
+            (e.season === firstEverDrafted.season &&
+              ((e.round * 1000 + e.pick) < (firstEverDrafted.round * 1000 + firstEverDrafted.pick)))
+          ) {
+            firstEverDrafted = {
+              playerName,
+              season: e.season,
+              team: normTeam(e.team),
+              round: e.round,
+              pick: e.pick,
+              league: lg,
+            }
+          }
+        }
+        // mostTraded
+        if (e.how === 'trade') {
+          tradedCount[playerName] = (tradedCount[playerName] || 0) + 1
+        }
+        // mostTeams
+        if (e.team && e.how !== 'drop') {
+          if (!teamsSet[playerName]) teamsSet[playerName] = new Set()
+          teamsSet[playerName].add(normTeam(e.team))
+        }
+      }
+
+      // longestInLeague: count seasons
+      const seasons = buildPlayerSeasons(entries, playerName, lg, keepers)
+      if (seasons.length > 0) {
+        const prev = seasonsCount[playerName]
+        if (!prev || seasons.length > prev.count) {
+          seasonsCount[playerName] = {
+            count: seasons.length,
+            first: seasons[0].season,
+            last: seasons[seasons.length - 1].season,
+            league: lg,
+          }
+        }
+        // mostKeeperSeasons
+        const kCount = seasons.filter(s => s.kept).length
+        if (kCount > 0) {
+          const prevK = keeperSeasons[playerName]
+          if (!prevK || kCount > prevK.count) {
+            keeperSeasons[playerName] = { count: kCount, league: lg }
+          }
+        }
+      }
+    }
+  }
+
+  // Find maximums
+  function maxEntry(obj, keyFn) {
+    let best = null, bestVal = -1
+    for (const [k, v] of Object.entries(obj)) {
+      const val = keyFn ? keyFn(v) : v
+      if (val > bestVal) { bestVal = val; best = { key: k, val: v } }
+    }
+    return best
+  }
+
+  const md = maxEntry(draftedCount)
+  const mt = maxEntry(tradedCount)
+  const mTeams = maxEntry(teamsSet, s => s.size)
+  const mTenured = maxEntry(seasonsCount, s => s.count)
+  const mKeeper = maxEntry(keeperSeasons, s => s.count)
+
+  return {
+    mostDrafted: md ? { playerName: md.key, count: md.val, league: leagueName || 'All' } : null,
+    mostTraded: mt ? { playerName: mt.key, count: mt.val, league: leagueName || 'All' } : null,
+    mostTeams: mTeams ? {
+      playerName: mTeams.key,
+      count: mTeams.val.size,
+      teams: Array.from(mTeams.val).join(', '),
+      league: leagueName || 'All',
+    } : null,
+    longestInLeague: mTenured ? {
+      playerName: mTenured.key,
+      seasons: mTenured.val.count,
+      first: mTenured.val.first,
+      last: mTenured.val.last,
+      league: mTenured.val.league,
+    } : null,
+    firstEverDrafted,
+    mostKeeperSeasons: mKeeper ? { playerName: mKeeper.key, count: mKeeper.val.count, league: mKeeper.val.league } : null,
+  }
+}
+
 // ─── Leaderboard Tab ────────────────────────────────────────────────────────
 
 function LeaderboardTab({ data, activeLeague, keepers }) {
@@ -1341,11 +1449,53 @@ function LeaderboardTab({ data, activeLeague, keepers }) {
 
   const rows = sub === 'alltime' ? topAllTime : sub === 'active' ? topActive : topTenured
 
+  const records = useMemo(() => {
+    if (sub !== 'records') return null
+    return computeRecords(data, leagueName, keepers)
+  }, [sub, data, leagueName, keepers])
+
   const subBtns = [
     ['alltime', '🏆 All-Time Streaks'],
     ['active', '🔥 Active Streaks'],
     ['tenured', '📅 Longest Tenured'],
+    ['records', '📋 Records'],
   ]
+
+  const RECORD_CARDS = records ? [
+    {
+      label: 'Most Drafted',
+      rec: records.mostDrafted,
+      stat: r => `drafted ${r.count} time${r.count !== 1 ? 's' : ''}`,
+    },
+    {
+      label: 'Most Traded',
+      rec: records.mostTraded,
+      stat: r => `traded ${r.count} time${r.count !== 1 ? 's' : ''}`,
+    },
+    {
+      label: 'Most Teams Owned By',
+      rec: records.mostTeams,
+      stat: r => `${r.count} distinct team${r.count !== 1 ? 's' : ''}`,
+      sub: r => r.teams,
+    },
+    {
+      label: 'Longest in League',
+      rec: records.longestInLeague,
+      stat: r => `${r.seasons} season${r.seasons !== 1 ? 's' : ''}`,
+      sub: r => `${r.first}–${r.last}`,
+    },
+    {
+      label: 'First Ever Drafted',
+      rec: records.firstEverDrafted,
+      stat: r => `${r.season} · R${r.round}P${r.pick}`,
+      sub: r => `by ${r.team}`,
+    },
+    {
+      label: 'Most Keeper Seasons',
+      rec: records.mostKeeperSeasons,
+      stat: r => `kept ${r.count} season${r.count !== 1 ? 's' : ''}`,
+    },
+  ] : []
 
   return (
     <div>
@@ -1363,7 +1513,25 @@ function LeaderboardTab({ data, activeLeague, keepers }) {
         ))}
       </div>
 
-      {rows.length === 0 ? (
+      {sub === 'records' ? (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 12 }}>
+          {RECORD_CARDS.map(({ label, rec, stat, sub: subLine }) => (
+            <div key={label} style={{ background: '#0d0f16', border: '1px solid #1e293b', borderRadius: 8, padding: 16 }}>
+              <div style={{ color: '#64748b', fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 8 }}>{label}</div>
+              {rec ? (
+                <>
+                  <div style={{ color: '#84cc16', fontWeight: 700, fontSize: 18, marginBottom: 4 }}>{rec.playerName}</div>
+                  <div style={{ color: '#f1f5f9', fontSize: 13 }}>{stat(rec)}</div>
+                  {subLine && <div style={{ color: '#64748b', fontSize: 12, marginTop: 2 }}>{subLine(rec)}</div>}
+                  <div style={{ color: '#475569', fontSize: 11, marginTop: 6 }}>{rec.league}</div>
+                </>
+              ) : (
+                <div style={{ color: '#475569', fontSize: 13 }}>No data</div>
+              )}
+            </div>
+          ))}
+        </div>
+      ) : rows.length === 0 ? (
         <div style={{ color: '#475569', textAlign: 'center', padding: 40 }}>No data</div>
       ) : (
         <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
@@ -1415,6 +1583,117 @@ function LeaderboardTab({ data, activeLeague, keepers }) {
             })}
           </tbody>
         </table>
+      )}
+    </div>
+  )
+}
+
+// ─── H2H Tab ────────────────────────────────────────────────────────────────
+
+function H2HTab({ data, activeLeague }) {
+  const leagueName = activeLeague === 'All' ? null : activeLeague
+
+  const allLeagues = useMemo(() => {
+    const s = new Set()
+    for (const leagues of Object.values(data)) for (const l of Object.keys(leagues)) s.add(l)
+    return Array.from(s).sort()
+  }, [data])
+
+  const [selectedLeagueLocal, setSelectedLeagueLocal] = useState(allLeagues[0] || '')
+  const selectedLeague = leagueName || selectedLeagueLocal
+
+  const teamNames = useMemo(() => getTeamsInLeague(data, selectedLeague), [data, selectedLeague])
+
+  const [teamA, setTeamA] = useState('')
+  const [teamB, setTeamB] = useState('')
+
+  // All trades between teamA and teamB
+  const h2hTrades = useMemo(() => {
+    if (!teamA || !teamB) return []
+    const allTxs = buildTransactions(data)
+    return allTxs
+      .map(tx => ({
+        ...tx,
+        tradeItems: tx.items.filter(i => {
+          if (i.entry.how !== 'trade') return false
+          if (leagueName && tx.league !== leagueName) return false
+          if (!leagueName && tx.league !== selectedLeague) return false
+          const to = normTeam(i.entry.team)
+          const from = normTeam(i.entry.from_team)
+          return (to === teamA && from === teamB) || (to === teamB && from === teamA)
+        }),
+      }))
+      .filter(tx => tx.tradeItems.length > 0)
+  }, [data, teamA, teamB, leagueName, selectedLeague])
+
+  const tradeCount = h2hTrades.length
+  const playerCount = h2hTrades.reduce((sum, tx) => sum + tx.tradeItems.length, 0)
+
+  function renderH2HTrade(tx) {
+    const receivedA = tx.tradeItems.filter(i => normTeam(i.entry.team) === teamA)
+    const receivedB = tx.tradeItems.filter(i => normTeam(i.entry.team) === teamB)
+    const season = tx.tradeItems[0]?.entry.season
+
+    return (
+      <div key={`${tx.ts}_${tx.league}`} style={S.txRow}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 10, flexWrap: 'wrap', gap: 4 }}>
+          <span style={S.txDate}>{tx.ts ? formatDate(tx.ts) : 'Unknown date'} · <span style={{ color: '#84cc16' }}>{tx.league}</span></span>
+          {season && <span style={S.muted}>{season}</span>}
+        </div>
+        <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+          {[{ team: teamA, items: receivedA }, { team: teamB, items: receivedB }].map(({ team, items }) => (
+            <div key={team} style={{ flex: 1, minWidth: 140 }}>
+              <div style={{ color: '#84cc16', fontWeight: 700, fontSize: 12, marginBottom: 6 }}>{team} received</div>
+              {items.length === 0
+                ? <div style={{ color: '#475569', fontSize: 12 }}>—</div>
+                : items.map(({ playerName, entry }) => (
+                  <div key={playerName} style={{ fontSize: 13, color: '#f1f5f9', padding: '3px 0', borderBottom: '1px solid #1a2133' }}>
+                    {playerName}
+                    {entry.from_team && <div style={{ color: '#475569', fontSize: 11 }}>from {normTeam(entry.from_team)}</div>}
+                  </div>
+                ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div>
+      {activeLeague === 'All' && (
+        <div style={{ ...S.filterRow, marginBottom: 12 }}>
+          <select style={S.select} value={selectedLeagueLocal} onChange={e => { setSelectedLeagueLocal(e.target.value); setTeamA(''); setTeamB('') }}>
+            {allLeagues.map(l => <option key={l} value={l}>{l}</option>)}
+          </select>
+        </div>
+      )}
+      <div style={{ ...S.filterRow, marginBottom: 16 }}>
+        <select style={S.select} value={teamA} onChange={e => setTeamA(e.target.value)}>
+          <option value="">Team A...</option>
+          {teamNames.map(t => <option key={t} value={t}>{t}</option>)}
+        </select>
+        <span style={{ color: '#475569', fontWeight: 700 }}>vs</span>
+        <select style={S.select} value={teamB} onChange={e => setTeamB(e.target.value)}>
+          <option value="">Team B...</option>
+          {teamNames.map(t => <option key={t} value={t}>{t}</option>)}
+        </select>
+      </div>
+
+      {teamA && teamB && (
+        <div style={{ marginBottom: 12, color: '#64748b', fontSize: 13 }}>
+          {tradeCount === 0
+            ? 'No trades found between these teams.'
+            : `${tradeCount} trade${tradeCount !== 1 ? 's' : ''} · ${playerCount} player${playerCount !== 1 ? 's' : ''} exchanged`}
+        </div>
+      )}
+
+      {!teamA || !teamB ? (
+        <div style={{ color: '#475569', marginTop: 40, textAlign: 'center' }}>Select two teams to see their trade history</div>
+      ) : (
+        <div style={{ maxHeight: 'calc(100vh - 270px)', overflowY: 'auto', paddingRight: 4 }}>
+          {h2hTrades.map(tx => renderH2HTrade(tx))}
+        </div>
       )}
     </div>
   )
@@ -1511,9 +1790,9 @@ export default function App() {
       </div>
 
       <div style={S.tabs}>
-        {['players', 'transactions', 'trades', 'teams', 'lineage', 'leaderboard'].map(t => (
+        {['players', 'transactions', 'trades', 'teams', 'lineage', 'leaderboard', 'h2h'].map(t => (
           <button key={t} style={S.tab(tab === t)} onClick={() => setTab(t)}>
-            {t.charAt(0).toUpperCase() + t.slice(1)}
+            {t === 'h2h' ? 'H2H' : t.charAt(0).toUpperCase() + t.slice(1)}
           </button>
         ))}
       </div>
@@ -1532,6 +1811,7 @@ export default function App() {
       {filteredData && tab === 'teams' && <TeamsTab data={filteredData} activeLeague={activeLeague} keepers={keepers} />}
       {filteredData && tab === 'lineage' && <LineageTab data={filteredData} activeLeague={activeLeague} />}
       {filteredData && tab === 'leaderboard' && <LeaderboardTab data={filteredData} activeLeague={activeLeague} keepers={keepers} />}
+      {filteredData && tab === 'h2h' && <H2HTab data={filteredData} activeLeague={activeLeague} />}
     </div>
   )
 }
