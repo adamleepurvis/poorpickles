@@ -252,16 +252,17 @@ const FRANCHISE_ALIASES = {
   "T-Baggers": "StickyBanditz",
   "Sticky Bandits": "StickyBanditz",
   // Hideo Lobo
+  "Fieldgoal Kickers": "Hideo Lobo",
+  "Alcantara's Assasins": "Hideo Lobo",
   "Blood and Semien": "Hideo Lobo",
   "-71.14° to Freedom": "Hideo Lobo",
   "Close Shave Barbasol": "Hideo Lobo",
   "The Lusty Lobos": "Hideo Lobo",
   // Dead Horses
   "Headshavers": "Dead Horses",
-  // Miggy's Niggys
-  "Rice & Beans": "Miggy's Niggys",
-  // Alcantara's Assasins
-  "Fieldgoal Kickers": "Alcantara's Assasins",
+  // gamma's Team
+  "Rice & Beans": "gamma's Team",
+  "Miggy's Niggys": "gamma's Team",
 }
 
 function normTeam(name) {
@@ -825,6 +826,7 @@ function LineageTab({ data, activeLeague }) {
 
   const [selectedLeagueLocal, setSelectedLeagueLocal] = useState(leagues[0] || '')
   const selectedLeague = activeLeague !== 'All' ? activeLeague : selectedLeagueLocal
+  const [tooltip, setTooltip] = useState(null) // { text, x, y }
 
   const { seasons, franchises } = useMemo(
     () => buildFranchiseLineage(data, selectedLeague),
@@ -887,11 +889,14 @@ function LineageTab({ data, activeLeague }) {
                 {runs.map((run, i) => {
                   const spanYears = run.to - run.from + 1
                   const isCurrentName = run.name === canonical
-                  const isLast = i === runs.length - 1
                   return (
                     <div
                       key={i}
-                      title={`${run.name} (${run.from}${run.from !== run.to ? `–${run.to}` : ''})`}
+                      onMouseEnter={e => {
+                        const rect = e.currentTarget.getBoundingClientRect()
+                        setTooltip({ text: `${run.name}  ${run.from}${run.from !== run.to ? `–${run.to}` : ''}`, x: rect.left + rect.width / 2, y: rect.top - 8 })
+                      }}
+                      onMouseLeave={() => setTooltip(null)}
                       style={{
                         width: spanYears * 40 - 2,
                         marginRight: 2,
@@ -919,8 +924,9 @@ function LineageTab({ data, activeLeague }) {
                         textOverflow: 'ellipsis',
                         padding: '0 4px',
                         maxWidth: spanYears * 40 - 8,
+                        pointerEvents: 'none',
                       }}>
-                        {spanYears > 1 ? run.name : ''}
+                        {run.name}
                       </span>
                     </div>
                   )
@@ -940,8 +946,29 @@ function LineageTab({ data, activeLeague }) {
           <div style={{ width: 16, height: 10, borderRadius: 2, background: 'rgba(148,163,184,0.1)', border: '1px solid #1e293b' }} />
           Previous name
         </div>
-        <div style={{ fontSize: 11, color: '#475569' }}>Hover a segment to see the name</div>
       </div>
+
+      {/* Floating tooltip */}
+      {tooltip && (
+        <div style={{
+          position: 'fixed',
+          left: tooltip.x,
+          top: tooltip.y,
+          transform: 'translate(-50%, -100%)',
+          background: '#1e293b',
+          color: '#f1f5f9',
+          fontSize: 12,
+          fontWeight: 600,
+          padding: '5px 10px',
+          borderRadius: 6,
+          border: '1px solid #334155',
+          pointerEvents: 'none',
+          whiteSpace: 'nowrap',
+          zIndex: 1000,
+        }}>
+          {tooltip.text}
+        </div>
+      )}
     </div>
   )
 }
