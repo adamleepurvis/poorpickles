@@ -264,6 +264,12 @@ const FRANCHISE_ALIASES = {
   // gamma's Team
   "Rice & Beans": "gamma's Team",
   "Miggy's Niggys": "gamma's Team",
+  // SouthOssetian franchises
+  "ALP": "Dangerous Nights Crew",
+  "🎯 David Tabor's Aim": "🍆I'm Beaned Up Right Now🍆",
+  "💸 Ohtani's Best Bet": "🐶 Decoy Fan Club",
+  "🌟 Edward's TeamToBeNamedLater": "🏝️ Let's Get Tropical 🏝️",
+  "Hot Dog Heaven": "Magnum Kwandoms",
 }
 
 function normTeam(name) {
