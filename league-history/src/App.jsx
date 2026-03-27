@@ -244,9 +244,12 @@ const FRANCHISE_ALIASES = {
   "Jeter Sucks A-Rod": "Poor Pickles",
   "Pickle Riiiiiiick": "Poor Pickles",
   // Toms River
+  "Headshavers": "Toms River",
+  "Dead Horses": "Toms River",
   "Tom's Wondrous Team": "Toms River",
   "PC Principal": "Toms River",
   // StickyBanditz
+  "Badnews Bears": "StickyBanditz",
   "PaigeVanZant#1Fan": "StickyBanditz",
   "Space Jam": "StickyBanditz",
   "T-Baggers": "StickyBanditz",
@@ -258,8 +261,6 @@ const FRANCHISE_ALIASES = {
   "-71.14° to Freedom": "Hideo Lobo",
   "Close Shave Barbasol": "Hideo Lobo",
   "The Lusty Lobos": "Hideo Lobo",
-  // Dead Horses
-  "Headshavers": "Dead Horses",
   // gamma's Team
   "Rice & Beans": "gamma's Team",
   "Miggy's Niggys": "gamma's Team",
