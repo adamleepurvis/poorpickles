@@ -1272,6 +1272,7 @@ function computeRecords(data, leagueName, keepers) {
   // mostDrafted: count how === 'drafted' per player (per-league if leagueName set, else all)
   const draftedCount = {}   // playerName -> count
   const tradedCount = {}    // playerName -> count
+  const txCount = {}        // playerName -> total transaction count (non-draft)
   const teamsSet = {}       // playerName -> Set of distinct teams
   const seasonsCount = {}   // playerName -> season count (for longestInLeague)
   const keeperSeasons = {}  // playerName -> keeper season count
@@ -1305,6 +1306,10 @@ function computeRecords(data, leagueName, keepers) {
         // mostTraded
         if (e.how === 'trade') {
           tradedCount[playerName] = (tradedCount[playerName] || 0) + 1
+        }
+        // mostTransactions
+        if (e.how !== 'drafted') {
+          txCount[playerName] = (txCount[playerName] || 0) + 1
         }
         // mostTeams
         if (e.team && e.how !== 'drop') {
@@ -1349,6 +1354,7 @@ function computeRecords(data, leagueName, keepers) {
 
   const md = maxEntry(draftedCount)
   const mt = maxEntry(tradedCount)
+  const mTx = maxEntry(txCount)
   const mTeams = maxEntry(teamsSet, s => s.size)
   const mTenured = maxEntry(seasonsCount, s => s.count)
   const mKeeper = maxEntry(keeperSeasons, s => s.count)
@@ -1371,6 +1377,7 @@ function computeRecords(data, leagueName, keepers) {
     } : null,
     firstEverDrafted,
     mostKeeperSeasons: mKeeper ? { playerName: mKeeper.key, count: mKeeper.val.count, league: mKeeper.val.league } : null,
+    mostTransactions: mTx ? { playerName: mTx.key, count: mTx.val, league: leagueName || 'All' } : null,
   }
 }
 
@@ -1462,6 +1469,11 @@ function LeaderboardTab({ data, activeLeague, keepers }) {
   ]
 
   const RECORD_CARDS = records ? [
+    {
+      label: 'Most Transactions',
+      rec: records.mostTransactions,
+      stat: r => `${r.count} transaction${r.count !== 1 ? 's' : ''}`,
+    },
     {
       label: 'Most Traded',
       rec: records.mostTraded,
