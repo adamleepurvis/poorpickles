@@ -1,5 +1,17 @@
 {
   "LXG": {
+    "2012": {
+      "Team Underdog": ["Matt Kemp", "Mark Teixeira", "Hunter Pence", "Chase Utley", "Howie Kendrick", "Miguel Montero", "Jayson Werth", "Justin Morneau", "Tim Lincecum", "Matt Moore", "Cory Luebke", "Ben Zobrist", "Shelby Miller"],
+      "Bay of Papi": ["Joey Votto", "José Reyes", "Desmond Jennings", "Mike Napoli", "Shin-Soo Choo", "Corey Hart", "Ike Davis", "Bryce Harper", "Matt Cain", "Josh Beckett", "Johnny Cueto", "Ubaldo Jiménez", "Clay Buchholz"],
+      "Toms River": ["Albert Pujols", "José Bautista", "Hanley Ramírez", "Alex Gordon", "Matt Wieters", "Adam Dunn", "Gordon Beckham", "Cole Hamels", "David Price", "Daniel Hudson", "Tommy Hanson", "Adam Wainwright", "Neftali Feliz"],
+      "Dynasty": ["Adrián González", "Matt Holliday", "Pablo Sandoval", "Brandon Phillips", "Michael Morse", "Asdrúbal Cabrera", "Ryan Howard", "Jered Weaver", "James Shields", "Jordan Zimmermann", "Jeremy Hellickson", "Alexi Ogando", "Andre Ethier"],
+      "Hideo Lobo": ["Jacoby Ellsbury", "Dustin Pedroia", "David Wright", "Nelson Cruz", "Buster Posey", "Ichiro Suzuki", "David Freese", "Stephen Drew", "Carlos Lee", "Roy Halladay", "Matt Garza", "Ricky Romero", "Gio González"],
+      "gamma's Team": ["Miguel Cabrera", "Adrián Béltre", "Dan Uggla", "Brian McCann", "Lance Berkman", "Melky Cabrera", "Carlos Quentin", "Cliff Lee", "CC Sabathia", "Jon Lester", "C.J. Wilson", "Michael Pineda", "Jose Valverde"],
+      "Poor Pickles": ["Troy Tulowitzki", "Justin Upton", "Prince Fielder", "Ryan Braun", "Eric Hosmer", "Adam Jones", "Alex Avila", "Mike Moustakas", "Yonder Alonso", "Dan Haren", "Stephen Strasburg", "Ian Kennedy", "Brandon Beachy"],
+      "StickyBanditz": ["Robinson Canó", "Giancarlo Stanton", "Andrew McCutchen", "Starlin Castro", "Alex Rodriguez", "Brett Lawrie", "Jay Bruce", "Joe Mauer", "Billy Butler", "Jesus Montero", "Mike Trout", "Clayton Kershaw", "Zack Greinke"],
+      "Nighthawks": ["Carlos González", "Evan Longoria", "Curtis Granderson", "Ryan Zimmerman", "Carlos Santana", "Rickie Weeks", "Jason Heyward", "Paul Goldschmidt", "Dee Strange-Gordon", "Félix Hernández", "Madison Bumgarner", "Josh Johnson", "Mat Latos"],
+      "JP Licks": ["Ian Kinsler", "Josh Hamilton", "Elvis Andrus", "Kevin Youkilis", "Shane Victorino", "Carl Crawford", "Carlos Beltrán", "Freddie Freeman", "Nick Markakis", "Domonic Brown", "Justin Verlander", "Yovani Gallardo", "Tim Hudson"]
+    },
     "2013": {
       "JP Licks": ["Josh Hamilton", "Ian Kinsler", "Freddie Freeman", "Elvis Andrus", "Will Middlebrooks", "Carl Crawford", "Nick Markakis", "Shane Victorino", "Carlos Beltrán", "Alexei Ramirez", "Todd Frazier", "Marco Scutaro", "Tim Hudson", "Justin Verlander", "Yovani Gallardo", "Matt Harrison", "Jacob Turner"],
       "Bay of Papi": ["Joey Votto", "Bryce Harper", "José Reyes", "Chase Headley", "Matt Cain", "Ben Zobrist", "Desmond Jennings", "Yu Darvish", "Aroldis Chapman", "Ike Davis", "Corey Hart", "Shin-Soo Choo", "Jeremy Hellickson", "Clay Buchholz", "Mike Napoli", "Gerrit Cole", "Colby Rasmus"],
