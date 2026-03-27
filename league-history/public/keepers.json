@@ -1,5 +1,33 @@
 {
   "LXG": {
+    "2022": {
+      "JP Licks": ["Austin Riley", "Byron Buxton", "Javier Báez", "Jazz Chisholm Jr.", "Austin Meadows", "Adley Rutschman", "Marco Luciano", "Brennen Davis", "Zac Gallen", "Dustin May"],
+      "Bay of Papi": ["Bo Bichette", "Mike Trout", "Yordan Alvarez", "Manny Machado", "Paul Goldschmidt", "Ketel Marte", "Julio Rodríguez", "Zack Wheeler", "Lucas Giolito", "Sandy Alcantara"],
+      "Dynasty": ["Rafael Devers", "Xander Bogaerts", "Teoscar Hernández", "Cedric Mullins", "Salvador Perez", "Pete Alonso", "Cody Bellinger", "Spencer Torkelson", "Jacob deGrom", "Jack Flaherty"],
+      "gamma's Team": ["Vladimir Guerrero Jr.", "Starling Marte", "Jarred Kelenic", "Ke'Bryan Hayes", "Oneil Cruz", "Triston Casas", "Francisco Alvarez", "Jasson Domínguez", "Anthony Volpe", "Freddy Peralta"],
+      "Hideo Lobo": ["Shohei Ohtani (Batter)", "Marcus Semien", "J.D. Martinez", "George Springer", "Adalberto Mondesi", "Jonathan India", "Lance Lynn", "Chris Sale", "Yu Darvish", "Clayton Kershaw"],
+      "Loch Neskie Monsters": ["José Ramírez", "Trevor Story", "Jose Altuve", "Brandon Lowe", "J.T. Realmuto", "Riley Greene", "CJ Abrams", "Aaron Nola", "Kevin Gausman", "Joe Musgrove"],
+      "Nighthawks": ["Fernando Tatis Jr.", "Juan Soto", "Kyle Tucker", "Bryce Harper", "Freddie Freeman", "Eloy Jiménez", "Bobby Witt Jr.", "Julio Urías", "Logan Webb", "Alek Manoah"],
+      "Poor Pickles": ["Luis Robert Jr.", "Tim Anderson", "Whit Merrifield", "Wander Franco", "Nolan Arenado", "Tyler O'Neill", "Bryan Reynolds", "Max Scherzer", "Brandon Woodruff", "Robbie Ray"],
+      "Snipe City Danglers": ["Trea Turner", "Matt Olson", "Nick Castellanos", "Carlos Correa", "Alex Verdugo", "Gerrit Cole", "Walker Buehler", "Luis Castillo", "José Berríos", "Tyler Glasnow"],
+      "StickyBanditz": ["Mookie Betts", "Ozzie Albies", "Aaron Judge", "Corey Seager", "Will Smith", "Jorge Polanco", "Ryan Mountcastle", "Adolis García", "Casey Mize", "Sixto Sánchez"],
+      "Team Underdog": ["Ronald Acuña Jr.", "Francisco Lindor", "Alex Bregman", "Christian Yelich", "Jesse Winker", "Keibert Ruiz", "Corbin Burnes", "Shane Bieber", "Max Fried", "Carlos Rodón"],
+      "Toms River": ["Randy Arozarena", "José Abreu", "Giancarlo Stanton", "Kris Bryant", "Dansby Swanson", "Gleyber Torres", "Ian Anderson", "Lance McCullers Jr.", "Luis Garcia", "MacKenzie Gore"]
+    },
+    "2023": {
+      "Dynasty": ["Pete Alonso", "Bobby Witt Jr.", "Randy Arozarena", "Cedric Mullins", "Jazz Chisholm Jr.", "Ozzie Albies", "Teoscar Hernández", "Jake McCarthy", "Steven Kwan", "William Contreras", "Jacob deGrom", "Dylan Cease"],
+      "Bay of Papi": ["Julio Rodríguez", "Yordan Alvarez", "Mookie Betts", "Manny Machado", "Paul Goldschmidt", "Xander Bogaerts", "Will Smith", "Vinnie Pasquantino", "Sandy Alcantara", "Zack Wheeler", "Zac Gallen", "Logan Gilbert"],
+      "gamma's Team": ["Vladimir Guerrero Jr.", "Oneil Cruz", "Adley Rutschman", "Triston Casas", "Jarred Kelenic", "Francisco Alvarez", "Jasson Domínguez", "Anthony Volpe", "Justin Verlander", "Shohei Ohtani (Pitcher)", "Alek Manoah", "Triston McKenzie"],
+      "Hideo Lobo": ["Shohei Ohtani (Batter)", "Marcus Semien", "Kyle Schwarber", "George Springer", "Giancarlo Stanton", "Jeff McNeil", "Alec Bohm", "Nolan Gorman", "Clayton Kershaw", "Blake Snell", "Lance Lynn", "Chris Sale"],
+      "Loch Neskie Monsters": ["José Ramírez", "J.T. Realmuto", "Byron Buxton", "Jeremy Peña", "Ke'Bryan Hayes", "Riley Greene", "Josh Jung", "Elly De La Cruz", "Aaron Nola", "Kevin Gausman", "Joe Musgrove", "Tony Gonsolin"],
+      "Nighthawks": ["Juan Soto", "Freddie Freeman", "Bo Bichette", "Fernando Tatis Jr.", "Austin Riley", "Jose Altuve", "Michael Harris II", "Eloy Jiménez", "Salvador Perez", "Bryce Harper", "Carlos Rodón", "Kyle Wright"],
+      "JP Licks": ["Luis Robert Jr.", "Willy Adames", "Nathaniel Lowe", "Alejandro Kirk", "Andrew Vaughn", "Trevor Story", "Miguel Vargas", "Julio Urías", "Shane McClanahan", "Logan Webb", "Dustin May", "Shane Baz"],
+      "Poor Pickles": ["Kyle Tucker", "Nolan Arenado", "Tim Anderson", "Bryan Reynolds", "Tyler O'Neill", "Wander Franco", "Vaughn Grissom", "Jackson Chourio", "Brandon Woodruff", "Max Scherzer", "Framber Valdez", "Robbie Ray"],
+      "Snipe City Danglers": ["Trea Turner", "Matt Olson", "Seiya Suzuki", "Willson Contreras", "Carlos Correa", "Nick Castellanos", "Alex Verdugo", "Gerrit Cole", "Luis Castillo", "Tyler Glasnow", "José Berríos", "Walker Buehler"],
+      "StickyBanditz": ["Aaron Judge", "Rafael Devers", "Mike Trout", "Corey Seager", "Andrés Giménez", "Esteury Ruiz", "Yu Darvish", "Nestor Cortes", "Freddy Peralta", "Lucas Giolito", "Sonny Gray", "Trevor Bauer"],
+      "Team Underdog": ["Ronald Acuña Jr.", "Francisco Lindor", "Alex Bregman", "Corbin Carroll", "Gunnar Henderson", "Tyler Stephenson", "Corbin Burnes", "Spencer Strider", "Edwin Díaz", "Shane Bieber", "Max Fried", "George Kirby"],
+      "Toms River": ["Daulton Varsho", "Dansby Swanson", "José Abreu", "Kris Bryant", "Jordan Walker", "CJ Abrams", "Spencer Torkelson", "Cristian Javier", "Grayson Rodriguez", "Luis Garcia", "Roansy Contreras", "MacKenzie Gore"]
+    },
     "2024": {
       "Dynasty": ["Bobby Witt Jr.", "Ozzie Albies", "Pete Alonso", "Matt McLain", "William Contreras", "Logan Webb"],
       "Bay of Papi": ["Mookie Betts", "Freddie Freeman", "Fernando Tatis Jr.", "Yordan Alvarez", "Manny Machado", "Zack Wheeler"],

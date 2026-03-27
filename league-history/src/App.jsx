@@ -238,7 +238,7 @@ const FRANCHISE_ALIASES = {
   "Newton Figs": "JP Licks",
   "Somerville Union": "JP Licks",
   "Paw Paw Tunnel of JP": "JP Licks",
-  "Hoo Doo u love": "JP Licks",
+  "Hoo Doo u love": "StickyBanditz",
   // Poor Pickles
   "Jeter Sucks A-ROD": "Poor Pickles",
   "Jeter Sucks A-Rod": "Poor Pickles",
