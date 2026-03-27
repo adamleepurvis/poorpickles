@@ -1266,6 +1266,154 @@ function TeamsTab({ data, activeLeague, keepers }) {
   )
 }
 
+// ─── Leaderboard Tab ────────────────────────────────────────────────────────
+
+function LeaderboardTab({ data, activeLeague, keepers }) {
+  const leagueName = activeLeague === 'All' ? null : activeLeague
+  const [sub, setSub] = useState('alltime')
+
+  const playerStats = useMemo(() => {
+    const results = []
+    for (const [playerName, leagues] of Object.entries(data)) {
+      for (const [lg, entries] of Object.entries(leagues)) {
+        if (leagueName && lg !== leagueName) continue
+        const seasons = buildPlayerSeasons(entries, playerName, lg, keepers)
+        if (seasons.length === 0) continue
+
+        const firstSeason = seasons[0].season
+        const lastSeason = seasons[seasons.length - 1].season
+
+        let maxStreak = 0, curStreak = 0
+        let bestStreakYears = [], curStreakYears = []
+        for (const s of seasons) {
+          if (s.kept) {
+            curStreak++
+            curStreakYears.push(s.season)
+            if (curStreak > maxStreak) {
+              maxStreak = curStreak
+              bestStreakYears = [...curStreakYears]
+            }
+          } else {
+            curStreak = 0
+            curStreakYears = []
+          }
+        }
+        const lastKept = seasons[seasons.length - 1].kept
+        const activeStreak = lastKept ? curStreak : 0
+        const activeStreakYears = lastKept ? [...curStreakYears] : []
+
+        results.push({
+          playerName,
+          league: lg,
+          totalSeasons: seasons.length,
+          firstSeason,
+          lastSeason,
+          maxStreak,
+          bestStreakYears,
+          activeStreak,
+          activeStreakYears,
+          currentTeam: seasons[seasons.length - 1].endTeam,
+        })
+      }
+    }
+    return results
+  }, [data, leagueName, keepers])
+
+  const topAllTime = useMemo(() =>
+    [...playerStats].filter(s => s.maxStreak >= 2)
+      .sort((a, b) => b.maxStreak - a.maxStreak || b.totalSeasons - a.totalSeasons)
+      .slice(0, 30),
+    [playerStats]
+  )
+  const topActive = useMemo(() =>
+    [...playerStats].filter(s => s.activeStreak >= 2)
+      .sort((a, b) => b.activeStreak - a.activeStreak || b.totalSeasons - a.totalSeasons)
+      .slice(0, 30),
+    [playerStats]
+  )
+  const topTenured = useMemo(() =>
+    [...playerStats].sort((a, b) => b.totalSeasons - a.totalSeasons || a.firstSeason - b.firstSeason)
+      .slice(0, 30),
+    [playerStats]
+  )
+
+  const rows = sub === 'alltime' ? topAllTime : sub === 'active' ? topActive : topTenured
+
+  const subBtns = [
+    ['alltime', '🏆 All-Time Streaks'],
+    ['active', '🔥 Active Streaks'],
+    ['tenured', '📅 Longest Tenured'],
+  ]
+
+  return (
+    <div>
+      <div style={{ display: 'flex', gap: 6, marginBottom: 20, flexWrap: 'wrap' }}>
+        {subBtns.map(([id, label]) => (
+          <button key={id} onClick={() => setSub(id)} style={{
+            padding: '6px 14px', fontSize: 12, borderRadius: 6,
+            border: `1px solid ${sub === id ? '#84cc16' : '#1e293b'}`,
+            background: sub === id ? 'rgba(132,204,22,0.1)' : 'transparent',
+            color: sub === id ? '#84cc16' : '#64748b',
+            cursor: 'pointer', fontWeight: sub === id ? 700 : 400,
+          }}>
+            {label}
+          </button>
+        ))}
+      </div>
+
+      {rows.length === 0 ? (
+        <div style={{ color: '#475569', textAlign: 'center', padding: 40 }}>No data</div>
+      ) : (
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+          <thead>
+            <tr style={{ color: '#475569', textAlign: 'left', borderBottom: '1px solid #1e293b' }}>
+              <th style={{ padding: '6px 8px', width: 32 }}>#</th>
+              <th style={{ padding: '6px 8px' }}>Player</th>
+              <th style={{ padding: '6px 8px', textAlign: 'center' }}>
+                {sub === 'tenured' ? 'Seasons' : 'Streak'}
+              </th>
+              <th style={{ padding: '6px 8px' }}>Years</th>
+              <th style={{ padding: '6px 8px' }}>Team</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((r, i) => {
+              const isActiveBadge = sub === 'active' || (sub === 'alltime' && r.activeStreak === r.maxStreak && r.maxStreak > 0)
+              let stat, yearsStr
+              if (sub === 'tenured') {
+                stat = r.totalSeasons
+                yearsStr = r.firstSeason === r.lastSeason ? `${r.firstSeason}` : `${r.firstSeason}–${r.lastSeason}`
+              } else if (sub === 'active') {
+                stat = r.activeStreak
+                const ay = r.activeStreakYears
+                yearsStr = ay.length > 1 ? `${ay[0]}–${ay[ay.length - 1]}` : `${ay[0] ?? ''}`
+              } else {
+                stat = r.maxStreak
+                const by = r.bestStreakYears
+                yearsStr = by.length > 1 ? `${by[0]}–${by[by.length - 1]}` : `${by[0] ?? ''}`
+              }
+              return (
+                <tr key={`${r.playerName}-${r.league}`} style={{ borderBottom: '1px solid #0f172a', background: i % 2 ? 'rgba(255,255,255,0.01)' : 'transparent' }}>
+                  <td style={{ padding: '8px', color: '#475569', fontWeight: 700 }}>{i + 1}</td>
+                  <td style={{ padding: '8px', color: '#f1f5f9', fontWeight: 600 }}>{r.playerName}</td>
+                  <td style={{ padding: '8px', textAlign: 'center', color: isActiveBadge ? '#84cc16' : '#cbd5e1', fontWeight: 700, fontSize: 17 }}>{stat}</td>
+                  <td style={{ padding: '8px', color: '#64748b', fontSize: 11 }}>
+                    {yearsStr}
+                    {isActiveBadge && sub !== 'tenured' && (
+                      <span style={{ marginLeft: 6, color: '#84cc16', fontSize: 9, fontWeight: 700, letterSpacing: 0.5 }}>ACTIVE</span>
+                    )}
+                  </td>
+                  <td style={{ padding: '8px', color: '#94a3b8', fontSize: 12 }}>{r.currentTeam || '—'}</td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+      )}
+    </div>
+  )
+}
+
 // ─── App ───────────────────────────────────────────────────────────────────
 
 export default function App() {
@@ -1357,7 +1505,7 @@ export default function App() {
       </div>
 
       <div style={S.tabs}>
-        {['players', 'transactions', 'trades', 'teams', 'lineage'].map(t => (
+        {['players', 'transactions', 'trades', 'teams', 'lineage', 'leaderboard'].map(t => (
           <button key={t} style={S.tab(tab === t)} onClick={() => setTab(t)}>
             {t.charAt(0).toUpperCase() + t.slice(1)}
           </button>
@@ -1377,6 +1525,7 @@ export default function App() {
       {filteredData && tab === 'trades' && <TradesTab data={filteredData} activeLeague={activeLeague} />}
       {filteredData && tab === 'teams' && <TeamsTab data={filteredData} activeLeague={activeLeague} keepers={keepers} />}
       {filteredData && tab === 'lineage' && <LineageTab data={filteredData} activeLeague={activeLeague} />}
+      {filteredData && tab === 'leaderboard' && <LeaderboardTab data={filteredData} activeLeague={activeLeague} keepers={keepers} />}
     </div>
   )
 }
