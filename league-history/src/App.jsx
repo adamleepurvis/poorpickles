@@ -1284,7 +1284,7 @@ function LeaderboardTab({ data, activeLeague, keepers }) {
         const lastSeason = seasons[seasons.length - 1].season
 
         let maxStreak = 0, curStreak = 0
-        let bestStreakYears = [], curStreakYears = []
+        let bestStreakYears = [], curStreakYears = [], bestStreakTeam = null
         for (const s of seasons) {
           if (s.kept) {
             curStreak++
@@ -1292,6 +1292,7 @@ function LeaderboardTab({ data, activeLeague, keepers }) {
             if (curStreak > maxStreak) {
               maxStreak = curStreak
               bestStreakYears = [...curStreakYears]
+              bestStreakTeam = s.endTeam
             }
           } else {
             curStreak = 0
@@ -1310,6 +1311,7 @@ function LeaderboardTab({ data, activeLeague, keepers }) {
           lastSeason,
           maxStreak,
           bestStreakYears,
+          bestStreakTeam,
           activeStreak,
           activeStreakYears,
           currentTeam: seasons[seasons.length - 1].endTeam,
@@ -1373,7 +1375,9 @@ function LeaderboardTab({ data, activeLeague, keepers }) {
                 {sub === 'tenured' ? 'Seasons' : 'Streak'}
               </th>
               <th style={{ padding: '6px 8px' }}>Years</th>
-              <th style={{ padding: '6px 8px' }}>Team</th>
+              <th style={{ padding: '6px 8px' }}>
+                {sub === 'alltime' ? 'Streak Team' : 'Current Team'}
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -1403,7 +1407,9 @@ function LeaderboardTab({ data, activeLeague, keepers }) {
                       <span style={{ marginLeft: 6, color: '#84cc16', fontSize: 9, fontWeight: 700, letterSpacing: 0.5 }}>ACTIVE</span>
                     )}
                   </td>
-                  <td style={{ padding: '8px', color: '#94a3b8', fontSize: 12 }}>{r.currentTeam || '—'}</td>
+                  <td style={{ padding: '8px', color: '#94a3b8', fontSize: 12 }}>
+                    {sub === 'alltime' ? (r.bestStreakTeam || '—') : (r.currentTeam || '—')}
+                  </td>
                 </tr>
               )
             })}
