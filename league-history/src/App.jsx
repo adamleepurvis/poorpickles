@@ -1498,7 +1498,7 @@ function LeaderboardTab({ data, activeLeague, keepers }) {
     ['alltime', '🏆 All-Time Streaks'],
     ['active', '🔥 Active Streaks'],
     ['tenured', '📅 Longest Tenured'],
-    ['records', '📋 Records'],
+    ...(leagueName !== 'SouthOssetian' ? [['records', '📋 Records']] : []),
   ]
 
   const RECORD_CARDS = records ? [
