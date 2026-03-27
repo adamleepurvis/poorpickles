@@ -1,5 +1,19 @@
 {
   "LXG": {
+    "2016": {
+      "Dynasty": ["Giancarlo Stanton", "Manny Machado", "Joey Votto", "Charlie Blackmon", "Buster Posey", "J.D. Martinez", "Nelson Cruz", "Jason Kipnis", "Madison Bumgarner", "Jacob deGrom", "Adam Wainwright", "Jordan Zimmermann", "Michael Wacha", "Steven Matz"],
+      "gamma's Team": ["Miguel Cabrera", "Carlos Correa", "Jose Altuve", "AJ Pollock", "George Springer", "Freddie Freeman", "Michael Brantley", "Blake Swihart", "Corey Kluber", "Matt Harvey", "Dallas Keuchel", "Carlos Carrasco", "Marcus Stroman", "Lucas Giolito"],
+      "JP Licks": ["Starling Marte", "Carlos González", "Adrián González", "Carlos Gómez", "Ian Kinsler", "Adrián Béltre", "Billy Hamilton", "Anthony Rendon", "Travis d'Arnaud", "Elvis Andrus", "David Price", "Félix Hernández", "Chris Archer", "Gio González"],
+      "Snipe City Danglers": ["Mike Trout", "Mookie Betts", "Ryan Braun", "Chris Davis", "Lorenzo Cain", "Matt Carpenter", "Shin-Soo Choo", "Rusney Castillo", "Joey Gallo", "Sonny Gray", "Jon Lester", "Craig Kimbrel", "Collin McHugh", "John Lackey"],
+      "Loch Neskie Monsters": ["Andrew McCutchen", "Todd Frazier", "Justin Upton", "Robinson Canó", "Jay Bruce", "Randal Grichuk", "Miguel Sanó", "Steven Souza", "Zack Greinke", "Chris Sale", "Marco Estrada", "Wei-Yin Chen", "Taylor Jungmann", "Daniel Norris"],
+      "Team Underdog": ["Josh Donaldson", "Edwin Encarnación", "Matt Kemp", "Hunter Pence", "Francisco Lindor", "Salvador Perez", "Maikel Franco", "Josh Harrison", "Garrett Richards", "Raisel Iglesias", "Jake Odorizzi", "Drew Smyly", "Luis Severino", "Alex Reyes"],
+      "Hideo Lobo": ["Jacoby Ellsbury", "Jonathan Lucroy", "Brett Gardner", "Corey Seager", "Jorge Soler", "Gerardo Parra", "Marcus Semien", "Eddie Rosario", "Hector Olivera", "Trea Turner", "Carlos Rodón", "Julio Urías"],
+      "Bay of Papi": ["Bryce Harper", "José Abreu", "Yasiel Puig", "Eric Hosmer", "Brian Dozier", "Adam Eaton", "Gregory Polanco", "Kyle Seager", "José Reyes", "Evan Gattis", "Javier Báez", "Gerrit Cole", "Tyson Ross", "Shelby Miller"],
+      "Nighthawks": ["Paul Goldschmidt", "Kyle Schwarber", "Jason Heyward", "Rougned Odor", "Evan Longoria", "Brandon Belt", "Christian Yelich", "Addison Russell", "Michael Conforto", "Byron Buxton", "Yoán Moncada", "Jake Arrieta", "Lance McCullers Jr.", "Jose Quintana"],
+      "StickyBanditz": ["Kris Bryant", "Dee Strange-Gordon", "Joc Pederson", "Starlin Castro", "Yasmany Tomás", "Marcell Ozuna", "Jackie Bradley Jr.", "Jon Singleton", "Clayton Kershaw", "Masahiro Tanaka", "Yu Darvish", "Patrick Corbin", "Aaron Nola", "Zack Wheeler"],
+      "Toms River": ["José Bautista", "Yoenis Céspedes", "Albert Pujols", "Xander Bogaerts", "David Ortiz", "Hanley Ramírez", "Kolten Wong", "Brian McCann", "Jose Fernandez", "Noah Syndergaard", "Johnny Cueto", "Cole Hamels", "Trevor Rosenthal", "Tyler Glasnow"],
+      "Poor Pickles": ["Nolan Arenado", "Anthony Rizzo", "Prince Fielder", "Adam Jones", "Troy Tulowitzki", "Dustin Pedroia", "Mike Moustakas", "Peter O'Brien", "Max Scherzer", "Stephen Strasburg", "Danny Salazar", "Michael Pineda", "Carlos Martínez", "Yordano Ventura"]
+    },
     "2017": {
       "JP Licks": ["Paul Goldschmidt", "AJ Pollock", "José Abreu", "Justin Upton", "Anthony Rendon", "Jason Kipnis", "Carlos Carrasco", "Chris Archer"],
       "Hideo Lobo": ["Trea Turner", "Corey Seager", "Carlos González", "Jonathan Lucroy", "Andrew Benintendi", "Justin Verlander", "Jose Quintana", "Lance McCullers Jr."],
