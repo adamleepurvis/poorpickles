@@ -1,5 +1,19 @@
 {
   "LXG": {
+    "2021": {
+      "JP Licks": ["José Abreu", "Starling Marte", "George Springer", "J.T. Realmuto", "Javier Báez", "Brandon Lowe", "Austin Meadows", "Jesús Luzardo"],
+      "Bay of Papi": ["Bo Bichette", "Yordan Alvarez", "Keston Hiura", "Yoán Moncada", "Julio Rodríguez", "Gerrit Cole", "Lucas Giolito", "Tyler Glasnow"],
+      "Dynasty": ["Juan Soto", "Cody Bellinger", "Xander Bogaerts", "Anthony Rendon", "Teoscar Hernández", "Jacob deGrom", "Trevor Bauer", "Kenta Maeda"],
+      "gamma's Team": ["Mookie Betts", "Eloy Jiménez", "Vladimir Guerrero Jr.", "Ketel Marte", "Marco Luciano", "Jasson Domínguez", "Yu Darvish", "Zac Gallen"],
+      "Loch Neskie Monsters": ["José Ramírez", "Trevor Story", "Trent Grisham", "Michael Conforto", "Jose Altuve", "Aaron Nola", "Dinelson Lamet", "Dustin May"],
+      "Nighthawks": ["Fernando Tatis Jr.", "Freddie Freeman", "Bryce Harper", "Kyle Tucker", "Rafael Devers", "Pete Alonso", "Gavin Lux", "Jack Flaherty"],
+      "Poor Pickles": ["Nolan Arenado", "Luis Robert Jr.", "Tim Anderson", "Wander Franco", "Jo Adell", "Max Scherzer", "Blake Snell", "Brandon Woodruff"],
+      "Snipe City Danglers": ["Mike Trout", "Trea Turner", "Nick Castellanos", "Alex Verdugo", "Carlos Correa", "Walker Buehler", "Luis Castillo", "José Berríos"],
+      "StickyBanditz": ["Ozzie Albies", "Corey Seager", "Aaron Judge", "Alec Bohm", "Rhys Hoskins", "Victor Robles", "Jarred Kelenic", "Sixto Sánchez"],
+      "Team Underdog": ["Ronald Acuña Jr.", "Christian Yelich", "Francisco Lindor", "Alex Bregman", "Cavan Biggio", "Willson Contreras", "Shane Bieber", "Corbin Burnes"],
+      "Hideo Lobo": ["Manny Machado", "DJ LeMahieu", "J.D. Martinez", "Jorge Soler", "Clayton Kershaw", "Stephen Strasburg", "Chris Sale", "Mike Clevinger"],
+      "Toms River": ["Marcell Ozuna", "Luke Voit", "Gleyber Torres", "Eugenio Suárez", "Kris Bryant", "Giancarlo Stanton", "Ian Anderson", "MacKenzie Gore"]
+    },
     "2022": {
       "JP Licks": ["Austin Riley", "Byron Buxton", "Javier Báez", "Jazz Chisholm Jr.", "Austin Meadows", "Adley Rutschman", "Marco Luciano", "Brennen Davis", "Zac Gallen", "Dustin May"],
       "Bay of Papi": ["Bo Bichette", "Mike Trout", "Yordan Alvarez", "Manny Machado", "Paul Goldschmidt", "Ketel Marte", "Julio Rodríguez", "Zack Wheeler", "Lucas Giolito", "Sandy Alcantara"],
