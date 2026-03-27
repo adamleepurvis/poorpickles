@@ -119339,5 +119339,17 @@
         "timestamp": "1773797924"
       }
     ]
+  },
+  "Hanley Ramirez": {
+    "LXG": [
+      {
+        "season": 2009,
+        "team": "RedHawks",
+        "how": "drafted",
+        "round": 1,
+        "pick": 1,
+        "timestamp": null
+      }
+    ]
   }
 }
