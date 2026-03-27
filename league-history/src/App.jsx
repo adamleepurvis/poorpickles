@@ -1269,80 +1269,102 @@ function TeamsTab({ data, activeLeague, keepers }) {
 // ─── computeRecords ─────────────────────────────────────────────────────────
 
 function computeRecords(data, leagueName, keepers) {
-  // mostDrafted: count how === 'drafted' per player (per-league if leagueName set, else all)
-  const draftedCount = {}   // playerName -> count
-  const tradedCount = {}    // playerName -> count
-  const txCount = {}        // playerName -> total transaction count (non-draft)
-  const teamsSet = {}       // playerName -> Set of distinct teams
-  const seasonsCount = {}   // playerName -> season count (for longestInLeague)
-  const keeperSeasons = {}  // playerName -> keeper season count
-  let firstEverDrafted = null // { playerName, season, team, round, pick, league }
+  const draftedCount = {}
+  const tradedCount = {}
+  const txCount = {}
+  const teamsSet = {}
+  const seasonsCount = {}
+  const keeperSeasons = {}
+  const droppedCount = {}
+  const numberOneCount = {}
+  const loyaltyBest = {}  // playerName -> { count, team, league }
+  const tradeGroups = {}  // `${timestamp}_${lg}` -> { players: Set, season, league, teams: Set }
+  let firstEverDrafted = null
+  let neverKeptBest = null    // { playerName, seasons, league }
+  let oneSeasonWonderBest = null  // { playerName, season, team, round, pick, league }
 
   for (const [playerName, leagues] of Object.entries(data)) {
     for (const [lg, entries] of Object.entries(leagues)) {
       if (leagueName && lg !== leagueName) continue
 
-      // mostDrafted
       for (const e of entries) {
         if (e.how === 'drafted') {
           draftedCount[playerName] = (draftedCount[playerName] || 0) + 1
-          // firstEverDrafted
+          if (e.pick === 1) numberOneCount[playerName] = (numberOneCount[playerName] || 0) + 1
           if (
             firstEverDrafted === null ||
             e.season < firstEverDrafted.season ||
             (e.season === firstEverDrafted.season &&
-              ((e.round * 1000 + e.pick) < (firstEverDrafted.round * 1000 + firstEverDrafted.pick)))
+              (e.round * 1000 + e.pick) < (firstEverDrafted.round * 1000 + firstEverDrafted.pick))
           ) {
-            firstEverDrafted = {
-              playerName,
-              season: e.season,
-              team: normTeam(e.team),
-              round: e.round,
-              pick: e.pick,
-              league: lg,
-            }
+            firstEverDrafted = { playerName, season: e.season, team: normTeam(e.team), round: e.round, pick: e.pick, league: lg }
           }
         }
-        // mostTraded
         if (e.how === 'trade') {
           tradedCount[playerName] = (tradedCount[playerName] || 0) + 1
+          if (e.timestamp) {
+            const key = `${e.timestamp}_${lg}`
+            if (!tradeGroups[key]) tradeGroups[key] = { players: new Set(), season: e.season, league: lg, teams: new Set() }
+            tradeGroups[key].players.add(playerName)
+            if (e.team) tradeGroups[key].teams.add(normTeam(e.team))
+            if (e.from_team) tradeGroups[key].teams.add(normTeam(e.from_team))
+          }
         }
-        // mostTransactions
-        if (e.how !== 'drafted') {
-          txCount[playerName] = (txCount[playerName] || 0) + 1
-        }
-        // mostTeams
+        if (e.how === 'drop') droppedCount[playerName] = (droppedCount[playerName] || 0) + 1
+        if (e.how !== 'drafted') txCount[playerName] = (txCount[playerName] || 0) + 1
         if (e.team && e.how !== 'drop') {
           if (!teamsSet[playerName]) teamsSet[playerName] = new Set()
           teamsSet[playerName].add(normTeam(e.team))
         }
       }
 
-      // longestInLeague: count seasons
       const seasons = buildPlayerSeasons(entries, playerName, lg, keepers)
       if (seasons.length > 0) {
         const prev = seasonsCount[playerName]
         if (!prev || seasons.length > prev.count) {
-          seasonsCount[playerName] = {
-            count: seasons.length,
-            first: seasons[0].season,
-            last: seasons[seasons.length - 1].season,
-            league: lg,
-          }
+          seasonsCount[playerName] = { count: seasons.length, first: seasons[0].season, last: seasons[seasons.length - 1].season, league: lg }
         }
-        // mostKeeperSeasons
         const kCount = seasons.filter(s => s.kept).length
         if (kCount > 0) {
           const prevK = keeperSeasons[playerName]
-          if (!prevK || kCount > prevK.count) {
-            keeperSeasons[playerName] = { count: kCount, league: lg }
+          if (!prevK || kCount > prevK.count) keeperSeasons[playerName] = { count: kCount, league: lg }
+        }
+
+        // mostLoyalPlayer: longest run of same startTeam across consecutive seasons
+        let curRun = 1, curTeam = seasons[0].startTeam
+        let best = 1, bestTeam = curTeam
+        for (let i = 1; i < seasons.length; i++) {
+          if (seasons[i].startTeam === curTeam) {
+            curRun++
+            if (curRun > best) { best = curRun; bestTeam = curTeam }
+          } else {
+            curRun = 1; curTeam = seasons[i].startTeam
+          }
+        }
+        const prevL = loyaltyBest[playerName]
+        if (!prevL || best > prevL.count) loyaltyBest[playerName] = { count: best, team: bestTeam, league: lg }
+
+        // neverKept: 3+ seasons, never kept
+        if (seasons.length >= 3 && kCount === 0) {
+          if (!neverKeptBest || seasons.length > neverKeptBest.seasons) {
+            neverKeptBest = { playerName, seasons: seasons.length, league: lg }
+          }
+        }
+
+        // oneSeasonWonder: exactly 1 season, drafted (not just added)
+        if (seasons.length === 1) {
+          const draft = entries.find(e => e.how === 'drafted')
+          if (draft) {
+            const score = draft.round * 1000 + draft.pick
+            if (!oneSeasonWonderBest || score < (oneSeasonWonderBest.round * 1000 + oneSeasonWonderBest.pick)) {
+              oneSeasonWonderBest = { playerName, season: seasons[0].season, team: seasons[0].endTeam, round: draft.round, pick: draft.pick, league: lg }
+            }
           }
         }
       }
     }
   }
 
-  // Find maximums
   function maxEntry(obj, keyFn) {
     let best = null, bestVal = -1
     for (const [k, v] of Object.entries(obj)) {
@@ -1352,32 +1374,43 @@ function computeRecords(data, leagueName, keepers) {
     return best
   }
 
-  const md = maxEntry(draftedCount)
   const mt = maxEntry(tradedCount)
   const mTx = maxEntry(txCount)
   const mTeams = maxEntry(teamsSet, s => s.size)
   const mTenured = maxEntry(seasonsCount, s => s.count)
   const mKeeper = maxEntry(keeperSeasons, s => s.count)
+  const mDropped = maxEntry(droppedCount)
+  const mNo1 = maxEntry(numberOneCount)
+  const mLoyal = maxEntry(loyaltyBest, v => v.count)
+
+  // Biggest trade: most players in a single trade group
+  let biggestTrade = null
+  for (const g of Object.values(tradeGroups)) {
+    if (!biggestTrade || g.players.size > biggestTrade.count) {
+      const pArr = Array.from(g.players)
+      biggestTrade = {
+        count: g.players.size,
+        season: g.season,
+        league: g.league,
+        teams: Array.from(g.teams).join(' ↔ '),
+        playerName: pArr.slice(0, 3).join(', ') + (pArr.length > 3 ? ` +${pArr.length - 3} more` : ''),
+      }
+    }
+  }
 
   return {
-    mostDrafted: md ? { playerName: md.key, count: md.val, league: leagueName || 'All' } : null,
     mostTraded: mt ? { playerName: mt.key, count: mt.val, league: leagueName || 'All' } : null,
-    mostTeams: mTeams ? {
-      playerName: mTeams.key,
-      count: mTeams.val.size,
-      teams: Array.from(mTeams.val).join(', '),
-      league: leagueName || 'All',
-    } : null,
-    longestInLeague: mTenured ? {
-      playerName: mTenured.key,
-      seasons: mTenured.val.count,
-      first: mTenured.val.first,
-      last: mTenured.val.last,
-      league: mTenured.val.league,
-    } : null,
+    mostTransactions: mTx ? { playerName: mTx.key, count: mTx.val, league: leagueName || 'All' } : null,
+    mostTeams: mTeams ? { playerName: mTeams.key, count: mTeams.val.size, teams: Array.from(mTeams.val).join(', '), league: leagueName || 'All' } : null,
+    longestInLeague: mTenured ? { playerName: mTenured.key, seasons: mTenured.val.count, first: mTenured.val.first, last: mTenured.val.last, league: mTenured.val.league } : null,
     firstEverDrafted,
     mostKeeperSeasons: mKeeper ? { playerName: mKeeper.key, count: mKeeper.val.count, league: mKeeper.val.league } : null,
-    mostTransactions: mTx ? { playerName: mTx.key, count: mTx.val, league: leagueName || 'All' } : null,
+    mostDropped: mDropped ? { playerName: mDropped.key, count: mDropped.val, league: leagueName || 'All' } : null,
+    mostNumberOnePick: mNo1 ? { playerName: mNo1.key, count: mNo1.val, league: leagueName || 'All' } : null,
+    mostLoyal: mLoyal ? { playerName: mLoyal.key, count: mLoyal.val.count, team: mLoyal.val.team, league: mLoyal.val.league } : null,
+    biggestTrade,
+    neverKept: neverKeptBest,
+    oneSeasonWonder: oneSeasonWonderBest,
   }
 }
 
@@ -1501,6 +1534,39 @@ function LeaderboardTab({ data, activeLeague, keepers }) {
       label: 'Most Keeper Seasons',
       rec: records.mostKeeperSeasons,
       stat: r => `kept ${r.count} season${r.count !== 1 ? 's' : ''}`,
+    },
+    {
+      label: 'Most Loyal',
+      rec: records.mostLoyal,
+      stat: r => `${r.count} season${r.count !== 1 ? 's' : ''} on one team`,
+      sub: r => r.team,
+    },
+    {
+      label: 'Most Dropped',
+      rec: records.mostDropped,
+      stat: r => `dropped ${r.count} time${r.count !== 1 ? 's' : ''}`,
+    },
+    {
+      label: 'Most #1 Overall Picks',
+      rec: records.mostNumberOnePick,
+      stat: r => `drafted #1 overall ${r.count} time${r.count !== 1 ? 's' : ''}`,
+    },
+    {
+      label: 'Biggest Trade',
+      rec: records.biggestTrade,
+      stat: r => `${r.count} players · ${r.season}`,
+      sub: r => r.teams,
+    },
+    {
+      label: 'Never Kept (3+ seasons)',
+      rec: records.neverKept,
+      stat: r => `${r.seasons} seasons, never retained`,
+    },
+    {
+      label: 'Best One-Season Wonder',
+      rec: records.oneSeasonWonder,
+      stat: r => `${r.season} · R${r.round}P${r.pick}`,
+      sub: r => `by ${r.team}`,
     },
   ] : []
 
