@@ -1,5 +1,19 @@
 {
   "LXG": {
+    "2020": {
+      "JP Licks": ["Starling Marte", "Giancarlo Stanton", "Tommy Pham", "Manny Machado", "José Abreu", "Tim Anderson", "Gary Sánchez", "Yasiel Puig", "Amed Rosario", "Nick Senzel", "Kristian Robinson", "Justin Verlander", "Noah Syndergaard", "Zack Wheeler"],
+      "Bay of Papi": ["Bryce Harper", "Javier Báez", "Yordan Alvarez", "Charlie Blackmon", "Yoán Moncada", "Bo Bichette", "Marcus Semien", "Josh Bell", "Byron Buxton", "Carlos Santana", "Royce Lewis", "Joey Bart", "Gerrit Cole", "Tyler Glasnow"],
+      "Dynasty": ["Cody Bellinger", "Juan Soto", "Anthony Rendon", "Xander Bogaerts", "Adalberto Mondesi", "Kris Bryant", "Paul Goldschmidt", "Andrew Benintendi", "Miguel Sanó", "Gio Urshela", "Jacob deGrom", "Hyun Jin Ryu", "Germán Márquez", "Casey Mize"],
+      "gamma's Team": ["Mookie Betts", "Fernando Tatis Jr.", "Vladimir Guerrero Jr.", "Matt Olson", "Eloy Jiménez", "Jorge Soler", "Nick Castellanos", "Brandon Lowe", "J.D. Davis", "Marco Luciano", "Julio Rodríguez", "Yu Darvish", "Mike Clevinger", "Trevor Bauer"],
+      "Loch Neskie Monsters": ["Trevor Story", "José Ramírez", "J.D. Martinez", "George Springer", "Jonathan Villar", "Eugenio Suárez", "Ramón Laureano", "Rhys Hoskins", "Willie Calhoun", "Trent Grisham", "Aaron Nola", "Josh Hader", "Carlos Carrasco", "Dinelson Lamet"],
+      "Nighthawks": ["Freddie Freeman", "Aaron Judge", "Pete Alonso", "Rafael Devers", "Keston Hiura", "J.T. Realmuto", "Carlos Correa", "Michael Conforto", "Kyle Tucker", "Gavin Lux", "Jeff McNeil", "Dylan Carlson", "Jack Flaherty", "Lucas Giolito"],
+      "Poor Pickles": ["Nolan Arenado", "Austin Meadows", "Whit Merrifield", "Anthony Rizzo", "Luis Robert Jr.", "Matt Chapman", "Franmil Reyes", "Jo Adell", "Wander Franco", "Cristian Pache", "Max Scherzer", "Stephen Strasburg", "Blake Snell", "Max Fried"],
+      "Snipe City Danglers": ["Mike Trout", "Trea Turner", "Nelson Cruz", "Mike Moustakas", "Óscar Mercado", "Elvis Andrus", "Justin Turner", "Joey Votto", "Adam Haseley", "Walker Buehler", "Luis Castillo", "Patrick Corbin", "José Berríos", "Corey Kluber"],
+      "StickyBanditz": ["Ketel Marte", "Victor Robles", "Eddie Rosario", "Corey Seager", "Shohei Ohtani (Batter)", "Trey Mancini", "Aristides Aquino", "Miguel Andujar", "Carter Kieboom", "Jarred Kelenic", "Alec Bohm", "Michael Soroka", "Jesús Luzardo", "Julio Urías"],
+      "Team Underdog": ["Ronald Acuña Jr.", "Christian Yelich", "Francisco Lindor", "Alex Bregman", "Ozzie Albies", "Josh Donaldson", "Michael Brantley", "Willson Contreras", "Cavan Biggio", "Shane Bieber", "Chris Paddack", "Aroldis Chapman", "Roberto Osuna", "Frankie Montas"],
+      "Hideo Lobo": ["Jose Altuve", "DJ LeMahieu", "David Dahl", "Max Kepler", "Jorge Polanco", "Lourdes Gurriel Jr.", "Michael Chavis", "Sam Hilliard", "Tyler O'Neill", "Chris Sale", "Clayton Kershaw", "Charlie Morton", "Shohei Ohtani (Pitcher)", "Sean Manaea"],
+      "Toms River": ["Gleyber Torres", "Joey Gallo", "Max Muncy", "Marcell Ozuna", "Yasmani Grandal", "Kyle Schwarber", "Luke Voit", "Wil Myers", "Vidal Bruján", "Zack Greinke", "Eduardo Rodriguez", "Kyle Hendricks", "MacKenzie Gore", "Matt Manning"]
+    },
     "2021": {
       "JP Licks": ["José Abreu", "Starling Marte", "George Springer", "J.T. Realmuto", "Javier Báez", "Brandon Lowe", "Austin Meadows", "Jesús Luzardo"],
       "Bay of Papi": ["Bo Bichette", "Yordan Alvarez", "Keston Hiura", "Yoán Moncada", "Julio Rodríguez", "Gerrit Cole", "Lucas Giolito", "Tyler Glasnow"],
