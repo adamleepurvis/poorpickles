@@ -302,7 +302,7 @@ function howLabel(entry) {
 
 // Build per-player, per-league season summaries
 // Each season: { season, entries, startTeam, endTeam, events }
-function buildPlayerSeasons(leagueEntries) {
+function buildPlayerSeasons(leagueEntries, playerName, leagueName, keepers) {
   // Group by season
   const bySeason = {}
   for (const entry of leagueEntries) {
@@ -317,13 +317,17 @@ function buildPlayerSeasons(leagueEntries) {
     const prevSeason = i > 0 ? result[i - 1] : null
     const firstEntry = entries[0]
     const lastTeam = entries[entries.length - 1].team
+    const team = normTeam(firstEntry.team)
 
-    // Detect "kept": first entry is drafted AND team matches prev season end team
+    // Use keepers.json as authoritative source; fall back to heuristic
+    const keeperList = keepers?.[leagueName]?.[season]?.[team] || []
     let kept = false
-    if (
+    if (playerName && keeperList.includes(playerName)) {
+      kept = true
+    } else if (
       firstEntry.how === 'drafted' &&
       prevSeason &&
-      prevSeason.endTeam === firstEntry.team
+      prevSeason.endTeam === team
     ) {
       kept = true
     }
@@ -331,7 +335,7 @@ function buildPlayerSeasons(leagueEntries) {
     result.push({
       season,
       entries,
-      startTeam: normTeam(firstEntry.team),
+      startTeam: team,
       endTeam: normTeam(lastTeam),
       kept,
     })
@@ -505,14 +509,14 @@ function Badge({ type }) {
 
 // ─── Players Tab ───────────────────────────────────────────────────────────
 
-function PlayerTimeline({ playerName, leagues }) {
+function PlayerTimeline({ playerName, leagues, keepers }) {
   return (
     <div style={S.card}>
       <div style={{ fontWeight: 700, fontSize: 16, marginBottom: 14, color: '#f1f5f9' }}>
         {playerName}
       </div>
       {Object.entries(leagues).map(([leagueName, entries]) => {
-        const seasons = buildPlayerSeasons(entries)
+        const seasons = buildPlayerSeasons(entries, playerName, leagueName, keepers)
         return (
           <div key={leagueName} style={{ marginBottom: 20 }}>
             <div style={{ ...S.sectionLabel, marginTop: 0 }}>{leagueName}</div>
@@ -593,7 +597,7 @@ function PlayerTimeline({ playerName, leagues }) {
   )
 }
 
-function PlayersTab({ data, isMobile }) {
+function PlayersTab({ data, isMobile, keepers }) {
   const [search, setSearch] = useState('')
   const [selected, setSelected] = useState(null)
 
@@ -637,7 +641,7 @@ function PlayersTab({ data, isMobile }) {
         >
           ← Back
         </button>
-        <PlayerTimeline playerName={selected} leagues={data[selected]} />
+        <PlayerTimeline playerName={selected} leagues={data[selected]} keepers={keepers} />
       </div>
     )
   }
@@ -690,7 +694,7 @@ function PlayersTab({ data, isMobile }) {
         {!isMobile && (
           <div>
             {selected ? (
-              <PlayerTimeline playerName={selected} leagues={data[selected]} />
+              <PlayerTimeline playerName={selected} leagues={data[selected]} keepers={keepers} />
             ) : (
               <div style={{ color: '#475569', marginTop: 40, textAlign: 'center' }}>
                 Select a player to view their history
@@ -1360,7 +1364,7 @@ export default function App() {
 
       {!data && !error && <Loading />}
 
-      {filteredData && tab === 'players' && <PlayersTab data={filteredData} isMobile={isMobile} />}
+      {filteredData && tab === 'players' && <PlayersTab data={filteredData} isMobile={isMobile} keepers={keepers} />}
       {filteredData && tab === 'transactions' && <TransactionsTab data={filteredData} activeLeague={activeLeague} />}
       {filteredData && tab === 'trades' && <TradesTab data={filteredData} activeLeague={activeLeague} />}
       {filteredData && tab === 'teams' && <TeamsTab data={filteredData} activeLeague={activeLeague} keepers={keepers} />}
