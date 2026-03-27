@@ -1069,7 +1069,7 @@ function TradesTab({ data, activeLeague }) {
 
 // ─── Teams Tab ─────────────────────────────────────────────────────────────
 
-function TeamsTab({ data, activeLeague }) {
+function TeamsTab({ data, activeLeague, keepers }) {
   const leagues = useMemo(() => {
     const s = new Set()
     for (const leagues of Object.values(data)) {
@@ -1191,14 +1191,24 @@ function TeamsTab({ data, activeLeague }) {
               {franchiseHistory.length === 0 && (
                 <div style={{ color: '#475569', marginTop: 40, textAlign: 'center' }}>No history found</div>
               )}
-              {franchiseHistory.map(({ season, drafted, tradedIn, tradedOut, added, dropped }) => (
+              {franchiseHistory.map(({ season, drafted, tradedIn, tradedOut, added, dropped }) => {
+                const keeperSet = new Set(keepers?.[selectedLeague]?.[season]?.[selectedTeam] || [])
+                const kept = drafted.filter(p => keeperSet.has(p))
+                const newDraft = drafted.filter(p => !keeperSet.has(p))
+                return (
                 <div key={season} style={{ ...S.card, marginBottom: 10 }}>
                   <div style={{ fontWeight: 700, color: '#84cc16', fontSize: 15, marginBottom: 10 }}>{season}</div>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: 12 }}>
-                    {drafted.length > 0 && (
+                    {kept.length > 0 && (
                       <div>
-                        <div style={{ ...S.sectionLabel, marginTop: 0 }}>Drafted ({drafted.length})</div>
-                        {drafted.map(p => <div key={p} style={{ fontSize: 12, color: '#94a3b8', padding: '2px 0' }}>{p}</div>)}
+                        <div style={{ ...S.sectionLabel, marginTop: 0 }}>Kept ({kept.length})</div>
+                        {kept.map(p => <div key={p} style={{ fontSize: 12, color: '#84cc16', padding: '2px 0' }}>{p}</div>)}
+                      </div>
+                    )}
+                    {newDraft.length > 0 && (
+                      <div>
+                        <div style={{ ...S.sectionLabel, marginTop: 0 }}>New Draft ({newDraft.length})</div>
+                        {newDraft.map(p => <div key={p} style={{ fontSize: 12, color: '#94a3b8', padding: '2px 0' }}>{p}</div>)}
                       </div>
                     )}
                     {tradedIn.length > 0 && (
@@ -1235,7 +1245,7 @@ function TeamsTab({ data, activeLeague }) {
                     )}
                   </div>
                 </div>
-              ))}
+              )})}
             </div>
           )}
         </>
@@ -1249,18 +1259,20 @@ function TeamsTab({ data, activeLeague }) {
 export default function App() {
   const isMobile = useIsMobile()
   const [data, setData] = useState(null)
+  const [keepers, setKeepers] = useState({})
   const [error, setError] = useState(null)
   const [tab, setTab] = useState('players')
   const [activeLeague, setActiveLeague] = useState('LXG')
 
   useEffect(() => {
     fetch('/ownership_history.json')
-      .then(r => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`)
-        return r.json()
-      })
+      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
       .then(setData)
       .catch(e => setError(e.message))
+    fetch('/keepers.json')
+      .then(r => r.ok ? r.json() : {})
+      .then(setKeepers)
+      .catch(() => {})
   }, [])
 
   const leagueNames = useMemo(() => {
@@ -1351,7 +1363,7 @@ export default function App() {
       {filteredData && tab === 'players' && <PlayersTab data={filteredData} isMobile={isMobile} />}
       {filteredData && tab === 'transactions' && <TransactionsTab data={filteredData} activeLeague={activeLeague} />}
       {filteredData && tab === 'trades' && <TradesTab data={filteredData} activeLeague={activeLeague} />}
-      {filteredData && tab === 'teams' && <TeamsTab data={filteredData} activeLeague={activeLeague} />}
+      {filteredData && tab === 'teams' && <TeamsTab data={filteredData} activeLeague={activeLeague} keepers={keepers} />}
       {filteredData && tab === 'lineage' && <LineageTab data={filteredData} activeLeague={activeLeague} />}
     </div>
   )
