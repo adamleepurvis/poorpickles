@@ -613,9 +613,10 @@ function PlayersTab({ data, isMobile, keepers }) {
   }, [data])
 
   const filtered = useMemo(() => {
-    const q = search.toLowerCase().trim()
+    const normalize = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+    const q = normalize(search.trim())
     if (!q) return allPlayers
-    return allPlayers.filter(p => p.toLowerCase().includes(q))
+    return allPlayers.filter(p => normalize(p).includes(q))
   }, [allPlayers, search])
 
   // Get current team for a player (most recent season, last entry)
