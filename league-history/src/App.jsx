@@ -1351,8 +1351,8 @@ function computeRecords(data, leagueName, keepers) {
           }
         }
 
-        // oneSeasonWonder: exactly 1 season, drafted (not just added)
-        if (seasons.length === 1) {
+        // oneSeasonWonder: exactly 1 season, drafted (not just added), must have 2+ entries (exclude manual single-entry injections)
+        if (seasons.length === 1 && entries.length >= 2) {
           const draft = entries.find(e => e.how === 'drafted')
           if (draft) {
             const score = draft.round * 1000 + draft.pick
@@ -1540,16 +1540,6 @@ function LeaderboardTab({ data, activeLeague, keepers }) {
       rec: records.mostLoyal,
       stat: r => `${r.count} season${r.count !== 1 ? 's' : ''} on one team`,
       sub: r => r.team,
-    },
-    {
-      label: 'Most Dropped',
-      rec: records.mostDropped,
-      stat: r => `dropped ${r.count} time${r.count !== 1 ? 's' : ''}`,
-    },
-    {
-      label: 'Most #1 Overall Picks',
-      rec: records.mostNumberOnePick,
-      stat: r => `drafted #1 overall ${r.count} time${r.count !== 1 ? 's' : ''}`,
     },
     {
       label: 'Biggest Trade',
