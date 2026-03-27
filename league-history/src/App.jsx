@@ -268,7 +268,7 @@ const FRANCHISE_ALIASES = {
   "ALP": "Dangerous Nights Crew",
   "🎯 David Tabor's Aim": "🍆I'm Beaned Up Right Now🍆",
   "💸 Ohtani's Best Bet": "🐶 Decoy Fan Club",
-  "🌟 Edward's TeamToBeNamedLater": "🏝️ Let's Get Tropical 🏝️",
+  "🌟 Edward's TeamToBeNamedLater": "🏝️ Let\u2019s Get Tropical 🏝️",
   "Hot Dog Heaven": "Magnum Kwandoms",
 }
 
