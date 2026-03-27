@@ -221,6 +221,53 @@ const S = {
   },
 }
 
+// ─── Franchise Aliases ─────────────────────────────────────────────────────
+
+const FRANCHISE_ALIASES = {
+  // Bay of Papi
+  "Boston Three Party": "Bay of Papi",
+  "Boston Four Party": "Bay of Papi",
+  "Anxious Vottos": "Bay of Papi",
+  "Napoli Headed Hoes": "Bay of Papi",
+  "Bay of Puigs": "Bay of Papi",
+  // Nighthawks
+  "RedHawks": "Nighthawks",
+  // JP Licks
+  "Pennsylvania Posse": "JP Licks",
+  "The Champion Posse": "JP Licks",
+  "Newton Figs": "JP Licks",
+  "Somerville Union": "JP Licks",
+  "Paw Paw Tunnel of JP": "JP Licks",
+  "Hoo Doo u love": "JP Licks",
+  // Poor Pickles
+  "Jeter Sucks A-ROD": "Poor Pickles",
+  "Jeter Sucks A-Rod": "Poor Pickles",
+  "Pickle Riiiiiiick": "Poor Pickles",
+  // Toms River
+  "Tom's Wondrous Team": "Toms River",
+  "PC Principal": "Toms River",
+  // StickyBanditz
+  "PaigeVanZant#1Fan": "StickyBanditz",
+  "Space Jam": "StickyBanditz",
+  "T-Baggers": "StickyBanditz",
+  "Sticky Bandits": "StickyBanditz",
+  // Hideo Lobo
+  "Blood and Semien": "Hideo Lobo",
+  "-71.14° to Freedom": "Hideo Lobo",
+  "Close Shave Barbasol": "Hideo Lobo",
+  "The Lusty Lobos": "Hideo Lobo",
+  // Dead Horses
+  "Headshavers": "Dead Horses",
+  // Miggy's Niggys
+  "Rice & Beans": "Miggy's Niggys",
+  // Alcantara's Assasins
+  "Fieldgoal Kickers": "Alcantara's Assasins",
+}
+
+function normTeam(name) {
+  return name ? (FRANCHISE_ALIASES[name] || name) : name
+}
+
 // ─── Helpers ───────────────────────────────────────────────────────────────
 
 function formatDate(ts) {
@@ -234,7 +281,7 @@ function howLabel(entry) {
     return `Drafted R${entry.round}P${entry.pick}`
   }
   if (entry.how === 'trade') {
-    return `Traded from ${entry.from_team || '?'}`
+    return `Traded from ${normTeam(entry.from_team) || '?'}`
   }
   if (entry.how === 'add') {
     return 'Added (waivers/FA)'
@@ -276,8 +323,8 @@ function buildPlayerSeasons(leagueEntries) {
     result.push({
       season,
       entries,
-      startTeam: firstEntry.team,
-      endTeam: lastTeam,
+      startTeam: normTeam(firstEntry.team),
+      endTeam: normTeam(lastTeam),
       kept,
     })
   }
@@ -312,11 +359,11 @@ function computeRostersForLeague(allData, leagueName, season) {
           rosters[t]?.delete(playerName)
         }
       } else {
-        const team = entry.team
+        const team = normTeam(entry.team)
         if (!rosters[team]) rosters[team] = new Set()
         // If traded, remove from previous team
         if (entry.how === 'trade' && entry.from_team) {
-          rosters[entry.from_team]?.delete(playerName)
+          rosters[normTeam(entry.from_team)]?.delete(playerName)
         }
         rosters[team].add(playerName)
       }
@@ -355,8 +402,8 @@ function getTeamsInLeague(allData, leagueName) {
   for (const leagues of Object.values(allData)) {
     if (!leagues[leagueName]) continue
     for (const entry of leagues[leagueName]) {
-      if (entry.team) teams.add(entry.team)
-      if (entry.from_team) teams.add(entry.from_team)
+      if (entry.team) teams.add(normTeam(entry.team))
+      if (entry.from_team) teams.add(normTeam(entry.from_team))
     }
   }
   return Array.from(teams).sort()
@@ -369,15 +416,17 @@ function buildFranchiseData(allData, leagueName, teamName) {
     if (!leagues[leagueName]) continue
     for (const entry of leagues[leagueName]) {
       const s = entry.season
+      const team = normTeam(entry.team)
+      const fromTeam = normTeam(entry.from_team)
       if (!seasons[s]) seasons[s] = { drafted: [], added: [], tradedIn: [], tradedOut: [], dropped: [] }
-      if (entry.team === teamName) {
+      if (team === teamName) {
         if (entry.how === 'drafted') seasons[s].drafted.push(playerName)
         else if (entry.how === 'add') seasons[s].added.push(playerName)
-        else if (entry.how === 'trade') seasons[s].tradedIn.push({ player: playerName, from: entry.from_team })
+        else if (entry.how === 'trade') seasons[s].tradedIn.push({ player: playerName, from: fromTeam })
         else if (entry.how === 'drop') seasons[s].dropped.push(playerName)
       }
-      if (entry.from_team === teamName && entry.how === 'trade') {
-        seasons[s].tradedOut.push({ player: playerName, to: entry.team })
+      if (fromTeam === teamName && entry.how === 'trade') {
+        seasons[s].tradedOut.push({ player: playerName, to: team })
       }
     }
   }
@@ -448,11 +497,11 @@ function PlayerTimeline({ playerName, leagues }) {
                       <Badge type={badgeType} />
                       {entry.how !== 'drop' && (
                         <span style={{ fontWeight: entry.how === 'drafted' ? 600 : 400, color: '#f1f5f9' }}>
-                          {entry.team}
+                          {normTeam(entry.team)}
                         </span>
                       )}
                       {entry.how === 'drop' && (
-                        <span style={{ color: '#f87171' }}>Dropped by {entry.team}</span>
+                        <span style={{ color: '#f87171' }}>Dropped by {normTeam(entry.team)}</span>
                       )}
                       <span style={S.secondary}>{howLabel(entry)}</span>
                       {entry.timestamp && <span style={S.muted}>{formatDate(entry.timestamp)}</span>}
@@ -462,7 +511,7 @@ function PlayerTimeline({ playerName, leagues }) {
               }
 
               // If traded mid-season (multiple teams), show the team flow
-              const teams = [...new Set(sEntries.filter(e => e.how !== 'drop').map(e => e.team))]
+              const teams = [...new Set(sEntries.filter(e => e.how !== 'drop').map(e => normTeam(e.team)))]
               const showFlow = teams.length > 1
 
               return (
@@ -518,7 +567,7 @@ function PlayersTab({ data, isMobile }) {
         latestSeason = maxSeason
         const seasonEntries = entries.filter(e => e.season === maxSeason)
         const last = seasonEntries[seasonEntries.length - 1]
-        currentTeam = last.how === 'drop' ? null : last.team
+        currentTeam = last.how === 'drop' ? null : normTeam(last.team)
       }
     }
 
@@ -657,9 +706,9 @@ function TransactionsTab({ data, activeLeague }) {
                 <div key={idx} style={S.txDetail}>
                   <Badge type="TRADE" />
                   <span style={{ fontWeight: 600, color: '#f1f5f9' }}>{item.playerName}</span>
-                  <span style={S.arrow}>{item.entry.from_team || '?'}</span>
+                  <span style={S.arrow}>{normTeam(item.entry.from_team) || '?'}</span>
                   <span style={S.arrow}>→</span>
-                  <span style={{ color: '#84cc16' }}>{item.entry.team}</span>
+                  <span style={{ color: '#84cc16' }}>{normTeam(item.entry.team)}</span>
                   {item.entry.season && <span style={S.muted}>({item.entry.season})</span>}
                 </div>
               ))}
@@ -747,8 +796,9 @@ function TradesTab({ data, activeLeague }) {
     // Group players by receiving team
     const received = {}
     for (const { playerName, entry } of tx.tradeItems) {
-      if (!received[entry.team]) received[entry.team] = []
-      received[entry.team].push({ player: playerName, from: entry.from_team })
+      const team = normTeam(entry.team)
+      if (!received[team]) received[team] = []
+      received[team].push({ player: playerName, from: normTeam(entry.from_team) })
     }
     const teams = Object.keys(received)
     const season = tx.tradeItems[0]?.entry.season
