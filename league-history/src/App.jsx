@@ -1463,11 +1463,6 @@ function LeaderboardTab({ data, activeLeague, keepers }) {
 
   const RECORD_CARDS = records ? [
     {
-      label: 'Most Drafted',
-      rec: records.mostDrafted,
-      stat: r => `drafted ${r.count} time${r.count !== 1 ? 's' : ''}`,
-    },
-    {
       label: 'Most Traded',
       rec: records.mostTraded,
       stat: r => `traded ${r.count} time${r.count !== 1 ? 's' : ''}`,
