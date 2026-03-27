@@ -601,7 +601,7 @@
       }
     ]
   },
-  "José Reyes": {
+  "Jos\u00e9 Reyes": {
     "LXG": [
       {
         "season": 2009,
@@ -1100,7 +1100,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1462150908"
@@ -1114,7 +1114,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1465223509"
@@ -1203,7 +1203,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": "Nighthawks",
         "how": "trade",
         "timestamp": "1469036727"
@@ -1211,7 +1211,7 @@
       {
         "season": 2016,
         "team": "gamma's Team",
-        "from_team": "-71.14° to Freedom",
+        "from_team": "-71.14\u00b0 to Freedom",
         "how": "trade",
         "timestamp": "1470583483"
       },
@@ -1275,7 +1275,7 @@
       }
     ]
   },
-  "Adrián González": {
+  "Adri\u00e1n Gonz\u00e1lez": {
     "LXG": [
       {
         "season": 2009,
@@ -2577,7 +2577,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 1,
         "pick": 2,
@@ -2586,7 +2586,7 @@
       {
         "season": 2016,
         "team": "Team Underdog",
-        "from_team": "-71.14° to Freedom",
+        "from_team": "-71.14\u00b0 to Freedom",
         "how": "trade",
         "timestamp": "1469068533"
       },
@@ -3257,7 +3257,7 @@
       }
     ]
   },
-  "Carlos Beltrán": {
+  "Carlos Beltr\u00e1n": {
     "LXG": [
       {
         "season": 2009,
@@ -3853,31 +3853,122 @@
       }
     ]
   },
-  "Félix Hernández": {
+  "F\u00e9lix Hern\u00e1ndez": {
     "LXG": [
       {
         "season": 2009,
         "team": "RedHawks",
         "how": "drafted",
         "round": 7,
-        "pick": 1,
+        "pick": 49,
         "timestamp": null
       },
       {
         "season": 2010,
         "team": "Nighthawks",
         "how": "drafted",
-        "round": null,
-        "pick": null,
+        "round": 5,
+        "pick": 38,
+        "timestamp": null
+      },
+      {
+        "season": 2011,
+        "team": "Nighthawks",
+        "how": "drafted",
+        "round": 4,
+        "pick": 38,
+        "timestamp": null
+      },
+      {
+        "season": 2012,
+        "team": "Nighthawks",
+        "how": "drafted",
+        "round": 10,
+        "pick": 99,
+        "timestamp": null
+      },
+      {
+        "season": 2013,
+        "team": "Nighthawks",
+        "how": "drafted",
+        "round": 14,
+        "pick": 140,
+        "timestamp": null
+      },
+      {
+        "season": 2014,
+        "team": "Nighthawks",
+        "how": "drafted",
+        "round": 3,
+        "pick": 25,
+        "timestamp": null
+      },
+      {
+        "season": 2014,
+        "team": "Somerville Union",
+        "from_team": "Nighthawks",
+        "how": "trade",
+        "timestamp": "1393809835"
+      },
+      {
+        "season": 2015,
+        "team": "Somerville Union",
+        "how": "drafted",
+        "round": 2,
+        "pick": 18,
         "timestamp": null
       },
       {
         "season": 2016,
         "team": "JP Licks",
         "how": "drafted",
-        "round": null,
-        "pick": null,
+        "round": 12,
+        "pick": 138,
         "timestamp": null
+      },
+      {
+        "season": 2017,
+        "team": "T-Baggers",
+        "how": "drafted",
+        "round": 11,
+        "pick": 126,
+        "timestamp": null
+      },
+      {
+        "season": 2018,
+        "team": "Nighthawks",
+        "how": "drafted",
+        "round": 25,
+        "pick": 296,
+        "timestamp": null
+      },
+      {
+        "season": 2018,
+        "team": "Team Underdog",
+        "from_team": null,
+        "how": "add",
+        "timestamp": "1524757802"
+      },
+      {
+        "season": 2018,
+        "team": "Sticky Bandits",
+        "from_team": null,
+        "how": "add",
+        "timestamp": "1528233374"
+      },
+      {
+        "season": 2021,
+        "team": "Nighthawks",
+        "from_team": null,
+        "how": "add",
+        "timestamp": "1632331180"
+      },
+      {
+        "season": 2022,
+        "team": "Nighthawks",
+        "from_team": null,
+        "how": "add",
+        "timestamp": "1663562371"
       }
     ]
   },
@@ -4903,7 +4994,7 @@
       }
     ]
   },
-  "Edinson Vólquez": {
+  "Edinson V\u00f3lquez": {
     "LXG": [
       {
         "season": 2009,
@@ -5247,7 +5338,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1466770737"
@@ -6061,7 +6152,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 14,
         "pick": 167,
@@ -6177,7 +6268,7 @@
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1758074837"
@@ -6699,7 +6790,7 @@
       }
     ]
   },
-  "Victor Martínez": {
+  "Victor Mart\u00ednez": {
     "LXG": [
       {
         "season": 2009,
@@ -6751,7 +6842,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 20,
         "pick": 239,
@@ -7346,7 +7437,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1466441628"
@@ -7632,7 +7723,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 20,
         "pick": 231,
@@ -7640,7 +7731,7 @@
       },
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1753759742"
@@ -7945,7 +8036,7 @@
       }
     ]
   },
-  "Francisco Rodríguez": {
+  "Francisco Rodr\u00edguez": {
     "LXG": [
       {
         "season": 2009,
@@ -8960,7 +9051,7 @@
       }
     ]
   },
-  "Edwin Encarnación": {
+  "Edwin Encarnaci\u00f3n": {
     "LXG": [
       {
         "season": 2009,
@@ -9924,7 +10015,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1465994196"
@@ -10968,7 +11059,7 @@
       }
     ]
   },
-  "Robinson Canó": {
+  "Robinson Can\u00f3": {
     "LXG": [
       {
         "season": 2009,
@@ -11171,7 +11262,7 @@
       }
     ]
   },
-  "Ubaldo Jiménez": {
+  "Ubaldo Jim\u00e9nez": {
     "LXG": [
       {
         "season": 2009,
@@ -11542,7 +11633,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1466216949"
@@ -12306,7 +12397,7 @@
       }
     ]
   },
-  "Adrián Béltre": {
+  "Adri\u00e1n B\u00e9ltre": {
     "LXG": [
       {
         "season": 2009,
@@ -12489,7 +12580,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1467030478"
@@ -13073,7 +13164,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 28,
         "pick": 336,
@@ -14620,7 +14711,7 @@
       }
     ]
   },
-  "Carlos González": {
+  "Carlos Gonz\u00e1lez": {
     "LXG": [
       {
         "season": 2009,
@@ -14707,7 +14798,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": "JP Licks",
         "how": "trade",
         "timestamp": "1470608748"
@@ -15705,21 +15796,21 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1743129475"
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1747661846"
       },
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1751232928"
@@ -15733,7 +15824,7 @@
       }
     ]
   },
-  "Asdrúbal Cabrera": {
+  "Asdr\u00fabal Cabrera": {
     "LXG": [
       {
         "season": 2009,
@@ -16218,7 +16309,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 6,
         "pick": 62,
@@ -16568,7 +16659,7 @@
       }
     ]
   },
-  "Jhoulys Chacín": {
+  "Jhoulys Chac\u00edn": {
     "LXG": [
       {
         "season": 2009,
@@ -16609,7 +16700,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1460706995"
@@ -17560,7 +17651,7 @@
       }
     ]
   },
-  "Martín Prado": {
+  "Mart\u00edn Prado": {
     "LXG": [
       {
         "season": 2009,
@@ -18073,7 +18164,7 @@
       }
     ]
   },
-  "Franklin Gutiérrez": {
+  "Franklin Guti\u00e9rrez": {
     "LXG": [
       {
         "season": 2009,
@@ -18761,7 +18852,7 @@
       }
     ]
   },
-  "Gio González": {
+  "Gio Gonz\u00e1lez": {
     "LXG": [
       {
         "season": 2009,
@@ -19411,7 +19502,7 @@
       }
     ]
   },
-  "Sean Rodríguez": {
+  "Sean Rodr\u00edguez": {
     "LXG": [
       {
         "season": 2009,
@@ -20657,7 +20748,7 @@
       }
     ]
   },
-  "Oliver Pérez": {
+  "Oliver P\u00e9rez": {
     "LXG": [
       {
         "season": 2009,
@@ -20863,7 +20954,7 @@
       }
     ]
   },
-  "Emilio Bonifácio": {
+  "Emilio Bonif\u00e1cio": {
     "LXG": [
       {
         "season": 2009,
@@ -21821,7 +21912,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 3,
         "pick": 26,
@@ -21830,7 +21921,7 @@
       {
         "season": 2016,
         "team": "Nighthawks",
-        "from_team": "-71.14° to Freedom",
+        "from_team": "-71.14\u00b0 to Freedom",
         "how": "trade",
         "timestamp": "1457463903"
       },
@@ -21965,7 +22056,7 @@
       }
     ]
   },
-  "Hanley Ramírez": {
+  "Hanley Ram\u00edrez": {
     "LXG": [
       {
         "season": 2010,
@@ -23012,7 +23103,7 @@
       }
     ]
   },
-  "Pedro Álvarez": {
+  "Pedro \u00c1lvarez": {
     "LXG": [
       {
         "season": 2010,
@@ -23063,7 +23154,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1457439715"
@@ -23730,7 +23821,7 @@
       }
     ]
   },
-  "Martín Pérez": {
+  "Mart\u00edn P\u00e9rez": {
     "LXG": [
       {
         "season": 2010,
@@ -24606,7 +24697,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 3,
         "pick": 30,
@@ -25251,7 +25342,7 @@
       }
     ]
   },
-  "Iván Nova": {
+  "Iv\u00e1n Nova": {
     "LXG": [
       {
         "season": 2010,
@@ -26403,7 +26494,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 17,
         "pick": 197,
@@ -27099,7 +27190,7 @@
       }
     ]
   },
-  "Aníbal Sánchez": {
+  "An\u00edbal S\u00e1nchez": {
     "LXG": [
       {
         "season": 2010,
@@ -27172,7 +27263,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1470614031"
@@ -27338,7 +27429,7 @@
       }
     ]
   },
-  "José Bautista": {
+  "Jos\u00e9 Bautista": {
     "LXG": [
       {
         "season": 2010,
@@ -28334,14 +28425,14 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1468803441"
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1469068954"
@@ -28362,7 +28453,7 @@
       }
     ]
   },
-  "Jaime García": {
+  "Jaime Garc\u00eda": {
     "LXG": [
       {
         "season": 2010,
@@ -28517,7 +28608,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1463353425"
@@ -28626,7 +28717,7 @@
       }
     ]
   },
-  "Carlos Gómez": {
+  "Carlos G\u00f3mez": {
     "LXG": [
       {
         "season": 2010,
@@ -29171,7 +29262,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 3,
         "pick": 25,
@@ -29179,7 +29270,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 3,
         "pick": 32,
@@ -29768,7 +29859,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1466091475"
@@ -30050,7 +30141,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1460944210"
@@ -30238,7 +30329,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "from_team": null,
         "how": "add",
         "timestamp": "1751264172"
@@ -30795,7 +30886,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1467581686"
@@ -31261,7 +31352,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 18,
         "pick": 215,
@@ -31575,7 +31666,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 18,
         "pick": 209,
@@ -31779,7 +31870,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 7,
         "pick": 82,
@@ -31996,7 +32087,7 @@
       }
     ]
   },
-  "Yoenis Céspedes": {
+  "Yoenis C\u00e9spedes": {
     "LXG": [
       {
         "season": 2012,
@@ -32236,7 +32327,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 14,
         "pick": 158,
@@ -32244,7 +32335,7 @@
       },
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "from_team": null,
         "how": "add",
         "timestamp": "1753245174"
@@ -32727,7 +32818,7 @@
     "SouthOssetian": [
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 19,
         "pick": 224,
@@ -33355,7 +33446,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 2,
         "pick": 14,
@@ -33610,7 +33701,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 4,
         "pick": 43,
@@ -33618,7 +33709,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 4,
         "pick": 38,
@@ -33683,7 +33774,7 @@
       }
     ]
   },
-  "Miguel Sanó": {
+  "Miguel San\u00f3": {
     "LXG": [
       {
         "season": 2012,
@@ -33940,7 +34031,7 @@
       }
     ]
   },
-  "Manny Bañuelos": {
+  "Manny Ba\u00f1uelos": {
     "LXG": [
       {
         "season": 2012,
@@ -34605,7 +34696,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1748183541"
@@ -34881,7 +34972,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 6,
         "pick": 67,
@@ -34889,7 +34980,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 10,
         "pick": 110,
@@ -35131,7 +35222,7 @@
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 18,
         "pick": 214,
@@ -35267,7 +35358,7 @@
       }
     ]
   },
-  "Avisaíl García": {
+  "Avisa\u00edl Garc\u00eda": {
     "LXG": [
       {
         "season": 2012,
@@ -35532,7 +35623,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1471190571"
@@ -36291,7 +36382,7 @@
       }
     ]
   },
-  "Rubén Tejada": {
+  "Rub\u00e9n Tejada": {
     "LXG": [
       {
         "season": 2012,
@@ -36866,7 +36957,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1471868067"
@@ -37585,7 +37676,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 19,
         "pick": 227,
@@ -37931,7 +38022,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 8,
         "pick": 95,
@@ -38006,7 +38097,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": "Nighthawks",
         "how": "trade",
         "timestamp": "1469036727"
@@ -38110,7 +38201,7 @@
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1757285444"
@@ -38804,7 +38895,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 12,
         "pick": 134,
@@ -39779,7 +39870,7 @@
       }
     ]
   },
-  "Bartolo Colón": {
+  "Bartolo Col\u00f3n": {
     "LXG": [
       {
         "season": 2012,
@@ -40111,7 +40202,7 @@
       }
     ]
   },
-  "Héctor Santiago": {
+  "H\u00e9ctor Santiago": {
     "LXG": [
       {
         "season": 2012,
@@ -40581,7 +40672,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 17,
         "pick": 203,
@@ -40685,7 +40776,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 19,
         "pick": 218,
@@ -40694,7 +40785,7 @@
       {
         "season": 2016,
         "team": "Dynasty",
-        "from_team": "-71.14° to Freedom",
+        "from_team": "-71.14\u00b0 to Freedom",
         "how": "trade",
         "timestamp": "1469811730"
       },
@@ -41126,7 +41217,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 5,
         "pick": 50,
@@ -41312,7 +41403,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 19,
         "pick": 227,
@@ -41754,7 +41845,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 11,
         "pick": 131,
@@ -41762,7 +41853,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 8,
         "pick": 86,
@@ -41937,7 +42028,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 16,
         "pick": 185,
@@ -42136,7 +42227,7 @@
       }
     ]
   },
-  "Erasmo Ramírez": {
+  "Erasmo Ram\u00edrez": {
     "LXG": [
       {
         "season": 2013,
@@ -42664,7 +42755,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1756603435"
@@ -42826,7 +42917,7 @@
       }
     ]
   },
-  "Joaquín Benoit": {
+  "Joaqu\u00edn Benoit": {
     "LXG": [
       {
         "season": 2013,
@@ -43725,7 +43816,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 10,
         "pick": 111,
@@ -43814,7 +43905,7 @@
       }
     ]
   },
-  "Javier Báez": {
+  "Javier B\u00e1ez": {
     "LXG": [
       {
         "season": 2014,
@@ -44157,7 +44248,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 20,
         "pick": 234,
@@ -44165,7 +44256,7 @@
       },
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1754939172"
@@ -44307,7 +44398,7 @@
       }
     ]
   },
-  "José Abreu": {
+  "Jos\u00e9 Abreu": {
     "LXG": [
       {
         "season": 2014,
@@ -44461,7 +44552,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 28,
         "pick": 334,
@@ -44766,7 +44857,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 11,
         "pick": 121,
@@ -44919,7 +45010,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": "Nighthawks",
         "how": "trade",
         "timestamp": "1462287271"
@@ -45589,7 +45680,7 @@
       }
     ]
   },
-  "Carlos Martínez": {
+  "Carlos Mart\u00ednez": {
     "LXG": [
       {
         "season": 2014,
@@ -46553,7 +46644,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1459715117"
@@ -46924,14 +47015,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1751787344"
       },
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1754277670"
@@ -47253,7 +47344,7 @@
       }
     ]
   },
-  "Julio Urías": {
+  "Julio Ur\u00edas": {
     "LXG": [
       {
         "season": 2014,
@@ -47273,7 +47364,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 12,
         "pick": 134,
@@ -47633,7 +47724,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 6,
         "pick": 66,
@@ -47756,7 +47847,7 @@
       }
     ]
   },
-  "Héctor Rondón": {
+  "H\u00e9ctor Rond\u00f3n": {
     "LXG": [
       {
         "season": 2014,
@@ -47957,7 +48048,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1460337169"
@@ -48670,7 +48761,7 @@
       }
     ]
   },
-  "Roenis Elías": {
+  "Roenis El\u00edas": {
     "LXG": [
       {
         "season": 2014,
@@ -49040,21 +49131,21 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1467906136"
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1468899683"
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1470412415"
@@ -49095,7 +49186,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 4,
         "pick": 38,
@@ -49192,7 +49283,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 4,
         "pick": 39,
@@ -49200,7 +49291,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 9,
         "pick": 106,
@@ -49675,7 +49766,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 14,
         "pick": 168,
@@ -49950,7 +50041,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 6,
         "pick": 63,
@@ -49958,7 +50049,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 6,
         "pick": 63,
@@ -50162,7 +50253,7 @@
       }
     ]
   },
-  "Arismendy Alcántara": {
+  "Arismendy Alc\u00e1ntara": {
     "LXG": [
       {
         "season": 2014,
@@ -50452,7 +50543,7 @@
       }
     ]
   },
-  "Eugenio Suárez": {
+  "Eugenio Su\u00e1rez": {
     "LXG": [
       {
         "season": 2014,
@@ -50650,7 +50741,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 19,
         "pick": 220,
@@ -50852,7 +50943,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1468421930"
@@ -51664,7 +51755,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1742957255"
@@ -51697,7 +51788,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 7,
         "pick": 74,
@@ -51821,14 +51912,14 @@
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1748183671"
       },
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1751075374"
@@ -52606,7 +52697,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1459714679"
@@ -53002,7 +53093,7 @@
       }
     ]
   },
-  "Yoán Moncada": {
+  "Yo\u00e1n Moncada": {
     "LXG": [
       {
         "season": 2015,
@@ -53134,7 +53225,7 @@
       }
     ]
   },
-  "Carlos Rodón": {
+  "Carlos Rod\u00f3n": {
     "LXG": [
       {
         "season": 2015,
@@ -53146,7 +53237,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 11,
         "pick": 122,
@@ -53249,7 +53340,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 13,
         "pick": 145,
@@ -53257,7 +53348,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 17,
         "pick": 203,
@@ -53307,7 +53398,7 @@
       }
     ]
   },
-  "Yasmany Tomás": {
+  "Yasmany Tom\u00e1s": {
     "LXG": [
       {
         "season": 2015,
@@ -53522,7 +53613,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 5,
         "pick": 54,
@@ -53530,7 +53621,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 3,
         "pick": 35,
@@ -53815,7 +53906,7 @@
       }
     ]
   },
-  "José Peraza": {
+  "Jos\u00e9 Peraza": {
     "LXG": [
       {
         "season": 2015,
@@ -53933,7 +54024,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": "Nighthawks",
         "how": "trade",
         "timestamp": "1457463903"
@@ -54292,14 +54383,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1748781087"
       }
     ]
   },
-  "Odúbel Herrera": {
+  "Od\u00fabel Herrera": {
     "LXG": [
       {
         "season": 2015,
@@ -55415,7 +55506,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 9,
         "pick": 98,
@@ -55855,7 +55946,7 @@
       }
     ]
   },
-  "José Berríos": {
+  "Jos\u00e9 Berr\u00edos": {
     "LXG": [
       {
         "season": 2015,
@@ -55981,7 +56072,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 10,
         "pick": 110,
@@ -56100,14 +56191,14 @@
       },
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": "ALP",
         "how": "trade",
         "timestamp": "1754208873"
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 2,
         "pick": 17,
@@ -56211,7 +56302,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1470579164"
@@ -56424,14 +56515,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "from_team": null,
         "how": "add",
         "timestamp": "1743371971"
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1774489721"
@@ -56586,7 +56677,7 @@
       }
     ]
   },
-  "César Hernández": {
+  "C\u00e9sar Hern\u00e1ndez": {
     "LXG": [
       {
         "season": 2015,
@@ -56839,7 +56930,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 1,
         "pick": 6,
@@ -56847,7 +56938,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 1,
         "pick": 11,
@@ -57581,7 +57672,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 11,
         "pick": 128,
@@ -57600,7 +57691,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 15,
         "pick": 179,
@@ -58101,7 +58192,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 11,
         "pick": 127,
@@ -58435,7 +58526,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 8,
         "pick": 86,
@@ -58785,7 +58876,7 @@
       }
     ]
   },
-  "Williams Pérez": {
+  "Williams P\u00e9rez": {
     "LXG": [
       {
         "season": 2015,
@@ -58821,7 +58912,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1461431518"
@@ -59025,7 +59116,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1472142340"
@@ -59321,7 +59412,7 @@
       }
     ]
   },
-  "Chi Chi González": {
+  "Chi Chi Gonz\u00e1lez": {
     "LXG": [
       {
         "season": 2015,
@@ -59664,7 +59755,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": "Nighthawks",
         "how": "trade",
         "timestamp": "1468021476"
@@ -59784,14 +59875,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1748709907"
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1750039758"
@@ -59846,7 +59937,7 @@
       }
     ]
   },
-  "Miguel González": {
+  "Miguel Gonz\u00e1lez": {
     "LXG": [
       {
         "season": 2015,
@@ -60267,7 +60358,7 @@
       }
     ]
   },
-  "Alex Colomé": {
+  "Alex Colom\u00e9": {
     "LXG": [
       {
         "season": 2015,
@@ -60645,7 +60736,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 16,
         "pick": 191,
@@ -60826,7 +60917,7 @@
       }
     ]
   },
-  "Adeiny Hechavarría": {
+  "Adeiny Hechavarr\u00eda": {
     "LXG": [
       {
         "season": 2015,
@@ -60862,7 +60953,7 @@
       }
     ]
   },
-  "Roberto Pérez": {
+  "Roberto P\u00e9rez": {
     "LXG": [
       {
         "season": 2015,
@@ -61017,7 +61108,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1747786485"
@@ -61415,7 +61506,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 3,
         "pick": 35,
@@ -61423,7 +61514,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 4,
         "pick": 39,
@@ -61575,7 +61666,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 11,
         "pick": 130,
@@ -61874,7 +61965,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 5,
         "pick": 58,
@@ -61894,7 +61985,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1460904731"
@@ -62253,7 +62344,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 17,
         "pick": 194,
@@ -62261,7 +62352,7 @@
       }
     ]
   },
-  "José De León": {
+  "Jos\u00e9 De Le\u00f3n": {
     "LXG": [
       {
         "season": 2016,
@@ -62351,7 +62442,7 @@
       }
     ]
   },
-  "Christian Vázquez": {
+  "Christian V\u00e1zquez": {
     "LXG": [
       {
         "season": 2016,
@@ -62550,7 +62641,7 @@
     "LXG": [
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "how": "drafted",
         "round": 28,
         "pick": 335,
@@ -62823,7 +62914,7 @@
       }
     ]
   },
-  "Albert Suárez": {
+  "Albert Su\u00e1rez": {
     "LXG": [
       {
         "season": 2016,
@@ -63187,7 +63278,7 @@
     "LXG": [
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1473682323"
@@ -63282,7 +63373,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 14,
         "pick": 168,
@@ -63435,7 +63526,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1744046845"
@@ -63613,7 +63704,7 @@
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 16,
         "pick": 190,
@@ -63810,7 +63901,7 @@
     "LXG": [
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1470657552"
@@ -63994,7 +64085,7 @@
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1757880232"
@@ -64052,7 +64143,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": "gamma's Team",
         "how": "trade",
         "timestamp": "1470583483"
@@ -64313,7 +64404,7 @@
       }
     ]
   },
-  "Gary Sánchez": {
+  "Gary S\u00e1nchez": {
     "LXG": [
       {
         "season": 2016,
@@ -64442,7 +64533,7 @@
       }
     ]
   },
-  "Hernán Pérez": {
+  "Hern\u00e1n P\u00e9rez": {
     "LXG": [
       {
         "season": 2016,
@@ -64467,11 +64558,11 @@
       }
     ]
   },
-  "Edwin Díaz": {
+  "Edwin D\u00edaz": {
     "LXG": [
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1470156694"
@@ -64724,7 +64815,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 19,
         "pick": 223,
@@ -64740,7 +64831,7 @@
       }
     ]
   },
-  "Carlos Estévez": {
+  "Carlos Est\u00e9vez": {
     "LXG": [
       {
         "season": 2016,
@@ -64797,7 +64888,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 13,
         "pick": 152,
@@ -64895,7 +64986,7 @@
       }
     ]
   },
-  "José Ramírez": {
+  "Jos\u00e9 Ram\u00edrez": {
     "LXG": [
       {
         "season": 2016,
@@ -65249,7 +65340,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 18,
         "pick": 206,
@@ -65429,7 +65520,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 16,
         "pick": 187,
@@ -65437,7 +65528,7 @@
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1754166512"
@@ -65544,7 +65635,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1467906235"
@@ -65599,7 +65690,7 @@
       }
     ]
   },
-  "Sandy León": {
+  "Sandy Le\u00f3n": {
     "LXG": [
       {
         "season": 2016,
@@ -65702,7 +65793,7 @@
     "LXG": [
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1467296169"
@@ -65869,7 +65960,7 @@
       }
     ]
   },
-  "Steven Moyà": {
+  "Steven Moy\u00e0": {
     "LXG": [
       {
         "season": 2016,
@@ -66153,7 +66244,7 @@
     "LXG": [
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1466770639"
@@ -66410,7 +66501,7 @@
     "LXG": [
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1464999564"
@@ -66555,7 +66646,7 @@
       }
     ]
   },
-  "Eduardo Núñez": {
+  "Eduardo N\u00fa\u00f1ez": {
     "LXG": [
       {
         "season": 2016,
@@ -66850,7 +66941,7 @@
       },
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1463569909"
@@ -66985,7 +67076,7 @@
     "LXG": [
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1462375617"
@@ -66999,11 +67090,11 @@
       }
     ]
   },
-  "Aledmys Díaz": {
+  "Aledmys D\u00edaz": {
     "LXG": [
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1460904433"
@@ -67265,7 +67356,7 @@
       }
     ]
   },
-  "Jeanmar Gómez": {
+  "Jeanmar G\u00f3mez": {
     "LXG": [
       {
         "season": 2016,
@@ -67363,7 +67454,7 @@
     "LXG": [
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1460161545"
@@ -67435,7 +67526,7 @@
       }
     ]
   },
-  "Sócrates Brito": {
+  "S\u00f3crates Brito": {
     "LXG": [
       {
         "season": 2016,
@@ -67450,7 +67541,7 @@
     "LXG": [
       {
         "season": 2016,
-        "team": "-71.14° to Freedom",
+        "team": "-71.14\u00b0 to Freedom",
         "from_team": null,
         "how": "add",
         "timestamp": "1459446588"
@@ -67530,7 +67621,7 @@
       }
     ]
   },
-  "Arodys Vizcaíno": {
+  "Arodys Vizca\u00edno": {
     "LXG": [
       {
         "season": 2016,
@@ -67703,7 +67794,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 5,
         "pick": 49,
@@ -68367,7 +68458,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 9,
         "pick": 102,
@@ -68644,7 +68735,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 12,
         "pick": 135,
@@ -68782,7 +68873,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1749509576"
@@ -69002,7 +69093,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 1,
         "pick": 11,
@@ -69010,7 +69101,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 1,
         "pick": 10,
@@ -69103,7 +69194,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 2,
         "pick": 19,
@@ -69111,7 +69202,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 2,
         "pick": 14,
@@ -69119,7 +69210,7 @@
       }
     ]
   },
-  "Héctor Neris": {
+  "H\u00e9ctor Neris": {
     "LXG": [
       {
         "season": 2017,
@@ -69285,7 +69376,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 16,
         "pick": 183,
@@ -69293,7 +69384,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 11,
         "pick": 131,
@@ -69319,7 +69410,7 @@
       }
     ]
   },
-  "José Martínez": {
+  "Jos\u00e9 Mart\u00ednez": {
     "LXG": [
       {
         "season": 2017,
@@ -69360,7 +69451,7 @@
       }
     ]
   },
-  "Reynaldo López": {
+  "Reynaldo L\u00f3pez": {
     "LXG": [
       {
         "season": 2017,
@@ -69574,7 +69665,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 4,
         "pick": 38,
@@ -69828,7 +69919,7 @@
       }
     ]
   },
-  "Manny Piña": {
+  "Manny Pi\u00f1a": {
     "LXG": [
       {
         "season": 2017,
@@ -70007,7 +70098,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1744937680"
@@ -70192,7 +70283,7 @@
       }
     ]
   },
-  "Yandy Díaz": {
+  "Yandy D\u00edaz": {
     "LXG": [
       {
         "season": 2017,
@@ -70502,7 +70593,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 25,
         "pick": 294,
@@ -70824,7 +70915,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 21,
         "pick": 250,
@@ -70839,14 +70930,14 @@
       },
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1754122518"
       }
     ]
   },
-  "José Ureña": {
+  "Jos\u00e9 Ure\u00f1a": {
     "LXG": [
       {
         "season": 2017,
@@ -71263,7 +71354,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 25,
         "pick": 298,
@@ -71764,7 +71855,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 8,
         "pick": 87,
@@ -71891,7 +71982,7 @@
       }
     ]
   },
-  "Ronald Acuña Jr.": {
+  "Ronald Acu\u00f1a Jr.": {
     "LXG": [
       {
         "season": 2017,
@@ -71976,7 +72067,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 1,
         "pick": 10,
@@ -71984,7 +72075,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 1,
         "pick": 2,
@@ -72416,7 +72507,7 @@
       }
     ]
   },
-  "Martín Maldonado": {
+  "Mart\u00edn Maldonado": {
     "LXG": [
       {
         "season": 2017,
@@ -72539,7 +72630,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 15,
         "pick": 174,
@@ -72732,7 +72823,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 8,
         "pick": 86,
@@ -72759,7 +72850,7 @@
       }
     ]
   },
-  "Eloy Jiménez": {
+  "Eloy Jim\u00e9nez": {
     "LXG": [
       {
         "season": 2017,
@@ -72867,7 +72958,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1749855171"
@@ -72892,7 +72983,7 @@
       }
     ]
   },
-  "Felipe Vázquez": {
+  "Felipe V\u00e1zquez": {
     "LXG": [
       {
         "season": 2017,
@@ -73269,7 +73360,7 @@
       }
     ]
   },
-  "Germán Márquez": {
+  "Germ\u00e1n M\u00e1rquez": {
     "LXG": [
       {
         "season": 2017,
@@ -73795,7 +73886,7 @@
       }
     ]
   },
-  "JC Ramírez": {
+  "JC Ram\u00edrez": {
     "LXG": [
       {
         "season": 2017,
@@ -74393,7 +74484,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 13,
         "pick": 154,
@@ -74401,7 +74492,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 9,
         "pick": 104,
@@ -74487,7 +74578,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 1,
         "pick": 1,
@@ -74495,7 +74586,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 1,
         "pick": 8,
@@ -74610,7 +74701,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 10,
         "pick": 119,
@@ -74844,7 +74935,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1745266770"
@@ -75103,7 +75194,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1755356615"
@@ -75182,7 +75273,7 @@
       }
     ]
   },
-  "Teoscar Hernández": {
+  "Teoscar Hern\u00e1ndez": {
     "LXG": [
       {
         "season": 2018,
@@ -75259,7 +75350,7 @@
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 11,
         "pick": 123,
@@ -75345,7 +75436,7 @@
       }
     ]
   },
-  "Luis Urías": {
+  "Luis Ur\u00edas": {
     "LXG": [
       {
         "season": 2018,
@@ -75436,7 +75527,7 @@
       }
     ]
   },
-  "José Alvarado": {
+  "Jos\u00e9 Alvarado": {
     "LXG": [
       {
         "season": 2018,
@@ -75500,7 +75591,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1744001452"
@@ -75641,14 +75732,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1756081113"
       }
     ]
   },
-  "Ramón Laureano": {
+  "Ram\u00f3n Laureano": {
     "LXG": [
       {
         "season": 2018,
@@ -75907,7 +75998,7 @@
       }
     ]
   },
-  "Seranthony Domínguez": {
+  "Seranthony Dom\u00ednguez": {
     "LXG": [
       {
         "season": 2018,
@@ -75984,7 +76075,7 @@
     "SouthOssetian": [
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 25,
         "pick": 296,
@@ -76367,7 +76458,7 @@
       }
     ]
   },
-  "José Leclerc": {
+  "Jos\u00e9 Leclerc": {
     "LXG": [
       {
         "season": 2018,
@@ -77268,7 +77359,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 17,
         "pick": 200,
@@ -77360,7 +77451,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 4,
         "pick": 48,
@@ -77368,7 +77459,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 8,
         "pick": 89,
@@ -77376,7 +77467,7 @@
       }
     ]
   },
-  "Jesús Sánchez": {
+  "Jes\u00fas S\u00e1nchez": {
     "LXG": [
       {
         "season": 2018,
@@ -77725,7 +77816,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 12,
         "pick": 139,
@@ -77846,7 +77937,7 @@
       }
     ]
   },
-  "Dereck Rodríguez": {
+  "Dereck Rodr\u00edguez": {
     "LXG": [
       {
         "season": 2018,
@@ -77920,7 +78011,7 @@
       }
     ]
   },
-  "Yairo Muñoz": {
+  "Yairo Mu\u00f1oz": {
     "LXG": [
       {
         "season": 2018,
@@ -78046,7 +78137,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 17,
         "pick": 193,
@@ -78299,14 +78390,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1744241923"
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1750452377"
@@ -79134,7 +79225,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 19,
         "pick": 226,
@@ -79150,7 +79241,7 @@
       }
     ]
   },
-  "Yusniel Díaz": {
+  "Yusniel D\u00edaz": {
     "LXG": [
       {
         "season": 2018,
@@ -79286,7 +79377,7 @@
       }
     ]
   },
-  "Jesús Luzardo": {
+  "Jes\u00fas Luzardo": {
     "LXG": [
       {
         "season": 2018,
@@ -79385,7 +79476,7 @@
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 7,
         "pick": 75,
@@ -79510,14 +79601,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1742957313"
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1749401461"
@@ -79605,7 +79696,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 18,
         "pick": 216,
@@ -79683,7 +79774,7 @@
       }
     ]
   },
-  "Sixto Sánchez": {
+  "Sixto S\u00e1nchez": {
     "LXG": [
       {
         "season": 2018,
@@ -79839,7 +79930,7 @@
       }
     ]
   },
-  "Andrew Suárez": {
+  "Andrew Su\u00e1rez": {
     "LXG": [
       {
         "season": 2018,
@@ -80088,7 +80179,7 @@
       }
     ]
   },
-  "Enrique Hernández": {
+  "Enrique Hern\u00e1ndez": {
     "LXG": [
       {
         "season": 2018,
@@ -80166,7 +80257,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1742957109"
@@ -80258,7 +80349,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 4,
         "pick": 41,
@@ -80266,7 +80357,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "from_team": null,
         "how": "add",
         "timestamp": "1773246431"
@@ -80487,7 +80578,7 @@
       }
     ]
   },
-  "Domingo Germán": {
+  "Domingo Germ\u00e1n": {
     "LXG": [
       {
         "season": 2018,
@@ -80579,7 +80670,7 @@
       }
     ]
   },
-  "Jonathan Loáisiga": {
+  "Jonathan Lo\u00e1isiga": {
     "LXG": [
       {
         "season": 2018,
@@ -80722,7 +80813,7 @@
       },
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "from_team": null,
         "how": "add",
         "timestamp": "1743840127"
@@ -81015,7 +81106,7 @@
       }
     ]
   },
-  "Jesús Aguilar": {
+  "Jes\u00fas Aguilar": {
     "LXG": [
       {
         "season": 2018,
@@ -81192,7 +81283,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1751232824"
@@ -81493,7 +81584,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 14,
         "pick": 167,
@@ -81662,7 +81753,7 @@
       }
     ]
   },
-  "José Rondón": {
+  "Jos\u00e9 Rond\u00f3n": {
     "LXG": [
       {
         "season": 2018,
@@ -81673,7 +81764,7 @@
       }
     ]
   },
-  "Ronald Guzmán": {
+  "Ronald Guzm\u00e1n": {
     "LXG": [
       {
         "season": 2018,
@@ -81684,7 +81775,7 @@
       }
     ]
   },
-  "Gorkys Hernández": {
+  "Gorkys Hern\u00e1ndez": {
     "LXG": [
       {
         "season": 2018,
@@ -82440,7 +82531,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 1,
         "pick": 7,
@@ -82448,7 +82539,7 @@
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 1,
         "pick": 3,
@@ -82485,7 +82576,7 @@
       }
     ]
   },
-  "Yolmer Sánchez": {
+  "Yolmer S\u00e1nchez": {
     "LXG": [
       {
         "season": 2018,
@@ -82825,7 +82916,7 @@
       }
     ]
   },
-  "Jarlín García": {
+  "Jarl\u00edn Garc\u00eda": {
     "LXG": [
       {
         "season": 2018,
@@ -83272,7 +83363,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 13,
         "pick": 155,
@@ -83280,7 +83371,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 22,
         "pick": 257,
@@ -83728,7 +83819,7 @@
       }
     ]
   },
-  "Víctor Víctor Mesa": {
+  "V\u00edctor V\u00edctor Mesa": {
     "LXG": [
       {
         "season": 2019,
@@ -83740,7 +83831,7 @@
       }
     ]
   },
-  "Vidal Bruján": {
+  "Vidal Bruj\u00e1n": {
     "LXG": [
       {
         "season": 2019,
@@ -83965,7 +84056,7 @@
       }
     ]
   },
-  "Omar Narváez": {
+  "Omar Narv\u00e1ez": {
     "LXG": [
       {
         "season": 2019,
@@ -84088,7 +84179,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 14,
         "pick": 163,
@@ -84282,7 +84373,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1746211264"
@@ -84389,14 +84480,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1747616771"
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1750039606"
@@ -84607,7 +84698,7 @@
       }
     ]
   },
-  "Luis García Jr.": {
+  "Luis Garc\u00eda Jr.": {
     "LXG": [
       {
         "season": 2019,
@@ -84811,7 +84902,7 @@
       }
     ]
   },
-  "Luis Patiño": {
+  "Luis Pati\u00f1o": {
     "LXG": [
       {
         "season": 2019,
@@ -84943,7 +85034,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 14,
         "pick": 159,
@@ -85361,7 +85452,7 @@
       },
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1747616497"
@@ -85450,7 +85541,7 @@
       }
     ]
   },
-  "Mauricio Dubón": {
+  "Mauricio Dub\u00f3n": {
     "LXG": [
       {
         "season": 2019,
@@ -85667,7 +85758,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1745904024"
@@ -85748,7 +85839,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 9,
         "pick": 97,
@@ -85756,7 +85847,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 7,
         "pick": 74,
@@ -86188,7 +86279,7 @@
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1747797186"
@@ -86298,7 +86389,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 8,
         "pick": 91,
@@ -86306,7 +86397,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 5,
         "pick": 56,
@@ -86472,7 +86563,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 23,
         "pick": 272,
@@ -87079,7 +87170,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 18,
         "pick": 207,
@@ -87094,7 +87185,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 25,
         "pick": 290,
@@ -87278,14 +87369,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "from_team": null,
         "how": "add",
         "timestamp": "1747365458"
       },
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1750017981"
@@ -87299,7 +87390,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 19,
         "pick": 226,
@@ -87403,7 +87494,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 25,
         "pick": 295,
@@ -87608,7 +87699,7 @@
       }
     ]
   },
-  "Andrés Muñoz": {
+  "Andr\u00e9s Mu\u00f1oz": {
     "LXG": [
       {
         "season": 2019,
@@ -87660,7 +87751,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 10,
         "pick": 110,
@@ -87668,7 +87759,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 8,
         "pick": 87,
@@ -87762,14 +87853,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1743392289"
       },
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1743957308"
@@ -87855,7 +87946,7 @@
       }
     ]
   },
-  "Emilio Pagán": {
+  "Emilio Pag\u00e1n": {
     "LXG": [
       {
         "season": 2019,
@@ -87905,7 +87996,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1743572139"
@@ -87952,7 +88043,7 @@
       }
     ]
   },
-  "José Urquidy": {
+  "Jos\u00e9 Urquidy": {
     "LXG": [
       {
         "season": 2019,
@@ -88094,7 +88185,7 @@
       }
     ]
   },
-  "Renato Núñez": {
+  "Renato N\u00fa\u00f1ez": {
     "LXG": [
       {
         "season": 2019,
@@ -88359,7 +88450,7 @@
       }
     ]
   },
-  "Isan Díaz": {
+  "Isan D\u00edaz": {
     "LXG": [
       {
         "season": 2019,
@@ -88377,7 +88468,7 @@
       }
     ]
   },
-  "Robel García": {
+  "Robel Garc\u00eda": {
     "LXG": [
       {
         "season": 2019,
@@ -88690,7 +88781,7 @@
       }
     ]
   },
-  "Deivi García": {
+  "Deivi Garc\u00eda": {
     "LXG": [
       {
         "season": 2019,
@@ -88878,7 +88969,7 @@
       }
     ]
   },
-  "Darwinzon Hernández": {
+  "Darwinzon Hern\u00e1ndez": {
     "LXG": [
       {
         "season": 2019,
@@ -88889,7 +88980,7 @@
       }
     ]
   },
-  "Elieser Hernández": {
+  "Elieser Hern\u00e1ndez": {
     "LXG": [
       {
         "season": 2019,
@@ -89345,7 +89436,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 12,
         "pick": 135,
@@ -89679,7 +89770,7 @@
       },
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1753058653"
@@ -89737,7 +89828,7 @@
       }
     ]
   },
-  "Félix Peña": {
+  "F\u00e9lix Pe\u00f1a": {
     "LXG": [
       {
         "season": 2019,
@@ -89917,7 +90008,7 @@
       }
     ]
   },
-  "Óscar Mercado": {
+  "\u00d3scar Mercado": {
     "LXG": [
       {
         "season": 2019,
@@ -90101,7 +90192,7 @@
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1753691960"
@@ -90226,7 +90317,7 @@
       }
     ]
   },
-  "Pablo López": {
+  "Pablo L\u00f3pez": {
     "LXG": [
       {
         "season": 2019,
@@ -90301,7 +90392,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 6,
         "pick": 72,
@@ -90581,7 +90672,7 @@
       }
     ]
   },
-  "Julio Rodríguez": {
+  "Julio Rodr\u00edguez": {
     "LXG": [
       {
         "season": 2019,
@@ -90946,14 +91037,14 @@
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "from_team": null,
         "how": "add",
         "timestamp": "1774207496"
       }
     ]
   },
-  "Jasson Domínguez": {
+  "Jasson Dom\u00ednguez": {
     "LXG": [
       {
         "season": 2020,
@@ -91023,7 +91114,7 @@
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1751747267"
@@ -91626,7 +91717,7 @@
       }
     ]
   },
-  "Joe Jiménez": {
+  "Joe Jim\u00e9nez": {
     "LXG": [
       {
         "season": 2020,
@@ -91938,7 +92029,7 @@
       }
     ]
   },
-  "Yimi García": {
+  "Yimi Garc\u00eda": {
     "LXG": [
       {
         "season": 2020,
@@ -92121,7 +92212,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "from_team": null,
         "how": "add",
         "timestamp": "1747366462"
@@ -92219,7 +92310,7 @@
       }
     ]
   },
-  "Victor González": {
+  "Victor Gonz\u00e1lez": {
     "LXG": [
       {
         "season": 2020,
@@ -92348,7 +92439,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 10,
         "pick": 120,
@@ -92357,7 +92448,7 @@
       {
         "season": 2025,
         "team": "ALP",
-        "from_team": "💸 Ohtani's Best Bet",
+        "from_team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "trade",
         "timestamp": "1754208873"
       },
@@ -92458,7 +92549,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 14,
         "pick": 161,
@@ -92596,7 +92687,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 8,
         "pick": 90,
@@ -92647,7 +92738,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 22,
         "pick": 258,
@@ -92655,7 +92746,7 @@
       },
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1749654717"
@@ -92722,14 +92813,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1753157007"
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 15,
         "pick": 176,
@@ -92757,7 +92848,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1755450222"
@@ -92823,7 +92914,7 @@
       }
     ]
   },
-  "Andrés Giménez": {
+  "Andr\u00e9s Gim\u00e9nez": {
     "LXG": [
       {
         "season": 2020,
@@ -92959,7 +93050,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1749915193"
@@ -93175,14 +93266,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1743483548"
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 18,
         "pick": 207,
@@ -93258,7 +93349,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 7,
         "pick": 78,
@@ -93360,7 +93451,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 25,
         "pick": 299,
@@ -93681,7 +93772,7 @@
       },
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1756082194"
@@ -94325,7 +94416,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 21,
         "pick": 241,
@@ -94333,7 +94424,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 20,
         "pick": 230,
@@ -94605,14 +94696,14 @@
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1744241558"
       },
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "from_team": null,
         "how": "add",
         "timestamp": "1749629448"
@@ -94699,14 +94790,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1743034536"
       },
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1748831120"
@@ -94741,7 +94832,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1747586659"
@@ -94755,7 +94846,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "from_team": null,
         "how": "add",
         "timestamp": "1774450767"
@@ -94836,7 +94927,7 @@
       },
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1748994477"
@@ -95358,7 +95449,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1743101638"
@@ -95542,7 +95633,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 2,
         "pick": 14,
@@ -95550,7 +95641,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 3,
         "pick": 34,
@@ -95654,7 +95745,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 10,
         "pick": 114,
@@ -95942,7 +96033,7 @@
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1751703172"
@@ -96096,14 +96187,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1753738804"
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 16,
         "pick": 183,
@@ -96369,14 +96460,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1744951549"
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "from_team": null,
         "how": "add",
         "timestamp": "1773672727"
@@ -96507,7 +96598,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 16,
         "pick": 192,
@@ -96515,7 +96606,7 @@
       },
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "from_team": null,
         "how": "add",
         "timestamp": "1757298522"
@@ -96719,7 +96810,7 @@
       }
     ]
   },
-  "Elias Díaz": {
+  "Elias D\u00edaz": {
     "LXG": [
       {
         "season": 2021,
@@ -96847,7 +96938,7 @@
     "SouthOssetian": [
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 20,
         "pick": 239,
@@ -96855,7 +96946,7 @@
       }
     ]
   },
-  "Carlos Hernández": {
+  "Carlos Hern\u00e1ndez": {
     "LXG": [
       {
         "season": 2021,
@@ -97018,14 +97109,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1756607947"
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 16,
         "pick": 182,
@@ -97238,7 +97329,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 15,
         "pick": 178,
@@ -97302,7 +97393,7 @@
       }
     ]
   },
-  "Jonathan Araúz": {
+  "Jonathan Ara\u00faz": {
     "LXG": [
       {
         "season": 2021,
@@ -97476,7 +97567,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 23,
         "pick": 270,
@@ -97688,7 +97779,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1744078760"
@@ -97768,7 +97859,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 14,
         "pick": 162,
@@ -97776,7 +97867,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 17,
         "pick": 202,
@@ -97944,7 +98035,7 @@
       }
     ]
   },
-  "Richard Rodríguez": {
+  "Richard Rodr\u00edguez": {
     "LXG": [
       {
         "season": 2021,
@@ -98147,7 +98238,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 9,
         "pick": 107,
@@ -98155,7 +98246,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 2,
         "pick": 15,
@@ -98434,7 +98525,7 @@
       }
     ]
   },
-  "José Suarez": {
+  "Jos\u00e9 Suarez": {
     "LXG": [
       {
         "season": 2021,
@@ -99054,7 +99145,7 @@
       }
     ]
   },
-  "Harold Ramírez": {
+  "Harold Ram\u00edrez": {
     "LXG": [
       {
         "season": 2021,
@@ -99146,7 +99237,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 16,
         "pick": 182,
@@ -99291,7 +99382,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 11,
         "pick": 122,
@@ -99577,7 +99668,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1748202740"
@@ -99613,7 +99704,7 @@
       }
     ]
   },
-  "Adolis García": {
+  "Adolis Garc\u00eda": {
     "LXG": [
       {
         "season": 2021,
@@ -99695,7 +99786,7 @@
       },
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1753988685"
@@ -100048,7 +100139,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 5,
         "pick": 55,
@@ -100056,7 +100147,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 5,
         "pick": 59,
@@ -100089,7 +100180,7 @@
       }
     ]
   },
-  "Dom Nuñez": {
+  "Dom Nu\u00f1ez": {
     "LXG": [
       {
         "season": 2021,
@@ -100224,7 +100315,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 9,
         "pick": 106,
@@ -100377,14 +100468,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1748464425"
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 20,
         "pick": 238,
@@ -100462,7 +100553,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 2,
         "pick": 24,
@@ -100604,14 +100695,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1744393823"
       },
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1757986791"
@@ -100783,7 +100874,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 7,
         "pick": 82,
@@ -100791,7 +100882,7 @@
       }
     ]
   },
-  "Yermín Mercedes": {
+  "Yerm\u00edn Mercedes": {
     "LXG": [
       {
         "season": 2021,
@@ -100904,7 +100995,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 17,
         "pick": 203,
@@ -101099,7 +101190,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 24,
         "pick": 279,
@@ -101165,14 +101256,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1743088180"
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 24,
         "pick": 281,
@@ -101208,7 +101299,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 19,
         "pick": 218,
@@ -101216,7 +101307,7 @@
       }
     ]
   },
-  "Jeremy Peña": {
+  "Jeremy Pe\u00f1a": {
     "LXG": [
       {
         "season": 2022,
@@ -101262,7 +101353,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 18,
         "pick": 211,
@@ -101270,7 +101361,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 14,
         "pick": 158,
@@ -101342,7 +101433,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 14,
         "pick": 159,
@@ -101350,7 +101441,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 13,
         "pick": 155,
@@ -101395,7 +101486,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1746211192"
@@ -101779,7 +101870,7 @@
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1749403862"
@@ -101823,14 +101914,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1744783143"
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 19,
         "pick": 219,
@@ -101911,7 +102002,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 5,
         "pick": 50,
@@ -101919,7 +102010,7 @@
       }
     ]
   },
-  "Oscar González": {
+  "Oscar Gonz\u00e1lez": {
     "LXG": [
       {
         "season": 2022,
@@ -102047,14 +102138,14 @@
       },
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1749240717"
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "from_team": null,
         "how": "add",
         "timestamp": "1773672727"
@@ -102195,7 +102286,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 4,
         "pick": 42,
@@ -102203,7 +102294,7 @@
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 4,
         "pick": 46,
@@ -102278,7 +102369,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 8,
         "pick": 96,
@@ -102344,7 +102435,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 21,
         "pick": 246,
@@ -102352,7 +102443,7 @@
       },
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1743815255"
@@ -102511,7 +102602,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1753987585"
@@ -102683,7 +102774,7 @@
       }
     ]
   },
-  "Cionel Pérez": {
+  "Cionel P\u00e9rez": {
     "LXG": [
       {
         "season": 2022,
@@ -102910,14 +103001,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1755957655"
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 8,
         "pick": 94,
@@ -103143,7 +103234,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 17,
         "pick": 199,
@@ -103151,7 +103242,7 @@
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1753628329"
@@ -103292,7 +103383,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 15,
         "pick": 179,
@@ -103366,7 +103457,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 24,
         "pick": 278,
@@ -103419,7 +103510,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 23,
         "pick": 275,
@@ -103622,7 +103713,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 22,
         "pick": 254,
@@ -103630,7 +103721,7 @@
       }
     ]
   },
-  "Alexis Díaz": {
+  "Alexis D\u00edaz": {
     "LXG": [
       {
         "season": 2022,
@@ -103674,7 +103765,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 17,
         "pick": 202,
@@ -103682,7 +103773,7 @@
       },
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1749449583"
@@ -103756,7 +103847,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 24,
         "pick": 287,
@@ -103864,7 +103955,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 19,
         "pick": 227,
@@ -104035,7 +104126,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 12,
         "pick": 144,
@@ -104135,7 +104226,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 13,
         "pick": 154,
@@ -104169,7 +104260,7 @@
       }
     ]
   },
-  "Luis García": {
+  "Luis Garc\u00eda": {
     "LXG": [
       {
         "season": 2022,
@@ -104218,7 +104309,7 @@
       }
     ]
   },
-  "Félix Bautista": {
+  "F\u00e9lix Bautista": {
     "LXG": [
       {
         "season": 2022,
@@ -104326,7 +104417,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 21,
         "pick": 242,
@@ -104668,7 +104759,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 18,
         "pick": 206,
@@ -104724,7 +104815,7 @@
       }
     ]
   },
-  "Ramón Urías": {
+  "Ram\u00f3n Ur\u00edas": {
     "LXG": [
       {
         "season": 2022,
@@ -105017,7 +105108,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 20,
         "pick": 235,
@@ -105025,7 +105116,7 @@
       },
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1754277734"
@@ -105188,7 +105279,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 2,
         "pick": 15,
@@ -105196,7 +105287,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 2,
         "pick": 23,
@@ -105499,7 +105590,7 @@
       }
     ]
   },
-  "Rony García": {
+  "Rony Garc\u00eda": {
     "LXG": [
       {
         "season": 2022,
@@ -105711,7 +105802,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 5,
         "pick": 59,
@@ -105719,7 +105810,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 13,
         "pick": 146,
@@ -105790,14 +105881,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "from_team": null,
         "how": "add",
         "timestamp": "1744869014"
       },
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1752462454"
@@ -105857,7 +105948,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 22,
         "pick": 255,
@@ -105935,7 +106026,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 10,
         "pick": 111,
@@ -105943,7 +106034,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 3,
         "pick": 26,
@@ -106017,7 +106108,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 9,
         "pick": 107,
@@ -106043,7 +106134,7 @@
       }
     ]
   },
-  "Eury Pérez": {
+  "Eury P\u00e9rez": {
     "LXG": [
       {
         "season": 2022,
@@ -106129,14 +106220,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1743129683"
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 9,
         "pick": 99,
@@ -106214,7 +106305,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1754279114"
@@ -106232,7 +106323,7 @@
       }
     ]
   },
-  "Dany Jiménez": {
+  "Dany Jim\u00e9nez": {
     "LXG": [
       {
         "season": 2022,
@@ -106283,7 +106374,7 @@
       }
     ]
   },
-  "Luis González": {
+  "Luis Gonz\u00e1lez": {
     "LXG": [
       {
         "season": 2022,
@@ -106443,7 +106534,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 10,
         "pick": 113,
@@ -106578,14 +106669,14 @@
       },
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1747617167"
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 9,
         "pick": 98,
@@ -106821,14 +106912,14 @@
       },
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1749802065"
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 12,
         "pick": 142,
@@ -106872,7 +106963,7 @@
       }
     ]
   },
-  "Jorge López": {
+  "Jorge L\u00f3pez": {
     "LXG": [
       {
         "season": 2022,
@@ -106912,7 +107003,7 @@
       }
     ]
   },
-  "Víctor Arano": {
+  "V\u00edctor Arano": {
     "LXG": [
       {
         "season": 2022,
@@ -107030,14 +107121,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1747783211"
       },
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1755115305"
@@ -107110,7 +107201,7 @@
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 21,
         "pick": 243,
@@ -107205,7 +107296,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1749151334"
@@ -107213,13 +107304,13 @@
       {
         "season": 2025,
         "team": "ALP",
-        "from_team": "💸 Ohtani's Best Bet",
+        "from_team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "trade",
         "timestamp": "1754208873"
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 22,
         "pick": 255,
@@ -107227,7 +107318,7 @@
       }
     ]
   },
-  "Endy Rodríguez": {
+  "Endy Rodr\u00edguez": {
     "LXG": [
       {
         "season": 2023,
@@ -107277,7 +107368,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 5,
         "pick": 58,
@@ -107285,7 +107376,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 4,
         "pick": 47,
@@ -107293,7 +107384,7 @@
       }
     ]
   },
-  "Oscar Colás": {
+  "Oscar Col\u00e1s": {
     "LXG": [
       {
         "season": 2023,
@@ -107357,7 +107448,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 17,
         "pick": 198,
@@ -107517,7 +107608,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1756047412"
@@ -107561,7 +107652,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 15,
         "pick": 169,
@@ -107757,7 +107848,7 @@
       }
     ]
   },
-  "Luisangel Acuña": {
+  "Luisangel Acu\u00f1a": {
     "LXG": [
       {
         "season": 2023,
@@ -107840,7 +107931,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 18,
         "pick": 209,
@@ -107892,7 +107983,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 9,
         "pick": 103,
@@ -107900,7 +107991,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 25,
         "pick": 299,
@@ -107908,7 +107999,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1774466802"
@@ -107991,7 +108082,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 24,
         "pick": 279,
@@ -107999,7 +108090,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 22,
         "pick": 263,
@@ -108120,7 +108211,7 @@
       }
     ]
   },
-  "Nelson Velázquez": {
+  "Nelson Vel\u00e1zquez": {
     "LXG": [
       {
         "season": 2023,
@@ -108212,7 +108303,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 11,
         "pick": 130,
@@ -108333,7 +108424,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 21,
         "pick": 248,
@@ -108587,7 +108678,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 21,
         "pick": 250,
@@ -108595,7 +108686,7 @@
       }
     ]
   },
-  "Cristopher Sánchez": {
+  "Cristopher S\u00e1nchez": {
     "LXG": [
       {
         "season": 2023,
@@ -108639,7 +108730,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 13,
         "pick": 151,
@@ -108722,7 +108813,7 @@
     "SouthOssetian": [
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 25,
         "pick": 298,
@@ -108904,7 +108995,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 19,
         "pick": 222,
@@ -108968,7 +109059,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 2,
         "pick": 18,
@@ -108976,7 +109067,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 6,
         "pick": 65,
@@ -109029,7 +109120,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 6,
         "pick": 62,
@@ -109318,7 +109409,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 23,
         "pick": 271,
@@ -109372,7 +109463,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 21,
         "pick": 251,
@@ -109439,7 +109530,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 24,
         "pick": 288,
@@ -109447,7 +109538,7 @@
       },
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1747930191"
@@ -109488,7 +109579,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1747697507"
@@ -109623,7 +109714,7 @@
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 17,
         "pick": 195,
@@ -109693,7 +109784,7 @@
       }
     ]
   },
-  "José Soriano": {
+  "Jos\u00e9 Soriano": {
     "LXG": [
       {
         "season": 2023,
@@ -109771,7 +109862,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1743815022"
@@ -109829,7 +109920,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 7,
         "pick": 79,
@@ -109892,7 +109983,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1757986852"
@@ -109970,7 +110061,7 @@
       },
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 20,
         "pick": 231,
@@ -110121,7 +110212,7 @@
       },
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1747085964"
@@ -110278,7 +110369,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 18,
         "pick": 210,
@@ -110402,7 +110493,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 7,
         "pick": 73,
@@ -110410,7 +110501,7 @@
       },
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1755113429"
@@ -110462,7 +110553,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 3,
         "pick": 31,
@@ -110470,7 +110561,7 @@
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 2,
         "pick": 22,
@@ -110587,7 +110678,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "from_team": null,
         "how": "add",
         "timestamp": "1748840845"
@@ -110668,7 +110759,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 19,
         "pick": 217,
@@ -110745,7 +110836,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 22,
         "pick": 264,
@@ -110753,7 +110844,7 @@
       },
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1749409992"
@@ -111061,14 +111152,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1747617096"
       }
     ]
   },
-  "José Buttó": {
+  "Jos\u00e9 Butt\u00f3": {
     "LXG": [
       {
         "season": 2023,
@@ -111130,7 +111221,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 7,
         "pick": 83,
@@ -111146,7 +111237,7 @@
       }
     ]
   },
-  "José Quijada": {
+  "Jos\u00e9 Quijada": {
     "LXG": [
       {
         "season": 2023,
@@ -111422,7 +111513,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 12,
         "pick": 134,
@@ -111497,7 +111588,7 @@
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 22,
         "pick": 254,
@@ -111745,7 +111836,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 12,
         "pick": 138,
@@ -111844,7 +111935,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 23,
         "pick": 274,
@@ -111910,7 +112001,7 @@
       },
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1749449620"
@@ -111961,7 +112052,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 16,
         "pick": 186,
@@ -111969,7 +112060,7 @@
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1749401039"
@@ -112050,7 +112141,7 @@
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1744099401"
@@ -112223,7 +112314,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 15,
         "pick": 170,
@@ -112266,7 +112357,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1743566755"
@@ -112493,7 +112584,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 15,
         "pick": 178,
@@ -112501,7 +112592,7 @@
       }
     ]
   },
-  "José Tena": {
+  "Jos\u00e9 Tena": {
     "LXG": [
       {
         "season": 2024,
@@ -112790,7 +112881,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1743094372"
@@ -112890,7 +112981,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 6,
         "pick": 62,
@@ -113005,7 +113096,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 21,
         "pick": 247,
@@ -113013,7 +113104,7 @@
       },
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1753058536"
@@ -113288,7 +113379,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 24,
         "pick": 282,
@@ -113296,7 +113387,7 @@
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1751646019"
@@ -113370,7 +113461,7 @@
     "SouthOssetian": [
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 23,
         "pick": 275,
@@ -113413,7 +113504,7 @@
       },
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "from_team": null,
         "how": "add",
         "timestamp": "1754450204"
@@ -113451,7 +113542,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 20,
         "pick": 230,
@@ -113538,7 +113629,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 25,
         "pick": 289,
@@ -113553,7 +113644,7 @@
       },
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1750217773"
@@ -113578,7 +113669,7 @@
       }
     ]
   },
-  "Agustín Ramírez": {
+  "Agust\u00edn Ram\u00edrez": {
     "LXG": [
       {
         "season": 2024,
@@ -113613,7 +113704,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1745352214"
@@ -113655,7 +113746,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1749929241"
@@ -113690,14 +113781,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1748183517"
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1750027567"
@@ -113801,7 +113892,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 23,
         "pick": 265,
@@ -113809,14 +113900,14 @@
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1748710398"
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 15,
         "pick": 179,
@@ -113871,7 +113962,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 11,
         "pick": 126,
@@ -113915,7 +114006,7 @@
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1743130207"
@@ -114052,7 +114143,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1745808318"
@@ -114216,7 +114307,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 10,
         "pick": 115,
@@ -114231,14 +114322,14 @@
       },
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1756355843"
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 20,
         "pick": 234,
@@ -114299,7 +114390,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "how": "drafted",
         "round": 15,
         "pick": 175,
@@ -114314,7 +114405,7 @@
       },
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1753156987"
@@ -114405,7 +114496,7 @@
       }
     ]
   },
-  "Dedniel Núñez": {
+  "Dedniel N\u00fa\u00f1ez": {
     "LXG": [
       {
         "season": 2024,
@@ -114458,7 +114549,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 13,
         "pick": 150,
@@ -114466,7 +114557,7 @@
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 16,
         "pick": 191,
@@ -114542,7 +114633,7 @@
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1749929986"
@@ -114636,14 +114727,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "from_team": null,
         "how": "add",
         "timestamp": "1743088244"
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 7,
         "pick": 81,
@@ -114790,7 +114881,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 24,
         "pick": 283,
@@ -114917,7 +115008,7 @@
       }
     ]
   },
-  "Wenceel Pérez": {
+  "Wenceel P\u00e9rez": {
     "LXG": [
       {
         "season": 2024,
@@ -114973,7 +115064,7 @@
       }
     ]
   },
-  "Pedro León": {
+  "Pedro Le\u00f3n": {
     "LXG": [
       {
         "season": 2024,
@@ -115083,7 +115174,7 @@
       }
     ]
   },
-  "José Caballero": {
+  "Jos\u00e9 Caballero": {
     "LXG": [
       {
         "season": 2024,
@@ -115224,7 +115315,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "from_team": null,
         "how": "add",
         "timestamp": "1748224639"
@@ -115251,7 +115342,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1750949247"
@@ -115412,14 +115503,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1745904053"
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 12,
         "pick": 143,
@@ -115596,14 +115687,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1749587297"
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 6,
         "pick": 71,
@@ -115633,7 +115724,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "how": "drafted",
         "round": 3,
         "pick": 34,
@@ -115678,7 +115769,7 @@
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 14,
         "pick": 166,
@@ -115744,7 +115835,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1749500788"
@@ -115825,7 +115916,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 22,
         "pick": 259,
@@ -115833,7 +115924,7 @@
       },
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1748580617"
@@ -115889,21 +115980,21 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1742543829"
       },
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1744592971"
       },
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1750473044"
@@ -115952,7 +116043,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1743435162"
@@ -116017,7 +116108,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 12,
         "pick": 137,
@@ -116047,14 +116138,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1750605144"
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 10,
         "pick": 118,
@@ -116098,7 +116189,7 @@
       }
     ]
   },
-  "Jesús Made": {
+  "Jes\u00fas Made": {
     "LXG": [
       {
         "season": 2025,
@@ -116127,7 +116218,7 @@
     "SouthOssetian": [
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "how": "drafted",
         "round": 23,
         "pick": 274,
@@ -116222,7 +116313,7 @@
       }
     ]
   },
-  "Moisés Ballesteros": {
+  "Mois\u00e9s Ballesteros": {
     "LXG": [
       {
         "season": 2025,
@@ -116283,7 +116374,7 @@
     "SouthOssetian": [
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 21,
         "pick": 251,
@@ -116331,14 +116422,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1757365111"
       },
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 24,
         "pick": 278,
@@ -116407,7 +116498,7 @@
     "SouthOssetian": [
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "from_team": null,
         "how": "add",
         "timestamp": "1774043597"
@@ -116498,7 +116589,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1757280416"
@@ -116526,7 +116617,7 @@
     "SouthOssetian": [
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 23,
         "pick": 267,
@@ -116610,7 +116701,7 @@
     "SouthOssetian": [
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "from_team": null,
         "how": "add",
         "timestamp": "1774229746"
@@ -116700,7 +116791,7 @@
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 22,
         "pick": 262,
@@ -116766,7 +116857,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1756085447"
@@ -116832,7 +116923,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1755115372"
@@ -116894,7 +116985,7 @@
       }
     ]
   },
-  "Yoendrys Gómez": {
+  "Yoendrys G\u00f3mez": {
     "LXG": [
       {
         "season": 2025,
@@ -116947,21 +117038,21 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1747711078"
       },
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1754245238"
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 24,
         "pick": 286,
@@ -116990,7 +117081,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1755452537"
@@ -117033,7 +117124,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "from_team": null,
         "how": "add",
         "timestamp": "1748225888"
@@ -117076,14 +117167,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1751217814"
       },
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1755310608"
@@ -117241,7 +117332,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "from_team": null,
         "how": "add",
         "timestamp": "1754007385"
@@ -117394,7 +117485,7 @@
       }
     ]
   },
-  "Angel Martínez": {
+  "Angel Mart\u00ednez": {
     "LXG": [
       {
         "season": 2025,
@@ -117462,7 +117553,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🎯 David Tabor's Aim",
+        "team": "\ud83c\udfaf David Tabor's Aim",
         "from_team": null,
         "how": "add",
         "timestamp": "1750021727"
@@ -117525,7 +117616,7 @@
     "SouthOssetian": [
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 15,
         "pick": 171,
@@ -117568,7 +117659,7 @@
       }
     ]
   },
-  "Carlos Narváez": {
+  "Carlos Narv\u00e1ez": {
     "LXG": [
       {
         "season": 2025,
@@ -117616,7 +117707,7 @@
     "SouthOssetian": [
       {
         "season": 2026,
-        "team": "🏅 Clutch Trey",
+        "team": "\ud83c\udfc5 Clutch Trey",
         "from_team": null,
         "how": "add",
         "timestamp": "1773672727"
@@ -117648,7 +117739,7 @@
       }
     ]
   },
-  "Josue Briceño": {
+  "Josue Brice\u00f1o": {
     "LXG": [
       {
         "season": 2025,
@@ -117680,14 +117771,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1756079733"
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 13,
         "pick": 147,
@@ -117745,7 +117836,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1749050011"
@@ -117835,14 +117926,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1754672004"
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 18,
         "pick": 215,
@@ -117890,7 +117981,7 @@
     "SouthOssetian": [
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "how": "drafted",
         "round": 7,
         "pick": 83,
@@ -117919,7 +118010,7 @@
     "SouthOssetian": [
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 5,
         "pick": 51,
@@ -118047,7 +118138,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1748878727"
@@ -118169,7 +118260,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1754015933"
@@ -118203,14 +118294,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1745331653"
       }
     ]
   },
-  "Randy Rodríguez": {
+  "Randy Rodr\u00edguez": {
     "LXG": [
       {
         "season": 2025,
@@ -118386,7 +118477,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1746336590"
@@ -118400,7 +118491,7 @@
       },
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": "ALP",
         "how": "trade",
         "timestamp": "1754208873"
@@ -118415,7 +118506,7 @@
       }
     ]
   },
-  "Luis Peña": {
+  "Luis Pe\u00f1a": {
     "LXG": [
       {
         "season": 2025,
@@ -118475,7 +118566,7 @@
     "SouthOssetian": [
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1773701717"
@@ -118517,7 +118608,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1756603871"
@@ -118590,7 +118681,7 @@
       },
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 20,
         "pick": 233,
@@ -118630,14 +118721,14 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1754867904"
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 6,
         "pick": 70,
@@ -118667,7 +118758,7 @@
       }
     ]
   },
-  "Pedro Pagés": {
+  "Pedro Pag\u00e9s": {
     "LXG": [
       {
         "season": 2025,
@@ -118831,21 +118922,21 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1745266430"
       },
       {
         "season": 2025,
-        "team": "🌟 Edward's TeamToBeNamedLater",
+        "team": "\ud83c\udf1f Edward's TeamToBeNamedLater",
         "from_team": null,
         "how": "add",
         "timestamp": "1750363577"
       },
       {
         "season": 2026,
-        "team": "🏝️ Let’s Get Tropical 🏝️",
+        "team": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
         "how": "drafted",
         "round": 3,
         "pick": 27,
@@ -118923,7 +119014,7 @@
     "SouthOssetian": [
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "how": "drafted",
         "round": 16,
         "pick": 185,
@@ -119001,7 +119092,7 @@
     "SouthOssetian": [
       {
         "season": 2026,
-        "team": "🐶 Decoy Fan Club",
+        "team": "\ud83d\udc36 Decoy Fan Club",
         "from_team": null,
         "how": "add",
         "timestamp": "1774043751"
@@ -119152,7 +119243,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "how": "drafted",
         "round": 20,
         "pick": 240,
@@ -119160,14 +119251,14 @@
       },
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1756046995"
       },
       {
         "season": 2026,
-        "team": "🍆I'm Beaned Up Right Now🍆",
+        "team": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
         "how": "drafted",
         "round": 23,
         "pick": 266,
@@ -119179,7 +119270,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1757880584"
@@ -119190,7 +119281,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1757365163"
@@ -119209,7 +119300,7 @@
     "SouthOssetian": [
       {
         "season": 2025,
-        "team": "💸 Ohtani's Best Bet",
+        "team": "\ud83d\udcb8 Ohtani's Best Bet",
         "from_team": null,
         "how": "add",
         "timestamp": "1754752230"
@@ -119231,7 +119322,7 @@
     "SouthOssetian": [
       {
         "season": 2026,
-        "team": "🧑‍⚖️ All Rise",
+        "team": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
         "from_team": null,
         "how": "add",
         "timestamp": "1774216149"
