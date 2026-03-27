@@ -1,5 +1,19 @@
 {
   "LXG": {
+    "2025": {
+      "JP Licks": ["Triston Casas", "Zach Neto", "Dylan Crews", "Matt Shaw", "Joe Ryan", "Hunter Greene", "Sandy Alcantara", "Eury Pérez"],
+      "Dynasty": ["Bobby Witt Jr.", "Jarren Duran", "Ozzie Albies", "Pete Alonso", "William Contreras", "Tarik Skubal", "Cole Ragans", "Yoshinobu Yamamoto"],
+      "Bay of Papi": ["Mookie Betts", "Fernando Tatis Jr.", "Freddie Freeman", "Yordan Alvarez", "Manny Machado", "Lawrence Butler", "Zack Wheeler", "Michael King"],
+      "gamma's Team": ["José Ramírez", "Vladimir Guerrero Jr.", "Jackson Chourio", "Junior Caminero", "Jasson Domínguez", "Kristian Campbell", "Roman Anthony", "Garrett Crochet"],
+      "Hideo Lobo": ["Shohei Ohtani (Batter)", "Royce Lewis", "Brenton Doyle", "Marcell Ozuna", "Jackson Holliday", "Coby Mayo", "Kodai Senga", "Shane McClanahan"],
+      "StickyBanditz": ["Aaron Judge", "Rafael Devers", "Corey Seager", "Mike Trout", "Paul Skenes", "Jacob deGrom", "Dylan Cease", "Freddy Peralta"],
+      "Loch Neskie Monsters": ["Elly De La Cruz", "Ketel Marte", "Kyle Schwarber", "Josh Naylor", "Oneil Cruz", "Luis Robert Jr.", "Riley Greene", "George Kirby"],
+      "Nighthawks": ["Juan Soto", "Kyle Tucker", "Julio Rodríguez", "Bryce Harper", "Jackson Merrill", "Austin Riley", "Michael Harris II", "Logan Gilbert"],
+      "Poor Pickles": ["Jose Altuve", "Teoscar Hernández", "Anthony Santander", "Adley Rutschman", "Bryan Reynolds", "Emmanuel Clase", "Framber Valdez", "Bryce Miller"],
+      "Snipe City Danglers": ["Matt Olson", "James Wood", "Brent Rooker", "Luis García Jr.", "Xavier Edwards", "Marcelo Mayer", "Walker Buehler", "Brayan Bello"],
+      "Team Underdog": ["Gunnar Henderson", "Corbin Carroll", "Francisco Lindor", "Ronald Acuña Jr.", "Jordan Westburg", "Corbin Burnes", "Spencer Strider", "Shohei Ohtani (Pitcher)"],
+      "Toms River": ["Jazz Chisholm Jr.", "CJ Abrams", "Wyatt Langford", "Willson Contreras", "Jurickson Profar", "Blake Snell", "Grayson Rodriguez", "MacKenzie Gore"]
+    },
     "2026": {
       "Dynasty": ["Bobby Witt Jr.", "Pete Alonso", "Jarren Duran", "Pete Crow-Armstrong", "Shea Langeliers", "Kyle Stowers", "Tarik Skubal", "Yoshinobu Yamamoto", "Cole Ragans", "Jacob deGrom"],
       "Bay of Papi": ["Fernando Tatis Jr.", "Nick Kurtz", "Manny Machado", "Yordan Alvarez", "Mookie Betts", "Ben Rice", "Konnor Griffin", "Bryan Woo", "Max Fried", "Jacob Misiorowski"],
