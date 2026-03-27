@@ -284,6 +284,12 @@ function formatDate(ts) {
   return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
 }
 
+function isOffseasonAdd(entry) {
+  if (entry.how !== 'add' || !entry.timestamp) return false
+  const seasonStart = new Date(`${entry.season}-04-01`).getTime() / 1000
+  return Number(entry.timestamp) < seasonStart
+}
+
 function howLabel(entry) {
   if (entry.how === 'drafted') {
     return `Drafted R${entry.round}P${entry.pick}`
@@ -292,6 +298,7 @@ function howLabel(entry) {
     return `Traded from ${normTeam(entry.from_team) || '?'}`
   }
   if (entry.how === 'add') {
+    if (isOffseasonAdd(entry)) return `Off-season trade from ${normTeam(entry.from_team) || 'FA'}`
     return 'Added (waivers/FA)'
   }
   if (entry.how === 'drop') {
@@ -536,7 +543,7 @@ function PlayerTimeline({ playerName, leagues, keepers }) {
                 for (const entry of sEntries.slice(1)) {
                   rows.push(
                     <div key={entry.timestamp || entry.how} style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 4 }}>
-                      <Badge type={entry.how === 'trade' ? 'TRADE' : entry.how === 'add' ? 'ADD' : 'DROP'} />
+                      <Badge type={entry.how === 'trade' || isOffseasonAdd(entry) ? 'TRADE' : entry.how === 'add' ? 'ADD' : 'DROP'} />
                       <span style={S.secondary}>{howLabel(entry)}</span>
                       {entry.timestamp && <span style={S.muted}>{formatDate(entry.timestamp)}</span>}
                     </div>
@@ -545,7 +552,7 @@ function PlayerTimeline({ playerName, leagues, keepers }) {
               } else {
                 for (const entry of sEntries) {
                   let badgeType = 'DRAFT'
-                  if (entry.how === 'trade') badgeType = 'TRADE'
+                  if (entry.how === 'trade' || isOffseasonAdd(entry)) badgeType = 'TRADE'
                   else if (entry.how === 'add') badgeType = 'ADD'
                   else if (entry.how === 'drop') badgeType = 'DROP'
 
