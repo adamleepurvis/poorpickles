@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-26T02:14:20.402525",
+  "generated": "2026-03-27T17:09:22.826843",
   "count": 1007,
   "players": [
     {
@@ -3033,8 +3033,7 @@
       "rostered": true,
       "owner": "\ud83c\udfc5 Clutch Trey",
       "selected_position": "2B",
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Yoshinobu Yamamoto",
@@ -6137,7 +6136,7 @@
         "R",
         "SB"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 594,
       "score2026_neutral": 9.6,
@@ -6170,7 +6169,8 @@
       "rostered": true,
       "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
       "selected_position": "OF",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "James Wood",
@@ -6762,8 +6762,7 @@
       "rostered": true,
       "owner": "Wade Bogg's Next Beer",
       "selected_position": "SS",
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Aaron Ashby",
@@ -7539,7 +7538,6 @@
     {
       "name": "Luis Garc\u00eda",
       "eligible": [
-        "P",
         "RP"
       ],
       "org": "NYM",
@@ -9500,7 +9498,8 @@
       "rostered": true,
       "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "selected_position": "SS",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Nick Lodolo",
@@ -11633,7 +11632,8 @@
       "rostered": true,
       "owner": "Wade Bogg's Next Beer",
       "selected_position": "P",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Griffin Jax",
@@ -34201,7 +34201,6 @@
     {
       "name": "Brent Headrick",
       "eligible": [
-        "P",
         "RP"
       ],
       "org": "NYY",
@@ -37518,7 +37517,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Mois\u00e9s Ballesteros",
@@ -52537,7 +52537,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 42.0,
       "projStats": {
@@ -52566,8 +52566,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Ty Madden",
@@ -58718,7 +58717,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projPA": 206,
       "score2026_neutral": 0.0,
@@ -58750,8 +58749,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Travis Bazzana",
@@ -61941,127 +61939,5 @@
   "scoreboard": {
     "week": 1,
     "matchups": []
-  },
-  "standings": [
-    {
-      "team_key": "469.l.40214.t.1",
-      "team_name": "Bobby Weed Jr",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.40214.t.2",
-      "team_name": "Dangerous Nights Crew",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.40214.t.3",
-      "team_name": "Magnum Kwandoms",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.40214.t.4",
-      "team_name": "Ryan Howard's $5 Footlong",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.40214.t.5",
-      "team_name": "Saggy Boys",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.40214.t.6",
-      "team_name": "Scott's Strategic Realignment",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.40214.t.7",
-      "team_name": "Wade Bogg's Next Beer",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.40214.t.8",
-      "team_name": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.40214.t.9",
-      "team_name": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.40214.t.10",
-      "team_name": "\ud83c\udfc5 Clutch Trey",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.40214.t.11",
-      "team_name": "\ud83d\udc36 Decoy Fan Club",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.40214.t.12",
-      "team_name": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    }
-  ]
+  }
 }

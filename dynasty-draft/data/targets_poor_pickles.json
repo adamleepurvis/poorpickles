@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-26T02:13:35.489086",
+  "generated": "2026-03-27T17:08:50.518518",
   "count": 1030,
   "players": [
     {
@@ -3032,8 +3032,7 @@
       "rostered": true,
       "owner": "Loch Neskie Monsters",
       "selected_position": "2B",
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Yoshinobu Yamamoto",
@@ -6131,7 +6130,7 @@
         "R",
         "SB"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 594,
       "score2026_neutral": 9.6,
@@ -6164,7 +6163,8 @@
       "rostered": true,
       "owner": "gamma's Team",
       "selected_position": "RF",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "James Wood",
@@ -6755,8 +6755,7 @@
       "rostered": true,
       "owner": "Team Underdog",
       "selected_position": "SS",
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Aaron Ashby",
@@ -7532,7 +7531,6 @@
     {
       "name": "Luis Garc\u00eda",
       "eligible": [
-        "P",
         "RP"
       ],
       "org": "NYM",
@@ -9492,7 +9490,8 @@
       "rostered": true,
       "owner": "JP Licks",
       "selected_position": "Util",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Nick Lodolo",
@@ -11625,7 +11624,8 @@
       "rostered": true,
       "owner": "JP Licks",
       "selected_position": "SP",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Griffin Jax",
@@ -37534,7 +37534,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Mois\u00e9s Ballesteros",
@@ -47921,7 +47922,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 67.7,
       "projStats": {
@@ -47951,7 +47952,8 @@
       "rostered": false,
       "owner": null,
       "fantraxProspectRank": 163,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "DJ Herz",
@@ -58752,7 +58754,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projPA": 206,
       "score2026_neutral": 0.0,
@@ -58784,8 +58786,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Travis Bazzana",
@@ -62178,127 +62179,5 @@
   "scoreboard": {
     "week": 1,
     "matchups": []
-  },
-  "standings": [
-    {
-      "team_key": "469.l.51744.t.1",
-      "team_name": "Dynasty",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.51744.t.2",
-      "team_name": "Bay of Papi",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.51744.t.3",
-      "team_name": "gamma's Team",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.51744.t.4",
-      "team_name": "Hideo Lobo",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.51744.t.5",
-      "team_name": "JP Licks",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.51744.t.6",
-      "team_name": "Loch Neskie Monsters",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.51744.t.7",
-      "team_name": "Nighthawks",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.51744.t.8",
-      "team_name": "Poor Pickles",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.51744.t.9",
-      "team_name": "Snipe City Danglers",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.51744.t.10",
-      "team_name": "StickyBanditz",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.51744.t.11",
-      "team_name": "Team Underdog",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.51744.t.12",
-      "team_name": "Toms River",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "rank": 0,
-      "games_back": 0.0,
-      "cat_stats": {}
-    }
-  ]
+  }
 }
