@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useEffect, useMemo, useRef } from 'react'
 
 function useIsMobile() {
   const [mobile, setMobile] = useState(() => window.innerWidth < 640)
@@ -828,11 +828,25 @@ function LineageTab({ data, activeLeague }) {
   const [selectedLeagueLocal, setSelectedLeagueLocal] = useState(leagues[0] || '')
   const selectedLeague = activeLeague !== 'All' ? activeLeague : selectedLeagueLocal
   const [tooltip, setTooltip] = useState(null) // { text, x, y }
+  const containerRef = useRef(null)
+  const [colWidth, setColWidth] = useState(44)
 
   const { seasons, franchises } = useMemo(
     () => buildFranchiseLineage(data, selectedLeague),
     [data, selectedLeague]
   )
+
+  useEffect(() => {
+    const LABEL_WIDTH = 140
+    const update = () => {
+      if (!containerRef.current) return
+      const available = containerRef.current.offsetWidth - LABEL_WIDTH
+      setColWidth(Math.max(44, Math.floor(available / seasons.length)))
+    }
+    update()
+    window.addEventListener('resize', update)
+    return () => window.removeEventListener('resize', update)
+  }, [seasons.length])
 
   // Sort franchises: still-active ones first (by current name), then departed
   const sortedFranchises = useMemo(() => {
@@ -857,11 +871,11 @@ function LineageTab({ data, activeLeague }) {
         </div>
       )}
 
-      <div style={{ overflowX: 'auto', paddingBottom: 8 }}>
+      <div ref={containerRef} style={{ paddingBottom: 8 }}>
         {/* Year header */}
         <div style={{ display: 'flex', marginBottom: 6, paddingLeft: 140 }}>
           {seasons.map(s => (
-            <div key={s} style={{ width: 40, flexShrink: 0, fontSize: 10, color: '#475569', textAlign: 'center', fontWeight: 700 }}>
+            <div key={s} style={{ width: colWidth, flexShrink: 0, fontSize: 10, color: '#475569', textAlign: 'center', fontWeight: 700 }}>
               {s}
             </div>
           ))}
@@ -885,7 +899,7 @@ function LineageTab({ data, activeLeague }) {
               <div style={{ display: 'flex', position: 'relative' }}>
                 {/* Gap before franchise started */}
                 {firstSeason > seasons[0] && (
-                  <div style={{ width: (firstSeason - seasons[0]) * 40 }} />
+                  <div style={{ width: (firstSeason - seasons[0]) * colWidth }} />
                 )}
                 {runs.map((run, i) => {
                   const spanYears = run.to - run.from + 1
@@ -899,7 +913,7 @@ function LineageTab({ data, activeLeague }) {
                       }}
                       onMouseLeave={() => setTooltip(null)}
                       style={{
-                        width: spanYears * 40 - 2,
+                        width: spanYears * colWidth - 2,
                         marginRight: 2,
                         height: 28,
                         borderRadius: 4,
@@ -924,7 +938,7 @@ function LineageTab({ data, activeLeague }) {
                         overflow: 'hidden',
                         textOverflow: 'ellipsis',
                         padding: '0 4px',
-                        maxWidth: spanYears * 40 - 8,
+                        maxWidth: spanYears * colWidth - 8,
                         pointerEvents: 'none',
                       }}>
                         {run.name}
