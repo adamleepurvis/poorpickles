@@ -1,5 +1,19 @@
 {
   "LXG": {
+    "2024": {
+      "Dynasty": ["Bobby Witt Jr.", "Ozzie Albies", "Pete Alonso", "Matt McLain", "William Contreras", "Logan Webb"],
+      "Bay of Papi": ["Mookie Betts", "Freddie Freeman", "Fernando Tatis Jr.", "Yordan Alvarez", "Manny Machado", "Zack Wheeler"],
+      "gamma's Team": ["José Ramírez", "Vladimir Guerrero Jr.", "Triston Casas", "Evan Carter", "Jackson Chourio", "Junior Caminero"],
+      "Hideo Lobo": ["Shohei Ohtani (Batter)", "Marcus Semien", "Royce Lewis", "Jackson Holliday", "Pablo López", "Kodai Senga"],
+      "StickyBanditz": ["Aaron Judge", "Corey Seager", "Rafael Devers", "Mike Trout", "Freddy Peralta", "Jacob deGrom"],
+      "JP Licks": ["Randy Arozarena", "Cody Bellinger", "Christian Yelich", "Gleyber Torres", "Zac Gallen", "Eury Pérez"],
+      "Loch Neskie Monsters": ["Elly De La Cruz", "Josh Lowe", "Oneil Cruz", "Josh Jung", "Riley Greene", "George Kirby"],
+      "Nighthawks": ["Julio Rodríguez", "Kyle Tucker", "Juan Soto", "Austin Riley", "Bryce Harper", "Michael Harris II"],
+      "Poor Pickles": ["Luis Robert Jr.", "Jose Altuve", "Bo Bichette", "Adley Rutschman", "Kevin Gausman", "Framber Valdez"],
+      "Snipe City Danglers": ["Trea Turner", "Matt Olson", "Nick Castellanos", "James Wood", "Gerrit Cole", "Luis Castillo"],
+      "Team Underdog": ["Ronald Acuña Jr.", "Corbin Carroll", "Francisco Lindor", "Gunnar Henderson", "Spencer Strider", "Corbin Burnes"],
+      "Toms River": ["CJ Abrams", "Dansby Swanson", "Spencer Torkelson", "Jordan Walker", "Christian Encarnacion-Strand", "Grayson Rodriguez"]
+    },
     "2025": {
       "JP Licks": ["Triston Casas", "Zach Neto", "Dylan Crews", "Matt Shaw", "Joe Ryan", "Hunter Greene", "Sandy Alcantara", "Eury Pérez"],
       "Dynasty": ["Bobby Witt Jr.", "Jarren Duran", "Ozzie Albies", "Pete Alonso", "William Contreras", "Tarik Skubal", "Cole Ragans", "Yoshinobu Yamamoto"],
