@@ -1,5 +1,19 @@
 {
   "LXG": {
+    "2017": {
+      "JP Licks": ["Paul Goldschmidt", "AJ Pollock", "José Abreu", "Justin Upton", "Anthony Rendon", "Jason Kipnis", "Carlos Carrasco", "Chris Archer"],
+      "Hideo Lobo": ["Trea Turner", "Corey Seager", "Carlos González", "Jonathan Lucroy", "Andrew Benintendi", "Justin Verlander", "Jose Quintana", "Lance McCullers Jr."],
+      "Bay of Papi": ["Bryce Harper", "Brian Dozier", "Kyle Seager", "Gregory Polanco", "Eric Hosmer", "Javier Báez", "Dansby Swanson", "Gerrit Cole"],
+      "Dynasty": ["Manny Machado", "Charlie Blackmon", "Joey Votto", "Giancarlo Stanton", "Miguel Sanó", "Madison Bumgarner", "Kyle Hendricks", "Jacob deGrom"],
+      "gamma's Team": ["Miguel Cabrera", "Starling Marte", "Ryan Braun", "Robinson Canó", "Trevor Story", "Ian Desmond", "Gary Sánchez", "Corey Kluber"],
+      "Poor Pickles": ["Nolan Arenado", "Anthony Rizzo", "Adam Jones", "Dustin Pedroia", "Max Scherzer", "Stephen Strasburg", "Carlos Martínez", "Danny Salazar"],
+      "Loch Neskie Monsters": ["J.D. Martinez", "Andrew McCutchen", "Todd Frazier", "Addison Russell", "Michael Brantley", "Chris Sale", "Dallas Keuchel", "Lucas Giolito"],
+      "Nighthawks": ["Carlos Correa", "George Springer", "Freddie Freeman", "Rougned Odor", "Buster Posey", "Kyle Schwarber", "Nomar Mazara", "Yoán Moncada"],
+      "Toms River": ["Xander Bogaerts", "Adrián Béltre", "Yoenis Céspedes", "Hanley Ramírez", "Khris Davis", "Noah Syndergaard", "Johnny Cueto", "Cole Hamels"],
+      "Snipe City Danglers": ["Mike Trout", "Mookie Betts", "Jose Altuve", "Daniel Murphy", "Chris Davis", "Justin Turner", "Jon Lester", "Danny Duffy"],
+      "StickyBanditz": ["Kris Bryant", "Jonathan Villar", "Dee Strange-Gordon", "Yasmany Tomás", "Joc Pederson", "Clayton Kershaw", "Yu Darvish", "Masahiro Tanaka"],
+      "Team Underdog": ["Josh Donaldson", "Francisco Lindor", "Edwin Encarnación", "Christian Yelich", "David Dahl", "Alex Bregman", "Salvador Perez", "Devon Travis"]
+    },
     "2018": {
       "JP Licks": ["Elvis Andrus", "Adrián Béltre", "Khris Davis", "Brian Dozier", "Paul Goldschmidt", "Jean Segura", "Andrew McCutchen", "Carlos Carrasco", "Zack Greinke", "Noah Syndergaard", "Robbie Ray", "Chris Archer", "Yu Darvish"],
       "Bay of Papi": ["Charlie Blackmon", "Byron Buxton", "Javier Báez", "Bryce Harper", "Eric Hosmer", "Gregory Polanco", "Jonathan Schoop", "Kyle Seager", "Gerrit Cole", "Trevor Bauer"],
