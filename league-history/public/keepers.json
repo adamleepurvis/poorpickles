@@ -1,5 +1,17 @@
 {
   "LXG": {
+    "2013": {
+      "JP Licks": ["Josh Hamilton", "Ian Kinsler", "Freddie Freeman", "Elvis Andrus", "Will Middlebrooks", "Carl Crawford", "Nick Markakis", "Shane Victorino", "Carlos Beltrán", "Alexei Ramirez", "Todd Frazier", "Marco Scutaro", "Tim Hudson", "Justin Verlander", "Yovani Gallardo", "Matt Harrison", "Jacob Turner"],
+      "Bay of Papi": ["Joey Votto", "Bryce Harper", "José Reyes", "Chase Headley", "Matt Cain", "Ben Zobrist", "Desmond Jennings", "Yu Darvish", "Aroldis Chapman", "Ike Davis", "Corey Hart", "Shin-Soo Choo", "Jeremy Hellickson", "Clay Buchholz", "Mike Napoli", "Gerrit Cole", "Colby Rasmus"],
+      "Toms River": ["Albert Pujols", "Hanley Ramírez", "José Bautista", "Adam Dunn", "Matt Wieters", "Chris Davis", "David Ortiz", "Gordon Beckham", "Michael Bourn", "David Wright", "Alex Gordon", "Kendrys Morales", "Dayan Viciedo", "Cole Hamels", "Neftali Feliz", "Tommy Hanson", "Wade Miley"],
+      "Hideo Lobo": ["Jacoby Ellsbury", "David Freese", "Dustin Pedroia", "Salvador Perez", "CC Sabathia", "Roy Halladay", "David Price", "Gio González", "Zack Wheeler", "Tyler Skaggs", "Andre Ethier", "Miguel Sanó", "Kyle Seager", "Adam LaRoche", "Josh Reddick", "Nelson Cruz", "Jose Altuve"],
+      "Dynasty": ["Asdrúbal Cabrera", "Alejandro De Aza", "Adrián González", "Matt Holliday", "Ryan Howard", "Yadier Molina", "Michael Morse", "Brandon Phillips", "Aramis Ramirez", "Alex Rios", "Pablo Sandoval", "R.A. Dickey", "Matt Harvey", "Chris Sale", "James Shields", "Jered Weaver", "Jordan Zimmermann"],
+      "Poor Pickles": ["Ryan Braun", "Prince Fielder", "Adam Jones", "Troy Tulowitzki", "Justin Upton", "Yoenis Céspedes", "Anthony Rizzo", "Stephen Strasburg", "Jason Kipnis", "Eric Hosmer", "Mike Moustakas", "Max Scherzer", "Ian Kennedy", "Mike Minor", "Brandon Beachy", "Dan Haren", "Jake Peavy"],
+      "Team Underdog": ["Matt Kemp", "Edwin Encarnación", "Ian Desmond", "Hunter Pence", "Mark Teixeira", "Howie Kendrick", "Allen Craig", "Miguel Montero", "Martín Prado", "Tim Lincecum", "Johnny Cueto", "Doug Fister", "Matt Moore", "Dylan Bundy", "Shelby Miller", "Jeff Samardzija", "Julio Teheran"],
+      "StickyBanditz": ["Joe Mauer", "Jesus Montero", "Billy Butler", "Robinson Canó", "Starlin Castro", "Brett Lawrie", "Jay Bruce", "Giancarlo Stanton", "Andrew McCutchen", "Mike Trout", "Wil Myers", "Clayton Kershaw", "Zack Greinke", "Kris Medlen", "Adam Wainwright", "Brett Anderson", "Craig Kimbrel"],
+      "gamma's Team": ["Adrián Béltre", "Miguel Cabrera", "Melky Cabrera", "Mat Gamel", "Austin Jackson", "Manny Machado", "Buster Posey", "Carlos Quentin", "Wilin Rosario", "Mark Trumbo", "Dan Uggla", "Cliff Lee", "Jon Lester", "Colby Lewis", "Jarrod Parker", "Ryan Vogelsong", "C.J. Wilson"],
+      "Nighthawks": ["Carlos Santana", "Travis d'Arnaud", "Paul Goldschmidt", "Aaron Hill", "Josh Rutledge", "Jurickson Profar", "Derek Jeter", "Ryan Zimmerman", "Evan Longoria", "Jason Heyward", "Carlos González", "Curtis Granderson", "Mat Latos", "Félix Hernández", "Josh Johnson", "Madison Bumgarner", "Jon Niese"]
+    },
     "2014": {
       "JP Licks": ["Carlos Gómez", "Freddie Freeman", "Justin Verlander", "Ryan Zimmerman", "Billy Hamilton", "Ian Kinsler", "Elvis Andrus", "Josh Hamilton", "Taijuan Walker", "Anthony Rendon"],
       "Dynasty": ["Buster Posey", "Jordan Zimmermann", "Domonic Brown", "Michael Wacha", "Starlin Castro", "Pablo Sandoval", "Manny Machado", "Jered Weaver", "Matt Harvey", "George Springer"],
