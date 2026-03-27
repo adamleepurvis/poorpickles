@@ -409,6 +409,51 @@ function getTeamsInLeague(allData, leagueName) {
   return Array.from(teams).sort()
 }
 
+// Build name-change runs per franchise for the lineage view
+function buildFranchiseLineage(allData, leagueName) {
+  const seasonTeams = {}
+  for (const leagues of Object.values(allData)) {
+    if (!leagues[leagueName]) continue
+    for (const entry of leagues[leagueName]) {
+      const s = entry.season
+      if (!seasonTeams[s]) seasonTeams[s] = new Set()
+      if (entry.team) seasonTeams[s].add(entry.team)
+      if (entry.from_team) seasonTeams[s].add(entry.from_team)
+    }
+  }
+  const seasons = Object.keys(seasonTeams).map(Number).sort()
+
+  // canonical -> { season: rawName }
+  const rawByFranchise = {}
+  for (const season of seasons) {
+    for (const rawName of seasonTeams[season]) {
+      const canonical = normTeam(rawName)
+      if (!rawByFranchise[canonical]) rawByFranchise[canonical] = {}
+      rawByFranchise[canonical][season] = rawName
+    }
+  }
+
+  // Convert to consecutive runs: [{ name, from, to }]
+  const franchises = {}
+  for (const [canonical, seasonMap] of Object.entries(rawByFranchise)) {
+    const active = Object.keys(seasonMap).map(Number).sort()
+    const runs = []
+    let curName = null, runStart = null
+    for (const s of active) {
+      const name = seasonMap[s]
+      if (name !== curName) {
+        if (curName !== null) runs.push({ name: curName, from: runStart, to: s - 1 })
+        curName = name
+        runStart = s
+      }
+    }
+    if (curName !== null) runs.push({ name: curName, from: runStart, to: active[active.length - 1] })
+    franchises[canonical] = { runs, firstSeason: active[0] }
+  }
+
+  return { seasons, franchises }
+}
+
 // Season-by-season activity for a franchise
 function buildFranchiseData(allData, leagueName, teamName) {
   const seasons = {}
@@ -769,6 +814,138 @@ function TransactionsTab({ data, activeLeague }) {
   )
 }
 
+// ─── Lineage Tab ───────────────────────────────────────────────────────────
+
+function LineageTab({ data, activeLeague }) {
+  const leagues = useMemo(() => {
+    const s = new Set()
+    for (const leagues of Object.values(data)) for (const l of Object.keys(leagues)) s.add(l)
+    return Array.from(s).sort()
+  }, [data])
+
+  const [selectedLeagueLocal, setSelectedLeagueLocal] = useState(leagues[0] || '')
+  const selectedLeague = activeLeague !== 'All' ? activeLeague : selectedLeagueLocal
+
+  const { seasons, franchises } = useMemo(
+    () => buildFranchiseLineage(data, selectedLeague),
+    [data, selectedLeague]
+  )
+
+  // Sort franchises: still-active ones first (by current name), then departed
+  const sortedFranchises = useMemo(() => {
+    const lastSeason = seasons[seasons.length - 1]
+    return Object.entries(franchises).sort(([a, aData], [b, bData]) => {
+      const aActive = aData.runs[aData.runs.length - 1].to === lastSeason
+      const bActive = bData.runs[bData.runs.length - 1].to === lastSeason
+      if (aActive !== bActive) return aActive ? -1 : 1
+      return a.localeCompare(b)
+    })
+  }, [franchises, seasons])
+
+  const totalSpan = seasons.length > 0 ? seasons[seasons.length - 1] - seasons[0] + 1 : 1
+
+  return (
+    <div>
+      {activeLeague === 'All' && (
+        <div style={{ ...S.filterRow, marginBottom: 16 }}>
+          <select style={S.select} value={selectedLeagueLocal} onChange={e => setSelectedLeagueLocal(e.target.value)}>
+            {leagues.map(l => <option key={l} value={l}>{l}</option>)}
+          </select>
+        </div>
+      )}
+
+      <div style={{ overflowX: 'auto', paddingBottom: 8 }}>
+        {/* Year header */}
+        <div style={{ display: 'flex', marginBottom: 6, paddingLeft: 140 }}>
+          {seasons.map(s => (
+            <div key={s} style={{ width: 40, flexShrink: 0, fontSize: 10, color: '#475569', textAlign: 'center', fontWeight: 700 }}>
+              {s}
+            </div>
+          ))}
+        </div>
+
+        {sortedFranchises.map(([canonical, { runs, firstSeason }]) => {
+          const lastRun = runs[runs.length - 1]
+          const isActive = lastRun.to === seasons[seasons.length - 1]
+          return (
+            <div key={canonical} style={{ display: 'flex', alignItems: 'center', marginBottom: 6 }}>
+              {/* Franchise label */}
+              <div style={{
+                width: 136, flexShrink: 0, fontSize: 11, fontWeight: 700,
+                color: isActive ? '#84cc16' : '#475569',
+                textAlign: 'right', paddingRight: 8, lineHeight: 1.2,
+              }}>
+                {canonical}
+              </div>
+
+              {/* Timeline bar */}
+              <div style={{ display: 'flex', position: 'relative' }}>
+                {/* Gap before franchise started */}
+                {firstSeason > seasons[0] && (
+                  <div style={{ width: (firstSeason - seasons[0]) * 40 }} />
+                )}
+                {runs.map((run, i) => {
+                  const spanYears = run.to - run.from + 1
+                  const isCurrentName = run.name === canonical
+                  const isLast = i === runs.length - 1
+                  return (
+                    <div
+                      key={i}
+                      title={`${run.name} (${run.from}${run.from !== run.to ? `–${run.to}` : ''})`}
+                      style={{
+                        width: spanYears * 40 - 2,
+                        marginRight: 2,
+                        height: 28,
+                        borderRadius: 4,
+                        background: isCurrentName
+                          ? (isActive ? 'rgba(132,204,22,0.2)' : 'rgba(132,204,22,0.08)')
+                          : 'rgba(148,163,184,0.1)',
+                        border: `1px solid ${isCurrentName
+                          ? (isActive ? 'rgba(132,204,22,0.4)' : 'rgba(132,204,22,0.2)')
+                          : '#1e293b'}`,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        overflow: 'hidden',
+                        cursor: 'default',
+                      }}
+                    >
+                      <span style={{
+                        fontSize: 9,
+                        fontWeight: 600,
+                        color: isCurrentName ? (isActive ? '#84cc16' : '#64748b') : '#475569',
+                        whiteSpace: 'nowrap',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        padding: '0 4px',
+                        maxWidth: spanYears * 40 - 8,
+                      }}>
+                        {spanYears > 1 ? run.name : ''}
+                      </span>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )
+        })}
+      </div>
+
+      <div style={{ marginTop: 12, display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 11, color: '#475569' }}>
+          <div style={{ width: 16, height: 10, borderRadius: 2, background: 'rgba(132,204,22,0.2)', border: '1px solid rgba(132,204,22,0.4)' }} />
+          Current name
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 11, color: '#475569' }}>
+          <div style={{ width: 16, height: 10, borderRadius: 2, background: 'rgba(148,163,184,0.1)', border: '1px solid #1e293b' }} />
+          Previous name
+        </div>
+        <div style={{ fontSize: 11, color: '#475569' }}>Hover a segment to see the name</div>
+      </div>
+    </div>
+  )
+}
+
 // ─── Trades Tab ────────────────────────────────────────────────────────────
 
 function TradesTab({ data, activeLeague }) {
@@ -1108,7 +1285,7 @@ export default function App() {
       </div>
 
       <div style={S.tabs}>
-        {['players', 'transactions', 'trades', 'teams'].map(t => (
+        {['players', 'transactions', 'trades', 'teams', 'lineage'].map(t => (
           <button key={t} style={S.tab(tab === t)} onClick={() => setTab(t)}>
             {t.charAt(0).toUpperCase() + t.slice(1)}
           </button>
@@ -1127,6 +1304,7 @@ export default function App() {
       {filteredData && tab === 'transactions' && <TransactionsTab data={filteredData} activeLeague={activeLeague} />}
       {filteredData && tab === 'trades' && <TradesTab data={filteredData} activeLeague={activeLeague} />}
       {filteredData && tab === 'teams' && <TeamsTab data={filteredData} activeLeague={activeLeague} />}
+      {filteredData && tab === 'lineage' && <LineageTab data={filteredData} activeLeague={activeLeague} />}
     </div>
   )
 }
