@@ -1385,6 +1385,7 @@ function computeRecords(data, leagueName, keepers) {
   let firstEverDrafted = null
   let neverKeptBest = null    // { playerName, seasons, league }
   let oneSeasonWonderBest = null  // { playerName, season, team, round, pick, league }
+  let bestSteal = null  // { playerName, season, team, round, pick, league }
 
   for (const [playerName, leagues] of Object.entries(data)) {
     for (const [lg, entries] of Object.entries(leagues)) {
@@ -1454,6 +1455,20 @@ function computeRecords(data, leagueName, keepers) {
           }
         }
 
+        // bestSteal: highest-round true draft pick that was kept the following year
+        for (const e of entries) {
+          if (e.how !== 'drafted') continue
+          const franchise = normTeam(e.team)
+          const keeperSetThisSeason = new Set(keepers?.[lg]?.[String(e.season)]?.[franchise] || [])
+          if (keeperSetThisSeason.has(playerName)) continue // was a keeper, not a true pick
+          const keeperSetNextSeason = new Set(keepers?.[lg]?.[String(e.season + 1)]?.[franchise] || [])
+          if (!keeperSetNextSeason.has(playerName)) continue // not kept next year
+          const score = e.round * 1000 + e.pick
+          if (!bestSteal || score > (bestSteal.round * 1000 + bestSteal.pick)) {
+            bestSteal = { playerName, season: e.season, team: franchise, round: e.round, pick: e.pick, league: lg }
+          }
+        }
+
         // oneSeasonWonder: exactly 1 season, drafted (not just added), must have 2+ entries (exclude manual single-entry injections)
         if (seasons.length === 1 && entries.length >= 2) {
           const draft = entries.find(e => e.how === 'drafted')
@@ -1514,6 +1529,7 @@ function computeRecords(data, leagueName, keepers) {
     biggestTrade,
     neverKept: neverKeptBest,
     oneSeasonWonder: oneSeasonWonderBest,
+    bestSteal,
   }
 }
 
@@ -1660,6 +1676,12 @@ function LeaderboardTab({ data, activeLeague, keepers }) {
       rec: records.oneSeasonWonder,
       stat: r => `${r.season} · R${r.round}P${r.pick}`,
       sub: r => `by ${r.team}`,
+    },
+    {
+      label: 'Best Steal',
+      rec: records.bestSteal,
+      stat: r => `R${r.round}P${r.pick} · ${r.season}`,
+      sub: r => `${r.playerName} kept by ${r.team}`,
     },
   ] : []
 
