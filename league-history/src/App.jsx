@@ -1712,6 +1712,11 @@ function LeaderboardTab({ data, activeLeague, keepers, rankings }) {
       if (!entries) continue
       for (const e of entries) {
         if (e.how !== 'add') continue
+        // Exclude off-season adds (before April 1 of the season year)
+        if (e.timestamp) {
+          const d = new Date(parseInt(e.timestamp) * 1000)
+          if (d < new Date(e.season, 3, 1)) continue  // month 3 = April
+        }
         const key = `${playerName}_${e.season}`
         const seasonMap = lookups[String(e.season)] || {}
         const rank = seasonMap[normRankingName(playerName)]
