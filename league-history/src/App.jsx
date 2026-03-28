@@ -499,6 +499,82 @@ function buildFranchiseData(allData, leagueName, teamName) {
     .map(([season, d]) => ({ season: parseInt(season), ...d }))
 }
 
+// ─── computeDraftGrades ─────────────────────────────────────────────────────
+
+function computeDraftGrades(data, keepers, leagueName) {
+  // Collect all drafted entries per franchise+season
+  // structure: { `${franchise}_${season}`: { franchise, season, picks: [{player, round, pick}] } }
+  const buckets = {}
+
+  for (const [playerName, leagues] of Object.entries(data)) {
+    const entries = leagues[leagueName]
+    if (!entries) continue
+    for (const e of entries) {
+      if (e.how !== 'drafted') continue
+      const franchise = normTeam(e.team)
+      const season = e.season
+      const key = `${franchise}_${season}`
+      if (!buckets[key]) buckets[key] = { franchise, season, picks: [] }
+      buckets[key].picks.push({ player: playerName, round: e.round, pick: e.pick })
+    }
+  }
+
+  const grades = []
+
+  for (const { franchise, season, picks } of Object.values(buckets)) {
+    // Skip 2026 (can't evaluate future keepers)
+    if (season >= 2026) continue
+
+    // Determine which picks are keepers (in current season's keeper list)
+    const keeperListThisSeason = keepers?.[leagueName]?.[String(season)]?.[franchise] || []
+    const keeperSetThisSeason = new Set(keeperListThisSeason)
+
+    // True draft picks = drafted but NOT in keeper list for this season
+    const trueDraftPicks = picks.filter(p => !keeperSetThisSeason.has(p.player))
+
+    if (trueDraftPicks.length < 5) continue
+
+    // Check which were kept next year
+    const keeperListNextSeason = keepers?.[leagueName]?.[String(season + 1)]?.[franchise] || []
+    const keeperSetNextSeason = new Set(keeperListNextSeason)
+
+    const keptPlayers = trueDraftPicks.filter(p => keeperSetNextSeason.has(p.player))
+    const keptCount = keptPlayers.length
+    const totalPicks = trueDraftPicks.length
+    const keepRate = keptCount / totalPicks
+
+    // Steals: round >= 10, kept next year
+    const steals = keptPlayers.filter(p => p.round >= 10)
+    // Misses: round <= 5, NOT kept next year
+    const misses = trueDraftPicks.filter(p => p.round <= 5 && !keeperSetNextSeason.has(p.player))
+
+    // Grade
+    let grade
+    if (keepRate >= 0.50) grade = 'A+'
+    else if (keepRate >= 0.40) grade = 'A'
+    else if (keepRate >= 0.30) grade = 'B'
+    else if (keepRate >= 0.20) grade = 'C'
+    else if (keepRate >= 0.10) grade = 'D'
+    else grade = 'F'
+
+    grades.push({
+      franchise, season, league: leagueName,
+      totalPicks, keptCount, keepRate,
+      steals, misses, grade,
+      keptPlayers,
+    })
+  }
+
+  return grades
+}
+
+function gradeColor(grade) {
+  if (grade === 'A+' || grade === 'A') return '#84cc16'
+  if (grade === 'B') return '#60a5fa'
+  if (grade === 'C') return '#f59e0b'
+  return '#f87171'
+}
+
 // ─── Components ────────────────────────────────────────────────────────────
 
 function Loading() {
@@ -2936,6 +3012,230 @@ function FranchisesTab({ data, results, keepers, activeLeague, selectedFranchise
           </table>
         </div>
       )}
+
+      {/* G. Draft Grades */}
+      {franchiseLeague && (() => {
+        const allGrades = computeDraftGrades(data, keepers, franchiseLeague)
+        const myGrades = allGrades
+          .filter(g => g.franchise === franchise)
+          .sort((a, b) => b.season - a.season)
+
+        if (myGrades.length === 0) return null
+
+        const bestGrade = [...myGrades].sort((a, b) => {
+          const gradeOrder = { 'A+': 6, 'A': 5, 'B': 4, 'C': 3, 'D': 2, 'F': 1 }
+          return (gradeOrder[b.grade] - gradeOrder[a.grade]) || b.keepRate - a.keepRate
+        })[0]
+
+        return (
+          <div style={cardStyle}>
+            <div style={sectionTitle}>Draft Grades</div>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, marginBottom: 12 }}>
+              <thead>
+                <tr style={{ color: '#475569', textAlign: 'left', borderBottom: '1px solid #1e293b' }}>
+                  <th style={{ padding: '4px 8px' }}>Season</th>
+                  <th style={{ padding: '4px 8px', textAlign: 'center' }}>Picks</th>
+                  <th style={{ padding: '4px 8px', textAlign: 'center' }}>Kept</th>
+                  <th style={{ padding: '4px 8px', textAlign: 'center' }}>Keep%</th>
+                  <th style={{ padding: '4px 8px', textAlign: 'center' }}>Grade</th>
+                  <th style={{ padding: '4px 8px', textAlign: 'center' }}>Steals</th>
+                </tr>
+              </thead>
+              <tbody>
+                {myGrades.map(g => {
+                  const isBest = g === bestGrade
+                  return (
+                    <tr key={g.season} style={{ borderBottom: '1px solid #0f172a', background: isBest ? 'rgba(132,204,22,0.04)' : 'transparent' }}>
+                      <td style={{ padding: '6px 8px', color: '#64748b', fontWeight: 700 }}>{g.season}</td>
+                      <td style={{ padding: '6px 8px', textAlign: 'center', color: '#94a3b8' }}>{g.totalPicks}</td>
+                      <td style={{ padding: '6px 8px', textAlign: 'center', color: '#94a3b8' }}>{g.keptCount}</td>
+                      <td style={{ padding: '6px 8px', textAlign: 'center', color: '#cbd5e1' }}>{(g.keepRate * 100).toFixed(0)}%</td>
+                      <td style={{ padding: '6px 8px', textAlign: 'center', color: gradeColor(g.grade), fontSize: 16, fontWeight: 700 }}>{g.grade}</td>
+                      <td style={{ padding: '6px 8px', textAlign: 'center', color: g.steals.length > 0 ? '#84cc16' : '#475569', fontWeight: g.steals.length > 0 ? 700 : 400 }}>{g.steals.length}</td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+            {bestGrade && (
+              <div style={{ color: '#64748b', fontSize: 12 }}>
+                Best: <span style={{ color: '#f1f5f9', fontWeight: 700 }}>{bestGrade.season}</span>
+                {' · '}
+                <span style={{ color: gradeColor(bestGrade.grade), fontWeight: 700 }}>{bestGrade.grade}</span>
+                {' · '}
+                {bestGrade.steals.length} steal{bestGrade.steals.length !== 1 ? 's' : ''}
+                {bestGrade.steals.length > 0 && (
+                  <span> including {bestGrade.steals.slice(0, 2).map(s => `${s.player} R${s.round}P${s.pick}`).join(', ')}</span>
+                )}
+              </div>
+            )}
+          </div>
+        )
+      })()}
+    </div>
+  )
+}
+
+// ─── DraftTab ───────────────────────────────────────────────────────────────
+
+function DraftTab({ data, keepers, activeLeague }) {
+  const leagueName = activeLeague === 'All' ? 'LXG' : activeLeague
+  const [sub, setSub] = useState('best')
+
+  const allGrades = useMemo(
+    () => computeDraftGrades(data, keepers, leagueName),
+    [data, keepers, leagueName]
+  )
+
+  const topBest = useMemo(
+    () => [...allGrades].sort((a, b) => b.keepRate - a.keepRate || b.keptCount - a.keptCount).slice(0, 20),
+    [allGrades]
+  )
+
+  const topWorst = useMemo(
+    () => [...allGrades].sort((a, b) => a.keepRate - b.keepRate || a.keptCount - b.keptCount).slice(0, 20),
+    [allGrades]
+  )
+
+  const franchiseRankings = useMemo(() => {
+    const agg = {}
+    for (const g of allGrades) {
+      if (!agg[g.franchise]) agg[g.franchise] = { franchise: g.franchise, totalPicks: 0, totalKept: 0, seasons: 0, bestGrade: null, bestGradeOrder: -1 }
+      agg[g.franchise].totalPicks += g.totalPicks
+      agg[g.franchise].totalKept += g.keptCount
+      agg[g.franchise].seasons += 1
+      const gradeOrder = { 'A+': 6, 'A': 5, 'B': 4, 'C': 3, 'D': 2, 'F': 1 }
+      const go = gradeOrder[g.grade] || 0
+      if (go > agg[g.franchise].bestGradeOrder) {
+        agg[g.franchise].bestGradeOrder = go
+        agg[g.franchise].bestGrade = g.grade
+        agg[g.franchise].bestSeason = g.season
+      }
+    }
+    return Object.values(agg)
+      .map(r => ({ ...r, avgKeepRate: r.totalPicks > 0 ? r.totalKept / r.totalPicks : 0 }))
+      .sort((a, b) => b.avgKeepRate - a.avgKeepRate)
+  }, [allGrades])
+
+  const subBtns = [
+    ['best', '🏆 Best Drafts'],
+    ['worst', '💀 Worst Drafts'],
+    ['rankings', '📊 Franchise Rankings'],
+  ]
+
+  function DraftTable({ rows, highlightFirst, highlightLast }) {
+    return (
+      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+        <thead>
+          <tr style={{ color: '#475569', textAlign: 'left', borderBottom: '1px solid #1e293b' }}>
+            <th style={{ padding: '6px 8px', width: 32 }}>#</th>
+            <th style={{ padding: '6px 8px' }}>Franchise</th>
+            <th style={{ padding: '6px 8px', textAlign: 'center' }}>Season</th>
+            <th style={{ padding: '6px 8px', textAlign: 'center' }}>Picks</th>
+            <th style={{ padding: '6px 8px', textAlign: 'center' }}>Kept</th>
+            <th style={{ padding: '6px 8px', textAlign: 'center' }}>Keep%</th>
+            <th style={{ padding: '6px 8px', textAlign: 'center' }}>Grade</th>
+            <th style={{ padding: '6px 8px', textAlign: 'center' }}>Steals</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((g, i) => {
+            const isFirst = highlightFirst && i === 0
+            const isLast = highlightLast && i === rows.length - 1
+            const rowBg = isFirst
+              ? 'rgba(245,158,11,0.08)'
+              : isLast
+              ? 'rgba(248,113,113,0.06)'
+              : i % 2 ? 'rgba(255,255,255,0.01)' : 'transparent'
+            return (
+              <React.Fragment key={`${g.franchise}_${g.season}`}>
+                <tr style={{ borderBottom: g.steals.length > 0 ? 'none' : '1px solid #0f172a', background: rowBg }}>
+                  <td style={{ padding: '8px', color: isFirst ? '#f59e0b' : '#475569', fontWeight: 700 }}>{i + 1}</td>
+                  <td style={{ padding: '8px', color: '#f1f5f9', fontWeight: isFirst ? 700 : 400 }}>{g.franchise}</td>
+                  <td style={{ padding: '8px', textAlign: 'center', color: '#64748b' }}>{g.season}</td>
+                  <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{g.totalPicks}</td>
+                  <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{g.keptCount}</td>
+                  <td style={{ padding: '8px', textAlign: 'center', color: '#cbd5e1', fontWeight: 700 }}>{(g.keepRate * 100).toFixed(0)}%</td>
+                  <td style={{ padding: '8px', textAlign: 'center', color: gradeColor(g.grade), fontSize: 16, fontWeight: 700 }}>{g.grade}</td>
+                  <td style={{ padding: '8px', textAlign: 'center', color: g.steals.length > 0 ? '#84cc16' : '#475569', fontWeight: g.steals.length > 0 ? 700 : 400 }}>{g.steals.length}</td>
+                </tr>
+                {g.steals.length > 0 && (
+                  <tr style={{ borderBottom: '1px solid #0f172a', background: rowBg }}>
+                    <td colSpan={8} style={{ padding: '2px 8px 8px 32px', color: '#64748b', fontSize: 11 }}>
+                      Steals: {g.steals.map(s => `${s.player} (R${s.round})`).join(', ')}
+                    </td>
+                  </tr>
+                )}
+              </React.Fragment>
+            )
+          })}
+        </tbody>
+      </table>
+    )
+  }
+
+  return (
+    <div>
+      <div style={{ display: 'flex', gap: 6, marginBottom: 20, flexWrap: 'wrap' }}>
+        {subBtns.map(([id, label]) => (
+          <button key={id} onClick={() => setSub(id)} style={{
+            padding: '6px 14px', fontSize: 12, borderRadius: 6,
+            border: `1px solid ${sub === id ? '#84cc16' : '#1e293b'}`,
+            background: sub === id ? 'rgba(132,204,22,0.1)' : 'transparent',
+            color: sub === id ? '#84cc16' : '#64748b',
+            cursor: 'pointer', fontWeight: sub === id ? 700 : 400,
+          }}>
+            {label}
+          </button>
+        ))}
+      </div>
+
+      {sub === 'best' && (
+        allGrades.length === 0
+          ? <div style={{ color: '#475569', textAlign: 'center', padding: 40 }}>No draft grade data</div>
+          : <DraftTable rows={topBest} highlightFirst={true} highlightLast={false} />
+      )}
+
+      {sub === 'worst' && (
+        allGrades.length === 0
+          ? <div style={{ color: '#475569', textAlign: 'center', padding: 40 }}>No draft grade data</div>
+          : <DraftTable rows={topWorst} highlightFirst={false} highlightLast={true} />
+      )}
+
+      {sub === 'rankings' && (
+        franchiseRankings.length === 0
+          ? <div style={{ color: '#475569', textAlign: 'center', padding: 40 }}>No data</div>
+          : (
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+              <thead>
+                <tr style={{ color: '#475569', textAlign: 'left', borderBottom: '1px solid #1e293b' }}>
+                  <th style={{ padding: '6px 8px', width: 32 }}>#</th>
+                  <th style={{ padding: '6px 8px' }}>Franchise</th>
+                  <th style={{ padding: '6px 8px', textAlign: 'center' }}>Avg Keep%</th>
+                  <th style={{ padding: '6px 8px', textAlign: 'center' }}>Best Season</th>
+                  <th style={{ padding: '6px 8px', textAlign: 'center' }}>Total Picks</th>
+                  <th style={{ padding: '6px 8px', textAlign: 'center' }}>Total Kept</th>
+                </tr>
+              </thead>
+              <tbody>
+                {franchiseRankings.map((r, i) => (
+                  <tr key={r.franchise} style={{ borderBottom: '1px solid #0f172a', background: i % 2 ? 'rgba(255,255,255,0.01)' : 'transparent' }}>
+                    <td style={{ padding: '8px', color: '#475569', fontWeight: 700 }}>{i + 1}</td>
+                    <td style={{ padding: '8px', color: '#f1f5f9', fontWeight: i < 3 ? 700 : 400 }}>{r.franchise}</td>
+                    <td style={{ padding: '8px', textAlign: 'center', color: '#cbd5e1', fontWeight: 700 }}>{(r.avgKeepRate * 100).toFixed(0)}%</td>
+                    <td style={{ padding: '8px', textAlign: 'center' }}>
+                      {r.bestGrade
+                        ? <span><span style={{ color: gradeColor(r.bestGrade), fontWeight: 700 }}>{r.bestGrade}</span><span style={{ color: '#64748b', marginLeft: 6, fontSize: 11 }}>{r.bestSeason}</span></span>
+                        : '—'}
+                    </td>
+                    <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{r.totalPicks}</td>
+                    <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{r.totalKept}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )
+      )}
     </div>
   )
 }
@@ -3042,7 +3342,7 @@ export default function App() {
       </div>
 
       <div style={S.tabs}>
-        {['players', 'transactions', 'trades', 'teams', 'lineage', 'leaderboard', 'h2h', 'results', 'franchises'].map(t => (
+        {['players', 'transactions', 'trades', 'teams', 'lineage', 'leaderboard', 'h2h', 'results', 'franchises', 'draft'].map(t => (
           <button key={t} style={S.tab(tab === t)} onClick={() => setTab(t)}>
             {t === 'h2h' ? 'H2H' : t.charAt(0).toUpperCase() + t.slice(1)}
           </button>
@@ -3066,6 +3366,7 @@ export default function App() {
       {filteredData && tab === 'h2h' && <H2HTab data={filteredData} activeLeague={activeLeague} />}
       {filteredData && results && tab === 'results' && <ResultsTab results={results} activeLeague={activeLeague} onFranchiseClick={(name) => handleFranchiseClick(name)} />}
       {data && tab === 'franchises' && <FranchisesTab data={data} results={results || {}} keepers={keepers} activeLeague={activeLeague} selectedFranchise={selectedFranchise} setSelectedFranchise={setSelectedFranchise} />}
+      {data && tab === 'draft' && <DraftTab data={data} keepers={keepers} activeLeague={activeLeague} />}
     </div>
   )
 }
