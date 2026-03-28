@@ -437,6 +437,9 @@ PROJ_STAT_IDS = {
     "32": "SV",   "39": "HLD",
 }
 
+# Season stats IDs — same as projected but also include AB for sample size
+SEASON_STAT_IDS = {**PROJ_STAT_IDS, "9": "AB"}
+
 def sync_projected_stats(query):
     """
     Fetch Yahoo projected season stats for all active players by position.
@@ -517,6 +520,88 @@ def sync_projected_stats(query):
 
     print(f"    Total: {len(projections)} players with Yahoo projections")
     return projections
+
+
+def sync_season_stats(query):
+    """
+    Fetch YTD regular-season stats for all active players by position.
+    Returns dict of player_name -> {stat_name: value, ...} including AB for sample size.
+    """
+    QUERY_POSITIONS = ["C", "1B", "2B", "3B", "SS", "LF", "CF", "RF", "SP", "RP"]
+    game_key = "469"
+    session  = query.oauth.session
+    season_stats = {}
+
+    for pos in QUERY_POSITIONS:
+        print(f"    Fetching season stats {pos}...", end=" ", flush=True)
+        count = 0
+        start = 0
+        page_size = 25
+        while True:
+            url = (
+                f"https://fantasysports.yahooapis.com/fantasy/v2/"
+                f"games;game_keys={game_key}/players"
+                f";position={pos};status=A;count={page_size};start={start}"
+                f"/stats;type=season_type_1?format=json"
+            )
+            try:
+                resp = session.get(url)
+                if resp.status_code != 200:
+                    break
+                data = resp.json()
+                players_raw = (data.get("fantasy_content", {})
+                                   .get("games", {}).get("0", {})
+                                   .get("game", [{}, {}])[1]
+                                   .get("players", {}))
+                returned = int(players_raw.get("count", 0))
+                for k, v in players_raw.items():
+                    if k == "count":
+                        continue
+                    try:
+                        player_list = v["player"]
+                        name = next(
+                            (x["name"]["full"] for x in player_list[0] if "name" in x), None
+                        )
+                        if not name:
+                            continue
+                        stats_raw = player_list[1].get("player_stats", {}).get("stats", [])
+                        stats = {}
+                        sv = hld = 0
+                        for stat_entry in stats_raw:
+                            s = stat_entry.get("stat", {})
+                            sid = str(s.get("stat_id", ""))
+                            val = s.get("value", "-")
+                            if val in ("-", "", None):
+                                continue
+                            try:
+                                val = float(val)
+                            except (ValueError, TypeError):
+                                continue
+                            if sid == "32":
+                                sv = val
+                            elif sid == "39":
+                                hld = val
+                            elif sid in SEASON_STAT_IDS:
+                                stats[SEASON_STAT_IDS[sid]] = round(val, 3)
+                        if sv or hld:
+                            stats["NSVH"] = round(sv + hld, 1)
+                        # Only store players with any non-zero stats
+                        if stats and any(v != 0 for v in stats.values()):
+                            if name not in season_stats:
+                                season_stats[name] = stats
+                                count += 1
+                    except Exception:
+                        continue
+                start += page_size
+                if returned < page_size or start >= 400:
+                    break
+            except Exception as e:
+                print(f"(error: {e})")
+                break
+        print(f"{count} players")
+
+    print(f"    Total: {len(season_stats)} players with YTD stats")
+    return season_stats
 
 
 # ─── INJURY STATUS ───────────────────────────────────────────────────────────
@@ -761,6 +846,9 @@ def main():
 
     print("  Fetching injury/DTD status...")
     data["player_status"] = sync_injury_status(query)
+
+    print("  Fetching YTD season stats...")
+    data["season_stats"] = sync_season_stats(query)
 
     data["scoreboard"] = sync_scoreboard(query)
     data["standings"]  = sync_standings(query)

@@ -1854,7 +1854,7 @@ export default function DraftAssistant({ config }) {
             return (
               <div style={{flex:1,display:"flex",flexDirection:"column",overflow:"hidden"}}>
                 <div style={{background:"#0b0d14",borderBottom:"1px solid #1e293b",display:"flex",padding:"0 10px",flexShrink:0}}>
-                  {[["matchup","Matchup"],["standings","Standings"],["il","Roster"],["trade","Trade"]].map(([v,l])=>(
+                  {[["matchup","Matchup"],["standings","Standings"],["il","Roster"],["trade","Trade"],["buysell","Buy/Sell"]].map(([v,l])=>(
                     <button key={v} className="tabn" onClick={()=>setInSeasonTab(v)}
                       style={{color:inSeasonTab===v?"#84cc16":"#475569",borderBottom:inSeasonTab===v?"2px solid #84cc16":"2px solid transparent",fontSize:11}}>
                       {l}
@@ -2451,6 +2451,79 @@ export default function DraftAssistant({ config }) {
                     {!tradeAnalysis&&<div style={{fontSize:11,color:"#334155",marginTop:8}}>Add players to both sides to see the analysis.</div>}
                   </div>
                 )}
+
+                {inSeasonTab==="buysell"&&(()=>{
+                  const MIN_AB=10, MIN_IP=3;
+                  const lbCats=new Set(["ERA","WHIP","BB/9","ER"]);
+                  const hitKey=["HR","R","RBI","SB","AVG"];
+                  const pitKey=["ERA","WHIP","K","W"];
+                  const withSignal = leagueTargets.filter(p=>p.ytdStats).map(p=>{
+                    const ytd=p.ytdStats, proj=p.projStats||{};
+                    const isP=p.type==="P";
+                    const sample=isP?(ytd.IP||0):(ytd.AB||0);
+                    if(isP?sample<MIN_IP:sample<MIN_AB) return null;
+                    const projPT=isP?(proj.IP||0):(p.projPA||0);
+                    const scale=sample>0&&projPT>0?projPT/sample:1;
+                    const cats=isP?pitKey:hitKey;
+                    let total=0,cnt=0;
+                    const rows=cats.map(cat=>{
+                      const actual=ytd[cat], projected=proj[cat];
+                      if(actual==null||projected==null||projected===0) return null;
+                      const isRate=["AVG","ERA","WHIP","K/9","BB/9"].includes(cat);
+                      const pace=isRate?actual:Math.round(actual*scale*10)/10;
+                      const pct=(actual-projected)/Math.abs(projected);
+                      const norm=lbCats.has(cat)?-pct:pct;
+                      total+=norm; cnt++;
+                      return {cat,actual,pace,projected,norm};
+                    }).filter(Boolean);
+                    const signal=cnt>0?total/cnt:0;
+                    return {...p,signal,rows,sample};
+                  }).filter(Boolean);
+
+                  const mine=withSignal.filter(p=>p.owner===myTeam).sort((a,b)=>b.signal-a.signal);
+                  const topFA=withSignal.filter(p=>!p.rostered&&!p.owner).sort((a,b)=>b.signal-a.signal).slice(0,10);
+
+                  const sigLabel=s=>s>0.2?"🔥 Buy":s<-0.2?"📉 Sell":"→ Hold";
+                  const sigColor=s=>s>0.2?"#22c55e":s<-0.2?"#f87171":"#64748b";
+                  const fmtV=(v,cat)=>v==null?"—":["AVG","OBP","SLG"].includes(cat)?v.toFixed(3):["ERA","WHIP","K/9","BB/9"].includes(cat)?v.toFixed(2):v;
+
+                  const PlayerRow=({p})=>(
+                    <div style={{borderBottom:"1px solid #0d0f16",padding:"6px 0"}}>
+                      <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:4}}>
+                        <span style={{color:"#f1f5f9",fontSize:12,fontWeight:600,flex:1}}>{p.name}</span>
+                        <span style={{fontSize:9,color:"#475569"}}>{p.type==="P"?`${p.sample}IP`:`${p.sample}AB`}</span>
+                        <span style={{fontSize:10,fontWeight:700,color:sigColor(p.signal)}}>{sigLabel(p.signal)}</span>
+                      </div>
+                      <div style={{display:"flex",flexWrap:"wrap",gap:4}}>
+                        {p.rows.map(r=>(
+                          <div key={r.cat} style={{background:"#0d0f16",borderRadius:3,padding:"3px 6px",textAlign:"center",minWidth:48}}>
+                            <div style={{fontSize:8,color:"#334155"}}>{r.cat}</div>
+                            <div style={{fontSize:11,color:sigColor(r.norm),fontWeight:600}}>{fmtV(r.actual,r.cat)}</div>
+                            <div style={{fontSize:8,color:"#334155"}}>/{fmtV(r.projected,r.cat)}</div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+
+                  return(
+                    <div>
+                      <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",marginBottom:8}}>
+                        My Roster — YTD vs Projected
+                      </div>
+                      {mine.length===0
+                        ?<div style={{fontSize:11,color:"#334155",marginBottom:16}}>No roster data yet — run Yahoo sync after a few games.</div>
+                        :mine.map(p=><PlayerRow key={p.name} p={p}/>)
+                      }
+                      {topFA.length>0&&<>
+                        <div style={{fontSize:10,color:"#cbd5e1",letterSpacing:".1em",textTransform:"uppercase",margin:"16px 0 8px"}}>
+                          Top FA Overperformers
+                        </div>
+                        {topFA.map(p=><PlayerRow key={p.name} p={p}/>)}
+                      </>}
+                    </div>
+                  );
+                })()}
 
                 </div>
               </div>

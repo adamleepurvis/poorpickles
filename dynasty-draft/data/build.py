@@ -332,6 +332,7 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
     is_postdraft = draft_status == "postdraft"
 
     yahoo_projections_raw = yahoo_data.get("yahoo_projections", {})
+    season_stats_raw = yahoo_data.get("season_stats", {})
     players = list(zar_scores.values())
 
     for p in players:
@@ -350,6 +351,8 @@ def merge_players(zar_scores: dict, yahoo_data: dict) -> list[dict]:
         p["scoreYahoo"] = yahoo_proj_scores.get(name, None)
         if name in yahoo_projections_raw:
             p["yahooProj"] = yahoo_projections_raw[name]
+        if name in season_stats_raw:
+            p["ytdStats"] = season_stats_raw[name]
         if name in yahoo_status:
             status = yahoo_status[name]
             p["yahoo_status"] = status
