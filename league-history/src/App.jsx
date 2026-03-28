@@ -3110,23 +3110,34 @@ function FranchisesTab({ data, results, keepers, activeLeague, selectedFranchise
 function DraftTab({ data, keepers, activeLeague }) {
   const leagueName = activeLeague === 'All' ? 'LXG' : activeLeague
   const [sub, setSub] = useState('best')
+  const [yearFilter, setYearFilter] = useState('all')
 
   const allGrades = useMemo(
     () => computeDraftGrades(data, keepers, leagueName),
     [data, keepers, leagueName]
   )
 
-  const topBest = useMemo(
-    () => [...allGrades].sort((a, b) => b.compositeScore - a.compositeScore || b.keptCount - a.keptCount).slice(0, 20),
+  const availableYears = useMemo(
+    () => [...new Set(allGrades.map(g => g.season))].sort((a, b) => a - b),
     [allGrades]
   )
 
+  const filtered = useMemo(
+    () => yearFilter === 'all' ? allGrades : allGrades.filter(g => g.season === parseInt(yearFilter)),
+    [allGrades, yearFilter]
+  )
+
+  const topBest = useMemo(
+    () => [...filtered].sort((a, b) => b.compositeScore - a.compositeScore || b.keptCount - a.keptCount).slice(0, 20),
+    [filtered]
+  )
+
   const topWorst = useMemo(
-    () => [...allGrades]
+    () => [...filtered]
       .filter(g => !g.constrained)
       .sort((a, b) => a.compositeScore - b.compositeScore || a.keptCount - b.keptCount)
       .slice(0, 20),
-    [allGrades]
+    [filtered]
   )
 
   const franchiseRankings = useMemo(() => {
@@ -3154,6 +3165,21 @@ function DraftTab({ data, keepers, activeLeague }) {
     ['worst', '💀 Worst Drafts'],
     ['rankings', '📊 Franchise Rankings'],
   ]
+
+  const yearFilterEl = sub !== 'rankings' && (
+    <select
+      value={yearFilter}
+      onChange={e => setYearFilter(e.target.value)}
+      style={{
+        marginLeft: 'auto', padding: '5px 10px', fontSize: 12, borderRadius: 6,
+        border: '1px solid #1e293b', background: '#0f172a', color: '#94a3b8',
+        cursor: 'pointer',
+      }}
+    >
+      <option value="all">All Years</option>
+      {availableYears.map(y => <option key={y} value={y}>{y}</option>)}
+    </select>
+  )
 
   function DraftTable({ rows, highlightFirst, highlightLast }) {
     return (
@@ -3210,7 +3236,7 @@ function DraftTab({ data, keepers, activeLeague }) {
 
   return (
     <div>
-      <div style={{ display: 'flex', gap: 6, marginBottom: 20, flexWrap: 'wrap' }}>
+      <div style={{ display: 'flex', gap: 6, marginBottom: 20, flexWrap: 'wrap', alignItems: 'center' }}>
         {subBtns.map(([id, label]) => (
           <button key={id} onClick={() => setSub(id)} style={{
             padding: '6px 14px', fontSize: 12, borderRadius: 6,
@@ -3222,6 +3248,7 @@ function DraftTab({ data, keepers, activeLeague }) {
             {label}
           </button>
         ))}
+        {yearFilterEl}
       </div>
 
       {sub === 'best' && (
