@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-28T21:33:26.931841",
+  "generated": "2026-03-28T22:06:06.666809",
   "league_key": "469.l.91300",
   "settings": {
     "league_key": "469.l.91300",
@@ -18,7 +18,7 @@
       "ERA",
       "WHIP"
     ],
-    "fetched_at": "2026-03-28T21:33:27.546620"
+    "fetched_at": "2026-03-28T22:06:07.223418"
   },
   "draft_results": [
     {
@@ -10990,6 +10990,7 @@
     "Christian Bethancourt": "NA",
     "Austin Barnes": "NA",
     "Ben Rortvedt": "NA",
+    "Garrett Stubbs": "NA",
     "Jhonny Pereda": "NA",
     "Austin Hedges": "DTD",
     "Jacob Stallings": "NA",
@@ -11494,7 +11495,6 @@
     "Heston Kjerstad": "IL10",
     "Mark Canha": "NA",
     "Jason Heyward": "NA",
-    "Alejandro Osuna": "NA",
     "Taylor Trammell": "NA",
     "Manuel Margot": "NA",
     "Jack Suwinski": "NA",
@@ -11561,6 +11561,7 @@
     "Kameron Misner": "NA",
     "Michael Helman": "NA",
     "Robert Hassell III": "NA",
+    "Alejandro Osuna": "NA",
     "Michael Siani": "NA",
     "Drew Gilbert": "NA",
     "Ji Hwan Bae": "NA",
@@ -11652,7 +11653,6 @@
     "Jos\u00e9 Berr\u00edos": "IL15",
     "Tylor Megill": "IL60",
     "Jack Perkins": "NA",
-    "Trevor McDonald": "NA",
     "Andrew Alvarez": "NA",
     "Javier Assad": "NA",
     "Gavin Stone": "IL15",
@@ -11761,7 +11761,6 @@
     "Andrew Sears": "NA",
     "Karson Milbrandt": "NA",
     "Felix Arronde": "NA",
-    "Gary Gill Hill": "NA",
     "Marco Raya": "NA",
     "Connor Noland": "NA",
     "Michael Lombardi": "NA",
@@ -11860,6 +11859,7 @@
     "Kevin Defrank": "NA",
     "Mason Morris": "NA",
     "Patrick Forbes": "NA",
+    "Jackson Cox": "NA",
     "Humberto Cruz": "NA",
     "Blake Larson": "NA",
     "Chase Hampton": "NA",
@@ -11983,7 +11983,6 @@
     "Hunter Owen": "NA",
     "Briggs McKenzie": "NA",
     "Connor Prielipp": "NA",
-    "Lucas Braun": "NA",
     "Josh Hader": "IL15",
     "Kirby Yates": "IL15",
     "Edwin Uceta": "IL15",
@@ -12018,6 +12017,7 @@
     "Luinder Avila": "NA",
     "Nick Sandlin": "NA",
     "Steven Cruz": "NA",
+    "Trevor McDonald": "NA",
     "Kade Strowd": "NA",
     "Jason Foley": "IL60",
     "Dylan Dodd": "NA",
@@ -12223,6 +12223,7 @@
     "Juan Burgos": "NA",
     "Alex Carrillo": "NA"
   },
+  "season_stats": {},
   "scoreboard": {
     "week": 1,
     "matchups": []

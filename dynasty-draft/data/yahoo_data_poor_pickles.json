@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-28T17:49:31.823356",
+  "generated": "2026-03-28T22:04:57.812755",
   "league_key": "469.l.51744",
   "settings": {
     "league_key": "469.l.51744",
@@ -21,7 +21,7 @@
       "WHIP",
       "BB/9"
     ],
-    "fetched_at": "2026-03-28T17:49:32.441983"
+    "fetched_at": "2026-03-28T22:04:58.419200"
   },
   "draft_results": [
     {
@@ -5512,10 +5512,10 @@
     "Ben Rortvedt": [
       "C"
     ],
-    "Garrett Stubbs": [
+    "Luis Campusano": [
       "C"
     ],
-    "Luis Campusano": [
+    "Garrett Stubbs": [
       "C"
     ],
     "Jhonny Pereda": [
@@ -8260,12 +8260,12 @@
       "LF",
       "RF"
     ],
-    "Heriberto Hern\u00e1ndez": [
+    "Eli White": [
+      "CF",
       "LF",
       "RF"
     ],
-    "Eli White": [
-      "CF",
+    "Heriberto Hern\u00e1ndez": [
       "LF",
       "RF"
     ],
@@ -8310,12 +8310,12 @@
       "LF",
       "RF"
     ],
-    "Blake Perkins": [
-      "CF",
+    "Jordan Walker": [
       "LF",
       "RF"
     ],
-    "Jordan Walker": [
+    "Blake Perkins": [
+      "CF",
       "LF",
       "RF"
     ],
@@ -8386,7 +8386,7 @@
       "LF",
       "RF"
     ],
-    "Austin Slater": [
+    "Brandon Lockridge": [
       "CF",
       "LF",
       "RF"
@@ -8395,7 +8395,7 @@
       "LF",
       "RF"
     ],
-    "Brandon Lockridge": [
+    "Austin Slater": [
       "CF",
       "LF",
       "RF"
@@ -8461,12 +8461,12 @@
       "LF",
       "RF"
     ],
-    "Alejandro Osuna": [
+    "Joey Wiemer": [
       "CF",
       "LF",
       "RF"
     ],
-    "Joey Wiemer": [
+    "Alejandro Osuna": [
       "CF",
       "LF",
       "RF"
@@ -10398,6 +10398,9 @@
       "RP",
       "SP"
     ],
+    "Owen Murphy": [
+      "SP"
+    ],
     "Matt Barr": [
       "SP"
     ],
@@ -10555,10 +10558,6 @@
       "SP"
     ],
     "Blake Wehunt": [
-      "SP"
-    ],
-    "Braden Davis": [
-      "P",
       "SP"
     ],
     "Mason Miller": [
@@ -10777,10 +10776,6 @@
       "P",
       "RP"
     ],
-    "Jeremiah Estrada": [
-      "P",
-      "RP"
-    ],
     "Steven Okert": [
       "P",
       "RP"
@@ -10801,11 +10796,11 @@
       "P",
       "RP"
     ],
-    "Tanner Scott": [
+    "Dylan Lee": [
       "P",
       "RP"
     ],
-    "Dylan Lee": [
+    "Tanner Scott": [
       "P",
       "RP"
     ],
@@ -10814,6 +10809,10 @@
       "RP"
     ],
     "Jacob Webb": [
+      "P",
+      "RP"
+    ],
+    "Jeremiah Estrada": [
       "P",
       "RP"
     ],
@@ -11477,6 +11476,9 @@
       "RP"
     ],
     "Eiberson Castellano": [
+      "RP"
+    ],
+    "Brayan Mendoza": [
       "RP"
     ],
     "RJ Petit": [
