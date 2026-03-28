@@ -557,7 +557,9 @@ function computeDraftGrades(data, keepers, leagueName, rankings) {
   for (const [season, playerMap] of Object.entries(seasonRankings)) {
     rankLookup[parseInt(season)] = {}
     for (const [name, rank] of Object.entries(playerMap)) {
-      rankLookup[parseInt(season)][normRankingName(name)] = rank
+      const key = normRankingName(name)
+      const existing = rankLookup[parseInt(season)][key]
+      if (!existing || rank < existing) rankLookup[parseInt(season)][key] = rank
     }
   }
 
@@ -1702,7 +1704,9 @@ function LeaderboardTab({ data, activeLeague, keepers, rankings }) {
     for (const [season, playerMap] of Object.entries(seasonRankings)) {
       lookups[season] = {}
       for (const [name, rank] of Object.entries(playerMap)) {
-        lookups[season][normRankingName(name)] = rank
+        const key = normRankingName(name)
+        const existing = lookups[season][key]
+        if (!existing || rank < existing) lookups[season][key] = rank
       }
     }
     // Deduplicate by player+season (keep best rank if added multiple times)
