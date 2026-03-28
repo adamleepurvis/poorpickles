@@ -1850,6 +1850,152 @@ function computeH2HMatchups(results, leagueName, teamA, teamB) {
   return rows.sort((a, b) => b.season - a.season || b.week - a.week)
 }
 
+// ─── Results helpers: Category Kings, Playoffs, Best Seasons ────────────────
+
+const STAT_NAMES = {
+  "7": "R", "8": "H", "12": "HR", "13": "RBI", "16": "SB",
+  "23": "TB", "3": "AVG", "4": "OBP", "5": "SLG",
+  "28": "W", "42": "K", "26": "ERA", "27": "WHIP",
+  "57": "K/9", "78": "BB/9", "90": "NSVH",
+  "32": "SV", "50": "IP", "37": "ER", "56": "QS"
+}
+
+function computeCategoryKings(results, leagueName) {
+  const leagueData = results[leagueName]
+  if (!leagueData) return []
+
+  // statId -> { teamWins: { franchise: count }, total: count }
+  const statAgg = {}
+
+  for (const [, d] of Object.entries(leagueData)) {
+    for (const m of (d.matchups || [])) {
+      if (!m.stat_winners) continue
+      for (const [statId, winner] of Object.entries(m.stat_winners)) {
+        if (!STAT_NAMES[statId]) continue
+        if (!statAgg[statId]) statAgg[statId] = { teamWins: {}, total: 0 }
+        statAgg[statId].total += 1
+        const franchise = normTeam(winner)
+        statAgg[statId].teamWins[franchise] = (statAgg[statId].teamWins[franchise] || 0) + 1
+      }
+    }
+  }
+
+  const result = []
+  for (const [statId, agg] of Object.entries(statAgg)) {
+    if (agg.total < 50) continue
+    let leader = null, leaderWins = -1
+    for (const [franchise, wins] of Object.entries(agg.teamWins)) {
+      if (wins > leaderWins) { leaderWins = wins; leader = franchise }
+    }
+    if (!leader) continue
+    result.push({
+      statId,
+      statName: STAT_NAMES[statId],
+      leader,
+      wins: leaderWins,
+      total: agg.total,
+      pct: (leaderWins / agg.total * 100).toFixed(1) + '%',
+    })
+  }
+
+  return result.sort((a, b) => a.statName.localeCompare(b.statName))
+}
+
+function computePlayoffStats(results, leagueName) {
+  const leagueData = results[leagueName]
+  if (!leagueData) return { rows: [] }
+
+  // franchise -> { playoffSeasons: Set, postW, postL, regW, regL }
+  const agg = {}
+
+  function ensure(name) {
+    if (!agg[name]) agg[name] = { playoffSeasons: new Set(), postW: 0, postL: 0, regW: 0, regL: 0 }
+    return agg[name]
+  }
+
+  for (const [, d] of Object.entries(leagueData)) {
+    if ((d.format || 'h2h') !== 'h2h') continue
+    const matchups = d.matchups || []
+    if (matchups.length === 0) continue
+    const endWeek = Math.max(...matchups.map(m => m.week))
+    const playoffStartWeek = endWeek - 2
+
+    for (const m of matchups) {
+      const home = normTeam(m.home)
+      const away = normTeam(m.away)
+      const winner = normTeam(m.winner)
+      const isPost = m.week >= playoffStartWeek
+
+      ensure(home)
+      ensure(away)
+
+      if (isPost) {
+        agg[home].playoffSeasons.add(String(d.season || m.week))
+        agg[away].playoffSeasons.add(String(d.season || m.week))
+        if (winner === home) { agg[home].postW++; agg[away].postL++ }
+        else if (winner === away) { agg[away].postW++; agg[home].postL++ }
+      } else {
+        if (winner === home) { agg[home].regW++; agg[away].regL++ }
+        else if (winner === away) { agg[away].regW++; agg[home].regL++ }
+      }
+    }
+  }
+
+  // Re-compute playoff appearances by season properly
+  // Reset playoffSeasons and recount per season
+  const appCount = {}
+  for (const name of Object.keys(agg)) appCount[name] = new Set()
+
+  for (const [season, d] of Object.entries(leagueData)) {
+    if ((d.format || 'h2h') !== 'h2h') continue
+    const matchups = d.matchups || []
+    if (matchups.length === 0) continue
+    const endWeek = Math.max(...matchups.map(m => m.week))
+    const playoffStartWeek = endWeek - 2
+    for (const m of matchups) {
+      if (m.week < playoffStartWeek) continue
+      const home = normTeam(m.home)
+      const away = normTeam(m.away)
+      if (!appCount[home]) appCount[home] = new Set()
+      if (!appCount[away]) appCount[away] = new Set()
+      appCount[home].add(season)
+      appCount[away].add(season)
+    }
+  }
+
+  const rows = Object.entries(agg).map(([franchise, d]) => {
+    const apps = (appCount[franchise] || new Set()).size
+    const postTotal = d.postW + d.postL
+    const regTotal = d.regW + d.regL
+    const postWinPct = postTotal > 0 ? (d.postW / postTotal * 100).toFixed(1) : '—'
+    const regWinPct = regTotal > 0 ? (d.regW / regTotal * 100).toFixed(1) : '—'
+    return { franchise, apps, postW: d.postW, postL: d.postL, regW: d.regW, regL: d.regL, postWinPct, regWinPct }
+  }).sort((a, b) => b.apps - a.apps || b.postW - a.postW)
+
+  return { rows }
+}
+
+function computeSeasonRecords(results, leagueName) {
+  const leagueData = results[leagueName]
+  if (!leagueData) return []
+
+  const allSeasons = []
+  for (const [season, d] of Object.entries(leagueData)) {
+    if ((d.format || 'h2h') !== 'h2h') continue
+    for (const s of d.standings) {
+      const franchise = normTeam(s.team)
+      const wins = s.wins || 0
+      const losses = s.losses || 0
+      const ties = s.ties || 0
+      const total = wins + losses + ties
+      const winPct = total > 0 ? wins / total : 0
+      allSeasons.push({ franchise, season: parseInt(season), wins, losses, ties, winPct, rank: s.rank })
+    }
+  }
+
+  return allSeasons.sort((a, b) => b.winPct - a.winPct)
+}
+
 // ─── ResultsTab ─────────────────────────────────────────────────────────────
 
 function ResultsTab({ results, activeLeague }) {
@@ -1870,6 +2016,10 @@ function ResultsTab({ results, activeLeague }) {
     () => computeH2HMatchups(results, selectedLeague, teamA, teamB),
     [results, selectedLeague, teamA, teamB]
   )
+
+  const categoryKings = useMemo(() => computeCategoryKings(results, selectedLeague), [results, selectedLeague])
+  const playoffStats = useMemo(() => computePlayoffStats(results, selectedLeague), [results, selectedLeague])
+  const seasonRecords = useMemo(() => computeSeasonRecords(results, selectedLeague), [results, selectedLeague])
 
   // Champions summary stats
   const uniqueChampions = useMemo(() => new Set(champions.map(c => c.champion)), [champions])
@@ -1902,6 +2052,9 @@ function ResultsTab({ results, activeLeague }) {
     ['champions', '🏆 Champions'],
     ['records', '📊 W/L Records'],
     ['h2h', '⚔️ Head to Head'],
+    ['cats', '🎯 Category Kings'],
+    ['playoffs', '🏅 Playoffs'],
+    ['seasons', '📈 Best Seasons'],
   ]
 
   if (!results) return <div style={{ color: '#475569', padding: 40, textAlign: 'center' }}>No results data</div>
@@ -2094,6 +2247,197 @@ function ResultsTab({ results, activeLeague }) {
           ) : null}
         </div>
       )}
+
+      {/* Category Kings sub-tab */}
+      {sub === 'cats' && (
+        <div>
+          {categoryKings.length === 0 ? (
+            <div style={{ color: '#475569', textAlign: 'center', padding: 40 }}>No category data available</div>
+          ) : (
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 12 }}>
+              {categoryKings.map(({ statId, statName, leader, wins, total, pct }) => (
+                <div key={statId} style={{ background: '#0d0f16', border: '1px solid #1e293b', borderRadius: 8, padding: '12px 16px' }}>
+                  <div style={{ color: '#84cc16', fontSize: 20, fontWeight: 700, marginBottom: 6 }}>{statName}</div>
+                  <div style={{ color: '#f1f5f9', fontWeight: 700, fontSize: 13, marginBottom: 4 }}>{leader}</div>
+                  <div style={{ color: '#64748b', fontSize: 12 }}>{wins} wins ({pct})</div>
+                  <div style={{ color: '#475569', fontSize: 11, marginTop: 2 }}>of {total} matchups</div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Playoffs sub-tab */}
+      {sub === 'playoffs' && (
+        <div>
+          {playoffStats.rows.length === 0 ? (
+            <div style={{ color: '#475569', textAlign: 'center', padding: 40 }}>No playoff data available</div>
+          ) : (
+            <>
+              <div style={{ color: '#94a3b8', fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 10 }}>
+                Playoff Appearance Leaderboard
+              </div>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, marginBottom: 32 }}>
+                <thead>
+                  <tr style={{ color: '#475569', textAlign: 'left', borderBottom: '1px solid #1e293b' }}>
+                    <th style={{ padding: '6px 8px', width: 32 }}>#</th>
+                    <th style={{ padding: '6px 8px' }}>Franchise</th>
+                    <th style={{ padding: '6px 8px', textAlign: 'center' }}>Playoff Apps</th>
+                    <th style={{ padding: '6px 8px', textAlign: 'center' }}>Post W-L</th>
+                    <th style={{ padding: '6px 8px', textAlign: 'center' }}>Post Win%</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {playoffStats.rows.map((r, i) => (
+                    <tr key={r.franchise} style={{ borderBottom: '1px solid #0f172a', background: i % 2 ? 'rgba(255,255,255,0.01)' : 'transparent' }}>
+                      <td style={{ padding: '8px', color: '#475569', fontWeight: 700 }}>{i + 1}</td>
+                      <td style={{ padding: '8px', color: '#f1f5f9', fontWeight: i < 3 ? 700 : 400 }}>{r.franchise}</td>
+                      <td style={{ padding: '8px', textAlign: 'center', color: '#84cc16', fontWeight: 700 }}>{r.apps}</td>
+                      <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{r.postW}-{r.postL}</td>
+                      <td style={{ padding: '8px', textAlign: 'center', color: '#cbd5e1', fontWeight: 700 }}>
+                        {r.postWinPct !== '—' ? `${r.postWinPct}%` : '—'}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+
+              <div style={{ color: '#94a3b8', fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 10, marginTop: 20 }}>
+                Regular Season vs Postseason (Top 8)
+              </div>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+                <thead>
+                  <tr style={{ color: '#475569', textAlign: 'left', borderBottom: '1px solid #1e293b' }}>
+                    <th style={{ padding: '6px 8px' }}>Franchise</th>
+                    <th style={{ padding: '6px 8px', textAlign: 'center' }}>Reg Win%</th>
+                    <th style={{ padding: '6px 8px', textAlign: 'center' }}>Post Win%</th>
+                    <th style={{ padding: '6px 8px', textAlign: 'center' }}>Diff</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {playoffStats.rows.slice(0, 8).map((r, i) => {
+                    const regPct = r.regWinPct !== '—' ? parseFloat(r.regWinPct) : null
+                    const postPct = r.postWinPct !== '—' ? parseFloat(r.postWinPct) : null
+                    const diff = regPct !== null && postPct !== null ? (postPct - regPct).toFixed(1) : null
+                    const diffColor = diff === null ? '#475569' : parseFloat(diff) > 0 ? '#84cc16' : parseFloat(diff) < 0 ? '#f87171' : '#94a3b8'
+                    return (
+                      <tr key={r.franchise} style={{ borderBottom: '1px solid #0f172a', background: i % 2 ? 'rgba(255,255,255,0.01)' : 'transparent' }}>
+                        <td style={{ padding: '8px', color: '#f1f5f9', fontWeight: i < 3 ? 700 : 400 }}>{r.franchise}</td>
+                        <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{r.regWinPct !== '—' ? `${r.regWinPct}%` : '—'}</td>
+                        <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{r.postWinPct !== '—' ? `${r.postWinPct}%` : '—'}</td>
+                        <td style={{ padding: '8px', textAlign: 'center', color: diffColor, fontWeight: 700 }}>
+                          {diff !== null ? (parseFloat(diff) > 0 ? `+${diff}%` : `${diff}%`) : '—'}
+                        </td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+            </>
+          )}
+        </div>
+      )}
+
+      {/* Best Seasons sub-tab */}
+      {sub === 'seasons' && (() => {
+        const top10 = seasonRecords.slice(0, 10)
+        const bottom10 = [...seasonRecords].sort((a, b) => a.winPct - b.winPct).slice(0, 10)
+
+        // Most improved: franchise -> best YoY winPct jump
+        const byFranchise = {}
+        for (const row of seasonRecords) {
+          if (!byFranchise[row.franchise]) byFranchise[row.franchise] = []
+          byFranchise[row.franchise].push(row)
+        }
+        const mostImproved = []
+        for (const [franchise, seasons] of Object.entries(byFranchise)) {
+          const sorted = [...seasons].sort((a, b) => a.season - b.season)
+          let bestJump = -Infinity, bestFrom = null, bestTo = null
+          for (let i = 1; i < sorted.length; i++) {
+            const jump = sorted[i].winPct - sorted[i - 1].winPct
+            if (jump > bestJump) {
+              bestJump = jump
+              bestFrom = sorted[i - 1].season
+              bestTo = sorted[i].season
+            }
+          }
+          if (bestFrom !== null && bestJump > 0) {
+            mostImproved.push({ franchise, jump: bestJump, fromSeason: bestFrom, toSeason: bestTo })
+          }
+        }
+        mostImproved.sort((a, b) => b.jump - a.jump)
+        const top5Improved = mostImproved.slice(0, 5)
+
+        const sectionHeaderStyle = { color: '#94a3b8', fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 10, marginTop: 20 }
+
+        const SeasonTable = ({ rows, highlightFirst, highlightLast }) => (
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, marginBottom: 8 }}>
+            <thead>
+              <tr style={{ color: '#475569', textAlign: 'left', borderBottom: '1px solid #1e293b' }}>
+                <th style={{ padding: '6px 8px', width: 32 }}>#</th>
+                <th style={{ padding: '6px 8px' }}>Franchise</th>
+                <th style={{ padding: '6px 8px', textAlign: 'center' }}>Season</th>
+                <th style={{ padding: '6px 8px', textAlign: 'center' }}>W</th>
+                <th style={{ padding: '6px 8px', textAlign: 'center' }}>L</th>
+                <th style={{ padding: '6px 8px', textAlign: 'center' }}>Win%</th>
+                <th style={{ padding: '6px 8px', textAlign: 'center' }}>Final Rank</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((r, i) => {
+                const isHighlight = (highlightFirst && i === 0) || (highlightLast && i === rows.length - 1)
+                const rowColor = highlightFirst && i === 0 ? '#f59e0b' : highlightLast && i === rows.length - 1 ? '#f87171' : '#f1f5f9'
+                const pct = '.' + String(Math.round(r.winPct * 1000)).padStart(3, '0')
+                return (
+                  <tr key={`${r.franchise}-${r.season}`} style={{ borderBottom: '1px solid #0f172a', background: isHighlight ? 'rgba(255,255,255,0.03)' : i % 2 ? 'rgba(255,255,255,0.01)' : 'transparent' }}>
+                    <td style={{ padding: '8px', color: '#475569', fontWeight: 700 }}>{i + 1}</td>
+                    <td style={{ padding: '8px', color: rowColor, fontWeight: isHighlight ? 700 : 400 }}>{r.franchise}</td>
+                    <td style={{ padding: '8px', textAlign: 'center', color: '#64748b' }}>{r.season}</td>
+                    <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{r.wins}</td>
+                    <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{r.losses}</td>
+                    <td style={{ padding: '8px', textAlign: 'center', color: isHighlight ? rowColor : '#cbd5e1', fontWeight: 700 }}>{pct}</td>
+                    <td style={{ padding: '8px', textAlign: 'center', color: '#64748b' }}>{r.rank || '—'}</td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+        )
+
+        return (
+          <div>
+            {seasonRecords.length === 0 ? (
+              <div style={{ color: '#475569', textAlign: 'center', padding: 40 }}>No season data available</div>
+            ) : (
+              <>
+                <div style={{ ...sectionHeaderStyle, marginTop: 0 }}>Best Single Seasons</div>
+                <SeasonTable rows={top10} highlightFirst={true} highlightLast={false} />
+
+                <div style={sectionHeaderStyle}>Worst Single Seasons</div>
+                <SeasonTable rows={bottom10} highlightFirst={false} highlightLast={true} />
+
+                <div style={sectionHeaderStyle}>Most Improved (Year-over-Year)</div>
+                {top5Improved.length === 0 ? (
+                  <div style={{ color: '#475569', fontSize: 13 }}>Not enough data</div>
+                ) : (
+                  <div>
+                    {top5Improved.map((r, i) => (
+                      <div key={r.franchise} style={{ background: '#0d0f16', border: '1px solid #1e293b', borderRadius: 8, padding: '10px 16px', marginBottom: 8, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <div>
+                          <span style={{ color: '#f1f5f9', fontWeight: 700 }}>{r.franchise}</span>
+                          <span style={{ color: '#64748b', fontSize: 12, marginLeft: 10 }}>{r.fromSeason} → {r.toSeason}</span>
+                        </div>
+                        <div style={{ color: '#84cc16', fontWeight: 700, fontSize: 15 }}>+{(r.jump * 100).toFixed(1)}%</div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        )
+      })()}
     </div>
   )
 }
