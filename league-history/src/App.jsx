@@ -499,6 +499,49 @@ function buildFranchiseData(allData, leagueName, teamName) {
     .map(([season, d]) => ({ season: parseInt(season), ...d }))
 }
 
+// ─── computeAcquisitionDNA ──────────────────────────────────────────────────
+
+function computeAcquisitionDNA(data, keepers, leagueName, franchise) {
+  // For each player ever kept by this franchise, find how they were first acquired
+  // Categories: drafted, traded, added (waiver/FA)
+  const buckets = { drafted: [], traded: [], added: [] }
+
+  // Collect all players ever kept by this franchise in this league
+  const keptPlayers = new Set()
+  const leagueKeepers = keepers?.[leagueName] || {}
+  for (const seasonKeepers of Object.values(leagueKeepers)) {
+    for (const player of (seasonKeepers[franchise] || [])) {
+      keptPlayers.add(player)
+    }
+  }
+
+  for (const playerName of keptPlayers) {
+    const entries = data[playerName]?.[leagueName]
+    if (!entries) continue
+
+    // Find the first entry that brought this player to this franchise
+    const arrivals = entries
+      .filter(e => normTeam(e.team) === franchise && e.how !== 'drop')
+      .sort((a, b) => a.season - b.season || (a.timestamp || 0) - (b.timestamp || 0))
+
+    if (!arrivals.length) continue
+    const first = arrivals[0]
+
+    // Check if this was a true draft pick or a keeper nomination
+    if (first.how === 'drafted') {
+      const keeperSetThatSeason = new Set(leagueKeepers[String(first.season)]?.[franchise] || [])
+      if (keeperSetThatSeason.has(playerName)) continue // keeper nomination, not a real acquisition
+      buckets.drafted.push({ player: playerName, season: first.season, round: first.round, pick: first.pick })
+    } else if (first.how === 'trade') {
+      buckets.traded.push({ player: playerName, season: first.season, from: normTeam(first.from_team) })
+    } else if (first.how === 'add') {
+      buckets.added.push({ player: playerName, season: first.season })
+    }
+  }
+
+  return buckets
+}
+
 // ─── computeDraftGrades ─────────────────────────────────────────────────────
 
 function computeDraftGrades(data, keepers, leagueName) {
@@ -3120,6 +3163,66 @@ function FranchisesTab({ data, results, keepers, activeLeague, selectedFranchise
                 )}
               </div>
             )}
+          </div>
+        )
+      })()}
+
+      {/* H. Acquisition DNA */}
+      {franchiseLeague && (() => {
+        const dna = computeAcquisitionDNA(data, keepers, franchiseLeague, franchise)
+        const total = dna.drafted.length + dna.traded.length + dna.added.length
+        if (total === 0) return null
+
+        const pct = n => total > 0 ? Math.round(n / total * 100) : 0
+        const categories = [
+          { key: 'drafted', label: 'Draft', color: '#84cc16', players: dna.drafted.sort((a, b) => (b.round * 1000 + b.pick) - (a.round * 1000 + a.pick)) },
+          { key: 'traded',  label: 'Trade', color: '#60a5fa', players: dna.traded },
+          { key: 'added',   label: 'Wire',  color: '#f59e0b', players: dna.added },
+        ]
+
+        return (
+          <div style={cardStyle}>
+            <div style={sectionTitle}>Acquisition DNA</div>
+            <div style={{ color: '#64748b', fontSize: 11, marginBottom: 14 }}>
+              How keepers were originally acquired · {total} total
+            </div>
+
+            {/* Bar */}
+            <div style={{ display: 'flex', height: 10, borderRadius: 5, overflow: 'hidden', marginBottom: 14, gap: 2 }}>
+              {categories.map(c => c.players.length > 0 && (
+                <div key={c.key} style={{ width: `${pct(c.players.length)}%`, background: c.color, borderRadius: 3 }} />
+              ))}
+            </div>
+
+            {/* Stats row */}
+            <div style={{ display: 'flex', gap: 24, marginBottom: 18 }}>
+              {categories.map(c => (
+                <div key={c.key}>
+                  <div style={{ color: c.color, fontWeight: 700, fontSize: 20 }}>{pct(c.players.length)}%</div>
+                  <div style={{ color: '#64748b', fontSize: 11 }}>{c.label} · {c.players.length}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Top players per category */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
+              {categories.map(c => (
+                <div key={c.key}>
+                  <div style={{ color: c.color, fontSize: 11, fontWeight: 700, marginBottom: 6, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{c.label}</div>
+                  {c.players.slice(0, 5).map(p => (
+                    <div key={p.player} style={{ fontSize: 12, color: '#94a3b8', marginBottom: 3, lineHeight: 1.3 }}>
+                      {p.player}
+                      <span style={{ color: '#475569', fontSize: 10, marginLeft: 4 }}>
+                        {c.key === 'drafted' ? `R${p.round}P${p.pick}` : p.season}
+                      </span>
+                    </div>
+                  ))}
+                  {c.players.length > 5 && (
+                    <div style={{ fontSize: 11, color: '#475569' }}>+{c.players.length - 5} more</div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         )
       })()}
