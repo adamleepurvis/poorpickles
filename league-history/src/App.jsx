@@ -541,6 +541,13 @@ function computeDraftGrades(data, keepers, leagueName) {
     const totalPicks = trueDraftPicks.length
     const keepRate = keptCount / totalPicks
 
+    // Keeper constraint: how many slots were actually available for new draft picks?
+    // retainedOldKeepers = keepers from this season who were also kept next season
+    const retainedOldKeepers = [...keeperSetThisSeason].filter(p => keeperSetNextSeason.has(p)).length
+    const availableSlots = Math.max(0, keeperSetNextSeason.size - retainedOldKeepers)
+    // Constrained = fewer than 3 open slots (shrinking keeper pool crowded out new picks)
+    const constrained = availableSlots < 3
+
     // Quality: for each true pick, count how many subsequent seasons it stayed as a keeper
     // (up to 4 years out, for same franchise only)
     let totalQualityPoints = 0
@@ -554,8 +561,11 @@ function computeDraftGrades(data, keepers, leagueName) {
     }
     const avgQuality = totalQualityPoints / totalPicks // 0–4 scale
 
-    // Composite: breadth (keepRate) + depth (avgQuality normalized to 0–1 where 3 avg yrs = 1.0)
-    const compositeScore = keepRate * 0.5 + Math.min(avgQuality / 3, 1) * 0.5
+    // Adjusted keep rate: normalize by available slots rather than total picks
+    const adjKeepRate = availableSlots > 0 ? Math.min(1, keptCount / availableSlots) : keepRate
+
+    // Composite: breadth (adjKeepRate) + depth (avgQuality normalized to 0–1 where 3 avg yrs = 1.0)
+    const compositeScore = adjKeepRate * 0.5 + Math.min(avgQuality / 3, 1) * 0.5
 
     // Steals: round >= 10, kept next year
     const steals = keptPlayers.filter(p => p.round >= 10)
@@ -573,7 +583,8 @@ function computeDraftGrades(data, keepers, leagueName) {
 
     grades.push({
       franchise, season, league: leagueName,
-      totalPicks, keptCount, keepRate,
+      totalPicks, keptCount, keepRate, adjKeepRate,
+      availableSlots, constrained,
       avgQuality, compositeScore,
       steals, misses, grade,
       keptPlayers,
@@ -3061,13 +3072,16 @@ function FranchisesTab({ data, results, keepers, activeLeague, selectedFranchise
                 {myGrades.map(g => {
                   const isBest = g === bestGrade
                   return (
-                    <tr key={g.season} style={{ borderBottom: '1px solid #0f172a', background: isBest ? 'rgba(132,204,22,0.04)' : 'transparent' }}>
-                      <td style={{ padding: '6px 8px', color: '#64748b', fontWeight: 700 }}>{g.season}</td>
+                    <tr key={g.season} style={{ borderBottom: '1px solid #0f172a', background: isBest ? 'rgba(132,204,22,0.04)' : 'transparent', opacity: g.constrained ? 0.55 : 1 }}>
+                      <td style={{ padding: '6px 8px', color: '#64748b', fontWeight: 700 }}>
+                        {g.season}
+                        {g.constrained && <span title={`Only ${g.availableSlots} open keeper slot(s)`} style={{ marginLeft: 4, fontSize: 10, color: '#475569' }}>⚠️</span>}
+                      </td>
                       <td style={{ padding: '6px 8px', textAlign: 'center', color: '#94a3b8' }}>{g.totalPicks}</td>
                       <td style={{ padding: '6px 8px', textAlign: 'center', color: '#94a3b8' }}>{g.keptCount}</td>
                       <td style={{ padding: '6px 8px', textAlign: 'center', color: '#cbd5e1' }}>{(g.keepRate * 100).toFixed(0)}%</td>
                       <td style={{ padding: '6px 8px', textAlign: 'center', color: g.avgQuality >= 1.5 ? '#84cc16' : g.avgQuality >= 0.5 ? '#f59e0b' : '#475569', fontWeight: 700 }}>{g.avgQuality.toFixed(1)}</td>
-                      <td style={{ padding: '6px 8px', textAlign: 'center', color: gradeColor(g.grade), fontSize: 16, fontWeight: 700 }}>{g.grade}</td>
+                      <td style={{ padding: '6px 8px', textAlign: 'center', color: gradeColor(g.grade), fontSize: 16, fontWeight: 700 }}>{g.constrained ? '—' : g.grade}</td>
                       <td style={{ padding: '6px 8px', textAlign: 'center', color: g.steals.length > 0 ? '#84cc16' : '#475569', fontWeight: g.steals.length > 0 ? 700 : 400 }}>{g.steals.length}</td>
                     </tr>
                   )
@@ -3105,12 +3119,15 @@ function DraftTab({ data, keepers, activeLeague }) {
   )
 
   const topBest = useMemo(
-    () => [...allGrades].sort((a, b) => b.keepRate - a.keepRate || b.keptCount - a.keptCount).slice(0, 20),
+    () => [...allGrades].sort((a, b) => b.compositeScore - a.compositeScore || b.keptCount - a.keptCount).slice(0, 20),
     [allGrades]
   )
 
   const topWorst = useMemo(
-    () => [...allGrades].sort((a, b) => a.keepRate - b.keepRate || a.keptCount - b.keptCount).slice(0, 20),
+    () => [...allGrades]
+      .filter(g => !g.constrained)
+      .sort((a, b) => a.compositeScore - b.compositeScore || a.keptCount - b.keptCount)
+      .slice(0, 20),
     [allGrades]
   )
 
