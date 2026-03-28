@@ -1762,12 +1762,349 @@ function H2HTab({ data, activeLeague }) {
   )
 }
 
+// ─── ResultsTab helpers ─────────────────────────────────────────────────────
+
+function computeChampions(results, leagueName) {
+  const leagueData = results[leagueName]
+  if (!leagueData) return []
+  return Object.entries(leagueData)
+    .map(([season, d]) => {
+      const rank1 = d.standings.find(s => s.rank === 1) || d.standings[0]
+      if (!rank1) return null
+      return {
+        season: parseInt(season),
+        champion: normTeam(rank1.team),
+        wins: rank1.wins,
+        losses: rank1.losses,
+        ties: rank1.ties,
+        points_for: rank1.points_for,
+        format: d.format || 'h2h',
+      }
+    })
+    .filter(Boolean)
+    .sort((a, b) => b.season - a.season)
+}
+
+function computeAllTimeRecords(results, leagueName) {
+  const leagueData = results[leagueName]
+  if (!leagueData) return []
+  const agg = {}
+  for (const [, d] of Object.entries(leagueData)) {
+    if ((d.format || 'h2h') !== 'h2h') continue
+    for (const s of d.standings) {
+      const team = normTeam(s.team)
+      if (!agg[team]) agg[team] = { wins: 0, losses: 0, ties: 0, seasons: 0 }
+      agg[team].wins += s.wins || 0
+      agg[team].losses += s.losses || 0
+      agg[team].ties += s.ties || 0
+      agg[team].seasons += 1
+    }
+  }
+  return Object.entries(agg)
+    .map(([team, r]) => {
+      const total = r.wins + r.losses + r.ties
+      const winPct = total > 0 ? r.wins / total : 0
+      const pct = '.' + String(Math.round(winPct * 1000)).padStart(3, '0')
+      return { team, wins: r.wins, losses: r.losses, ties: r.ties, seasons: r.seasons, winPct, pct }
+    })
+    .sort((a, b) => b.winPct - a.winPct)
+}
+
+function getTeamsFromResults(results, leagueName) {
+  const leagueData = results[leagueName]
+  if (!leagueData) return []
+  const teams = new Set()
+  for (const d of Object.values(leagueData)) {
+    for (const s of d.standings) teams.add(normTeam(s.team))
+    for (const m of (d.matchups || [])) {
+      if (m.home) teams.add(normTeam(m.home))
+      if (m.away) teams.add(normTeam(m.away))
+    }
+  }
+  return Array.from(teams).sort()
+}
+
+function computeH2HMatchups(results, leagueName, teamA, teamB) {
+  const leagueData = results[leagueName]
+  if (!leagueData || !teamA || !teamB) return []
+  const rows = []
+  for (const [season, d] of Object.entries(leagueData)) {
+    for (const m of (d.matchups || [])) {
+      const home = normTeam(m.home)
+      const away = normTeam(m.away)
+      const aIsHome = home === teamA && away === teamB
+      const aIsAway = away === teamA && home === teamB
+      if (!aIsHome && !aIsAway) continue
+      const winner = normTeam(m.winner)
+      rows.push({
+        season: parseInt(season),
+        week: m.week,
+        winner,
+        homeTeam: home,
+        awayTeam: away,
+        homeScore: m.home_score,
+        awayScore: m.away_score,
+      })
+    }
+  }
+  return rows.sort((a, b) => b.season - a.season || b.week - a.week)
+}
+
+// ─── ResultsTab ─────────────────────────────────────────────────────────────
+
+function ResultsTab({ results, activeLeague }) {
+  const [sub, setSub] = useState('champions')
+  const [selectedLeagueLocal, setSelectedLeagueLocal] = useState('LXG')
+  const selectedLeague = activeLeague !== 'All' ? activeLeague : selectedLeagueLocal
+
+  const availableLeagues = Object.keys(results || {}).sort()
+
+  const champions = useMemo(() => computeChampions(results, selectedLeague), [results, selectedLeague])
+  const records = useMemo(() => computeAllTimeRecords(results, selectedLeague), [results, selectedLeague])
+  const teamNames = useMemo(() => getTeamsFromResults(results, selectedLeague), [results, selectedLeague])
+
+  const [teamA, setTeamA] = useState('')
+  const [teamB, setTeamB] = useState('')
+
+  const h2hRows = useMemo(
+    () => computeH2HMatchups(results, selectedLeague, teamA, teamB),
+    [results, selectedLeague, teamA, teamB]
+  )
+
+  // Champions summary stats
+  const uniqueChampions = useMemo(() => new Set(champions.map(c => c.champion)), [champions])
+  const titleCounts = useMemo(() => {
+    const counts = {}
+    for (const c of champions) counts[c.champion] = (counts[c.champion] || 0) + 1
+    return Object.entries(counts).sort((a, b) => b[1] - a[1])
+  }, [champions])
+
+  // H2H summary
+  const h2hSummary = useMemo(() => {
+    if (!teamA || !teamB || h2hRows.length === 0) return null
+    let aWins = 0, bWins = 0, ties = 0
+    for (const r of h2hRows) {
+      if (r.winner === teamA) aWins++
+      else if (r.winner === teamB) bWins++
+      else ties++
+    }
+    return { aWins, bWins, ties }
+  }, [h2hRows, teamA, teamB])
+
+  const rankColor = (i) => {
+    if (i === 0) return '#f59e0b'  // gold
+    if (i === 1) return '#94a3b8'  // silver
+    if (i === 2) return '#b45309'  // bronze
+    return '#475569'
+  }
+
+  const subBtns = [
+    ['champions', '🏆 Champions'],
+    ['records', '📊 W/L Records'],
+    ['h2h', '⚔️ Head to Head'],
+  ]
+
+  if (!results) return <div style={{ color: '#475569', padding: 40, textAlign: 'center' }}>No results data</div>
+
+  return (
+    <div>
+      {/* League selector when activeLeague is All */}
+      {activeLeague === 'All' && (
+        <div style={{ ...S.filterRow, marginBottom: 16 }}>
+          <select style={S.select} value={selectedLeagueLocal} onChange={e => setSelectedLeagueLocal(e.target.value)}>
+            {availableLeagues.map(l => <option key={l} value={l}>{l}</option>)}
+          </select>
+        </div>
+      )}
+
+      {/* Sub-tab buttons */}
+      <div style={{ display: 'flex', gap: 6, marginBottom: 20, flexWrap: 'wrap' }}>
+        {subBtns.map(([id, label]) => (
+          <button key={id} onClick={() => setSub(id)} style={{
+            padding: '6px 14px', fontSize: 12, borderRadius: 6,
+            border: `1px solid ${sub === id ? '#84cc16' : '#1e293b'}`,
+            background: sub === id ? 'rgba(132,204,22,0.1)' : 'transparent',
+            color: sub === id ? '#84cc16' : '#64748b',
+            cursor: 'pointer', fontWeight: sub === id ? 700 : 400,
+          }}>
+            {label}
+          </button>
+        ))}
+      </div>
+
+      {/* Champions sub-tab */}
+      {sub === 'champions' && (
+        <div>
+          <div style={{ color: '#64748b', fontSize: 13, marginBottom: 16 }}>
+            {champions.length} season{champions.length !== 1 ? 's' : ''} · {uniqueChampions.size} unique champion{uniqueChampions.size !== 1 ? 's' : ''}
+          </div>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+            <thead>
+              <tr style={{ color: '#475569', textAlign: 'left', borderBottom: '1px solid #1e293b' }}>
+                <th style={{ padding: '6px 8px', width: 60 }}>Season</th>
+                <th style={{ padding: '6px 8px' }}>Champion</th>
+                <th style={{ padding: '6px 8px' }}>Record</th>
+              </tr>
+            </thead>
+            <tbody>
+              {champions.map((c, i) => (
+                <tr key={c.season} style={{ borderBottom: '1px solid #0f172a', background: i % 2 ? 'rgba(255,255,255,0.01)' : 'transparent' }}>
+                  <td style={{ padding: '8px', color: '#64748b', fontWeight: 700 }}>{c.season}</td>
+                  <td style={{ padding: '8px' }}>
+                    <span style={{ color: '#84cc16', fontWeight: 700 }}>{c.champion}</span>
+                    {c.champion === 'Dynasty' && (
+                      <span style={{
+                        marginLeft: 8, display: 'inline-block', padding: '1px 6px',
+                        borderRadius: 4, fontSize: 9, fontWeight: 700, letterSpacing: '0.05em',
+                        background: 'rgba(245,158,11,0.15)', color: '#f59e0b', border: '1px solid rgba(245,158,11,0.3)',
+                      }}>DYNASTY</span>
+                    )}
+                  </td>
+                  <td style={{ padding: '8px' }}>
+                    {c.format === 'roto'
+                      ? <span style={{ color: '#64748b' }}>Roto · {c.points_for}pts</span>
+                      : <span style={{ color: '#94a3b8' }}>{c.wins}-{c.losses}{c.ties > 0 ? `-${c.ties}` : ''}</span>
+                    }
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          {/* Titles count mini-leaderboard */}
+          {titleCounts.length > 0 && (
+            <div style={{ marginTop: 24 }}>
+              <div style={S.sectionLabel}>Titles</div>
+              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 16 }}>
+                {titleCounts.map(([name, count]) => (
+                  <div key={name} style={{
+                    display: 'flex', alignItems: 'center', gap: 6,
+                    background: '#0d0f16', border: '1px solid #1e293b',
+                    borderRadius: 20, padding: '5px 12px', fontSize: 13,
+                  }}>
+                    <span style={{ color: '#f1f5f9', fontWeight: 600 }}>{name}</span>
+                    <span style={{
+                      background: 'rgba(132,204,22,0.15)', color: '#84cc16',
+                      border: '1px solid rgba(132,204,22,0.3)',
+                      borderRadius: 10, padding: '0 7px', fontSize: 11, fontWeight: 700,
+                    }}>{count}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* W/L Records sub-tab */}
+      {sub === 'records' && (
+        <div>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+            <thead>
+              <tr style={{ color: '#475569', textAlign: 'left', borderBottom: '1px solid #1e293b' }}>
+                <th style={{ padding: '6px 8px', width: 32 }}>#</th>
+                <th style={{ padding: '6px 8px' }}>Franchise</th>
+                <th style={{ padding: '6px 8px', textAlign: 'center' }}>W</th>
+                <th style={{ padding: '6px 8px', textAlign: 'center' }}>L</th>
+                <th style={{ padding: '6px 8px', textAlign: 'center' }}>T</th>
+                <th style={{ padding: '6px 8px', textAlign: 'center' }}>Win%</th>
+                <th style={{ padding: '6px 8px', textAlign: 'center' }}>Seasons</th>
+              </tr>
+            </thead>
+            <tbody>
+              {records.map((r, i) => (
+                <tr key={r.team} style={{ borderBottom: '1px solid #0f172a', background: i % 2 ? 'rgba(255,255,255,0.01)' : 'transparent' }}>
+                  <td style={{ padding: '8px', fontWeight: 700, color: rankColor(i) }}>{i + 1}</td>
+                  <td style={{ padding: '8px', color: '#f1f5f9', fontWeight: i < 3 ? 700 : 400 }}>{r.team}</td>
+                  <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{r.wins}</td>
+                  <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{r.losses}</td>
+                  <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{r.ties}</td>
+                  <td style={{ padding: '8px', textAlign: 'center', color: i < 3 ? rankColor(i) : '#cbd5e1', fontWeight: 700 }}>{r.pct}</td>
+                  <td style={{ padding: '8px', textAlign: 'center', color: '#64748b' }}>{r.seasons}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {/* Head to Head sub-tab */}
+      {sub === 'h2h' && (
+        <div>
+          <div style={{ ...S.filterRow, marginBottom: 16 }}>
+            <select style={S.select} value={teamA} onChange={e => setTeamA(e.target.value)}>
+              <option value="">Team A...</option>
+              {teamNames.map(t => <option key={t} value={t}>{t}</option>)}
+            </select>
+            <span style={{ color: '#475569', fontWeight: 700 }}>vs</span>
+            <select style={S.select} value={teamB} onChange={e => setTeamB(e.target.value)}>
+              <option value="">Team B...</option>
+              {teamNames.map(t => <option key={t} value={t}>{t}</option>)}
+            </select>
+          </div>
+
+          {teamA && teamB && h2hSummary && (
+            <div style={{ marginBottom: 16, padding: '10px 16px', background: '#0d0f16', border: '1px solid #1e293b', borderRadius: 8 }}>
+              {h2hSummary.aWins === h2hSummary.bWins
+                ? <span style={{ color: '#94a3b8', fontWeight: 700 }}>All tied {h2hSummary.aWins}–{h2hSummary.bWins}</span>
+                : (
+                  <span style={{ color: '#84cc16', fontWeight: 700 }}>
+                    {h2hSummary.aWins > h2hSummary.bWins ? teamA : teamB} leads{' '}
+                    {Math.max(h2hSummary.aWins, h2hSummary.bWins)}–{Math.min(h2hSummary.aWins, h2hSummary.bWins)}
+                  </span>
+                )
+              }
+              {h2hSummary.ties > 0 && <span style={{ color: '#64748b', marginLeft: 8 }}>({h2hSummary.ties} tie{h2hSummary.ties !== 1 ? 's' : ''})</span>}
+              <span style={{ color: '#64748b', marginLeft: 12, fontSize: 12 }}>{h2hRows.length} matchup{h2hRows.length !== 1 ? 's' : ''}</span>
+            </div>
+          )}
+
+          {teamA && teamB && h2hRows.length === 0 && (
+            <div style={{ color: '#475569', marginTop: 20, textAlign: 'center' }}>No head-to-head matchups found</div>
+          )}
+
+          {!teamA || !teamB ? (
+            <div style={{ color: '#475569', marginTop: 40, textAlign: 'center' }}>Select two teams to see their head-to-head record</div>
+          ) : h2hRows.length > 0 ? (
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+              <thead>
+                <tr style={{ color: '#475569', textAlign: 'left', borderBottom: '1px solid #1e293b' }}>
+                  <th style={{ padding: '6px 8px' }}>Season</th>
+                  <th style={{ padding: '6px 8px' }}>Week</th>
+                  <th style={{ padding: '6px 8px' }}>Winner</th>
+                  <th style={{ padding: '6px 8px' }}>Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                {h2hRows.map((r, i) => (
+                  <tr key={`${r.season}-${r.week}`} style={{ borderBottom: '1px solid #0f172a', background: i % 2 ? 'rgba(255,255,255,0.01)' : 'transparent' }}>
+                    <td style={{ padding: '8px', color: '#64748b', fontWeight: 700 }}>{r.season}</td>
+                    <td style={{ padding: '8px', color: '#64748b' }}>{r.week}</td>
+                    <td style={{ padding: '8px', color: r.winner === teamA ? '#84cc16' : '#f1f5f9', fontWeight: 600 }}>{r.winner}</td>
+                    <td style={{ padding: '8px', color: '#94a3b8' }}>
+                      {r.homeTeam === teamA
+                        ? `${r.homeScore}-${r.awayScore}`
+                        : `${r.awayScore}-${r.homeScore}`
+                      }
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          ) : null}
+        </div>
+      )}
+    </div>
+  )
+}
+
 // ─── App ───────────────────────────────────────────────────────────────────
 
 export default function App() {
   const isMobile = useIsMobile()
   const [data, setData] = useState(null)
   const [keepers, setKeepers] = useState({})
+  const [results, setResults] = useState(null)
   const [error, setError] = useState(null)
   const [tab, setTab] = useState('players')
   const [activeLeague, setActiveLeague] = useState('LXG')
@@ -1780,6 +2117,10 @@ export default function App() {
     fetch('/keepers.json')
       .then(r => r.ok ? r.json() : {})
       .then(setKeepers)
+      .catch(() => {})
+    fetch('/results_history.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(setResults)
       .catch(() => {})
   }, [])
 
@@ -1853,7 +2194,7 @@ export default function App() {
       </div>
 
       <div style={S.tabs}>
-        {['players', 'transactions', 'trades', 'teams', 'lineage', 'leaderboard', 'h2h'].map(t => (
+        {['players', 'transactions', 'trades', 'teams', 'lineage', 'leaderboard', 'h2h', 'results'].map(t => (
           <button key={t} style={S.tab(tab === t)} onClick={() => setTab(t)}>
             {t === 'h2h' ? 'H2H' : t.charAt(0).toUpperCase() + t.slice(1)}
           </button>
@@ -1875,6 +2216,7 @@ export default function App() {
       {filteredData && tab === 'lineage' && <LineageTab data={filteredData} activeLeague={activeLeague} />}
       {filteredData && tab === 'leaderboard' && <LeaderboardTab data={filteredData} activeLeague={activeLeague} keepers={keepers} />}
       {filteredData && tab === 'h2h' && <H2HTab data={filteredData} activeLeague={activeLeague} />}
+      {filteredData && results && tab === 'results' && <ResultsTab results={results} activeLeague={activeLeague} />}
     </div>
   )
 }
