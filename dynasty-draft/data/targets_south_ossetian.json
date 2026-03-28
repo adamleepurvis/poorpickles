@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-27T17:09:22.826843",
+  "generated": "2026-03-28T21:33:26.570642",
   "count": 1007,
   "players": [
     {
@@ -5188,7 +5188,8 @@
       "rostered": true,
       "owner": "Saggy Boys",
       "selected_position": "SS",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Dylan Crews",
@@ -9498,8 +9499,7 @@
       "rostered": true,
       "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "selected_position": "SS",
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Nick Lodolo",
@@ -14952,7 +14952,8 @@
       "rostered": true,
       "owner": "\ud83c\udfc5 Clutch Trey",
       "selected_position": "SP",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Zack Wheeler",
@@ -17524,7 +17525,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 56.0,
       "projStats": {
@@ -17553,7 +17554,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL15"
     },
     {
       "name": "Zac Gallen",
@@ -20495,7 +20497,7 @@
         "TB"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 494,
       "score2026_neutral": 5.5,
@@ -20527,7 +20529,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "Mickey Moniak",
@@ -20556,7 +20559,7 @@
         "SLG"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 394,
       "score2026_neutral": 5.3,
@@ -20589,7 +20592,7 @@
       "rostered": false,
       "owner": null,
       "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "yahoo_status": "IL10"
     },
     {
       "name": "George Springer",
@@ -33096,8 +33099,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Carter Jensen",
@@ -34201,6 +34203,7 @@
     {
       "name": "Brent Headrick",
       "eligible": [
+        "P",
         "RP"
       ],
       "org": "NYY",
@@ -34766,7 +34769,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 329,
       "score2026_neutral": 2.8,
@@ -34798,7 +34801,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "Carmen Mlodzinski",
@@ -35636,7 +35640,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 48.0,
       "projStats": {
@@ -35665,8 +35669,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Jared Triolo",
@@ -37517,8 +37520,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Mois\u00e9s Ballesteros",
@@ -47889,7 +47891,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 67.7,
       "projStats": {
@@ -47919,7 +47921,8 @@
       "rostered": false,
       "owner": null,
       "fantraxProspectRank": 163,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "DJ Herz",
@@ -52122,7 +52125,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 28.0,
       "projStats": {
@@ -52151,8 +52154,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Trevor Williams",
@@ -53119,7 +53121,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 31.0,
       "projStats": {
@@ -53148,7 +53150,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Joey Lucchesi",
@@ -54423,7 +54426,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projPA": 171,
       "score2026_neutral": 0.4,
@@ -54455,8 +54458,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Alek Manoah",

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-27T17:08:50.858397",
+  "generated": "2026-03-28T21:32:40.966897",
   "league_key": "469.l.40214",
   "settings": {
     "league_key": "469.l.40214",
@@ -18,7 +18,7 @@
       "ERA",
       "WHIP"
     ],
-    "fetched_at": "2026-03-27T17:08:51.286661"
+    "fetched_at": "2026-03-28T21:32:41.642866"
   },
   "draft_results": [
     {
@@ -2705,7 +2705,7 @@
             "SS"
           ],
           "selected_position": "SS",
-          "status": ""
+          "status": "DTD"
         },
         {
           "name": "Julio Rodr\u00edguez",
@@ -3847,7 +3847,7 @@
             "SP"
           ],
           "selected_position": "SP",
-          "status": ""
+          "status": "DTD"
         },
         {
           "name": "Blake Snell",
@@ -4163,7 +4163,7 @@
             "SS"
           ],
           "selected_position": "SS",
-          "status": "DTD"
+          "status": ""
         },
         {
           "name": "Aaron Judge",
@@ -4632,10 +4632,10 @@
     "Pedro Pag\u00e9s": [
       "C"
     ],
-    "Bo Naylor": [
+    "Jonah Heim": [
       "C"
     ],
-    "Jonah Heim": [
+    "Bo Naylor": [
       "C"
     ],
     "Liam Hicks": [
@@ -4651,10 +4651,10 @@
     "Sean Murphy": [
       "C"
     ],
-    "Edgar Quero": [
+    "Joey Bart": [
       "C"
     ],
-    "Joey Bart": [
+    "Edgar Quero": [
       "C"
     ],
     "Elias D\u00edaz": [
@@ -4687,10 +4687,10 @@
     "Austin Wynns": [
       "C"
     ],
-    "Luis Torrens": [
+    "Nick Fortes": [
       "C"
     ],
-    "Nick Fortes": [
+    "Luis Torrens": [
       "C"
     ],
     "Travis d'Arnaud": [
@@ -4765,10 +4765,10 @@
     "Ben Rortvedt": [
       "C"
     ],
-    "Luis Campusano": [
+    "Garrett Stubbs": [
       "C"
     ],
-    "Garrett Stubbs": [
+    "Luis Campusano": [
       "C"
     ],
     "Jhonny Pereda": [
@@ -5258,6 +5258,11 @@
       "LF",
       "RF"
     ],
+    "Jake Bauers": [
+      "1B",
+      "LF",
+      "RF"
+    ],
     "Pavin Smith": [
       "1B"
     ],
@@ -5266,11 +5271,6 @@
       "2B",
       "3B",
       "SS"
-    ],
-    "Jake Bauers": [
-      "1B",
-      "LF",
-      "RF"
     ],
     "Dominic Smith": [
       "1B"
@@ -5286,25 +5286,25 @@
       "3B",
       "LF"
     ],
-    "Michael Toglia": [
-      "1B"
-    ],
     "Luke Raley": [
       "1B",
       "CF",
       "LF",
       "RF"
     ],
-    "Kyle Farmer": [
-      "1B",
-      "2B",
-      "3B",
-      "SS"
+    "Michael Toglia": [
+      "1B"
     ],
     "Otto Kemp": [
       "1B",
       "3B",
       "LF"
+    ],
+    "Kyle Farmer": [
+      "1B",
+      "2B",
+      "3B",
+      "SS"
     ],
     "Justin Turner": [
       "1B",
@@ -5341,12 +5341,12 @@
       "LF",
       "SS"
     ],
-    "CJ Kayfus": [
+    "Troy Johnston": [
       "1B",
       "LF",
       "RF"
     ],
-    "Troy Johnston": [
+    "CJ Kayfus": [
       "1B",
       "LF",
       "RF"
@@ -5386,14 +5386,14 @@
     "Enmanuel Valdez": [
       "1B"
     ],
+    "Blaine Crim": [
+      "1B"
+    ],
     "Oswald Peraza": [
       "1B",
       "2B",
       "3B",
       "SS"
-    ],
-    "Blaine Crim": [
-      "1B"
     ],
     "Jeimer Candelario": [
       "1B",
@@ -5565,9 +5565,6 @@
     "Ralphy Velazquez": [
       "1B"
     ],
-    "TJ Rumfield": [
-      "1B"
-    ],
     "Cooper Bowman": [
       "1B",
       "2B",
@@ -5604,6 +5601,9 @@
     "Charles McAdoo": [
       "1B",
       "3B"
+    ],
+    "TJ Rumfield": [
+      "1B"
     ],
     "Niko Kavadas": [
       "1B",
@@ -5785,6 +5785,10 @@
       "3B",
       "SS"
     ],
+    "David Hamilton": [
+      "2B",
+      "SS"
+    ],
     "Miguel Rojas": [
       "2B",
       "3B",
@@ -5793,10 +5797,6 @@
     "Ram\u00f3n Ur\u00edas": [
       "2B",
       "3B"
-    ],
-    "David Hamilton": [
-      "2B",
-      "SS"
     ],
     "Angel Mart\u00ednez": [
       "2B",
@@ -5807,6 +5807,10 @@
       "2B",
       "3B"
     ],
+    "Nick Gonzales": [
+      "2B",
+      "SS"
+    ],
     "Mauricio Dub\u00f3n": [
       "2B",
       "3B",
@@ -5815,10 +5819,6 @@
       "SS"
     ],
     "Gabriel Arias": [
-      "2B",
-      "SS"
-    ],
-    "Nick Gonzales": [
       "2B",
       "SS"
     ],
@@ -5870,12 +5870,12 @@
       "3B",
       "SS"
     ],
-    "Tyler Fitzgerald": [
-      "2B"
-    ],
     "Blaze Alexander": [
       "2B",
       "3B"
+    ],
+    "Tyler Fitzgerald": [
+      "2B"
     ],
     "Austin Martin": [
       "2B",
@@ -5909,16 +5909,16 @@
       "2B",
       "3B"
     ],
+    "Thomas Saggese": [
+      "2B",
+      "3B",
+      "SS"
+    ],
     "Santiago Espinal": [
       "2B",
       "3B",
       "LF",
       "RF"
-    ],
-    "Thomas Saggese": [
-      "2B",
-      "3B",
-      "SS"
     ],
     "Nasim Nu\u00f1ez": [
       "2B",
@@ -5975,12 +5975,12 @@
       "2B",
       "CF"
     ],
+    "Cole Young": [
+      "2B"
+    ],
     "Ronny Mauricio": [
       "2B",
       "3B"
-    ],
-    "Cole Young": [
-      "2B"
     ],
     "Christian Moore": [
       "2B"
@@ -5990,16 +5990,16 @@
       "3B",
       "SS"
     ],
+    "Marcelo Mayer": [
+      "2B",
+      "3B"
+    ],
     "Nick Loftin": [
       "2B",
       "3B",
       "LF"
     ],
     "Jon Berti": [
-      "2B",
-      "3B"
-    ],
-    "Marcelo Mayer": [
       "2B",
       "3B"
     ],
@@ -7513,12 +7513,12 @@
       "LF",
       "RF"
     ],
-    "Heriberto Hern\u00e1ndez": [
+    "Eli White": [
+      "CF",
       "LF",
       "RF"
     ],
-    "Eli White": [
-      "CF",
+    "Heriberto Hern\u00e1ndez": [
       "LF",
       "RF"
     ],
@@ -7563,12 +7563,12 @@
       "LF",
       "RF"
     ],
-    "Blake Perkins": [
-      "CF",
+    "Jordan Walker": [
       "LF",
       "RF"
     ],
-    "Jordan Walker": [
+    "Blake Perkins": [
+      "CF",
       "LF",
       "RF"
     ],
@@ -7629,17 +7629,17 @@
     "Richie Palacios": [
       "LF"
     ],
-    "Colby Thomas": [
-      "CF",
-      "LF",
-      "RF"
-    ],
     "Jonny DeLuca": [
       "CF",
       "LF",
       "RF"
     ],
-    "Austin Slater": [
+    "Colby Thomas": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "Brandon Lockridge": [
       "CF",
       "LF",
       "RF"
@@ -7648,7 +7648,7 @@
       "LF",
       "RF"
     ],
-    "Brandon Lockridge": [
+    "Austin Slater": [
       "CF",
       "LF",
       "RF"
@@ -7714,6 +7714,11 @@
       "LF",
       "RF"
     ],
+    "Joey Wiemer": [
+      "CF",
+      "LF",
+      "RF"
+    ],
     "Alejandro Osuna": [
       "CF",
       "LF",
@@ -7741,11 +7746,6 @@
       "CF",
       "LF"
     ],
-    "Joey Wiemer": [
-      "CF",
-      "LF",
-      "RF"
-    ],
     "Travis Jankowski": [
       "CF",
       "LF",
@@ -7759,6 +7759,11 @@
     "Esteury Ruiz": [
       "CF",
       "LF"
+    ],
+    "Nathan Church": [
+      "CF",
+      "LF",
+      "RF"
     ],
     "Nelson Vel\u00e1zquez": [
       "LF",
@@ -7775,11 +7780,6 @@
     "Jacob Melton": [
       "CF",
       "LF"
-    ],
-    "Nathan Church": [
-      "CF",
-      "LF",
-      "RF"
     ],
     "James Outman": [
       "CF",
@@ -7984,11 +7984,11 @@
     "Akil Baddoo": [
       "LF"
     ],
-    "Ryan Vilade": [
+    "Zac Veen": [
       "LF",
       "RF"
     ],
-    "Zac Veen": [
+    "Ryan Vilade": [
       "LF",
       "RF"
     ],
@@ -8955,12 +8955,12 @@
       "RP",
       "SP"
     ],
-    "Trevor McDonald": [
+    "Sean Newcomb": [
       "P",
       "RP",
       "SP"
     ],
-    "Sean Newcomb": [
+    "Trevor McDonald": [
       "P",
       "RP",
       "SP"
@@ -8999,13 +8999,13 @@
       "P",
       "SP"
     ],
-    "Johan Oviedo": [
-      "P",
-      "SP"
-    ],
     "Tyler Gilbert": [
       "P",
       "RP",
+      "SP"
+    ],
+    "Johan Oviedo": [
+      "P",
       "SP"
     ],
     "Cody Bradford": [
@@ -9810,10 +9810,6 @@
     "Blake Wehunt": [
       "SP"
     ],
-    "Braden Davis": [
-      "P",
-      "SP"
-    ],
     "Mason Miller": [
       "P",
       "RP"
@@ -9950,11 +9946,11 @@
       "P",
       "RP"
     ],
-    "Will Vest": [
+    "Ronny Henriquez": [
       "P",
       "RP"
     ],
-    "Ronny Henriquez": [
+    "Will Vest": [
       "P",
       "RP"
     ],
@@ -10010,10 +10006,6 @@
       "P",
       "RP"
     ],
-    "Gabe Speier": [
-      "P",
-      "RP"
-    ],
     "Phil Maton": [
       "P",
       "RP"
@@ -10022,15 +10014,15 @@
       "P",
       "RP"
     ],
+    "Gabe Speier": [
+      "P",
+      "RP"
+    ],
     "Jared Koenig": [
       "P",
       "RP"
     ],
     "Andrew Kittredge": [
-      "P",
-      "RP"
-    ],
-    "Jeremiah Estrada": [
       "P",
       "RP"
     ],
@@ -10070,6 +10062,10 @@
       "P",
       "RP"
     ],
+    "Jeremiah Estrada": [
+      "P",
+      "RP"
+    ],
     "Hunter Gaddis": [
       "P",
       "RP"
@@ -10098,11 +10094,15 @@
       "P",
       "RP"
     ],
+    "Calvin Faucher": [
+      "P",
+      "RP"
+    ],
     "Camilo Doval": [
       "P",
       "RP"
     ],
-    "Calvin Faucher": [
+    "Jakob Junis": [
       "P",
       "RP"
     ],
@@ -10110,7 +10110,7 @@
       "P",
       "RP"
     ],
-    "Jakob Junis": [
+    "Riley O'Brien": [
       "P",
       "RP"
     ],
@@ -10122,10 +10122,6 @@
       "P",
       "RP"
     ],
-    "Riley O'Brien": [
-      "P",
-      "RP"
-    ],
     "Brooks Raley": [
       "P",
       "RP"
@@ -10134,23 +10130,15 @@
       "P",
       "RP"
     ],
-    "Connor Phillips": [
-      "P",
-      "RP"
-    ],
-    "Taylor Clarke": [
-      "P",
-      "RP"
-    ],
     "Anthony Banda": [
       "P",
       "RP"
     ],
-    "Jimmy Herget": [
+    "Connor Phillips": [
       "P",
       "RP"
     ],
-    "Pierce Johnson": [
+    "Jimmy Herget": [
       "P",
       "RP"
     ],
@@ -10166,15 +10154,15 @@
       "P",
       "RP"
     ],
+    "Jalen Beeks": [
+      "P",
+      "RP"
+    ],
     "Bryan Baker": [
       "P",
       "RP"
     ],
-    "Isaac Mattson": [
-      "P",
-      "RP"
-    ],
-    "Jalen Beeks": [
+    "Pierce Johnson": [
       "P",
       "RP"
     ],
@@ -10190,6 +10178,10 @@
       "P",
       "RP"
     ],
+    "Tyler Kinley": [
+      "P",
+      "RP"
+    ],
     "Cade Gibson": [
       "P",
       "RP"
@@ -10198,7 +10190,7 @@
       "P",
       "RP"
     ],
-    "Tyler Kinley": [
+    "Taylor Clarke": [
       "P",
       "RP"
     ],
@@ -10210,7 +10202,7 @@
       "P",
       "RP"
     ],
-    "Yariel Rodriguez": [
+    "Tim Hill": [
       "P",
       "RP"
     ],
@@ -10218,15 +10210,15 @@
       "P",
       "RP"
     ],
-    "Tim Hill": [
+    "Isaac Mattson": [
+      "P",
+      "RP"
+    ],
+    "Yariel Rodriguez": [
       "P",
       "RP"
     ],
     "Chris Martin": [
-      "P",
-      "RP"
-    ],
-    "Brock Burke": [
       "P",
       "RP"
     ],
@@ -10238,11 +10230,11 @@
       "P",
       "RP"
     ],
-    "Brendon Little": [
+    "Brock Burke": [
       "P",
       "RP"
     ],
-    "Justin Martinez": [
+    "Brendon Little": [
       "P",
       "RP"
     ],
@@ -10250,11 +10242,15 @@
       "P",
       "RP"
     ],
+    "Justin Martinez": [
+      "P",
+      "RP"
+    ],
     "Daniel Lynch IV": [
       "P",
       "RP"
     ],
-    "Wandy Peralta": [
+    "Erik Sabrowski": [
       "P",
       "RP"
     ],
@@ -10262,7 +10258,7 @@
       "P",
       "RP"
     ],
-    "Erik Sabrowski": [
+    "Wandy Peralta": [
       "P",
       "RP"
     ],
@@ -10314,11 +10310,15 @@
       "P",
       "RP"
     ],
-    "Jose A. Ferrer": [
+    "Edgardo Henriquez": [
       "P",
       "RP"
     ],
     "A.J. Puk": [
+      "P",
+      "RP"
+    ],
+    "Jose A. Ferrer": [
       "P",
       "RP"
     ],
@@ -10330,11 +10330,11 @@
       "P",
       "RP"
     ],
-    "Rob Zastryzny": [
+    "Hogan Harris": [
       "P",
       "RP"
     ],
-    "Hogan Harris": [
+    "Rob Zastryzny": [
       "P",
       "RP"
     ],
@@ -10343,10 +10343,6 @@
       "RP"
     ],
     "David Robertson": [
-      "P",
-      "RP"
-    ],
-    "Edgardo Henriquez": [
       "P",
       "RP"
     ],
@@ -10366,6 +10362,10 @@
       "P",
       "RP"
     ],
+    "Ryan Thompson": [
+      "P",
+      "RP"
+    ],
     "Louis Varland": [
       "P",
       "RP"
@@ -10375,10 +10375,6 @@
       "RP"
     ],
     "Kade Strowd": [
-      "P",
-      "RP"
-    ],
-    "Ryan Thompson": [
       "P",
       "RP"
     ],
@@ -10417,6 +10413,10 @@
       "P",
       "RP"
     ],
+    "Bradgley Rodriguez": [
+      "P",
+      "RP"
+    ],
     "Robert Stephenson": [
       "P",
       "RP"
@@ -10433,10 +10433,6 @@
       "P",
       "RP"
     ],
-    "Ron Marinaccio": [
-      "P",
-      "RP"
-    ],
     "Joe Jim\u00e9nez": [
       "P",
       "RP"
@@ -10445,11 +10441,11 @@
       "P",
       "RP"
     ],
-    "Bradgley Rodriguez": [
+    "Paul Sewald": [
       "P",
       "RP"
     ],
-    "Paul Sewald": [
+    "Brent Headrick": [
       "P",
       "RP"
     ],
@@ -10457,11 +10453,7 @@
       "P",
       "RP"
     ],
-    "Tim Herrin": [
-      "P",
-      "RP"
-    ],
-    "Justin Lawrence": [
+    "Ron Marinaccio": [
       "P",
       "RP"
     ],
@@ -10469,11 +10461,15 @@
       "P",
       "RP"
     ],
-    "Andrew Chafin": [
+    "Tim Herrin": [
       "P",
       "RP"
     ],
-    "Bryan Hoeing": [
+    "Ryan Zeferjahn": [
+      "P",
+      "RP"
+    ],
+    "Andrew Chafin": [
       "P",
       "RP"
     ],
@@ -10481,7 +10477,7 @@
       "P",
       "RP"
     ],
-    "Bryan Hudson": [
+    "Bryan Hoeing": [
       "P",
       "RP"
     ],
@@ -10489,7 +10485,19 @@
       "P",
       "RP"
     ],
+    "Bryan Hudson": [
+      "P",
+      "RP"
+    ],
     "Jake Cousins": [
+      "P",
+      "RP"
+    ],
+    "Juan Mejia": [
+      "P",
+      "RP"
+    ],
+    "Grant Anderson": [
       "P",
       "RP"
     ],
@@ -10497,15 +10505,11 @@
       "P",
       "RP"
     ],
-    "Tyler Ferguson": [
-      "P",
-      "RP"
-    ],
     "Rico Garcia": [
       "P",
       "RP"
     ],
-    "Ryan Zeferjahn": [
+    "Tyler Ferguson": [
       "P",
       "RP"
     ],
@@ -10521,19 +10525,15 @@
       "P",
       "RP"
     ],
-    "Juan Mejia": [
-      "P",
-      "RP"
-    ],
-    "Grant Anderson": [
-      "P",
-      "RP"
-    ],
-    "Ben Joyce": [
+    "Justin Lawrence": [
       "P",
       "RP"
     ],
     "Hoby Milner": [
+      "P",
+      "RP"
+    ],
+    "Ben Joyce": [
       "P",
       "RP"
     ],
@@ -10635,19 +10635,19 @@
       "P",
       "RP"
     ],
-    "Jonathan Bowlan": [
-      "P",
-      "RP"
-    ],
     "Blake Treinen": [
       "P",
       "RP"
     ],
-    "Colin Selby": [
+    "Chase Silseth": [
       "P",
       "RP"
     ],
-    "Chase Silseth": [
+    "Jonathan Bowlan": [
+      "P",
+      "RP"
+    ],
+    "Colin Selby": [
       "P",
       "RP"
     ],
@@ -10674,15 +10674,18 @@
       "P",
       "RP"
     ],
+    "Peyton Pallette": [
+      "RP"
+    ],
     "Justin Hagenman": [
       "P",
       "RP"
     ],
-    "Andrew Walters": [
+    "Andrew Nardi": [
       "P",
       "RP"
     ],
-    "Andrew Nardi": [
+    "Andrew Walters": [
       "P",
       "RP"
     ],
@@ -10695,6 +10698,10 @@
       "RP"
     ],
     "Lou Trivino": [
+      "P",
+      "RP"
+    ],
+    "Will Klein": [
       "P",
       "RP"
     ],
@@ -10711,10 +10718,6 @@
       "RP"
     ],
     "Reiver Sanmartin": [
-      "P",
-      "RP"
-    ],
-    "Will Klein": [
       "P",
       "RP"
     ],
@@ -10965,9 +10968,6 @@
       "RP",
       "SP"
     ],
-    "Peyton Pallette": [
-      "RP"
-    ],
     "Aldrin Batista": [
       "RP",
       "SP"
@@ -11067,7 +11067,6 @@
     "Riley Adams": "NA",
     "Korey Lee": "NA",
     "Alex Jackson": "NA",
-    "Braxton Fulford": "NA",
     "Tom\u00e1s Nido": "NA",
     "Luke Maile": "NA",
     "Andrew Knizner": "NA",
@@ -11119,7 +11118,6 @@
     "Taitn Gray": "NA",
     "Marlon Quintero": "NA",
     "Kevin Bazzell": "NA",
-    "Jeferson Quero": "NA",
     "Ronald Hernandez": "NA",
     "Moises March\u00e1n": "NA",
     "Sammy Hernandez": "NA",
@@ -11167,11 +11165,11 @@
     "Endy Rodr\u00edguez": "NA",
     "Jimmy Crooks": "NA",
     "Maverick Handley": "NA",
+    "Andrew Vaughn": "IL10",
     "Romy Gonzalez": "IL60",
     "Wilmer Flores": "NA",
     "Eric Wagaman": "NA",
     "Rowdy Tellez": "NA",
-    "Pavin Smith": "DTD",
     "Enrique Hern\u00e1ndez": "IL60",
     "Michael Toglia": "NA",
     "Justin Turner": "NA",
@@ -11227,7 +11225,6 @@
     "Jacob Reimer": "NA",
     "Yohandy Morales": "NA",
     "Dylan Jasso": "NA",
-    "Deyvison De Los Santos": "NA",
     "Ralphy Velazquez": "NA",
     "Cooper Bowman": "NA",
     "Jack Gurevitch": "NA",
@@ -11465,7 +11462,7 @@
     "Emilio Sanchez": "NA",
     "Luis Suisbel": "NA",
     "Cam Devanney": "NA",
-    "Jeremy Pe\u00f1a": "DTD",
+    "CJ Abrams": "DTD",
     "Konnor Griffin": "NA",
     "J.P. Crawford": "IL10",
     "Anthony Volpe": "IL10",
@@ -11558,7 +11555,7 @@
     "Jackson Chourio": "IL10",
     "Kyle Stowers": "IL10",
     "Seiya Suzuki": "IL10",
-    "Mickey Moniak": "DTD",
+    "Mickey Moniak": "IL10",
     "Anthony Santander": "IL10",
     "Jasson Dom\u00ednguez": "NA",
     "Lourdes Gurriel Jr.": "IL10",
@@ -11567,6 +11564,7 @@
     "Tommy Pham": "NA",
     "Max Kepler": "SUSP",
     "JJ Bleday": "NA",
+    "Christopher Morel": "IL10",
     "Nolan Jones": "NA",
     "Luis Matos": "NA",
     "Alex Verdugo": "NA",
@@ -11703,6 +11701,7 @@
     "Darwing Ozuna": "NA",
     "Pedro Le\u00f3n": "NA",
     "Tyler Gentry": "NA",
+    "Jacob deGrom": "DTD",
     "Nick Lodolo": "IL15",
     "Zack Wheeler": "IL15",
     "Ryan Pepiot": "IL15",
@@ -11731,7 +11730,6 @@
     "Lucas Giolito": "NA",
     "Reese Olson": "IL60",
     "Troy Melton": "IL60",
-    "Nick Martinez": "DTD",
     "Hurston Waldrep": "IL15",
     "Dean Kremer": "NA",
     "Brandon Walter": "IL60",
@@ -11744,6 +11742,7 @@
     "Andrew Alvarez": "NA",
     "Javier Assad": "NA",
     "Gavin Stone": "IL15",
+    "Tyler Gilbert": "NA",
     "Cody Bradford": "IL15",
     "Yu Darvish": "NA",
     "Wikelman Gonz\u00e1lez": "NA",
@@ -11848,6 +11847,7 @@
     "Andrew Sears": "NA",
     "Karson Milbrandt": "NA",
     "Felix Arronde": "NA",
+    "Gary Gill Hill": "NA",
     "Marco Raya": "NA",
     "Connor Noland": "NA",
     "Michael Lombardi": "NA",
@@ -11872,7 +11872,6 @@
     "Ethan Pecko": "NA",
     "Juan Valera": "NA",
     "Michael Morales": "NA",
-    "Josh Stephan": "NA",
     "Cade Obermueller": "NA",
     "Esteban Mejia": "NA",
     "Antoine Kelly": "NA",
@@ -11971,6 +11970,7 @@
     "Ian Mejia": "NA",
     "Jeter Martinez": "NA",
     "Blake Wehunt": "NA",
+    "Braden Davis": "NA",
     "Reid VanScoter": "NA",
     "Kyson Witherspoon": "NA",
     "Micah Bucknam": "NA",
@@ -12067,6 +12067,8 @@
     "Cade Smith": "NA",
     "Jose Urbina": "NA",
     "Hunter Owen": "NA",
+    "Briggs McKenzie": "NA",
+    "Connor Prielipp": "NA",
     "Josh Hader": "IL15",
     "Kirby Yates": "IL15",
     "Edwin Uceta": "IL15",
@@ -12117,7 +12119,6 @@
     "Andrew Chafin": "NA",
     "Daysbel Hern\u00e1ndez": "IL15",
     "Bryan Hoeing": "IL15",
-    "Bryan Hudson": "NA",
     "Hunter Bigge": "NA",
     "Jake Cousins": "IL15",
     "Erasmo Ram\u00edrez": "NA",
@@ -12155,6 +12156,7 @@
     "Prelander Berroa": "IL15",
     "Konnor Pilkington": "NA",
     "Lou Trivino": "NA",
+    "Carlos Vargas": "IL15",
     "Kyle Hurt": "NA",
     "Reiver Sanmartin": "IL60",
     "Eiberson Castellano": "NA",
@@ -12302,7 +12304,6 @@
     "Liam Hendriks": "NA",
     "Mason Black": "NA",
     "Rolddy Mu\u00f1oz": "NA",
-    "Cole Wilcox": "NA",
     "Miguel Castro": "NA",
     "Juan Burgos": "NA",
     "Alex Carrillo": "NA"
