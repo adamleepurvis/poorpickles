@@ -544,10 +544,24 @@ function computeAcquisitionDNA(data, keepers, leagueName, franchise) {
 
 // ─── computeDraftGrades ─────────────────────────────────────────────────────
 
-// Normalize a player name for rankings lookup: strip accents + "(Batter)"/"(SP)" etc.
+/// Strip accents only (keep role suffix like "(Batter)")
+function normAccents(s) {
+  if (!s) return ''
+  return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase()
+}
+// Strip accents + role suffix — used as fallback base name
 function normRankingName(s) {
   if (!s) return ''
-  return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s*\(.*?\)/g, '').trim().toLowerCase()
+  return normAccents(s).replace(/\s*\(.*?\)/g, '').trim()
+}
+// Look up a player name in a rankLookup season map:
+// 1. Try exact match (with role suffix) so Ohtani (Pitcher) != Ohtani (Batter)
+// 2. Fall back to base name (no suffix) for players without role variants
+function rankLookupGet(seasonMap, playerName) {
+  if (!seasonMap || !playerName) return undefined
+  const exact = seasonMap[normAccents(playerName)]
+  if (exact !== undefined) return exact
+  return seasonMap[normRankingName(playerName)]
 }
 
 function computeDraftGrades(data, keepers, leagueName, rankings) {
@@ -555,12 +569,16 @@ function computeDraftGrades(data, keepers, leagueName, rankings) {
   const rankLookup = {}  // rankLookup[season][normName] = rank
   const seasonRankings = rankings?.[leagueName] || {}
   for (const [season, playerMap] of Object.entries(seasonRankings)) {
-    rankLookup[parseInt(season)] = {}
+    const map = {}
     for (const [name, rank] of Object.entries(playerMap)) {
-      const key = normRankingName(name)
-      const existing = rankLookup[parseInt(season)][key]
-      if (!existing || rank < existing) rankLookup[parseInt(season)][key] = rank
+      // Store exact (accent-stripped) key first
+      const exact = normAccents(name)
+      if (!map[exact] || rank < map[exact]) map[exact] = rank
+      // Also store base (no-suffix) key as fallback — only if no better rank exists
+      const base = normRankingName(name)
+      if (base !== exact && (!map[base] || rank < map[base])) map[base] = rank
     }
+    rankLookup[parseInt(season)] = map
   }
 
   // Collect all drafted entries per franchise+season
@@ -590,7 +608,7 @@ function computeDraftGrades(data, keepers, leagueName, rankings) {
     const truePicks = picks.filter(p => !keeperSet.has(p.player))
     const seasonRankMap = rankLookup[season] || {}
     for (const pick of truePicks) {
-      const actualRank = seasonRankMap[normRankingName(pick.player)] || 400
+      const actualRank = rankLookupGet(seasonRankMap, pick.player) || 400
       if (!benchmarkRank[season]) benchmarkRank[season] = {}
       if (!benchmarkRank[season][pick.round]) benchmarkRank[season][pick.round] = []
       benchmarkRank[season][pick.round].push(actualRank)
@@ -629,8 +647,7 @@ function computeDraftGrades(data, keepers, leagueName, rankings) {
 
     for (const pick of trueDraftPicks) {
       const benchmark = benchmarkRank[season]?.[pick.round] || (pick.round - 0.5) * numTeams
-      const normName = normRankingName(pick.player)
-      const actualRank = seasonRankMap[normName] || 400
+      const actualRank = rankLookupGet(seasonRankMap, pick.player) || 400
       const surplus = benchmark - actualRank
       const normalizedSurplus = Math.max(-1.5, Math.min(1.5, surplus / benchmark))
       totalSurplus += normalizedSurplus
@@ -1699,15 +1716,17 @@ function LeaderboardTab({ data, activeLeague, keepers, rankings }) {
   const topPickups = useMemo(() => {
     if (sub !== 'records' && sub !== 'pickups' || !leagueName) return []
     const seasonRankings = rankings?.[leagueName] || {}
-    // Build normName→rank lookup per season
+    // Build lookup per season: exact (accent-stripped) key + base (no-suffix) fallback
     const lookups = {}
     for (const [season, playerMap] of Object.entries(seasonRankings)) {
-      lookups[season] = {}
+      const map = {}
       for (const [name, rank] of Object.entries(playerMap)) {
-        const key = normRankingName(name)
-        const existing = lookups[season][key]
-        if (!existing || rank < existing) lookups[season][key] = rank
+        const exact = normAccents(name)
+        if (!map[exact] || rank < map[exact]) map[exact] = rank
+        const base = normRankingName(name)
+        if (base !== exact && (!map[base] || rank < map[base])) map[base] = rank
       }
+      lookups[season] = map
     }
     // Deduplicate by player+season (keep best rank if added multiple times)
     const seen = {}
@@ -1723,7 +1742,7 @@ function LeaderboardTab({ data, activeLeague, keepers, rankings }) {
         }
         const key = `${playerName}_${e.season}`
         const seasonMap = lookups[String(e.season)] || {}
-        const rank = seasonMap[normRankingName(playerName)]
+        const rank = rankLookupGet(seasonMap, playerName)
         if (!rank) continue
         if (!seen[key] || rank < seen[key].rank) {
           seen[key] = { player: playerName, season: e.season, team: normTeam(e.team), rank }
