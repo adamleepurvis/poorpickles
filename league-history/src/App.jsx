@@ -1472,6 +1472,82 @@ function TeamsTab({ data, activeLeague, keepers, onFranchiseClick }) {
   )
 }
 
+// ─── computeTopTrades ───────────────────────────────────────────────────────
+
+function computeTopTrades(data, leagueName, rankings) {
+  if (!leagueName) return []
+  const seasonRankings = rankings?.[leagueName] || {}
+
+  // Build per-season rank lookup (same pattern as topPickups)
+  const lookups = {}
+  for (const [season, playerMap] of Object.entries(seasonRankings)) {
+    const map = {}
+    for (const [name, rank] of Object.entries(playerMap)) {
+      const exact = normAccents(name)
+      if (!map[exact] || rank < map[exact]) map[exact] = rank
+      const base = normRankingName(name)
+      if (base !== exact && (!map[base] || rank < map[base])) map[base] = rank
+    }
+    lookups[season] = map
+  }
+
+  // Group trade entries by exact timestamp+season+league
+  // Each item: { player, toTeam, fromTeam }
+  const groups = {}  // key -> { season, items: [{player, toTeam, fromTeam}] }
+  for (const [playerName, leagues] of Object.entries(data)) {
+    const entries = leagues[leagueName]
+    if (!entries) continue
+    for (const e of entries) {
+      if (e.how !== 'trade' || !e.timestamp || !e.from_team) continue
+      const key = `${e.timestamp}_${e.season}`
+      if (!groups[key]) groups[key] = { season: e.season, items: [] }
+      groups[key].items.push({ player: playerName, toTeam: normTeam(e.team), fromTeam: normTeam(e.from_team) })
+    }
+  }
+
+  // Score each trade
+  const tradeValue = (playerName, season) => {
+    const seasonMap = lookups[String(season)] || {}
+    const rank = rankLookupGet(seasonMap, playerName)
+    return rank ? 100 / rank : 0
+  }
+
+  const trades = []
+  for (const { season, items } of Object.values(groups)) {
+    if (items.length < 2) continue  // need at least 2 players to be a real trade
+    // Find all teams involved
+    const teamSet = new Set()
+    for (const it of items) { teamSet.add(it.toTeam); teamSet.add(it.fromTeam) }
+    const teams = Array.from(teamSet)
+    if (teams.length !== 2) continue  // skip 3-way trades for simplicity
+
+    const [teamA, teamB] = teams
+    const aReceived = items.filter(it => it.toTeam === teamA)
+    const bReceived = items.filter(it => it.toTeam === teamB)
+
+    const aValue = aReceived.reduce((sum, it) => sum + tradeValue(it.player, season), 0)
+    const bValue = bReceived.reduce((sum, it) => sum + tradeValue(it.player, season), 0)
+    const diff = Math.abs(aValue - bValue)
+    const winner = aValue >= bValue ? teamA : teamB
+    const loser = aValue >= bValue ? teamB : teamA
+    const winnerReceived = aValue >= bValue ? aReceived : bReceived
+    const loserReceived = aValue >= bValue ? bReceived : aReceived
+    const winnerValue = Math.max(aValue, bValue)
+    const loserValue = Math.min(aValue, bValue)
+
+    // Enrich with ranks
+    const withRank = (arr) => arr.map(it => {
+      const seasonMap = lookups[String(season)] || {}
+      const rank = rankLookupGet(seasonMap, it.player)
+      return { ...it, rank }
+    }).sort((a, b) => (a.rank || 9999) - (b.rank || 9999))
+
+    trades.push({ season, winner, loser, winnerReceived: withRank(winnerReceived), loserReceived: withRank(loserReceived), winnerValue, loserValue, diff })
+  }
+
+  return trades.sort((a, b) => b.diff - a.diff).slice(0, 20)
+}
+
 // ─── computeRecords ─────────────────────────────────────────────────────────
 
 function computeRecords(data, leagueName, keepers) {
@@ -1773,12 +1849,18 @@ function LeaderboardTab({ data, activeLeague, keepers, rankings }) {
     return { mostStealsInDraft: bestSteals, mostMissesInDraft: bestMisses }
   }, [sub, data, keepers, leagueName, rankings])
 
+  const topTrades = useMemo(() => {
+    if (sub !== 'trades' || !leagueName) return []
+    return computeTopTrades(data, leagueName, rankings)
+  }, [sub, data, leagueName, rankings])
+
   const subBtns = [
     ['alltime', '🏆 All-Time Streaks'],
     ['active', '🔥 Active Streaks'],
     ['tenured', '📅 Longest Tenured'],
     ...(leagueName !== 'SouthOssetian' ? [['records', '📋 Records']] : []),
     ['pickups', '📈 FA Pickups'],
+    ...(leagueName ? [['trades', '🔄 Best Trades']] : []),
   ]
 
   const RECORD_CARDS = records ? [
@@ -1927,6 +2009,37 @@ function LeaderboardTab({ data, activeLeague, keepers, rankings }) {
               ))}
             </tbody>
           </table>
+        )
+      ) : sub === 'trades' ? (
+        topTrades.length === 0 ? (
+          <div style={{ color: '#475569', textAlign: 'center', padding: 40 }}>No trade data</div>
+        ) : (
+          <div>
+            {topTrades.map((t, i) => {
+              const fmtPlayers = (arr) => arr.map(it => it.rank ? `${it.player} (#${it.rank})` : it.player).join(', ')
+              return (
+                <div key={i} style={{ background: '#0d0f16', border: '1px solid #1e293b', borderRadius: 8, padding: '12px 16px', marginBottom: 10 }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
+                    <span style={{ color: '#475569', fontSize: 12, fontWeight: 700 }}>#{i + 1} · {t.season}</span>
+                    <span style={{ color: '#84cc16', fontSize: 12, fontWeight: 700 }}>+{t.diff.toFixed(1)} pts advantage</span>
+                  </div>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', gap: 8, alignItems: 'start' }}>
+                    <div>
+                      <div style={{ color: '#84cc16', fontWeight: 700, fontSize: 13, marginBottom: 4 }}>✅ {t.winner}</div>
+                      <div style={{ color: '#94a3b8', fontSize: 12 }}>{fmtPlayers(t.winnerReceived)}</div>
+                      <div style={{ color: '#475569', fontSize: 11, marginTop: 4 }}>value: {t.winnerValue.toFixed(1)}</div>
+                    </div>
+                    <div style={{ color: '#334155', fontSize: 18, padding: '4px 8px' }}>↔</div>
+                    <div>
+                      <div style={{ color: '#f87171', fontWeight: 700, fontSize: 13, marginBottom: 4 }}>❌ {t.loser}</div>
+                      <div style={{ color: '#94a3b8', fontSize: 12 }}>{fmtPlayers(t.loserReceived)}</div>
+                      <div style={{ color: '#475569', fontSize: 11, marginTop: 4 }}>value: {t.loserValue.toFixed(1)}</div>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
         )
       ) : rows.length === 0 ? (
         <div style={{ color: '#475569', textAlign: 'center', padding: 40 }}>No data</div>
