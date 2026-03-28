@@ -534,32 +534,47 @@ function computeDraftGrades(data, keepers, leagueName) {
 
     if (trueDraftPicks.length < 5) continue
 
-    // Check which were kept next year
-    const keeperListNextSeason = keepers?.[leagueName]?.[String(season + 1)]?.[franchise] || []
-    const keeperSetNextSeason = new Set(keeperListNextSeason)
-
+    // Check which were kept next year (for binary keepRate + steals/misses)
+    const keeperSetNextSeason = new Set(keepers?.[leagueName]?.[String(season + 1)]?.[franchise] || [])
     const keptPlayers = trueDraftPicks.filter(p => keeperSetNextSeason.has(p.player))
     const keptCount = keptPlayers.length
     const totalPicks = trueDraftPicks.length
     const keepRate = keptCount / totalPicks
+
+    // Quality: for each true pick, count how many subsequent seasons it stayed as a keeper
+    // (up to 4 years out, for same franchise only)
+    let totalQualityPoints = 0
+    for (const pick of trueDraftPicks) {
+      let keeperYears = 0
+      for (let yr = season + 1; yr <= season + 4; yr++) {
+        const nextSet = new Set(keepers?.[leagueName]?.[String(yr)]?.[franchise] || [])
+        if (nextSet.has(pick.player)) keeperYears++
+      }
+      totalQualityPoints += Math.min(keeperYears, 4)
+    }
+    const avgQuality = totalQualityPoints / totalPicks // 0–4 scale
+
+    // Composite: breadth (keepRate) + depth (avgQuality normalized to 0–1 where 3 avg yrs = 1.0)
+    const compositeScore = keepRate * 0.5 + Math.min(avgQuality / 3, 1) * 0.5
 
     // Steals: round >= 10, kept next year
     const steals = keptPlayers.filter(p => p.round >= 10)
     // Misses: round <= 5, NOT kept next year
     const misses = trueDraftPicks.filter(p => p.round <= 5 && !keeperSetNextSeason.has(p.player))
 
-    // Grade
+    // Grade on composite score
     let grade
-    if (keepRate >= 0.50) grade = 'A+'
-    else if (keepRate >= 0.40) grade = 'A'
-    else if (keepRate >= 0.30) grade = 'B'
-    else if (keepRate >= 0.20) grade = 'C'
-    else if (keepRate >= 0.10) grade = 'D'
+    if (compositeScore >= 0.35) grade = 'A+'
+    else if (compositeScore >= 0.27) grade = 'A'
+    else if (compositeScore >= 0.19) grade = 'B'
+    else if (compositeScore >= 0.12) grade = 'C'
+    else if (compositeScore >= 0.06) grade = 'D'
     else grade = 'F'
 
     grades.push({
       franchise, season, league: leagueName,
       totalPicks, keptCount, keepRate,
+      avgQuality, compositeScore,
       steals, misses, grade,
       keptPlayers,
     })
@@ -3024,7 +3039,7 @@ function FranchisesTab({ data, results, keepers, activeLeague, selectedFranchise
 
         const bestGrade = [...myGrades].sort((a, b) => {
           const gradeOrder = { 'A+': 6, 'A': 5, 'B': 4, 'C': 3, 'D': 2, 'F': 1 }
-          return (gradeOrder[b.grade] - gradeOrder[a.grade]) || b.keepRate - a.keepRate
+          return (gradeOrder[b.grade] - gradeOrder[a.grade]) || b.compositeScore - a.compositeScore
         })[0]
 
         return (
@@ -3037,6 +3052,7 @@ function FranchisesTab({ data, results, keepers, activeLeague, selectedFranchise
                   <th style={{ padding: '4px 8px', textAlign: 'center' }}>Picks</th>
                   <th style={{ padding: '4px 8px', textAlign: 'center' }}>Kept</th>
                   <th style={{ padding: '4px 8px', textAlign: 'center' }}>Keep%</th>
+                  <th style={{ padding: '4px 8px', textAlign: 'center' }}>Avg Yrs</th>
                   <th style={{ padding: '4px 8px', textAlign: 'center' }}>Grade</th>
                   <th style={{ padding: '4px 8px', textAlign: 'center' }}>Steals</th>
                 </tr>
@@ -3050,6 +3066,7 @@ function FranchisesTab({ data, results, keepers, activeLeague, selectedFranchise
                       <td style={{ padding: '6px 8px', textAlign: 'center', color: '#94a3b8' }}>{g.totalPicks}</td>
                       <td style={{ padding: '6px 8px', textAlign: 'center', color: '#94a3b8' }}>{g.keptCount}</td>
                       <td style={{ padding: '6px 8px', textAlign: 'center', color: '#cbd5e1' }}>{(g.keepRate * 100).toFixed(0)}%</td>
+                      <td style={{ padding: '6px 8px', textAlign: 'center', color: g.avgQuality >= 1.5 ? '#84cc16' : g.avgQuality >= 0.5 ? '#f59e0b' : '#475569', fontWeight: 700 }}>{g.avgQuality.toFixed(1)}</td>
                       <td style={{ padding: '6px 8px', textAlign: 'center', color: gradeColor(g.grade), fontSize: 16, fontWeight: 700 }}>{g.grade}</td>
                       <td style={{ padding: '6px 8px', textAlign: 'center', color: g.steals.length > 0 ? '#84cc16' : '#475569', fontWeight: g.steals.length > 0 ? 700 : 400 }}>{g.steals.length}</td>
                     </tr>
@@ -3134,6 +3151,7 @@ function DraftTab({ data, keepers, activeLeague }) {
             <th style={{ padding: '6px 8px', textAlign: 'center' }}>Picks</th>
             <th style={{ padding: '6px 8px', textAlign: 'center' }}>Kept</th>
             <th style={{ padding: '6px 8px', textAlign: 'center' }}>Keep%</th>
+            <th style={{ padding: '6px 8px', textAlign: 'center' }}>Avg Yrs</th>
             <th style={{ padding: '6px 8px', textAlign: 'center' }}>Grade</th>
             <th style={{ padding: '6px 8px', textAlign: 'center' }}>Steals</th>
           </tr>
@@ -3156,12 +3174,13 @@ function DraftTab({ data, keepers, activeLeague }) {
                   <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{g.totalPicks}</td>
                   <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{g.keptCount}</td>
                   <td style={{ padding: '8px', textAlign: 'center', color: '#cbd5e1', fontWeight: 700 }}>{(g.keepRate * 100).toFixed(0)}%</td>
+                  <td style={{ padding: '8px', textAlign: 'center', color: g.avgQuality >= 1.5 ? '#84cc16' : g.avgQuality >= 0.5 ? '#f59e0b' : '#475569', fontWeight: 700 }}>{g.avgQuality.toFixed(1)}</td>
                   <td style={{ padding: '8px', textAlign: 'center', color: gradeColor(g.grade), fontSize: 16, fontWeight: 700 }}>{g.grade}</td>
                   <td style={{ padding: '8px', textAlign: 'center', color: g.steals.length > 0 ? '#84cc16' : '#475569', fontWeight: g.steals.length > 0 ? 700 : 400 }}>{g.steals.length}</td>
                 </tr>
                 {g.steals.length > 0 && (
                   <tr style={{ borderBottom: '1px solid #0f172a', background: rowBg }}>
-                    <td colSpan={8} style={{ padding: '2px 8px 8px 32px', color: '#64748b', fontSize: 11 }}>
+                    <td colSpan={9} style={{ padding: '2px 8px 8px 32px', color: '#64748b', fontSize: 11 }}>
                       Steals: {g.steals.map(s => `${s.player} (R${s.round})`).join(', ')}
                     </td>
                   </tr>
