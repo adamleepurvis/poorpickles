@@ -561,11 +561,9 @@ function computeDraftGrades(data, keepers, leagueName) {
     }
     const avgQuality = totalQualityPoints / totalPicks // 0–4 scale
 
-    // Adjusted keep rate: normalize by available slots rather than total picks
-    const adjKeepRate = availableSlots > 0 ? Math.min(1, keptCount / availableSlots) : keepRate
-
-    // Composite: breadth (adjKeepRate) + depth (avgQuality normalized to 0–1 where 3 avg yrs = 1.0)
-    const compositeScore = adjKeepRate * 0.5 + Math.min(avgQuality / 3, 1) * 0.5
+    // Composite: breadth (keepRate) + depth (avgQuality normalized to 0–1 where 3 avg yrs = 1.0)
+    // availableSlots/constrained only affects filtering in Worst Drafts, not grading
+    const compositeScore = keepRate * 0.5 + Math.min(avgQuality / 3, 1) * 0.5
 
     // Steals: round >= 10, kept next year
     const steals = keptPlayers.filter(p => p.round >= 10)
@@ -583,7 +581,7 @@ function computeDraftGrades(data, keepers, leagueName) {
 
     grades.push({
       franchise, season, league: leagueName,
-      totalPicks, keptCount, keepRate, adjKeepRate,
+      totalPicks, keptCount, keepRate,
       availableSlots, constrained,
       avgQuality, compositeScore,
       steals, misses, grade,
