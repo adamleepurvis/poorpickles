@@ -544,11 +544,25 @@ function computeAcquisitionDNA(data, keepers, leagueName, franchise) {
 
 // ─── computeDraftGrades ─────────────────────────────────────────────────────
 
-function computeDraftGrades(data, keepers, leagueName) {
-  // Collect all drafted entries per franchise+season
-  // structure: { `${franchise}_${season}`: { franchise, season, picks: [{player, round, pick}] } }
-  const buckets = {}
+// Normalize a player name for rankings lookup: strip accents + "(Batter)"/"(SP)" etc.
+function normRankingName(s) {
+  if (!s) return ''
+  return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s*\(.*?\)/g, '').trim().toLowerCase()
+}
 
+function computeDraftGrades(data, keepers, leagueName, rankings) {
+  // Build normalized name lookup per season: normName → actual rank
+  const rankLookup = {}  // rankLookup[season][normName] = rank
+  const seasonRankings = rankings?.[leagueName] || {}
+  for (const [season, playerMap] of Object.entries(seasonRankings)) {
+    rankLookup[parseInt(season)] = {}
+    for (const [name, rank] of Object.entries(playerMap)) {
+      rankLookup[parseInt(season)][normRankingName(name)] = rank
+    }
+  }
+
+  // Collect all drafted entries per franchise+season
+  const buckets = {}
   for (const [playerName, leagues] of Object.entries(data)) {
     const entries = leagues[leagueName]
     if (!entries) continue
@@ -565,71 +579,69 @@ function computeDraftGrades(data, keepers, leagueName) {
   const grades = []
 
   for (const { franchise, season, picks } of Object.values(buckets)) {
-    // Skip 2026 (can't evaluate future keepers)
     if (season >= 2026) continue
 
-    // Determine which picks are keepers (in current season's keeper list)
-    const keeperListThisSeason = keepers?.[leagueName]?.[String(season)]?.[franchise] || []
-    const keeperSetThisSeason = new Set(keeperListThisSeason)
-
-    // True draft picks = drafted but NOT in keeper list for this season
+    const keeperSetThisSeason = new Set(keepers?.[leagueName]?.[String(season)]?.[franchise] || [])
     const trueDraftPicks = picks.filter(p => !keeperSetThisSeason.has(p.player))
-
     if (trueDraftPicks.length < 5) continue
 
-    // Check which were kept next year (for binary keepRate + steals/misses)
-    const keeperSetNextSeason = new Set(keepers?.[leagueName]?.[String(season + 1)]?.[franchise] || [])
-    const keptPlayers = trueDraftPicks.filter(p => keeperSetNextSeason.has(p.player))
-    const keptCount = keptPlayers.length
     const totalPicks = trueDraftPicks.length
-    const keepRate = keptCount / totalPicks
 
-    // Keeper constraint: how many slots were actually available for new draft picks?
-    // retainedOldKeepers = keepers from this season who were also kept next season
+    // Estimate numTeams from keepers for that season
+    const numTeams = Object.keys(keepers?.[leagueName]?.[String(season)] || {}).length || 12
+
+    // Per-season rank lookup
+    const seasonRankMap = rankLookup[season] || {}
+    const hasRankings = Object.keys(seasonRankMap).length > 0
+
+    // ── Surplus-based scoring (primary, when rankings available) ──
+    // expectedRank = midpoint of picks in that round
+    // actualRank   = AR from Yahoo (fallback: 350 = "unranked")
+    // normalizedSurplus = (expected - actual) / expected, capped ±1.5
+    let totalSurplus = 0
+    const steals = []   // R10+ picks finishing in top half of draft
+    const misses = []   // R1-5 picks finishing below rank 200
+
+    for (const pick of trueDraftPicks) {
+      const expectedRank = Math.max(1, (pick.round - 0.5) * numTeams)
+      const normName = normRankingName(pick.player)
+      const actualRank = seasonRankMap[normName] || 350
+      const surplus = expectedRank - actualRank
+      const normalizedSurplus = Math.max(-1.5, Math.min(1.5, surplus / expectedRank))
+      totalSurplus += normalizedSurplus
+
+      if (pick.round >= 10 && actualRank <= numTeams * totalPicks / 2) {
+        steals.push({ ...pick, actualRank })
+      }
+      if (pick.round <= 5 && actualRank > 200) {
+        misses.push({ ...pick, actualRank })
+      }
+    }
+
+    const draftScore = hasRankings ? totalSurplus / totalPicks : null
+
+    // ── Keeper constraint (used only for filtering, not grading) ──
+    const keeperSetNextSeason = new Set(keepers?.[leagueName]?.[String(season + 1)]?.[franchise] || [])
     const retainedOldKeepers = [...keeperSetThisSeason].filter(p => keeperSetNextSeason.has(p)).length
     const availableSlots = Math.max(0, keeperSetNextSeason.size - retainedOldKeepers)
-    // Constrained = fewer than 15% of true picks could realistically become keepers
-    // e.g. 25 picks → need 4+ slots; 30 picks → need 5+ slots
     const constrained = totalPicks > 0 && (availableSlots / totalPicks) < 0.15
 
-    // Quality: for each true pick, count how many subsequent seasons it stayed as a keeper
-    // (up to 4 years out, for same franchise only)
-    let totalQualityPoints = 0
-    for (const pick of trueDraftPicks) {
-      let keeperYears = 0
-      for (let yr = season + 1; yr <= season + 4; yr++) {
-        const nextSet = new Set(keepers?.[leagueName]?.[String(yr)]?.[franchise] || [])
-        if (nextSet.has(pick.player)) keeperYears++
-      }
-      totalQualityPoints += Math.min(keeperYears, 4)
-    }
-    const avgQuality = totalQualityPoints / totalPicks // 0–4 scale
-
-    // Composite: breadth (keepRate) + depth (avgQuality normalized to 0–1 where 3 avg yrs = 1.0)
-    // availableSlots/constrained only affects filtering in Worst Drafts, not grading
-    const compositeScore = keepRate * 0.5 + Math.min(avgQuality / 3, 1) * 0.5
-
-    // Steals: round >= 10, kept next year
-    const steals = keptPlayers.filter(p => p.round >= 10)
-    // Misses: round <= 5, NOT kept next year
-    const misses = trueDraftPicks.filter(p => p.round <= 5 && !keeperSetNextSeason.has(p.player))
-
-    // Grade on composite score
+    // ── Grade ──
     let grade
-    if (compositeScore >= 0.35) grade = 'A+'
-    else if (compositeScore >= 0.27) grade = 'A'
-    else if (compositeScore >= 0.19) grade = 'B'
-    else if (compositeScore >= 0.12) grade = 'C'
-    else if (compositeScore >= 0.06) grade = 'D'
+    if (draftScore === null) {
+      grade = '?'  // no rankings data for this season
+    } else if (draftScore >= 0.30) grade = 'A+'
+    else if (draftScore >= 0.15) grade = 'A'
+    else if (draftScore >= 0.03) grade = 'B'
+    else if (draftScore >= -0.08) grade = 'C'
+    else if (draftScore >= -0.20) grade = 'D'
     else grade = 'F'
 
     grades.push({
       franchise, season, league: leagueName,
-      totalPicks, keptCount, keepRate,
+      totalPicks, draftScore,
       availableSlots, constrained,
-      avgQuality, compositeScore,
       steals, misses, grade,
-      keptPlayers,
     })
   }
 
@@ -2661,7 +2673,7 @@ function ResultsTab({ results, activeLeague, onFranchiseClick }) {
 
 // ─── FranchisesTab ──────────────────────────────────────────────────────────
 
-function FranchisesTab({ data, results, keepers, activeLeague, selectedFranchise, setSelectedFranchise }) {
+function FranchisesTab({ data, results, keepers, rankings, activeLeague, selectedFranchise, setSelectedFranchise }) {
   const isMobile = useIsMobile()
 
   // Build list of all canonical franchise names for the active league(s)
@@ -3105,7 +3117,7 @@ function FranchisesTab({ data, results, keepers, activeLeague, selectedFranchise
 
       {/* G. Draft Grades */}
       {franchiseLeague && (() => {
-        const allGrades = computeDraftGrades(data, keepers, franchiseLeague)
+        const allGrades = computeDraftGrades(data, keepers, franchiseLeague, rankings)
         const myGrades = allGrades
           .filter(g => g.franchise === franchise)
           .sort((a, b) => b.season - a.season)
@@ -3114,7 +3126,7 @@ function FranchisesTab({ data, results, keepers, activeLeague, selectedFranchise
 
         const bestGrade = [...myGrades].sort((a, b) => {
           const gradeOrder = { 'A+': 6, 'A': 5, 'B': 4, 'C': 3, 'D': 2, 'F': 1 }
-          return (gradeOrder[b.grade] - gradeOrder[a.grade]) || b.compositeScore - a.compositeScore
+          return (gradeOrder[b.grade] - gradeOrder[a.grade]) || (b.draftScore || 0) - (a.draftScore || 0)
         })[0]
 
         return (
@@ -3125,11 +3137,10 @@ function FranchisesTab({ data, results, keepers, activeLeague, selectedFranchise
                 <tr style={{ color: '#475569', textAlign: 'left', borderBottom: '1px solid #1e293b' }}>
                   <th style={{ padding: '4px 8px' }}>Season</th>
                   <th style={{ padding: '4px 8px', textAlign: 'center' }}>Picks</th>
-                  <th style={{ padding: '4px 8px', textAlign: 'center' }}>Kept</th>
-                  <th style={{ padding: '4px 8px', textAlign: 'center' }}>Keep%</th>
-                  <th style={{ padding: '4px 8px', textAlign: 'center' }}>Avg Yrs</th>
+                  <th style={{ padding: '4px 8px', textAlign: 'center' }}>Score</th>
                   <th style={{ padding: '4px 8px', textAlign: 'center' }}>Grade</th>
                   <th style={{ padding: '4px 8px', textAlign: 'center' }}>Steals</th>
+                  <th style={{ padding: '4px 8px', textAlign: 'center' }}>Misses</th>
                 </tr>
               </thead>
               <tbody>
@@ -3142,11 +3153,10 @@ function FranchisesTab({ data, results, keepers, activeLeague, selectedFranchise
                         {g.constrained && <span title={`Only ${g.availableSlots} open keeper slot(s)`} style={{ marginLeft: 4, fontSize: 10, color: '#475569' }}>⚠️</span>}
                       </td>
                       <td style={{ padding: '6px 8px', textAlign: 'center', color: '#94a3b8' }}>{g.totalPicks}</td>
-                      <td style={{ padding: '6px 8px', textAlign: 'center', color: '#94a3b8' }}>{g.keptCount}</td>
-                      <td style={{ padding: '6px 8px', textAlign: 'center', color: '#cbd5e1' }}>{(g.keepRate * 100).toFixed(0)}%</td>
-                      <td style={{ padding: '6px 8px', textAlign: 'center', color: g.avgQuality >= 1.5 ? '#84cc16' : g.avgQuality >= 0.5 ? '#f59e0b' : '#475569', fontWeight: 700 }}>{g.avgQuality.toFixed(1)}</td>
+                      <td style={{ padding: '6px 8px', textAlign: 'center', color: g.draftScore >= 0 ? '#84cc16' : '#f87171', fontWeight: 700 }}>{g.draftScore != null ? (g.draftScore >= 0 ? '+' : '') + g.draftScore.toFixed(2) : '—'}</td>
                       <td style={{ padding: '6px 8px', textAlign: 'center', color: gradeColor(g.grade), fontSize: 16, fontWeight: 700 }}>{g.constrained ? '—' : g.grade}</td>
                       <td style={{ padding: '6px 8px', textAlign: 'center', color: g.steals.length > 0 ? '#84cc16' : '#475569', fontWeight: g.steals.length > 0 ? 700 : 400 }}>{g.steals.length}</td>
+                      <td style={{ padding: '6px 8px', textAlign: 'center', color: g.misses.length > 0 ? '#f87171' : '#475569' }}>{g.misses.length}</td>
                     </tr>
                   )
                 })}
@@ -3157,10 +3167,9 @@ function FranchisesTab({ data, results, keepers, activeLeague, selectedFranchise
                 Best: <span style={{ color: '#f1f5f9', fontWeight: 700 }}>{bestGrade.season}</span>
                 {' · '}
                 <span style={{ color: gradeColor(bestGrade.grade), fontWeight: 700 }}>{bestGrade.grade}</span>
-                {' · '}
-                {bestGrade.steals.length} steal{bestGrade.steals.length !== 1 ? 's' : ''}
+                {bestGrade.draftScore != null && <span style={{ color: '#475569' }}> ({bestGrade.draftScore >= 0 ? '+' : ''}{bestGrade.draftScore.toFixed(2)})</span>}
                 {bestGrade.steals.length > 0 && (
-                  <span> including {bestGrade.steals.slice(0, 2).map(s => `${s.player} R${s.round}P${s.pick}`).join(', ')}</span>
+                  <span> · Steals: {bestGrade.steals.slice(0, 2).map(s => `${s.player} R${s.round}→#${s.actualRank}`).join(', ')}</span>
                 )}
               </div>
             )}
@@ -3233,14 +3242,14 @@ function FranchisesTab({ data, results, keepers, activeLeague, selectedFranchise
 
 // ─── DraftTab ───────────────────────────────────────────────────────────────
 
-function DraftTab({ data, keepers, activeLeague }) {
+function DraftTab({ data, keepers, rankings, activeLeague }) {
   const leagueName = activeLeague === 'All' ? 'LXG' : activeLeague
   const [sub, setSub] = useState('best')
   const [yearFilter, setYearFilter] = useState('all')
 
   const allGrades = useMemo(
-    () => computeDraftGrades(data, keepers, leagueName),
-    [data, keepers, leagueName]
+    () => computeDraftGrades(data, keepers, leagueName, rankings),
+    [data, keepers, leagueName, rankings]
   )
 
   const availableYears = useMemo(
@@ -3254,15 +3263,12 @@ function DraftTab({ data, keepers, activeLeague }) {
   )
 
   const topBest = useMemo(
-    () => [...filtered].filter(g => !g.constrained).sort((a, b) => b.compositeScore - a.compositeScore || b.keptCount - a.keptCount).slice(0, 20),
+    () => [...filtered].filter(g => !g.constrained && g.draftScore !== null).sort((a, b) => b.draftScore - a.draftScore).slice(0, 20),
     [filtered]
   )
 
   const topWorst = useMemo(
-    () => [...filtered]
-      .filter(g => !g.constrained)
-      .sort((a, b) => a.compositeScore - b.compositeScore || a.keptCount - b.keptCount)
-      .slice(0, 20),
+    () => [...filtered].filter(g => !g.constrained && g.draftScore !== null).sort((a, b) => a.draftScore - b.draftScore).slice(0, 20),
     [filtered]
   )
 
@@ -3270,9 +3276,9 @@ function DraftTab({ data, keepers, activeLeague }) {
     const agg = {}
     for (const g of allGrades) {
       if (g.constrained) continue
-      if (!agg[g.franchise]) agg[g.franchise] = { franchise: g.franchise, totalPicks: 0, totalKept: 0, seasons: 0, bestGrade: null, bestGradeOrder: -1 }
+      if (!agg[g.franchise]) agg[g.franchise] = { franchise: g.franchise, totalPicks: 0, totalScore: 0, seasons: 0, bestGrade: null, bestGradeOrder: -1 }
       agg[g.franchise].totalPicks += g.totalPicks
-      agg[g.franchise].totalKept += g.keptCount
+      agg[g.franchise].totalScore += g.draftScore || 0
       agg[g.franchise].seasons += 1
       const gradeOrder = { 'A+': 6, 'A': 5, 'B': 4, 'C': 3, 'D': 2, 'F': 1 }
       const go = gradeOrder[g.grade] || 0
@@ -3283,8 +3289,8 @@ function DraftTab({ data, keepers, activeLeague }) {
       }
     }
     return Object.values(agg)
-      .map(r => ({ ...r, avgKeepRate: r.totalPicks > 0 ? r.totalKept / r.totalPicks : 0 }))
-      .sort((a, b) => b.avgKeepRate - a.avgKeepRate)
+      .map(r => ({ ...r, avgScore: r.seasons > 0 ? r.totalScore / r.seasons : 0 }))
+      .sort((a, b) => b.avgScore - a.avgScore)
   }, [allGrades])
 
   const subBtns = [
@@ -3317,11 +3323,10 @@ function DraftTab({ data, keepers, activeLeague }) {
             <th style={{ padding: '6px 8px' }}>Franchise</th>
             <th style={{ padding: '6px 8px', textAlign: 'center' }}>Season</th>
             <th style={{ padding: '6px 8px', textAlign: 'center' }}>Picks</th>
-            <th style={{ padding: '6px 8px', textAlign: 'center' }}>Kept</th>
-            <th style={{ padding: '6px 8px', textAlign: 'center' }}>Keep%</th>
-            <th style={{ padding: '6px 8px', textAlign: 'center' }}>Avg Yrs</th>
+            <th style={{ padding: '6px 8px', textAlign: 'center' }}>Score</th>
             <th style={{ padding: '6px 8px', textAlign: 'center' }}>Grade</th>
             <th style={{ padding: '6px 8px', textAlign: 'center' }}>Steals</th>
+            <th style={{ padding: '6px 8px', textAlign: 'center' }}>Misses</th>
           </tr>
         </thead>
         <tbody>
@@ -3340,16 +3345,17 @@ function DraftTab({ data, keepers, activeLeague }) {
                   <td style={{ padding: '8px', color: '#f1f5f9', fontWeight: isFirst ? 700 : 400 }}>{g.franchise}</td>
                   <td style={{ padding: '8px', textAlign: 'center', color: '#64748b' }}>{g.season}</td>
                   <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{g.totalPicks}</td>
-                  <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{g.keptCount}</td>
-                  <td style={{ padding: '8px', textAlign: 'center', color: '#cbd5e1', fontWeight: 700 }}>{(g.keepRate * 100).toFixed(0)}%</td>
-                  <td style={{ padding: '8px', textAlign: 'center', color: g.avgQuality >= 1.5 ? '#84cc16' : g.avgQuality >= 0.5 ? '#f59e0b' : '#475569', fontWeight: 700 }}>{g.avgQuality.toFixed(1)}</td>
+                  <td style={{ padding: '8px', textAlign: 'center', color: g.draftScore >= 0 ? '#84cc16' : '#f87171', fontWeight: 700 }}>{g.draftScore != null ? (g.draftScore >= 0 ? '+' : '') + g.draftScore.toFixed(2) : '—'}</td>
                   <td style={{ padding: '8px', textAlign: 'center', color: gradeColor(g.grade), fontSize: 16, fontWeight: 700 }}>{g.grade}</td>
                   <td style={{ padding: '8px', textAlign: 'center', color: g.steals.length > 0 ? '#84cc16' : '#475569', fontWeight: g.steals.length > 0 ? 700 : 400 }}>{g.steals.length}</td>
+                  <td style={{ padding: '8px', textAlign: 'center', color: g.misses.length > 0 ? '#f87171' : '#475569' }}>{g.misses.length}</td>
                 </tr>
-                {g.steals.length > 0 && (
+                {(g.steals.length > 0 || g.misses.length > 0) && (
                   <tr style={{ borderBottom: '1px solid #0f172a', background: rowBg }}>
-                    <td colSpan={9} style={{ padding: '2px 8px 8px 32px', color: '#64748b', fontSize: 11 }}>
-                      Steals: {g.steals.map(s => `${s.player} (R${s.round})`).join(', ')}
+                    <td colSpan={8} style={{ padding: '2px 8px 8px 32px', color: '#64748b', fontSize: 11 }}>
+                      {g.steals.length > 0 && <span style={{ color: '#84cc16' }}>Steals: {g.steals.map(s => `${s.player} R${s.round} →#${s.actualRank}`).join(', ')}</span>}
+                      {g.steals.length > 0 && g.misses.length > 0 && '  ·  '}
+                      {g.misses.length > 0 && <span style={{ color: '#f87171' }}>Misses: {g.misses.map(s => `${s.player} R${s.round} →#${s.actualRank}`).join(', ')}</span>}
                     </td>
                   </tr>
                 )}
@@ -3399,10 +3405,9 @@ function DraftTab({ data, keepers, activeLeague }) {
                 <tr style={{ color: '#475569', textAlign: 'left', borderBottom: '1px solid #1e293b' }}>
                   <th style={{ padding: '6px 8px', width: 32 }}>#</th>
                   <th style={{ padding: '6px 8px' }}>Franchise</th>
-                  <th style={{ padding: '6px 8px', textAlign: 'center' }}>Avg Keep%</th>
+                  <th style={{ padding: '6px 8px', textAlign: 'center' }}>Avg Score</th>
                   <th style={{ padding: '6px 8px', textAlign: 'center' }}>Best Season</th>
-                  <th style={{ padding: '6px 8px', textAlign: 'center' }}>Total Picks</th>
-                  <th style={{ padding: '6px 8px', textAlign: 'center' }}>Total Kept</th>
+                  <th style={{ padding: '6px 8px', textAlign: 'center' }}>Seasons</th>
                 </tr>
               </thead>
               <tbody>
@@ -3410,14 +3415,13 @@ function DraftTab({ data, keepers, activeLeague }) {
                   <tr key={r.franchise} style={{ borderBottom: '1px solid #0f172a', background: i % 2 ? 'rgba(255,255,255,0.01)' : 'transparent' }}>
                     <td style={{ padding: '8px', color: '#475569', fontWeight: 700 }}>{i + 1}</td>
                     <td style={{ padding: '8px', color: '#f1f5f9', fontWeight: i < 3 ? 700 : 400 }}>{r.franchise}</td>
-                    <td style={{ padding: '8px', textAlign: 'center', color: '#cbd5e1', fontWeight: 700 }}>{(r.avgKeepRate * 100).toFixed(0)}%</td>
+                    <td style={{ padding: '8px', textAlign: 'center', color: r.avgScore >= 0 ? '#84cc16' : '#f87171', fontWeight: 700 }}>{r.avgScore >= 0 ? '+' : ''}{r.avgScore.toFixed(2)}</td>
                     <td style={{ padding: '8px', textAlign: 'center' }}>
                       {r.bestGrade
                         ? <span><span style={{ color: gradeColor(r.bestGrade), fontWeight: 700 }}>{r.bestGrade}</span><span style={{ color: '#64748b', marginLeft: 6, fontSize: 11 }}>{r.bestSeason}</span></span>
                         : '—'}
                     </td>
-                    <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{r.totalPicks}</td>
-                    <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{r.totalKept}</td>
+                    <td style={{ padding: '8px', textAlign: 'center', color: '#94a3b8' }}>{r.seasons}</td>
                   </tr>
                 ))}
               </tbody>
@@ -3435,6 +3439,7 @@ export default function App() {
   const [data, setData] = useState(null)
   const [keepers, setKeepers] = useState({})
   const [results, setResults] = useState(null)
+  const [rankings, setRankings] = useState(null)
   const [error, setError] = useState(null)
   const [tab, setTab] = useState('players')
   const [activeLeague, setActiveLeague] = useState('LXG')
@@ -3457,6 +3462,10 @@ export default function App() {
     fetch('/results_history.json')
       .then(r => r.ok ? r.json() : null)
       .then(setResults)
+      .catch(() => {})
+    fetch('/player_rankings_history.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(setRankings)
       .catch(() => {})
   }, [])
 
@@ -3553,8 +3562,8 @@ export default function App() {
       {filteredData && tab === 'leaderboard' && <LeaderboardTab data={filteredData} activeLeague={activeLeague} keepers={keepers} />}
       {filteredData && tab === 'h2h' && <H2HTab data={filteredData} activeLeague={activeLeague} />}
       {filteredData && results && tab === 'results' && <ResultsTab results={results} activeLeague={activeLeague} onFranchiseClick={(name) => handleFranchiseClick(name)} />}
-      {data && tab === 'franchises' && <FranchisesTab data={data} results={results || {}} keepers={keepers} activeLeague={activeLeague} selectedFranchise={selectedFranchise} setSelectedFranchise={setSelectedFranchise} />}
-      {data && tab === 'draft' && <DraftTab data={data} keepers={keepers} activeLeague={activeLeague} />}
+      {data && tab === 'franchises' && <FranchisesTab data={data} results={results || {}} keepers={keepers} rankings={rankings} activeLeague={activeLeague} selectedFranchise={selectedFranchise} setSelectedFranchise={setSelectedFranchise} />}
+      {data && tab === 'draft' && <DraftTab data={data} keepers={keepers} rankings={rankings} activeLeague={activeLeague} />}
     </div>
   )
 }
