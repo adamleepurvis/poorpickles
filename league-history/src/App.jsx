@@ -555,12 +555,15 @@ function normRankingName(s) {
   return normAccents(s).replace(/\s*\(.*?\)/g, '').trim()
 }
 // Look up a player name in a rankLookup season map:
-// 1. Try exact match (with role suffix) so Ohtani (Pitcher) != Ohtani (Batter)
-// 2. Fall back to base name (no suffix) for players without role variants
+// 1. Try exact match (accent-stripped, suffix preserved)
+// 2. If player name has a role suffix (e.g. "(Pitcher)") and no exact match, return undefined
+//    — avoids Ohtani (Pitcher) inheriting Ohtani (Batter)'s rank when pitcher isn't ranked
+// 3. For plain names (no suffix), fall back to base name lookup
 function rankLookupGet(seasonMap, playerName) {
   if (!seasonMap || !playerName) return undefined
   const exact = seasonMap[normAccents(playerName)]
   if (exact !== undefined) return exact
+  if (/\(.*?\)/.test(playerName)) return undefined  // has role suffix, no exact match → no rank
   return seasonMap[normRankingName(playerName)]
 }
 
@@ -1714,7 +1717,7 @@ function LeaderboardTab({ data, activeLeague, keepers, rankings }) {
   }, [sub, data, leagueName, keepers])
 
   const topPickups = useMemo(() => {
-    if (sub !== 'records' && sub !== 'pickups' || !leagueName) return []
+    if (!leagueName || (sub !== 'records' && sub !== 'pickups')) return []
     const seasonRankings = rankings?.[leagueName] || {}
     // Build lookup per season: exact (accent-stripped) key + base (no-suffix) fallback
     const lookups = {}
@@ -1774,7 +1777,8 @@ function LeaderboardTab({ data, activeLeague, keepers, rankings }) {
     ['alltime', '🏆 All-Time Streaks'],
     ['active', '🔥 Active Streaks'],
     ['tenured', '📅 Longest Tenured'],
-    ...(leagueName !== 'SouthOssetian' ? [['records', '📋 Records'], ['pickups', '📈 FA Pickups']] : []),
+    ...(leagueName !== 'SouthOssetian' ? [['records', '📋 Records']] : []),
+    ['pickups', '📈 FA Pickups'],
   ]
 
   const RECORD_CARDS = records ? [
