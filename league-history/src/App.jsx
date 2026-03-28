@@ -1867,7 +1867,8 @@ function computeCategoryKings(results, leagueName) {
   // statId -> { teamWins: { franchise: count }, total: count }
   const statAgg = {}
 
-  for (const [, d] of Object.entries(leagueData)) {
+  for (const [season, d] of Object.entries(leagueData)) {
+    if (parseInt(season) >= 2026) continue
     for (const m of (d.matchups || [])) {
       if (!m.stat_winners) continue
       for (const [statId, winner] of Object.entries(m.stat_winners)) {
@@ -1913,7 +1914,8 @@ function computePlayoffStats(results, leagueName) {
     return agg[name]
   }
 
-  for (const [, d] of Object.entries(leagueData)) {
+  for (const [season, d] of Object.entries(leagueData)) {
+    if (parseInt(season) >= 2026) continue
     if ((d.format || 'h2h') !== 'h2h') continue
     const matchups = d.matchups || []
     if (matchups.length === 0) continue
@@ -1947,6 +1949,7 @@ function computePlayoffStats(results, leagueName) {
   for (const name of Object.keys(agg)) appCount[name] = new Set()
 
   for (const [season, d] of Object.entries(leagueData)) {
+    if (parseInt(season) >= 2026) continue
     if ((d.format || 'h2h') !== 'h2h') continue
     const matchups = d.matchups || []
     if (matchups.length === 0) continue
@@ -1981,6 +1984,7 @@ function computeSeasonRecords(results, leagueName) {
 
   const allSeasons = []
   for (const [season, d] of Object.entries(leagueData)) {
+    if (parseInt(season) >= 2026) continue
     if ((d.format || 'h2h') !== 'h2h') continue
     for (const s of d.standings) {
       const franchise = normTeam(s.team)
@@ -2369,6 +2373,25 @@ function ResultsTab({ results, activeLeague }) {
         mostImproved.sort((a, b) => b.jump - a.jump)
         const top5Improved = mostImproved.slice(0, 5)
 
+        const leastImproved = []
+        for (const [franchise, seasons] of Object.entries(byFranchise)) {
+          const sorted = [...seasons].sort((a, b) => a.season - b.season)
+          let worstDrop = Infinity, worstFrom = null, worstTo = null
+          for (let i = 1; i < sorted.length; i++) {
+            const jump = sorted[i].winPct - sorted[i - 1].winPct
+            if (jump < worstDrop) {
+              worstDrop = jump
+              worstFrom = sorted[i - 1].season
+              worstTo = sorted[i].season
+            }
+          }
+          if (worstFrom !== null && worstDrop < 0) {
+            leastImproved.push({ franchise, jump: worstDrop, fromSeason: worstFrom, toSeason: worstTo })
+          }
+        }
+        leastImproved.sort((a, b) => a.jump - b.jump)
+        const top5LeastImproved = leastImproved.slice(0, 5)
+
         const sectionHeaderStyle = { color: '#94a3b8', fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 10, marginTop: 20 }
 
         const SeasonTable = ({ rows, highlightFirst, highlightLast }) => (
@@ -2422,13 +2445,30 @@ function ResultsTab({ results, activeLeague }) {
                   <div style={{ color: '#475569', fontSize: 13 }}>Not enough data</div>
                 ) : (
                   <div>
-                    {top5Improved.map((r, i) => (
+                    {top5Improved.map((r) => (
                       <div key={r.franchise} style={{ background: '#0d0f16', border: '1px solid #1e293b', borderRadius: 8, padding: '10px 16px', marginBottom: 8, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <div>
                           <span style={{ color: '#f1f5f9', fontWeight: 700 }}>{r.franchise}</span>
                           <span style={{ color: '#64748b', fontSize: 12, marginLeft: 10 }}>{r.fromSeason} → {r.toSeason}</span>
                         </div>
                         <div style={{ color: '#84cc16', fontWeight: 700, fontSize: 15 }}>+{(r.jump * 100).toFixed(1)}%</div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                <div style={sectionHeaderStyle}>Least Improved (Year-over-Year)</div>
+                {top5LeastImproved.length === 0 ? (
+                  <div style={{ color: '#475569', fontSize: 13 }}>Not enough data</div>
+                ) : (
+                  <div>
+                    {top5LeastImproved.map((r) => (
+                      <div key={r.franchise} style={{ background: '#0d0f16', border: '1px solid #1e293b', borderRadius: 8, padding: '10px 16px', marginBottom: 8, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <div>
+                          <span style={{ color: '#f1f5f9', fontWeight: 700 }}>{r.franchise}</span>
+                          <span style={{ color: '#64748b', fontSize: 12, marginLeft: 10 }}>{r.fromSeason} → {r.toSeason}</span>
+                        </div>
+                        <div style={{ color: '#f87171', fontWeight: 700, fontSize: 15 }}>{(r.jump * 100).toFixed(1)}%</div>
                       </div>
                     ))}
                   </div>
