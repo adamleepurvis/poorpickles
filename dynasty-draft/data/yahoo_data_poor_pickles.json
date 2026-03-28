@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-28T21:31:53.141970",
+  "generated": "2026-03-28T17:49:31.823356",
   "league_key": "469.l.51744",
   "settings": {
     "league_key": "469.l.51744",
@@ -21,7 +21,7 @@
       "WHIP",
       "BB/9"
     ],
-    "fetched_at": "2026-03-28T21:31:54.228769"
+    "fetched_at": "2026-03-28T17:49:32.441983"
   },
   "draft_results": [
     {
@@ -5512,10 +5512,10 @@
     "Ben Rortvedt": [
       "C"
     ],
-    "Luis Campusano": [
+    "Garrett Stubbs": [
       "C"
     ],
-    "Garrett Stubbs": [
+    "Luis Campusano": [
       "C"
     ],
     "Jhonny Pereda": [
@@ -6312,9 +6312,6 @@
     "Ralphy Velazquez": [
       "1B"
     ],
-    "TJ Rumfield": [
-      "1B"
-    ],
     "Cooper Bowman": [
       "1B",
       "2B",
@@ -6351,6 +6348,9 @@
     "Charles McAdoo": [
       "1B",
       "3B"
+    ],
+    "TJ Rumfield": [
+      "1B"
     ],
     "Niko Kavadas": [
       "1B",
@@ -8260,12 +8260,12 @@
       "LF",
       "RF"
     ],
-    "Eli White": [
-      "CF",
+    "Heriberto Hern\u00e1ndez": [
       "LF",
       "RF"
     ],
-    "Heriberto Hern\u00e1ndez": [
+    "Eli White": [
+      "CF",
       "LF",
       "RF"
     ],
@@ -8310,12 +8310,12 @@
       "LF",
       "RF"
     ],
-    "Jordan Walker": [
+    "Blake Perkins": [
+      "CF",
       "LF",
       "RF"
     ],
-    "Blake Perkins": [
-      "CF",
+    "Jordan Walker": [
       "LF",
       "RF"
     ],
@@ -8386,7 +8386,7 @@
       "LF",
       "RF"
     ],
-    "Brandon Lockridge": [
+    "Austin Slater": [
       "CF",
       "LF",
       "RF"
@@ -8395,7 +8395,7 @@
       "LF",
       "RF"
     ],
-    "Austin Slater": [
+    "Brandon Lockridge": [
       "CF",
       "LF",
       "RF"
@@ -8461,12 +8461,12 @@
       "LF",
       "RF"
     ],
-    "Joey Wiemer": [
+    "Alejandro Osuna": [
       "CF",
       "LF",
       "RF"
     ],
-    "Alejandro Osuna": [
+    "Joey Wiemer": [
       "CF",
       "LF",
       "RF"
@@ -10398,9 +10398,6 @@
       "RP",
       "SP"
     ],
-    "Owen Murphy": [
-      "SP"
-    ],
     "Matt Barr": [
       "SP"
     ],
@@ -10558,6 +10555,10 @@
       "SP"
     ],
     "Blake Wehunt": [
+      "SP"
+    ],
+    "Braden Davis": [
+      "P",
       "SP"
     ],
     "Mason Miller": [
@@ -10776,6 +10777,10 @@
       "P",
       "RP"
     ],
+    "Jeremiah Estrada": [
+      "P",
+      "RP"
+    ],
     "Steven Okert": [
       "P",
       "RP"
@@ -10796,11 +10801,11 @@
       "P",
       "RP"
     ],
-    "Dylan Lee": [
+    "Tanner Scott": [
       "P",
       "RP"
     ],
-    "Tanner Scott": [
+    "Dylan Lee": [
       "P",
       "RP"
     ],
@@ -10809,10 +10814,6 @@
       "RP"
     ],
     "Jacob Webb": [
-      "P",
-      "RP"
-    ],
-    "Jeremiah Estrada": [
       "P",
       "RP"
     ],
@@ -11207,11 +11208,15 @@
       "P",
       "RP"
     ],
+    "Scott Barlow": [
+      "P",
+      "RP"
+    ],
     "Tim Herrin": [
       "P",
       "RP"
     ],
-    "Scott Barlow": [
+    "Ryan Zeferjahn": [
       "P",
       "RP"
     ],
@@ -11227,11 +11232,11 @@
       "P",
       "RP"
     ],
-    "Bryan Hudson": [
+    "Hunter Bigge": [
       "P",
       "RP"
     ],
-    "Hunter Bigge": [
+    "Bryan Hudson": [
       "P",
       "RP"
     ],
@@ -11239,7 +11244,7 @@
       "P",
       "RP"
     ],
-    "Erasmo Ram\u00edrez": [
+    "Juan Mejia": [
       "P",
       "RP"
     ],
@@ -11247,11 +11252,7 @@
       "P",
       "RP"
     ],
-    "Justin Lawrence": [
-      "P",
-      "RP"
-    ],
-    "Tyler Ferguson": [
+    "Erasmo Ram\u00edrez": [
       "P",
       "RP"
     ],
@@ -11259,7 +11260,7 @@
       "P",
       "RP"
     ],
-    "Ryan Zeferjahn": [
+    "Tyler Ferguson": [
       "P",
       "RP"
     ],
@@ -11275,7 +11276,7 @@
       "P",
       "RP"
     ],
-    "Juan Mejia": [
+    "Justin Lawrence": [
       "P",
       "RP"
     ],
@@ -11389,6 +11390,10 @@
       "P",
       "RP"
     ],
+    "Chase Silseth": [
+      "P",
+      "RP"
+    ],
     "Jonathan Bowlan": [
       "P",
       "RP"
@@ -11398,10 +11403,6 @@
       "RP"
     ],
     "Brusdar Graterol": [
-      "P",
-      "RP"
-    ],
-    "Chase Silseth": [
       "P",
       "RP"
     ],
@@ -11424,15 +11425,18 @@
       "P",
       "RP"
     ],
+    "Peyton Pallette": [
+      "RP"
+    ],
     "Justin Hagenman": [
       "P",
       "RP"
     ],
-    "Andrew Walters": [
+    "Andrew Nardi": [
       "P",
       "RP"
     ],
-    "Andrew Nardi": [
+    "Andrew Walters": [
       "P",
       "RP"
     ],
@@ -11448,15 +11452,15 @@
       "P",
       "RP"
     ],
-    "Christian Roa": [
-      "P",
-      "RP"
-    ],
     "Will Klein": [
       "P",
       "RP"
     ],
     "Carlos Vargas": [
+      "P",
+      "RP"
+    ],
+    "Christian Roa": [
       "P",
       "RP"
     ],
@@ -11473,9 +11477,6 @@
       "RP"
     ],
     "Eiberson Castellano": [
-      "RP"
-    ],
-    "Brayan Mendoza": [
       "RP"
     ],
     "RJ Petit": [
@@ -12619,6 +12620,7 @@
     "Ethan Pecko": "NA",
     "Juan Valera": "NA",
     "Michael Morales": "NA",
+    "Josh Stephan": "NA",
     "Cade Obermueller": "NA",
     "Esteban Mejia": "NA",
     "Antoine Kelly": "NA",
@@ -13056,6 +13058,7 @@
     "Juan Burgos": "NA",
     "Alex Carrillo": "NA"
   },
+  "season_stats": {},
   "scoreboard": {
     "week": 1,
     "matchups": []

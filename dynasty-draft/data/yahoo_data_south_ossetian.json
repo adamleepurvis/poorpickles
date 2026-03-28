@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-28T21:32:40.966897",
+  "generated": "2026-03-28T17:50:30.329544",
   "league_key": "469.l.40214",
   "settings": {
     "league_key": "469.l.40214",
@@ -18,7 +18,7 @@
       "ERA",
       "WHIP"
     ],
-    "fetched_at": "2026-03-28T21:32:41.642866"
+    "fetched_at": "2026-03-28T17:50:31.111990"
   },
   "draft_results": [
     {
@@ -7639,7 +7639,7 @@
       "LF",
       "RF"
     ],
-    "Brandon Lockridge": [
+    "Austin Slater": [
       "CF",
       "LF",
       "RF"
@@ -7648,7 +7648,7 @@
       "LF",
       "RF"
     ],
-    "Austin Slater": [
+    "Brandon Lockridge": [
       "CF",
       "LF",
       "RF"
@@ -7714,12 +7714,12 @@
       "LF",
       "RF"
     ],
-    "Joey Wiemer": [
+    "Alejandro Osuna": [
       "CF",
       "LF",
       "RF"
     ],
-    "Alejandro Osuna": [
+    "Joey Wiemer": [
       "CF",
       "LF",
       "RF"
@@ -8928,13 +8928,13 @@
       "RP",
       "SP"
     ],
+    "Jos\u00e9 Berr\u00edos": [
+      "P",
+      "SP"
+    ],
     "Jos\u00e9 Butt\u00f3": [
       "P",
       "RP",
-      "SP"
-    ],
-    "Jos\u00e9 Berr\u00edos": [
-      "P",
       "SP"
     ],
     "Ryan Yarbrough": [
@@ -8955,12 +8955,12 @@
       "RP",
       "SP"
     ],
-    "Sean Newcomb": [
+    "Trevor McDonald": [
       "P",
       "RP",
       "SP"
     ],
-    "Trevor McDonald": [
+    "Sean Newcomb": [
       "P",
       "RP",
       "SP"
@@ -8990,22 +8990,22 @@
       "P",
       "SP"
     ],
-    "Tobias Myers": [
-      "P",
-      "RP",
-      "SP"
-    ],
     "Gavin Stone": [
       "P",
       "SP"
     ],
-    "Tyler Gilbert": [
+    "Tobias Myers": [
       "P",
       "RP",
       "SP"
     ],
     "Johan Oviedo": [
       "P",
+      "SP"
+    ],
+    "Tyler Gilbert": [
+      "P",
+      "RP",
       "SP"
     ],
     "Cody Bradford": [
@@ -9120,6 +9120,9 @@
     ],
     "AJ Smith-Shawver": [
       "P",
+      "SP"
+    ],
+    "Enmanuel De Jes\u00fas": [
       "SP"
     ],
     "Alan Rangel": [
@@ -9648,9 +9651,6 @@
       "RP",
       "SP"
     ],
-    "Owen Murphy": [
-      "SP"
-    ],
     "Matt Barr": [
       "SP"
     ],
@@ -9808,6 +9808,10 @@
       "SP"
     ],
     "Blake Wehunt": [
+      "SP"
+    ],
+    "Braden Davis": [
+      "P",
       "SP"
     ],
     "Mason Miller": [
@@ -10026,6 +10030,10 @@
       "P",
       "RP"
     ],
+    "Jeremiah Estrada": [
+      "P",
+      "RP"
+    ],
     "Steven Okert": [
       "P",
       "RP"
@@ -10046,11 +10054,11 @@
       "P",
       "RP"
     ],
-    "Dylan Lee": [
+    "Tanner Scott": [
       "P",
       "RP"
     ],
-    "Tanner Scott": [
+    "Dylan Lee": [
       "P",
       "RP"
     ],
@@ -10059,10 +10067,6 @@
       "RP"
     ],
     "Jacob Webb": [
-      "P",
-      "RP"
-    ],
-    "Jeremiah Estrada": [
       "P",
       "RP"
     ],
@@ -10102,11 +10106,11 @@
       "P",
       "RP"
     ],
-    "Jakob Junis": [
+    "Justin Sterner": [
       "P",
       "RP"
     ],
-    "Justin Sterner": [
+    "Jakob Junis": [
       "P",
       "RP"
     ],
@@ -10178,7 +10182,7 @@
       "P",
       "RP"
     ],
-    "Tyler Kinley": [
+    "Taylor Clarke": [
       "P",
       "RP"
     ],
@@ -10190,7 +10194,7 @@
       "P",
       "RP"
     ],
-    "Taylor Clarke": [
+    "Tyler Kinley": [
       "P",
       "RP"
     ],
@@ -10202,7 +10206,7 @@
       "P",
       "RP"
     ],
-    "Tim Hill": [
+    "Isaac Mattson": [
       "P",
       "RP"
     ],
@@ -10210,11 +10214,11 @@
       "P",
       "RP"
     ],
-    "Isaac Mattson": [
+    "Yariel Rodriguez": [
       "P",
       "RP"
     ],
-    "Yariel Rodriguez": [
+    "Tim Hill": [
       "P",
       "RP"
     ],
@@ -10226,11 +10230,11 @@
       "P",
       "RP"
     ],
-    "Matt Brash": [
+    "Brock Burke": [
       "P",
       "RP"
     ],
-    "Brock Burke": [
+    "Matt Brash": [
       "P",
       "RP"
     ],
@@ -10254,11 +10258,11 @@
       "P",
       "RP"
     ],
-    "Erik Miller": [
+    "Wandy Peralta": [
       "P",
       "RP"
     ],
-    "Wandy Peralta": [
+    "Erik Miller": [
       "P",
       "RP"
     ],
@@ -10310,10 +10314,6 @@
       "P",
       "RP"
     ],
-    "Edgardo Henriquez": [
-      "P",
-      "RP"
-    ],
     "A.J. Puk": [
       "P",
       "RP"
@@ -10330,11 +10330,11 @@
       "P",
       "RP"
     ],
-    "Hogan Harris": [
+    "Rob Zastryzny": [
       "P",
       "RP"
     ],
-    "Rob Zastryzny": [
+    "Hogan Harris": [
       "P",
       "RP"
     ],
@@ -10343,6 +10343,10 @@
       "RP"
     ],
     "David Robertson": [
+      "P",
+      "RP"
+    ],
+    "Edgardo Henriquez": [
       "P",
       "RP"
     ],
@@ -10362,11 +10366,11 @@
       "P",
       "RP"
     ],
-    "Ryan Thompson": [
+    "Louis Varland": [
       "P",
       "RP"
     ],
-    "Louis Varland": [
+    "Ryan Thompson": [
       "P",
       "RP"
     ],
@@ -10457,15 +10461,11 @@
       "P",
       "RP"
     ],
-    "Scott Barlow": [
-      "P",
-      "RP"
-    ],
     "Tim Herrin": [
       "P",
       "RP"
     ],
-    "Ryan Zeferjahn": [
+    "Scott Barlow": [
       "P",
       "RP"
     ],
@@ -10481,11 +10481,11 @@
       "P",
       "RP"
     ],
-    "Hunter Bigge": [
+    "Bryan Hudson": [
       "P",
       "RP"
     ],
-    "Bryan Hudson": [
+    "Hunter Bigge": [
       "P",
       "RP"
     ],
@@ -10493,7 +10493,7 @@
       "P",
       "RP"
     ],
-    "Juan Mejia": [
+    "Erasmo Ram\u00edrez": [
       "P",
       "RP"
     ],
@@ -10501,7 +10501,11 @@
       "P",
       "RP"
     ],
-    "Erasmo Ram\u00edrez": [
+    "Justin Lawrence": [
+      "P",
+      "RP"
+    ],
+    "Tyler Ferguson": [
       "P",
       "RP"
     ],
@@ -10509,7 +10513,7 @@
       "P",
       "RP"
     ],
-    "Tyler Ferguson": [
+    "Ryan Zeferjahn": [
       "P",
       "RP"
     ],
@@ -10525,7 +10529,7 @@
       "P",
       "RP"
     ],
-    "Justin Lawrence": [
+    "Juan Mejia": [
       "P",
       "RP"
     ],
@@ -11191,7 +11195,7 @@
     "Tyler Black": "NA",
     "Logan Davidson": "NA",
     "Blake Burke": "NA",
-    "Jared Jones": "IL60",
+    "Jared Jones": "NA",
     "Ryan Ward": "NA",
     "Charlie Condon": "NA",
     "Billy Amick": "NA",
@@ -11642,675 +11646,9 @@
     "Tirso Ornelas": "NA",
     "Will Robertson": "NA",
     "Dylan Crews": "NA",
-    "Wenceel P\u00e9rez": "NA",
-    "Johan Rojas": "SUSP",
-    "Kameron Misner": "NA",
-    "Michael Helman": "NA",
-    "Robert Hassell III": "NA",
-    "Michael Siani": "NA",
-    "Drew Gilbert": "NA",
-    "Ji Hwan Bae": "NA",
-    "Petey Halpin": "NA",
-    "Steward Berroa": "IL10",
-    "Cal Stevenson": "NA",
-    "Justin Dean": "NA",
-    "Yasser Mercedes": "NA",
-    "Max Clark": "NA",
-    "Ryan Lasko": "NA",
-    "Brett Bateman": "NA",
-    "Carlos Jorge": "NA",
-    "Benny Montgomery": "NA",
-    "Jose Ortiz": "NA",
-    "Gavin Conticello": "NA",
-    "Nick Morabito": "NA",
-    "Jaison Chourio": "NA",
-    "Spencer Jones": "NA",
-    "Druw Jones": "NA",
-    "Eduardo Beltre": "NA",
-    "Diego Tornes": "NA",
-    "Andrew Pintar": "NA",
-    "Stiven Martinez": "NA",
-    "Jake Fox": "NA",
-    "Won-Bin Cho": "NA",
-    "Marcelo Alcala": "NA",
-    "Harold Rivas": "NA",
-    "Roberto Campos": "NA",
-    "Raudi Rodriguez": "NA",
-    "Elijah Green": "NA",
-    "Carlos De La Cruz": "NA",
-    "Nick McLain": "NA",
-    "George Wolkow": "NA",
-    "Emmanuel Rodriguez": "NA",
-    "Wade Meckler": "NA",
-    "Ryan Kreidler": "NA",
-    "Jhostynxon Garcia": "NA",
-    "Yanquiel Fern\u00e1ndez": "NA",
-    "Hunter Renfroe": "NA",
-    "Johnathan Rodr\u00edguez": "NA",
-    "Eloy Jim\u00e9nez": "NA",
-    "Victor Mesa Jr.": "NA",
-    "Rece Hinds": "NA",
-    "Kevin Alcantara": "NA",
-    "Carter Mathison": "NA",
-    "Andres Valor": "NA",
-    "Henry Bolte": "NA",
-    "Adriel Radney": "NA",
-    "Gavin Turley": "NA",
-    "Carlos Pacheco": "NA",
-    "Jared Dickey": "NA",
-    "Darwing Ozuna": "NA",
-    "Pedro Le\u00f3n": "NA",
-    "Tyler Gentry": "NA",
-    "Jacob deGrom": "DTD",
-    "Nick Lodolo": "IL15",
-    "Zack Wheeler": "IL15",
-    "Ryan Pepiot": "IL15",
-    "Trey Yesavage": "IL15",
-    "Tanner Bibee": "DTD",
-    "Blake Snell": "IL15",
-    "Carlos Rod\u00f3n": "IL15",
-    "Spencer Strider": "IL15",
-    "Merrill Kelly": "IL15",
-    "Shane Bieber": "IL15",
-    "Joe Musgrove": "IL15",
-    "Bryce Miller": "IL15",
-    "Gerrit Cole": "IL15",
-    "Logan Henderson": "NA",
-    "Quinn Priester": "IL15",
-    "Grayson Rodriguez": "IL15",
-    "Justin Steele": "IL60",
-    "Spencer Schwellenbach": "IL60",
-    "Hunter Greene": "IL60",
-    "Pablo L\u00f3pez": "IL60",
-    "Corbin Burnes": "IL60",
-    "Clarke Schmidt": "IL60",
-    "Mike Vasil": "IL15",
-    "Ronel Blanco": "IL15",
-    "Keegan Akin": "IL10",
-    "Lucas Giolito": "NA",
-    "Reese Olson": "IL60",
-    "Troy Melton": "IL60",
-    "Hurston Waldrep": "IL15",
-    "Dean Kremer": "NA",
-    "Brandon Walter": "IL60",
-    "Luis Gil": "NA",
-    "Stephen Kolek": "IL15",
-    "Jos\u00e9 Berr\u00edos": "IL15",
-    "Tylor Megill": "IL60",
-    "Jack Perkins": "NA",
-    "Trevor McDonald": "NA",
-    "Andrew Alvarez": "NA",
-    "Javier Assad": "NA",
-    "Gavin Stone": "IL15",
-    "Tyler Gilbert": "NA",
-    "Cody Bradford": "IL15",
-    "Yu Darvish": "NA",
-    "Wikelman Gonz\u00e1lez": "NA",
-    "Kutter Crawford": "IL15",
-    "Cristian Mena": "IL60",
-    "Hayden Wesneski": "IL15",
-    "Ryan Bergert": "NA",
-    "Luis L. Ortiz": "NA",
-    "John Means": "NA",
-    "Joey Gerber": "NA",
-    "Joe Rock": "NA",
-    "River Ryan": "NA",
-    "Alex Cobb": "NA",
-    "Hunter Dobbins": "IL15",
-    "DJ Herz": "IL60",
-    "Robert Gasser": "NA",
-    "Alek Manoah": "IL15",
-    "Alec Marsh": "IL60",
-    "Landon Knack": "IL15",
-    "AJ Smith-Shawver": "IL15",
-    "Alan Rangel": "NA",
-    "Mart\u00edn P\u00e9rez": "NA",
-    "Joseph Montalvo": "NA",
-    "Drew Beam": "NA",
-    "Leandro Lopez": "NA",
-    "Tyler Uberstine": "NA",
-    "Dylan Ray": "NA",
-    "Lael Lockhart": "NA",
-    "Cole Miller": "NA",
-    "Izack Tiger": "NA",
-    "Tucker Musgrove": "NA",
-    "Austin Krob": "NA",
-    "C.J. Culpepper": "NA",
-    "Blake Wolters": "NA",
-    "Zachary Root": "NA",
-    "Alex McFarlane": "NA",
-    "Sean Paul Li\u00f1an": "NA",
-    "Hayden Mullins": "NA",
-    "Argenis Cayama": "NA",
-    "Trace Bright": "NA",
-    "Will Watson": "NA",
-    "Micah Ottenbreit": "NA",
-    "Adam Maier": "NA",
-    "Shane Drohan": "NA",
-    "Tekoah Roby": "NA",
-    "Mavis Graves": "NA",
-    "Keeler Morfe": "NA",
-    "Josh Trentadue": "NA",
-    "Eric Yost": "NA",
-    "Tyson Guerrero": "NA",
-    "Nick Frasso": "NA",
-    "Steven Zobac": "NA",
-    "Juan Carela": "NA",
-    "Drue Hackenberg": "NA",
-    "Dean Livingston": "NA",
-    "Ethan Schiefelbein": "NA",
-    "Yu-Min Lin": "NA",
-    "Josh Knoth": "NA",
-    "Taylor Dollard": "NA",
-    "John Holobetz": "NA",
-    "Zach Swanson": "NA",
-    "Bryce Mayer": "NA",
-    "Henry Baez": "NA",
-    "Ryan Forcucci": "NA",
-    "Alonzo Tredwell": "NA",
-    "J.D. Thompson": "NA",
-    "Kohei Arihara": "NA",
-    "Will Sanders": "NA",
-    "Zach Thornton": "NA",
-    "Jonathan Santucci": "NA",
-    "Ixan Henderson": "NA",
-    "James Ellwanger": "NA",
-    "Thatcher Hurd": "NA",
-    "CJ Gray": "NA",
-    "Chris Cortez": "NA",
-    "Frank Mozzicato": "NA",
-    "Brycen Mautz": "NA",
-    "Anthony Solometo": "NA",
-    "Jose Olivares": "NA",
-    "Tyler Bremner": "NA",
-    "Owen Hall": "NA",
-    "Ben Hess": "NA",
-    "Dioris De La Rosa": "NA",
-    "Cooper Hjerpe": "NA",
-    "Dalton Pence": "NA",
-    "Jeremy Reyes": "NA",
-    "Chen-Wei Lin": "NA",
-    "Daury Vasquez": "NA",
-    "Nazier Mul\u00e9": "NA",
-    "JeanPierre Ortiz": "NA",
-    "Brody Hopkins": "NA",
-    "Jake Bennett": "NA",
-    "Dasan Hill": "NA",
-    "Kendry Chourio": "NA",
-    "Seth Hernandez": "NA",
-    "Brandon Clarke": "NA",
-    "Carter Holton": "NA",
-    "Hiro Wyatt": "NA",
-    "Griff McGarry": "NA",
-    "Peter Heubeck": "NA",
-    "Levi Wells": "NA",
-    "Andrew Sears": "NA",
-    "Karson Milbrandt": "NA",
-    "Felix Arronde": "NA",
-    "Gary Gill Hill": "NA",
-    "Marco Raya": "NA",
-    "Connor Noland": "NA",
-    "Michael Lombardi": "NA",
-    "Winston Santos": "NA",
-    "Sean Youngerman": "NA",
-    "Liomar Martinez": "NA",
-    "Santiago Suarez": "NA",
-    "Austin Peterson": "NA",
-    "Michael Forret": "NA",
-    "Riley Quick": "NA",
-    "Zane Taylor": "NA",
-    "Jordy Vargas": "NA",
-    "Luis De La Torre": "NA",
-    "Tink Hence": "NA",
-    "Quinn Mathews": "NA",
-    "Hyun-Seok Jang": "NA",
-    "Keyner Martinez": "NA",
-    "Clark Candiotti": "NA",
-    "Ben Kudrna": "NA",
-    "Frank Cairone": "NA",
-    "Jackson Baumeister": "NA",
-    "Ethan Pecko": "NA",
-    "Juan Valera": "NA",
-    "Michael Morales": "NA",
-    "Cade Obermueller": "NA",
-    "Esteban Mejia": "NA",
-    "Antoine Kelly": "NA",
-    "Wei-En Lin": "NA",
-    "Kash Mayfield": "NA",
-    "David Davalillo": "NA",
-    "Yoniel Curet": "NA",
-    "Miguel Mendez": "NA",
-    "Cameron Sullivan": "NA",
-    "David Shields": "NA",
-    "Landon Harmon": "NA",
-    "Chen Zhong-Ao Zhuang": "NA",
-    "Daniel Espino": "NA",
-    "Kade Anderson": "NA",
-    "Matthew Fisher": "NA",
-    "Dylan Jordan": "NA",
-    "Kolton Curtis": "NA",
-    "Dax Fulton": "NA",
-    "Joel Hurtado": "NA",
-    "Patrick Copen": "NA",
-    "Luke Sinnard": "NA",
-    "Sean Sullivan": "NA",
-    "Jack Wenninger": "NA",
-    "Marcelo Perez": "NA",
-    "Ryan Gallagher": "NA",
-    "Coleman Crow": "NA",
-    "Sam Stuhr": "NA",
-    "Jakob Wright": "NA",
-    "Johnny King": "NA",
-    "Khal Stephen": "NA",
-    "Nestor German": "NA",
-    "Robby Snelling": "NA",
-    "Kaleb Wing": "NA",
-    "Tyler Schlaffer": "NA",
-    "Jose Fleury": "NA",
-    "Brendan Beck": "NA",
-    "Cam Leiter": "NA",
-    "Trevor Harrison": "NA",
-    "Jarlin Susana": "NA",
-    "Josh Hansell": "NA",
-    "Riley Kelly": "NA",
-    "Talon Haley": "NA",
-    "Lucas Elissalt": "NA",
-    "Wilber Dotel": "NA",
-    "Cole Hertzler": "NA",
-    "Yhoiker Fajardo": "NA",
-    "Grayson Grinsell": "NA",
-    "Michael Kennedy": "NA",
-    "Cole Schoenwetter": "NA",
-    "Owen Murphy": "NA",
-    "Matt Barr": "NA",
-    "Kade Morris": "NA",
-    "Chung-Hsiang Huang": "NA",
-    "Carson Messina": "NA",
-    "Ryan Webb": "NA",
-    "Darlin Saladin": "NA",
-    "Noble Meyer": "NA",
-    "Josh Grosz": "NA",
-    "Isaiah Lowe": "NA",
-    "Tanner McDougal": "NA",
-    "Keyner Benitez": "NA",
-    "David Sandlin": "NA",
-    "Victor Lizarraga": "NA",
-    "Gage Stanifer": "NA",
-    "Chase Mobley": "NA",
-    "Jurrangelo Cijntje": "NA",
-    "Ryan Costeiu": "NA",
-    "Tyler Schweitzer": "NA",
-    "JT Quinn": "NA",
-    "Josh Bostick": "NA",
-    "Kevin Defrank": "NA",
-    "Mason Morris": "NA",
-    "Patrick Forbes": "NA",
-    "Jackson Cox": "NA",
-    "Humberto Cruz": "NA",
-    "Blake Larson": "NA",
-    "Chase Hampton": "NA",
-    "Jake Miller": "NA",
-    "Drew Gray": "NA",
-    "Tanner Franklin": "NA",
-    "Po-Chun Lin": "NA",
-    "Seth Keener": "NA",
-    "Aidan Curry": "NA",
-    "Dalvinson Reyes": "NA",
-    "Dylan Wilson": "NA",
-    "Trystan Vrieling": "NA",
-    "Travis Smith": "NA",
-    "Jagger Haynes": "NA",
-    "Carlson Reed": "NA",
-    "Jackson Nezuh": "NA",
-    "Wellington Aracena": "NA",
-    "Carlos De La Rosa": "NA",
-    "Juaron Watts-Brown": "NA",
-    "Luis Perales": "NA",
-    "David Hagaman": "NA",
-    "Ian Mejia": "NA",
-    "Jeter Martinez": "NA",
-    "Blake Wehunt": "NA",
-    "Braden Davis": "NA",
-    "Reid VanScoter": "NA",
-    "Kyson Witherspoon": "NA",
-    "Micah Bucknam": "NA",
-    "Jared Karros": "NA",
-    "Anthony Eyanson": "NA",
-    "Ethan Bagwell": "NA",
-    "Kruz Schoolcraft": "NA",
-    "Josh Randall": "NA",
-    "Garrett Baumann": "NA",
-    "Landen Maroudis": "NA",
-    "Bryan Balzer": "NA",
-    "Maddux Bruns": "NA",
-    "Lan-Hong Su": "NA",
-    "Andrew Morris": "NA",
-    "Kyle Carr": "NA",
-    "Johnny Slawinski": "NA",
-    "Justin Lamkin": "NA",
-    "Brandon Barriera": "NA",
-    "Gerelmi Maldonado": "NA",
-    "Yorman G\u00f3mez": "NA",
-    "Max Rajcic": "NA",
-    "Paul Wilson": "NA",
-    "Jean Cabrera": "NA",
-    "Caden Scarborough": "NA",
-    "Aaron Watson": "NA",
-    "Gabriel Hughes": "NA",
-    "Malachi Witherspoon": "NA",
-    "Will Johnston": "NA",
-    "Kelvis Salcedo": "NA",
-    "T.J. Nichols": "NA",
-    "Gage Jump": "NA",
-    "Chandler Champlain": "NA",
-    "Braden Nett": "NA",
-    "Yordin Chalas": "NA",
-    "Eriq Swan": "NA",
-    "Michael Salina": "NA",
-    "Will Hynes": "NA",
-    "Ashton Izzi": "NA",
-    "Kendry Rojas": "NA",
-    "Adrian Bohorquez": "NA",
-    "Hagen Smith": "NA",
-    "Dominick Reid": "NA",
-    "Ben Shields": "NA",
-    "Gage Ziehl": "NA",
-    "Ian Bedell": "NA",
-    "Pico Kohn": "NA",
-    "Kenya Huggins": "NA",
-    "Chase Shores": "NA",
-    "Christian Oppor": "NA",
-    "John Klein": "NA",
-    "Nate Snead": "NA",
-    "Riley Cornelio": "NA",
-    "Travis Sykora": "NA",
-    "Patrick Reilly": "NA",
-    "Braylon Doughty": "NA",
-    "Ryan Sloan": "NA",
-    "Tzu-Chen Sha": "NA",
-    "Cade Crossland": "NA",
-    "Camden Lohman": "NA",
-    "Alberto Laroche": "NA",
-    "Bishop Letson": "NA",
-    "JB Middleton": "NA",
-    "Bryce Cunningham": "NA",
-    "Xavier Mitchell": "NA",
-    "Thomas White": "NA",
-    "Jack Mahoney": "NA",
-    "Ty Floyd": "NA",
-    "Pete Hansen": "NA",
-    "Tyson Hardin": "NA",
-    "Ubaldo Soto": "NA",
-    "Teddy McGraw": "NA",
-    "Josh Hartle": "NA",
-    "Yordanny Monegro": "NA",
-    "Miguel Ullola": "NA",
-    "Landon Beidelschies": "NA",
-    "Marcus Phillips": "NA",
-    "Gage Wood": "NA",
-    "Rayven Antonio": "NA",
-    "Alejandro Rosario": "NA",
-    "Henry Lalane": "NA",
-    "Silvano Hechavarria": "NA",
-    "Noah Schultz": "NA",
-    "Miguel Sime Jr.": "NA",
-    "JR Ritchie": "NA",
-    "Griffin Herring": "NA",
-    "Trey Gibson": "NA",
-    "Michael Prosecky": "NA",
-    "Cam Caminiti": "NA",
-    "Mason Molina": "NA",
-    "Ramon Marquez": "NA",
-    "Mason Adams": "NA",
-    "Payton Martin": "NA",
-    "Aiden May": "NA",
-    "Cade Smith": "NA",
-    "Jose Urbina": "NA",
-    "Hunter Owen": "NA",
-    "Briggs McKenzie": "NA",
-    "Connor Prielipp": "NA",
-    "Josh Hader": "IL15",
-    "Kirby Yates": "IL15",
-    "Edwin Uceta": "IL15",
-    "Emmanuel Clase": "NA",
-    "Jason Adam": "IL15",
-    "Ronny Henriquez": "IL60",
-    "Randy Rodr\u00edguez": "IL60",
-    "Shelby Miller": "IL60",
-    "Andrew Kittredge": "IL15",
-    "Hunter Gaddis": "IL15",
-    "Bennett Sousa": "IL15",
-    "F\u00e9lix Bautista": "IL60",
-    "Orion Kerkering": "IL15",
-    "Andrew Saalfrank": "IL60",
-    "Cade Gibson": "NA",
-    "Manuel Rodr\u00edguez": "IL60",
-    "Yariel Rodriguez": "NA",
-    "Justin Martinez": "IL60",
-    "Joel Peguero": "IL15",
-    "Chase Shugart": "NA",
-    "Reed Garrett": "IL60",
-    "Evan Phillips": "IL60",
-    "Yimi Garc\u00eda": "IL15",
-    "Caleb Ferguson": "IL15",
-    "Brock Stewart": "IL15",
-    "A.J. Puk": "IL60",
-    "Chase Lee": "NA",
-    "A.J. Minter": "IL15",
-    "Rob Zastryzny": "IL15",
-    "David Robertson": "NA",
-    "Max Kranick": "NA",
-    "Luinder Avila": "NA",
-    "Nick Sandlin": "NA",
-    "Steven Cruz": "NA",
-    "Kade Strowd": "NA",
-    "Jason Foley": "IL60",
-    "Dylan Dodd": "NA",
-    "Brenan Hanifee": "NA",
-    "Dylan Smith": "NA",
-    "Craig Kimbrel": "NA",
-    "Derek Law": "NA",
-    "Austin Warren": "NA",
-    "Robert Stephenson": "IL60",
-    "Michael Kopech": "NA",
-    "Hunter Strickland": "NA",
-    "Joe Jim\u00e9nez": "IL60",
-    "Jorge L\u00f3pez": "NA",
-    "Andrew Chafin": "NA",
-    "Daysbel Hern\u00e1ndez": "IL15",
-    "Bryan Hoeing": "IL15",
-    "Hunter Bigge": "NA",
-    "Jake Cousins": "IL15",
-    "Erasmo Ram\u00edrez": "NA",
-    "Tyler Ferguson": "NA",
-    "Dedniel N\u00fa\u00f1ez": "IL60",
-    "Justin Wilson": "NA",
-    "Ben Joyce": "IL15",
-    "Chris Devenski": "NA",
-    "Yuki Matsui": "IL15",
-    "Jayden Murray": "NA",
-    "Spencer Bivens": "NA",
-    "Jose Espada": "NA",
-    "Jackson Kowar": "NA",
-    "Tommy Kahnle": "NA",
-    "Keegan Thompson": "NA",
-    "Luke Jackson": "NA",
-    "James McArthur": "IL15",
-    "Enyel De Los Santos": "IL15",
-    "Steven Wilson": "IL60",
-    "Julian Fern\u00e1ndez": "NA",
-    "Chris Flexen": "NA",
-    "Nick Raquet": "NA",
-    "Ian Hamilton": "NA",
-    "Sam Hentges": "IL15",
-    "Tristan Beck": "NA",
-    "Evan Sisk": "NA",
-    "Colin Selby": "IL60",
-    "Brusdar Graterol": "IL15",
-    "Jose Fermin": "NA",
-    "Danny Young": "IL15",
-    "Drew Smith": "NA",
-    "Jeff Criswell": "IL60",
-    "Justin Hagenman": "IL60",
-    "Andrew Walters": "IL15",
-    "Prelander Berroa": "IL15",
-    "Konnor Pilkington": "NA",
-    "Lou Trivino": "NA",
-    "Carlos Vargas": "IL15",
-    "Kyle Hurt": "NA",
-    "Reiver Sanmartin": "IL60",
-    "Eiberson Castellano": "NA",
-    "Brayan Mendoza": "NA",
-    "RJ Petit": "IL60",
-    "Alimber Santa": "NA",
-    "Douglas Orellana": "NA",
-    "Josh Ekness": "NA",
-    "Emiliano Teodo": "NA",
-    "Brock Porter": "NA",
-    "Zach McCambley": "NA",
-    "Peyton Gray": "NA",
-    "Dylan Lesko": "NA",
-    "Francis Pena": "NA",
-    "Tyler Samaniego": "NA",
-    "Zack Showalter": "NA",
-    "Garrett Hawkins": "NA",
-    "Tyson Neighbors": "NA",
-    "Dane Acker": "NA",
-    "Franco Aleman": "NA",
-    "Luis Gastelum": "NA",
-    "Kervin Castro": "NA",
-    "Cole Paplham": "NA",
-    "Cade Denton": "NA",
-    "Marquis Grissom Jr.": "NA",
-    "L.P. Langevin": "NA",
-    "Elison Joseph": "NA",
-    "William Kempner": "NA",
-    "Samy Natera Jr.": "NA",
-    "Branneli Franco": "NA",
-    "Alexander Alberto": "NA",
-    "Josh White": "NA",
-    "Blake Burkhalter": "NA",
-    "Robinson Ortiz": "NA",
-    "Wen Hui Pan": "NA",
-    "Trevor Martin": "NA",
-    "Alex Cook": "NA",
-    "Eric Silva": "NA",
-    "Ronan Kopp": "NA",
-    "Evan Reifert": "NA",
-    "Jaden Woods": "NA",
-    "Eric Reyzelman": "NA",
-    "Brandan Bidois": "NA",
-    "Brandon Neely": "NA",
-    "Cameron Foster": "NA",
-    "Jojo Ingrassia": "NA",
-    "Camden Minacci": "NA",
-    "Trent Harris": "NA",
-    "Michael Knorr": "NA",
-    "Dylan Ross": "NA",
-    "Eric Cerantola": "NA",
-    "Alex Pham": "NA",
-    "Landon Sims": "NA",
-    "Tyler Cleveland": "NA",
-    "Welinton Herrera": "NA",
-    "Ryan Harbin": "NA",
-    "Zach Messinger": "NA",
-    "Cory Lewis": "NA",
-    "Charlie Beilenson": "NA",
-    "Harrison Cohen": "NA",
-    "Riley Martin": "NA",
-    "Domingo Gonz\u00e1lez": "NA",
-    "Kannon Kemp": "NA",
-    "Grant Shepardson": "NA",
-    "Jimmy Joyce": "NA",
-    "Hunter Cranton": "NA",
-    "Jack Choate": "NA",
-    "Aldrin Batista": "NA",
-    "Ethan Dorchies": "NA",
-    "Ty Johnson": "NA",
-    "Trey Dombroski": "NA",
-    "Jhancarlos Lara": "NA",
-    "Ryan Lambert": "NA",
-    "Mathias LaCombe": "NA",
-    "Daison Acosta": "NA",
-    "Alex Hoppe": "NA",
-    "Juan Nu\u00f1ez": "NA",
-    "Yujanyer Herrera": "NA",
-    "Joey Oakie": "NA",
-    "Skylar Hales": "NA",
-    "Adam Macko": "NA",
-    "Luis Mey": "NA",
-    "Jhonathan D\u00edaz": "NA",
-    "Jairo Iriarte": "NA",
-    "Zach Penrod": "NA",
-    "Garrett Acton": "NA",
-    "Luke Little": "NA",
-    "Seth Halvorsen": "NA",
-    "Blake Walston": "IL60",
-    "Zack Kelly": "NA",
-    "Brady Basso": "NA",
-    "Kaleb Ort": "NA",
-    "Ty Madden": "NA",
-    "Grant Holman": "NA",
-    "Seth Johnson": "NA",
-    "Dom Hamel": "NA",
-    "Yosver Zulueta": "NA",
-    "J.P. France": "NA",
-    "Sauryn Lao": "NA",
-    "Brandon Waddell": "NA",
-    "Jhony Brito": "IL60",
-    "Jack Neely": "NA",
-    "Luis Guerrero": "NA",
-    "Ryan Brasier": "NA",
-    "Zach Maxwell": "NA",
-    "Hayden Harris": "NA",
-    "Porter Hodge": "IL15",
-    "Drey Jameson": "NA",
-    "Ty Adcock": "NA",
-    "Tyler Owens": "NA",
-    "Ethan Roberts": "NA",
-    "Jesse Scholtens": "NA",
-    "Kyle Nelson": "NA",
-    "H\u00e9ctor Neris": "NA",
-    "Chad Green": "NA",
-    "Josh Winckowski": "NA",
-    "Bailey Horn": "IL15",
-    "Philip Abner": "NA",
-    "Marc Church": "NA",
-    "Ryan Pressly": "NA",
-    "Jackson Jobe": "IL60",
-    "Paul Gervase": "NA",
-    "Jayvien Sandridge": "NA",
-    "Hunter Stratton": "NA",
-    "Anthony DeSclafani": "NA",
-    "Mike Baumann": "NA",
-    "Blas Castano": "NA",
-    "Gavin Hollowell": "NA",
-    "Jonathan Pintaro": "NA",
-    "Jake Eder": "NA",
-    "Paxton Schultz": "IL15",
-    "Luis Curvelo": "NA",
-    "Nolan Hoffman": "NA",
-    "Easton McGee": "NA",
-    "Jos\u00e9 Leclerc": "NA",
-    "Alexis D\u00edaz": "NA",
-    "Yilber D\u00edaz": "NA",
-    "Lazaro Estrada": "NA",
-    "Tommy Henry": "NA",
-    "Josh Walker": "NA",
-    "Logan VanWey": "NA",
-    "Yerry De los Santos": "NA",
-    "Brandon Eisert": "NA",
-    "Max Lazar": "IL15",
-    "Liam Hendriks": "NA",
-    "Mason Black": "NA",
-    "Rolddy Mu\u00f1oz": "NA",
-    "Miguel Castro": "NA",
-    "Juan Burgos": "NA",
-    "Alex Carrillo": "NA"
+    "Wenceel P\u00e9rez": "NA"
   },
-  "scoreboard": {
-    "week": 1,
-    "matchups": []
-  },
+  "season_stats": {},
+  "scoreboard": {},
   "standings": []
 }
