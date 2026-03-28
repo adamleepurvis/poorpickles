@@ -633,11 +633,13 @@ function computeDraftGrades(data, keepers, leagueName, rankings) {
       const normalizedSurplus = Math.max(-1.5, Math.min(1.5, surplus / benchmark))
       totalSurplus += normalizedSurplus
 
-      if (pick.round >= 10 && actualRank < benchmark * 0.6) {
-        steals.push({ ...pick, actualRank: Math.round(actualRank) })
+      // Steal: any pick finishing 50%+ better than round peers (bonus weight if late round)
+      if (normalizedSurplus > 0.5) {
+        steals.push({ ...pick, actualRank: Math.round(actualRank), surplus: normalizedSurplus })
       }
-      if (pick.round <= 5 && actualRank > benchmark * 1.5) {
-        misses.push({ ...pick, actualRank: Math.round(actualRank) })
+      // Miss: any pick finishing 50%+ worse than round peers
+      if (normalizedSurplus < -0.5) {
+        misses.push({ ...pick, actualRank: Math.round(actualRank), surplus: normalizedSurplus })
       }
     }
 
