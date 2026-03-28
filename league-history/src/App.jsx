@@ -588,8 +588,9 @@ function computeDraftGrades(data, keepers, leagueName) {
     // retainedOldKeepers = keepers from this season who were also kept next season
     const retainedOldKeepers = [...keeperSetThisSeason].filter(p => keeperSetNextSeason.has(p)).length
     const availableSlots = Math.max(0, keeperSetNextSeason.size - retainedOldKeepers)
-    // Constrained = fewer than 3 open slots (shrinking keeper pool crowded out new picks)
-    const constrained = availableSlots < 3
+    // Constrained = fewer than 15% of true picks could realistically become keepers
+    // e.g. 25 picks → need 4+ slots; 30 picks → need 5+ slots
+    const constrained = totalPicks > 0 && (availableSlots / totalPicks) < 0.15
 
     // Quality: for each true pick, count how many subsequent seasons it stayed as a keeper
     // (up to 4 years out, for same franchise only)
@@ -3253,7 +3254,7 @@ function DraftTab({ data, keepers, activeLeague }) {
   )
 
   const topBest = useMemo(
-    () => [...filtered].sort((a, b) => b.compositeScore - a.compositeScore || b.keptCount - a.keptCount).slice(0, 20),
+    () => [...filtered].filter(g => !g.constrained).sort((a, b) => b.compositeScore - a.compositeScore || b.keptCount - a.keptCount).slice(0, 20),
     [filtered]
   )
 
@@ -3268,6 +3269,7 @@ function DraftTab({ data, keepers, activeLeague }) {
   const franchiseRankings = useMemo(() => {
     const agg = {}
     for (const g of allGrades) {
+      if (g.constrained) continue
       if (!agg[g.franchise]) agg[g.franchise] = { franchise: g.franchise, totalPicks: 0, totalKept: 0, seasons: 0, bestGrade: null, bestGradeOrder: -1 }
       agg[g.franchise].totalPicks += g.totalPicks
       agg[g.franchise].totalKept += g.keptCount
