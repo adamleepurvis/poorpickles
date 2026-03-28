@@ -107,7 +107,7 @@ def fetch_teams(session, league_key):
 
 
 def fetch_standings(session, league_key, teams):
-    """Return list of {team, rank, wins, losses, ties, points_for, points_against}."""
+    """Return list of {team, rank, wins, losses, ties}."""
     url = f"https://fantasysports.yahooapis.com/fantasy/v2/league/{league_key}/standings?format=json"
     data = session.get(url).json()
     standings = []
@@ -118,17 +118,15 @@ def fetch_standings(session, league_key, teams):
             info = team_data[0]
             team_key = next(v["team_key"] for v in info if isinstance(v, dict) and "team_key" in v)
             team_name = teams.get(team_key, team_key)
-
-            ts = team_data[1].get("team_standings", {})
+            # team_standings is at index 2
+            ts = team_data[2].get("team_standings", {}) if len(team_data) > 2 else {}
             outcome = ts.get("outcome_totals", {})
             standings.append({
-                "team":           team_name,
-                "rank":           int(ts.get("rank", 0)),
-                "wins":           int(outcome.get("wins", 0)),
-                "losses":         int(outcome.get("losses", 0)),
-                "ties":           int(outcome.get("ties", 0)),
-                "points_for":     float(ts.get("points_for", 0)),
-                "points_against": float(ts.get("points_against", 0)),
+                "team":   team_name,
+                "rank":   int(ts.get("rank", 0)),
+                "wins":   int(outcome.get("wins", 0)),
+                "losses": int(outcome.get("losses", 0)),
+                "ties":   int(outcome.get("ties", 0)),
             })
     except Exception as e:
         print(f"    WARNING: standings parse error: {e}")
@@ -143,35 +141,38 @@ def fetch_scoreboard_week(session, league_key, week, teams):
     data = session.get(url).json()
     matchups = []
     try:
-        sb = data["fantasy_content"]["league"][1]["scoreboard"]
-        raw = sb.get("0", {}).get("matchups", sb)  # structure varies
-        # Try alternate path
-        if "matchups" not in str(raw):
-            raw = sb
-        count = raw.get("count", 0)
+        raw = data["fantasy_content"]["league"][1]["scoreboard"]["0"]["matchups"]
+        count = int(raw.get("count", 0))
         for i in range(count):
             m = raw[str(i)]["matchup"]
-            m_teams = m.get("teams", m.get("0", {}).get("teams", {}))
-            if not m_teams:
-                continue
+            m_teams = m["0"]["teams"]
+            winner_key = m.get("winner_team_key", "")
             pair = []
             for j in range(2):
-                t = m_teams.get(str(j), {}).get("team", [])
-                if not t:
-                    continue
+                t = m_teams[str(j)]["team"]
                 tinfo = t[0]
-                tkey = next((v["team_key"] for v in tinfo if isinstance(v, dict) and "team_key" in v), None)
+                tkey = next(v["team_key"] for v in tinfo if isinstance(v, dict) and "team_key" in v)
                 tname = teams.get(tkey, tkey)
                 tpoints = t[1].get("team_points", {}) if len(t) > 1 else {}
                 score = float(tpoints.get("total", 0))
-                pair.append({"team": tname, "score": score})
+                pair.append({"team": tname, "team_key": tkey, "score": score})
             if len(pair) == 2:
+                # stat_winners: list of {stat_winner: {stat_id, winner_team_key}}
+                stat_winners = {}
+                for sw in m.get("stat_winners", []):
+                    s = sw.get("stat_winner", {})
+                    sid = s.get("stat_id")
+                    wkey = s.get("winner_team_key")
+                    if sid and wkey:
+                        stat_winners[sid] = teams.get(wkey, wkey)
                 matchups.append({
                     "week":       week,
                     "home":       pair[0]["team"],
                     "away":       pair[1]["team"],
                     "home_score": pair[0]["score"],
                     "away_score": pair[1]["score"],
+                    "winner":     teams.get(winner_key, winner_key),
+                    "stat_winners": stat_winners,
                 })
     except Exception as e:
         print(f"    WARNING: scoreboard week {week} parse error: {e}")
