@@ -1614,7 +1614,7 @@ function computeRecords(data, leagueName, keepers) {
 
 // ─── Leaderboard Tab ────────────────────────────────────────────────────────
 
-function LeaderboardTab({ data, activeLeague, keepers }) {
+function LeaderboardTab({ data, activeLeague, keepers, rankings }) {
   const leagueName = activeLeague === 'All' ? null : activeLeague
   const [sub, setSub] = useState('alltime')
 
@@ -1692,6 +1692,20 @@ function LeaderboardTab({ data, activeLeague, keepers }) {
     return computeRecords(data, leagueName, keepers)
   }, [sub, data, leagueName, keepers])
 
+  const mostStealsInDraft = useMemo(() => {
+    if (sub !== 'records' || !leagueName) return null
+    const grades = computeDraftGrades(data, keepers, leagueName, rankings)
+    let best = null
+    for (const g of grades) {
+      if (g.constrained || !g.steals.length) continue
+      if (!best || g.steals.length > best.steals.length ||
+         (g.steals.length === best.steals.length && g.draftScore > best.draftScore)) {
+        best = g
+      }
+    }
+    return best
+  }, [sub, data, keepers, leagueName, rankings])
+
   const subBtns = [
     ['alltime', '🏆 All-Time Streaks'],
     ['active', '🔥 Active Streaks'],
@@ -1761,6 +1775,12 @@ function LeaderboardTab({ data, activeLeague, keepers }) {
       rec: records.bestSteal,
       stat: r => `R${r.round}P${r.pick} · ${r.season}`,
       sub: r => `${r.playerName} kept by ${r.team}`,
+    },
+    {
+      label: 'Most Steals in a Draft',
+      rec: mostStealsInDraft ? { playerName: mostStealsInDraft.franchise, ...mostStealsInDraft } : null,
+      stat: r => `${r.steals.length} steal${r.steals.length !== 1 ? 's' : ''} · ${r.season}`,
+      sub: r => r.steals.slice(0, 3).map(s => `${s.player} R${s.round}→#${s.actualRank}`).join(', ') + (r.steals.length > 3 ? ` +${r.steals.length - 3}` : ''),
     },
   ] : []
 
@@ -3582,7 +3602,7 @@ export default function App() {
       {filteredData && tab === 'trades' && <TradesTab data={filteredData} activeLeague={activeLeague} />}
       {filteredData && tab === 'teams' && <TeamsTab data={filteredData} activeLeague={activeLeague} keepers={keepers} onFranchiseClick={(name) => handleFranchiseClick(name)} />}
       {filteredData && tab === 'lineage' && <LineageTab data={filteredData} activeLeague={activeLeague} />}
-      {filteredData && tab === 'leaderboard' && <LeaderboardTab data={filteredData} activeLeague={activeLeague} keepers={keepers} />}
+      {filteredData && tab === 'leaderboard' && <LeaderboardTab data={filteredData} activeLeague={activeLeague} keepers={keepers} rankings={rankings} />}
       {filteredData && tab === 'h2h' && <H2HTab data={filteredData} activeLeague={activeLeague} />}
       {filteredData && results && tab === 'results' && <ResultsTab results={results} activeLeague={activeLeague} onFranchiseClick={(name) => handleFranchiseClick(name)} />}
       {data && tab === 'franchises' && <FranchisesTab data={data} results={results || {}} keepers={keepers} rankings={rankings} activeLeague={activeLeague} selectedFranchise={selectedFranchise} setSelectedFranchise={setSelectedFranchise} />}
