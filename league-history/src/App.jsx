@@ -1694,6 +1694,36 @@ function LeaderboardTab({ data, activeLeague, keepers, rankings }) {
     return computeRecords(data, leagueName, keepers)
   }, [sub, data, leagueName, keepers])
 
+  const topPickups = useMemo(() => {
+    if (sub !== 'records' && sub !== 'pickups' || !leagueName) return []
+    const seasonRankings = rankings?.[leagueName] || {}
+    // Build normName→rank lookup per season
+    const lookups = {}
+    for (const [season, playerMap] of Object.entries(seasonRankings)) {
+      lookups[season] = {}
+      for (const [name, rank] of Object.entries(playerMap)) {
+        lookups[season][normRankingName(name)] = rank
+      }
+    }
+    // Deduplicate by player+season (keep best rank if added multiple times)
+    const seen = {}
+    for (const [playerName, leagues] of Object.entries(data)) {
+      const entries = leagues[leagueName]
+      if (!entries) continue
+      for (const e of entries) {
+        if (e.how !== 'add') continue
+        const key = `${playerName}_${e.season}`
+        const seasonMap = lookups[String(e.season)] || {}
+        const rank = seasonMap[normRankingName(playerName)]
+        if (!rank) continue
+        if (!seen[key] || rank < seen[key].rank) {
+          seen[key] = { player: playerName, season: e.season, team: normTeam(e.team), rank }
+        }
+      }
+    }
+    return Object.values(seen).sort((a, b) => a.rank - b.rank).slice(0, 20)
+  }, [sub, data, leagueName, rankings])
+
   const { mostStealsInDraft, mostMissesInDraft } = useMemo(() => {
     if (sub !== 'records' || !leagueName) return {}
     const grades = computeDraftGrades(data, keepers, leagueName, rankings)
@@ -1716,7 +1746,7 @@ function LeaderboardTab({ data, activeLeague, keepers, rankings }) {
     ['alltime', '🏆 All-Time Streaks'],
     ['active', '🔥 Active Streaks'],
     ['tenured', '📅 Longest Tenured'],
-    ...(leagueName !== 'SouthOssetian' ? [['records', '📋 Records']] : []),
+    ...(leagueName !== 'SouthOssetian' ? [['records', '📋 Records'], ['pickups', '📈 FA Pickups']] : []),
   ]
 
   const RECORD_CARDS = records ? [
@@ -1794,6 +1824,12 @@ function LeaderboardTab({ data, activeLeague, keepers, rankings }) {
       stat: r => `${r.misses.length} miss${r.misses.length !== 1 ? 'es' : ''} · ${r.season}`,
       sub: r => r.misses.slice(0, 3).map(s => `${s.player} R${s.round}→#${s.actualRank}`).join(', ') + (r.misses.length > 3 ? ` +${r.misses.length - 3}` : ''),
     },
+    {
+      label: 'Best FA Pickup',
+      rec: topPickups[0] ? { playerName: topPickups[0].player, ...topPickups[0] } : null,
+      stat: r => `#${r.rank} overall · ${r.season}`,
+      sub: r => `added by ${r.team}`,
+    },
   ] : []
 
   return (
@@ -1813,23 +1849,53 @@ function LeaderboardTab({ data, activeLeague, keepers, rankings }) {
       </div>
 
       {sub === 'records' ? (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 12 }}>
-          {RECORD_CARDS.map(({ label, rec, stat, sub: subLine }) => (
-            <div key={label} style={{ background: '#0d0f16', border: '1px solid #1e293b', borderRadius: 8, padding: 16 }}>
-              <div style={{ color: '#64748b', fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 8 }}>{label}</div>
-              {rec ? (
-                <>
-                  <div style={{ color: '#84cc16', fontWeight: 700, fontSize: 18, marginBottom: 4 }}>{rec.playerName}</div>
-                  <div style={{ color: '#f1f5f9', fontSize: 13 }}>{stat(rec)}</div>
-                  {subLine && <div style={{ color: '#64748b', fontSize: 12, marginTop: 2 }}>{subLine(rec)}</div>}
-                  <div style={{ color: '#475569', fontSize: 11, marginTop: 6 }}>{rec.league}</div>
-                </>
-              ) : (
-                <div style={{ color: '#475569', fontSize: 13 }}>No data</div>
-              )}
-            </div>
-          ))}
-        </div>
+        <>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 12 }}>
+            {RECORD_CARDS.map(({ label, rec, stat, sub: subLine }) => (
+              <div key={label} style={{ background: '#0d0f16', border: '1px solid #1e293b', borderRadius: 8, padding: 16 }}>
+                <div style={{ color: '#64748b', fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 8 }}>{label}</div>
+                {rec ? (
+                  <>
+                    <div style={{ color: '#84cc16', fontWeight: 700, fontSize: 18, marginBottom: 4 }}>{rec.playerName}</div>
+                    <div style={{ color: '#f1f5f9', fontSize: 13 }}>{stat(rec)}</div>
+                    {subLine && <div style={{ color: '#64748b', fontSize: 12, marginTop: 2 }}>{subLine(rec)}</div>}
+                    <div style={{ color: '#475569', fontSize: 11, marginTop: 6 }}>{rec.league}</div>
+                  </>
+                ) : (
+                  <div style={{ color: '#475569', fontSize: 13 }}>No data</div>
+                )}
+              </div>
+            ))}
+          </div>
+
+        </>
+      ) : sub === 'pickups' ? (
+        topPickups.length === 0 ? (
+          <div style={{ color: '#475569', textAlign: 'center', padding: 40 }}>No data</div>
+        ) : (
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+            <thead>
+              <tr style={{ color: '#475569', textAlign: 'left', borderBottom: '1px solid #1e293b' }}>
+                <th style={{ padding: '6px 8px', width: 32 }}>#</th>
+                <th style={{ padding: '6px 8px' }}>Player</th>
+                <th style={{ padding: '6px 8px' }}>Season</th>
+                <th style={{ padding: '6px 8px' }}>Team</th>
+                <th style={{ padding: '6px 8px', textAlign: 'right' }}>End-of-Season Rank</th>
+              </tr>
+            </thead>
+            <tbody>
+              {topPickups.map((p, i) => (
+                <tr key={`${p.player}_${p.season}`} style={{ borderBottom: '1px solid #0f172a' }}>
+                  <td style={{ padding: '6px 8px', color: '#475569' }}>{i + 1}</td>
+                  <td style={{ padding: '6px 8px', color: '#84cc16', fontWeight: 600 }}>{p.player}</td>
+                  <td style={{ padding: '6px 8px', color: '#f1f5f9' }}>{p.season}</td>
+                  <td style={{ padding: '6px 8px', color: '#94a3b8' }}>{p.team}</td>
+                  <td style={{ padding: '6px 8px', color: '#f1f5f9', textAlign: 'right' }}>#{p.rank}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )
       ) : rows.length === 0 ? (
         <div style={{ color: '#475569', textAlign: 'center', padding: 40 }}>No data</div>
       ) : (
