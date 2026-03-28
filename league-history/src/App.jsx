@@ -576,6 +576,32 @@ function computeDraftGrades(data, keepers, leagueName, rankings) {
     }
   }
 
+  // ── Precompute league-wide round benchmarks per season ──
+  // benchmarkRank[season][round] = mean actual rank of all true picks in that round
+  // This removes the bias from early seasons having full-roster drafts (all rounds)
+  // vs later seasons with keepers (only late rounds). Each pick is compared against
+  // peers who were available in that same round leaguewide.
+  const benchmarkRank = {}
+  for (const { franchise, season, picks } of Object.values(buckets)) {
+    if (season >= 2026) continue
+    const keeperSet = new Set(keepers?.[leagueName]?.[String(season)]?.[franchise] || [])
+    const truePicks = picks.filter(p => !keeperSet.has(p.player))
+    const seasonRankMap = rankLookup[season] || {}
+    for (const pick of truePicks) {
+      const actualRank = seasonRankMap[normRankingName(pick.player)] || 400
+      if (!benchmarkRank[season]) benchmarkRank[season] = {}
+      if (!benchmarkRank[season][pick.round]) benchmarkRank[season][pick.round] = []
+      benchmarkRank[season][pick.round].push(actualRank)
+    }
+  }
+  // Convert arrays → means
+  for (const season of Object.keys(benchmarkRank)) {
+    for (const round of Object.keys(benchmarkRank[season])) {
+      const arr = benchmarkRank[season][round]
+      benchmarkRank[season][round] = arr.reduce((a, b) => a + b, 0) / arr.length
+    }
+  }
+
   const grades = []
 
   for (const { franchise, season, picks } of Object.values(buckets)) {
@@ -586,35 +612,32 @@ function computeDraftGrades(data, keepers, leagueName, rankings) {
     if (trueDraftPicks.length < 5) continue
 
     const totalPicks = trueDraftPicks.length
-
-    // Estimate numTeams from keepers for that season
     const numTeams = Object.keys(keepers?.[leagueName]?.[String(season)] || {}).length || 12
 
-    // Per-season rank lookup
     const seasonRankMap = rankLookup[season] || {}
     const hasRankings = Object.keys(seasonRankMap).length > 0
 
-    // ── Surplus-based scoring (primary, when rankings available) ──
-    // expectedRank = midpoint of picks in that round
-    // actualRank   = AR from Yahoo (fallback: 350 = "unranked")
-    // normalizedSurplus = (expected - actual) / expected, capped ±1.5
+    // ── Surplus-based scoring ──
+    // Compare each pick's actual rank against the leaguewide mean for that round/season.
+    // normalizedSurplus = (benchmark - actual) / benchmark, capped ±1.5
+    // Score of 0 = exactly average for your round peers. Positive = outperformed them.
     let totalSurplus = 0
-    const steals = []   // R10+ picks finishing in top half of draft
-    const misses = []   // R1-5 picks finishing below rank 200
+    const steals = []
+    const misses = []
 
     for (const pick of trueDraftPicks) {
-      const expectedRank = Math.max(1, (pick.round - 0.5) * numTeams)
+      const benchmark = benchmarkRank[season]?.[pick.round] || (pick.round - 0.5) * numTeams
       const normName = normRankingName(pick.player)
-      const actualRank = seasonRankMap[normName] || 350
-      const surplus = expectedRank - actualRank
-      const normalizedSurplus = Math.max(-1.5, Math.min(1.5, surplus / expectedRank))
+      const actualRank = seasonRankMap[normName] || 400
+      const surplus = benchmark - actualRank
+      const normalizedSurplus = Math.max(-1.5, Math.min(1.5, surplus / benchmark))
       totalSurplus += normalizedSurplus
 
-      if (pick.round >= 10 && actualRank <= numTeams * totalPicks / 2) {
-        steals.push({ ...pick, actualRank })
+      if (pick.round >= 10 && actualRank < benchmark * 0.6) {
+        steals.push({ ...pick, actualRank: Math.round(actualRank) })
       }
-      if (pick.round <= 5 && actualRank > 200) {
-        misses.push({ ...pick, actualRank })
+      if (pick.round <= 5 && actualRank > benchmark * 1.5) {
+        misses.push({ ...pick, actualRank: Math.round(actualRank) })
       }
     }
 
