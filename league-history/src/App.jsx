@@ -1692,18 +1692,22 @@ function LeaderboardTab({ data, activeLeague, keepers, rankings }) {
     return computeRecords(data, leagueName, keepers)
   }, [sub, data, leagueName, keepers])
 
-  const mostStealsInDraft = useMemo(() => {
-    if (sub !== 'records' || !leagueName) return null
+  const { mostStealsInDraft, mostMissesInDraft } = useMemo(() => {
+    if (sub !== 'records' || !leagueName) return {}
     const grades = computeDraftGrades(data, keepers, leagueName, rankings)
-    let best = null
+    let bestSteals = null, bestMisses = null
     for (const g of grades) {
-      if (g.constrained || !g.steals.length) continue
-      if (!best || g.steals.length > best.steals.length ||
-         (g.steals.length === best.steals.length && g.draftScore > best.draftScore)) {
-        best = g
+      if (g.constrained) continue
+      if (g.steals.length && (!bestSteals || g.steals.length > bestSteals.steals.length ||
+         (g.steals.length === bestSteals.steals.length && g.draftScore > bestSteals.draftScore))) {
+        bestSteals = g
+      }
+      if (g.misses.length && (!bestMisses || g.misses.length > bestMisses.misses.length ||
+         (g.misses.length === bestMisses.misses.length && g.draftScore < bestMisses.draftScore))) {
+        bestMisses = g
       }
     }
-    return best
+    return { mostStealsInDraft: bestSteals, mostMissesInDraft: bestMisses }
   }, [sub, data, keepers, leagueName, rankings])
 
   const subBtns = [
@@ -1781,6 +1785,12 @@ function LeaderboardTab({ data, activeLeague, keepers, rankings }) {
       rec: mostStealsInDraft ? { playerName: mostStealsInDraft.franchise, ...mostStealsInDraft } : null,
       stat: r => `${r.steals.length} steal${r.steals.length !== 1 ? 's' : ''} · ${r.season}`,
       sub: r => r.steals.slice(0, 3).map(s => `${s.player} R${s.round}→#${s.actualRank}`).join(', ') + (r.steals.length > 3 ? ` +${r.steals.length - 3}` : ''),
+    },
+    {
+      label: 'Most Misses in a Draft',
+      rec: mostMissesInDraft ? { playerName: mostMissesInDraft.franchise, ...mostMissesInDraft } : null,
+      stat: r => `${r.misses.length} miss${r.misses.length !== 1 ? 'es' : ''} · ${r.season}`,
+      sub: r => r.misses.slice(0, 3).map(s => `${s.player} R${s.round}→#${s.actualRank}`).join(', ') + (r.misses.length > 3 ? ` +${r.misses.length - 3}` : ''),
     },
   ] : []
 
