@@ -1548,6 +1548,76 @@ function computeTopTrades(data, leagueName, rankings) {
   return trades.sort((a, b) => b.diff - a.diff).slice(0, 20)
 }
 
+// ─── computeKeeperOracle ────────────────────────────────────────────────────
+
+function computeKeeperOracle(leagueName, rankings, keepers) {
+  if (!leagueName) return { gems: [], busts: [], franchiseScores: [] }
+  const seasonRankings = rankings?.[leagueName] || {}
+  const leagueKeepers = keepers?.[leagueName] || {}
+
+  // Build per-season rank lookups
+  const lookups = {}
+  for (const [season, playerMap] of Object.entries(seasonRankings)) {
+    const map = {}
+    for (const [name, rank] of Object.entries(playerMap)) {
+      const exact = normAccents(name)
+      if (!map[exact] || rank < map[exact]) map[exact] = rank
+      const base = normRankingName(name)
+      if (base !== exact && (!map[base] || rank < map[base])) map[base] = rank
+    }
+    lookups[season] = map
+  }
+
+  const getRank = (player, season) => {
+    const map = lookups[String(season)] || {}
+    return rankLookupGet(map, player) || null
+  }
+
+  const decisions = []
+  const franchiseTotals = {}
+  const currentYear = new Date().getFullYear()
+
+  for (const [season, teams] of Object.entries(leagueKeepers)) {
+    const s = parseInt(season)
+    if (s >= currentYear) continue  // no AR rankings for current/future season
+    if (Object.keys(lookups[season] || {}).length < 100) continue  // skip sparse early seasons
+    for (const [franchise, players] of Object.entries(teams)) {
+      const normF = normTeam(franchise)
+      for (const player of players) {
+        const rank = getRank(player, s)
+        const prevRank = getRank(player, s - 1)
+        decisions.push({ player, season: s, franchise: normF, rank, prevRank })
+        if (rank) {
+          if (!franchiseTotals[normF]) franchiseTotals[normF] = { sum: 0, count: 0 }
+          franchiseTotals[normF].sum += rank
+          franchiseTotals[normF].count++
+        }
+      }
+    }
+  }
+
+  // Best: lowest (best) AR rank in keeper season
+  const gems = decisions
+    .filter(d => d.rank)
+    .sort((a, b) => a.rank - b.rank)
+    .slice(0, 20)
+
+  // Busts: was top-100 prior year, fell hard
+  const busts = decisions
+    .filter(d => d.prevRank && d.prevRank <= 100)
+    .map(d => ({ ...d, drop: (d.rank || 400) - d.prevRank }))
+    .sort((a, b) => b.drop - a.drop)
+    .slice(0, 20)
+
+  // Franchise keeper efficiency: avg rank of all kept + ranked players
+  const franchiseScores = Object.entries(franchiseTotals)
+    .map(([franchise, { sum, count }]) => ({ franchise, avgRank: Math.round(sum / count * 10) / 10, count }))
+    .filter(f => f.count >= 10)
+    .sort((a, b) => a.avgRank - b.avgRank)
+
+  return { gems, busts, franchiseScores }
+}
+
 // ─── computeRecords ─────────────────────────────────────────────────────────
 
 function computeRecords(data, leagueName, keepers) {
@@ -1854,6 +1924,11 @@ function LeaderboardTab({ data, activeLeague, keepers, rankings }) {
     return computeTopTrades(data, leagueName, rankings)
   }, [sub, data, leagueName, rankings])
 
+  const keeperOracle = useMemo(() => {
+    if (sub !== 'oracle' || !leagueName) return { gems: [], busts: [], franchiseScores: [] }
+    return computeKeeperOracle(leagueName, rankings, keepers)
+  }, [sub, leagueName, rankings, keepers])
+
   const subBtns = [
     ['alltime', '🏆 All-Time Streaks'],
     ['active', '🔥 Active Streaks'],
@@ -1861,6 +1936,7 @@ function LeaderboardTab({ data, activeLeague, keepers, rankings }) {
     ...(leagueName !== 'SouthOssetian' ? [['records', '📋 Records']] : []),
     ['pickups', '📈 FA Pickups'],
     ...(leagueName ? [['trades', '🔄 Best Trades']] : []),
+    ...(leagueName ? [['oracle', '🔮 Keeper Oracle']] : []),
   ]
 
   const RECORD_CARDS = records ? [
@@ -2041,6 +2117,91 @@ function LeaderboardTab({ data, activeLeague, keepers, rankings }) {
             })}
           </div>
         )
+      ) : sub === 'oracle' ? (
+        <div>
+          {/* Best Keeper Decisions */}
+          <div style={{ marginBottom: 24 }}>
+            <div style={{ color: '#84cc16', fontWeight: 700, fontSize: 13, marginBottom: 10 }}>💎 Best Keeper Decisions — highest AR rank in keeper season</div>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+              <thead>
+                <tr style={{ color: '#475569', textAlign: 'left', borderBottom: '1px solid #1e293b' }}>
+                  <th style={{ padding: '6px 8px', width: 32 }}>#</th>
+                  <th style={{ padding: '6px 8px' }}>Player</th>
+                  <th style={{ padding: '6px 8px' }}>Season</th>
+                  <th style={{ padding: '6px 8px' }}>Franchise</th>
+                  <th style={{ padding: '6px 8px', textAlign: 'right' }}>AR Rank</th>
+                </tr>
+              </thead>
+              <tbody>
+                {keeperOracle.gems.map((d, i) => (
+                  <tr key={i} style={{ borderBottom: '1px solid #0f172a' }}>
+                    <td style={{ padding: '6px 8px', color: '#475569' }}>{i + 1}</td>
+                    <td style={{ padding: '6px 8px', color: '#84cc16', fontWeight: 600 }}>{d.player}</td>
+                    <td style={{ padding: '6px 8px', color: '#f1f5f9' }}>{d.season}</td>
+                    <td style={{ padding: '6px 8px', color: '#94a3b8' }}>{d.franchise}</td>
+                    <td style={{ padding: '6px 8px', color: '#f1f5f9', textAlign: 'right' }}>#{d.rank}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Biggest Busts */}
+          <div style={{ marginBottom: 24 }}>
+            <div style={{ color: '#f87171', fontWeight: 700, fontSize: 13, marginBottom: 10 }}>💣 Biggest Keeper Busts — top-100 prior year, fell hardest</div>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+              <thead>
+                <tr style={{ color: '#475569', textAlign: 'left', borderBottom: '1px solid #1e293b' }}>
+                  <th style={{ padding: '6px 8px', width: 32 }}>#</th>
+                  <th style={{ padding: '6px 8px' }}>Player</th>
+                  <th style={{ padding: '6px 8px' }}>Season</th>
+                  <th style={{ padding: '6px 8px' }}>Franchise</th>
+                  <th style={{ padding: '6px 8px', textAlign: 'right' }}>Prior Rank</th>
+                  <th style={{ padding: '6px 8px', textAlign: 'right' }}>Bust Rank</th>
+                  <th style={{ padding: '6px 8px', textAlign: 'right' }}>Drop</th>
+                </tr>
+              </thead>
+              <tbody>
+                {keeperOracle.busts.map((d, i) => (
+                  <tr key={i} style={{ borderBottom: '1px solid #0f172a' }}>
+                    <td style={{ padding: '6px 8px', color: '#475569' }}>{i + 1}</td>
+                    <td style={{ padding: '6px 8px', color: '#f87171', fontWeight: 600 }}>{d.player}</td>
+                    <td style={{ padding: '6px 8px', color: '#f1f5f9' }}>{d.season}</td>
+                    <td style={{ padding: '6px 8px', color: '#94a3b8' }}>{d.franchise}</td>
+                    <td style={{ padding: '6px 8px', color: '#94a3b8', textAlign: 'right' }}>#{d.prevRank}</td>
+                    <td style={{ padding: '6px 8px', color: '#f87171', textAlign: 'right' }}>{d.rank ? `#${d.rank}` : 'unranked'}</td>
+                    <td style={{ padding: '6px 8px', color: '#f87171', textAlign: 'right' }}>▼{d.drop}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Franchise Keeper Efficiency */}
+          <div>
+            <div style={{ color: '#94a3b8', fontWeight: 700, fontSize: 13, marginBottom: 10 }}>📊 Franchise Keeper Efficiency — avg AR rank of all kept players (lower = better)</div>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+              <thead>
+                <tr style={{ color: '#475569', textAlign: 'left', borderBottom: '1px solid #1e293b' }}>
+                  <th style={{ padding: '6px 8px', width: 32 }}>#</th>
+                  <th style={{ padding: '6px 8px' }}>Franchise</th>
+                  <th style={{ padding: '6px 8px', textAlign: 'right' }}>Avg AR Rank</th>
+                  <th style={{ padding: '6px 8px', textAlign: 'right' }}>Ranked Keepers</th>
+                </tr>
+              </thead>
+              <tbody>
+                {keeperOracle.franchiseScores.map((f, i) => (
+                  <tr key={i} style={{ borderBottom: '1px solid #0f172a' }}>
+                    <td style={{ padding: '6px 8px', color: '#475569' }}>{i + 1}</td>
+                    <td style={{ padding: '6px 8px', color: '#f1f5f9', fontWeight: 600 }}>{f.franchise}</td>
+                    <td style={{ padding: '6px 8px', color: i < 3 ? '#84cc16' : '#f1f5f9', textAlign: 'right', fontWeight: i < 3 ? 700 : 400 }}>{f.avgRank}</td>
+                    <td style={{ padding: '6px 8px', color: '#64748b', textAlign: 'right' }}>{f.count}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
       ) : rows.length === 0 ? (
         <div style={{ color: '#475569', textAlign: 'center', padding: 40 }}>No data</div>
       ) : (
