@@ -1,6 +1,6 @@
 {
-  "generated": "2026-03-28T22:06:39.341444",
-  "count": 1006,
+  "generated": "2026-03-30T18:37:25.393262",
+  "count": 1005,
   "players": [
     {
       "name": "Bobby Witt Jr.",
@@ -2226,7 +2226,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
-      "selected_position": "BN",
+      "selected_position": "IL",
       "fantraxProspectRank": 26,
       "scoreYahoo": null,
       "yahoo_status": "IL15"
@@ -2558,8 +2558,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "D\u2019ump",
+      "selected_position": "RP",
       "scoreYahoo": null
     },
     {
@@ -3163,7 +3164,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
-      "selected_position": "P",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -4535,7 +4536,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
-      "selected_position": "RP",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -5185,8 +5186,7 @@
       "rostered": true,
       "owner": "Coffee's for Closers",
       "selected_position": "SS",
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Dylan Crews",
@@ -6164,7 +6164,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
-      "selected_position": "OF",
+      "selected_position": "IL",
       "scoreYahoo": null,
       "yahoo_status": "IL10"
     },
@@ -6553,7 +6553,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
-      "selected_position": "OF",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -6878,8 +6878,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -8236,7 +8237,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
-      "selected_position": "OF",
+      "selected_position": "IL",
       "scoreYahoo": null,
       "yahoo_status": "IL10"
     },
@@ -8674,8 +8675,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Coffee's for Closers",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -9121,7 +9123,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
-      "selected_position": "Util",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -9366,9 +9368,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Let Shohei Pitch",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -9558,7 +9559,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
-      "selected_position": "BN",
+      "selected_position": "IL",
       "scoreYahoo": null,
       "yahoo_status": "IL15"
     },
@@ -9754,7 +9755,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
-      "selected_position": "P",
+      "selected_position": "IL",
       "scoreYahoo": null,
       "yahoo_status": "IL15"
     },
@@ -9878,8 +9879,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Acu\u00f1a Matada",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -10133,7 +10135,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
-      "selected_position": "P",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "IL15"
     },
@@ -10524,9 +10526,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Let Shohei Pitch",
-      "selected_position": "IL",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -11170,7 +11171,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
-      "selected_position": "BN",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -11951,9 +11952,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Coffee's for Closers",
-      "selected_position": "P",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12928,7 +12928,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
-      "selected_position": "2B",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -12994,7 +12994,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
-      "selected_position": "OF",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -13296,8 +13296,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Trash Pandas",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -13981,8 +13982,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Buehrle 18",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -14496,7 +14498,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
-      "selected_position": "P",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -15566,7 +15568,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
-      "selected_position": "BN",
+      "selected_position": "OF",
       "scoreYahoo": null
     },
     {
@@ -15931,7 +15933,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
-      "selected_position": "BN",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -17044,7 +17046,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
-      "selected_position": "BN",
+      "selected_position": "SS",
       "fantraxProspectRank": 6,
       "scoreYahoo": null
     },
@@ -17106,7 +17108,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
-      "selected_position": "2B",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "IL10"
     },
@@ -17295,7 +17297,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
-      "selected_position": "BN",
+      "selected_position": "OF",
       "scoreYahoo": null
     },
     {
@@ -17487,7 +17489,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Buehrle 18",
-      "selected_position": "BN",
+      "selected_position": "IL",
       "scoreYahoo": null,
       "yahoo_status": "IL15"
     },
@@ -17613,7 +17615,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
-      "selected_position": "P",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -17739,7 +17741,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
-      "selected_position": "BN",
+      "selected_position": "Util",
       "scoreYahoo": null
     },
     {
@@ -17868,7 +17870,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
-      "selected_position": "BN",
+      "selected_position": "2B",
       "scoreYahoo": null
     },
     {
@@ -18237,7 +18239,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
-      "selected_position": "BN",
+      "selected_position": "IL",
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -18491,9 +18493,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Trash Pandas",
-      "selected_position": "P",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -19095,8 +19096,9 @@
       "fpRank": 152,
       "fpAdp": 244.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Yellow King Felix",
+      "selected_position": "Util",
       "scoreYahoo": null
     },
     {
@@ -19720,7 +19722,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
-      "selected_position": "OF",
+      "selected_position": "2B",
       "scoreYahoo": null
     },
     {
@@ -20523,8 +20525,9 @@
       "fpRank": 173,
       "fpAdp": 282.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Let Shohei Pitch",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "IL10"
     },
@@ -20715,8 +20718,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "PGS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -21466,7 +21470,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Trash Pandas",
-      "selected_position": "BN",
+      "selected_position": "IL",
       "scoreYahoo": null,
       "yahoo_status": "IL15"
     },
@@ -22642,7 +22646,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Yellow King Felix",
-      "selected_position": "BN",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -23377,8 +23381,9 @@
       "fpRank": 208,
       "fpAdp": 307.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Trash Pandas",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -23497,8 +23502,9 @@
       "fpRank": 179,
       "fpAdp": 295.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Yellow King Felix",
+      "selected_position": "2B",
       "scoreYahoo": null
     },
     {
@@ -23744,7 +23750,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
-      "selected_position": "BN",
+      "selected_position": "3B",
       "fantraxProspectRank": 3,
       "scoreYahoo": null
     },
@@ -23808,7 +23814,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
-      "selected_position": "3B",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -24310,9 +24316,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Coffee's for Closers",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24493,7 +24498,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "D\u2019ump",
-      "selected_position": "Util",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -25174,8 +25179,9 @@
       "fpRank": 165,
       "fpAdp": 275.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Yellow King Felix",
+      "selected_position": "OF",
       "scoreYahoo": null
     },
     {
@@ -25300,9 +25306,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "AI Thot Leadership",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26780,7 +26785,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "AI Thot Leadership",
-      "selected_position": "SS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -26905,8 +26910,9 @@
       "fpRank": 122,
       "fpAdp": 203.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Let Shohei Pitch",
+      "selected_position": "OF",
       "scoreYahoo": null
     },
     {
@@ -27392,8 +27398,9 @@
       "fpRank": 172,
       "fpAdp": 281.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Coffee's for Closers",
+      "selected_position": "OF",
       "fantraxProspectRank": 37,
       "scoreYahoo": null
     },
@@ -27577,7 +27584,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Let Shohei Pitch",
-      "selected_position": "2B",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "IL10"
     },
@@ -27641,9 +27648,8 @@
       "fpRank": 193,
       "fpAdp": 315.6,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Spaghett",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -28254,7 +28260,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Acu\u00f1a Matada",
-      "selected_position": "P",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -31088,9 +31094,8 @@
       "fpRank": 190,
       "fpAdp": 311.2,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "PGS",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31815,7 +31820,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "PGS",
-      "selected_position": "BN",
+      "selected_position": "IL",
       "scoreYahoo": null,
       "yahoo_status": "IL10"
     },
@@ -33651,8 +33656,9 @@
       "fpRank": 215,
       "fpAdp": 354.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Buehrle 18",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -34555,7 +34561,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "St. Guaranteed Rate",
-      "selected_position": "OF",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -35161,8 +35167,9 @@
       "fpRank": 145,
       "fpAdp": 236.6,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "PGS",
+      "selected_position": "Util",
       "scoreYahoo": null
     },
     {
@@ -36591,8 +36598,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Coffee's for Closers",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -37695,8 +37703,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "AI Thot Leadership",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -39144,8 +39153,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Spaghett",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -39751,7 +39761,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Raisel Iglesias",
@@ -40543,7 +40554,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Spaghett",
-      "selected_position": "P",
+      "selected_position": "RP",
       "scoreYahoo": null
     },
     {
@@ -42880,7 +42891,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 234,
       "score2026_neutral": 1.3,
@@ -42912,7 +42923,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Joey Loperfido",
@@ -45216,7 +45228,8 @@
       "rostered": true,
       "owner": "Trash Pandas",
       "selected_position": "RP",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Zach Cole",
@@ -46470,7 +46483,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Coffee's for Closers",
-      "selected_position": "BN",
+      "selected_position": "OF",
       "fantraxProspectRank": 24,
       "scoreYahoo": null
     },
@@ -48525,7 +48538,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Joey Estes",
@@ -57753,7 +57767,7 @@
         "AVG"
       ],
       "cats_5x5": [],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 44.7,
       "projStats": {
@@ -57782,8 +57796,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Thomas White",
@@ -60571,6 +60584,7 @@
     {
       "name": "Seth Halvorsen",
       "eligible": [
+        "P",
         "RP"
       ],
       "org": "COL",
@@ -61902,7 +61916,7 @@
       "rostered": true,
       "eligible": [],
       "pct_owned": 100.0,
-      "selected_position": "BN"
+      "selected_position": "P"
     },
     {
       "name": "Emmanuel Clase",
@@ -61911,18 +61925,142 @@
       "eligible": [],
       "pct_owned": 100.0,
       "selected_position": "BN"
-    },
-    {
-      "name": "Anthony Santander",
-      "owner": "Yellow King Felix",
-      "rostered": true,
-      "eligible": [],
-      "pct_owned": 100.0,
-      "selected_position": "Util"
     }
   ],
   "scoreboard": {
-    "week": 1,
+    "week": 2,
     "matchups": []
-  }
+  },
+  "standings": [
+    {
+      "team_key": "469.l.91300.t.1",
+      "team_name": "Let Shohei Pitch",
+      "wins": 8,
+      "losses": 2,
+      "ties": 0,
+      "rank": 2,
+      "games_back": 1.0,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.91300.t.2",
+      "team_name": "Acu\u00f1a Matada",
+      "wins": 8,
+      "losses": 2,
+      "ties": 0,
+      "rank": 3,
+      "games_back": 1.0,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.91300.t.3",
+      "team_name": "Bargain Bangers",
+      "wins": 5,
+      "losses": 3,
+      "ties": 2,
+      "rank": 4,
+      "games_back": 3.0,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.91300.t.8",
+      "team_name": "AI Thot Leadership",
+      "wins": 5,
+      "losses": 3,
+      "ties": 2,
+      "rank": 5,
+      "games_back": 3.0,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.91300.t.12",
+      "team_name": "D\u2019ump",
+      "wins": 6,
+      "losses": 4,
+      "ties": 0,
+      "rank": 6,
+      "games_back": 3.0,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.91300.t.4",
+      "team_name": "Buehrle 18",
+      "wins": 5,
+      "losses": 5,
+      "ties": 0,
+      "rank": 7,
+      "games_back": 4.0,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.91300.t.11",
+      "team_name": "PGS",
+      "wins": 5,
+      "losses": 5,
+      "ties": 0,
+      "rank": 8,
+      "games_back": 4.0,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.91300.t.6",
+      "team_name": "St. Guaranteed Rate",
+      "wins": 3,
+      "losses": 5,
+      "ties": 2,
+      "rank": 9,
+      "games_back": 5.0,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.91300.t.7",
+      "team_name": "Les Sexpos de Montr\u00e9al",
+      "wins": 3,
+      "losses": 5,
+      "ties": 2,
+      "rank": 10,
+      "games_back": 5.0,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.91300.t.13",
+      "team_name": "Trash Pandas",
+      "wins": 4,
+      "losses": 6,
+      "ties": 0,
+      "rank": 11,
+      "games_back": 5.0,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.91300.t.9",
+      "team_name": "Spaghett",
+      "wins": 2,
+      "losses": 8,
+      "ties": 0,
+      "rank": 12,
+      "games_back": 7.0,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.91300.t.14",
+      "team_name": "Yellow King Felix",
+      "wins": 2,
+      "losses": 8,
+      "ties": 0,
+      "rank": 13,
+      "games_back": 7.0,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.91300.t.5",
+      "team_name": "Coffee's for Closers",
+      "wins": 0,
+      "losses": 8,
+      "ties": 2,
+      "rank": 14,
+      "games_back": 8.0,
+      "cat_stats": {}
+    }
+  ]
 }
