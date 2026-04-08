@@ -1,6 +1,6 @@
 {
-  "generated": "2026-04-03T19:08:20.625623",
-  "count": 1032,
+  "generated": "2026-04-08T00:24:26.664737",
+  "count": 1034,
   "players": [
     {
       "name": "Bobby Witt Jr.",
@@ -312,7 +312,7 @@
         "R",
         "SB"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 621,
       "score2026_neutral": 10.0,
@@ -344,8 +344,9 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Nighthawks",
-      "selected_position": "LF",
-      "scoreYahoo": null
+      "selected_position": "IL",
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "Ronald Acu\u00f1a Jr.",
@@ -1699,7 +1700,8 @@
       "name": "Grant Taylor",
       "eligible": [
         "P",
-        "RP"
+        "RP",
+        "SP"
       ],
       "org": "CHW",
       "tier": "keep6",
@@ -2333,7 +2335,7 @@
         "K",
         "W"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 184.2,
       "projStats": {
@@ -2362,8 +2364,9 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Loch Neskie Monsters",
-      "selected_position": "SP",
-      "scoreYahoo": null
+      "selected_position": "IL",
+      "scoreYahoo": null,
+      "yahoo_status": "IL15"
     },
     {
       "name": "Austin Riley",
@@ -2430,7 +2433,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Nighthawks",
-      "selected_position": "3B",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -3163,7 +3166,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bay of Papi",
-      "selected_position": "RP",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -3388,7 +3391,7 @@
         "ERA",
         "NSVH"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 63.0,
       "projStats": {
@@ -3417,8 +3420,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "IL15"
+      "scoreYahoo": null
     },
     {
       "name": "Shane McClanahan",
@@ -4085,7 +4087,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Nighthawks",
-      "selected_position": "Util",
+      "selected_position": "3B",
       "scoreYahoo": null
     },
     {
@@ -4400,7 +4402,7 @@
       "rostered": false,
       "owner": null,
       "scoreYahoo": null,
-      "yahoo_status": "IL15"
+      "yahoo_status": "IL60"
     },
     {
       "name": "Cody Bellinger",
@@ -4506,7 +4508,7 @@
         "WHIP",
         "NSVH"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 70.0,
       "projStats": {
@@ -4536,8 +4538,7 @@
       "rostered": true,
       "owner": "Poor Pickles",
       "selected_position": "RP",
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Alex Vesia",
@@ -4920,9 +4921,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Toms River",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -6170,7 +6170,8 @@
     {
       "name": "James Wood",
       "eligible": [
-        "LF"
+        "LF",
+        "RF"
       ],
       "org": "WSN",
       "tier": "keep12",
@@ -7068,7 +7069,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Poor Pickles",
-      "selected_position": "P",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "IL15"
     },
@@ -7103,7 +7104,7 @@
         "ERA",
         "NSVH"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 65.0,
       "projStats": {
@@ -7132,7 +7133,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL15"
     },
     {
       "name": "Luke Weaver",
@@ -7232,7 +7234,7 @@
         "RBI",
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 591,
       "score2026_neutral": 9.5,
@@ -7264,8 +7266,9 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bay of Papi",
-      "selected_position": "SS",
-      "scoreYahoo": null
+      "selected_position": "IL",
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "Hunter Harvey",
@@ -7395,8 +7398,9 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Nighthawks",
-      "selected_position": "SP",
-      "scoreYahoo": null
+      "selected_position": "BN",
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Freddy Peralta",
@@ -7651,9 +7655,8 @@
       "fpRank": 187,
       "fpAdp": 305.8,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Toms River",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -8168,9 +8171,9 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Dynasty",
-      "selected_position": "BN",
+      "selected_position": "IL",
       "scoreYahoo": null,
-      "yahoo_status": "IL15"
+      "yahoo_status": "IL60"
     },
     {
       "name": "Seiya Suzuki",
@@ -8238,7 +8241,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "JP Licks",
-      "selected_position": "RF",
+      "selected_position": "IL",
       "scoreYahoo": null,
       "yahoo_status": "IL10"
     },
@@ -8678,7 +8681,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Dynasty",
-      "selected_position": "BN",
+      "selected_position": "RP",
       "scoreYahoo": null
     },
     {
@@ -9696,7 +9699,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Toms River",
-      "selected_position": "BN",
+      "selected_position": "1B",
       "scoreYahoo": null
     },
     {
@@ -9885,7 +9888,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bay of Papi",
-      "selected_position": "P",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -9946,8 +9949,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "StickyBanditz",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -10338,7 +10342,8 @@
       "rostered": true,
       "owner": "JP Licks",
       "selected_position": "2B",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Ian Happ",
@@ -10984,7 +10989,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Loch Neskie Monsters",
-      "selected_position": "RF",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -11175,7 +11180,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Dynasty",
-      "selected_position": "P",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -11429,7 +11434,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Loch Neskie Monsters",
-      "selected_position": "BN",
+      "selected_position": "Util",
       "scoreYahoo": null
     },
     {
@@ -11695,7 +11700,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Team Underdog",
-      "selected_position": "P",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -11827,7 +11832,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Nighthawks",
-      "selected_position": "BN",
+      "selected_position": "SP",
       "scoreYahoo": null
     },
     {
@@ -12087,7 +12092,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Nighthawks",
-      "selected_position": "P",
+      "selected_position": "SP",
       "scoreYahoo": null
     },
     {
@@ -12611,7 +12616,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Dynasty",
-      "selected_position": "BN",
+      "selected_position": "NA",
       "scoreYahoo": null
     },
     {
@@ -12998,7 +13003,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "JP Licks",
-      "selected_position": "BN",
+      "selected_position": "RF",
       "scoreYahoo": null
     },
     {
@@ -13059,9 +13064,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Hideo Lobo",
-      "selected_position": "IL",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "IL15"
     },
@@ -13581,7 +13585,7 @@
       "cats_5x5": [
         "NSVH"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 60.0,
       "projStats": {
@@ -13610,8 +13614,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "IL15"
+      "scoreYahoo": null
     },
     {
       "name": "Anthony Bender",
@@ -13733,7 +13736,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Hideo Lobo",
-      "selected_position": "3B",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -13862,7 +13865,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Nighthawks",
-      "selected_position": "BN",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -14117,7 +14120,8 @@
       "rostered": true,
       "owner": "Loch Neskie Monsters",
       "selected_position": "BN",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Adley Rutschman",
@@ -14315,6 +14319,7 @@
     {
       "name": "Luis Garc\u00eda Jr.",
       "eligible": [
+        "1B",
         "2B"
       ],
       "org": "WSN",
@@ -14631,8 +14636,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Toms River",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -14887,8 +14893,7 @@
       "rostered": true,
       "owner": "gamma's Team",
       "selected_position": "SP",
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Jacob deGrom",
@@ -14953,7 +14958,8 @@
       "rostered": true,
       "owner": "Dynasty",
       "selected_position": "SP",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Zack Wheeler",
@@ -15574,8 +15580,9 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Hideo Lobo",
-      "selected_position": "RF",
-      "scoreYahoo": null
+      "selected_position": "LF",
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Andrew Nardi",
@@ -16315,7 +16322,6 @@
     {
       "name": "JT Brubaker",
       "eligible": [
-        "P",
         "RP"
       ],
       "org": "SFG",
@@ -16426,8 +16432,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bay of Papi",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -16679,7 +16686,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "JP Licks",
-      "selected_position": "RP",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -16999,6 +17006,7 @@
     {
       "name": "Kevin McGonigle",
       "eligible": [
+        "3B",
         "SS"
       ],
       "org": "DET",
@@ -17313,6 +17321,7 @@
     {
       "name": "Steven Kwan",
       "eligible": [
+        "CF",
         "LF"
       ],
       "org": "CLE",
@@ -18067,9 +18076,8 @@
       "fpRank": 149,
       "fpAdp": 244.4,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Snipe City Danglers",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -18249,7 +18257,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "JP Licks",
-      "selected_position": "SP",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -18444,13 +18452,12 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "StickyBanditz",
-      "selected_position": "BN",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
       "name": "Kevin Ginkel",
       "eligible": [
-        "P",
         "RP"
       ],
       "org": "ARI",
@@ -18570,6 +18577,7 @@
     {
       "name": "Jonathan Bowlan",
       "eligible": [
+        "P",
         "RP"
       ],
       "org": "PHI",
@@ -19010,7 +19018,7 @@
       "cats_5x5": [
         "OBP"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 445,
       "score2026_neutral": 6.1,
@@ -19040,9 +19048,11 @@
       "fpRank": 103,
       "fpAdp": 175.2,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
-      "scoreYahoo": null
+      "rostered": true,
+      "owner": "JP Licks",
+      "selected_position": "IL",
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "Carlos Correa",
@@ -19106,7 +19116,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Team Underdog",
-      "selected_position": "BN",
+      "selected_position": "3B",
       "scoreYahoo": null
     },
     {
@@ -19293,7 +19303,7 @@
       "rostered": false,
       "owner": null,
       "scoreYahoo": null,
-      "yahoo_status": "IL15"
+      "yahoo_status": "IL60"
     },
     {
       "name": "Addison Barger",
@@ -19324,7 +19334,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 438,
       "score2026_neutral": 5.4,
@@ -19357,7 +19367,8 @@
       "rostered": true,
       "owner": "Poor Pickles",
       "selected_position": "BN",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "Sonny Gray",
@@ -19663,8 +19674,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Toms River",
+      "selected_position": "RP",
       "scoreYahoo": null
     },
     {
@@ -19733,7 +19745,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Snipe City Danglers",
-      "selected_position": "BN",
+      "selected_position": "SS",
       "scoreYahoo": null
     },
     {
@@ -19860,7 +19872,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "JP Licks",
-      "selected_position": "P",
+      "selected_position": "IL",
       "scoreYahoo": null,
       "yahoo_status": "IL15"
     },
@@ -20603,7 +20615,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Dynasty",
-      "selected_position": "IL",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -20733,7 +20745,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bay of Papi",
-      "selected_position": "P",
+      "selected_position": "RP",
       "scoreYahoo": null
     },
     {
@@ -20922,7 +20934,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bay of Papi",
-      "selected_position": "BN",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -21080,7 +21092,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 54.0,
       "projStats": {
@@ -21109,7 +21121,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Hoby Milner",
@@ -22534,9 +22547,8 @@
       "fpRank": 130,
       "fpAdp": 213.4,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Dynasty",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22569,7 +22581,7 @@
       "cats_5x5": [
         "NSVH"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 62.0,
       "projStats": {
@@ -22598,7 +22610,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL15"
     },
     {
       "name": "Mitch Keller",
@@ -22660,8 +22673,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Team Underdog",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -22722,9 +22736,8 @@
       "fpRank": 180,
       "fpAdp": 246.0,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Hideo Lobo",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -22974,13 +22987,12 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Hideo Lobo",
-      "selected_position": "P",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
       "name": "Landen Roupp",
       "eligible": [
-        "P",
         "SP"
       ],
       "org": "SFG",
@@ -23338,7 +23350,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Matt Wallner",
@@ -23520,8 +23533,9 @@
       "fpRank": 179,
       "fpAdp": 295.4,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -23768,7 +23782,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Hideo Lobo",
-      "selected_position": "2B",
+      "selected_position": "3B",
       "fantraxProspectRank": 3,
       "scoreYahoo": null
     },
@@ -23898,7 +23912,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Toms River",
-      "selected_position": "3B",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -23959,8 +23973,9 @@
       "fpRank": 178,
       "fpAdp": 293.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Dynasty",
+      "selected_position": "Util",
       "scoreYahoo": null
     },
     {
@@ -24022,9 +24037,8 @@
       "fpRank": 155,
       "fpAdp": 252.2,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Loch Neskie Monsters",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24088,7 +24102,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Hideo Lobo",
-      "selected_position": "BN",
+      "selected_position": "2B",
       "scoreYahoo": null
     },
     {
@@ -24214,7 +24228,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bay of Papi",
-      "selected_position": "BN",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -24336,9 +24350,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Nighthawks",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -24555,7 +24568,7 @@
         "K",
         "W"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 173.8,
       "projStats": {
@@ -24584,8 +24597,9 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "JP Licks",
-      "selected_position": "P",
-      "scoreYahoo": null
+      "selected_position": "SP",
+      "scoreYahoo": null,
+      "yahoo_status": "IL15"
     },
     {
       "name": "Parker Messick",
@@ -24644,7 +24658,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "gamma's Team",
-      "selected_position": "BN",
+      "selected_position": "P",
       "fantraxProspectRank": 188,
       "scoreYahoo": null
     },
@@ -25199,8 +25213,9 @@
       "fpRank": 165,
       "fpAdp": 275.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Hideo Lobo",
+      "selected_position": "RF",
       "scoreYahoo": null
     },
     {
@@ -25813,9 +25828,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Snipe City Danglers",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26186,8 +26200,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "JP Licks",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -26252,7 +26267,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Toms River",
-      "selected_position": "1B",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -26283,7 +26298,7 @@
         "IP"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 134.0,
       "projStats": {
@@ -26312,8 +26327,9 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Loch Neskie Monsters",
-      "selected_position": "P",
-      "scoreYahoo": null
+      "selected_position": "IL",
+      "scoreYahoo": null,
+      "yahoo_status": "IL15"
     },
     {
       "name": "Trevor Rogers",
@@ -26625,7 +26641,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Loch Neskie Monsters",
-      "selected_position": "BN",
+      "selected_position": "SP",
       "scoreYahoo": null
     },
     {
@@ -26689,8 +26705,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Braydon Fisher",
@@ -27246,6 +27261,7 @@
       "name": "Tyler Wells",
       "eligible": [
         "P",
+        "RP",
         "SP"
       ],
       "org": "BAL",
@@ -27423,7 +27439,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bay of Papi",
-      "selected_position": "BN",
+      "selected_position": "CF",
       "fantraxProspectRank": 37,
       "scoreYahoo": null
     },
@@ -27736,7 +27752,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Loch Neskie Monsters",
-      "selected_position": "SP",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -27889,7 +27905,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 60.8,
       "projStats": {
@@ -27918,8 +27934,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Connor Phillips",
@@ -28167,6 +28182,7 @@
     {
       "name": "Connor Norby",
       "eligible": [
+        "1B",
         "3B"
       ],
       "org": "MIA",
@@ -28351,7 +28367,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Team Underdog",
-      "selected_position": "3B",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -28651,8 +28667,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Dynasty",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -28893,7 +28910,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Toms River",
-      "selected_position": "RP",
+      "selected_position": "BN",
       "fantraxProspectRank": 452,
       "scoreYahoo": null
     },
@@ -29462,7 +29479,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "StickyBanditz",
-      "selected_position": "P",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -30320,7 +30337,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bay of Papi",
-      "selected_position": "CF",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -30414,7 +30431,7 @@
       "cats_5x5": [
         "SB"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projPA": 366,
       "score2026_neutral": 4.0,
@@ -30446,10 +30463,9 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bay of Papi",
-      "selected_position": "BN",
+      "selected_position": "SS",
       "fantraxProspectRank": 1,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Matt McLain",
@@ -30572,7 +30588,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Snipe City Danglers",
-      "selected_position": "SS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -30634,7 +30650,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Nighthawks",
-      "selected_position": "SP",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -30759,9 +30775,8 @@
       "fpRank": 160,
       "fpAdp": 263.8,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Toms River",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -30883,7 +30898,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "gamma's Team",
-      "selected_position": "P",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -31555,9 +31570,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Dynasty",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -31613,8 +31627,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Nighthawks",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -31795,7 +31810,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Team Underdog",
-      "selected_position": "P",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -31887,7 +31902,7 @@
         "R"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 123.0,
       "projStats": {
@@ -31916,7 +31931,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Josh Lowe",
@@ -32557,7 +32573,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 52.0,
       "projStats": {
@@ -32586,7 +32602,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Matt Pushard",
@@ -33253,9 +33270,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Toms River",
-      "selected_position": "NA",
+      "rostered": false,
+      "owner": null,
       "fantraxProspectRank": 34,
       "scoreYahoo": null,
       "yahoo_status": "NA"
@@ -33315,8 +33331,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -33506,8 +33523,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Gavin Sheets",
@@ -33694,9 +33710,8 @@
       "fpRank": 215,
       "fpAdp": 354.8,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Team Underdog",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34540,6 +34555,7 @@
       "name": "Josh Smith",
       "eligible": [
         "1B",
+        "2B",
         "3B",
         "LF",
         "RF",
@@ -34629,7 +34645,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 52.0,
       "projStats": {
@@ -34658,7 +34674,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL15"
     },
     {
       "name": "Tommy Edman",
@@ -35019,8 +35036,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Dynasty",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -35145,7 +35163,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Nighthawks",
-      "selected_position": "BN",
+      "selected_position": "Util",
       "scoreYahoo": null
     },
     {
@@ -35742,7 +35760,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 447,
       "score2026_neutral": 3.8,
@@ -35774,7 +35792,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "Kevin Kelly",
@@ -35863,7 +35882,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 355,
       "score2026_neutral": 3.1,
@@ -35895,10 +35914,10 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Hideo Lobo",
-      "selected_position": "BN",
+      "selected_position": "IL",
       "fantraxProspectRank": 21,
       "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "yahoo_status": "IL60"
     },
     {
       "name": "Owen Caissie",
@@ -35960,7 +35979,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Loch Neskie Monsters",
-      "selected_position": "Util",
+      "selected_position": "BN",
       "fantraxProspectRank": 75,
       "scoreYahoo": null
     },
@@ -36146,7 +36165,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Poor Pickles",
-      "selected_position": "BN",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -36309,7 +36328,7 @@
         "ERA",
         "NSVH"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 62.0,
       "projStats": {
@@ -36339,12 +36358,14 @@
       "rostered": true,
       "owner": "Nighthawks",
       "selected_position": "RP",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Nick Gonzales",
       "eligible": [
         "2B",
+        "3B",
         "SS"
       ],
       "org": "PIT",
@@ -36642,8 +36663,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Dynasty",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -36737,7 +36759,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 361,
       "score2026_neutral": 3.0,
@@ -36769,7 +36791,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "Ke'Bryan Hayes",
@@ -37138,9 +37161,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "StickyBanditz",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -37753,7 +37775,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Hideo Lobo",
-      "selected_position": "BN",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -37935,7 +37957,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Hideo Lobo",
-      "selected_position": "LF",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -38063,7 +38085,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Ryan McMahon",
@@ -39086,7 +39109,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Loch Neskie Monsters",
-      "selected_position": "BN",
+      "selected_position": "RF",
       "scoreYahoo": null
     },
     {
@@ -39717,7 +39740,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 366,
       "score2026_neutral": 2.2,
@@ -39749,7 +39772,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "Jake Fraley",
@@ -40173,7 +40197,7 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": true,
-      "owner": "Dynasty",
+      "owner": "JP Licks",
       "selected_position": "RP",
       "scoreYahoo": null
     },
@@ -40300,7 +40324,8 @@
     {
       "name": "Luisangel Acu\u00f1a",
       "eligible": [
-        "2B"
+        "2B",
+        "CF"
       ],
       "org": "CHW",
       "tier": "specialist",
@@ -40604,7 +40629,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Loch Neskie Monsters",
-      "selected_position": "BN",
+      "selected_position": "SP",
       "scoreYahoo": null
     },
     {
@@ -41152,8 +41177,9 @@
       "fpRank": 257,
       "fpAdp": 569.5,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Toms River",
+      "selected_position": "3B",
       "scoreYahoo": null
     },
     {
@@ -41329,9 +41355,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Dynasty",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -41397,6 +41422,7 @@
     {
       "name": "Sam Moll",
       "eligible": [
+        "P",
         "RP"
       ],
       "org": "CIN",
@@ -41754,8 +41780,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Loch Neskie Monsters",
+      "selected_position": "BN",
       "fantraxProspectRank": 171,
       "scoreYahoo": null
     },
@@ -42371,7 +42398,8 @@
     {
       "name": "Matt Shaw",
       "eligible": [
-        "3B"
+        "3B",
+        "RF"
       ],
       "org": "CHC",
       "tier": "specialist",
@@ -42607,8 +42635,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Toms River",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -44254,7 +44283,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Team Underdog",
-      "selected_position": "BN",
+      "selected_position": "P",
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -44679,7 +44708,9 @@
     {
       "name": "Hunter Barco",
       "eligible": [
-        "RP"
+        "P",
+        "RP",
+        "SP"
       ],
       "org": "PIT",
       "tier": "specialist",
@@ -44825,7 +44856,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projPA": 220,
       "score2026_neutral": 1.3,
@@ -44857,8 +44888,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "IL10"
+      "scoreYahoo": null
     },
     {
       "name": "Kody Clemens",
@@ -45047,6 +45077,7 @@
     {
       "name": "Jos\u00e9 Suarez",
       "eligible": [
+        "P",
         "RP"
       ],
       "org": "ATL",
@@ -45281,7 +45312,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "StickyBanditz",
-      "selected_position": "BN",
+      "selected_position": "IL",
       "scoreYahoo": null,
       "yahoo_status": "IL15"
     },
@@ -46350,8 +46381,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Snipe City Danglers",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -46444,7 +46476,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 313,
       "score2026_neutral": 0.6,
@@ -46478,13 +46510,12 @@
       "owner": "Bay of Papi",
       "selected_position": "BN",
       "fantraxProspectRank": 92,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Carson Benge",
       "eligible": [
-        "LF",
-        "CF",
         "RF"
       ],
       "org": "NYM",
@@ -47016,9 +47047,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Bay of Papi",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "fantraxProspectRank": 82,
       "scoreYahoo": null
     },
@@ -47772,7 +47802,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 292,
       "score2026_neutral": 1.7,
@@ -47804,7 +47834,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "Tyler Austin",
@@ -47928,7 +47959,7 @@
       "rostered": false,
       "owner": null,
       "scoreYahoo": null,
-      "yahoo_status": "IL10"
+      "yahoo_status": "NA"
     },
     {
       "name": "Connor Prielipp",
@@ -48230,6 +48261,7 @@
     {
       "name": "Jeremiah Jackson",
       "eligible": [
+        "2B",
         "3B",
         "RF"
       ],
@@ -48840,7 +48872,8 @@
     {
       "name": "Brandon Williamson",
       "eligible": [
-        "RP"
+        "P",
+        "SP"
       ],
       "org": "CIN",
       "tier": "specialist",
@@ -49097,7 +49130,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 39.2,
       "projStats": {
@@ -49126,8 +49159,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Josh White",
@@ -51772,7 +51804,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 46.0,
       "projStats": {
@@ -51801,8 +51833,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "IL15"
+      "scoreYahoo": null
     },
     {
       "name": "Easton McGee",
@@ -53245,7 +53276,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 38.0,
       "projStats": {
@@ -53274,7 +53305,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Luis Torrens",
@@ -53395,8 +53427,9 @@
       "fpRank": 274,
       "fpAdp": 689.5,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Dynasty",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -53780,7 +53813,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 32.0,
       "projStats": {
@@ -53809,8 +53842,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Albert Su\u00e1rez",
@@ -55682,7 +55714,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 28.0,
       "projStats": {
@@ -55711,7 +55743,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Mason Barnett",
@@ -56149,7 +56182,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 34.0,
       "projStats": {
@@ -56178,8 +56211,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Kervin Castro",
@@ -57311,8 +57343,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "StickyBanditz",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -57556,6 +57589,7 @@
     {
       "name": "Ben Williamson",
       "eligible": [
+        "2B",
         "3B"
       ],
       "org": "TBR",
@@ -57804,7 +57838,6 @@
     {
       "name": "Mart\u00edn P\u00e9rez",
       "eligible": [
-        "P",
         "SP"
       ],
       "org": "ATL",
@@ -57973,9 +58006,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "gamma's Team",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "NA"
     },
@@ -59098,7 +59130,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projPA": 235,
       "score2026_neutral": 0.0,
@@ -59130,8 +59162,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "IL10"
+      "scoreYahoo": null
     },
     {
       "name": "Oswald Peraza",
@@ -59263,6 +59294,7 @@
     {
       "name": "Richie Palacios",
       "eligible": [
+        "2B",
         "LF"
       ],
       "org": "TBR",
@@ -59540,7 +59572,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 173,
       "score2026_neutral": 0.0,
@@ -59574,7 +59606,7 @@
       "owner": null,
       "fantraxProspectRank": 369,
       "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "yahoo_status": "IL10"
     },
     {
       "name": "Tommy Pham",
@@ -61980,7 +62012,7 @@
       "rostered": true,
       "eligible": [],
       "pct_owned": 100.0,
-      "selected_position": "Util"
+      "selected_position": "BN"
     },
     {
       "name": "Bryce Rainer",
@@ -62019,6 +62051,15 @@
       "fantraxProspectRank": 180
     },
     {
+      "name": "James Tibbs III",
+      "owner": "gamma's Team",
+      "rostered": true,
+      "eligible": [],
+      "pct_owned": 100.0,
+      "selected_position": "BN",
+      "fantraxProspectRank": 146
+    },
+    {
       "name": "Jackson Jobe",
       "owner": "gamma's Team",
       "rostered": true,
@@ -62043,15 +62084,6 @@
       "pct_owned": 100.0,
       "selected_position": "NA",
       "fantraxProspectRank": 70
-    },
-    {
-      "name": "Max Clark",
-      "owner": "JP Licks",
-      "rostered": true,
-      "eligible": [],
-      "pct_owned": 100.0,
-      "selected_position": "BN",
-      "fantraxProspectRank": 7
     },
     {
       "name": "Jesus Made",
@@ -62099,21 +62131,38 @@
       "fantraxProspectRank": 17
     },
     {
+      "name": "Max Clark",
+      "owner": "JP Licks",
+      "rostered": true,
+      "eligible": [],
+      "pct_owned": 100.0,
+      "selected_position": "NA",
+      "fantraxProspectRank": 7
+    },
+    {
       "name": "TJ Rumfield",
       "owner": "Loch Neskie Monsters",
       "rostered": true,
       "eligible": [],
       "pct_owned": 100.0,
-      "selected_position": "NA"
+      "selected_position": "BN"
     },
     {
-      "name": "Emmanuel Rodriguez",
+      "name": "Kevin Alcantara",
+      "owner": "Loch Neskie Monsters",
+      "rostered": true,
+      "eligible": [],
+      "pct_owned": 100.0,
+      "selected_position": "NA",
+      "fantraxProspectRank": 213
+    },
+    {
+      "name": "Jose Fernandez",
       "owner": "Nighthawks",
       "rostered": true,
       "eligible": [],
       "pct_owned": 100.0,
-      "selected_position": "BN",
-      "fantraxProspectRank": 42
+      "selected_position": "BN"
     },
     {
       "name": "Spencer Jones",
@@ -62225,111 +62274,111 @@
       "rostered": true,
       "eligible": [],
       "pct_owned": 100.0,
-      "selected_position": "BN",
+      "selected_position": "NA",
       "fantraxProspectRank": 12
     }
   ],
   "scoreboard": {
-    "week": 2,
+    "week": 3,
     "matchups": []
   },
   "standings": [
     {
       "team_key": "469.l.51744.t.2",
       "team_name": "Bay of Papi",
-      "wins": 11,
-      "losses": 5,
-      "ties": 2,
+      "wins": 21,
+      "losses": 11,
+      "ties": 4,
       "rank": 3,
-      "games_back": 3.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.51744.t.8",
-      "team_name": "Poor Pickles",
-      "wins": 12,
-      "losses": 6,
-      "ties": 0,
-      "rank": 4,
-      "games_back": 3.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.51744.t.5",
-      "team_name": "JP Licks",
-      "wins": 10,
-      "losses": 6,
-      "ties": 2,
-      "rank": 5,
-      "games_back": 1.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.51744.t.9",
-      "team_name": "Snipe City Danglers",
-      "wins": 10,
-      "losses": 7,
-      "ties": 1,
-      "rank": 6,
-      "games_back": 1.5,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.51744.t.6",
-      "team_name": "Loch Neskie Monsters",
-      "wins": 7,
-      "losses": 10,
-      "ties": 1,
-      "rank": 7,
-      "games_back": 4.5,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.51744.t.4",
-      "team_name": "Hideo Lobo",
-      "wins": 6,
-      "losses": 10,
-      "ties": 2,
-      "rank": 8,
-      "games_back": 5.0,
+      "games_back": 2.5,
       "cat_stats": {}
     },
     {
       "team_key": "469.l.51744.t.3",
       "team_name": "gamma's Team",
-      "wins": 5,
-      "losses": 11,
-      "ties": 2,
-      "rank": 9,
-      "games_back": 9.0,
+      "wins": 17,
+      "losses": 15,
+      "ties": 4,
+      "rank": 4,
+      "games_back": 6.5,
       "cat_stats": {}
     },
     {
-      "team_key": "469.l.51744.t.11",
-      "team_name": "Team Underdog",
-      "wins": 6,
-      "losses": 12,
-      "ties": 0,
-      "rank": 10,
-      "games_back": 9.0,
+      "team_key": "469.l.51744.t.5",
+      "team_name": "JP Licks",
+      "wins": 17,
+      "losses": 16,
+      "ties": 3,
+      "rank": 5,
+      "games_back": 9.5,
       "cat_stats": {}
     },
     {
       "team_key": "469.l.51744.t.12",
       "team_name": "Toms River",
-      "wins": 6,
-      "losses": 12,
+      "wins": 16,
+      "losses": 20,
+      "ties": 0,
+      "rank": 6,
+      "games_back": 12.0,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.51744.t.9",
+      "team_name": "Snipe City Danglers",
+      "wins": 14,
+      "losses": 19,
+      "ties": 3,
+      "rank": 7,
+      "games_back": 12.5,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.51744.t.4",
+      "team_name": "Hideo Lobo",
+      "wins": 13,
+      "losses": 20,
+      "ties": 3,
+      "rank": 8,
+      "games_back": 13.5,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.51744.t.6",
+      "team_name": "Loch Neskie Monsters",
+      "wins": 13,
+      "losses": 20,
+      "ties": 3,
+      "rank": 9,
+      "games_back": 13.5,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.51744.t.11",
+      "team_name": "Team Underdog",
+      "wins": 14,
+      "losses": 22,
+      "ties": 0,
+      "rank": 10,
+      "games_back": 11.5,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.51744.t.8",
+      "team_name": "Poor Pickles",
+      "wins": 14,
+      "losses": 22,
       "ties": 0,
       "rank": 11,
-      "games_back": 6.0,
+      "games_back": 11.5,
       "cat_stats": {}
     },
     {
       "team_key": "469.l.51744.t.7",
       "team_name": "Nighthawks",
-      "wins": 3,
-      "losses": 15,
-      "ties": 0,
+      "wins": 13,
+      "losses": 22,
+      "ties": 1,
       "rank": 12,
       "games_back": 12.0,
       "cat_stats": {}

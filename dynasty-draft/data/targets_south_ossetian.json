@@ -1,6 +1,6 @@
 {
-  "generated": "2026-04-03T19:09:07.541171",
-  "count": 1007,
+  "generated": "2026-04-08T00:25:00.646832",
+  "count": 1009,
   "players": [
     {
       "name": "Bobby Witt Jr.",
@@ -312,7 +312,7 @@
         "R",
         "SB"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 621,
       "score2026_neutral": 10.0,
@@ -344,8 +344,9 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
-      "selected_position": "OF",
-      "scoreYahoo": null
+      "selected_position": "IL",
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "Ronald Acu\u00f1a Jr.",
@@ -1485,7 +1486,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
-      "selected_position": "1B",
+      "selected_position": "Util",
       "scoreYahoo": null
     },
     {
@@ -1699,7 +1700,8 @@
       "name": "Grant Taylor",
       "eligible": [
         "P",
-        "RP"
+        "RP",
+        "SP"
       ],
       "org": "CHW",
       "tier": "keep6",
@@ -1755,7 +1757,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfc5 Clutch Trey",
-      "selected_position": "BN",
+      "selected_position": "RP",
       "scoreYahoo": null
     },
     {
@@ -2297,7 +2299,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Dangerous Nights Crew",
-      "selected_position": "1B",
+      "selected_position": "3B",
       "scoreYahoo": null
     },
     {
@@ -2333,7 +2335,7 @@
         "K",
         "W"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 184.2,
       "projStats": {
@@ -2363,7 +2365,8 @@
       "rostered": true,
       "owner": "Ryan Howard's $5 Footlong",
       "selected_position": "SP",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL15"
     },
     {
       "name": "Austin Riley",
@@ -2430,7 +2433,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Saggy Boys",
-      "selected_position": "3B",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -2495,7 +2498,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Magnum Kwandoms",
-      "selected_position": "P",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -2559,8 +2562,8 @@
       "fpAdp": null,
       "pct_owned": 0.0,
       "rostered": true,
-      "owner": "Scott's Strategic Realignment",
-      "selected_position": "BN",
+      "owner": "\ud83c\udfc5 Clutch Trey",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -3032,7 +3035,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfc5 Clutch Trey",
-      "selected_position": "2B",
+      "selected_position": "Util",
       "scoreYahoo": null
     },
     {
@@ -3389,7 +3392,7 @@
         "ERA",
         "NSVH"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 63.0,
       "projStats": {
@@ -3418,8 +3421,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "IL15"
+      "scoreYahoo": null
     },
     {
       "name": "Shane McClanahan",
@@ -4018,7 +4020,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bobby Weed Jr",
-      "selected_position": "BN",
+      "selected_position": "OF",
       "scoreYahoo": null
     },
     {
@@ -4087,7 +4089,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
-      "selected_position": "SS",
+      "selected_position": "3B",
       "scoreYahoo": null
     },
     {
@@ -4402,7 +4404,7 @@
       "rostered": false,
       "owner": null,
       "scoreYahoo": null,
-      "yahoo_status": "IL15"
+      "yahoo_status": "IL60"
     },
     {
       "name": "Cody Bellinger",
@@ -4508,7 +4510,7 @@
         "WHIP",
         "NSVH"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 70.0,
       "projStats": {
@@ -4538,8 +4540,7 @@
       "rostered": true,
       "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "selected_position": "RP",
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Alex Vesia",
@@ -5446,7 +5447,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Magnum Kwandoms",
-      "selected_position": "BN",
+      "selected_position": "RP",
       "scoreYahoo": null
     },
     {
@@ -5893,7 +5894,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfc5 Clutch Trey",
-      "selected_position": "BN",
+      "selected_position": "SS",
       "scoreYahoo": null
     },
     {
@@ -5963,7 +5964,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bobby Weed Jr",
-      "selected_position": "2B",
+      "selected_position": "3B",
       "scoreYahoo": null
     },
     {
@@ -6170,14 +6171,15 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
-      "selected_position": "IL",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "IL10"
     },
     {
       "name": "James Wood",
       "eligible": [
-        "LF"
+        "LF",
+        "RF"
       ],
       "org": "WSN",
       "tier": "keep12",
@@ -6240,7 +6242,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
-      "selected_position": "BN",
+      "selected_position": "OF",
       "scoreYahoo": null
     },
     {
@@ -6486,9 +6488,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "IL15"
     },
@@ -6949,9 +6950,8 @@
       "fpRank": 98,
       "fpAdp": 164.6,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Saggy Boys",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -7077,7 +7077,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Magnum Kwandoms",
-      "selected_position": "RP",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "IL15"
     },
@@ -7112,7 +7112,7 @@
         "ERA",
         "NSVH"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 65.0,
       "projStats": {
@@ -7141,7 +7141,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL15"
     },
     {
       "name": "Luke Weaver",
@@ -7241,7 +7242,7 @@
         "RBI",
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 591,
       "score2026_neutral": 9.5,
@@ -7273,8 +7274,9 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Scott's Strategic Realignment",
-      "selected_position": "SS",
-      "scoreYahoo": null
+      "selected_position": "IL",
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "Hunter Harvey",
@@ -7405,7 +7407,8 @@
       "rostered": true,
       "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "selected_position": "P",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Freddy Peralta",
@@ -7731,7 +7734,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Dangerous Nights Crew",
-      "selected_position": "3B",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -8175,11 +8178,10 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "\ud83d\udc36 Decoy Fan Club",
-      "selected_position": "P",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
-      "yahoo_status": "IL15"
+      "yahoo_status": "IL60"
     },
     {
       "name": "Seiya Suzuki",
@@ -8626,7 +8628,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
-      "selected_position": "1B",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -9890,7 +9892,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
-      "selected_position": "P",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -10080,7 +10082,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Wade Bogg's Next Beer",
-      "selected_position": "OF",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -10145,7 +10147,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfc5 Clutch Trey",
-      "selected_position": "P",
+      "selected_position": "IL",
       "scoreYahoo": null,
       "yahoo_status": "IL15"
     },
@@ -10344,7 +10346,8 @@
       "rostered": true,
       "owner": "Magnum Kwandoms",
       "selected_position": "2B",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Ian Happ",
@@ -10536,8 +10539,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
+      "selected_position": "IL",
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -10794,7 +10798,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Scott's Strategic Realignment",
-      "selected_position": "OF",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -11114,9 +11118,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Bobby Weed Jr",
-      "selected_position": "NA",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -11182,7 +11185,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfc5 Clutch Trey",
-      "selected_position": "P",
+      "selected_position": "SP",
       "scoreYahoo": null
     },
     {
@@ -11250,7 +11253,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfc5 Clutch Trey",
-      "selected_position": "OF",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -11505,7 +11508,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Magnum Kwandoms",
-      "selected_position": "BN",
+      "selected_position": "Util",
       "scoreYahoo": null
     },
     {
@@ -11638,7 +11641,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Wade Bogg's Next Beer",
-      "selected_position": "BN",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -11700,9 +11703,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Dangerous Nights Crew",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -12095,7 +12097,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bobby Weed Jr",
-      "selected_position": "P",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -12159,7 +12161,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
-      "selected_position": "BN",
+      "selected_position": "1B",
       "fantraxProspectRank": 56,
       "scoreYahoo": null
     },
@@ -12488,7 +12490,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfc5 Clutch Trey",
-      "selected_position": "SS",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -12619,7 +12621,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bobby Weed Jr",
-      "selected_position": "3B",
+      "selected_position": "NA",
       "scoreYahoo": null
     },
     {
@@ -13589,7 +13591,7 @@
       "cats_5x5": [
         "NSVH"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 60.0,
       "projStats": {
@@ -13618,8 +13620,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "IL15"
+      "scoreYahoo": null
     },
     {
       "name": "Anthony Bender",
@@ -13995,8 +13996,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -14124,7 +14126,8 @@
       "rostered": true,
       "owner": "Saggy Boys",
       "selected_position": "BN",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Adley Rutschman",
@@ -14256,7 +14259,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfc5 Clutch Trey",
-      "selected_position": "SP",
+      "selected_position": "IL",
       "scoreYahoo": null,
       "yahoo_status": "IL15"
     },
@@ -14322,6 +14325,7 @@
     {
       "name": "Luis Garc\u00eda Jr.",
       "eligible": [
+        "1B",
         "2B"
       ],
       "org": "WSN",
@@ -14508,9 +14512,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Wade Bogg's Next Beer",
-      "selected_position": "P",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -14573,8 +14576,9 @@
       "fpRank": 174,
       "fpAdp": 284.8,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Dangerous Nights Crew",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -14893,8 +14897,7 @@
       "rostered": true,
       "owner": "Saggy Boys",
       "selected_position": "SP",
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Jacob deGrom",
@@ -14959,7 +14962,8 @@
       "rostered": true,
       "owner": "\ud83c\udfc5 Clutch Trey",
       "selected_position": "SP",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Zack Wheeler",
@@ -15514,7 +15518,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
-      "selected_position": "BN",
+      "selected_position": "P",
       "fantraxProspectRank": 15,
       "scoreYahoo": null
     },
@@ -15580,8 +15584,9 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Wade Bogg's Next Beer",
-      "selected_position": "BN",
-      "scoreYahoo": null
+      "selected_position": "OF",
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Andrew Nardi",
@@ -16252,8 +16257,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
+      "selected_position": "NA",
       "fantraxProspectRank": 93,
       "scoreYahoo": null,
       "yahoo_status": "NA"
@@ -16318,7 +16324,6 @@
     {
       "name": "JT Brubaker",
       "eligible": [
-        "P",
         "RP"
       ],
       "org": "SFG",
@@ -16682,7 +16687,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bobby Weed Jr",
-      "selected_position": "P",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -17001,6 +17006,7 @@
     {
       "name": "Kevin McGonigle",
       "eligible": [
+        "3B",
         "SS"
       ],
       "org": "DET",
@@ -17246,9 +17252,8 @@
       "fpRank": 118,
       "fpAdp": 199.4,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Bobby Weed Jr",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -17315,6 +17320,7 @@
     {
       "name": "Steven Kwan",
       "eligible": [
+        "CF",
         "LF"
       ],
       "org": "CLE",
@@ -17753,7 +17759,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfc5 Clutch Trey",
-      "selected_position": "Util",
+      "selected_position": "OF",
       "scoreYahoo": null
     },
     {
@@ -18251,7 +18257,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
-      "selected_position": "BN",
+      "selected_position": "IL",
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -18452,7 +18458,6 @@
     {
       "name": "Kevin Ginkel",
       "eligible": [
-        "P",
         "RP"
       ],
       "org": "ARI",
@@ -18572,6 +18577,7 @@
     {
       "name": "Jonathan Bowlan",
       "eligible": [
+        "P",
         "RP"
       ],
       "org": "PHI",
@@ -18803,7 +18809,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Wade Bogg's Next Beer",
-      "selected_position": "C",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -19012,7 +19018,7 @@
       "cats_5x5": [
         "OBP"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 445,
       "score2026_neutral": 6.1,
@@ -19045,7 +19051,8 @@
       "rostered": true,
       "owner": "Magnum Kwandoms",
       "selected_position": "BN",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "Carlos Correa",
@@ -19296,7 +19303,7 @@
       "rostered": false,
       "owner": null,
       "scoreYahoo": null,
-      "yahoo_status": "IL15"
+      "yahoo_status": "IL60"
     },
     {
       "name": "Addison Barger",
@@ -19327,7 +19334,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 438,
       "score2026_neutral": 5.4,
@@ -19360,7 +19367,8 @@
       "rostered": true,
       "owner": "\ud83c\udfc5 Clutch Trey",
       "selected_position": "BN",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "Sonny Gray",
@@ -19486,7 +19494,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
-      "selected_position": "Util",
+      "selected_position": "1B",
       "scoreYahoo": null
     },
     {
@@ -19666,8 +19674,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83d\udc36 Decoy Fan Club",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -19797,7 +19806,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
-      "selected_position": "BN",
+      "selected_position": "OF",
       "scoreYahoo": null
     },
     {
@@ -19861,9 +19870,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Saggy Boys",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "IL15"
     },
@@ -20729,8 +20737,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -21045,7 +21054,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Wade Bogg's Next Beer",
-      "selected_position": "Util",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -21077,7 +21086,7 @@
       "cats_5x5": [
         "ERA"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 54.0,
       "projStats": {
@@ -21106,7 +21115,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Hoby Milner",
@@ -21845,7 +21855,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bobby Weed Jr",
-      "selected_position": "Util",
+      "selected_position": "2B",
       "scoreYahoo": null
     },
     {
@@ -22564,7 +22574,7 @@
       "cats_5x5": [
         "NSVH"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 62.0,
       "projStats": {
@@ -22593,7 +22603,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL15"
     },
     {
       "name": "Mitch Keller",
@@ -22779,7 +22790,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
-      "selected_position": "BN",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -22975,7 +22986,6 @@
     {
       "name": "Landen Roupp",
       "eligible": [
-        "P",
         "SP"
       ],
       "org": "SFG",
@@ -23333,7 +23343,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Matt Wallner",
@@ -23516,7 +23527,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bobby Weed Jr",
-      "selected_position": "BN",
+      "selected_position": "Util",
       "scoreYahoo": null
     },
     {
@@ -23825,9 +23836,8 @@
       "fpRank": 88,
       "fpAdp": 141.4,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "\ud83d\udc36 Decoy Fan Club",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -23893,7 +23903,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Magnum Kwandoms",
-      "selected_position": "Util",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -23954,8 +23964,9 @@
       "fpRank": 178,
       "fpAdp": 293.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
+      "selected_position": "3B",
       "scoreYahoo": null
     },
     {
@@ -24083,7 +24094,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Wade Bogg's Next Beer",
-      "selected_position": "BN",
+      "selected_position": "Util",
       "scoreYahoo": null
     },
     {
@@ -24208,7 +24219,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Magnum Kwandoms",
-      "selected_position": "BN",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -24271,7 +24282,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
-      "selected_position": "BN",
+      "selected_position": "IL",
       "scoreYahoo": null,
       "yahoo_status": "IL60"
     },
@@ -24512,7 +24523,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bobby Weed Jr",
-      "selected_position": "OF",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -24548,7 +24559,7 @@
         "K",
         "W"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 173.8,
       "projStats": {
@@ -24578,7 +24589,8 @@
       "rostered": true,
       "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
       "selected_position": "BN",
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL15"
     },
     {
       "name": "Parker Messick",
@@ -24697,8 +24709,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Saggy Boys",
+      "selected_position": "RP",
       "scoreYahoo": null
     },
     {
@@ -25130,7 +25143,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
-      "selected_position": "Util",
+      "selected_position": "SS",
       "scoreYahoo": null
     },
     {
@@ -25193,8 +25206,9 @@
       "fpRank": 165,
       "fpAdp": 275.0,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Magnum Kwandoms",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -25319,9 +25333,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Wade Bogg's Next Beer",
-      "selected_position": "P",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -25808,9 +25821,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Bobby Weed Jr",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -26278,7 +26290,7 @@
         "IP"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 134.0,
       "projStats": {
@@ -26307,8 +26319,9 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Wade Bogg's Next Beer",
-      "selected_position": "P",
-      "scoreYahoo": null
+      "selected_position": "BN",
+      "scoreYahoo": null,
+      "yahoo_status": "IL15"
     },
     {
       "name": "Trevor Rogers",
@@ -26556,8 +26569,8 @@
       "fpAdp": 664.5,
       "pct_owned": 0.0,
       "rostered": true,
-      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
-      "selected_position": "3B",
+      "owner": "\ud83d\udc36 Decoy Fan Club",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -26683,8 +26696,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "scoreYahoo": null
     },
     {
       "name": "Braydon Fisher",
@@ -26803,7 +26815,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Scott's Strategic Realignment",
-      "selected_position": "BN",
+      "selected_position": "SS",
       "scoreYahoo": null
     },
     {
@@ -27175,7 +27187,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Dangerous Nights Crew",
-      "selected_position": "BN",
+      "selected_position": "1B",
       "scoreYahoo": null
     },
     {
@@ -27241,6 +27253,7 @@
       "name": "Tyler Wells",
       "eligible": [
         "P",
+        "RP",
         "SP"
       ],
       "org": "BAL",
@@ -27418,7 +27431,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Scott's Strategic Realignment",
-      "selected_position": "BN",
+      "selected_position": "OF",
       "fantraxProspectRank": 37,
       "scoreYahoo": null
     },
@@ -27537,9 +27550,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null,
       "yahoo_status": "IL15"
     },
@@ -27603,7 +27615,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
-      "selected_position": "IL",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "IL10"
     },
@@ -27669,7 +27681,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
-      "selected_position": "2B",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -27884,7 +27896,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 60.8,
       "projStats": {
@@ -27913,8 +27925,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Connor Phillips",
@@ -28157,13 +28168,14 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Magnum Kwandoms",
-      "selected_position": "BN",
+      "selected_position": "IL",
       "scoreYahoo": null,
       "yahoo_status": "IL15"
     },
     {
       "name": "Connor Norby",
       "eligible": [
+        "1B",
         "3B"
       ],
       "org": "MIA",
@@ -29261,7 +29273,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83d\udc36 Decoy Fan Club",
-      "selected_position": "BN",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -29451,9 +29463,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
-      "selected_position": "P",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -29888,8 +29899,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
+      "selected_position": "BN",
       "scoreYahoo": null
     },
     {
@@ -30404,7 +30416,7 @@
       "cats_5x5": [
         "SB"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projPA": 366,
       "score2026_neutral": 4.0,
@@ -30438,8 +30450,7 @@
       "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
       "selected_position": "NA",
       "fantraxProspectRank": 1,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Matt McLain",
@@ -30500,7 +30511,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfc5 Clutch Trey",
-      "selected_position": "BN",
+      "selected_position": "2B",
       "scoreYahoo": null
     },
     {
@@ -31871,7 +31882,7 @@
         "R"
       ],
       "cats_5x5": [],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 123.0,
       "projStats": {
@@ -31900,7 +31911,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Josh Lowe",
@@ -32541,7 +32553,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 52.0,
       "projStats": {
@@ -32570,7 +32582,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Matt Pushard",
@@ -33178,7 +33191,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Wade Bogg's Next Beer",
-      "selected_position": "BN",
+      "selected_position": "C",
       "fantraxProspectRank": 60,
       "scoreYahoo": null
     },
@@ -33487,10 +33500,10 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
+      "selected_position": "P",
+      "scoreYahoo": null
     },
     {
       "name": "Gavin Sheets",
@@ -33739,9 +33752,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "Dangerous Nights Crew",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34395,9 +34407,8 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": true,
-      "owner": "\ud83d\udc36 Decoy Fan Club",
-      "selected_position": "BN",
+      "rostered": false,
+      "owner": null,
       "scoreYahoo": null
     },
     {
@@ -34523,6 +34534,7 @@
       "name": "Josh Smith",
       "eligible": [
         "1B",
+        "2B",
         "3B",
         "LF",
         "RF",
@@ -34611,7 +34623,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 52.0,
       "projStats": {
@@ -34640,7 +34652,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL15"
     },
     {
       "name": "Tommy Edman",
@@ -35001,8 +35014,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -35383,7 +35397,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bobby Weed Jr",
-      "selected_position": "RP",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -35629,7 +35643,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Saggy Boys",
-      "selected_position": "RP",
+      "selected_position": "BN",
       "scoreYahoo": null,
       "yahoo_status": "IL15"
     },
@@ -35722,7 +35736,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 447,
       "score2026_neutral": 3.8,
@@ -35754,7 +35768,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "Kevin Kelly",
@@ -35843,7 +35858,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 355,
       "score2026_neutral": 3.1,
@@ -35877,7 +35892,7 @@
       "owner": null,
       "fantraxProspectRank": 21,
       "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "yahoo_status": "IL60"
     },
     {
       "name": "Owen Caissie",
@@ -36123,7 +36138,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "Bobby Weed Jr",
-      "selected_position": "P",
+      "selected_position": "RP",
       "scoreYahoo": null
     },
     {
@@ -36286,7 +36301,7 @@
         "ERA",
         "NSVH"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 62.0,
       "projStats": {
@@ -36315,13 +36330,15 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfc5 Clutch Trey",
-      "selected_position": "RP",
-      "scoreYahoo": null
+      "selected_position": "P",
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Nick Gonzales",
       "eligible": [
         "2B",
+        "3B",
         "SS"
       ],
       "org": "PIT",
@@ -36714,7 +36731,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 361,
       "score2026_neutral": 3.0,
@@ -36746,7 +36763,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "Ke'Bryan Hayes",
@@ -38036,7 +38054,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "DTD"
     },
     {
       "name": "Ryan McMahon",
@@ -39690,7 +39709,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 366,
       "score2026_neutral": 2.2,
@@ -39722,7 +39741,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "Jake Fraley",
@@ -40272,7 +40292,8 @@
     {
       "name": "Luisangel Acu\u00f1a",
       "eligible": [
-        "2B"
+        "2B",
+        "CF"
       ],
       "org": "CHW",
       "tier": "specialist",
@@ -41124,8 +41145,9 @@
       "fpRank": 257,
       "fpAdp": 569.5,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
+      "selected_position": "2B",
       "scoreYahoo": null
     },
     {
@@ -41369,6 +41391,7 @@
     {
       "name": "Sam Moll",
       "eligible": [
+        "P",
         "RP"
       ],
       "org": "CIN",
@@ -42342,7 +42365,8 @@
     {
       "name": "Matt Shaw",
       "eligible": [
-        "3B"
+        "3B",
+        "RF"
       ],
       "org": "CHC",
       "tier": "specialist",
@@ -42575,8 +42599,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -44645,7 +44670,9 @@
     {
       "name": "Hunter Barco",
       "eligible": [
-        "RP"
+        "P",
+        "RP",
+        "SP"
       ],
       "org": "PIT",
       "tier": "specialist",
@@ -44791,7 +44818,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projPA": 220,
       "score2026_neutral": 1.3,
@@ -44823,8 +44850,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "IL10"
+      "scoreYahoo": null
     },
     {
       "name": "Kody Clemens",
@@ -45013,6 +45039,7 @@
     {
       "name": "Jos\u00e9 Suarez",
       "eligible": [
+        "P",
         "RP"
       ],
       "org": "ATL",
@@ -46314,8 +46341,9 @@
       "fpRank": null,
       "fpAdp": null,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Wade Bogg's Next Beer",
+      "selected_position": "P",
       "scoreYahoo": null
     },
     {
@@ -46408,7 +46436,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 313,
       "score2026_neutral": 0.6,
@@ -46441,13 +46469,12 @@
       "rostered": false,
       "owner": null,
       "fantraxProspectRank": 92,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Carson Benge",
       "eligible": [
-        "LF",
-        "CF",
         "RF"
       ],
       "org": "NYM",
@@ -46504,7 +46531,7 @@
       "pct_owned": 0.0,
       "rostered": true,
       "owner": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
-      "selected_position": "OF",
+      "selected_position": "BN",
       "fantraxProspectRank": 24,
       "scoreYahoo": null
     },
@@ -47735,7 +47762,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 292,
       "score2026_neutral": 1.7,
@@ -47767,7 +47794,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "IL10"
     },
     {
       "name": "Tyler Austin",
@@ -47891,7 +47919,7 @@
       "rostered": false,
       "owner": null,
       "scoreYahoo": null,
-      "yahoo_status": "IL10"
+      "yahoo_status": "NA"
     },
     {
       "name": "Connor Prielipp",
@@ -48193,6 +48221,7 @@
     {
       "name": "Jeremiah Jackson",
       "eligible": [
+        "2B",
         "3B",
         "RF"
       ],
@@ -48803,7 +48832,8 @@
     {
       "name": "Brandon Williamson",
       "eligible": [
-        "RP"
+        "P",
+        "SP"
       ],
       "org": "CIN",
       "tier": "specialist",
@@ -49060,7 +49090,7 @@
         "K9"
       ],
       "cats_5x5": [],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 39.2,
       "projStats": {
@@ -49089,8 +49119,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Josh White",
@@ -51735,7 +51764,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 46.0,
       "projStats": {
@@ -51764,8 +51793,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "IL15"
+      "scoreYahoo": null
     },
     {
       "name": "Easton McGee",
@@ -53208,7 +53236,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 38.0,
       "projStats": {
@@ -53237,7 +53265,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Luis Torrens",
@@ -53358,8 +53387,9 @@
       "fpRank": 274,
       "fpAdp": 689.5,
       "pct_owned": 0.0,
-      "rostered": false,
-      "owner": null,
+      "rostered": true,
+      "owner": "Bobby Weed Jr",
+      "selected_position": "C",
       "scoreYahoo": null
     },
     {
@@ -53743,7 +53773,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 32.0,
       "projStats": {
@@ -53772,8 +53802,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Albert Su\u00e1rez",
@@ -55644,7 +55673,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projIP": 28.0,
       "projStats": {
@@ -55673,7 +55702,8 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null
+      "scoreYahoo": null,
+      "yahoo_status": "NA"
     },
     {
       "name": "Mason Barnett",
@@ -56111,7 +56141,7 @@
       "cats_5x5": [
         "K"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projIP": 34.0,
       "projStats": {
@@ -56140,8 +56170,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "NA"
+      "scoreYahoo": null
     },
     {
       "name": "Kervin Castro",
@@ -57518,6 +57547,7 @@
     {
       "name": "Ben Williamson",
       "eligible": [
+        "2B",
         "3B"
       ],
       "org": "TBR",
@@ -57766,7 +57796,6 @@
     {
       "name": "Mart\u00edn P\u00e9rez",
       "eligible": [
-        "P",
         "SP"
       ],
       "org": "ATL",
@@ -59057,7 +59086,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": true,
+      "il": false,
       "est": false,
       "projPA": 235,
       "score2026_neutral": 0.0,
@@ -59089,8 +59118,7 @@
       "pct_owned": 0.0,
       "rostered": false,
       "owner": null,
-      "scoreYahoo": null,
-      "yahoo_status": "IL10"
+      "scoreYahoo": null
     },
     {
       "name": "Oswald Peraza",
@@ -59222,6 +59250,7 @@
     {
       "name": "Richie Palacios",
       "eligible": [
+        "2B",
         "LF"
       ],
       "org": "TBR",
@@ -59499,7 +59528,7 @@
       "cats_5x5": [
         "R"
       ],
-      "il": false,
+      "il": true,
       "est": false,
       "projPA": 173,
       "score2026_neutral": 0.0,
@@ -59533,7 +59562,7 @@
       "owner": null,
       "fantraxProspectRank": 369,
       "scoreYahoo": null,
-      "yahoo_status": "DTD"
+      "yahoo_status": "IL10"
     },
     {
       "name": "Tommy Pham",
@@ -61934,8 +61963,24 @@
       "yahoo_status": "NA"
     },
     {
+      "name": "Jose Fernandez",
+      "owner": "Dangerous Nights Crew",
+      "rostered": true,
+      "eligible": [],
+      "pct_owned": 100.0,
+      "selected_position": "BN"
+    },
+    {
       "name": "Heston Kjerstad",
       "owner": "Ryan Howard's $5 Footlong",
+      "rostered": true,
+      "eligible": [],
+      "pct_owned": 100.0,
+      "selected_position": "BN"
+    },
+    {
+      "name": "Joey Wiemer",
+      "owner": "Scott's Strategic Realignment",
       "rostered": true,
       "eligible": [],
       "pct_owned": 100.0,
@@ -61969,98 +62014,98 @@
     }
   ],
   "scoreboard": {
-    "week": 2,
+    "week": 3,
     "matchups": []
   },
   "standings": [
     {
-      "team_key": "469.l.40214.t.1",
-      "team_name": "Bobby Weed Jr",
-      "wins": 5,
-      "losses": 3,
-      "ties": 2,
-      "rank": 3,
-      "games_back": 1.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.40214.t.11",
-      "team_name": "\ud83d\udc36 Decoy Fan Club",
-      "wins": 5,
-      "losses": 3,
-      "ties": 2,
-      "rank": 5,
-      "games_back": 1.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.40214.t.12",
-      "team_name": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
-      "wins": 4,
-      "losses": 3,
-      "ties": 3,
-      "rank": 6,
-      "games_back": 0.5,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.40214.t.10",
-      "team_name": "\ud83c\udfc5 Clutch Trey",
-      "wins": 3,
-      "losses": 4,
-      "ties": 3,
-      "rank": 7,
+      "team_key": "469.l.40214.t.4",
+      "team_name": "Ryan Howard's $5 Footlong",
+      "wins": 11,
+      "losses": 8,
+      "ties": 1,
+      "rank": 4,
       "games_back": 1.5,
       "cat_stats": {}
     },
     {
-      "team_key": "469.l.40214.t.2",
-      "team_name": "Dangerous Nights Crew",
-      "wins": 4,
-      "losses": 6,
-      "ties": 0,
-      "rank": 8,
-      "games_back": 2.0,
+      "team_key": "469.l.40214.t.7",
+      "team_name": "Wade Bogg's Next Beer",
+      "wins": 11,
+      "losses": 8,
+      "ties": 1,
+      "rank": 5,
+      "games_back": 1.5,
       "cat_stats": {}
     },
     {
       "team_key": "469.l.40214.t.5",
       "team_name": "Saggy Boys",
-      "wins": 3,
-      "losses": 5,
-      "ties": 2,
-      "rank": 9,
-      "games_back": 3.0,
+      "wins": 9,
+      "losses": 8,
+      "ties": 3,
+      "rank": 6,
+      "games_back": 2.5,
       "cat_stats": {}
     },
     {
-      "team_key": "469.l.40214.t.8",
-      "team_name": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
-      "wins": 4,
-      "losses": 6,
-      "ties": 0,
-      "rank": 10,
-      "games_back": 2.0,
-      "cat_stats": {}
-    },
-    {
-      "team_key": "469.l.40214.t.9",
-      "team_name": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
-      "wins": 3,
-      "losses": 5,
-      "ties": 2,
-      "rank": 11,
-      "games_back": 3.0,
+      "team_key": "469.l.40214.t.12",
+      "team_name": "\ud83e\uddd1\u200d\u2696\ufe0f All Rise",
+      "wins": 7,
+      "losses": 9,
+      "ties": 4,
+      "rank": 7,
+      "games_back": 4.0,
       "cat_stats": {}
     },
     {
       "team_key": "469.l.40214.t.3",
       "team_name": "Magnum Kwandoms",
-      "wins": 3,
-      "losses": 7,
+      "wins": 8,
+      "losses": 11,
+      "ties": 1,
+      "rank": 8,
+      "games_back": 4.5,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.40214.t.2",
+      "team_name": "Dangerous Nights Crew",
+      "wins": 8,
+      "losses": 11,
+      "ties": 1,
+      "rank": 9,
+      "games_back": 4.5,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.40214.t.10",
+      "team_name": "\ud83c\udfc5 Clutch Trey",
+      "wins": 5,
+      "losses": 10,
+      "ties": 5,
+      "rank": 10,
+      "games_back": 5.5,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.40214.t.8",
+      "team_name": "\ud83c\udfdd\ufe0f Let\u2019s Get Tropical \ud83c\udfdd\ufe0f",
+      "wins": 7,
+      "losses": 13,
       "ties": 0,
+      "rank": 11,
+      "games_back": 6.0,
+      "cat_stats": {}
+    },
+    {
+      "team_key": "469.l.40214.t.9",
+      "team_name": "\ud83c\udf46I'm Beaned Up Right Now\ud83c\udf46",
+      "wins": 6,
+      "losses": 12,
+      "ties": 2,
       "rank": 12,
-      "games_back": 4.0,
+      "games_back": 6.0,
       "cat_stats": {}
     }
   ]
